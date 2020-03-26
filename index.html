@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic|Lato|Yeseva+One&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8a0c8e51ba.js" crossorigin="anonymous"></script>
+    <title>RestFood</title>
+</head>
+<body>
+    <header>
+        <div class="background bg-no-repeat bg-cover w-full h-full" style="background-image: url(../img/bg.png);">
+            <div class="wrap container-xl max-w-6xl mx-auto pt-2 pb-10">
+                <nav class="flex flex-col lg:justify-around lg:flex-row items-center ">
+                    <div class="logo flex-wrap w-32 m-auto lg:max-w-lg">
+                            <img class="w-32 h-24 mr-56" src="../img/logo.png" alt="">
+                    </div>
+                    <div id="nav-content" class="lg:w-full w-20 text-center m-auto flex lg:flex lg:items-center lg:w-auto lg:block pt-6 lg:pt-0">
+                        <ul class="font-Gentium nav_menu list-reset lg:flex justify-end flex-1 items-center font-bold"> 
+                                            <li class="text-white text-sm mr-12"><a class="" href="#">Home</a></li>
+                                            <li class="text-white text-sm mr-12"><a href="#">About</a></li>
+                                            <li class="text-white text-sm mr-12"><a href="#">Igredients</a></li>
+                                            <li class="text-white text-sm mr-12"><a href="#">Menu</a></li>
+                                            <li class="text-white text-sm mr-12"><a href="#">Reviews</a></li>
+                                            <li class="text-white text-sm mr-12"><a href="#">Reservations</a></li>
+                                            <li class="text-yellow-500 text-sm mr-10 lg:mr-5"><div class="icons">
+                                                <a class="mr-2" href=""><i class="fab fa-youtube"></i></a>
+                                                <a class="mr-2" href=""><i class="fab fa-facebook-f"></i></a>
+                                                <a class="mr-2" href=""><i class="fab fa-twitter"></i></a>
+
+                                                    </div>
+                                                </li>
+                                            </ul>
+
+                    </div>
+                    
+                </nav>
+                <div class="intro flex flex-col items-center mt-10 pb-20">
+                    <h2 class="font-Yeseva text-5xl text-white text-center">the right ingredients</br>
+                        for the right food</h2>
+                    <img class="w-24 h-5 " src="../img/water_mark.png" alt="">
+                    <div class="font-Lato buttons flex mt-3">
+                        <a class="border text-white border-black bg-opblack py-2 px-8 mr-3" href="#book">book a table</a>
+                        <span class="border bg-opwhite border-solid py-2 px-12 "><a class="font-bold text-white" href="#menu">menu</a></span>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="intro">
+            <div class="food_bg max-w-full bg-no-repeat bg-cover" style="background-image: url(../img/bg-section1.png);">
+                <div class="container-xl max-w-6xl mx-auto">
+                    <div class="food_intro flex-col lg:flex lg:flex-row lg:justify-center pt-12 lg:mr-16 lg:ml-16 pb-5">
+                        <div class="food_about lg:w-56">
+                            <h1 class="font-Yeseva text-lg text-center text-orange-400">Just the right food</h1>
+                            <img class="w-32 h-3 m-auto my-3" src="../img/divider.png" alt="">
+                            <p class="font-Lato text-xs text-center text-gray-700 mt-5">  If you’ve been to one of our restaurants, you’ve seen – and 
+                                 tasted – what keeps our customers coming back for more.
+                                 Perfect materials and freshly baked food, delicious Lambda cakes,
+                                 muffins, and gourmet coffees make us hard to resist! Stop in today 
+                                 and check us out!
+                            </p>
+                            <img class="w-24 h-24 m-auto mt-16" src="../img/cook.png" alt="">
+                        </div>
+                        <div class="food_dish w-2/5 hidden lg:ml-24 lg:block">
+                            <img class="" src="../img/dish.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section class="igrids">
+            <div class="food_bg max-w-full bg-no-repeat bg-cover" style="background-image: url(../img/bg-ingrid.png);">
+                <div class="wrap container-xl max-w-6xl mx-auto lg:py-10">
+                    <div class="food_ingrid lg:w-2/6 bg-opblack lg:ml-auto flex flex-col lg:py-5 lg:mr-56">
+                       <div class=" w-64 m-auto p-1">
+                            <h1 class="font-Yeseva text-xl text-white text-center font-bold mb-3">Fine ingredients</h1>
+                            <img class="w-40 h-4 m-auto mt-3" src="../img/deviderw.png" alt="">
+                            <p class="font-Lato text-xs text-center text-white mt-3">
+                                If you’ve been to one of our restaurants, you’ve seen – and tasted 
+                                – what keeps our customers coming back for more. 
+                                Perfect materials and freshly baked food, delicious Lambda cakes,
+                                muffins, and gourmet coffees make us hard to resist! Stop in today 
+                                and check us out!
+                            </p>
+                            <div class="flex justify-around mt-5">
+                                <img class="w-12 h-12" src="../img/ing1.png" alt="">
+                                <img class="w-12 h-12" src="../img/ing2.png" alt="">
+                                <img class="w-12 h-12" src="../img/ing3.png" alt="">
+                            </div>
+                       </div> 
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="menus" id="menu">
+            <div class="food_bg max-w-full bg-no-repeat bg-cover" style="background-image: url(../img/sect2.png);">
+                <div class="container-xl max-w-6xl mx-auto">
+                    <div class="lg:flex lg:justify-center">
+                        <div class="flex-col">
+                            <div class="font-Yeseva menu py-6 mr-12 ml-12"> 
+                                <h1 class="text-lg text-center text-orange-400">Appetisers</h1>
+                                <img class="w-32 h-3 m-auto my-3" src="../img/divider.png" alt="">
+                                    <div class="position">
+                                        <div class="browse flex justify-between border-orange-400 border-b pb-2">
+                                            <h2 class="text-orange-400 text-sm">Tzatsiki</h2>
+                                            <span class="text-orange-400">$3.99</span>
+                                        </div>
+                                        <p class="font-Lato text-xs py-3">Refreshing traditional cucumber and garlic yoghurt dip.</p>
+                                    </div>
+                                    <div class="position">
+                                            <div class="browse flex justify-between border-orange-400 border-b pb-2">
+                                                <h2 class="text-orange-400 text-sm">Aubergine Salad</h2>
+                                                <span class="text-orange-400">$5.50</span>
+                                            </div>
+                                            <p class="font-Lato text-xs py-3">Pureed eggplant, garlic, green pepper and tomato dip.</p>
+                                    </div>
+                                    <div class="position">
+                                            <div class="browse flex justify-between border-orange-400 border-b pb-2">
+                                                <h2 class="text-orange-400 text-sm">Aubergine Salad</h2>
+                                                <span class="text-orange-400">$5.25</span>
+                                            </div>
+                                            <p class="font-Lato text-xs py-3">Pureed eggplant, garlic, green pepper and tomato dip.</p>
+                                    </div>
+
+                            </div>
+                            <div class="font-Yeseva menu py-6 mr-12 ml-12"> 
+                                <h1 class="text-lg text-center text-orange-400">Salads</h1>
+                                <img class="w-32 h-3 m-auto my-3" src="../img/divider.png" alt="">
+                                    <div class="position">
+                                        <div class="browse flex justify-between border-orange-400 border-b pb-2">
+                                            <h2 class="text-orange-400 text-sm">Olive Special</h2>
+                                            <span class="text-orange-400">$5.99</span>
+                                        </div>
+                                        <p class="font-Lato text-xs py-3">Refreshing traditional cucumber and garlic yoghurt dip.</p>
+                                    </div>
+                                    <div class="position">
+                                            <div class="browse flex justify-between border-orange-400 border-b pb-2">
+                                                <h2 class="text-orange-400 text-sm">Greek Salad</h2>
+                                                <span class="text-orange-400">$5.50</span>
+                                            </div>
+                                            <p class="font-Lato text-xs py-3">Pureed eggplant, garlic, green pepper and tomato dip.</p>
+                                    </div>
+                                    <div class="position">
+                                            <div class="browse flex justify-between border-orange-400 border-b pb-2">
+                                                <h2 class="text-orange-400 text-sm">Gusto Salad</h2>
+                                                <span class="text-orange-400">$5.25</span>
+                                            </div>
+                                            <p class="font-Lato text-xs py-3">Pureed eggplant, garlic, green pepper and tomato dip.</p>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="flex-col">
+                                <div class="font-Yeseva menu py-6 mr-12 ml-12"> 
+                                    <h1 class="text-lg text-center text-orange-400">Starters</h1>
+                                    <img class="w-32 h-3 m-auto my-3" src="../img/divider.png" alt="">
+                                        <div class="position">
+                                            <div class="browse flex justify-between border-orange-400 border-b pb-2">
+                                                <h2 class="text-orange-400 text-sm">Haloumi</h2>
+                                                <span class="text-orange-400">$3.99</span>
+                                            </div>
+                                            <p class="font-Lato text-xs py-3">Refreshing traditional cucumber and garlic yoghurt dip.</p>
+                                        </div>
+                                        <div class="position">
+                                                <div class="browse flex justify-between border-orange-400 border-b pb-2">
+                                                    <h2 class="text-orange-400 text-sm">Spinach Pie</h2>
+                                                    <span class="text-orange-400">$5.50</span>
+                                                </div>
+                                                <p class="font-Lato text-xs py-3">Pureed eggplant, garlic, green pepper and tomato dip.</p>
+                                        </div>
+                                </div>
+                                <div class="font-Yeseva menu py-6 mr-12 ml-12"> 
+                                    <h1 class="text-lg text-center text-orange-400">Main Dishes</h1>
+                                    <img class="w-32 h-3 m-auto my-3" src="../img/divider.png" alt="">
+                                        <div class="position">
+                                            <div class="browse flex justify-between border-orange-400 border-b pb-2">
+                                                <h2 class="text-orange-400 text-sm">Cornish Mackerel</h2>
+                                                <span class="text-orange-400">$5.99</span>
+                                            </div>
+                                            <p class="font-Lato text-xs py-3">Refreshing traditional cucumber and garlic yoghurt dip.</p>
+                                        </div>
+                                        <div class="position">
+                                                <div class="browse flex justify-between border-orange-400 border-b pb-2">
+                                                    <h2 class="text-orange-400 text-sm">Roast Lamb</h2>
+                                                    <span class="text-orange-400">$5.50</span>
+                                                </div>
+                                                <p class="font-Lato text-xs py-3">Pureed eggplant, garlic, green pepper and tomato dip.</p>
+                                        </div>
+                                        <div class="position">
+                                                <div class="browse flex justify-between border-orange-400 border-b pb-2">
+                                                    <h2 class="text-orange-400 text-sm">Fried Chicken</h2>
+                                                    <span class="text-orange-400">$5.25</span>
+                                                </div>
+                                                <p class="font-Lato text-xs py-3">Pureed eggplant, garlic, green pepper and tomato dip.</p>
+                                        </div>
+                                        <div class="position">
+                                                <div class="browse flex justify-between border-orange-400 border-b pb-2">
+                                                    <h2 class="text-orange-400 text-sm">Pastitsio</h2>
+                                                    <span class="text-orange-400">$5.99</span>
+                                                </div>
+                                                <p class="font-Lato text-xs py-3">Refreshing traditional cucumber and garlic yoghurt dip.</p>
+                                        </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>          
+
+        </section>
+
+        <section class="guests-comments">
+                <div class="food_bg max-w-full bg-no-repeat bg-cover" style="background-image: url(../img/bg-guest.png);">
+                    <div class="wrap container-xl max-w-6xl flex justify-center mx-auto lg:py-10">
+                        <div class="comment bg-op2black w-full p-3 lg:w-3/6 lg:ml-12 lg:p-16">
+                            <h1 class="font-Yeseva text-white text-xl font-bold text-center">Guest Reviews</h1>
+                            <img class="w-40 h-4 m-auto my-3" src="../img/deviderw.png" alt="">
+                            <span class="font-Gentium text-white text-sm leading-tight text-center">
+                                If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps our customers 
+                                coming back for more. Perfect materials and freshly baked food, delicious Lambda cakes,
+                                muffins, and gourmet coffees make us hard to resist! Stop in today and check us out!
+                            </span>
+                            <p class="font-Gentium text-white text-xs text-center pt-2">
+                                - food inc, New York
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <section class="booking" id="book">
+                <div class="food_bg max-w-full bg-no-repeat bg-cover" style="background-image: url(../img/bg-section1.png);">
+                    <div class="container-xl max-w-6xl mx-auto py-10">
+                        <div class="lg:flex">
+                            <img class="hidden lg:block w-48 mr-10" src="../img/im-book1.png" alt="">
+                            <img class="hidden lg:block w-48 mr-10" src="../img/im-book2.png" alt="">
+                            <div class="flex-col lg:w-3/6 lg:ml-20">
+                                <h1 class="font-Yeseva text-orange-500 text-3xl text-center py-2">Just the right food</h1>
+                                <img class="w-32 h-3 m-auto my-3" src="../img/divider.png" alt="">
+                                <p class="font-Lato text-xs text-center py-3 w-2/3 m-auto">If you’ve been to one of our restaurants, you’ve seen – and tasted
+                                     – what keeps our customers coming back for more.
+                                     Perfect materials and freshly baked food.
+                                     Delicious Lambda cakes,  muffins, and gourmet coffees make us 
+                                     hard to resist! Stop in today and check us out! Perfect materials
+                                     and freshly baked food.
+                                </p>
+                                <div class="font-Yeseva form w-2/3 flex flex-wrap m-auto py-5 lg:mr-12">
+                                    <div class="mr-8">
+                                    <p class="text-orange-500 text-xs text-left py-2">Name</p>
+                                    <input class="focus:outline-none text-xs p-2 border border-gray-400" type="text" placeholder="Name">
+                                    <p class="text-orange-500 text-xs text-left py-2">e-mail</p>
+                                    <input class="focus:outline-none text-xs p-2 border border-gray-400" type="text" placeholder="Your e-mail">
+                                    </div>
+                                    <div>
+                                    <p class="text-orange-500 text-xs text-left py-2">Date</p>
+                                    <input class="focus:outline-none text-xs p-2 border border-gray-400" type="date" placeholder="Chek in">
+                                    <p class="text-orange-500 text-xs text-left py-2">Number</p>
+                                    <input class="focus:outline-none text-xs p-2 border border-gray-400" type="text" placeholder="put your number"> 
+                                    </div>
+                                    
+                                </div>
+                                <button class="font-Lato m-auto block"><a class="bg-orange-500 text-white px-16 py-2 text-xs" href="#">book</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+        </section>
+    </main>
+    <footer>
+            <div class="food_bg max-w-full bg-black">
+                <div class="wrap container-xl max-w-6xl flex justify-center mx-auto lg:py-10">
+                    <div class="footer_info lg:flex justify-around my-4">
+                        <div class="sub_info w-64 lg:mr-8">
+                            <h1 class="font-Yeseva text-white text-center text-lg">About Us</h1>
+                            <img class="w-40 h-4 m-auto my-3" src="../img/deviderw.png" alt="">
+                            <p class="text-white text-xs text-center ">Lambda's new and expanded Chelsea location represents a 
+                                truly authentic Greek patisserie, featuring breakfasts 
+                                of fresh croissants and steaming bowls of café.
+                                Lamda the best restaurant in town
+                            </p>
+                        </div>
+                        <div class="sub_info w-64">
+                                <h1 class="font-Yeseva text-white text-center text-lg">Opening Hours</h1>
+                                <img class="w-40 h-4 m-auto my-3" src="../img/deviderw.png" alt="">
+                                <p class="text-white text-xs text-center ">
+                                        Mon-Thu: 7:00am-8:00pm <br> 
+                                        Fri-Sun: 7:00am-10:00pm
+                                </p>
+                        </div>
+                        <div class="sub_info w-64">
+                                <h1 class="font-Yeseva text-white text-center text-lg">Our Location</h1>
+                                <img class="w-40 h-4 m-auto my-3" src="../img/deviderw.png" alt="">
+                                <p class="text-white text-xs text-center ">
+                                        19th Paradise Street Sitia <br>
+                                        128 Meserole Avenue
+                                </p>
+                                <div class="flex text-white justify-center my-3">
+                                    <i class="fab fa-facebook-f mr-3"></i>
+                                    <i class="fab fa-youtube mr-3"></i>
+                                    <i class="fab fa-twitter mr-3"></i>
+                                    <i class="fab fa-instagram mr-3"></i>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </footer>
+</body>
+</html>

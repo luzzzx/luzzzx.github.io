@@ -1,0 +1,155 @@
+body {
+    background-color: #3399cc;
+}
+
+
+/* .wrapper {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+} */
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.container h1 {
+    color: white;
+}
+
+.container h1 .wi {
+    margin-left: 10px;
+}
+
+.block {
+    max-width: 998px;
+    z-index: 99;
+}
+
+ul {
+    font-size: 0;
+    padding: 0;
+}
+
+ul li {
+    list-style: none;
+    color: white;
+    font-size: 27px;
+    display: inline-block;
+    border: 4px solid white;
+    box-sizing: border-box;
+    vertical-align: middle;
+    width: 25%;
+    text-align: center;
+    padding: 45px 0px;
+}
+
+.container:hover ul {
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+ul li:first-child {
+    width: 50%;
+}
+
+li:first-child:hover {
+    background-color: #3399cc;
+}
+
+ul li:nth-child(2):hover {
+    background-color: #33cccc;
+}
+
+ul li:nth-child(3):hover {
+    background-color: #996699;
+}
+
+ul li:nth-child(4):hover {
+    background-color: #c24747;
+}
+
+ul li:nth-child(5):hover {
+    background-color: #e2674a;
+}
+
+ul li:nth-child(6):hover {
+    background-color: #ffcc66;
+}
+
+ul li:nth-child(7):hover {
+    background-color: #99cc99
+}
+
+ul li:nth-child(8):hover {
+    background-color: #669999;
+}
+
+ul li:nth-child(9):hover {
+    background-color: #cc6699;
+}
+
+ul li:nth-child(10):hover {
+    background-color: #339966;
+}
+
+ul li:last-child:hover {
+    background-color: #666699;
+}
+
+
+/* li:first-child {
+    background-color: #3399cc;
+} */
+
+
+/* .wrapper:hover li:nth-child(2) {
+    background-color: #33cccc;
+} */
+
+
+/*
+li:nth-child(3) {
+    background-color: #996699;
+}
+
+li:nth-child(4) {
+    background-color: #c24747;
+}
+
+li:nth-child(5) {
+    background-color: #e2674a;
+}
+
+li:nth-child(6) {
+    background-color: #ffcc66;
+}
+
+li:nth-child(7) {
+    background-color: #99cc99
+}
+
+li:nth-child(8) {
+    background-color: #669999;
+}
+
+li:nth-child(9) {
+    background-color: #cc6699;
+}
+
+li:nth-child(10) {
+    background-color: #339966;
+}
+
+li:last-child {
+    background-color: #666699;
+} */
+
+ul li:last-child {
+    width: 100%;
+}
+
+ul li:nth-child(9) {
+    width: 50%;
+}

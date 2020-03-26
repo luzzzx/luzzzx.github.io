@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+.inner {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.inner:before,
+.inner:after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+#sl {
+    background: #1d1c1c;
+}
+
+#sl .inner div {
+    padding: 110px 30px;
+    float: left;
+    width: 33.33%;
+    text-align: center;
+    color: #ffffff;
+    box-sizing: border-box;
+}
+
+#sl p {
+    line-height: 24px;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+#sl h3 {
+    margin: 35px 4px 28px 0;
+    text-transform: uppercase;
+    font-size: 24px;
+}
+
+.icon {
+    box-sizing: border-box;
+    padding-top: 8px;
+    background-color: #ff9c00;
+    display: inline-block;
+    height: 80px;
+    width: 80px;
+    border-top-left-radius: 24px;
+    border-bottom-right-radius: 27px;
+    font-size: 35px;
+    line-height: 80px;
+}
+
+#footer {
+    background-color: #121116;
+    height: 50vh;
+}
+
+.img-footer:before,
+.img-footer:after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+.img-footer {
+    padding-top: 120px;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    max-width: 250px;
+}
+
+.img-footer h2 {
+    text-align: center;
+    color: #ffffff;
+    font-family: "Open Sans";
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    padding-bottom: 30px;
+}
+
+.img-footer h2:after {
+    margin-top: 25px;
+    text-align: center;
+    content: '';
+    width: 230px;
+    height: 1px;
+    background-color: #ffffff;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.icons {
+    text-align: center;
+    margin-top: 20px;
+    color: #ffffff;
+}
+
+.fab {}
+
+.fa-facebook-f,
+.fa-twitter,
+.fa-google-plus-g,
+.fa-dribbble-square {
+    margin-right: 25px;
+}
+
+.fa-dribbble-square {
+    margin-right: 0px;
+}
+
+.footer-bottom span {
+    text-align: center;
+    margin-top: 50px;
+    color: #00c7fc;
+}
+
+.footer-bottom {
+    color: #ffffff;
+    font-family: "Open Sans";
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 50px;
+}

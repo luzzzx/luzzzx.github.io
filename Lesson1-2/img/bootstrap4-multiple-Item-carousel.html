@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Bootstrap 4 Multiple Item Carousel</title>
+</head>
+
+<body>
+    <div class="container text-center my-3">
+        <h2>Bootstrap 4 Carousel из 3х слайдов в ряду</h2>
+        <div class="row mx-auto my-auto">
+            <div id="multiCarousel" class="carousel slide w-100" data-ride="carousel">
+                <div class="carousel-inner w-100" role="listbox">
+                    <div class="carousel-item active">
+                        <img class="d-block col-4" src="http://placehold.it/350x180?text=1">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block col-4" src="http://placehold.it/350x180?text=2">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block col-4" src="http://placehold.it/350x180?text=3">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block col-4" src="http://placehold.it/350x180?text=4">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block col-4" src="http://placehold.it/350x180?text=5">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block col-4" src="http://placehold.it/350x180?text=6">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#multiCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Предыдущий</span>
+                </a>
+                <a class="carousel-control-next" href="#multiCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Cледующий</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="container text-center my-3">
+        <h2>Bootstrap 4 Carousel из 3х слайдов в ряду</h2>
+        <div id="carousel-1" class="carousel slide multi-carousel" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-1" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-1" data-slide-to="1"></li>
+                <li data-target="#carousel-1" data-slide-to="2"></li>
+                <li data-target="#carousel-1" data-slide-to="3"></li>
+                <li data-target="#carousel-1" data-slide-to="4"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                    <div class="item-third"><img src="https://source.unsplash.com/juHayWuaaoQ/1200x400" alt="#"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="item-third"><img src="https://source.unsplash.com/eWFdaPRFjwE/1200x400" alt="#"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="item-third"><img src="https://source.unsplash.com/eXHeq48Z-Q4/1200x400" alt="#"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="item-third"><img src="https://source.unsplash.com/WLUHO9A_xik/1200x400" alt="#"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="item-third"><img src="https://source.unsplash.com/ddLiNMqWAOM/1200x400" alt="#"></div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carousel-1" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Предыдущий</span>
+            </a>
+            <a class="carousel-control-next" href="#carousel-1" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Cледующий</span>
+            </a>
+        </div>
+    </div>
+    <style>
+        body {
+            background-color: #f0f1f3
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto
+        }
+        
+        .carousel-inner .carousel-item.active,
+        .carousel-inner .carousel-item-next,
+        .carousel-inner .carousel-item-prev {
+            display: flex
+        }
+        
+        .carousel-inner .carousel-item-right.active,
+        .carousel-inner .carousel-item-next {
+            transform: translateX(25%)
+        }
+        
+        .carousel-inner .carousel-item-left.active,
+        .carousel-inner .carousel-item-prev {
+            transform: translateX(-25%)
+        }
+        
+        .carousel-inner .carousel-item-right,
+        .carousel-inner .carousel-item-left {
+            transform: translateX(0)
+        }
+    </style>
+    <style>
+        .multi-carousel {
+            overflow: hidden
+        }
+        
+        .multi-carousel .carousel-control-prev,
+        .multi-carousel .carousel-control-next {
+            background: rgba(255, 255, 255, 0.5);
+            width: 5%
+        }
+        
+        .multi-carousel .carousel-inner {
+            width: 310%;
+            left: -80%
+        }
+        
+        .carousel-inner .carousel-item-right.active,
+        .carousel-inner .carousel-item-next {
+            transform: translateX(75%)
+        }
+        
+        .carousel-inner .carousel-item-left.active,
+        .carousel-inner .carousel-item-prev {
+            transform: translateX(-75%)
+        }
+        
+        .carousel-inner .carousel-item-right,
+        .carousel-inner .carousel-item-left {
+            transform: translateX(0)
+        }
+        
+        .item-third {
+            float: left;
+            width: 25%;
+            background-size: cover;
+            height: auto
+        }
+    </style>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+        $('#multiCarousel').carousel({
+            interval: 10000
+        })
+        $('.carousel .carousel-item').each(function() {
+            var next = $(this).next();
+            if (!next.length) {
+                next = $(this).siblings(':first');
+            }
+            next.children(':first-child').clone().appendTo($(this));
+
+            for (var i = 0; i < 2; i++) {
+                next = next.next();
+                if (!next.length) {
+                    next = $(this).siblings(':first');
+                }
+
+                next.children(':first-child').clone().appendTo($(this));
+            }
+        });
+    </script>
+    <script>
+        $('.multi-carousel .carousel-item').each(function() {
+            var next = $(this).next();
+            if (!next.length) next = $(this).siblings(':first');
+            next.children(':first-child').clone().appendTo($(this));
+        });
+        $('.multi-carousel .carousel-item').each(function() {
+            var prev = $(this).prev();
+            if (!prev.length) prev = $(this).siblings(':last');
+            prev.children(':nth-last-child(2)').clone().prependTo($(this));
+        });
+    </script>
+</body>
+
+</html>

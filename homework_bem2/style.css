@@ -1,0 +1,161 @@
+@font-face {
+    font-family: "Museo Sans Rounded -100";
+    src: url('./webfonts/MuseoSansRounded-100.woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    position: relative;
+    background: url('./img/mbg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.card-modal {
+    padding: 20px;
+    box-sizing: border-box;
+    position: absolute;
+    width: 686px;
+    height: 391px;
+    box-shadow: 0 0 65px rgba(0, 0, 0, 0.82);
+    border-radius: 10px;
+    background-color: #111a28;
+    top: 300px;
+    left: 30%;
+    bottom: 50%;
+}
+
+.card-modal__logo {}
+
+.modal-items {}
+
+.modal-items__img {
+    padding-top: 20px;
+    display: inline-block;
+    margin-left: 16px;
+    margin-top: 38px;
+    box-sizing: border-box;
+    width: 329px;
+    height: 159px;
+}
+
+.modal-items__description {
+    max-width: 186px;
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: top;
+    margin-left: 80px;
+}
+
+.modal-items__title {
+    margin-top: 12px;
+    color: #e1e1e1;
+    font-family: "Museo Sans Rounded -100";
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0.48px;
+}
+
+.modal-items__subtitle {
+    margin-top: 6px;
+    color: rgba(225, 225, 225, .54);
+    font-family: "Museo Sans Rounded -100";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0.28px;
+}
+
+.modal-items__stars {
+    margin-top: 17px;
+}
+
+.fas {
+    color: yellow;
+}
+
+.fa-star {}
+
+.far {
+    color: white;
+}
+
+.modal-items__qty a,
+.modal-items__size a {
+    text-decoration: none;
+    color: rgba(225, 225, 225, .54);
+    font-family: "Museo Sans Rounded -100";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.28px;
+}
+
+.modal-items__qty,
+.modal-items__size {
+    margin-top: 18px;
+    padding: 10px 14px;
+    border: 1px solid rgba(225, 225, 225, .54);
+    display: inline-block;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.modal-items__size a:after {
+    content: '';
+    background: url(./img/Rectangle_2.png);
+    display: inline-block;
+    width: 13px;
+    height: 8px;
+    margin-left: 9px;
+}
+
+.modal-items__qty a:after {
+    content: '';
+    background: url(./img/Rectangle_2.png);
+    display: inline-block;
+    width: 13px;
+    height: 8px;
+    margin-left: 9px;
+}
+
+.modal-items__btn {
+    border: 1px solid rgba(255, 255, 255, .26);
+    background-color: rgba(76, 82, 90, .26);
+    display: block;
+    box-sizing: border-box;
+    margin-top: 15px;
+    padding: 15px 0;
+}
+
+.modal-items__btn a {
+    padding: 15px 55px;
+    color: rgba(225, 225, 225, .54);
+    font-family: "Museo Sans Rounded -100";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.28px;
+    text-decoration: none;
+}
+
+.card-modal__cntyrls {
+    position: absolute;
+    bottom: 20px;
+    left: 30%;
+}
+
+
+.card-modal__cntyrls img{
+       vertical-align: middle;
+}

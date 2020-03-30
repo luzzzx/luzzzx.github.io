@@ -1,0 +1,120 @@
+@font-face {
+    font-family: 'HansKendrick';
+    src: local('HansKendrick'), url('./fonts/HansKendrick-Regular.woff') format('woff');
+    font-weight: normal;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #e2e7ec;
+}
+
+.container {
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+.gallery {
+    padding-top: 90px;
+}
+
+.gallery__row {
+    display: flex;
+}
+
+.gallery__main {
+    flex: 0 1 68.50%;
+    position: relative;
+}
+
+.gallery__main-img {
+    flex: 0 0 740px;
+    max-width: 740px;
+    height: 100%;
+}
+
+.gallery__main-img img {
+    width: 100%;
+    min-height: 100%;
+}
+
+.gallery__main-body {
+    max-width: 433px;
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+}
+
+.gallery__main-data {
+    color: #ffffff;
+    font-family: "Hans Kendrick";
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.33px;
+}
+
+.gallery__main-text {
+    color: #ffffff;
+    font-family: "Hans Kendrick";
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 36px;
+    text-transform: uppercase;
+    letter-spacing: 0.75px;
+}
+
+.gallery__cards {
+    flex: 0 1 33.33%;
+    display: flex;
+    margin-left: 20px;
+}
+
+.gallery__cards-body {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery__cards-img img {
+    width: 100%;
+}
+
+.gallery__cards-data {
+    margin: 12px 25px;
+    color: #818181;
+    font-family: "Hans Kendrick";
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.33px;
+}
+
+.gallery__cards-title {
+    margin: 0 25px;
+    color: #1d1d1d;
+    font-family: "Hans Kendrick";
+    font-size: 22px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.55px;
+    flex: 1 1 auto;
+    margin-bottom: 70px;
+}
+
+.gallery__cards-avatar {
+    margin: 0px 0px 20px 25px;
+}
+
+.gallery__row.second {
+    margin-top: 20px;
+}
+
+.gallery__row.second .gallery__cards:first-child {
+    margin-left: 0px;
+}

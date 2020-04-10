@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Main</title>
+</head>
+
+<body>
+    <div class="cookies">
+        <div class="container">
+            <div class="cookies-text">
+                This site uses cookies, so that my service can work better.
+            </div>
+            <div class="cookies-btn">
+                <a href="#" class="btn">
+                    Accept
+                </a>
+            </div>
+        </div>
+    </div>
+    <header class="header">
+        <div class="container">
+            <div class="main-menu">
+                <div class="main-menu__burger">
+                    <input id="menu__toggle" type="checkbox" />
+                    <label class="menu__btn" for="menu__toggle">
+                        <span></span>
+                    </label>
+                    <div class="navigation__menu">
+                        <ul class="menu-list">
+                            <li class="menu-items"><a href="#" class="menu-link">About Me</a></li>
+                            <li class="menu-items"><a href="#" class="menu-link">Services</a></li>
+                            <li class="menu-items"><a href="#" class="menu-link">My Works</a></li>
+                            <li class="menu-items"><a href="#" class="menu-link">Clients</a></li>
+                        </ul>
+                        <div class="social-media">
+                            <div class="fb-icon">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-square" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-facebook-square fa-w-14 fa-7x"><path fill="currentColor" d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z" class=""></path></svg>
+                            </div>
+                            <div class="instagram-icon">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-instagram fa-w-14 fa-7x"><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" class=""></path></svg>
+                            </div>
+                            <div class="basket-icon">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="basketball-ball" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="svg-inline--fa fa-basketball-ball fa-w-16 fa-7x"><path fill="currentColor" d="M212.3 10.3c-43.8 6.3-86.2 24.1-122.2 53.8l77.4 77.4c27.8-35.8 43.3-81.2 44.8-131.2zM248 222L405.9 64.1c-42.4-35-93.6-53.5-145.5-56.1-1.2 63.9-21.5 122.3-58.7 167.7L248 222zM56.1 98.1c-29.7 36-47.5 78.4-53.8 122.2 50-1.5 95.5-17 131.2-44.8L56.1 98.1zm272.2 204.2c45.3-37.1 103.7-57.4 167.7-58.7-2.6-51.9-21.1-103.1-56.1-145.5L282 256l46.3 46.3zM248 290L90.1 447.9c42.4 34.9 93.6 53.5 145.5 56.1 1.3-64 21.6-122.4 58.7-167.7L248 290zm191.9 123.9c29.7-36 47.5-78.4 53.8-122.2-50.1 1.6-95.5 17.1-131.2 44.8l77.4 77.4zM167.7 209.7C122.3 246.9 63.9 267.3 0 268.4c2.6 51.9 21.1 103.1 56.1 145.5L214 256l-46.3-46.3zm116 292c43.8-6.3 86.2-24.1 122.2-53.8l-77.4-77.4c-27.7 35.7-43.2 81.2-44.8 131.2z" class=""></path></svg>
+                            </div>
+                            <div class="be-icon">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="behance-square" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-behance-square fa-w-14 fa-7x"><path fill="currentColor" d="M186.5 293c0 19.3-14 25.4-31.2 25.4h-45.1v-52.9h46c18.6.1 30.3 7.8 30.3 27.5zm-7.7-82.3c0-17.7-13.7-21.9-28.9-21.9h-39.6v44.8H153c15.1 0 25.8-6.6 25.8-22.9zm132.3 23.2c-18.3 0-30.5 11.4-31.7 29.7h62.2c-1.7-18.5-11.3-29.7-30.5-29.7zM448 80v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h352c26.5 0 48 21.5 48 48zM271.7 185h77.8v-18.9h-77.8V185zm-43 110.3c0-24.1-11.4-44.9-35-51.6 17.2-8.2 26.2-17.7 26.2-37 0-38.2-28.5-47.5-61.4-47.5H68v192h93.1c34.9-.2 67.6-16.9 67.6-55.9zM380 280.5c0-41.1-24.1-75.4-67.6-75.4-42.4 0-71.1 31.8-71.1 73.6 0 43.3 27.3 73 71.1 73 33.2 0 54.7-14.9 65.1-46.8h-33.7c-3.7 11.9-18.6 18.1-30.2 18.1-22.4 0-34.1-13.1-34.1-35.3h100.2c.1-2.3.3-4.8.3-7.2z" class=""></path></svg>
+                            </div>
+                        </div>
+                        <div class="lang">
+                            <div class="lang__text">
+                                eng
+                            </div>
+                            <div class="lang__img">
+                                <img src="./img/eng.svg.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-intro">
+            <div class="header-intro__avatar">
+
+            </div>
+            <div class="header-intro__title">
+                free portfolio PSD template
+                <br> FOR GRAPHIC designerS
+            </div>
+            <div class="header-intro__subtitle">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor <br> incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            </div>
+            <div class="header-intro__btn">
+                <a href="#" class="btn">
+                    hire me
+                </a>
+            </div>
+            <div class="header-intro__arrow">
+                <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="arrow-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-arrow-down fa-w-14 fa-9x"><path fill="currentColor" d="M443.5 248.5l-7.1-7.1c-4.7-4.7-12.3-4.7-17 0L241 419.9V44c0-6.6-5.4-12-12-12h-10c-6.6 0-12 5.4-12 12v375.9L28.5 241.4c-4.7-4.7-12.3-4.7-17 0l-7.1 7.1c-4.7 4.7-4.7 12.3 0 17l211 211.1c4.7 4.7 12.3 4.7 17 0l211-211.1c4.8-4.8 4.8-12.3.1-17z" class=""></path></svg>
+            </div>
+
+        </div>
+    </header>
+
+    <section class="about">
+        <div class="container">
+            <div class="about__title title">
+                About Me
+            </div>
+            <div class="about__text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+            </div>
+
+        </div>
+    </section>
+
+    <section class="extain">
+        <div class="container">
+            <div class="extain__title title">
+                Expert In
+            </div>
+            <div class="extain__row">
+                <div class="extain__card">
+                    <div class="extain__card-avatar">
+                        <img src="./img/01.png" alt="" class="extain__card-img">
+                    </div>
+                    <div class="extain__card-title">
+                        MOBILE APP DESIGN
+                    </div>
+                    <div class="extain__card-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                    </div>
+                </div>
+                <div class="extain__card">
+                    <div class="extain__card-avatar">
+                        <img src="./img/02.png" alt="" class="extain__card-img comp">
+                    </div>
+                    <div class="extain__card-title">
+                        WEB DESIGN
+                    </div>
+                    <div class="extain__card-text mid">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </div>
+                </div>
+                <div class="extain__card">
+                    <div class="extain__card-avatar">
+                        <img src="./img/03.png" alt="" class="extain__card-img note">
+                    </div>
+                    <div class="extain__card-title">
+                        WEB DEVELOPMENT
+                    </div>
+                    <div class="extain__card-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                    </div>
+                </div>
+            </div>
+            <div class="extain__row">
+                <div class="extain__card">
+                    <div class="extain__card-avatar">
+                        <img src="./img/04.png" alt="" class="extain__card-img prod">
+                    </div>
+                    <div class="extain__card-title">
+                        PRODUCT DESIGN
+                    </div>
+                    <div class="extain__card-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                    </div>
+                </div>
+                <div class="extain__card">
+                    <div class="extain__card-avatar">
+                        <img src="./img/05.png" alt="" class="extain__card-img ux">
+                    </div>
+                    <div class="extain__card-title">
+                        UX & UI
+                    </div>
+                    <div class="extain__card-text mid">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </div>
+                </div>
+                <div class="extain__card">
+                    <div class="extain__card-avatar">
+                        <img src="./img/06.png" alt="" class="extain__card-img anim">
+                    </div>
+                    <div class="extain__card-title">
+                        ANIMATIONS
+                    </div>
+                    <div class="extain__card-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="latest-work">
+        <div class="container">
+            <div class="latest-work__title title">
+                Latest Works
+            </div>
+            <div class="latest-work__row">
+                <div class="latest-work__card">
+                    <div class="latest-work__img">
+                        <img src="./img/1.png" alt="">
+                    </div>
+                </div>
+                <div class="latest-work__card">
+                    <div class="latest-work__img list">
+                        <img src="./img/2.png" alt="">
+                    </div>
+                </div>
+                <div class="latest-work__card">
+                    <div class="latest-work__img">
+                        <img src="./img/3.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="latest-work__row">
+                <div class="latest-work__card">
+                    <div class="latest-work__img">
+                        <img src="./img/4.png" alt="">
+                    </div>
+                </div>
+                <div class="latest-work__card">
+                    <div class="latest-work__img circle">
+                        <img src="./img/5.png" alt="">
+                    </div>
+                </div>
+                <div class="latest-work__card">
+                    <div class="latest-work__img">
+                        <img src="./img/6.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="clients">
+        <div class="container">
+            <div class="clients__title title">
+                Clients
+            </div>
+            <div class="clients__row">
+                <div class="clients__item">
+                    <img src="./img/ms.png" alt="">
+                </div>
+                <div class="clients__item">
+                    <img src="./img/sm.png" alt="">
+                </div>
+                <div class="clients__item">
+                    <img src="./img/ibm.png" alt="">
+                </div>
+                <div class="clients__item">
+                    <img src="./img/gg.png" alt="">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__text">
+                Need a graphic designer? <a href="#" class="footer__text-link">
+                    Ready to work! 
+                </a>
+            </div>
+            <div class="footer__btn">
+                <a class="btn" href="#">hire me</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

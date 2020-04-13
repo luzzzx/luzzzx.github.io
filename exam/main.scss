@@ -1,0 +1,746 @@
+//<ШРИФТЫ>===============================================================================================
+//<Подключаем шрифты>=======================================================================================
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Josefin+Sans:wght@400;700&display=swap');
+//</Подключаем шрифты>=======================================================================================
+//<Иконочные шрифты>==========================================================================================
+//</Иконочные шрифты>==========================================================================================
+//<ПЕРЕМЕННЫЕ>===========================================================================================================
+$minwidth: 320px;
+$mw: 1110;
+$md1: $mw+12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+//</ПЕРЕМЕННЫЕ>===========================================================================================================
+//<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+@import "null.scss";
+body {
+    color: #000;
+    font-size: 14px;
+    &.lock {
+        overflow: hidden;
+    }
+}
+
+//</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+//<ОБОЛОЧКА>===========================================================================================================
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    &.loaded {}
+}
+
+//</ОБОЛОЧКА>===========================================================================================================
+//<ОСНОВНАЯ СЕТКА>===========================================================================================================
+.container {
+    max-width: $mw + px;
+    margin: 0 auto;
+    width: 100%;
+    @media (max-width: $md1+px) {
+        max-width: 970px;
+    }
+    @media (max-width: $md2+px) {
+        max-width: 750px;
+    }
+    @media (max-width: $md3+px) {
+        max-width: none;
+        padding: 0 10px;
+    }
+}
+
+//<Header>=======================================================================================
+.header {
+    background: url('./img/bg-intro.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    padding: 100px 0 130px 0;
+}
+
+.header-body {
+    padding-top: 192px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__title {
+        font-family: 'Josefin Sans';
+        font-size: 48px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 0.54;
+        letter-spacing: 4.8px;
+        text-align: center;
+        color: #ffffff;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        @media (max-width: $md4+px) {
+            font-size: 44px;
+        }
+    }
+    &__subtitle {
+        font-family: 'Josefin Sans';
+        font-size: 22px;
+        font-weight: normal;
+        line-height: 1.18;
+        letter-spacing: 6.82px;
+        text-align: center;
+        color: #ffffff;
+        margin-bottom: 50px;
+        @media (max-width: $md4+px) {
+            font-size: 18px;
+        }
+    }
+    &__form {
+        padding-bottom: 120px;
+    }
+    &__search {
+        padding: 16px 0;
+        width: 500px;
+        font-size: 14px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.86;
+        letter-spacing: 2.8px;
+        text-align: center;
+        color: #999999;
+        @media (max-width: $md4+px) {
+            width: 300px;
+            margin-bottom: 10px;
+        }
+    }
+    &__searchbtn {
+        padding: 17px 0 15px 18px;
+        margin-left: -5px;
+        width: 150px;
+        object-fit: contain;
+        border: solid 2px #ffffff;
+        background-color: #5474fd;
+        font-family: 'Aleo';
+        font-size: 14px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.6;
+        letter-spacing: 1.4px;
+        text-align: center;
+        color: #ffffff;
+        text-transform: uppercase;
+        transition: all .3s linear;
+        @media (max-width: $md4+px) {
+            display: block;
+            margin: 0 auto;
+        }
+        &:hover {
+            background-color: #cf4c5e;
+        }
+        &:after {
+            content: '';
+            height: 22px;
+            width: 22px;
+            background: url('./img/srch.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            display: inline-block;
+            margin: -5px 5px;
+        }
+    }
+    &__scroll {
+        font-family: 'Josefin Sans';
+        font-size: 14px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.86;
+        letter-spacing: 2.8px;
+        text-align: center;
+        color: #ffffff;
+        cursor: pointer;
+        transition: all .3s linear;
+        &:hover {
+            color: #f5e4e4;
+            transform: translateY(-0.25em);
+        }
+        &:after {
+            padding-top: 15px;
+            content: '';
+            height: 9px;
+            width: 15px;
+            background: url('./img/arrow.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            display: block;
+            margin: 0 auto;
+            cursor: pointer;
+        }
+    }
+}
+
+//<Header>=======================================================================================
+.menu {
+    &__btn {
+        display: none;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        cursor: pointer;
+        right: 15px;
+        top: 15px;
+        z-index: 3;
+        @media (max-width: $md4+px) {
+            display: block;
+        }
+        & span {
+            &:before {
+                content: '';
+                width: 28px;
+                height: 2px;
+                background-color: white;
+                display: block;
+                position: absolute;
+                bottom: 8px;
+            }
+            &:after {
+                content: '';
+                width: 28px;
+                height: 2px;
+                background-color: white;
+                display: block;
+                position: absolute;
+                top: 8px;
+            }
+            display: inline-block;
+            position: absolute;
+            width: 28px;
+            height: 2px;
+            top: 20px;
+            left: 6px;
+            background-color: white;
+        }
+    }
+}
+
+#menu__toggle:checked~.menu__btn>span {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    background-color: #010913;
+}
+
+#menu__toggle:checked~.menu__btn>span::before {
+    top: 0;
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    background-color: #010913;
+}
+
+#menu__toggle:checked~.menu__btn>span::after {
+    top: 0;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    background-color: #010913;
+}
+
+//<menu>=======================================================================================
+.navigation {
+    background-color: #5474fd;
+    position: relative;
+}
+
+.menu {
+    padding: 28px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    & input {
+        display: none;
+    }
+    &__logo {
+        font-family: 'Josefin Sans';
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 1.08;
+        letter-spacing: 2.4px;
+        color: #ffffff;
+        cursor: pointer;
+        text-transform: uppercase;
+        z-index: 2;
+    }
+    &__list {
+        display: flex;
+        @media (max-width: $md4+px) {
+            flex-direction: column;
+            background-color: #08eca8;
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100vh;
+            -webkit-transition: all .3s linear;
+            transition: all .3s linear;
+            visibility: hidden;
+            padding: 130px 40px;
+            align-items: center;
+            #menu__toggle:checked~& {
+                top: 0px;
+                left: 0;
+                visibility: visible;
+            }
+        }
+    }
+    &__item {
+        margin-right: 30px;
+        @media (max-width: $md4+px) {
+            margin-bottom: 15px;
+            margin-right: 0;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &__link {
+        font-family: 'Aleo';
+        font-size: 14px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.86;
+        letter-spacing: normal;
+        text-align: left;
+        color: #ffffff;
+        text-transform: uppercase;
+        transition: all .2s linear;
+        @media (max-width: $md4+px) {
+            font-size: 24px;
+        }
+        &:hover {
+            color: #4d30f1;
+        }
+    }
+}
+
+//<menu>=======================================================================================
+//<choose>=======================================================================================
+.choose {
+    padding: 120px 0;
+    background: url('./img/bg2.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @media (max-width: $md3+px) {
+        padding: 10px;
+    }
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__description {
+        display: flex;
+        flex-direction: column;
+        flex: 0 1 50%;
+        width: 50%;
+        padding: 53px 0 0 0;
+        @media (max-width: $md3+px) {
+            width: 100%;
+            flex: 0 1 100%;
+            align-items: center;
+        }
+    }
+    &__title {
+        font-family: 'Aleo';
+        font-size: 36px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 0.72;
+        letter-spacing: normal;
+        text-align: left;
+        color: #ffffff;
+        margin-bottom: 66px;
+    }
+    &__text {
+        p {
+            font-family: 'Josefin Sans';
+            font-size: 16px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.63;
+            letter-spacing: 1.6px;
+            text-align: left;
+            color: #e8e8e8;
+            margin-bottom: 15px;
+            &:last-child {
+                margin-bottom: 50px;
+            }
+            @media (max-width: $md4+px) {
+                text-align: center;
+            }
+        }
+    }
+    &__imgs {
+        display: flex;
+        flex-direction: column;
+        max-width: 43%;
+        flex: 0 1 43%;
+        @media (max-width: $md3+px) {
+            display: none;
+        }
+        & img {
+            &:first-child {
+                align-self: flex-start;
+            }
+            &:last-child {
+                align-self: flex-end;
+            }
+            margin-bottom: 5px;
+            width: 350px;
+            height: 220px;
+        }
+    }
+    .btn {
+        align-self: flex-start;
+        @media (max-width: $md3+px) {
+            align-self: center;
+        }
+    }
+}
+
+.btn {
+    padding: 15px 0;
+    width: 225px;
+    text-align: center;
+    /*Permalink-usetoeditandsharethisgradient:;
+    https:;
+    //colorzilla.com/gradient-editor/#496bfe+0,207cca+31,2989d8+39,5474fd+50*/
+    background: #496bfe;
+    /*Oldbrowsers*/
+    background: -moz-linear-gradient(45deg, #496bfe 0%, #207cca 31%, #2989d8 39%, #5474fd 50%);
+    /*FF3.6-15*/
+    background: -webkit-linear-gradient(45deg, #496bfe 0%, #207cca 31%, #2989d8 39%, #5474fd 50%);
+    /*Chrome10-25,Safari5.1-6*/
+    background: linear-gradient(45deg, #496bfe 0%, #207cca 31%, #2989d8 39%, #5474fd 50%);
+    transition: all .3s linear;
+    /*W3C,IE10+,FF16+,Chrome26+,Opera12+,Safari7+*/
+    a {
+        font-family: 'Aleo';
+        font-size: 16px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.63;
+        letter-spacing: 1.2px;
+        color: #ffffff;
+        text-transform: uppercase;
+    }
+    &:hover {
+        box-shadow: 0 0.5em 0.5em -0.4em;
+        transform: translateY(-0.25em);
+    }
+}
+
+//<choose>=======================================================================================
+//<ssb>=======================================================================================
+.ssb {
+    background-color: #333333;
+    &__row {
+        padding: 92px 0px 85px 0px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: relative;
+    }
+    &__shapebg {
+        width: 100%;
+        position: absolute;
+        top: 8px;
+        left: -7px;
+        padding: 28px 157px;
+        & img {
+            width: 100%;
+        }
+    }
+    &__column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        z-index: 1;
+    }
+    &__img {
+        height: 92px;
+        width: 92px;
+        background-color: #333333;
+    }
+    &__title {
+        font-family: 'Aleo';
+        font-size: 36px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        letter-spacing: normal;
+        color: #e8e8e8;
+        @media (max-width: $md3+px) {
+            font-size: 26px;
+        }
+        @media (max-width: $md4+px) {
+            font-size: 12px;
+        }
+    }
+}
+
+.container {}
+
+//<ssb>=======================================================================================
+//<spain>=======================================================================================
+.spain {
+    padding: 229px 0 100px 0;
+    background: url('./img/bg3.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &__body {
+        display: flex;
+        flex: 0 1 50%;
+        flex-direction: column;
+        max-width: 50%;
+        padding: 50px 30px;
+        background-color: rgba(33, 33, 33, .8);
+        @media (max-width: $md3+px) {
+            max-width: 100%;
+            align-items: center;
+        }
+    }
+    &__name {
+        font-family: 'Josefin Sans';
+        font-size: 20px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.3;
+        letter-spacing: 1.5px;
+        color: #e8e8e8;
+        margin-bottom: 30px;
+    }
+    &__title {
+        font-family: 'Josefin Sans';
+        font-size: 20px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.3;
+        letter-spacing: normal;
+        color: #ffffff;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+    }
+    &__text {
+        font-family: 'Josefin Sans';
+        font-size: 16px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.63;
+        letter-spacing: normal;
+        color: #e8e8e8;
+        margin-bottom: 48px;
+    }
+}
+
+.spain2 {
+    padding: 229px 0 100px 0;
+    background: url('./img/bg4.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &__body {
+        display: flex;
+        flex: 0 1 50%;
+        flex-direction: column;
+        max-width: 50%;
+        padding: 50px 30px;
+        background-color: rgba(33, 33, 33, .8);
+        margin-left: auto;
+        @media (max-width: $md3+px) {
+            max-width: 100%;
+            align-items: center;
+        }
+    }
+    &__name {
+        font-family: 'Josefin Sans';
+        font-size: 20px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.3;
+        letter-spacing: 1.5px;
+        color: #e8e8e8;
+        margin-bottom: 48px;
+    }
+    &__title {
+        font-family: 'Josefin Sans';
+        font-size: 20px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.3;
+        letter-spacing: normal;
+        color: #ffffff;
+        margin-bottom: 19px;
+        text-transform: uppercase;
+    }
+    &__text {
+        font-family: 'Josefin Sans';
+        font-size: 16px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.63;
+        letter-spacing: normal;
+        color: #e8e8e8;
+        margin-bottom: 48px;
+    }
+}
+
+//<spain>=======================================================================================
+//<comment>=======================================================================================
+.comment {
+    padding: 120px 0 200px 0;
+    background: url('./img/bg5.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &__title {
+        font-family: 'Aleo';
+        font-size: 36px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 0.72;
+        letter-spacing: normal;
+        text-align: center;
+        color: #ffffff;
+        margin-bottom: 94px;
+        @media (max-width: $md4+px) {
+            font-size: 30px;
+        }
+    }
+    &__body {
+        display: flex;
+        @media (max-width: $md3+px) {
+            flex-direction: column;
+        }
+    }
+    &__img {
+        flex: 0 0 438px;
+        max-width: 438px;
+        @media (max-width: $md3+px) {
+            margin: 0 auto;
+            flex: none;
+            padding-bottom: 30px;
+        }
+        & img {
+            width: 100%;
+        }
+    }
+    &__text {
+        padding: 24px 54px;
+        background-color: #333333;
+    }
+    &__name {
+        text-transform: uppercase;
+        font-family: 'Josefin Sans';
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1.3;
+        letter-spacing: normal;
+        text-align: left;
+        color: #fefefe;
+        margin-bottom: 33px;
+    }
+    &__descrip {
+        &-quote {
+            width: 20px;
+            height: 20px;
+            color: #5474fd;
+            float: left;
+            margin-right: 10px;
+            margin-top: -10px;
+            transform: rotate(180deg);
+            &:before {
+                clear: both;
+            }
+            &:after {
+                clear: both;
+            }
+        }
+        font-family: 'Josefin Sans';
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.63;
+        letter-spacing: normal;
+        text-align: left;
+        color: #e8e8e8;
+    }
+}
+
+//<comment>=======================================================================================
+//<footer>=======================================================================================
+.footer {
+    background-color: #232323;
+    padding: 120px 0 52px 0;
+    &__body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__title {
+        font-family: 'Josefin Sans';
+        font-size: 26px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.08;
+        letter-spacing: 3.36px;
+        text-align: left;
+        color: #ffffff;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+    }
+    &__subtitle {
+        font-family: 'Josefin Sans';
+        font-size: 16px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.63;
+        letter-spacing: 1.6px;
+        text-align: center;
+        color: #ffffff;
+        margin-bottom: 30px;
+    }
+    &__icons {
+        &-icon {
+            width: 17px;
+            height: 17px;
+            color: #ffffff;
+            transition: 0.5ms;
+            cursor: pointer;
+            margin-right: 23px;
+            transition: all .3s linear;
+            &:last-child {
+                margin-right: 0;
+            }
+            &:hover {
+                color: #5474fd;
+            }
+        }
+    }
+}
+
+//<footer>=======================================================================================

@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/main.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <nav class="navigation">
+                <div class="container header-nav">
+                    <div class="header-nav__logo">
+                        <a href="#">
+                            <img src="./src/img/logo.png" alt="logo">
+                        </a>
+                    </div>
+                    <div class="header-nav__burger">
+                        <span></span>
+                    </div>
+                    <ul class="header-nav__list">
+                        <li class="header-nav__item">
+                            <a href="#" class="header-nav__link">Documents for</a>
+                        </li>
+                        <li class="header-nav__item">
+                            <a href="#" class="header-nav__link">Pricing</a>
+                        </li>
+                        <li class="header-nav__item">
+                            <a href="#" class="header-nav__link">Support</a>
+                        </li>
+                        <li class="header-nav__item">
+                            <a href="#" class="header-nav__link">Sign up free</a>
+                        </li>
+                    </ul>
+                    <div class="header-nav__body">
+                        <a href="tel:888-881-1139" class="header-nav__phone">888-881-1139</a>
+                        <a href="$" class="header-nav__mail">Live chat</a>
+                        <a href="#" class="header-nav__btn">Sign in</a>
+                        <a href="#" class="header-nav__searchbtn"><img src="./src/img/svg/srch.svg" alt="srch"></a>
+                    </div>
+                </div>
+            </nav>
+            <div class="container">
+                <div class="header-intro">
+                    <div class="header-intro__row">
+                        <div class="header-intro__body">
+                            <h1 class="header-intro__title">
+                                Legal products that are
+                            </h1>
+                            <h2 class="header-intro__subtitle">
+                                fast, reliable, and easy.
+                            </h2>
+                            <div class="header-intro__buttons">
+                                <a href="#" class="header-intro__btn btn">Try it free</a>
+                                <a href="#" class="hedaer-intro__transperbtn">View all documents</a>
+                            </div>
+                            <form class="header-intro__form" action="post">
+                                <input class="header-intro__formsearch" type="text" placeholder="Search your document">
+                                <img class="icon-srch" src="./src/img/svg/srcform.svg" alt="">
+                            </form>
+                        </div>
+                        <div class="header-intro__select">
+                            <div class="header-intro__wrapp">
+                                <div class="header-form">
+                                    <h2 class="header-form__title">Hundreds of Attorney <br> Crafted Legal Forms</h2>
+                                    <h3 class="header-form__subtitle">Try all of our forms for free today</h3>
+                                    <div class="header-form__select">
+                                        <span>Choose your document <img src="./src/img/svg/arrselect.svg" alt="arrow"></span>
+                                    </div>
+                                    <a href="#" class="header-form__btn btn">Create Document</a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="approved">
+                <div class="container">
+                    <div class="approved-body">
+                        <div class="approved__logo">
+                            <img src="./src/img/approv.png" alt="">
+                        </div>
+                        <div class="approved__title">
+                            <h2>99% of customers</h2>
+                        </div>
+                        <div class="approved__icons">
+                            <img src="./src/img/svg/Star.svg" alt="Star">
+                            <img src="./src/img/svg/Star.svg" alt="Star">
+                            <img src="./src/img/svg/Star.svg" alt="Star">
+                            <img src="./src/img/svg/Star.svg" alt="Star">
+                            <img src="./src/img/svg/Star.svg" alt="Star">
+                        </div>
+                        <div class="approved__text">
+                            <p>recommend our Legal documents services</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="howit">
+                <div class="container">
+                    <h2 class="howit__title">
+                        How it works
+                    </h2>
+                    <div class="howit__row">
+                        <div class="howit__column">
+                            <div class="howit__imgs">
+                                <img src="./src/img/01.jpg" alt="">
+                            </div>
+                            <div class="howit__text">
+                                <p>
+                                    Choose the document you wish to create.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="howit__column">
+                            <div class="howit__imgs">
+                                <img src="./src/img/02.jpg" alt="">
+                            </div>
+                            <div class="howit__text">
+                                <p>
+                                    Answer a few simple questions with step-by-step instructions.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="howit__column">
+                            <div class="howit__imgs">
+                                <img src="./src/img/03.jpg" alt="">
+                            </div>
+                            <div class="howit__text">
+                                <p>
+                                    Print & download forms instantly. Sign & make it legal.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="document">
+                <div class="container">
+                    <div class="document-body">
+                        <h2 class="document-body__title">
+                            Choose your document
+                        </h2>
+                        <div class="tabs document-body__tabs">
+                            <ul class="document-body__tabs-items">
+                                <li data-tab="tab01" class="document-body__tabs-link current">Individuals</li>
+                                <li data-tab="tab02" class="document-body__tabs-link">Businesses</li>
+                                <li data-tab="tab03" class="document-body__tabs-link">Lawyers</li>
+                                <li data-tab="tab04" class="document-body__tabs-link">Real Estate</li>
+                            </ul>
+                            <div class="document-body__tabs-body">
+                                <div id="tab01" class="document-body__tabs-block current">
+                                    <div class="document-body__tabs-row">
+                                        <div class="document-body__tabs-column">
+                                            <div class="document-body__tabs-title">
+                                                <h3>
+                                                    Bankruptcy
+                                                </h3>
+                                            </div>
+                                            <ul class="document-body__tabs-list">
+                                                <li class="document-body__tabs-item">Bankruptcy Worksheet</li>
+                                                <li class="document-body__tabs-item">Advance Healthcare Directive</li>
+                                                <li class="document-body__tabs-item">Deed of Trust</li>
+                                            </ul>
+                                        </div>
+                                        <div class="document-body__tabs-column">
+                                            <div class="document-body__tabs-title">
+                                                <h3>
+                                                    Bankruptcy
+                                                </h3>
+                                            </div>
+                                            <ul class="document-body__tabs-list">
+                                                <li class="document-body__tabs-item">Bankruptcy Worksheet</li>
+                                                <li class="document-body__tabs-item">Advance Healthcare Directive</li>
+                                                <li class="document-body__tabs-item">Deed of Trust</li>
+                                            </ul>
+                                        </div>
+                                        <div class="document-body__tabs-column">
+                                            <div class="document-body__tabs-title">
+                                                <h3>
+                                                    Bankruptcy
+                                                </h3>
+                                            </div>
+                                            <ul class="document-body__tabs-list">
+                                                <li class="document-body__tabs-item">Bankruptcy Worksheet</li>
+                                                <li class="document-body__tabs-item">Advance Healthcare Directive</li>
+                                                <li class="document-body__tabs-item">Deed of Trust</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="document-body__tabs-row">
+                                        <div class="document-body__tabs-column">
+                                            <div class="document-body__tabs-title">
+                                                <h3>
+                                                    Bankruptcy
+                                                </h3>
+                                            </div>
+                                            <ul class="document-body__tabs-list">
+                                                <li class="document-body__tabs-item">Bankruptcy Worksheet</li>
+                                                <li class="document-body__tabs-item">Advance Healthcare Directive</li>
+                                                <li class="document-body__tabs-item">Deed of Trust</li>
+                                            </ul>
+                                        </div>
+                                        <div class="document-body__tabs-column">
+                                            <div class="document-body__tabs-title">
+                                                <h3>
+                                                    Bankruptcy
+                                                </h3>
+                                            </div>
+                                            <ul class="document-body__tabs-list">
+                                                <li class="document-body__tabs-item">Bankruptcy Worksheet</li>
+                                                <li class="document-body__tabs-item">Advance Healthcare Directive</li>
+                                                <li class="document-body__tabs-item">Deed of Trust</li>
+                                            </ul>
+                                        </div>
+                                        <div class="document-body__tabs-column">
+                                            <div class="document-body__tabs-title">
+                                                <h3>
+                                                    Bankruptcy
+                                                </h3>
+                                            </div>
+                                            <ul class="document-body__tabs-list">
+                                                <li class="document-body__tabs-item">Bankruptcy Worksheet</li>
+                                                <li class="document-body__tabs-item">Advance Healthcare Directive</li>
+                                                <li class="document-body__tabs-item">Deed of Trust</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="tab02" class="document-body__tabs-block">
+                                    <div class="document-body__tabs-row">
+                                        <div class="document-body__tabs-column">
+                                            <div class="document-body__tabs-title">
+                                                <h3>
+                                                    Bankruptcy
+                                                </h3>
+                                            </div>
+                                            <ul class="document-body__tabs-list">
+                                                <li class="document-body__tabs-item">Bankruptcy Worksheet</li>
+                                                <li class="document-body__tabs-item">Advance Healthcare Directive</li>
+                                                <li class="document-body__tabs-item">Deed of Trust</li>
+                                            </ul>
+                                        </div>
+                                        <div class="document-body__tabs-column">
+                                            <div class="document-body__tabs-title">
+                                                <h3>
+                                                    Bankruptcy
+                                                </h3>
+                                            </div>
+                                            <ul class="document-body__tabs-list">
+                                                <li class="document-body__tabs-item">Bankruptcy Worksheet</li>
+                                                <li class="document-body__tabs-item">Advance Healthcare Directive</li>
+                                                <li class="document-body__tabs-item">Deed of Trust</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="document-body__tabs-row">
+                                        <div class="document-body__tabs-column">
+                                            <div class="document-body__tabs-title">
+                                                <h3>
+                                                    Bankruptcy
+                                                </h3>
+                                            </div>
+                                            <ul class="document-body__tabs-list">
+                                                <li class="document-body__tabs-item">Bankruptcy Worksheet</li>
+                                                <li class="document-body__tabs-item">Advance Healthcare Directive</li>
+                                                <li class="document-body__tabs-item">Deed of Trust</li>
+                                            </ul>
+                                        </div>
+                                        <div class="document-body__tabs-column">
+                                            <div class="document-body__tabs-title">
+                                                <h3>
+                                                    Bankruptcy
+                                                </h3>
+                                            </div>
+                                            <ul class="document-body__tabs-list">
+                                                <li class="document-body__tabs-item">Bankruptcy Worksheet</li>
+                                                <li class="document-body__tabs-item">Advance Healthcare Directive</li>
+                                                <li class="document-body__tabs-item">Deed of Trust</li>
+                                            </ul>
+                                        </div>
+                                        <div class="document-body__tabs-column">
+                                            <div class="document-body__tabs-title">
+                                                <h3>
+                                                    Bankruptcy
+                                                </h3>
+                                            </div>
+                                            <ul class="document-body__tabs-list">
+                                                <li class="document-body__tabs-item">Bankruptcy Worksheet</li>
+                                                <li class="document-body__tabs-item">Advance Healthcare Directive</li>
+                                                <li class="document-body__tabs-item">Deed of Trust</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="tab03" class="document-body__tabs-block">
+                                    <div class="document-body__tabs-row">
+                                        <div class="document-body__tabs-column">
+                                            <div class="document-body__tabs-title">
+                                                <h3>
+                                                    Bankruptcy
+                                                </h3>
+                                            </div>
+                                            <ul class="document-body__tabs-list">
+                                                <li class="document-body__tabs-item">Bankruptcy Worksheet</li>
+                                                <li class="document-body__tabs-item">Advance Healthcare Directive</li>
+                                                <li class="document-body__tabs-item">Deed of Trust</li>
+                                            </ul>
+                                        </div>
+                                        <div class="document-body__tabs-column">
+                                            <div class="document-body__tabs-title">
+                                                <h3>
+                                                    Bankruptcy
+                                                </h3>
+                                            </div>
+                                            <ul class="document-body__tabs-list">
+                                                <li class="document-body__tabs-item">Bankruptcy Worksheet</li>
+                                                <li class="document-body__tabs-item">Advance Healthcare Directive</li>
+                                                <li class="document-body__tabs-item">Deed of Trust</li>
+                                            </ul>
+                                        </div>
+                                        <div class="document-body__tabs-column">
+                                            <div class="document-body__tabs-title">
+                                                <h3>
+                                                    Bankruptcy
+                                                </h3>
+                                            </div>
+                                            <ul class="document-body__tabs-list">
+                                                <li class="document-body__tabs-item">Bankruptcy Worksheet</li>
+                                                <li class="document-body__tabs-item">Advance Healthcare Directive</li>
+                                                <li class="document-body__tabs-item">Deed of Trust</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="tab04" class="document-body__tabs-block">
+                                    <div class="document-body__tabs-row">
+                                        <div class="document-body__tabs-column">
+                                            <div class="document-body__tabs-title">
+                                                <h3>
+                                                    Bankruptcy
+                                                </h3>
+                                            </div>
+                                            <ul class="document-body__tabs-list">
+                                                <li class="document-body__tabs-item">Bankruptcy Worksheet</li>
+                                                <li class="document-body__tabs-item">Advance Healthcare Directive</li>
+                                                <li class="document-body__tabs-item">Deed of Trust</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="document-body__tabs-row">
+                                        <div class="document-body__tabs-column">
+                                            <div class="document-body__tabs-title">
+                                                <h3>
+                                                    Bankruptcy
+                                                </h3>
+                                            </div>
+                                            <ul class="document-body__tabs-list">
+                                                <li class="document-body__tabs-item">Bankruptcy Worksheet</li>
+                                                <li class="document-body__tabs-item">Advance Healthcare Directive</li>
+                                                <li class="document-body__tabs-item">Deed of Trust</li>
+                                            </ul>
+                                        </div>
+                                        <div class="document-body__tabs-column">
+                                            <div class="document-body__tabs-title">
+                                                <h3>
+                                                    Bankruptcy
+                                                </h3>
+                                            </div>
+                                            <ul class="document-body__tabs-list">
+                                                <li class="document-body__tabs-item">Bankruptcy Worksheet</li>
+                                                <li class="document-body__tabs-item">Advance Healthcare Directive</li>
+                                                <li class="document-body__tabs-item">Deed of Trust</li>
+                                            </ul>
+                                        </div>
+                                        <div class="document-body__tabs-column">
+                                            <div class="document-body__tabs-title">
+                                                <h3>
+                                                    Bankruptcy
+                                                </h3>
+                                            </div>
+                                            <ul class="document-body__tabs-list">
+                                                <li class="document-body__tabs-item">Bankruptcy Worksheet</li>
+                                                <li class="document-body__tabs-item">Advance Healthcare Directive</li>
+                                                <li class="document-body__tabs-item">Deed of Trust</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="document-body__footer">
+                            <span class="document-body__text">
+                                Don’t find that you want?
+                            </span>
+                            <a href="#" class="btn document-body__btn">
+                                Discover All Documents for Individuals
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <section class="encrrypt">
+                <div class="container">
+                    <div class="encrrypt-body">
+                        <div class="encrrypt-body__row">
+                            <div class="encrrypt-body__description">
+                                <h3 class="encrrypt-body__title">
+                                    Encrypted data
+                                </h3>
+                                <h2 class="encrrypt-body__subtitle">
+                                    Safe and Secure
+                                </h2>
+                                <p class="encrrypt-body__text">
+                                    Keep tabs on your business no matter where you are. With the FreshBooks mobile app, you can capture your expenses, send invoices and know the moment you get paid, all from the palm of your hand.
+                                </p>
+                                <a href="#" class="encrrypt-body__link">
+                                    <img src="./src/img/15.png" alt="">
+                                </a>
+                                <a href="#" class="encrrypt-body__link">
+                                    <img src="./src/img/16.png" alt="">
+                                </a>
+                            </div>
+                            <div class="encrrypt-body__image">
+                                <img src="./src/img/17.jpg" alt="">
+                            </div>
+
+                        </div>
+                        <div class="encrrypt-body__row">
+                            <div class="encrrypt-body__image">
+                                <img src="./src/img/18.jpg" alt="">
+                            </div>
+                            <div class="encrrypt-body__description">
+                                <h3 class="encrrypt-body__title">
+                                    Anywhere access
+                                </h3>
+                                <h2 class="encrrypt-body__subtitle">
+                                    Available on Any Device
+                                </h2>
+                                <p class="encrrypt-body__text">
+                                    Keep tabs on your business no matter where you are. With the FreshBooks mobile app, you can capture your expenses, send invoices and know the moment you get paid, all from the palm of your hand.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="sevendays">
+                <div class="container">
+                    <div class="sevendays-body">
+                        <div class="sevendays-body__row">
+                            <div class="sevendays-body__description">
+                                <h2 class="sevendays-body__title">
+                                    360 LegalForms free for 7 days!
+                                </h2>
+                                <p class="sevendays-body__text">
+                                    We offer a free 7 day trial on all of our plans and single document purchase options.
+                                </p>
+                                <div class="sevendays-body__links">
+                                    <a href="#" class="sevendays-body__link">
+                                        <img src="./src/img/svg/mcfee.svg" alt="">
+                                    </a>
+                                    <a href="#" class="sevendays-body__link">
+                                        <img src="./src/img/svg/approv.svg" alt="">
+                                    </a>
+                                    <a href="#" class="sevendays-body__link">
+                                        <img src="./src/img/svg/30day.svg" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="sevendays-body__form">
+                                <div class="sevendays-body__img">
+                                    <img src="./src/img/plans.png" alt="">
+                                </div>
+                                <h2 class="sevendays-body__form-title">
+                                    Try it for free or view pricing on <span>All Plans</span>.
+                                </h2>
+                                <a href="#" class="btn sevendays-body__form-btn">Try it Free Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="choose">
+                <div class="container">
+                    <div class="choose-body">
+                        <h2 class="choose-body__title">
+                            Why choose 360 LegalForms?
+                        </h2>
+                        <h3 class="choose-body__subtitle">
+                            No matter if you are a small business, a large corporation, or an independent landlord, we have you covered.
+                        </h3>
+                        <div class="choose-body__column">
+                            <div class="choose-body__row">
+                                <div class="choose-body__img">
+                                    <img src="./src/img/choos01.png" alt="">
+                                </div>
+                                <div class="choose-body__description">
+                                    <h3 class="choose-body__text-title">
+                                        Easy legal documents at your fingertips
+                                    </h3>
+                                    <p class="choose-body__text">
+                                        Make trusted documents for hundreds of purposes.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="choose-body__row">
+                                <div class="choose-body__img">
+                                    <img src="./src/img/choos02.png" alt="">
+                                </div>
+                                <div class="choose-body__description">
+                                    <h3 class="choose-body__text-title">
+                                        Easily customized
+                                    </h3>
+                                    <p class="choose-body__text">
+                                        Make unlimited revisions and copies. Sign online in seconds. Download and print anytime.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="choose-body__row">
+                                <div class="choose-body__img">
+                                    <img src="./src/img/choos03.png" alt="">
+                                </div>
+                                <div class="choose-body__description">
+                                    <h3 class="choose-body__text-title">
+                                        Applicable to all 50 states
+                                    </h3>
+                                    <p class="choose-body__text">
+                                        Our documents are vetted by lawyers and legal staff, so you can use them with confidence.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="choose-body__search-form">
+                            <span class="choose-body__search-title">
+                                Try for free and start your document
+                            </span>
+                            <form class="header-intro__form" action="post">
+                                <input class="header-intro__formsearch" type="text" placeholder="Search your document">
+                                <img class="icon-srch" src="./src/img/svg/srcform.svg" alt="">
+                            </form>
+                            <a href="#" class="choose-body__btn btn">Search now</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="unturned">
+                <div class="container">
+                    <div class="unturned-body">
+                        <h2 class="unturned-body__title">
+                            No stone left unturned
+                        </h2>
+                        <h3 class="unturned-body__subtitle">
+                            Make informed decisions with extensive data from every part of your website.
+                        </h3>
+                        <div class="unturned-body__row">
+                            <div class="unturned-body__column">
+                                <div class="unturned-body__img">
+                                    <img src="./src/img/svg/f1.svg" alt="">
+                                </div>
+                                <h3 class="unturned-body__col-title">
+                                    Attorney Crafted Legal Forms
+                                </h3>
+                                <p class="unturned-body__col-text">
+                                    Improve your team’s incident workflow with the right alerts.
+                                </p>
+                            </div>
+                            <div class="unturned-body__column">
+                                <div class="unturned-body__img">
+                                    <img src="./src/img/svg/f2.svg" alt="">
+                                </div>
+                                <h3 class="unturned-body__col-title">
+                                    Sign online. Invite others to sign too.
+                                </h3>
+                                <p class="unturned-body__col-text">
+                                    Improve your team’s incident workflow with the right alerts.
+                                </p>
+                            </div>
+                            <div class="unturned-body__column">
+                                <div class="unturned-body__img">
+                                    <img src="./src/img/svg/f4.svg" alt="">
+                                </div>
+                                <h3 class="unturned-body__col-title">
+                                    Easy to create and customize.
+                                </h3>
+                                <p class="unturned-body__col-text">
+                                    Improve your team’s incident workflow with the right alerts.
+                                </p>
+                            </div>
+                            <div class="unturned-body__column">
+                                <div class="unturned-body__img">
+                                    <img src="./src/img/svg/f3.svg" alt="">
+                                </div>
+                                <h3 class="unturned-body__col-title">
+                                    Access from any device. Download or print.
+                                </h3>
+                                <p class="unturned-body__col-text">
+                                    Improve your team’s incident workflow with the right alerts.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="unturned-body__row">
+                            <div class="unturned-body__column">
+                                <div class="unturned-body__img">
+                                    <img src="./src/img/svg/f5.svg" alt="">
+                                </div>
+                                <h3 class="unturned-body__col-title">
+                                    Customized for Your State
+                                </h3>
+                                <p class="unturned-body__col-text">
+                                    Improve your team’s incident workflow with the right alerts.
+                                </p>
+                            </div>
+                            <div class="unturned-body__column">
+                                <div class="unturned-body__img">
+                                    <img src="./src/img/svg/f6.svg" alt="">
+                                </div>
+                                <h3 class="unturned-body__col-title">
+                                    Multiple Download Options
+                                </h3>
+                                <p class="unturned-body__col-text">
+                                    Improve your team’s incident workflow with the right alerts.
+                                </p>
+                            </div>
+                            <div class="unturned-body__column">
+                                <div class="unturned-body__img">
+                                    <img src="./src/img/svg/f7.svg" alt="">
+                                </div>
+                                <h3 class="unturned-body__col-title">
+                                    Regularly Updated
+                                </h3>
+                                <p class="unturned-body__col-text">
+                                    Improve your team’s incident workflow with the right alerts.
+                                </p>
+                            </div>
+                            <div class="unturned-body__column">
+                                <div class="unturned-body__img">
+                                    <img src="./src/img/svg/f8.svg" alt="">
+                                </div>
+                                <h3 class="unturned-body__col-title">
+                                    Encrypted and Secure
+                                </h3>
+                                <p class="unturned-body__col-text">
+                                    Improve your team’s incident workflow with the right alerts.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="getstart">
+                <div class="container">
+                    <div class="getstart-body">
+                        <div class="getstart-body__row">
+                            <div class="getstart-body__col">
+                                <h2 class="getstart-body__title">
+                                    Get started for free today.
+                                </h2>
+                                <h4 class="getstart-body__subtitle">
+                                    Cancel anytime.
+                                </h4>
+                                <a href="#" class="getstart-body__btn btn">
+                                    Start your Document
+                                </a>
+                            </div>
+                            <div class="getstart-body__col">
+                                <img class="getstart-body__image" src="./src/img/cert.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="foot-nav">
+                <div class="container">
+                    <div class="foot-body">
+                        <div class="foot-body__row">
+                            <div class="foot-body__col">
+                                <div class="foot-body__title">
+                                    COMPANY
+                                </div>
+                                <ul class="foote-body__list">
+                                    <li class="foot-body__item">
+                                        <a href="#" class="foot-body__link">
+                                            About us
+                                        </a>
+                                    </li>
+                                    <li class="foot-body__item">
+                                        <a href="#" class="foot-body__link">
+                                            Careers
+                                        </a>
+                                    </li>
+                                    <li class="foot-body__item">
+                                        <a href="#" class="foot-body__link">
+                                            Contact us
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="foot-body__col">
+                                <div class="foot-body__title">
+                                    POPULAR
+                                </div>
+                                <ul class="foote-body__list">
+                                    <li class="foot-body__item">
+                                        <a href="#" class="foot-body__link">
+                                            Legal documents
+                                        </a>
+                                    </li>
+                                    <li class="foot-body__item">
+                                        <a href="#" class="foot-body__link">
+                                            Bill of Sale
+                                        </a>
+                                    </li>
+                                    <li class="foot-body__item">
+                                        <a href="#" class="foot-body__link">
+                                            Power of Attorney
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="foot-body__col">
+                                <div class="foot-body__title">
+                                    LEARN MORE
+                                </div>
+                                <ul class="foote-body__list">
+                                    <li class="foot-body__item">
+                                        <a href="#" class="foot-body__link">
+                                            Billing FAQs
+                                        </a>
+                                    </li>
+                                    <li class="foot-body__item">
+                                        <a href="#" class="foot-body__link">
+                                            Help center
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="foot-body__chat">
+                                <a class="foot-body__phone" href="#">888-881-1139</a>
+                                <p class="foot-body__days">
+                                    Mon-Fri: 9 am - 5 pm PT
+                                </p>
+                                <a class="foot-body__chat-btn" href="#">Live chat</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__row">
+                    <div class="footer__col">
+                        <img src="./src/img/img_mcafee.png" alt="">
+                        <img src="./src/img/approv.png" alt="">
+                        <div class="footer__icons">
+                            <a href="#"><img src="./src/img/svg/fb.svg" alt=""></a>
+                            <a href="#"><img src="./src/img/svg/twit.svg" alt=""></a>
+                            <a href="#"><img src="./src/img/svg/you.svg" alt=""></a>
+                            <a href="#"><img src="./src/img/svg/goog.svg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="footer__col">
+                        <a href="#"><img src="./src/img/visa.png" alt=""></a>
+                        <a href="#"><img src="./src/img/mcard.png" alt=""></a>
+                        <a href="#"><img src="./src/img/american-express.png" alt=""></a>
+                        <a href="#"><img src="./src/img/paypal.png" alt=""></a>
+                        <a href="#"><img src="./src/img/discover.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="footer__copyright">
+                    <a class="footer__logo" href="#"><img src="./src/img/Logofooter.png" alt=""></a>
+                    <span class="footer__text">
+                        © Copyright 2018 360 LegalForms, LLC. 360 LegalForms provides information and software only. 360 LegalForms is not a "lawyer referral service" and does not provide legal advice or participate in any legal representation. Use of 360 LegalForms is subject to our Terms of Service and Privacy Policy.
+                    </span>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="./js/jquery-3.5.0.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

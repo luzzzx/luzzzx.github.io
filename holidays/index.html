@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/css/bootstrap.css" />
+    <link rel="stylesheet" href="./src/css/bootstrap-datepicker.css" />
+    <link rel="stylesheet" href="./src/css/main.css" />
+
+    <title>Holidays</title>
+  </head>
+
+  <body>
+    <svg style="display: none;">
+      <symbol id="burger" viewBox="0 0 448 512">
+        <path
+          fill="currentColor"
+          d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
+          class=""
+        ></path>
+      </symbol>
+      <symbol id="close" viewBox="0 0 512 512">
+        <path
+          fill="currentColor"
+          d="M464 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm0 394c0 3.3-2.7 6-6 6H54c-3.3 0-6-2.7-6-6V86c0-3.3 2.7-6 6-6h404c3.3 0 6 2.7 6 6v340zM356.5 194.6L295.1 256l61.4 61.4c4.6 4.6 4.6 12.1 0 16.8l-22.3 22.3c-4.6 4.6-12.1 4.6-16.8 0L256 295.1l-61.4 61.4c-4.6 4.6-12.1 4.6-16.8 0l-22.3-22.3c-4.6-4.6-4.6-12.1 0-16.8l61.4-61.4-61.4-61.4c-4.6-4.6-4.6-12.1 0-16.8l22.3-22.3c4.6-4.6 12.1-4.6 16.8 0l61.4 61.4 61.4-61.4c4.6-4.6 12.1-4.6 16.8 0l22.3 22.3c4.7 4.6 4.7 12.1 0 16.8z"
+          class=""
+        ></path>
+      </symbol>
+    </svg>
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand d-lg-none" href="#"
+            ><img src="./src/img/logo.png" alt=""
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon">
+              <svg class="burger">
+                <use xlink:href="#burger"></use>
+              </svg>
+              <svg class="close">
+                <use xlink:href="#close"></use>
+              </svg>
+            </span>
+          </button>
+          <div
+            class="collapse navbar-collapse d-lg-flex align-items-center"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar_nav navbar__list d-lg-flex">
+              <li>
+                <a href="" class="navbar__link">home</a>
+              </li>
+              <li>
+                <a href="" class="navbar__link">experiences</a>
+              </li>
+              <li>
+                <a class="navbar-brand d-none d-lg-block" href="#"
+                  ><img src="./src/img/logo.png" alt=""
+                /></a>
+              </li>
+              <li>
+                <a href="" class="navbar__link">questions</a>
+              </li>
+              <li>
+                <a href="" class="navbar__link">contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="intro-header">
+        <h1 class="intro-header__title">
+          Enjoy freedom land
+        </h1>
+      </div>
+    </header>
+    <main>
+      <section class="forms">
+        <div class="forms-body">
+          <div class="container">
+            <div class="row forms-row">
+              <div class="col-lg-3">
+                <div class="input-group">
+                  <select class="custom-select" id="inputGroupSelect01">
+                    <option selected>Mauritius</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-lg-2">
+                <!-- Date Picker Input -->
+                <div class="form-group forms-data">
+                  <div class="datepicker date input-group">
+                    <input
+                      type="text"
+                      placeholder="24 Sept"
+                      class="form-control px-2"
+                      id="reservationDate"
+                    />
+                    <div class="input-group-append"></div>
+                  </div>
+                </div>
+                <!-- DEnd ate Picker Input -->
+              </div>
+              <div class="col-lg-2">
+                <div class="form-group forms-data">
+                  <div class="datepicker date input-group">
+                    <input
+                      type="text"
+                      placeholder="24 Sept"
+                      class="form-control px-2"
+                      id="reservationDate"
+                    />
+                    <div class="input-group-append"></div>
+                  </div>
+                </div>
+                <!-- DEnd ate Picker Input -->
+              </div>
+              <div class="col-lg-2">
+                <div class="input-group">
+                  <select class="custom-select" id="inputGroupSelect01">
+                    <option selected>5 Bedrooms</option>
+                    <option value="1">4 Bedrooms</option>
+                    <option value="2">3 Bedrooms</option>
+                    <option value="3">2 Bedrooms</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-lg-1 forms-row__arrow">
+                <a href="#book"><img src="./src/img/arrow.png" alt="" /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="vocation">
+        <div class="container">
+          <div class="vocation-body">
+            <h2 class="vocation-body__title title">
+              See latest vacation ideas
+            </h2>
+            <span class="vocation-body__separetor separetor">
+              <img src="./src/img/separator.png" alt="" />
+            </span>
+            <div class="row vocation-body__row flex-lg-row flex-column">
+              <div class="vocation-body__column col-lg-4 col-sm-12">
+                <div class="vocation-body__card card-1">
+                  <div class="vocation-body__content-btn">
+                    <div class="vocation-body__text hover-border">
+                      Beachfront Escapes
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="vocation-body__column col2 col-lg-4 col-sm-12">
+                <div class="vocation-body__card card-2">
+                  <div class="vocation-body__content-btn">
+                    <div class="vocation-body__text hover-border">
+                      Beachfront Escapes
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="vocation-body__column col3 col-lg-4 col-sm-12">
+                <div class="vocation-body__card card-3">
+                  <div class="vocation-body__content-btn">
+                    <div class="vocation-body__text hover-border">
+                      Beachfront Escapes
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="location">
+        <div class="container">
+          <div id="book" class="location-body">
+            <h2 class="location-body-title title">Recent holiday locations</h2>
+            <span class="location-body__separetor separetor">
+              <img src="./src/img/separator.png" alt="" />
+            </span>
+            <div class="row location-body-row">
+              <div class="location-body__card col-lg-6 col-sm-12">
+                <div class="row no-gutters">
+                  <div class="location-body__card-slider col-lg-6 col-sm-12">
+                    <div class="tab-content" id="pills-tabContent">
+                      <div
+                        class="tab-pane fade show active"
+                        id="pills-home"
+                        role="tabpanel"
+                        aria-labelledby="pills-home-tab"
+                      >
+                        <img src="./src/img/slider-main.jpg" alt="" />
+                      </div>
+                      <div
+                        class="tab-pane fade"
+                        id="pills-profile"
+                        role="tabpanel"
+                        aria-labelledby="pills-profile-tab"
+                      >
+                        <img src="./src/img/slider-main02.jpg" alt="" />
+                      </div>
+                      <div
+                        class="tab-pane fade"
+                        id="pills-contact"
+                        role="tabpanel"
+                        aria-labelledby="pills-contact-tab"
+                      >
+                        <img src="./src/img/slider-main03.jpg" alt="" />
+                      </div>
+                    </div>
+                    <ul
+                      class="nav nav-pills location-body-pills"
+                      id="pills-tab"
+                      role="tablist"
+                    >
+                      <li class="nav-item">
+                        <a
+                          class="active"
+                          id="pills-home-tab"
+                          data-toggle="pill"
+                          href="#pills-home"
+                          role="tab"
+                          aria-controls="pills-home"
+                          aria-selected="true"
+                        >
+                          <img src="./src/img/slider-small01.jpg" alt="" />
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a
+                          class=""
+                          id="pills-profile-tab"
+                          data-toggle="pill"
+                          href="#pills-profile"
+                          role="tab"
+                          aria-controls="pills-profile"
+                          aria-selected="false"
+                        >
+                          <img src="./src/img/slider-small02.jpg" alt="" />
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a
+                          class=""
+                          id="pills-contact-tab"
+                          data-toggle="pill"
+                          href="#pills-contact"
+                          role="tab"
+                          aria-controls="pills-contact"
+                          aria-selected="false"
+                        >
+                          <img src="./src/img/slider-small03.jpg" alt="" />
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="location-body__card-caption col-lg-6 col-sm-12">
+                    <a href="#" class="location-body__card-title">
+                      Thalie 5
+                    </a>
+                    <div class="location-body__card-text">
+                      Thalie 5 is located on the exclusive Belle Riviere estate,
+                      which is home to several of Luxury Retreats’ finest villas
+                      in Mauritius.
+                    </div>
+                    <div class="location-body__card-icons">
+                      <span class="card-icon">
+                        <img src="./src/img/bed.svg" alt="" />
+                        2
+                      </span>
+                      <span class="card-icon">
+                        <img src="./src/img/bath.svg" alt="" />
+                        5
+                      </span>
+                      <span class="card-icon">
+                        <img src="./src/img/beachfront.svg" alt="" />
+                      </span>
+                    </div>
+                    <a href="#" class="location-body__card-btn btn">
+                      Book now
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="location-body__card col-lg-6 col-sm-12">
+                <div class="row no-gutters">
+                  <div class="location-body__card-slider col-lg-6 col-sm-12">
+                    <div class="tab-content" id="pills-tabContent">
+                      <div
+                        class="tab-pane fade show active"
+                        id="pills-home2"
+                        role="tabpanel"
+                        aria-labelledby="pills-home-tab"
+                      >
+                        <img src="./src/img/sl2main.jpg" alt="" />
+                      </div>
+                      <div
+                        class="tab-pane fade"
+                        id="pills-profile2"
+                        role="tabpanel"
+                        aria-labelledby="pills-profile-tab"
+                      >
+                        <img src="./src/img/sl2main2.jpg" alt="" />
+                      </div>
+                      <div
+                        class="tab-pane fade"
+                        id="pills-contact2"
+                        role="tabpanel"
+                        aria-labelledby="pills-contact-tab"
+                      >
+                        <img src="./src/img/sl2main3.jpg" alt="" />
+                      </div>
+                    </div>
+                    <ul
+                      class="nav nav-pills location-body-pills"
+                      id="pills-tab"
+                      role="tablist"
+                    >
+                      <li class="nav-item">
+                        <a
+                          class="active"
+                          id="pills-home-tab"
+                          data-toggle="pill"
+                          href="#pills-home2"
+                          role="tab"
+                          aria-controls="pills-home"
+                          aria-selected="true"
+                        >
+                          <img src="./src/img/sl2sm01.jpg" alt="" />
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a
+                          class=""
+                          id="pills-profile-tab"
+                          data-toggle="pill"
+                          href="#pills-profile2"
+                          role="tab"
+                          aria-controls="pills-profile"
+                          aria-selected="false"
+                        >
+                          <img src="./src/img/sl2sm02.jpg" alt="" />
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a
+                          class=""
+                          id="pills-contact-tab"
+                          data-toggle="pill"
+                          href="#pills-contact2"
+                          role="tab"
+                          aria-controls="pills-contact"
+                          aria-selected="false"
+                        >
+                          <img src="./src/img/sl2sm03.jpg" alt="" />
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="location-body__card-caption col-lg-6 col-sm-12">
+                    <a href="#" class="location-body__card-title">
+                      Montage Kapalua
+                    </a>
+                    <div class="location-body__card-text">
+                      Located only a jaunt from Kahului airport, you’ll be
+                      greeted by an easy and scenic drive along the West Maui
+                      Mountains and crystal blue waters of the Pacific Ocean.
+                    </div>
+                    <div class="location-body__card-icons">
+                      <span class="card-icon">
+                        <img src="./src/img/bed.svg" alt="" />
+                        2
+                      </span>
+                      <span class="card-icon">
+                        <img src="./src/img/bath.svg" alt="" />
+                        5
+                      </span>
+                      <span class="card-icon">
+                        <img src="./src/img/beachfront.svg" alt="" />
+                      </span>
+                    </div>
+                    <a href="#" class="location-body__card-btn btn">
+                      Book now
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row location-body-row">
+              <div class="location-body__card col-lg-6 col-sm-12">
+                <div class="row no-gutters">
+                  <div class="location-body__card-slider col-lg-6 col-sm-12">
+                    <div class="tab-content" id="pills-tabContent">
+                      <div
+                        class="tab-pane fade show active"
+                        id="pills-home3"
+                        role="tabpanel"
+                        aria-labelledby="pills-home-tab"
+                      >
+                        <img src="./src/img/sl3main.jpg" alt="" />
+                      </div>
+                      <div
+                        class="tab-pane fade"
+                        id="pills-profile3"
+                        role="tabpanel"
+                        aria-labelledby="pills-profile-tab"
+                      >
+                        <img src="./src/img/sl3main2.jpg" alt="" />
+                      </div>
+                      <div
+                        class="tab-pane fade"
+                        id="pills-contact3"
+                        role="tabpanel"
+                        aria-labelledby="pills-contact-tab"
+                      >
+                        <img src="./src/img/sl3main3.jpg" alt="" />
+                      </div>
+                    </div>
+                    <ul
+                      class="nav nav-pills location-body-pills"
+                      id="pills-tab"
+                      role="tablist"
+                    >
+                      <li class="nav-item">
+                        <a
+                          class="active"
+                          id="pills-home-tab"
+                          data-toggle="pill"
+                          href="#pills-home3"
+                          role="tab"
+                          aria-controls="pills-home"
+                          aria-selected="true"
+                        >
+                          <img src="./src/img/sl3sm1.jpg" alt="" />
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a
+                          class=""
+                          id="pills-profile-tab"
+                          data-toggle="pill"
+                          href="#pills-profile3"
+                          role="tab"
+                          aria-controls="pills-profile"
+                          aria-selected="false"
+                        >
+                          <img src="./src/img/sl3sm2.jpg" alt="" />
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a
+                          class=""
+                          id="pills-contact-tab"
+                          data-toggle="pill"
+                          href="#pills-contact3"
+                          role="tab"
+                          aria-controls="pills-contact"
+                          aria-selected="false"
+                        >
+                          <img src="./src/img/sl3sm3.jpg" alt="" />
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="location-body__card-caption col-lg-6 col-sm-12">
+                    <a href="#" class="location-body__card-title">
+                      Casa Del Agua
+                    </a>
+                    <div class="location-body__card-text">
+                      After a breakfast catered to your taste and served at your
+                      leisure, relax in a hammock under the shade of a palm tree
+                      or let the sun perform its golden magic on your skin while
+                      you study the waves.
+                    </div>
+                    <div class="location-body__card-icons">
+                      <span class="card-icon">
+                        <img src="./src/img/bed.svg" alt="" />
+                        2
+                      </span>
+                      <span class="card-icon">
+                        <img src="./src/img/bath.svg" alt="" />
+                        5
+                      </span>
+                      <span class="card-icon">
+                        <img src="./src/img/beachfront.svg" alt="" />
+                      </span>
+                    </div>
+                    <a href="#" class="location-body__card-btn btn">
+                      Book now
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="location-body__card col-lg-6 col-sm-12">
+                <div class="row no-gutters">
+                  <div class="location-body__card-slider col-lg-6 col-sm-12">
+                    <div class="tab-content" id="pills-tabContent">
+                      <div
+                        class="tab-pane fade show active"
+                        id="pills-home4"
+                        role="tabpanel"
+                        aria-labelledby="pills-home-tab"
+                      >
+                        <img src="./src/img/sl4main.jpg" alt="" />
+                      </div>
+                      <div
+                        class="tab-pane fade"
+                        id="pills-profile4"
+                        role="tabpanel"
+                        aria-labelledby="pills-profile-tab"
+                      >
+                        <img src="./src/img/sl4main2.jpg" alt="" />
+                      </div>
+                      <div
+                        class="tab-pane fade"
+                        id="pills-contact4"
+                        role="tabpanel"
+                        aria-labelledby="pills-contact-tab"
+                      >
+                        <img src="./src/img/sl4main3.jpg" alt="" />
+                      </div>
+                    </div>
+                    <ul
+                      class="nav nav-pills location-body-pills"
+                      id="pills-tab"
+                      role="tablist"
+                    >
+                      <li class="nav-item">
+                        <a
+                          class="active"
+                          id="pills-home-tab"
+                          data-toggle="pill"
+                          href="#pills-home4"
+                          role="tab"
+                          aria-controls="pills-home"
+                          aria-selected="true"
+                        >
+                          <img src="./src/img/sl4sm1.png" alt="" />
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a
+                          class=""
+                          id="pills-profile-tab"
+                          data-toggle="pill"
+                          href="#pills-profile4"
+                          role="tab"
+                          aria-controls="pills-profile"
+                          aria-selected="false"
+                        >
+                          <img src="./src/img/sl4sm2.jpg" alt="" />
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a
+                          class=""
+                          id="pills-contact-tab"
+                          data-toggle="pill"
+                          href="#pills-contact4"
+                          role="tab"
+                          aria-controls="pills-contact"
+                          aria-selected="false"
+                        >
+                          <img src="./src/img/sl4sm3.jpg" alt="" />
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="location-body__card-caption col-lg-6 col-sm-12">
+                    <a href="#" class="location-body__card-title">
+                      Casa Jaguar
+                    </a>
+                    <div class="location-body__card-text">
+                      Sleek and sophisticated like the animal for which it has
+                      been named, Casa Jaguar is an immaculate tropical luxury
+                      villa located in the Mayan
+                    </div>
+                    <div class="location-body__card-icons">
+                      <span class="card-icon">
+                        <img src="./src/img/bed.svg" alt="" />
+                        2
+                      </span>
+                      <span class="card-icon">
+                        <img src="./src/img/bath.svg" alt="" />
+                        5
+                      </span>
+                      <span class="card-icon">
+                        <img src="./src/img/beachfront.svg" alt="" />
+                      </span>
+                    </div>
+                    <a href="#" class="location-body__card-btn btn">
+                      Book now
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="different">
+        <div class="container">
+          <div class="different-body">
+            <h2 class="different-body-title title">Why we are different</h2>
+            <span class="different-body__separetor separetor">
+              <img src="./src/img/separator.png" alt="" />
+            </span>
+            <div class="different-body__row row">
+              <div class="different-body__column col-lg-4">
+                <div class="different-body__column-img">
+                  <img src="./src/img/01.png" alt="" />
+                </div>
+                <div class="different-body__column-title">
+                  Tailor-Made Packages
+                </div>
+                <div class="different-body__column-text">
+                  When it comes to delivering the best planned holiday package
+                  to you, we strive to exceed your expectations. For us, it has
+                  to be spot-on. We do what we do in the ideal way possible.
+                </div>
+              </div>
+              <div class="different-body__column col-lg-4">
+                <div class="different-body__column-img">
+                  <img src="./src/img/02.png" alt="" />
+                </div>
+                <div class="different-body__column-title">
+                  Best Experience
+                </div>
+                <div class="different-body__column-text">
+                  At Purplerain Holidays, we choose to put forth an essence of
+                  our own expertise and firsthand experiences into our services
+                  and method of planning.
+                </div>
+              </div>
+              <div class="different-body__column col-lg-4">
+                <div class="different-body__column-img">
+                  <img src="./src/img/03.png" alt="" />
+                </div>
+                <div class="different-body__column-title">
+                  Exquisite Service
+                </div>
+                <div class="different-body__column-text">
+                  From the moment you make the first call to enquire, our
+                  services are geared up. From the time booking, to your stay
+                  and well after the trip as well, we will guide you and be at
+                  your back and call.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="contacts">
+        <div class="container">
+          <div class="contacts-body">
+            <div class="contacts-body__row row">
+              <div class="contacts-body__form col-lg-4 col-sm-12">
+                <div class="contacts-body__form-title">
+                  Send us a message
+                </div>
+                <form>
+                  <div class="form-group">
+                    <label for="exampleFormControlInput1"></label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="exampleFormControlInput1"
+                      placeholder="Your name"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleFormControlInput2"></label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="exampleFormControlInput2"
+                      placeholder="Email"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleFormControlInput3"></label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="exampleFormControlInput3"
+                      placeholder="Message"
+                    />
+                  </div>
+                  <a class="contacts-body__form-btn btn" href="#">Send</a>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-body">
+          <div class="footer-body__row row">
+            <div class="footer-body__column col-lg-9 col-sm-12">
+              <div class="row no-gutters">
+                <ul class="footer-body__list col-sm-12 col-lg-2">
+                  <li class="footer-body__items mb-3">
+                    <span class="footer-body__title">Information</span>
+                  </li>
+                  <li class="footer-body__items">
+                    <a href="" class="footer-body__link">About us</a>
+                  </li>
+                  <li class="footer-body__items">
+                    <a href="" class="footer-body__link">Online enquiry</a>
+                  </li>
+                  <li class="footer-body__items">
+                    <a href="" class="footer-body__link">Call us</a>
+                  </li>
+                  <li class="footer-body__items">
+                    <a href="" class="footer-body__link">General enquiries</a>
+                  </li>
+                  <li class="footer-body__items">
+                    <a href="" class="footer-body__link">Booking conditions</a>
+                  </li>
+                  <li class="footer-body__items">
+                    <a href="" class="footer-body__link">Privacy policy</a>
+                  </li>
+                  <li class="footer-body__items">
+                    <a href="" class="footer-body__link">Refund policy</a>
+                  </li>
+                </ul>
+                <ul class="footer-body__list col-lg-2 d-lg-block d-none">
+                  <li class="footer-body__items mb-3">
+                    <span class="footer-body__title">Experiences</span>
+                  </li>
+                  <li class="footer-body__items">
+                    <a href="" class="footer-body__link">Beach</a>
+                  </li>
+                  <li class="footer-body__items">
+                    <a href="" class="footer-body__link">Adventure</a>
+                  </li>
+                  <li class="footer-body__items">
+                    <a href="" class="footer-body__link">Wildlife</a>
+                  </li>
+                  <li class="footer-body__items">
+                    <a href="" class="footer-body__link">Honeymoon</a>
+                  </li>
+                  <li class="footer-body__items">
+                    <a href="" class="footer-body__link">Culture & heritage</a>
+                  </li>
+                  <li class="footer-body__items">
+                    <a href="" class="footer-body__link">Nature</a>
+                  </li>
+                  <li class="footer-body__items">
+                    <a href="" class="footer-body__link">Spiritual</a>
+                  </li>
+                  <li class="footer-body__items">
+                    <a href="" class="footer-body__link">Hill station</a>
+                  </li>
+                </ul>
+                <ul class="footer-body__list col-lg-2 d-lg-block d-none">
+                  <li class="footer-body__items mb-3">
+                    <span class="footer-body__title">Themes</span>
+                  </li>
+                  <li class="footer-body__items">
+                    <a href="" class="footer-body__link">Party</a>
+                  </li>
+                  <li class="footer-body__items">
+                    <a href="" class="footer-body__link">Wedding</a>
+                  </li>
+                  <li class="footer-body__items">
+                    <a href="" class="footer-body__link">Group tours</a>
+                  </li>
+                </ul>
+                <ul class="footer-body__list col-lg-2 d-lg-block d-none">
+                  <li class="footer-body__items mb-3">
+                    <span class="footer-body__title">Popular destinations</span>
+                  </li>
+                  <li class="footer-body__items">
+                    <a href="" class="footer-body__link">Leh-Ladakh</a>
+                  </li>
+                  <li class="footer-body__items">
+                    <a href="" class="footer-body__link">Manali</a>
+                  </li>
+                  <li class="footer-body__items">
+                    <a href="" class="footer-body__link">Ooty</a>
+                  </li>
+                  <li class="footer-body__items">
+                    <a href="" class="footer-body__link">Allepey</a>
+                  </li>
+                  <li class="footer-body__items">
+                    <a href="" class="footer-body__link">Darjeeling</a>
+                  </li>
+                  <li class="footer-body__items">
+                    <a href="" class="footer-body__link">Goa</a>
+                  </li>
+                  <li class="footer-body__items">
+                    <a href="" class="footer-body__link">Mahabaleshwar</a>
+                  </li>
+                  <li class="footer-body__items">
+                    <a href="" class="footer-body__link">Agra</a>
+                  </li>
+                </ul>
+                <ul class="footer-body__list col-lg-2 d-lg-block d-none">
+                  <li class="footer-body__items">
+                    <a href="" class="footer-body__link">Coorg</a>
+                  </li>
+                  <li class="footer-body__items">
+                    <a href="" class="footer-body__link">Mysore</a>
+                  </li>
+                  <li class="footer-body__items">
+                    <a href="" class="footer-body__link">Gir</a>
+                  </li>
+                  <li class="footer-body__items">
+                    <a href="" class="footer-body__link">Kabini</a>
+                  </li>
+                  <li class="footer-body__items">
+                    <a href="" class="footer-body__link">Jaipur</a>
+                  </li>
+                  <li class="footer-body__items">
+                    <a href="" class="footer-body__link">Kodaikanal</a>
+                  </li>
+                  <li class="footer-body__items">
+                    <a href="" class="footer-body__link">Andaman</a>
+                  </li>
+                  <li class="footer-body__items">
+                    <a href="" class="footer-body__link">Shimla</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer-body__column col-lg-3 ml-auto col-sm-12">
+              <div class="footer-body__contacts">
+                <span class="footer-body__contact">
+                  Phone: +91-80-41127931
+                </span>
+                <span class="footer-body__contact">
+                  Email: info@aztechdesign.co
+                </span>
+                <div class="footer-body__adress">
+                  Address 1st Main, Bucharest 2nd Stage Raiffisen Tower,
+                  Bucharest - 400400, Romania
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./src/js/bootstrap-datepicker.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./src/js/main.js" crossorigin="anonymous"></script>
+  </body>
+</html>

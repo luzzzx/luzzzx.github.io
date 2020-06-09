@@ -1,12 +1,179 @@
 @import "null.scss";
-.main-page {
-  background: #b14040;
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
 }
-.pp-tableCell {
-  display: flex;
+
+@font-face {
+  font-family: "Gilroy-Thin";
+  src: url("../fonts/Gilroy-Thin.ttf");
+  font-weight: normal;
+  font-style: normal;
 }
+@font-face {
+  font-family: "Gilroy-Heavy";
+  src: url("../fonts/Gilroy-Heavy.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap");
+
 .section {
   width: 100vw;
-  height: 100vh;
-  background: #b14040;
+  height: 100vh !important;
+  background: #ffffff;
 }
+
+.container {
+  max-width: 1371px;
+  padding: 55px 15px;
+  width: 100%;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+.main-page {
+  background: url("../img/bg1.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.pp-tableCell {
+  display: flex;
+  height: 100vh !important;
+}
+
+// main page==========================================
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 145px;
+}
+.tel-header {
+  margin-left: auto;
+}
+.tel-header a {
+  color: #ffffff;
+  font-family: "Gilroy";
+  font-size: 38px;
+  font-weight: 300;
+}
+.main-page__wrapper {
+  margin-left: 70px;
+}
+.circular text {
+  margin: 0 5px;
+  fill: currentColor;
+  font-size: 11px;
+  color: #ffffff;
+}
+
+.circular {
+  position: relative;
+  z-index: 2;
+  width: 9em;
+  height: 9em;
+}
+
+.circular svg {
+  display: block;
+  overflow: visible;
+  transition: 10s linear transform;
+}
+
+.circular svg:hover {
+  transform: rotate(-2turn);
+}
+
+.circular text {
+  fill: currentColor;
+}
+.circular path {
+  fill: none;
+}
+
+.main-page__play {
+  position: relative;
+}
+.play-btn {
+  position: absolute;
+  top: 37px;
+  left: 56px;
+}
+.title {
+  color: #ffffff;
+  font-family: "Gilroy-Thin";
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 60px;
+}
+.main-page {
+  &__title {
+    margin-bottom: 39px;
+  }
+
+  &__subtitle {
+    max-width: 708px;
+    color: #ffffff;
+    font-family: "Gilroy";
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 30px;
+  }
+
+  &__menu {
+    display: flex;
+    padding-top: 98px;
+    padding-bottom: 136px;
+  }
+
+  &__item {
+    margin-right: 60px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    color: #ffffff;
+    font-family: "Gilroy";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 18px;
+    transition: linear 0.2s;
+    &:hover {
+      color: #be9595;
+    }
+    &::before {
+      content: "";
+      width: 15px;
+      height: 1px;
+      background: #ffffff;
+      display: inline-block;
+      margin-right: 9px;
+      vertical-align: middle;
+    }
+  }
+  &__footer {
+    margin-top: 74px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.footer-logo {
+  margin-right: 93px;
+}
+.social-icons a {
+  margin-right: 17px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+// main page==========================================

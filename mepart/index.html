@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./scss/bootstrap.css" />
+    <link rel="stylesheet" href="./scss/main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-top">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="burger-menu col-2">
+              <span></span>
+            </div>
+            <nav class="col-md-8 col-sm-8 col-lg-8 main-menu">
+              <ul class="header-top__menu">
+                <li class="header-top__item">
+                  <a href="#" class="header-top__link">О компании </a>
+                </li>
+                <li class="header-top__item">
+                  <a href="#" class="header-top__link">Контакты </a>
+                </li>
+                <li class="header-top__item">
+                  <a href="#" class="header-top__link">Оптовикам </a>
+                </li>
+                <li class="header-top__item">
+                  <a href="#" class="header-top__link">Поставщикам </a>
+                </li>
+                <li class="header-top__item d-lg-none">
+                  <a href="#" class="header-top__link more">Eще </a>
+                </li>
+                <li class="header-top__item d-lg-block d-sm-none d-md-none">
+                  <a href="#" class="header-top__link">Доставка и оплата </a>
+                </li>
+                <li class="header-top__item d-lg-block d-sm-none d-md-none">
+                  <a href="#" class="header-top__link"> Акции и скидки</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="header-top__user col-sm-4 col-md-3 col-lg-2">
+              <a href="#" class="header-top__link">Вход</a>
+              <a href="#" class="header-top__link">Регистрация</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header-mid">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="header-logo col-lg-3 col-md-4 col-sm-5">
+              <a href="#"><img src="./img/logo.svg" alt="logo" class="" /></a>
+            </div>
+            <form class="col-lg-6 header-mid__input">
+              <input
+                class="form-control"
+                type="search"
+                placeholder="Поиск"
+                aria-label="Search"
+              />
+            </form>
+            <div class="header-mid__contacts col-12 col-lg-3 col-md-4 col-sm-4">
+              <div class="header-mid__phone">
+                <a href="tel:7 (800) 301-30-88"
+                  ><img src="./img/phone.png" alt="phone" /> 7 (800)
+                  301-30-88</a
+                >
+                <div class="header-mid__social">
+                  <a href="tel:7 (800) 301-30-88" class="header-icon"
+                    ><img src="./img/whatsapp.svg" alt="whatsapp"
+                  /></a>
+                  <a href="tel:7 (800) 301-30-88" class="header-icon"
+                    ><img src="./img/telegram.svg" alt="telegramm"
+                  /></a>
+                </div>
+              </div>
+              <div class="header-mid__icons">
+                <div class="icons-column">
+                  <img src="./img/garage.png" alt="garage" />
+                  <a href="#">Гараж</a>
+                </div>
+                <div class="icons-column">
+                  <img src="./img/like.png" alt="like" />
+                  <a href="#">Избранное</a>
+                </div>
+                <div class="icons-column">
+                  <img src="./img/shopping.png" alt="shopping" />
+                  <a href="#">Корзина</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="intro container">
+        <div class="row intro flex-column">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item active" aria-current="page">
+                <a href="#">Главная</a>
+              </li>
+              <li class="breadcrumb-item" aria-current="page">
+                <a href="#">О компании</a>
+              </li>
+            </ol>
+          </nav>
+          <h2 class="main-title">О компании</h2>
+        </div>
+      </div>
+      <div class="about container">
+        <div class="row">
+          <div class="about__title col-lg-12">
+            <h2>
+              Мы стараемся для <span>Вас</span> продавать только
+              <span>лучшие товары</span> по доступным для Вас ценам
+            </h2>
+          </div>
+          <div class="about__subtitle offset-lg-1 col-lg-10">
+            Наши сотрудники тщательно следят за нашими товарами.
+            Низкокачественные товары от недобросовестных производителей Вы у нас
+            не найдете
+          </div>
+          <div class="about__counts offset-lg-1 col-lg-10 col-md-12">
+            <div class="about__col">
+              <span class="about__numbers">
+                37+ тыс
+              </span>
+              <p class="about__text">
+                товаров на сайте
+              </p>
+            </div>
+            <div class="about__col">
+              <span class="about__numbers">
+                10 лет
+              </span>
+              <p class="about__text">
+                работы на рынке
+              </p>
+            </div>
+            <div class="about__col">
+              <span class="about__numbers">
+                300+
+              </span>
+              <p class="about__text">
+                заказов в день
+              </p>
+            </div>
+            <div class="about__col">
+              <span class="about__numbers">
+                1 500+
+              </span>
+              <p class="about__text">
+                поставщикой товаров
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row cards">
+          <div class="col-12 col-md-6 cards__card">
+            <div class="cards__descrip">
+              <h2 class="cards__title">Доставка «день в день»</h2>
+              <h3 class="cards__subtitle">любым удобным для вас способом</h3>
+              <p class="cards__text">
+                Более 90% заказав доставляется день в день
+              </p>
+            </div>
+            <div class="cards__img">
+              <img src="./img/01.png" alt="card" />
+            </div>
+          </div>
+          <div class="col-12 col-md-6 cards__card">
+            <div class="cards__descrip">
+              <h2 class="cards__title">Бонусы и скидки</h2>
+              <h3 class="cards__subtitle">% скидки клиентам</h3>
+              <p class="cards__text">
+                До 90% персональным клиентам
+              </p>
+            </div>
+            <div class="cards__img">
+              <img src="./img/02.png" alt="card" />
+            </div>
+          </div>
+          <div class="col-12 col-md-6 cards__card">
+            <div class="cards__descrip">
+              <h2 class="cards__title">Собственный склад</h2>
+              <h3 class="cards__subtitle">любым удобным для вас способом</h3>
+            </div>
+            <div class="cards__img">
+              <img src="./img/03.png" alt="card" />
+            </div>
+          </div>
+          <div class="col-12 col-md-6 cards__card">
+            <div class="cards__descrip">
+              <h2 class="cards__title">Персональный менеджер</h2>
+              <h3 class="cards__subtitle">
+                Который Вам всегда поможет в выборе товара
+              </h3>
+            </div>
+            <div class="cards__img">
+              <img src="./img/04.png" alt="card" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="row footer">
+          <div class="col-lg-3 col-md-3 col-sm-3 footer__intro">
+            <div class="footer__logo">
+              <img src="./img/flogo.png" alt="flogo" />
+            </div>
+            <a href="tel:7 (800) 301-30-88" class="footer__phone"
+              ><img src="./img/phone.png" alt="phone" /> 7 (800) 301-30-88</a
+            >
+            <div class="footer__social">
+              <a href="#"><img src="./img/f1.png" alt="vk" /></a>
+              <a href="#"><img src="./img/f2.png" alt="vk" /></a>
+              <a href="#"><img src="./img/f3.png" alt="vk" /></a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-3 footer__menu">
+            <a href="javascript:void(0);" class="footer__title">О компании</a>
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a href="#" class="footer__link">О компании </a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Адреса офисов </a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Контакты</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Новости</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Правовая информация </a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Обратная связь</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-3 footer__menu">
+            <a href="javascript:void(0);" class="footer__title"
+              >Интернет магазин</a
+            >
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a href="#" class="footer__link">Розничным клиентам</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Доставка и оплата</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Условия возврата и гарантии</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Акции и скидки</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Vin запрос</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Каталог</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-3 footer__menu">
+            <a href="javascript:void(0);" class="footer__title"
+              >Сотрудничество</a
+            >
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a href="#" class="footer__link">Оптовикам</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Поставщикам</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Производителям</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Корпоративным клиентам</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Стать дилером</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid footer__bottom">
+        <p>mepart.ru © 2018 Все права защищены</p>
+      </div>
+    </footer>
+    <script src="./js/jquery-3.5.0.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

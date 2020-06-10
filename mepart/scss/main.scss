@@ -1,0 +1,739 @@
+//<ШРИФТЫ>===============================================================================================
+@font-face {
+  font-family: "Museo Sans Cyrl-300";
+  src: url("../fonts/MuseoSansCyrl-300.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Museo Sans Cyrl -500";
+  src: url("../fonts/MuseoSansCyrl-500.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Museo Sans Cyrl -700";
+  src: url("../fonts/MuseoSansCyrl-700.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Museo Sans Cyrl -900";
+  src: url("../fonts/MuseoSansCyrl-900.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Museo Sans Cyrl -100";
+  src: url("../fonts/MuseoSansCyrl-100.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Source Sans Pro - Semibold";
+  src: url("../fonts/sourcesansprosemibold.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("../fonts/sourcesanspro.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+//<Подключаем шрифты>=======================================================================================
+//</Подключаем шрифты>=======================================================================================
+//<Иконочные шрифты>==========================================================================================
+//</Иконочные шрифты>==========================================================================================
+//<Шрифт по умолчанию>==========================================================================================
+$fontfamily: "Museo Sans Cyrl-300";
+//</Шрифт по умолчанию>==========================================================================================
+//</ШРИФТЫ>=======================================================================================================
+//<ПЕРЕМЕННЫЕ>===========================================================================================================
+//</ПЕРЕМЕННЫЕ>===========================================================================================================
+//<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+@import "null.scss";
+body {
+  color: #000;
+  font-size: 14px;
+  background: #f4f4f4;
+  &.lock {
+    overflow: hidden;
+  }
+}
+
+//</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+//<ОБОЛОЧКА>===========================================================================================================
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  &.loaded {
+  }
+}
+
+.container {
+  max-width: 1170px;
+}
+//</ОБОЛОЧКА>===========================================================================================================
+//<ОСНОВНАЯ СЕТКА>===========================================================================================================
+header {
+  margin-bottom: 15px;
+}
+footer {
+  background-color: #3a4049;
+}
+.main-title {
+  color: #333333;
+  font-family: "Museo Sans Cyrl -500";
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 35px;
+  display: block;
+  padding-left: 15px;
+}
+//</ОСНОВНАЯ СЕТКА>===========================================================================================================
+
+// burger-menu
+
+.burger-menu {
+  display: none;
+  @media (max-width: 683px) {
+    display: block;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    cursor: pointer;
+    position: relative;
+    z-index: 6;
+  }
+  &.active span {
+    background: transparent;
+    &::before {
+      top: 0;
+      transform: rotate(45deg);
+    }
+    &::after {
+      bottom: 0;
+      transform: rotate(-45deg);
+    }
+  }
+  & span {
+    width: 20px;
+    height: 4px;
+    background: #ffffff;
+    display: block;
+    position: relative;
+    transition: linear 0.5s;
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      width: 30px;
+      height: 4px;
+      background: #ffffff;
+      display: block;
+      transition: linear 0.5s;
+    }
+    &::before {
+      top: 9px;
+    }
+    &::after {
+      bottom: 9px;
+    }
+  }
+}
+// burger-menu
+// header-top=======================================================
+.main-menu {
+  transition: linear 0.6s;
+  @media (max-width: 683px) {
+    position: absolute;
+    opacity: 1;
+    top: -1000px;
+  }
+  @media (max-width: 683px) {
+    &.active {
+      opacity: 1;
+      top: 0;
+    }
+  }
+}
+.header-top {
+  background-color: #3a4049;
+  padding: 18px 0;
+  position: relative;
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0;
+    @media (max-width: 683px) {
+      justify-content: initial;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      height: 100vh;
+      background: #333333;
+      z-index: 4;
+      padding-top: 20%;
+    }
+  }
+
+  &__item {
+    @media (max-width: 683px) {
+      margin-bottom: 30px;
+      text-align: center;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__link {
+    color: #cccccc;
+    font-family: "Museo Sans Cyrl -300";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    transition: linear 0.5s;
+    &:hover {
+      color: #928f8f;
+    }
+  }
+
+  &__user {
+    margin-left: auto;
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 750px) {
+      justify-content: initial;
+    }
+    @media (max-width: 683px) {
+      max-width: 250px;
+    }
+    & a {
+      margin-left: 18px;
+      margin-right: 10px;
+      @media (max-width: 990px) {
+        margin-right: 20px;
+      }
+      @media (max-width: 750px) {
+        margin-right: 35px;
+        margin-left: 50px;
+      }
+      &:last-child {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+// header-top=======================================================
+// header-mid========================================================
+.header-mid {
+  padding: 17px 0;
+  &__contacts {
+    @media (max-width: 991px) {
+      margin-left: auto;
+    }
+    @media (max-width: 760px) {
+      padding-right: 15px;
+      padding-left: 0;
+    }
+    @media (max-width: 740px) {
+      flex: 0 0 247px;
+      max-width: 100%;
+    }
+    @media (max-width: 683px) {
+      margin: 0 auto;
+    }
+  }
+  &__input {
+    @media (max-width: 991px) {
+      margin-top: 30px;
+      order: 2;
+    }
+    & input {
+      width: 96%;
+      padding: 1.375rem 0.75rem;
+      border: 1px solid #d94012;
+      @media (max-width: 991px) {
+        width: 100%;
+      }
+    }
+  }
+  &__phone {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    & a:first-child {
+      color: #333333;
+      font-family: "Museo Sans Cyrl -500";
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 20px;
+      @media (max-width: 1184px) {
+        font-size: 17px;
+      }
+      @media (max-width: 450px) {
+        margin: 0 auto;
+      }
+      img {
+        vertical-align: middle;
+        margin-right: 2px;
+      }
+    }
+  }
+
+  &__icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: 450px) {
+      justify-content: center;
+    }
+  }
+  &__social {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: 450px) {
+      display: none;
+    }
+  }
+}
+
+.header-logo {
+  @media (max-width: 450px) {
+    display: none;
+  }
+  @media (max-width: 683px) {
+    display: none;
+  }
+}
+
+.icons-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media (max-width: 450px) {
+    margin-right: 40px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  & a {
+    color: #333333;
+    font-family: "Museo Sans Cyrl -300";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 13px;
+  }
+  img {
+    display: block;
+    margin-bottom: 8px;
+  }
+}
+
+.header-icon {
+  margin-right: 11px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+// header-mid========================================================
+// .breadcrumb ==================================================
+.intro {
+  margin-bottom: 20px;
+}
+.breadcrumb {
+  background: transparent;
+  padding: 0.55rem 1rem;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+  content: "";
+  background: url(../img/crumb.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+  padding-right: 0;
+  width: 4px;
+  height: 4px;
+  vertical-align: middle;
+  margin-bottom: 2px;
+  margin-right: 8px;
+}
+.breadcrumb-item {
+  &.active a {
+    color: #aaaaaa;
+  }
+  & a {
+    color: #333333;
+    font-family: "Museo Sans Cyrl-300";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+  }
+}
+.active {
+}
+// .breadcrumb ==================================================
+.about {
+  &__title {
+    color: #000000;
+    font-family: "Museo Sans Cyrl -700";
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 25px;
+    text-align: center;
+    margin-bottom: 8px;
+    & span {
+      color: #ae3127;
+    }
+  }
+
+  &__subtitle {
+    opacity: 0.7;
+    color: #000000;
+    font-family: "Museo Sans Cyrl-300";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: center;
+    margin-bottom: 40px;
+    @media (max-width: 450px) {
+      font-size: 15px;
+    }
+  }
+
+  &__counts {
+    display: flex;
+    justify-content: space-around;
+    padding: 0px 30px;
+    flex-wrap: wrap;
+    @media (max-width: 768px) {
+      padding: 0px 10px;
+    }
+    @media (max-width: 450px) {
+      justify-content: space-between;
+      padding: 0 15px;
+    }
+  }
+
+  &__col {
+    flex: 0 0 21%;
+    @media (max-width: 768px) {
+      flex: 0 0 24%;
+    }
+    @media (max-width: 450px) {
+      flex: 0 0 calc((100% - 30px) / 2);
+      width: calc((100% - 30px) / 2);
+    }
+  }
+
+  &__numbers {
+    background-image: linear-gradient(
+      to top,
+      #ae3127 0%,
+      #ae3127 50%,
+      #fd4d01 100%
+    );
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-family: "Museo Sans Cyrl -900";
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 30px;
+  }
+
+  &__text {
+    opacity: 0.8;
+    color: #333333;
+    font-family: "Museo Sans Cyrl-300";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 18px;
+    @media (max-width: 768px) {
+      font-size: 15px;
+    }
+  }
+}
+
+// cards=====================================================================
+.cards {
+  padding-top: 40px;
+  justify-content: space-around;
+  &__card {
+    flex: 0 0 47%;
+    margin-bottom: 30px;
+    padding: 20px 20px 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    box-shadow: 0 0 16px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    background-color: #242f3a;
+    background-image: linear-gradient(
+      to right,
+      #242f3a 0%,
+      rgba(244, 244, 244, 0.4) 100%
+    );
+    @media (max-width: 450px) {
+      flex: 0 0 90%;
+    }
+    &:nth-child(2) {
+      box-shadow: 0 0 16px 4px rgba(0, 0, 0, 0.15);
+      border-radius: 5px;
+      background-color: #242f3a;
+      background-image: linear-gradient(
+        to right,
+        #2b2b2b 0%,
+        rgba(244, 244, 244, 0.4) 100%
+      );
+      position: relative;
+      &::before {
+        position: absolute;
+        top: 40%;
+        right: 20%;
+        content: "%";
+        width: 248px;
+        height: 200px;
+        opacity: 0.03;
+        color: #ffffff;
+        font-family: "Source Sans Pro - Black";
+        font-size: 299px;
+        font-weight: 400;
+        line-height: 14.94px;
+      }
+    }
+    &:nth-child(3) {
+      box-shadow: 0 0 16px 4px rgba(0, 0, 0, 0.15);
+      border-radius: 5px;
+      background-color: #242f3a;
+      background-image: linear-gradient(
+        to right,
+        #103544 0%,
+        rgba(244, 244, 244, 0.4) 100%
+      );
+    }
+    &:nth-child(4) {
+      box-shadow: 0 0 16px 4px rgba(0, 0, 0, 0.15);
+      border-radius: 5px;
+      background-color: #242f3a;
+      background-image: linear-gradient(
+        to right,
+        #35311b 0%,
+        rgba(244, 244, 244, 0.4) 100%
+      );
+    }
+  }
+
+  &__descrip {
+    flex: 0 0 60%;
+    @media (max-width: 768px) {
+      flex: 0 0 100%;
+      text-align: center;
+    }
+  }
+
+  &__title {
+    color: #ffffff;
+    font-family: "Museo Sans Cyrl -700";
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 25px;
+    margin-bottom: 23px;
+    @media (max-width: 768px) {
+      font-size: 20px;
+    }
+  }
+
+  &__subtitle {
+    opacity: 0.8;
+    color: #ffffff;
+    font-family: "Source Sans Pro - Semibold";
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    opacity: 0.6;
+    color: #ffffff;
+    font-family: "Source Sans Pro";
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+  }
+
+  &__img {
+    @media (max-width: 768px) {
+      margin: 0 auto;
+    }
+  }
+}
+
+// cards=====================================================================
+// footer=================================================================
+.footer {
+  justify-content: space-between;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  &__intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (max-width: 450px) {
+      margin-bottom: 27px;
+    }
+  }
+
+  &__logo {
+    & img {
+      @media (max-width: 768px) {
+        width: 156px;
+      }
+      @media (max-width: 992px) {
+        width: 156px;
+      }
+    }
+  }
+
+  &__phone {
+    color: #ffffff;
+    font-family: "Museo Sans Cyrl -500";
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 55px;
+    transition: linear 0.5s;
+    @media (max-width: 768px) {
+      font-size: 15px;
+    }
+    @media (max-width: 992px) {
+      font-size: 15px;
+    }
+    &:hover {
+      color: #928f8f;
+    }
+    & img {
+      vertical-align: middle;
+      margin-bottom: 3px;
+      margin-right: 10px;
+      @media (max-width: 768px) {
+        margin-right: 2px;
+      }
+      @media (max-width: 992px) {
+        margin-right: 2px;
+      }
+    }
+  }
+
+  &__social {
+    & a {
+      margin-right: 13px;
+      @media (max-width: 768px) {
+        width: 19px;
+      }
+      @media (max-width: 992px) {
+        width: 19px;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__menu {
+    @media (max-width: 450px) {
+      text-align: center;
+      width: 240px;
+      margin: 0 auto;
+    }
+  }
+
+  &__title {
+    color: #fefefe;
+    font-family: "Museo Sans Cyrl-300";
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 17px;
+    cursor: default;
+    margin-bottom: 20px;
+    display: block;
+    @media (max-width: 450px) {
+      color: #cfcfcf;
+      font-family: "Museo Sans Cyrl -100";
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 18px;
+      border-bottom: 1px solid #b0afb3;
+      text-align: left;
+      position: relative;
+      cursor: pointer;
+      &.active::after {
+        transform: rotate(180deg);
+      }
+      &:after {
+        content: "";
+        background: url("../img/next.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 12px;
+        height: 7px;
+        display: block;
+        position: absolute;
+        top: 5px;
+        right: 0;
+        transition: linear 0.5s;
+      }
+    }
+    &:hover {
+      color: #fefefe;
+    }
+  }
+  &__list {
+    display: block;
+    @media (max-width: 450px) {
+      display: none;
+    }
+  }
+
+  &__item {
+    margin-bottom: 12px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    color: #b0afb3;
+    font-family: "Museo Sans Cyrl -100";
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 12px;
+    transition: linear 0.5s;
+    &:hover {
+      color: #928f8f;
+    }
+  }
+  &__bottom {
+    padding: 14px 0;
+    background-color: #2e343c;
+    p {
+      margin: 0;
+      text-align: center;
+      height: 12px;
+      color: #cccccc;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 12px;
+      font-family: "Museo Sans Cyrl -500";
+    }
+  }
+}
+// footer=================================================================

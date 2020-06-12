@@ -1,0 +1,85 @@
+.dtail-product__buy.card-buy .nice-number {
+    display: inline-flex;
+    justify-content: stretch;
+    border: none;
+}
+
+.nice-number {
+    border: 1px solid #937f64;
+    display: inline-flex;
+    justify-content: stretch;
+}
+
+.dtail-product__buy.card-buy input {
+    vertical-align: middle;
+    -moz-appearance: textfield;
+    box-sizing: content-box;
+    margin: 0;
+    text-align: center;
+    color: #937f64;
+    font-family: "Noto Serif";
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.nice-number input {
+    vertical-align: middle;
+    -moz-appearance: textfield;
+    box-sizing: content-box;
+    margin: 0;
+    text-align: center;
+    color: #937f64;
+    font-family: "Noto Serif";
+    font-size: 37px;
+    font-weight: 300;
+}
+
+.dtail-product__buy.card-buy button:first-child {
+    background-color: #ffffff;
+    width: 30px;
+    background-image: url('../img/detail/minus.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.dtail-product__buy.card-buy button:last-child {
+    background-color: #ffffff;
+    width: 30px;
+    background-image: url('../img/detail/plus.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.nice-number button:first-child {
+    background-color: #ffffff;
+    width: 60px;
+    background-image: url('../img/detail/minus.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.nice-number button:last-child {
+    background-color: #ffffff;
+    width: 60px;
+    background-image: url('../img/detail/plus.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.nice-number input::-webkit-inner-spin-button,
+.nice-number input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.detail-product__buttons .nice-number {
+    width: 192px;
+    border: 1px solid #937f64;
+}
+
+.btn-wrap .nice-number {
+    border: none;
+    width: 120px;
+    padding-right: 10px;
+    margin-left: -4px;
+}

@@ -27,3 +27,9 @@ $(".acepts").on("click", function () {
 $(".button-sub").on("click", function () {
   $(".form-wrapp").addClass("show");
 });
+$(".map__link").on('click', function () {
+  if (parseInt($(window).width()) < 450) {
+    $(this).next('.btn-map').toggleClass('d-block');
+  }
+
+})

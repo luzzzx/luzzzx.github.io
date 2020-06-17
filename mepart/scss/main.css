@@ -1216,6 +1216,7 @@ footer {
   font-weight: 400;
   line-height: 18px;
   margin-bottom: 11px;
+  text-align: center;
 }
 
 .return-body__text {
@@ -1322,7 +1323,8 @@ footer {
   font-weight: 400;
   line-height: 22px;
   margin-bottom: 6px;
-  text-align: left;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .payment-text {
@@ -1332,6 +1334,7 @@ footer {
   font-size: 15px;
   font-weight: 400;
   line-height: 22px;
+  text-align: center;
 }
 
 .payment-footer {
@@ -1372,6 +1375,7 @@ footer {
   font-size: 18px;
   font-weight: 400;
   line-height: 22px;
+  text-align: center;
 }
 
 .delivery-text {
@@ -1380,6 +1384,7 @@ footer {
   font-size: 15px;
   font-weight: 400;
   line-height: 22px;
+  text-align: center;
 }
 
 .delivery-text b {
@@ -1466,7 +1471,7 @@ footer {
   color: #000000;
   font-family: "Museo Sans Cyrl -500";
   font-size: 15px;
-  font-weight: 800;
+  font-weight: 500;
   line-height: 22px;
 }
 
@@ -1528,7 +1533,7 @@ footer {
   font-family: "Museo Sans Cyrl-300";
   font-size: 13px;
   font-weight: 500;
-  line-height: 30px;
+  line-height: 20px;
   margin-bottom: 0;
 }
 
@@ -1730,5 +1735,9 @@ footer {
 
 .form-wrapp.show {
   display: block;
+}
+
+.btn-map img {
+  width: 100%;
 }
 /*# sourceMappingURL=main.css.map */

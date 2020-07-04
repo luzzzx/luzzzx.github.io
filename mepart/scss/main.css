@@ -608,7 +608,7 @@ footer {
 }
 
 .intro {
-  margin-bottom: 20px;
+  margin-bottom: 7px;
 }
 
 .breadcrumb {
@@ -1753,7 +1753,6 @@ footer {
   font-size: 15px;
   font-weight: 400;
   line-height: 22px;
-  padding-top: 32px;
 }
 
 @media (max-width: 720px) {
@@ -1772,7 +1771,7 @@ footer {
           box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   background-color: #ffffff;
-  padding: 40px 29px 40px 32px;
+  padding: 38px 29px 14px 32px;
   margin-left: auto;
 }
 
@@ -1847,9 +1846,6 @@ footer {
   line-height: 13px;
   opacity: 0.7;
   margin-bottom: 9px;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
 }
 
 .manufact__intro-contacts-col p {
@@ -2348,7 +2344,7 @@ footer {
           box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   background-color: #ffffff;
-  padding: 10px 30px;
+  padding: 5px 30px;
 }
 
 @media (max-width: 992px) {
@@ -2401,6 +2397,7 @@ footer {
   font-size: 20px;
   font-weight: 400;
   line-height: 22px;
+  margin-bottom: 20px;
 }
 
 @media (max-width: 720px) {
@@ -2410,6 +2407,7 @@ footer {
 }
 
 .retail__intro-deliver-article {
+  margin-bottom: 0;
   opacity: 0.5;
   color: #000000;
   font-family: "Museo Sans Cyrl-300";
@@ -2771,6 +2769,10 @@ footer {
   display: flex;
 }
 
+.contact-item__inner.mar {
+  margin: 31px 0px 10px 0px;
+}
+
 @media (max-width: 1173px) {
   .contact-item__inner {
     -ms-flex-wrap: wrap;
@@ -2894,7 +2896,7 @@ footer {
   font-family: "Museo Sans Cyrl-300";
   font-size: 13px;
   font-weight: 400;
-  line-height: 30px;
+  line-height: 13px;
 }
 
 .contact-form__inputs input:-ms-input-placeholder {
@@ -2903,7 +2905,7 @@ footer {
   font-family: "Museo Sans Cyrl-300";
   font-size: 13px;
   font-weight: 400;
-  line-height: 30px;
+  line-height: 13px;
 }
 
 .contact-form__inputs input::-ms-input-placeholder {
@@ -2912,7 +2914,7 @@ footer {
   font-family: "Museo Sans Cyrl-300";
   font-size: 13px;
   font-weight: 400;
-  line-height: 30px;
+  line-height: 13px;
 }
 
 .contact-form__inputs input::placeholder {
@@ -2921,7 +2923,7 @@ footer {
   font-family: "Museo Sans Cyrl-300";
   font-size: 13px;
   font-weight: 400;
-  line-height: 30px;
+  line-height: 13px;
 }
 
 .contact-form__textarea textarea {

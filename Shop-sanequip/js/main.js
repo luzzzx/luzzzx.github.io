@@ -13,29 +13,43 @@ $(document).ready(function () {
         autoplayHoverPause: true,
         startPosition: 'URLHash'
     });
-    // plus minus
-    // jQuery(function () {
-    //     var j = jQuery; //Just a variable for using jQuery without conflicts
-    //     var addInput = '#qty'; //This is the id of the input you are changing
-    //     var n = 1; //n is equal to 1
 
-    //     //Set default value to n (n = 1)
-    //     j(addInput).val(n);
+    $(".article-slider").owlCarousel({
+        loop: true,
+        items: 1,
+        nav: false,
+        responsive: {
+            520: {
+                items: 2,
+                margin: 30,
+                nav: false,
+            },
+            768: {
+                items: 3,
+                margin: 90,
+                nav: true,
+            }
+        }
+    });
 
-    //     //On click add 1 to n
-    //     j('.plus').on('click', function () {
-    //         j(addInput).val(++n);
-    //     })
-
-    //     j('.min').on('click', function () {
-    //         //If n is bigger or equal to 1 subtract 1 from n
-    //         if (n >= 1) {
-    //             j(addInput).val(--n);
-    //         } else {
-    //             //Otherwise do nothing
-    //         }
-    //     });
-    // });
+    $(".show-room__slider").owlCarousel({
+        loop: true,
+        items: 1,
+        margin: 30,
+        nav: false,
+        responsive: {
+            520: {
+                items: 2,
+                margin: 30,
+                nav: false,
+            },
+            768: {
+                items: 4,
+                margin: 90,
+                nav: true,
+            }
+        }
+    });
 
     $('.min').click(function () {
         var $input = $(this).parent().find('input');
@@ -65,3 +79,13 @@ $(document).ready(function () {
     });
 });
 
+var slider = document.getElementById('side-filter__slider');
+
+noUiSlider.create(slider, {
+    start: [20, 80],
+    connect: true,
+    range: {
+        'min': 0,
+        'max': 100
+    }
+});

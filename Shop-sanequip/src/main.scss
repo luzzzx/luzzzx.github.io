@@ -3892,7 +3892,7 @@ display: none;
 #side-filter__slider{
     width: 100%;
     &.noUi-horizontal {
-        height: 5px;
+        height: 4px;
     }
     & .noUi-connect{
         background: #57adc3;
@@ -4435,7 +4435,6 @@ flex-wrap: wrap;
 justify-content: space-between;
 @media (max-width: 960px){
     justify-content: center;
-    align-items: center;
 }
     &__item {
         width: calc((100% - 68px) / 3);
@@ -4597,9 +4596,11 @@ margin-bottom: 35px;
 }
 
 
-.brand-cards{
+.brand-cards-pop{
     &.card-row{
-        flex-wrap: wrap;
+        @media (max-width: 960px){
+            flex-wrap: wrap;
+        }
         @media (max-width: 540px){
             flex-direction: column;
             align-items: center;
@@ -4730,12 +4731,7 @@ margin-bottom: 35px;
         align-items: center;
     }
 }
-.main-price {
-}
-.onboard {
-}
-.price-icons {
-}
+
 
 
 // brand.html ===================================================

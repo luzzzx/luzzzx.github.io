@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/bootstrap-grid.css">
+    <link rel="stylesheet" href="./src/owl.carousel.min.css">
+    <link rel="stylesheet" href="./src/owl.theme.default.min.css">
+    <link rel="stylesheet" href="./src/nouislider.css">
+    <link rel="stylesheet" href="./src/main.css">
+    <title>SanEquip</title>
+</head>
+
+<body>
+    <svg style="display: none;">
+        <symbol id="star" viewBox="0 -10 511.99143 511">
+            <path
+                d="m510.652344 185.882812c-3.371094-10.367187-12.566406-17.707031-23.402344-18.6875l-147.796875-13.417968-58.410156-136.75c-4.3125-10.046875-14.125-16.53125-25.046875-16.53125s-20.738282 6.484375-25.023438 16.53125l-58.410156 136.75-147.820312 13.417968c-10.835938 1-20.011719 8.339844-23.402344 18.6875-3.371094 10.367188-.257813 21.738282 7.9375 28.925782l111.722656 97.964844-32.941406 145.085937c-2.410156 10.667969 1.730468 21.699219 10.582031 28.097656 4.757813 3.457031 10.347656 5.183594 15.957031 5.183594 4.820313 0 9.644532-1.28125 13.953125-3.859375l127.445313-76.203125 127.421875 76.203125c9.347656 5.585938 21.101562 5.074219 29.933593-1.324219 8.851563-6.398437 12.992188-17.429687 10.582032-28.097656l-32.941406-145.085937 111.722656-97.964844c8.191406-7.1875 11.308594-18.535156 7.9375-28.925782zm-252.203125 223.722657" />
+        </symbol>
+        <symbol id="star-free" viewBox="0 -10 511.98685 511">
+            <path
+                d="m114.59375 491.140625c-5.609375 0-11.179688-1.75-15.933594-5.1875-8.855468-6.417969-12.992187-17.449219-10.582031-28.09375l32.9375-145.089844-111.703125-97.960937c-8.210938-7.167969-11.347656-18.519532-7.976562-28.90625 3.371093-10.367188 12.542968-17.707032 23.402343-18.710938l147.796875-13.417968 58.433594-136.746094c4.308594-10.046875 14.121094-16.535156 25.023438-16.535156 10.902343 0 20.714843 6.488281 25.023437 16.511718l58.433594 136.769532 147.773437 13.417968c10.882813.980469 20.054688 8.34375 23.425782 18.710938 3.371093 10.367187.253906 21.738281-7.957032 28.90625l-111.703125 97.941406 32.9375 145.085938c2.414063 10.667968-1.726562 21.699218-10.578125 28.097656-8.832031 6.398437-20.609375 6.890625-29.910156 1.300781l-127.445312-76.160156-127.445313 76.203125c-4.308594 2.558594-9.109375 3.863281-13.953125 3.863281zm141.398438-112.875c4.84375 0 9.640624 1.300781 13.953124 3.859375l120.277344 71.9375-31.085937-136.941406c-2.21875-9.746094 1.089843-19.921875 8.621093-26.515625l105.472657-92.5-139.542969-12.671875c-10.046875-.917969-18.6875-7.234375-22.613281-16.492188l-55.082031-129.046875-55.148438 129.066407c-3.882812 9.195312-12.523438 15.511718-22.546875 16.429687l-139.5625 12.671875 105.46875 92.5c7.554687 6.613281 10.859375 16.769531 8.621094 26.539062l-31.0625 136.9375 120.277343-71.914062c4.308594-2.558594 9.109376-3.859375 13.953126-3.859375zm-84.585938-221.847656s0 .023437-.023438.042969zm169.128906-.0625.023438.042969c0-.023438 0-.023438-.023438-.042969zm0 0" />
+        </symbol>
+    </svg>
+    <div class="wrapper">
+        <header>
+            <div class="container container-md">
+                <div class="row align-items-center">
+                    <div class="header-logo col-lg-3 col-md-3 col-3">
+                        <a href="#"><img src="./img/logo.png" alt="logo"></a>
+                    </div>
+                    <div class="header-nav col-lg-9 col-md-9 col-9">
+                        <div class="row">
+                            <div class="col-12 header-contacts">
+                                <div class="header-contacts__links">
+                                    <a href="#" class="header-contacts__contact"><img src="./img/mail.png"
+                                            alt="mail">Напишите
+                                        нам</a>
+                                    <a href="#" class="header-contacts__contact"><img src="./img/phone.png"
+                                            alt="phone">Заказать
+                                        обратный звонок</a>
+                                </div>
+                                <div class="header-contacts__timetable">
+                                    <a href="tel:" class="header-contacts__call">8 495 640 94 94 </a>
+                                    <span>Работаем с 9.00 до 19.00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 header-menu align-items-end">
+                                <ul class="header-menu__list col-10">
+                                    <li class="header-menu__item"><a href="#" class="header-menu__link">О компании</a>
+                                    </li>
+                                    <li class="header-menu__item"><a href="#"
+                                            class="header-menu__link show-room">Шоурум</a>
+                                    </li>
+                                    <li class="header-menu__item"><a href="#" class="header-menu__link">Доставка</a>
+                                    </li>
+                                    <li class="header-menu__item"><a href="#" class="header-menu__link">Клиентам</a>
+                                    </li>
+                                    <li class="header-menu__item"><a href="#" class="header-menu__link">Установка</a>
+                                    </li>
+                                    <li class="header-menu__item"><a href="#" class="header-menu__link">Контакты</a>
+                                    </li>
+                                </ul>
+                                <div class="header-menu__city">
+                                    <div class="header-menu__city-choose">Москва</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mob-bg">
+                    <div class="col-12 header-mid">
+                        <div class="header-mid__catalog">
+                            <a href="#" class="header-mid__catalog-btn">Каталог товаров</a>
+                        </div>
+                        <div class="header-mid__form">
+                            <form action="">
+                                <input type="text" placeholder="поиск товаров или услуг">
+                                <button></button>
+                            </form>
+                        </div>
+                        <a href class="header-mid__btn privat">Личный кабинет</a>
+                        <a href class="header-mid__btn card">Корзина пуста</a>
+                        <a href="#" class="header-mid__mobile-search"><img src="./img/mobile/glass.png"
+                                alt="search"></a>
+                        <div class="header-mid__mobile-menu">
+                            <a href="#"><img src="./img/mobile/heart.png" alt="heart"></a>
+                            <a href="#"><img src="./img/mobile/eq.png" alt="eq"></a>
+                            <a href="#"><img src="./img/mobile/cart.png" alt="cart"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <div class="row navigation">
+                    <nav class="col-lg-12">
+                        <ul class="navigation__list">
+                            <li class="navigation__item"><a href="#" class="navigation__link">Душевые</a></li>
+                            <li class="navigation__item"><a href="#" class="navigation__link">Ванны</a></li>
+                            <li class="navigation__item"><a href="#" class="navigation__link">Мебель для ванной</a></li>
+                            <li class="navigation__item"><a href="#" class="navigation__link">Санузел</a></li>
+                            <li class="navigation__item"><a href="#" class="navigation__link">Раковины</a></li>
+                            <li class="navigation__item"><a href="#" class="navigation__link">Смесители</a></li>
+                            <li class="navigation__item"><a href="#" class="navigation__link">Отопление</a></li>
+                            <li class="navigation__item"><a href="#" class="navigation__link">Ещё</a></li>
+                            <li class="navigation__item"><a href="#" class="navigation__link">Бренды</a></li>
+                            <li class="navigation__item nav-sale"><a href="#"
+                                    class="navigation__link nav-sale">Скидки</a></li>
+                        </ul>
+                    </nav>
+                    <ul class="breadcrumb col-lg-12">
+                        <li><a href="#">Интернет-магазин сантехники</a></li>
+                        <li>Душевые кабины</li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 aside-menu">
+                        <div class="side-filter__body">
+                            <div class="side-filter__price">
+                                <h2 class="side-filter__title">Цена</h2>
+                                <div id="side-filter__slider"></div>
+                                <form class="side-filter__form">
+                                    <label>От<input type="text" value="200"></label>
+                                    <label>До<input type="text" value="4800"></label>
+                                </form>
+                                <ul class="side-filter__menu">
+                                    <li class="side-filter__item"><a href="#" class="side-filter__link">Бренды (43)</a>
+                                    </li>
+                                    <li class="side-filter__item"><a href="#" class="side-filter__link">Размеры (8)</a>
+                                    </li>
+                                    <li class="side-filter__item"><a href="#" class="side-filter__link">Тип поддона
+                                            (4)</a></li>
+                                    <li class="side-filter__item"><a href="#" class="side-filter__link">Форма
+                                            поддона</a></li>
+                                    <li class="side-filter__item"><a href="#" class="side-filter__link">Конструкция
+                                            дверей</a></li>
+                                    <li class="side-filter__item"><a href="#" class="side-filter__link active">Тип
+                                            переднего
+                                            стекла</a>
+                                        <form action="/">
+                                            <label><input type="checkbox">прозрачное</label>
+                                            <label><input type="checkbox">матовое</label>
+                                            <label><input type="checkbox">тонированное</label>
+                                            <label><input type="checkbox">рифленое</label>
+                                            <label><input type="checkbox">зеркальное</label>
+                                        </form>
+                                    </li>
+                                </ul>
+                                <a href="#" class="side-filter__accept">Применить фильтр</a>
+                                <a href="#" class="side-filter__clear">Очистить фильтр</a>
+                                <a href="#" class="side-filter__all">Все фильтры</a>
+                            </div>
+                        </div>
+                        <div class="side-filter__articles">
+                            <h2 class="side-filter__articles-title">Полезные статьи</h2>
+                            <div class="side-filter__articles-body">
+                                <a href="#" class="side-filter__articles-name">
+                                    Установка врезной рако-
+                                    вины на кухне
+                                </a>
+                                <div class="side-filter__articles-footer">
+                                    <span class="side-filter__articles-view">312</span>
+                                    <span class="side-filter__articles-date">23.10.2019</span>
+                                </div>
+                            </div>
+                            <div class="side-filter__articles-body">
+                                <a href="#" class="side-filter__articles-name">
+                                    Установка врезной рако-
+                                    вины на кухне
+                                </a>
+                                <div class="side-filter__articles-footer">
+                                    <span class="side-filter__articles-view">312</span>
+                                    <span class="side-filter__articles-date">23.10.2019</span>
+                                </div>
+                            </div>
+                            <div class="side-filter__articles-body">
+                                <a href="#" class="side-filter__articles-name">
+                                    Установка врезной рако-
+                                    вины на кухне
+                                </a>
+                                <div class="side-filter__articles-footer">
+                                    <span class="side-filter__articles-view">312</span>
+                                    <span class="side-filter__articles-date">23.10.2019</span>
+                                </div>
+                            </div>
+                            <div class="side-filter__articles-body">
+                                <a href="#" class="side-filter__articles-name">
+                                    Установка врезной рако-
+                                    вины на кухне
+                                </a>
+                                <div class="side-filter__articles-footer">
+                                    <span class="side-filter__articles-view">312</span>
+                                    <span class="side-filter__articles-date">23.10.2019</span>
+                                </div>
+                            </div>
+                            <div class="side-filter__articles-body">
+                                <a href="#" class="side-filter__articles-name">
+                                    Установка врезной рако-
+                                    вины на кухне
+                                </a>
+                                <div class="side-filter__articles-footer">
+                                    <span class="side-filter__articles-view">312</span>
+                                    <span class="side-filter__articles-date">23.10.2019</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="side-filter__popular">
+                            <h2 class="side-filter__popular-title">
+                                Популярные подборки
+                            </h2>
+                            <ul class="side-filter__popular-list">
+                                <li class="side-filter__popular-items"><a href="#">Кабины 70х70</a></li>
+                                <li class="side-filter__popular-items"><a href="#">Кабины 80х80</a></li>
+                                <li class="side-filter__popular-items"><a href="#">Кабины 90х90</a></li>
+                                <li class="side-filter__popular-items"><a href="#">Кабины 120х80</a></li>
+                            </ul>
+                            <a href="#" class="side-filter__popular-more">показать все</a>
+                        </div>
+                        <div class="side-filter__banner">
+                            <img src="./img/catalog/banner.png" alt="banner">
+                        </div>
+                        <div class="side-filter__banner">
+                            <img src="./img/catalog/banner.png" alt="banner">
+                        </div>
+                        <div class="side-filter__banner">
+                            <img src="./img/catalog/banner.png" alt="banner">
+                        </div>
+                        <div class="side-filter__banner">
+                            <img src="./img/catalog/banner.png" alt="banner">
+                        </div>
+                    </div>
+                    <div class="col-lg-9 col-md-12">
+                        <div class="catalog-body">
+                            <h2 class="catalog-body__name">
+                                Душевые кабины
+                            </h2>
+                            <ul class="catalog-body__prod-list">
+                                <li class="catalog-body__prod-item"><a href="#"><img src="./img/catalog/c1.jpg"
+                                            alt="catalog"></a>80 х 80</li>
+                                <li class="catalog-body__prod-item"><a href="#"><img src="./img/catalog/c1.jpg"
+                                            alt="catalog"></a>90 х 90</li>
+                                <li class="catalog-body__prod-item"><a href="#"><img src="./img/catalog/c1.jpg"
+                                            alt="catalog"></a>100 х 100</li>
+                                <li class="catalog-body__prod-item red"><a href="#"><img src="./img/catalog/c2.jpg"
+                                            alt="catalog"></a>110 х 110</li>
+                                <li class="catalog-body__prod-item"><a href="#"><img src="./img/catalog/c1.jpg"
+                                            alt="catalog"></a>150 х 150</li>
+                                <li class="catalog-body__prod-item"><a href="#"><img src="./img/catalog/c3.jpg"
+                                            alt="catalog"></a>120 х 180</li>
+                            </ul>
+                            <div class="catalog-body__prod-tags">
+                                <span class="catalog-body__prod-tags-title">
+                                    Часто ищут
+                                </span>
+                                <span class="catalog-body__prod-tag">с низким поддоном</span>
+                                <span class="catalog-body__prod-tag">угловые</span>
+                                <span class="catalog-body__prod-tag">с высоким поддоном</span>
+                                <span class="catalog-body__prod-tag">для дачи</span>
+                                <span class="catalog-body__prod-tag">для гидромассажа</span>
+                                <a class="catalog-body__prod-link" href="#">все запросы</a>
+                            </div>
+                            <div class="catalog-body__prod-header">
+                                <span>
+                                    Найдено: 3.895 товаров
+                                </span>
+                                <span>
+                                    Сортировать: по популярности
+                                </span>
+                            </div>
+                            <div class="catalog-body__prod-main">
+                                <div class="card-row">
+                                    <div class="catalog-body__prod-card">
+                                        <div class="catalog-body__prod-card-img">
+                                            <img src="./img/catalog/prod.jpg" alt="product">
+                                        </div>
+                                        <h2 class="catalog-body__prod-card-title">
+                                            Душевая кабина Style S-02
+                                            90x90x195 см
+                                        </h2>
+                                        <div class="catalog-body__prod-card-icons">
+                                            <i> <svg class="star">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                            </i>
+                                            <i> <svg class="star">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                            </i>
+                                            <i> <svg class="star">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                            </i>
+                                            <i> <svg class="star">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                            </i>
+                                            <i> <svg class="star-free">
+                                                    <use xlink:href="#star-free"></use>
+                                                </svg>
+                                            </i>
+                                        </div>
+                                        <div class="catalog-body__prod-card-price">
+                                            <p>Цена:</p>
+                                            <span class="main-price">15.091 руб.</span>
+                                            <span class="onboard">
+                                                В наличии на складе
+                                            </span>
+                                            <div class="price-icons">
+                                                <a href="#"><img src="./img/catalog/eq.png" alt="eq"></a>
+                                                <a href="#"><img src="./img/catalog/heart.png" alt="heart"></a>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="catalog-body__prod-card-btn">Купить</a>
+                                        <div class="catalog-body__prod-card-hide">
+                                            <a href="#" class="catalog-body__prod-card-click">Купить в 1 клик</a>
+                                            <p>Арт.:<span>SH-131510</span></p>
+                                            <p><b>Габариты:</b>90х90х200 см</p>
+                                            <p><b>Конструкция дверей:</b>раздвижная Гидромассаж</p>
+                                            <span class="catalog-body__prod-card-country"><img src="./img/country.png"
+                                                    alt="country"> Китай</span>
+                                        </div>
+                                    </div>
+                                    <div class="catalog-body__prod-card">
+                                        <div class="catalog-body__prod-card-img">
+                                            <img src="./img/catalog/prod.jpg" alt="product">
+                                            <span class="hit-banner">Хит продаж</span>
+                                        </div>
+                                        <h2 class="catalog-body__prod-card-title">
+                                            Душевая кабина Style S-02
+                                            90x90x195 см
+                                        </h2>
+                                        <div class="catalog-body__prod-card-icons">
+                                            <i> <svg class="star">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                            </i>
+                                            <i> <svg class="star">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                            </i>
+                                            <i> <svg class="star">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                            </i>
+                                            <i> <svg class="star">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                            </i>
+                                            <i> <svg class="star-free">
+                                                    <use xlink:href="#star-free"></use>
+                                                </svg>
+                                            </i>
+                                        </div>
+                                        <div class="catalog-body__prod-card-price">
+                                            <p>Цена:</p>
+                                            <span class="main-price">15.091 руб.</span>
+                                            <span class="onboard">
+                                                В наличии на складе
+                                            </span>
+                                            <div class="price-icons">
+                                                <a href="#"><img src="./img/catalog/eq.png" alt="eq"></a>
+                                                <a href="#"><img src="./img/catalog/heart.png" alt="heart"></a>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="catalog-body__prod-card-btn">Купить</a>
+                                        <div class="catalog-body__prod-card-hide">
+                                            <a href="#" class="catalog-body__prod-card-click">Купить в 1 клик</a>
+                                            <p>Арт.:<span>SH-131510</span></p>
+                                            <p><b>Габариты:</b>90х90х200 см</p>
+                                            <p><b>Конструкция дверей:</b>раздвижная Гидромассаж</p>
+                                            <span class="catalog-body__prod-card-country"><img src="./img/country.png"
+                                                    alt="country"> Китай</span>
+                                        </div>
+                                    </div>
+                                    <div class="catalog-body__prod-card">
+                                        <div class="catalog-body__prod-card-img">
+                                            <img src="./img/catalog/prod.jpg" alt="product">
+                                            <span class="sale-banner">Скидка 10%</span>
+                                        </div>
+                                        <h2 class="catalog-body__prod-card-title">
+                                            Душевая кабина Style S-02
+                                            90x90x195 см
+                                        </h2>
+                                        <div class="catalog-body__prod-card-icons">
+                                            <i> <svg class="star">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                            </i>
+                                            <i> <svg class="star">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                            </i>
+                                            <i> <svg class="star">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                            </i>
+                                            <i> <svg class="star">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                            </i>
+                                            <i> <svg class="star-free">
+                                                    <use xlink:href="#star-free"></use>
+                                                </svg>
+                                            </i>
+                                        </div>
+                                        <div class="catalog-body__prod-card-price">
+                                            <p>Цена:</p>
+                                            <span class="main-price">15.091 руб.</span>
+                                            <span class="onboard">
+                                                В наличии на складе
+                                            </span>
+                                            <div class="price-icons">
+                                                <a href="#"><img src="./img/catalog/eq.png" alt="eq"></a>
+                                                <a href="#"><img src="./img/catalog/heart.png" alt="heart"></a>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="catalog-body__prod-card-btn">Купить</a>
+                                        <div class="catalog-body__prod-card-hide">
+                                            <a href="#" class="catalog-body__prod-card-click">Купить в 1 клик</a>
+                                            <p>Арт.:<span>SH-131510</span></p>
+                                            <p><b>Габариты:</b>90х90х200 см</p>
+                                            <p><b>Конструкция дверей:</b>раздвижная Гидромассаж</p>
+                                            <span class="catalog-body__prod-card-country"><img src="./img/country.png"
+                                                    alt="country"> Китай</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="new-card-row">
+                                    <div class="catalog-body__prod-card">
+                                        <div class="catalog-body__prod-card-img">
+                                            <img src="./img/catalog/prod.jpg" alt="product">
+                                            <span class="new-banner">Новинка</span>
+                                        </div>
+                                        <h2 class="catalog-body__prod-card-title">
+                                            Душевая кабина Style S-02
+                                            90x90x195 см
+                                        </h2>
+                                        <div class="catalog-body__prod-card-icons">
+                                            <i> <svg class="star">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                            </i>
+                                            <i> <svg class="star">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                            </i>
+                                            <i> <svg class="star">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                            </i>
+                                            <i> <svg class="star">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                            </i>
+                                            <i> <svg class="star-free">
+                                                    <use xlink:href="#star-free"></use>
+                                                </svg>
+                                            </i>
+                                        </div>
+                                        <div class="catalog-body__prod-card-price">
+                                            <p>Цена:</p>
+                                            <span class="main-price">15.091 руб.</span>
+                                            <span class="onboard">
+                                                В наличии на складе
+                                            </span>
+                                            <div class="price-icons">
+                                                <a href="#"><img src="./img/catalog/eq.png" alt="eq"></a>
+                                                <a href="#"><img src="./img/catalog/heart.png" alt="heart"></a>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="catalog-body__prod-card-btn">Купить</a>
+                                        <div class="catalog-body__prod-card-hide">
+                                            <a href="#" class="catalog-body__prod-card-click">Купить в 1 клик</a>
+                                            <p>Арт.:<span>SH-131510</span></p>
+                                            <p><b>Габариты:</b>90х90х200 см</p>
+                                            <p><b>Конструкция дверей:</b>раздвижная Гидромассаж</p>
+                                            <span class="catalog-body__prod-card-country"><img src="./img/country.png"
+                                                    alt="country"> Китай</span>
+                                        </div>
+                                    </div>
+                                    <div class="catalog-body__prod-card">
+                                        <div class="catalog-body__prod-card-img">
+                                            <img src="./img/catalog/prod.jpg" alt="product">
+                                        </div>
+                                        <h2 class="catalog-body__prod-card-title">
+                                            Душевая кабина Style S-02
+                                            90x90x195 см
+                                        </h2>
+                                        <div class="catalog-body__prod-card-icons">
+                                            <i> <svg class="star">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                            </i>
+                                            <i> <svg class="star">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                            </i>
+                                            <i> <svg class="star">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                            </i>
+                                            <i> <svg class="star">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                            </i>
+                                            <i> <svg class="star-free">
+                                                    <use xlink:href="#star-free"></use>
+                                                </svg>
+                                            </i>
+                                        </div>
+                                        <div class="catalog-body__prod-card-price">
+                                            <p>Цена:</p>
+                                            <span class="main-price">15.091 руб.</span>
+                                            <span class="onboard">
+                                                В наличии на складе
+                                            </span>
+                                            <div class="price-icons">
+                                                <a href="#"><img src="./img/catalog/eq.png" alt="eq"></a>
+                                                <a href="#"><img src="./img/catalog/heart.png" alt="heart"></a>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="catalog-body__prod-card-btn">Купить</a>
+                                        <div class="catalog-body__prod-card-hide">
+                                            <a href="#" class="catalog-body__prod-card-click">Купить в 1 клик</a>
+                                            <p>Арт.:<span>SH-131510</span></p>
+                                            <p><b>Габариты:</b>90х90х200 см</p>
+                                            <p><b>Конструкция дверей:</b>раздвижная Гидромассаж</p>
+                                            <span class="catalog-body__prod-card-country"><img src="./img/country.png"
+                                                    alt="country"> Китай</span>
+                                        </div>
+                                    </div>
+                                    <div class="catalog-body__prod-card">
+                                        <div class="catalog-body__prod-card-img">
+                                            <img src="./img/catalog/prod.jpg" alt="product">
+                                            <span class="new-banner">Новинка</span>
+                                            <span class="sale-banner">Скидка 10%</span>
+                                        </div>
+                                        <h2 class="catalog-body__prod-card-title">
+                                            Душевая кабина Style S-02
+                                            90x90x195 см
+                                        </h2>
+                                        <div class="catalog-body__prod-card-icons">
+                                            <i> <svg class="star">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                            </i>
+                                            <i> <svg class="star">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                            </i>
+                                            <i> <svg class="star">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                            </i>
+                                            <i> <svg class="star">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                            </i>
+                                            <i> <svg class="star-free">
+                                                    <use xlink:href="#star-free"></use>
+                                                </svg>
+                                            </i>
+                                        </div>
+                                        <div class="catalog-body__prod-card-price">
+                                            <p>Цена:</p>
+                                            <span class="main-price">15.091 руб.</span>
+                                            <span class="onboard">
+                                                В наличии на складе
+                                            </span>
+                                            <div class="price-icons">
+                                                <a href="#"><img src="./img/catalog/eq.png" alt="eq"></a>
+                                                <a href="#"><img src="./img/catalog/heart.png" alt="heart"></a>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="catalog-body__prod-card-btn">Купить</a>
+                                        <div class="catalog-body__prod-card-hide">
+                                            <a href="#" class="catalog-body__prod-card-click">Купить в 1 клик</a>
+                                            <p>Арт.:<span>SH-131510</span></p>
+                                            <p><b>Габариты:</b>90х90х200 см</p>
+                                            <p><b>Конструкция дверей:</b>раздвижная Гидромассаж</p>
+                                            <span class="catalog-body__prod-card-country"><img src="./img/country.png"
+                                                    alt="country"> Китай</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-row">
+                                    <div class="catalog-body__prod-card">
+                                        <div class="catalog-body__prod-card-img">
+                                            <img src="./img/catalog/prod.jpg" alt="product">
+                                            <span class="spec-banner">Спецпредложение</span>
+                                        </div>
+                                        <h2 class="catalog-body__prod-card-title">
+                                            Душевая кабина Style S-02
+                                            90x90x195 см
+                                        </h2>
+                                        <div class="catalog-body__prod-card-icons">
+                                            <i> <svg class="star">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                            </i>
+                                            <i> <svg class="star">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                            </i>
+                                            <i> <svg class="star">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                            </i>
+                                            <i> <svg class="star">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                            </i>
+                                            <i> <svg class="star-free">
+                                                    <use xlink:href="#star-free"></use>
+                                                </svg>
+                                            </i>
+                                        </div>
+                                        <div class="catalog-body__prod-card-price">
+                                            <p>Цена:</p>
+                                            <span class="main-price">15.091 руб.</span>
+                                            <span class="onboard">
+                                                В наличии на складе
+                                            </span>
+                                            <div class="price-icons">
+                                                <a href="#"><img src="./img/catalog/eq.png" alt="eq"></a>
+                                                <a href="#"><img src="./img/catalog/heart.png" alt="heart"></a>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="catalog-body__prod-card-btn">Купить</a>
+                                        <div class="catalog-body__prod-card-hide">
+                                            <a href="#" class="catalog-body__prod-card-click">Купить в 1 клик</a>
+                                            <p>Арт.:<span>SH-131510</span></p>
+                                            <p><b>Габариты:</b>90х90х200 см</p>
+                                            <p><b>Конструкция дверей:</b>раздвижная Гидромассаж</p>
+                                            <span class="catalog-body__prod-card-country"><img src="./img/country.png"
+                                                    alt="country"> Китай</span>
+                                        </div>
+                                    </div>
+                                    <div class="catalog-body__prod-card">
+                                        <div class="catalog-body__prod-card-img">
+                                            <img src="./img/catalog/prod.jpg" alt="product">
+                                            <span class="hit-banner">Хит продаж</span>
+                                            <img src="./img/catalog/present.png" alt="present" class="icon-img">
+                                        </div>
+                                        <h2 class="catalog-body__prod-card-title">
+                                            Душевая кабина Style S-02
+                                            90x90x195 см
+                                        </h2>
+                                        <div class="catalog-body__prod-card-icons">
+                                            <i> <svg class="star">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                            </i>
+                                            <i> <svg class="star">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                            </i>
+                                            <i> <svg class="star">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                            </i>
+                                            <i> <svg class="star">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                            </i>
+                                            <i> <svg class="star-free">
+                                                    <use xlink:href="#star-free"></use>
+                                                </svg>
+                                            </i>
+                                        </div>
+                                        <div class="catalog-body__prod-card-price">
+                                            <p>Цена:</p>
+                                            <span class="main-price">15.091 руб.</span>
+                                            <span class="onboard">
+                                                В наличии на складе
+                                            </span>
+                                            <div class="price-icons">
+                                                <a href="#"><img src="./img/catalog/eq.png" alt="eq"></a>
+                                                <a href="#"><img src="./img/catalog/heart.png" alt="heart"></a>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="catalog-body__prod-card-btn">Купить</a>
+                                        <div class="catalog-body__prod-card-hide">
+                                            <a href="#" class="catalog-body__prod-card-click">Купить в 1 клик</a>
+                                            <p>Арт.:<span>SH-131510</span></p>
+                                            <p><b>Габариты:</b>90х90х200 см</p>
+                                            <p><b>Конструкция дверей:</b>раздвижная Гидромассаж</p>
+                                            <span class="catalog-body__prod-card-country"><img src="./img/country.png"
+                                                    alt="country"> Китай</span>
+                                        </div>
+                                    </div>
+                                    <div class="catalog-body__prod-card">
+                                        <div class="catalog-body__prod-card-img">
+                                            <img src="./img/catalog/prod.jpg" alt="product">
+                                            <span class="spec-banner">
+                                                Спецпредложение
+                                            </span>
+                                            <span class="sale-banner">
+                                                Скидка 10%
+                                            </span>
+                                        </div>
+                                        <h2 class="catalog-body__prod-card-title">
+                                            Душевая кабина Style S-02
+                                            90x90x195 см
+                                        </h2>
+                                        <div class="catalog-body__prod-card-icons">
+                                            <i> <svg class="star">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                            </i>
+                                            <i> <svg class="star">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                            </i>
+                                            <i> <svg class="star">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                            </i>
+                                            <i> <svg class="star">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                            </i>
+                                            <i> <svg class="star-free">
+                                                    <use xlink:href="#star-free"></use>
+                                                </svg>
+                                            </i>
+                                        </div>
+                                        <div class="catalog-body__prod-card-price">
+                                            <p>Цена:</p>
+                                            <span class="main-price">15.091 руб.</span>
+                                            <span class="onboard">
+                                                В наличии на складе
+                                            </span>
+                                            <div class="price-icons">
+                                                <a href="#"><img src="./img/catalog/eq.png" alt="eq"></a>
+                                                <a href="#"><img src="./img/catalog/heart.png" alt="heart"></a>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="catalog-body__prod-card-btn">Купить</a>
+                                        <div class="catalog-body__prod-card-hide">
+                                            <a href="#" class="catalog-body__prod-card-click">Купить в 1 клик</a>
+                                            <p>Арт.:<span>SH-131510</span></p>
+                                            <p><b>Габариты:</b>90х90х200 см</p>
+                                            <p><b>Конструкция дверей:</b>раздвижная Гидромассаж</p>
+                                            <span class="catalog-body__prod-card-country"><img src="./img/country.png"
+                                                    alt="country"> Китай</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="spec-card-row">
+                                    <div class="catalog-body__prod-card">
+                                        <div class="catalog-body__prod-card-img">
+                                            <img src="./img/catalog/prod.jpg" alt="product">
+                                            <span class="spec-banner">Спецпредложение</span>
+                                        </div>
+                                        <h2 class="catalog-body__prod-card-title">
+                                            Душевая кабина Style S-02
+                                            90x90x195 см
+                                        </h2>
+                                        <div class="catalog-body__prod-card-icons">
+                                            <i> <svg class="star">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                            </i>
+                                            <i> <svg class="star">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                            </i>
+                                            <i> <svg class="star">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                            </i>
+                                            <i> <svg class="star">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                            </i>
+                                            <i> <svg class="star-free">
+                                                    <use xlink:href="#star-free"></use>
+                                                </svg>
+                                            </i>
+                                        </div>
+                                        <div class="catalog-body__prod-card-price">
+                                            <p>Цена:</p>
+                                            <span class="main-price">15.091 руб.</span>
+                                            <span class="onboard">
+                                                В наличии на складе
+                                            </span>
+                                            <div class="price-icons">
+                                                <a href="#"><img src="./img/catalog/eq.png" alt="eq"></a>
+                                                <a href="#"><img src="./img/catalog/heart.png" alt="heart"></a>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="catalog-body__prod-card-btn">Купить</a>
+                                        <div class="catalog-body__prod-card-hide">
+                                            <a href="#" class="catalog-body__prod-card-click">Купить в 1 клик</a>
+                                            <p>Арт.:<span>SH-131510</span></p>
+                                            <p><b>Габариты:</b>90х90х200 см</p>
+                                            <p><b>Конструкция дверей:</b>раздвижная Гидромассаж</p>
+                                            <span class="catalog-body__prod-card-country"><img src="./img/country.png"
+                                                    alt="country"> Китай</span>
+                                        </div>
+                                    </div>
+                                    <div class="catalog-body__prod-card">
+                                        <div class="catalog-body__prod-card-img">
+                                            <img src="./img/catalog/prod.jpg" alt="product">
+                                            <span class="hit-banner">Хит продаж</span>
+                                            <img src="./img/catalog/prdicon.png" alt="present" class="icon-img">
+                                        </div>
+                                        <h2 class="catalog-body__prod-card-title">
+                                            Душевая кабина Style S-02
+                                            90x90x195 см
+                                        </h2>
+                                        <div class="catalog-body__prod-card-icons">
+                                            <i> <svg class="star">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                            </i>
+                                            <i> <svg class="star">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                            </i>
+                                            <i> <svg class="star">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                            </i>
+                                            <i> <svg class="star">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                            </i>
+                                            <i> <svg class="star-free">
+                                                    <use xlink:href="#star-free"></use>
+                                                </svg>
+                                            </i>
+                                        </div>
+                                        <div class="catalog-body__prod-card-price">
+                                            <p>Цена:</p>
+                                            <span class="main-price">15.091 руб.</span>
+                                            <span class="onboard">
+                                                В наличии на складе
+                                            </span>
+                                            <div class="price-icons">
+                                                <a href="#"><img src="./img/catalog/eq.png" alt="eq"></a>
+                                                <a href="#"><img src="./img/catalog/heart.png" alt="heart"></a>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="catalog-body__prod-card-btn">Купить</a>
+                                        <div class="catalog-body__prod-card-hide">
+                                            <a href="#" class="catalog-body__prod-card-click">Купить в 1 клик</a>
+                                            <p>Арт.:<span>SH-131510</span></p>
+                                            <p><b>Габариты:</b>90х90х200 см</p>
+                                            <p><b>Конструкция дверей:</b>раздвижная Гидромассаж</p>
+                                            <span class="catalog-body__prod-card-country"><img src="./img/country.png"
+                                                    alt="country"> Китай</span>
+                                        </div>
+                                    </div>
+                                    <div class="catalog-body__prod-card">
+                                        <div class="catalog-body__prod-card-img">
+                                            <img src="./img/catalog/prod.jpg" alt="product">
+                                            <img src="./img/catalog/present.png" alt="pres" class="icon-img">
+                                        </div>
+                                        <h2 class="catalog-body__prod-card-title">
+                                            Душевая кабина Style S-02
+                                            90x90x195 см
+                                        </h2>
+                                        <div class="catalog-body__prod-card-icons">
+                                            <i> <svg class="star">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                            </i>
+                                            <i> <svg class="star">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                            </i>
+                                            <i> <svg class="star">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                            </i>
+                                            <i> <svg class="star">
+                                                    <use xlink:href="#star"></use>
+                                                </svg>
+                                            </i>
+                                            <i> <svg class="star-free">
+                                                    <use xlink:href="#star-free"></use>
+                                                </svg>
+                                            </i>
+                                        </div>
+                                        <div class="catalog-body__prod-card-price">
+                                            <p>Цена:</p>
+                                            <span class="main-price">15.091 руб.</span>
+                                            <span class="onboard">
+                                                В наличии на складе
+                                            </span>
+                                            <div class="price-icons">
+                                                <a href="#"><img src="./img/catalog/eq.png" alt="eq"></a>
+                                                <a href="#"><img src="./img/catalog/heart.png" alt="heart"></a>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="catalog-body__prod-card-btn">Купить</a>
+                                        <div class="catalog-body__prod-card-hide">
+                                            <a href="#" class="catalog-body__prod-card-click">Купить в 1 клик</a>
+                                            <p>Арт.:<span>SH-131510</span></p>
+                                            <p><b>Габариты:</b>90х90х200 см</p>
+                                            <p><b>Конструкция дверей:</b>раздвижная Гидромассаж</p>
+                                            <span class="catalog-body__prod-card-country"><img src="./img/country.png"
+                                                    alt="country"> Китай</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#" class="catalog-body__prod-more">Ещё товары</a>
+                            </div>
+                            <div class="catalog-body__prod-pagination">
+                                <a href="#">В начало</a>
+                                <a href="#">1</a>
+                                <a href="#">2</a>
+                                <a href="#">3</a>
+                                <a href="#">4</a>
+                                <a href="#">Дальше >></a>
+                            </div>
+                            <h3 class="catalog-body__banners-title">
+                                Популярные бренды душевых кабин
+                            </h3>
+                            <div class="catalog-body__banners-row">
+                                <div class="catalog-body__banners-baner">
+                                    <div class="catalog-body__banners-baner-img">
+                                        <img src="./img/b1.png" alt="banner">
+                                    </div>
+                                    <p>название</p>
+                                </div>
+                                <div class="catalog-body__banners-baner">
+                                    <div class="catalog-body__banners-baner-img">
+                                        <img src="./img/b2.png" alt="banner">
+                                    </div>
+                                    <p>название</p>
+                                </div>
+                                <div class="catalog-body__banners-baner">
+                                    <div class="catalog-body__banners-baner-img">
+                                        <img src="./img/b3.png" alt="banner">
+                                    </div>
+                                    <p>название</p>
+                                </div>
+                                <div class="catalog-body__banners-baner">
+                                    <div class="catalog-body__banners-baner-img">
+                                        <img src="./img/b4.png" alt="banner">
+                                    </div>
+                                    <p>название</p>
+                                </div>
+                                <div class="catalog-body__banners-baner">
+                                    <div class="catalog-body__banners-baner-img">
+                                        <img src="./img/b5.png" alt="banner">
+                                    </div>
+                                    <p>название</p>
+                                </div>
+                                <a class="catalog-body__banners-row-link" href="#">Смотреть все</a>
+                            </div>
+                            <h3 class="catalog-body__banners-title">
+                                Смотрите также
+                            </h3>
+                            <div class="catalog-body__list-row">
+                                <ul>
+                                    <li class="catalog-body__list-item"><a href="#">Мебель для ванной комнаты</a></li>
+                                    <li class="catalog-body__list-item"><a href="#">Душевые боксы</a></li>
+                                    <li class="catalog-body__list-item"><a href="#">Душевые ограждения, уголки и
+                                            поддоны</a></li>
+                                    <li class="catalog-body__list-item"><a href="#">Чугунные ванны</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="catalog-body__list-item"><a href="#">Унитазы</a></li>
+                                    <li class="catalog-body__list-item"><a href="#">Смесители</a></li>
+                                    <li class="catalog-body__list-item"><a href="#">Душ</a></li>
+                                    <li class="catalog-body__list-item"><a href="#">Полотенцесушители</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="catalog-text">
+                            <img src="./img/catalog/text.png" alt="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="catalog-subscribe">
+                            <div class="catalog-subscribe__title">
+                                Подписаться на рассылку
+                                выгодных предложений
+                            </div>
+                            <form action="/" class="catalog-subscribe__form">
+                                <input type="email" placeholder="e-mail">
+                            </form>
+                            <a href="#" class="catalog-subscribe__btn">Подписаться</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 footer-top">
+                        <div class="footer-top__main">
+                            <div class="footer-top__phone">
+                                <a href="tel:8 495 640 94 94 "><img src="./img/footer-phone.png" alt="phone"> 8 495 640
+                                    94
+                                    94 </a>
+                            </div>
+                            <a href="#" class="footer-top__back">Обратная связь</a>
+                            <ul class="footer-top__list">
+                                <li class="footer-top__item"><a href="#" class="footer-top__link"><img
+                                            src="./img/footer-heart.png" alt="footerimg"> Избранное<span>4</span></a>
+                                </li>
+                                <li class="footer-top__item"><a href="#" class="footer-top__link"><img
+                                            src="./img/footer-eq.png" alt="footerimg"> Сравнение<span>4</span></a></li>
+                                <li class="footer-top__item"><a href="#" class="footer-top__link"><img
+                                            src="./img/footer-cart.png" alt="footerimg"> Корзина<span>4</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 footer-mid">
+                        <div class="footer-mid__main">
+                            <div class="footer-mid__col">
+                                <a href="#" class="footer-mid__logo">
+                                    <img src="./img/footerlogo.png" alt="logo">
+                                </a>
+                            </div>
+                            <div class="footer-mid__col">
+                                <h2 class="footer-mid__col-title">
+                                    Информация
+                                </h2>
+                                <ul class="footer-mid__col-list">
+                                    <li class="footer-mid__col-item"><a href="#" class="footer-mid__col-link">О
+                                            компании</a></li>
+                                    <li class="footer-mid__col-item"><a href="#" class="footer-mid__col-link">Наш
+                                            шоурум</a></li>
+                                    <li class="footer-mid__col-item"><a href="#" class="footer-mid__col-link">Доставка и
+                                            оплата</a></li>
+                                    <li class="footer-mid__col-item"><a href="#"
+                                            class="footer-mid__col-link">Самовывоз</a></li>
+                                    <li class="footer-mid__col-item"><a href="#"
+                                            class="footer-mid__col-link">Установка</a></li>
+                                    <li class="footer-mid__col-item"><a href="#" class="footer-mid__col-link">Информация
+                                            для покупателя</a></li>
+                                    <li class="footer-mid__col-item"><a href="#" class="footer-mid__col-link">Полезные
+                                            статьи</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer-mid__col">
+                                <h2 class="footer-mid__col-title">
+                                    Контакты
+                                </h2>
+                                <div class="footer-mid__col-timing">
+                                    <p>Работаем ежедневно </p> <span>с 9.00 до 19.00</span>
+                                </div>
+                                <div class="footer-mid__col-adress">
+                                    <p><span>Адрес:</span>123592, Москва,</p>
+
+                                    <p>м.Строгино, ул.Твардовского д.12к3</p>
+                                </div>
+                                <div class="footer-mid__col-phones">
+                                    <p> <span>Телефоны:</span></p>
+
+                                    <p>(495) 640-94-94 - Москва</p>
+
+                                    <p>(812) 408-27-15 - Санкт-Петербург</p>
+                                </div>
+                            </div>
+                            <div class="footer-mid__col">
+                                <h2 class="footer-mid__col-title">
+                                    Обратная связь
+                                </h2>
+                                <div class="footer-mid__col-callback ">
+                                    <a href="#" class="d-sm-block d-none"><img src="./img/call-answer.png" alt="call">
+                                        Заказать обратный
+                                        звонок</a>
+                                    <a href="#" class="d-sm-block d-none"><img src="./img/black-back-closed.png"
+                                            alt="black"> Напишите нам</a>
+                                    <div class="footer-mid__col-viber">
+                                        <img src="./img/whats-footer.png" alt="whats">
+                                        <p> Viber/WhatsApp: <br>
+
+                                            (985) 043-43-21</p>
+                                    </div>
+                                    <div class="footer-mid__col-social">
+                                        <p>Мы в социальных сетях:</p>
+                                        <a href="#"><img src="./img/facebook.png" alt="facebook"></a>
+                                        <a href="#"><img src="./img/vk.png" alt="vk"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="footer-mid__politic">
+                                Политика в отношении обработки персональных данных
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="subscribe-form mobile">
+                            <form class="subscribe-form__main" action="/">
+                                <h2 class="subscribe-form__title">
+                                    Подписаться на рассылку выгодных предложений
+                                </h2>
+                                <input type="mail" placeholder="e-mail">
+                                <button>Подписаться</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12 copyright d-sm-block d-none">
+                        <div class="footer-copyright">
+                            © 2007-2019 Shop-Sanequip.ru - интернет-магазин сантехники
+
+                            Все права защищены
+                        </div>
+                        <div class="footer-peyment">
+                            <a href="#"><img src="./img/visa-pay-logo.png" alt="visa"></a>
+                            <a href="#"><img src="./img/mcard.png" alt="visa"></a>
+                            <a href="#"><img src="./img/mir.png" alt="visa"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="./js/jquery-3.5.0.js"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="./js/nouislider.js"></script>
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>

@@ -7,11 +7,22 @@
     <link rel="stylesheet" href="./src/bootstrap-grid.css">
     <link rel="stylesheet" href="./src/owl.carousel.min.css">
     <link rel="stylesheet" href="./src/owl.theme.default.min.css">
+    <link rel="stylesheet" href="./src/nouislider.css">
     <link rel="stylesheet" href="./src/main.css">
     <title>SanEquip</title>
 </head>
 
 <body>
+    <svg style="display: none;">
+        <symbol id="star" viewBox="0 -10 511.99143 511">
+            <path
+                d="m510.652344 185.882812c-3.371094-10.367187-12.566406-17.707031-23.402344-18.6875l-147.796875-13.417968-58.410156-136.75c-4.3125-10.046875-14.125-16.53125-25.046875-16.53125s-20.738282 6.484375-25.023438 16.53125l-58.410156 136.75-147.820312 13.417968c-10.835938 1-20.011719 8.339844-23.402344 18.6875-3.371094 10.367188-.257813 21.738282 7.9375 28.925782l111.722656 97.964844-32.941406 145.085937c-2.410156 10.667969 1.730468 21.699219 10.582031 28.097656 4.757813 3.457031 10.347656 5.183594 15.957031 5.183594 4.820313 0 9.644532-1.28125 13.953125-3.859375l127.445313-76.203125 127.421875 76.203125c9.347656 5.585938 21.101562 5.074219 29.933593-1.324219 8.851563-6.398437 12.992188-17.429687 10.582032-28.097656l-32.941406-145.085937 111.722656-97.964844c8.191406-7.1875 11.308594-18.535156 7.9375-28.925782zm-252.203125 223.722657" />
+        </symbol>
+        <symbol id="star-free" viewBox="0 -10 511.98685 511">
+            <path
+                d="m114.59375 491.140625c-5.609375 0-11.179688-1.75-15.933594-5.1875-8.855468-6.417969-12.992187-17.449219-10.582031-28.09375l32.9375-145.089844-111.703125-97.960937c-8.210938-7.167969-11.347656-18.519532-7.976562-28.90625 3.371093-10.367188 12.542968-17.707032 23.402343-18.710938l147.796875-13.417968 58.433594-136.746094c4.308594-10.046875 14.121094-16.535156 25.023438-16.535156 10.902343 0 20.714843 6.488281 25.023437 16.511718l58.433594 136.769532 147.773437 13.417968c10.882813.980469 20.054688 8.34375 23.425782 18.710938 3.371093 10.367187.253906 21.738281-7.957032 28.90625l-111.703125 97.941406 32.9375 145.085938c2.414063 10.667968-1.726562 21.699218-10.578125 28.097656-8.832031 6.398437-20.609375 6.890625-29.910156 1.300781l-127.445312-76.160156-127.445313 76.203125c-4.308594 2.558594-9.109375 3.863281-13.953125 3.863281zm141.398438-112.875c4.84375 0 9.640624 1.300781 13.953124 3.859375l120.277344 71.9375-31.085937-136.941406c-2.21875-9.746094 1.089843-19.921875 8.621093-26.515625l105.472657-92.5-139.542969-12.671875c-10.046875-.917969-18.6875-7.234375-22.613281-16.492188l-55.082031-129.046875-55.148438 129.066407c-3.882812 9.195312-12.523438 15.511718-22.546875 16.429687l-139.5625 12.671875 105.46875 92.5c7.554687 6.613281 10.859375 16.769531 8.621094 26.539062l-31.0625 136.9375 120.277343-71.914062c4.308594-2.558594 9.109376-3.859375 13.953126-3.859375zm-84.585938-221.847656s0 .023437-.023438.042969zm169.128906-.0625.023438.042969c0-.023438 0-.023438-.023438-.042969zm0 0" />
+        </symbol>
+    </svg>
     <div class="wrapper">
         <header>
             <div class="container container-md">
@@ -102,173 +113,160 @@
                                     class="navigation__link nav-sale">Скидки</a></li>
                         </ul>
                     </nav>
-                    <ul class="breadcrumb col-lg-12">
-                        <li><a href="#">Интернет-магазин сантехники</a></li>
-                        <li><a href="#">Душевые кабины</a></li>
-                        <li><a href="#">Parly</a></li>
-                        <li>Душевая кабина Parly EB80</li>
-                    </ul>
-                    <h2 class="basket-title product-title">Корзина</h2>
+                    <h2 class="basket-title article-title product-title">Полезные статьи</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="articles-preview">
+                            <img src="./img/articles/1.jpg" alt="article">
+                            <a href="#" class="articles-preview__link">Дизайн</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="articles-preview">
+                            <img src="./img/articles/2.jpg" alt="article">
+                            <a href="#" class="articles-preview__link">Как выбрать</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="articles-preview">
+                            <img src="./img/articles/3.jpg" alt="article">
+                            <a href="#" class="articles-preview__link">Обзоры</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="articles-preview">
+                            <img src="./img/articles/4.jpg" alt="article">
+                            <a href="#" class="articles-preview__link">Особенности
+                                сантехники</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="articles-preview">
+                            <img src="./img/articles/5.jpg" alt="article">
+                            <a href="#" class="articles-preview__link">Полезные
+                                советы</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="articles-preview">
+                            <img src="./img/articles/5.jpg" alt="article">
+                            <a href="#" class="articles-preview__link">Установка
+                                оборудования</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="articles-preview">
+                            <img src="./img/articles/7.jpg" alt="article">
+                            <a href="#" class="articles-preview__link">Что выбрать</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="articles-preview">
+                            <img src="./img/articles/1.jpg" alt="article">
+                            <a href="#" class="articles-preview__link">Все статьи</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="basket-title article-title product-title">
+                            Установка оборудования
+                        </h2>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="articles-prew-big">
+                            <div class="articles-prew-big__img">
+                                <img src="./img/articles/01.jpg" alt="preview">
+                            </div>
+                            <a href="#" class="articles-prew-big__link">Как правильно установить унитаз?</a>
+                            <div class="articles-prew-big__text">
+                                <p>Самостоятельный монтаж сантехники порождает множество вопросов. Необходимо грамотно
+                                    подобрать комплектующие, знать технологию и особенности установки. </p>
+                            </div>
+                            <div class="articles-prew-big__footer">
+                                <span class="side-filter__articles-view">312</span>
+                                <div class="article-body__like">
+                                    <span class="like">216</span>
+                                    <span class="dislike">0</span>
+                                </div>
+                                <a href="#" class="articles-prew-big__more">Подробнее >></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="articles-prew-big">
+                            <div class="articles-prew-big__img">
+                                <img src="./img/articles/01.jpg" alt="preview">
+                            </div>
+                            <a href="#" class="articles-prew-big__link">Как правильно установить унитаз?</a>
+                            <div class="articles-prew-big__text">
+                                <p>Самостоятельный монтаж сантехники порождает множество вопросов. Необходимо грамотно
+                                    подобрать комплектующие, знать технологию и особенности установки. </p>
+                            </div>
+                            <div class="articles-prew-big__footer">
+                                <span class="side-filter__articles-view">312</span>
+                                <div class="article-body__like">
+                                    <span class="like not">0</span>
+                                    <span class="dislike active">3</span>
+                                </div>
+                                <a href="#" class="articles-prew-big__more">Подробнее >></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="articles-prew-big">
+                            <div class="articles-prew-big__img">
+                                <img src="./img/articles/01.jpg" alt="preview">
+                            </div>
+                            <a href="#" class="articles-prew-big__link">Как правильно установить унитаз?</a>
+                            <div class="articles-prew-big__text">
+                                <p>Самостоятельный монтаж сантехники порождает множество вопросов. Необходимо грамотно
+                                    подобрать комплектующие, знать технологию и особенности установки. </p>
+                            </div>
+                            <div class="articles-prew-big__footer">
+                                <span class="side-filter__articles-view">312</span>
+                                <div class="article-body__like">
+                                    <span class="like">216</span>
+                                    <span class="dislike">0</span>
+                                </div>
+                                <a href="#" class="articles-prew-big__more">Подробнее >></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="articles-prew-big">
+                            <div class="articles-prew-big__img">
+                                <img src="./img/articles/01.jpg" alt="preview">
+                            </div>
+                            <a href="#" class="articles-prew-big__link">Как правильно установить унитаз?</a>
+                            <div class="articles-prew-big__text">
+                                <p>Самостоятельный монтаж сантехники порождает множество вопросов. Необходимо грамотно
+                                    подобрать комплектующие, знать технологию и особенности установки. </p>
+                            </div>
+                            <div class="articles-prew-big__footer">
+                                <span class="side-filter__articles-view">312</span>
+                                <div class="article-body__like">
+                                    <span class="like">216</span>
+                                    <span class="dislike">0</span>
+                                </div>
+                                <a href="#" class="articles-prew-big__more">Подробнее >></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="articles catalog-body__prod-pagination">
+                            <a class="active" href="#">1</a>
+                            <a href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                            <a href="#">Следующая</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <section class="table-main">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <ul class="table-main__name">
-                                <li class="table-main__item-photo">Фото</li>
-                                <li class="table-main__item-caption">Название товара</li>
-                                <li class="table-main__item-price">Цена</li>
-                                <li class="table-main__item-qnty">Количество</li>
-                                <li class="table-main__item-finalprice">Сумма</li>
-                            </ul>
-                        </div>
-                        <div class="col-12">
-                            <div class="table-main__body">
-                                <div class="table-main__photo">
-                                    <img src="./img/card/p1.png" alt="photo">
-                                </div>
-                                <div class="table-main__caption">
-                                    <div class="table-main__inner">
-                                        <a href="#" class="table-main__caption-link">
-                                            Набор для ванной комнаты Grohe Eurostyle
-                                        </a>
-                                        <span class="delete">
-                                            <img src="./img/card/trash.png" alt="delete">
-                                        </span>
-                                        <p>арт.<span>124416</span></p>
-                                        <h4 class="table-main__caption-list">Состав комплекта</h4>
-                                        <ol>
-                                            <li>Ванна акриловая Aquanet Palma 170x90 L</li>
-                                            <li>Экран для ванны</li>
-                                        </ol>
-                                    </div>
-                                </div>
-                                <div class="table-main__mobile-list">
-                                    <a href="#">Состав комплекта <img src="./img/card/shevron-list.png" alt="sevron">
-                                    </a>
-                                </div>
-                                <div class="table-main__price">
-                                    <div class="table-main__inner">
-                                        <p>15.091 руб.</p>
-                                        <span>16.030 руб.</span>
-                                    </div>
-                                </div>
-                                <div class="table-main__qnty">
-                                    <div class="table-main__inner inner-qnty">
-                                        <span class="min button">
-                                            -
-                                        </span>
-                                        <input type="text" name="qty" id="qty" value="1" />
-                                        <span class="plus button">
-                                            +
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="table-main__finalprice">
-                                    <div class="table-main__inner inner-finalprice">
-                                        <p>15.091 руб.</p>
-                                        <span>16.030 руб.</span>
-                                        <span class="delete">
-                                            <img src="./img/card/trash.png" alt="delete">
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="table-main__body">
-                                <div class="table-main__photo">
-                                    <img src="./img/card/p1.png" alt="photo">
-                                </div>
-                                <div class="table-main__caption">
-                                    <div class="table-main__inner">
-                                        <a href="#" class="table-main__caption-link">
-                                            Набор для ванной комнаты Grohe Eurostyle
-                                        </a>
-                                        <span class="delete">
-                                            <img src="./img/card/trash.png" alt="delete">
-                                        </span>
-                                        <p>арт.<span>124416</span></p>
-                                        <h4 class="table-main__caption-list">Состав комплекта</h4>
-                                        <ol>
-                                            <li>Ванна акриловая Aquanet Palma 170x90 L</li>
-                                            <li>Экран для ванны</li>
-                                        </ol>
-                                    </div>
-                                </div>
-                                <div class="table-main__mobile-list">
-                                    <a href="#">Состав комплекта <img src="./img/card/shevron-list.png" alt="sevron">
-                                    </a>
-                                </div>
-                                <div class="table-main__price">
-                                    <div class="table-main__inner">
-                                        <p>15.091 руб.</p>
-                                        <span>16.030 руб.</span>
-                                    </div>
-                                </div>
-                                <div class="table-main__qnty">
-                                    <div class="table-main__inner inner-qnty">
-                                        <span class="min button">
-                                            -
-                                        </span>
-                                        <input type="text" name="qty" id="qty" value="1" />
-                                        <span class="plus button">
-                                            +
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="table-main__finalprice">
-                                    <div class="table-main__inner inner-finalprice">
-                                        <p>15.091 руб.</p>
-                                        <span>16.030 руб.</span>
-                                        <span class="delete">
-                                            <img src="./img/card/trash.png" alt="delete">
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="table-final">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="table-final__body">
-                                <div class="table-final__header">
-                                    <h2>Итого:</h2>
-                                </div>
-                                <div class="table-final__inner">
-                                    <div class="table-final__inner-sale">
-                                        <span>
-                                            Скидка:
-                                        </span>
-                                        <span>
-                                            600 руб.
-                                        </span>
-                                    </div>
-                                    <div class="table-final__inner-qnty">
-                                        <span>Количество:</span>
-                                        <span>2 шт.</span>
-                                    </div>
-                                    <div class="table-final__inner-payment">
-                                        <span>
-                                            К оплате:
-                                        </span>
-                                        <span>
-                                            15.091руб.
-                                        </span>
-                                    </div>
-                                    <div class="table-final__inner-btns">
-                                        <a class="click-btn" href="#">Оформить в 1 клик</a>
-                                        <a class="finish-btn" href="#">Перейти к оформлению</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
         </main>
         <footer>
             <div class="container">
@@ -401,7 +399,9 @@
     </div>
     <script src="./js/jquery-3.5.0.js"></script>
     <script src="./js/owl.carousel.min.js"></script>
+    <script src="./js/nouislider.js"></script>
     <script src="./js/main.js"></script>
+
 </body>
 
 </html>

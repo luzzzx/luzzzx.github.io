@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.min.css" />
+  <title>Pansion</title>
+</head>
+
+<body>
+  <svg style="display: none;">
+    <symbol id="search" viewBox="0 0 16 16">
+      <path
+        d="M15.9023 14.9597L11.2545 10.3118C12.136 9.22342 12.6667 7.8398 12.6667 6.33336C12.6667 2.84116 9.82552 0 6.33333 0C2.84113 0 0 2.84116 0 6.33336C0 9.82555 2.84116 12.6667 6.33336 12.6667C7.8398 12.6667 9.22342 12.136 10.3118 11.2545L14.9597 15.9024C15.0899 16.0325 15.3009 16.0325 15.4311 15.9024L15.9024 15.4311C16.0325 15.3009 16.0325 15.0898 15.9023 14.9597ZM6.33336 11.3334C3.5762 11.3334 1.33335 9.09052 1.33335 6.33336C1.33335 3.5762 3.5762 1.33335 6.33336 1.33335C9.09052 1.33335 11.3334 3.5762 11.3334 6.33336C11.3334 9.09052 9.09052 11.3334 6.33336 11.3334Z"
+        fill="black" />
+    </symbol>
+    <symbol id="question" viewBox="0 0 16 16">
+      <path
+        d="M6 0a6 6 0 100 12A6 6 0 006 0zm1.249 9.299c-.31.122-.555.214-.74.278a1.95 1.95 0 01-.64.096c-.374 0-.665-.091-.872-.274a.883.883 0 01-.31-.694c0-.11.007-.22.022-.335a4.18 4.18 0 01.075-.385l.386-1.366c.034-.13.064-.255.087-.37.024-.118.035-.225.035-.322 0-.174-.036-.296-.108-.365-.073-.068-.21-.102-.413-.102-.1 0-.202.015-.307.046a4.361 4.361 0 00-.269.09l.102-.421c.253-.103.495-.192.726-.265.232-.074.45-.11.656-.11.371 0 .658.09.86.269.2.179.3.412.3.699 0 .06-.006.164-.02.313a2.17 2.17 0 01-.077.412l-.385 1.361a3.85 3.85 0 00-.084.374c-.025.14-.038.246-.038.318 0 .18.04.304.122.37.08.065.22.098.42.098a1.808 1.808 0 00.575-.136l-.103.42zM7.18 3.773a.918.918 0 01-.648.25.927.927 0 01-.65-.25.798.798 0 01-.27-.606c0-.236.09-.439.27-.607a.92.92 0 01.65-.252.91.91 0 01.648.252.804.804 0 01.269.607c0 .238-.09.44-.27.606z"
+        fill="#000" />
+    </symbol>
+    <symbol id="mail" viewBox="0 0 16 16">
+      <path
+        d="M10.606 8.082L16 11.492V4.528l-5.394 3.554zM0 4.528v6.964l5.394-3.41L0 4.528zM15 2.5H1a.988.988 0 00-.97.851L8 8.602l7.97-5.251A.988.988 0 0015 2.5zM9.69 8.686l-1.415.932a.5.5 0 01-.55 0L6.31 8.685.032 12.656A.986.986 0 001 13.5h14a.986.986 0 00.968-.844L9.69 8.686z" />
+      <defs>
+        <clipPath id="clip0">
+          <path fill="#fff" d="M0 0h16v16H0z" />
+    </symbol>
+  </svg>
+  <div class="wrapper">
+    <header>
+      <nav class="navbar navbar-expand-xl">
+        <div class="container-xl">
+          <a class="navbar-brand" href="#">
+            <img src="./img/logo.png" alt="logo">
+          </a>
+          <button class="navbar-toggler menu-icon" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <!-- <span class="navbar-toggler-icon">
+
+            </span> -->
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+          </button>
+          <div class="collapse navbar-collapse header-navbar" id="navbarNav">
+            <ul class="navbar-nav header-navbar__top">
+              <li class="nav-item">
+                <form action="
+                /">
+                  <label>
+                    <a href="#" class="search-btn">
+                      <svg class="search">
+                        <use xlink:href="#search"></use>
+                      </svg>
+                    </a>
+                    <input class="header-navbar__search" type="text" placeholder="Я хочу найти ...">
+                  </label>
+                </form>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">О нас</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Юридическая информация </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Контакты</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link set-question" href="#"> <svg class="question">
+                    <use xlink:href="#question"></use>
+                  </svg>Задать вопрос</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link send-mail" href="#">
+                  <svg class="mail">
+                    <use xlink:href="#mail"></use>
+                  </svg>
+                  Info@perviy-pansion.ru</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav header-navbar__footer">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Нужна помощь</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Готов помочь</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Уже помогли</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Дома престарелых</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Истории</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link red-btn" href="#">Стать волонтером</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="main-slider container-xl">
+        <div class="row">
+          <div class="col-12">
+            <div class="main-slider__body owl-carousel">
+              <div class="main-slider__item">
+                <div class="main-slider__text">
+                  <h2 class="main-slider__title">
+                    Всероссийский сервис
+                    помощи пожилым
+                    людям
+                  </h2>
+                  <p class="main-slider__subtitle">
+                    Каждый человек способен на многое.
+                    Но, к сожалению, не каждый знает,
+                    на что он способен.
+                  </p>
+                </div>
+                <div class="main-slider__img">
+                  <img src="./img/slider-main.jpg" alt="slider">
+                </div>
+              </div>
+              <div class="main-slider__item">
+                <div class="main-slider__text">
+                  <h2 class="main-slider__title">
+                    Всероссийский сервис
+                    помощи пожилым
+                    людям
+                  </h2>
+                  <p class="main-slider__subtitle">
+                    Каждый человек способен на многое.
+                    Но, к сожалению, не каждый знает,
+                    на что он способен.
+                  </p>
+                </div>
+                <div class="main-slider__img">
+                  <img src="./img/slider-main.jpg" alt="slider">
+                </div>
+              </div>
+              <div class="main-slider__item">
+                <div class="main-slider__text">
+                  <h2 class="main-slider__title">
+                    Всероссийский сервис
+                    помощи пожилым
+                    людям
+                  </h2>
+                  <p class="main-slider__subtitle">
+                    Каждый человек способен на многое.
+                    Но, к сожалению, не каждый знает,
+                    на что он способен.
+                  </p>
+                </div>
+                <div class="main-slider__img">
+                  <img src="./img/slider-main.jpg" alt="slider">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="need-help container-xl">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-header">
+              <div class="section-header__row">
+                <div class="section-header__title">
+                  Нужна помощь
+                </div>
+                <div class="section-header__all">
+                  <span>156</span>
+                  <a href="#">Смотреть все</a>
+                </div>
+                <a href="#" class="section-header__btn">
+                  <span>Вам нужна помощь?</span>
+                  Разместите объявление
+                </a>
+              </div>
+              <div class="section-header__row">
+                <div class="section-header__subtitle">
+                  Подберите самый лучший для вас дом престарелых или разместите свой дом престарелых и пригласите новых
+                  жильцев
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="need-help__slider owl-carousel">
+              <div class="need-help__item main-card">
+                <div class="main-card__img">
+                  <img src="./img/c1.jpg" alt="card__img">
+                </div>
+                <div class="main-card__title">
+                  Очень нужно 300 кроватей
+                  в дом пристарелых “Жизнь”
+                </div>
+                <span class="main-card__map">
+                  Краснодар
+                </span>
+                <a href="#" class="main-card__btn">
+                  Помочь
+                </a>
+              </div>
+              <div class="need-help__item main-card">
+                <div class="main-card__img">
+                  <img src="./img/c2.jpg" alt="card__img">
+                </div>
+                <div class="main-card__title">
+                  Одинокому дедушке нужна
+                  коляска
+                </div>
+                <span class="main-card__map">
+                  Москва
+                </span>
+                <a href="#" class="main-card__btn">
+                  Помочь
+                </a>
+              </div>
+              <div class="need-help__item main-card">
+                <div class="main-card__img">
+                  <img src="./img/c3.jpg" alt="card__img">
+                </div>
+                <div class="main-card__title">
+                  Очень нужно 300 кроватей
+                  в дом пристарелых “Жизнь”
+                </div>
+                <span class="main-card__map">
+                  Ростов-на-Дону
+                </span>
+                <a href="#" class="main-card__btn">
+                  Помочь
+                </a>
+              </div>
+              <div class="need-help__item main-card">
+                <div class="main-card__img">
+                  <img src="./img/c4.jpg" alt="card__img">
+                </div>
+                <div class="main-card__title">
+                  Одинокому дедушке нужна
+                  коляска
+                </div>
+                <span class="main-card__map">
+                  Москва
+                </span>
+                <a href="#" class="main-card__btn">
+                  Помочь
+                </a>
+              </div>
+              <div class="need-help__item main-card">
+                <div class="main-card__img">
+                  <img src="./img/c1.jpg" alt="card__img">
+                </div>
+                <div class="main-card__title">
+                  Очень нужно 300 кроватей
+                  в дом пристарелых “Жизнь”
+                </div>
+                <span class="main-card__map">
+                  Краснодар
+                </span>
+                <a href="#" class="main-card__btn">
+                  Помочь
+                </a>
+              </div>
+              <div class="need-help__item main-card">
+                <div class="main-card__img">
+                  <img src="./img/c2.jpg" alt="card__img">
+                </div>
+                <div class="main-card__title">
+                  Одинокому дедушке нужна
+                  коляска
+                </div>
+                <span class="main-card__map">
+                  Москва
+                </span>
+                <a href="#" class="main-card__btn">
+                  Помочь
+                </a>
+              </div>
+              <div class="need-help__item main-card">
+                <div class="main-card__img">
+                  <img src="./img/c3.jpg" alt="card__img">
+                </div>
+                <div class="main-card__title">
+                  Очень нужно 300 кроватей
+                  в дом пристарелых “Жизнь”
+                </div>
+                <span class="main-card__map">
+                  Ростов-на-Дону
+                </span>
+                <a href="#" class="main-card__btn">
+                  Помочь
+                </a>
+              </div>
+              <div class="need-help__item main-card">
+                <div class="main-card__img">
+                  <img src="./img/c4.jpg" alt="card__img">
+                </div>
+                <div class="main-card__title">
+                  Одинокому дедушке нужна
+                  коляска
+                </div>
+                <span class="main-card__map">
+                  Москва
+                </span>
+                <a href="#" class="main-card__btn">
+                  Помочь
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="for-free container-xl">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-header">
+              <div class="section-header__row">
+                <div class="section-header__title">
+                  Отдам бесплатно
+                </div>
+                <div class="section-header__all">
+                  <span>256</span>
+                  <a href="#">Смотреть все</a>
+                </div>
+                <a href="#" class="section-header__btn">
+                  <span>Вам нужна помощь?</span>
+                  Разместите объявление
+                </a>
+              </div>
+              <div class="section-header__row">
+                <div class="section-header__subtitle">
+                  Подберите самый лучший для вас дом престарелых или разместите свой дом престарелых и пригласите новых
+                  жильцев
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="for-free__slider owl-carousel">
+              <div class="for-free__item main-card">
+                <div class="main-card__img">
+                  <img src="./img/f1.jpg" alt="card__img">
+                </div>
+                <div class="main-card__title">
+                  Отдам костыли
+                </div>
+                <span class="main-card__map">
+                  Краснодар
+                </span>
+                <a href="#" class="main-card__btn like">
+                  Мне нужно
+                </a>
+              </div>
+              <div class="for-free__item main-card">
+                <div class="main-card__img">
+                  <img src="./img/f2.jpg" alt="card__img">
+                </div>
+                <div class="main-card__title">
+                  Отдам инвалидную каляску
+                </div>
+                <span class="main-card__map">
+                  Краснодар
+                </span>
+                <a href="#" class="main-card__btn like">
+                  Мне нужно
+                </a>
+              </div>
+              <div class="for-free__item main-card">
+                <div class="main-card__img">
+                  <img src="./img/f3.jpg" alt="card__img">
+                </div>
+                <div class="main-card__title">
+                  Отдам телевизор Samsung 32” новый
+                </div>
+                <span class="main-card__map">
+                  Ростов-на-Дону
+                </span>
+                <a href="#" class="main-card__btn like">
+                  Мне нужно
+                </a>
+              </div>
+              <div class="for-free__item main-card">
+                <div class="main-card__img">
+                  <img src="./img/f4.jpg" alt="card__img">
+                </div>
+                <div class="main-card__title">
+                  Отдам инвалидную каляску
+                </div>
+                <span class="main-card__map">
+                  Москва
+                </span>
+                <a href="#" class="main-card__btn like">
+                  Мне нужно
+                </a>
+              </div>
+              <div class="for-free__item main-card">
+                <div class="main-card__img">
+                  <img src="./img/f1.jpg" alt="card__img">
+                </div>
+                <div class="main-card__title">
+                  Отдам костыли
+                </div>
+                <span class="main-card__map">
+                  Краснодар
+                </span>
+                <a href="#" class="main-card__btn like">
+                  Мне нужно
+                </a>
+              </div>
+              <div class="for-free__item main-card">
+                <div class="main-card__img">
+                  <img src="./img/f2.jpg" alt="card__img">
+                </div>
+                <div class="main-card__title">
+                  Отдам костыли
+                </div>
+                <span class="main-card__map">
+                  Краснодар
+                </span>
+                <a href="#" class="main-card__btn like">
+                  Мне нужно
+                </a>
+              </div>
+              <div class="for-free__item main-card">
+                <div class="main-card__img">
+                  <img src="./img/f3.jpg" alt="card__img">
+                </div>
+                <div class="main-card__title">
+                  Отдам костыли
+                </div>
+                <span class="main-card__map">
+                  Краснодар
+                </span>
+                <a href="#" class="main-card__btn like">
+                  Мне нужно
+                </a>
+              </div>
+              <div class="for-free__item main-card">
+                <div class="main-card__img">
+                  <img src="./img/f1.jpg" alt="card__img">
+                </div>
+                <div class="main-card__title">
+                  Отдам костыли
+                </div>
+                <span class="main-card__map">
+                  Краснодар
+                </span>
+                <a href="#" class="main-card__btn like">
+                  Мне нужно
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="houses">
+        <div class="container-xl">
+          <div class="row">
+            <div class="col-12">
+              <div class="section-header">
+                <div class="section-header__row">
+                  <div class="section-header__title">
+                    Дома престатерлых
+                  </div>
+                  <div class="section-header__all">
+                    <span>156</span>
+                    <a href="#">Смотреть все</a>
+                  </div>
+                  <a href="#" class="section-header__btn">
+                    <span>Представитель ДП?</span>
+                    Разместите объявление
+                  </a>
+                </div>
+                <div class="section-header__row">
+                  <div class="section-header__subtitle">
+                    Подберите самый лучший для вас дом престарелых или разместите свой дом престарелых и пригласите
+                    новых
+                    жильцев
+                  </div>
+                  <div class="section-header__btns">
+                    <span class="section-header__list">Списком</span>
+                    <span class="section-header__map">На карте</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="houses__slider owl-carousel">
+                <div class="houses__item main-card">
+                  <div class="main-card__img">
+                    <img src="./img/h1.jpg" alt="card__img">
+                    <span class="main-card__rate">4,9</span>
+                  </div>
+                  <div class="main-card__title">
+                    Пансионат “Жизнь”
+                  </div>
+                  <div class="main-card__subtitle">
+                    Комфортный пансионат для пожелых людей со всей страны
+                  </div>
+                  <span class="main-card__map">
+                    Краснодар
+                  </span>
+                  <span class="main-card__type">
+                    Частный
+                  </span>
+                  <a href="#" class="main-card__btn smile">
+                    Стать постояльцем
+                  </a>
+                </div>
+                <div class="houses__item main-card">
+                  <div class="main-card__img">
+                    <img src="./img/h2.jpg" alt="card__img">
+                    <span class="main-card__rate">3,5</span>
+                  </div>
+                  <div class="main-card__title">
+                    ДП “Любовь”
+                  </div>
+                  <div class="main-card__subtitle">
+                    Дом престарелых основан в 1925 г и радует своих постояльцев заботой
+                  </div>
+                  <span class="main-card__map">
+                    Москва
+                  </span>
+                  <span class="main-card__type">
+                    Государственный
+                  </span>
+                  <a href="#" class="main-card__btn smile">
+                    Стать постояльцем
+                  </a>
+                </div>
+                <div class="houses__item main-card">
+                  <div class="main-card__img">
+                    <img src="./img/h3.jpg" alt="card__img">
+                    <span class="main-card__rate">2,9</span>
+                  </div>
+                  <div class="main-card__title">
+                    ДП “Забота”
+                  </div>
+                  <div class="main-card__subtitle">
+                    Мы относимся к соим жителям с
+                    большой заботой и теплом
+                  </div>
+                  <span class="main-card__map">
+                    Ростов-на-Дону
+                  </span>
+                  <span class="main-card__type">
+                    Частный
+                  </span>
+                  <a href="#" class="main-card__btn smile">
+                    Стать постояльцем
+                  </a>
+                </div>
+                <div class="houses__item main-card">
+                  <div class="main-card__img">
+                    <img src="./img/h4.jpg" alt="card__img">
+                    <span class="main-card__rate">4,2</span>
+                  </div>
+                  <div class="main-card__title">
+                    ДП “Любовь”
+                  </div>
+                  <div class="main-card__subtitle">
+                    Мы относимся к соим жителям с
+                    большой заботой и теплом
+                  </div>
+                  <span class="main-card__map">
+                    Москва
+                  </span>
+                  <span class="main-card__type">
+                    Государственный
+                  </span>
+                  <a href="#" class="main-card__btn smile">
+                    Стать постояльцем
+                  </a>
+                </div>
+                <div class="houses__item main-card">
+                  <div class="main-card__img">
+                    <img src="./img/h1.jpg" alt="card__img">
+                  </div>
+                  <div class="main-card__title">
+                    Пансионат “Жизнь”
+                  </div>
+                  <div class="main-card__subtitle">
+                    Комфортный пансионат для пожелых людей со всей страны
+                  </div>
+                  <span class="main-card__map">
+                    Краснодар
+                  </span>
+                  <span class="main-card__type">
+                    Частный
+                  </span>
+                  <a href="#" class="main-card__btn smile">
+                    Стать постояльцем
+                  </a>
+                </div>
+                <div class="houses__item main-card">
+                  <div class="main-card__img">
+                    <img src="./img/h2.jpg" alt="card__img">
+                  </div>
+                  <div class="main-card__title">
+                    ДП “Любовь”
+                  </div>
+                  <div class="main-card__subtitle">
+                    Дом престарелых основан в 1925 г и радует своих постояльцев заботой
+                  </div>
+                  <span class="main-card__map">
+                    Москва
+                  </span>
+                  <span class="main-card__type">
+                    Государственный
+                  </span>
+                  <a href="#" class="main-card__btn smile">
+                    Стать постояльцем
+                  </a>
+                </div>
+                <div class="houses__item main-card">
+                  <div class="main-card__img">
+                    <img src="./img/h3.jpg" alt="card__img">
+                  </div>
+                  <div class="main-card__title">
+                    ДП “Забота”
+                  </div>
+                  <div class="main-card__subtitle">
+                    Мы относимся к соим жителям с
+                    большой заботой и теплом
+                  </div>
+                  <span class="main-card__map">
+                    Ростов-на-Дону
+                  </span>
+                  <span class="main-card__type">
+                    Частный
+                  </span>
+                  <a href="#" class="main-card__btn smile">
+                    Стать постояльцем
+                  </a>
+                </div>
+                <div class="houses__item main-card">
+                  <div class="main-card__img">
+                    <img src="./img/h4.jpg" alt="card__img">
+                  </div>
+                  <div class="main-card__title">
+                    ДП “Любовь”
+                  </div>
+                  <div class="main-card__subtitle">
+                    Мы относимся к соим жителям с
+                    большой заботой и теплом
+                  </div>
+                  <span class="main-card__map">
+                    Москва
+                  </span>
+                  <span class="main-card__type">
+                    Государственный
+                  </span>
+                  <a href="#" class="main-card__btn smile">
+                    Стать постояльцем
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+      </section>
+      <section class="fond container-xl">
+        <div class="row">
+          <div class="col-12">
+            <div class="fond-body">
+              <div class="fond-body__img">
+                <img src="./img/img-fond.png" alt="fond">
+              </div>
+              <div class="fond-body__content">
+                <div class="fond-body__title">
+                  Благотворительный
+                  фонд
+                </div>
+                <div class="fond-body__text">
+                  <p>Обеспечиваем пожилых всем необходимым для жизни и здоровья. Лекарства, ультрафиолетовые лампы и
+                    средства для дезинфекции помещений, бесконтактные градусники, СИЗы (маски, перчатки).
+                    Помогаем организовать профессиональный уход.</p>
+                  <p>
+                    На пожертвования нанимаем дополнительный персонал. Это помощницы, которые уходят на превентивную
+                    изоляцию вместе с подопечными домов-интернатов, – ухаживают, заботятся о здоровье, обеспечивают
+                    психологический комфорт пожилым.
+                  </p>
+                </div>
+                <a href="#" class="fond-body__more">
+                  Подробнее
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="already-help container-xl">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-header">
+              <div class="section-header__row">
+                <div class="section-header__title">
+                  Уже помогли
+                </div>
+                <div class="section-header__all">
+                  <span>1526</span>
+                  <a href="#">Смотреть все</a>
+                </div>
+                <a href="#" class="section-header__btn">
+                  <span>Вам нужна помощь?</span>
+                  Разместите объявление
+                </a>
+              </div>
+              <div class="section-header__row">
+                <div class="section-header__subtitle">
+                  Люди или организиции нуждаются в помощи.
+                  Посмотрите объявления и окажите посильную вам помочь
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="already-help__slider owl-carousel">
+              <div class="already-help__item main-card">
+                <div class="main-card__img">
+                  <img src="./img/h1.jpg" alt="card__img">
+                  <span class="main-card__achiv">Помогли</span>
+                </div>
+                <div class="main-card__title">
+                  Очень нужно 300 кроватей
+                  в дом пристарелых “Жизнь”
+                </div>
+                <span class="main-card__map">
+                  Краснодар
+                </span>
+                <a href="#" class="main-card__btn">
+                  смотреть
+                </a>
+              </div>
+              <div class="already-help__item main-card">
+                <div class="main-card__img">
+                  <img src="./img/h2.jpg" alt="card__img">
+                  <span class="main-card__achiv">Помогли</span>
+                </div>
+                <div class="main-card__title">
+                  Очень нужно 300 кроватей
+                  в дом пристарелых “Жизнь”
+                </div>
+                <span class="main-card__map">
+                  Москва
+                </span>
+                <a href="#" class="main-card__btn">
+                  смотреть
+                </a>
+              </div>
+              <div class="already-help__item main-card">
+                <div class="main-card__img">
+                  <img src="./img/h3.jpg" alt="card__img">
+                  <span class="main-card__achiv">Помогли</span>
+                </div>
+                <div class="main-card__title">
+                  Очень нужно 300 кроватей
+                  в дом пристарелых “Жизнь”
+                </div>
+                <span class="main-card__map">
+                  Ростов-на-Дону
+                </span>
+                <a href="#" class="main-card__btn">
+                  смотреть
+                </a>
+              </div>
+              <div class="already-help__item main-card">
+                <div class="main-card__img">
+                  <img src="./img/h4.jpg" alt="card__img">
+                  <span class="main-card__achiv">Помогли</span>
+                </div>
+                <div class="main-card__title">
+                  Очень нужно 300 кроватей
+                  в дом пристарелых “Жизнь”
+                </div>
+                <span class="main-card__map">
+                  Москва
+                </span>
+                <a href="#" class="main-card__btn">
+                  смотреть
+                </a>
+              </div>
+              <div class="already-help__item main-card">
+                <div class="main-card__img">
+                  <img src="./img/h1.jpg" alt="card__img">
+                  <span class="main-card__achiv">Помогли</span>
+                </div>
+                <div class="main-card__title">
+                  Очень нужно 300 кроватей
+                  в дом пристарелых “Жизнь”
+                </div>
+                <span class="main-card__map">
+                  Краснодар
+                </span>
+                <a href="#" class="main-card__btn">
+                  смотреть
+                </a>
+              </div>
+              <div class="already-help__item main-card">
+                <div class="main-card__img">
+                  <img src="./img/h2.jpg" alt="card__img">
+                  <span class="main-card__achiv">Помогли</span>
+                </div>
+                <div class="main-card__title">
+                  Очень нужно 300 кроватей
+                  в дом пристарелых “Жизнь”
+                </div>
+                <span class="main-card__map">
+                  Москва
+                </span>
+                <a href="#" class="main-card__btn">
+                  смотреть
+                </a>
+              </div>
+              <div class="already-help__item main-card">
+                <div class="main-card__img">
+                  <img src="./img/h3.jpg" alt="card__img">
+                  <span class="main-card__achiv">Помогли</span>
+                </div>
+                <div class="main-card__title">
+                  Очень нужно 300 кроватей
+                  в дом пристарелых “Жизнь”
+                </div>
+                <span class="main-card__map">
+                  Ростов-на-Дону
+                </span>
+                <a href="#" class="main-card__btn">
+                  смотреть
+                </a>
+              </div>
+              <div class="already-help__item main-card">
+                <div class="main-card__img">
+                  <img src="./img/h4.jpg" alt="card__img">
+                  <span class="main-card__achiv">Помогли</span>
+                </div>
+                <div class="main-card__title">
+                  Очень нужно 300 кроватей
+                  в дом пристарелых “Жизнь”
+                </div>
+                <span class="main-card__map">
+                  Москва
+                </span>
+                <a href="#" class="main-card__btn">
+                  смотреть
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="stories container-xl">
+        <div class="row">
+          <div class="col-12">
+            <div class="col-12 stories-inner">
+              <div class="section-header">
+                <div class="section-header__row">
+                  <div class="section-header__title">
+                    Истории
+                  </div>
+                  <div class="section-header__btns-group">
+                    <a href="#" class="section-header__watch-all">Смотреть все</a>
+                    <a href="#" class="section-header__write-new">Написать свою историю</a>
+                  </div>
+                </div>
+                <div class="section-header__row">
+                  <div class="section-header__subtitle">
+                    Люди или организиции нуждаются в помощи.
+                    Посмотрите объявления и окажите посильную вам помочь
+                  </div>
+                </div>
+              </div>
+              <div class="stories-row">
+                <div class="stories-row__item main-card">
+                  <div class="main-card__img">
+                    <img src="./img/i1.jpg" alt="card__img">
+                  </div>
+                  <div class="main-card__title">
+                    Думал такого и не бывает
+                  </div>
+                  <div class="main-card__text">
+                    Я родился в Краснодаре, прожил долгую и интересную жизнь. Но вот недавно
+                    столкнулся с проблемой, которую ...
+                  </div>
+                  <span class="main-card__map">
+                    Краснодар
+                  </span>
+                  <span class="main-card__user">
+                    Иван Иванов
+                  </span>
+                  <a href="#" class="main-card__read">
+                    Читать
+                  </a>
+                </div>
+                <div class="stories-row__item main-card">
+                  <div class="main-card__img">
+                    <img src="./img/i2.jpg" alt="card__img">
+                  </div>
+                  <div class="main-card__title">
+                    Как я вновь поверил в людей
+                    и стал счастливым
+                  </div>
+                  <div class="main-card__text">
+                    Я родился в Краснодаре, прожил долгую и интересную жизнь. Но вот недавно
+                    столкнулся с проблемой, которую ...
+                  </div>
+                  <span class="main-card__map">
+                    Москва
+                  </span>
+                  <span class="main-card__user">
+                    Иван Иванов
+                  </span>
+                  <a href="#" class="main-card__read">
+                    Читать
+                  </a>
+                </div>
+                <div class="stories-row__item main-card">
+                  <div class="main-card__img">
+                    <img src="./img/i3.jpg" alt="card__img">
+                  </div>
+                  <div class="main-card__title">
+                    Моя история любви. Длиною в жизнь
+                  </div>
+                  <div class="main-card__text">
+                    Я родился в Краснодаре, прожил долгую и интересную жизнь. Но вот недавно
+                    столкнулся с проблемой, которую ...
+                  </div>
+                  <span class="main-card__map">
+                    Ростов-на-Дону
+                  </span>
+                  <span class="main-card__user">
+                    Иван Иванов
+                  </span>
+                  <a href="#" class="main-card__read">
+                    Читать
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container-xl">
+        <div class="row">
+          <div class="col-12">
+            <div class="footer-inner">
+              <div class="col-lg-2">
+                <a href="#">
+                  <img src="./img/logo.svg" alt="logo">
+                </a>
+              </div>
+              <div class="col-lg-3 ml-auto">
+                <ul class="footer-menu">
+                  <li class="footer-menu__item"><a href="#" class="footer-menu__link">Нужна помощь</a></li>
+                  <li class="footer-menu__item"><a href="#" class="footer-menu__link">Готов помочь</a></li>
+                  <li class="footer-menu__item"><a href="#" class="footer-menu__link">Уже помогли</a></li>
+                  <li class="footer-menu__item"><a href="#" class="footer-menu__link">Дома престарелых</a></li>
+                  <li class="footer-menu__item"><a href="#" class="footer-menu__link">Истории</a></li>
+                </ul>
+              </div>
+              <div class="col-lg-3">
+                <ul class="footer-menu">
+                  <li class="footer-menu__item"><a href="#" class="footer-menu__link">О нас</a></li>
+                  <li class="footer-menu__item"><a href="#" class="footer-menu__link">Юридическая информация</a></li>
+                  <li class="footer-menu__item"><a href="#" class="footer-menu__link">Контакты</a></li>
+                </ul>
+              </div>
+              <div class="col-lg-3">
+                <div class="footer-contacts">
+                  <a class="footer-contacts__link send-mail" href="#">
+                    <svg class="mail">
+                      <use xlink:href="#mail"></use>
+                    </svg>
+                    Info@perviy-pansion.ru</a>
+                  <a class="footer-contacts__link set-question" href="#"> <svg class="question">
+                      <use xlink:href="#question"></use>
+                    </svg>Задать вопрос</a>
+
+                  <a href="#" class="footer-contacts__btn">Стать волонтером</a>
+                </div>
+              </div>
+              <div class="col-12 footer-copyright">
+                <p>© Первый пансион. Все права защищены</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+  <script src="./js/owl.carousel.min.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>

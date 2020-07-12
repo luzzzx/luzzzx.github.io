@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css" />
+    <title>Pansion</title>
+</head>
+
+<body>
+    <svg style="display: none;">
+        <symbol id="search" viewBox="0 0 16 16">
+            <path
+                d="M15.9023 14.9597L11.2545 10.3118C12.136 9.22342 12.6667 7.8398 12.6667 6.33336C12.6667 2.84116 9.82552 0 6.33333 0C2.84113 0 0 2.84116 0 6.33336C0 9.82555 2.84116 12.6667 6.33336 12.6667C7.8398 12.6667 9.22342 12.136 10.3118 11.2545L14.9597 15.9024C15.0899 16.0325 15.3009 16.0325 15.4311 15.9024L15.9024 15.4311C16.0325 15.3009 16.0325 15.0898 15.9023 14.9597ZM6.33336 11.3334C3.5762 11.3334 1.33335 9.09052 1.33335 6.33336C1.33335 3.5762 3.5762 1.33335 6.33336 1.33335C9.09052 1.33335 11.3334 3.5762 11.3334 6.33336C11.3334 9.09052 9.09052 11.3334 6.33336 11.3334Z"
+                fill="black" />
+        </symbol>
+        <symbol id="question" viewBox="0 0 16 16">
+            <path
+                d="M6 0a6 6 0 100 12A6 6 0 006 0zm1.249 9.299c-.31.122-.555.214-.74.278a1.95 1.95 0 01-.64.096c-.374 0-.665-.091-.872-.274a.883.883 0 01-.31-.694c0-.11.007-.22.022-.335a4.18 4.18 0 01.075-.385l.386-1.366c.034-.13.064-.255.087-.37.024-.118.035-.225.035-.322 0-.174-.036-.296-.108-.365-.073-.068-.21-.102-.413-.102-.1 0-.202.015-.307.046a4.361 4.361 0 00-.269.09l.102-.421c.253-.103.495-.192.726-.265.232-.074.45-.11.656-.11.371 0 .658.09.86.269.2.179.3.412.3.699 0 .06-.006.164-.02.313a2.17 2.17 0 01-.077.412l-.385 1.361a3.85 3.85 0 00-.084.374c-.025.14-.038.246-.038.318 0 .18.04.304.122.37.08.065.22.098.42.098a1.808 1.808 0 00.575-.136l-.103.42zM7.18 3.773a.918.918 0 01-.648.25.927.927 0 01-.65-.25.798.798 0 01-.27-.606c0-.236.09-.439.27-.607a.92.92 0 01.65-.252.91.91 0 01.648.252.804.804 0 01.269.607c0 .238-.09.44-.27.606z"
+                fill="#000" />
+        </symbol>
+        <symbol id="mail" viewBox="0 0 16 16">
+            <path
+                d="M10.606 8.082L16 11.492V4.528l-5.394 3.554zM0 4.528v6.964l5.394-3.41L0 4.528zM15 2.5H1a.988.988 0 00-.97.851L8 8.602l7.97-5.251A.988.988 0 0015 2.5zM9.69 8.686l-1.415.932a.5.5 0 01-.55 0L6.31 8.685.032 12.656A.986.986 0 001 13.5h14a.986.986 0 00.968-.844L9.69 8.686z" />
+            <defs>
+                <clipPath id="clip0">
+                    <path fill="#fff" d="M0 0h16v16H0z" />
+        </symbol>
+        <symbol id="star" viewBox="0 0 14 13">
+            <path
+                d="M7 0L8.5716 4.83688H13.6574L9.5429 7.82624L11.1145 12.6631L7 9.67376L2.8855 12.6631L4.4571 7.82624L0.342604 4.83688H5.4284L7 0Z"
+                fill="#6EE47A" />
+        </symbol>
+        <symbol id="vk" viewBox="0 0 63 63">
+            <path
+                d="M59.7507 28.2174C59.6938 28.0947 59.6408 27.993 59.5915 27.9115C58.776 26.4429 57.2177 24.6402 54.9175 22.503L54.8689 22.4541L54.8446 22.4301L54.82 22.4055H54.7953C53.7514 21.4103 53.0903 20.7411 52.8134 20.3986C52.3069 19.746 52.1934 19.0854 52.4703 18.4161C52.6658 17.9104 53.4006 16.8424 54.6727 15.2108C55.3418 14.3461 55.8717 13.653 56.2631 13.1309C59.0856 9.37846 60.3093 6.98063 59.9339 5.93642L59.7881 5.6924C59.6901 5.5455 59.4373 5.4111 59.0299 5.28854C58.6216 5.16623 58.0997 5.146 57.4633 5.22751L50.4159 5.27619C50.3017 5.23574 50.1387 5.23951 49.9263 5.28854C49.7142 5.33756 49.608 5.36216 49.608 5.36216L49.4854 5.42344L49.388 5.49707C49.3064 5.54575 49.2167 5.63138 49.1187 5.75377C49.0213 5.87574 48.9398 6.01887 48.8746 6.18198C48.1073 8.15597 47.235 9.99129 46.2559 11.6878C45.6523 12.6995 45.0979 13.5762 44.5916 14.3185C44.086 15.0606 43.6618 15.6074 43.3195 15.9578C42.9766 16.3086 42.6672 16.5897 42.3894 16.802C42.1119 17.0144 41.9001 17.1041 41.7535 17.0713C41.6065 17.0385 41.4681 17.0059 41.337 16.9733C41.1088 16.8264 40.9252 16.6266 40.7867 16.3738C40.6477 16.1209 40.5541 15.8027 40.5052 15.4193C40.4565 15.0357 40.4277 14.7057 40.4195 14.4282C40.4118 14.1511 40.4154 13.7592 40.4319 13.2535C40.4489 12.7476 40.4565 12.4052 40.4565 12.2258C40.4565 11.6057 40.4686 10.9328 40.4928 10.2068C40.5175 9.48088 40.5375 8.90568 40.5542 8.48193C40.5708 8.05775 40.5786 7.60897 40.5786 7.13585C40.5786 6.66273 40.5498 6.29169 40.4928 6.02239C40.4366 5.75343 40.3503 5.49235 40.2366 5.23925C40.1221 4.98641 39.9547 4.79082 39.7349 4.65197C39.5147 4.51329 39.241 4.40323 38.9152 4.32147C38.0504 4.12579 36.9493 4.01994 35.6113 4.00348C32.5771 3.97091 30.6274 4.16685 29.7628 4.59103C29.4202 4.77025 29.1102 5.01512 28.833 5.32488C28.5393 5.68392 28.4983 5.87985 28.7103 5.91208C29.6893 6.05873 30.3824 6.40954 30.7903 6.96417L30.9373 7.25807C31.0516 7.47012 31.1658 7.84553 31.28 8.38379C31.3941 8.92205 31.4677 9.51748 31.5001 10.1697C31.5816 11.3608 31.5816 12.3805 31.5001 13.2286C31.4184 14.0772 31.3413 14.7377 31.2677 15.2109C31.1941 15.684 31.084 16.0674 30.9373 16.3609C30.7903 16.6546 30.6925 16.834 30.6435 16.8992C30.5945 16.9643 30.5537 17.0054 30.5213 17.0215C30.3093 17.1027 30.0887 17.1441 29.8605 17.1441C29.6319 17.1441 29.3547 17.0298 29.0285 16.8013C28.7024 16.5728 28.3639 16.2589 28.0131 15.8592C27.6623 15.4593 27.2666 14.9006 26.826 14.1829C26.3857 13.4651 25.9289 12.6168 25.4558 11.638L25.0643 10.9282C24.8196 10.4715 24.4853 9.80658 24.0612 8.93396C23.6367 8.061 23.2616 7.21659 22.9354 6.40088C22.8051 6.0583 22.6092 5.79748 22.3482 5.61801L22.2258 5.54438C22.1443 5.47924 22.0136 5.41007 21.8343 5.33636C21.6548 5.26274 21.4674 5.20994 21.2715 5.17745L14.5664 5.22614C13.8813 5.22614 13.4164 5.38136 13.1716 5.69137L13.0736 5.83802C13.0247 5.91971 13 6.05016 13 6.22972C13 6.4092 13.0489 6.62947 13.1469 6.89029C14.1257 9.19075 15.1902 11.4094 16.3402 13.5465C17.4903 15.6836 18.4897 17.405 19.3378 18.7094C20.186 20.0147 21.0507 21.2466 21.9317 22.4045C22.8127 23.5629 23.3959 24.3052 23.6812 24.6314C23.9669 24.9581 24.1913 25.2024 24.3544 25.3655L24.9663 25.9527C25.3578 26.3443 25.9327 26.8133 26.6914 27.3597C27.4501 27.9064 28.2902 28.4447 29.2119 28.9753C30.1338 29.5051 31.2063 29.9374 32.43 30.2718C33.6535 30.6065 34.8444 30.7408 36.0027 30.676H38.817C39.3877 30.6267 39.8201 30.4472 40.114 30.1375L40.2114 30.0148C40.2769 29.9175 40.3381 29.7662 40.3947 29.5626C40.452 29.3587 40.4804 29.1341 40.4804 28.8897C40.4637 28.1883 40.5171 27.5562 40.6392 26.9935C40.7611 26.4309 40.9001 26.0067 41.0556 25.721C41.211 25.4356 41.3864 25.1947 41.5815 24.9995C41.7771 24.8038 41.9165 24.6853 41.9983 24.6445C42.0795 24.6034 42.1444 24.5756 42.1933 24.5589C42.5849 24.4284 43.0456 24.5547 43.5764 24.9385C44.1066 25.3218 44.604 25.7952 45.0693 26.3578C45.5342 26.9209 46.0929 27.5527 46.7453 28.2541C47.3982 28.9557 47.969 29.4773 48.4582 29.8203L48.9475 30.114C49.2742 30.3099 49.6984 30.4894 50.2205 30.6525C50.7417 30.8155 51.1984 30.8563 51.5905 30.7748L57.8548 30.6771C58.4744 30.6771 58.9565 30.5745 59.2985 30.371C59.6412 30.167 59.8448 29.9424 59.9104 29.698C59.9759 29.4534 59.9794 29.1759 59.9228 28.8656C59.8648 28.5561 59.8076 28.3397 59.7507 28.2174Z"
+                fill="#6EE47A" />
+        </symbol>
+        <symbol id="odnoclass" viewBox="0 0 50 50">
+            <path
+                d="M20.2797 28.8788C17.1013 28.5473 14.2355 27.7645 11.7819 25.8455C11.4774 25.6068 11.1631 25.3766 10.8853 25.11C9.81138 24.0785 9.70317 22.8973 10.553 21.6799C11.2799 20.6382 12.5003 20.3595 13.7687 20.9577C14.0143 21.0736 14.2484 21.2183 14.4725 21.3738C19.0452 24.5157 25.3268 24.6024 29.9167 21.515C30.3714 21.1664 30.8575 20.8821 31.4208 20.737C32.5162 20.4557 33.5378 20.8581 34.1256 21.8165C34.7972 22.911 34.7886 23.9794 33.9612 24.8291C32.6919 26.1319 31.1654 27.0745 29.4692 27.7323C27.8654 28.3541 26.1088 28.6671 24.3701 28.8749C24.6325 29.1605 24.7562 29.3009 24.9202 29.4658C27.281 31.8378 29.6522 34.1999 32.0053 36.5792C32.8069 37.3899 32.9744 38.3951 32.533 39.3381C32.0503 40.3686 30.97 41.0466 29.9107 40.9741C29.2395 40.9277 28.7161 40.5936 28.251 40.1251C26.4695 38.3324 24.6544 36.5727 22.9089 34.7461C22.4009 34.2149 22.1566 34.3154 21.7083 34.7766C19.916 36.6217 18.0945 38.4385 16.2622 40.2449C15.4395 41.0561 14.4605 41.2021 13.5064 40.7388C12.4921 40.2471 11.8467 39.2118 11.8965 38.1714C11.9309 37.4676 12.277 36.93 12.7601 36.4478C15.0964 34.1149 17.4263 31.7759 19.7571 29.4391C19.9113 29.2837 20.0551 29.1188 20.2797 28.8788Z"
+                fill="#6EE47A" />
+            <path
+                d="M22.2155 20.7524C16.5453 20.7331 11.8958 16.0325 11.9289 10.3533C11.9615 4.61135 16.614 -0.0158469 22.3401 4.07912e-05C28.0777 0.0154991 32.683 4.70925 32.6542 10.5108C32.625 16.1785 27.9433 20.7722 22.2155 20.7524ZM27.3687 10.367C27.3589 7.54714 25.1131 5.30225 22.2988 5.29967C19.461 5.29667 17.195 7.58235 17.2169 10.428C17.238 13.2371 19.503 15.4661 22.325 15.4558C25.1385 15.4459 27.3782 13.1864 27.3687 10.367Z"
+                fill="#6EE47A" />
+        </symbol>
+    </svg>
+    <div class="wrapper">
+        <header>
+            <nav class="navbar navbar-expand-xl">
+                <div class="container-xl">
+                    <a class="navbar-brand" href="#">
+                        <img src="./img/logo.png" alt="logo">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse header-navbar" id="navbarNav">
+                        <ul class="navbar-nav header-navbar__top">
+                            <li class="nav-item">
+                                <form action="
+                /">
+                                    <label>
+                                        <a href="#" class="search-btn">
+                                            <svg class="search">
+                                                <use xlink:href="#search"></use>
+                                            </svg>
+                                        </a>
+                                        <input class="header-navbar__search" type="text" placeholder="Я хочу найти ...">
+                                    </label>
+                                </form>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">О нас</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Юридическая информация </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Контакты</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link set-question" href="#"> <svg class="question">
+                                        <use xlink:href="#question"></use>
+                                    </svg>Задать вопрос</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link send-mail" href="#">
+                                    <svg class="mail">
+                                        <use xlink:href="#mail"></use>
+                                    </svg>
+                                    Info@perviy-pansion.ru</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav header-navbar__footer">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Нужна помощь</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Готов помочь</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Уже помогли</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Дома престарелых</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Истории</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link red-btn" href="#">Стать волонтером</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#help">
+                Нужна помощь
+            </button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#volonter">
+                Написать свою
+                историю
+            </button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ready">
+                Разместить
+                дом престарелых
+            </button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#geo">
+                Готов
+                помочь
+            </button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#write">
+                Стать волонтером
+            </button>
+            <!-- Modal -->
+            <div class="modal fade" id="help" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <div class="modal-header__img">
+                                <img src="./img/m1.jpg" alt="modal">
+                            </div>
+                            <h2>Нужна помощь</h2>
+                            <a href="#" class="close-modal">
+                                <img src="./img/close-modal.svg" alt="close">
+                            </a>
+                        </div>
+                        <div class="modal-body">
+                            <form action="/">
+                                <div class="modal-body__inputs">
+                                    <input type="text" placeholder="ФИО">
+                                    <input type="text" placeholder="Телефон">
+                                    <input type="email" placeholder="Email">
+                                    <input type="text" placeholder="Город">
+                                </div>
+                                <input type="text" placeholder="Адрес">
+                                <input type="text" placeholder="Заголовок объявления">
+                                <textarea placeholder="Описание"></textarea>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn modal-file">Прикрепить файл</button>
+                            <button type="button" class="btn modal-submit">Отправить</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="write" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <div class="modal-header__img">
+                                <img src="./img/m5.jpg" alt="modal">
+                            </div>
+                            <h2>Написать свою
+                                историю</h2>
+                            <a href="#" class="close-modal">
+                                <img src="./img/close-modal.svg" alt="close">
+                            </a>
+                        </div>
+                        <div class="modal-body">
+                            <form action="/">
+                                <div class="modal-body__inputs">
+                                    <input type="text" placeholder="ФИО">
+                                    <input type="text" placeholder="Телефон">
+                                    <input type="email" placeholder="Email">
+                                    <input type="text" placeholder="Город">
+                                </div>
+                                <textarea placeholder="Описание"></textarea>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn modal-file">Прикрепить файл</button>
+                            <button type="button" class="btn modal-submit">Отправить</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="geo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <div class="modal-header__img">
+                                <img src="./img/m4.jpg" alt="modal">
+                            </div>
+                            <h2>Разместить
+                                дом престарелых</h2>
+                            <a href="#" class="close-modal">
+                                <img src="./img/close-modal.svg" alt="close">
+                            </a>
+                        </div>
+                        <div class="modal-body">
+                            <form action="/">
+                                <div class="modal-body__inputs">
+                                    <input type="text" placeholder="ФИО">
+                                    <input type="text" placeholder="Телефон">
+                                    <input type="email" placeholder="Email">
+                                    <input type="text" placeholder="Город">
+                                </div>
+                                <input type="text" placeholder="Адрес">
+                                <textarea placeholder="Описание"></textarea>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn modal-file">Прикрепить файл</button>
+                            <button type="button" class="btn modal-submit">Отправить</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="ready" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <div class="modal-header__img">
+                                <img src="./img/m3.jpg" alt="modal">
+                            </div>
+                            <h2>Готов
+                                помочь</h2>
+                            <a href="#" class="close-modal">
+                                <img src="./img/close-modal.svg" alt="close">
+                            </a>
+                        </div>
+                        <div class="modal-body">
+                            <form action="/">
+                                <div class="modal-body__inputs">
+                                    <input type="text" placeholder="ФИО">
+                                    <input type="text" placeholder="Телефон">
+                                    <input type="email" placeholder="Email">
+                                    <input type="text" placeholder="Город">
+                                </div>
+                                <input type="text" placeholder="Заголовок объявления">
+                                <textarea placeholder="Описание"></textarea>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn modal-file">Прикрепить файл</button>
+                            <button type="button" class="btn modal-submit">Отправить</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="volonter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <div class="modal-header__img">
+                                <img src="./img/m2.jpg" alt="modal">
+                            </div>
+                            <h2>Стать волонтером</h2>
+                            <a href="#" class="close-modal">
+                                <img src="./img/close-modal.svg" alt="close">
+                            </a>
+                        </div>
+                        <div class="modal-body">
+                            <form action="/">
+                                <div class="modal-body__inputs">
+                                    <input type="text" placeholder="ФИО">
+                                    <input type="text" placeholder="Телефон">
+                                    <input type="email" placeholder="Email">
+                                    <input type="text" placeholder="Город">
+                                </div>
+                                <textarea placeholder="О себе"></textarea>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn modal-file">Прикрепить файл</button>
+                            <button type="button" class="btn modal-submit">Отправить</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="container-xl">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="footer-inner">
+                            <div class="col-lg-2">
+                                <a href="#">
+                                    <img src="./img/logo.svg" alt="logo">
+                                </a>
+                            </div>
+                            <div class="col-lg-3 ml-auto">
+                                <ul class="footer-menu">
+                                    <li class="footer-menu__item"><a href="#" class="footer-menu__link">Нужна помощь</a>
+                                    </li>
+                                    <li class="footer-menu__item"><a href="#" class="footer-menu__link">Готов помочь</a>
+                                    </li>
+                                    <li class="footer-menu__item"><a href="#" class="footer-menu__link">Уже помогли</a>
+                                    </li>
+                                    <li class="footer-menu__item"><a href="#" class="footer-menu__link">Дома
+                                            престарелых</a></li>
+                                    <li class="footer-menu__item"><a href="#" class="footer-menu__link">Истории</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-3">
+                                <ul class="footer-menu">
+                                    <li class="footer-menu__item"><a href="#" class="footer-menu__link">О нас</a></li>
+                                    <li class="footer-menu__item"><a href="#" class="footer-menu__link">Юридическая
+                                            информация</a></li>
+                                    <li class="footer-menu__item"><a href="#" class="footer-menu__link">Контакты</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="footer-contacts">
+                                    <a class="footer-contacts__link send-mail" href="#">
+                                        <svg class="mail">
+                                            <use xlink:href="#mail"></use>
+                                        </svg>
+                                        Info@perviy-pansion.ru</a>
+                                    <a class="footer-contacts__link set-question" href="#"> <svg class="question">
+                                            <use xlink:href="#question"></use>
+                                        </svg>Задать вопрос</a>
+
+                                    <a href="#" class="footer-contacts__btn">Стать волонтером</a>
+                                </div>
+                            </div>
+                            <div class="col-12 footer-copyright">
+                                <p>© Первый пансион. Все права защищены</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

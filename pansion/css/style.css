@@ -3398,7 +3398,7 @@ footer {
   }
 
   .fond-body__text {
-    height: 52%;
+    height: 63%;
   }
 
   .stories-row {
@@ -3678,6 +3678,11 @@ footer {
 }
 
 @media (max-width: 540px) {
+  .main-card__img {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+
   .cards-container__inner .main-card {
     width: 100%;
   }

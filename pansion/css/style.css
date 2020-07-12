@@ -1914,7 +1914,7 @@ footer {
 }
 
 .cards-row__btns-form .dropdown-menu .custom-radio .custom-control-input:checked ~ .custom-control-label::after {
-  width: 13px;
+  width: 14px;
   height: 13px;
   background: #6EE47A;
   border-radius: 50%;

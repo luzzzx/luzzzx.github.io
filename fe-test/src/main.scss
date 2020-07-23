@@ -1,0 +1,507 @@
+//<ШРИФТЫ>===============================================================================================
+@font-face {
+	font-family: 'ProximaNova bold';
+	src: url('../fonts/ProximaNova-Bold.eot');
+	src: local('ProximaNova bold'), local('ProximaNova bold'),
+		url('../fonts/ProximaNova-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/ProximaNova-Bold.woff') format('woff'),
+		url('../fonts/ProximaNova-Bold.ttf') format('truetype');
+	font-weight: 800;
+}
+@font-face {
+	font-family: 'Proxima Nova Lt';
+	src: url('../fonts/ProximaNova-LightIt.eot');
+	src: local('Proxima Nova Lt'), local('Proxima Nova Lt'),
+		url('../fonts/ProximaNova-LightIt.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/ProximaNova-LightIt.woff') format('woff'),
+		url('../fonts/ProximaNova-LightIt.ttf') format('truetype');
+	font-weight: normal;
+}
+@font-face {
+	font-family: 'Tahoma';
+	src: local('Tahoma'), local('PTahoma'),
+		url('../fonts/Tahoma.ttf') format('truetype');
+	font-weight: normal;
+}
+@font-face {
+	font-family: 'ProximaNova';
+	src: url('../fonts/ProximaNova-Regular.eot');
+	src: local('ProximaNova'), local('ProximaNova'),
+		url('../fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/ProximaNova-Regular.woff') format('woff'),
+		url('../fonts/ProximaNova-Regular.ttf') format('truetype');
+	font-weight: normal;
+}
+@font-face {
+	font-family: 'Helvetica Neue';
+	src: url('../fonts/HelveticaNeueCyr-Medium.eot');
+	src: local('Helvetica Neue'), local('Helvetica Neue'),
+		url('../fonts/HelveticaNeueCyr-Medium.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/HelveticaNeueCyr-Medium.woff') format('woff'),
+		url('../fonts/HelveticaNeueCyr-Medium.ttf') format('truetype');
+	font-weight: normal;
+}
+@font-face {
+	font-family: 'Helvetica Neue Bold';
+	src: url('../fonts/HelveticaNeueCyr-Bold.eot');
+	src: local('Helvetica Neue Bold'), local('Helvetica Neue Bold'),
+		url('../fonts/HelveticaNeueCyr-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/HelveticaNeueCyr-Bold.woff') format('woff'),
+		url('../fonts/HelveticaNeueCyr-Bold.ttf') format('truetype');
+	font-weight: normal;
+}
+//<Подключаем шрифты>=======================================================================================
+//</Подключаем шрифты>=======================================================================================
+//<Иконочные шрифты>==========================================================================================
+//</Иконочные шрифты>==========================================================================================
+//<Шрифт по умолчанию>==========================================================================================
+$fontfamily: "ProximaNova";
+//</Шрифт по умолчанию>==========================================================================================
+//</ШРИФТЫ>=======================================================================================================
+//<ПЕРЕМЕННЫЕ>===========================================================================================================
+$minwidth: 320px;
+// $mw: 1170;
+// $md1: $mw+12;
+// $md2: 991.98;
+// $md3: 767.98;
+// $md4: 479.98;
+//</ПЕРЕМЕННЫЕ>===========================================================================================================
+//<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+@import "null.scss";
+body {
+    color: #000;
+    font-size: 14px;
+    background-color: #fafafa;
+    &.lock {
+        overflow: hidden;
+    }
+}
+
+//</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+//<ОБОЛОЧКА>===========================================================================================================
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+//</ОБОЛОЧКА>===========================================================================================================
+//<ОСНОВНАЯ СЕТКА>===========================================================================================================
+.container {
+    max-width: 965px;
+    margin: 0 auto;
+    padding: 0 15px;
+    width: 100%;
+}
+
+header{
+    position: relative;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+    background: rgba(255, 255, 255, .6);
+}
+main{
+    position: relative;
+    margin-bottom: 75px;
+}
+.decor-top{
+    position: absolute;
+    z-index: -1;
+    top: -20px;
+    left: -260px;
+}
+.header-inner{
+    display: flex;
+    align-items: center;
+    @media (max-width:681px) {
+        flex-direction: column;
+    }
+}
+
+.monoblank-project {
+    padding: 44px 0 34px 0;
+    margin: 0 auto;
+		&__top {
+            display: flex;
+            align-items: center;
+            margin-bottom: 19px;
+            @media (max-width:681px) {
+                flex-direction: column;
+            }
+            h2{ 
+                margin-right: 20px;
+                color: #262626;
+                font-family: "Myriad Pro";
+                font-size: 35px;
+                font-weight: 400;
+            }
+
+		}
+
+		&__mid {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            @media (max-width:681px) {
+                flex-direction: column;
+            }
+            div{
+                margin-right: 30px;
+                color: #3d4044;
+                font-family: "ProximaNova";
+                font-size: 17px;
+                font-weight: 400;
+                line-height: 24px;
+                span{
+                    margin-right: 5px;
+                    font-family: "ProximaNova bold";
+                    font-weight: 800;
+                }
+            }
+		}
+
+		&__bottom {
+            display: flex;
+            align-items: center;
+            color: #262626;
+            font-family: 'Tahoma';
+            font-size: 17px;
+            font-weight: 400;
+            line-height: 17px;
+            @media (max-width:681px) {
+                flex-direction: column;
+            }
+            span{
+                margin-right: 14px;
+                @media (max-width:681px) {
+                    font-size: 0;
+                }
+            }
+            input{
+                max-width: 143px;
+                box-shadow: inset 0 1px 1px rgba(1, 1, 1, 0.15);
+                border: 1px solid #cccccc;
+                background-color: #ffffff;
+                border-radius: 3px;
+                padding: 10px;
+                position: relative;
+                margin-right: -5px;
+                position: relative;
+                z-index: 1;
+
+            }
+		}
+}
+.top-btn {
+    display: inline-flex;
+    color: #4090db;
+    font-family: "Helvetica Neue";
+    font-size: 15px;
+    font-weight: 400;
+    border: 1px solid #4090db;
+    padding: 9px 11px;
+    white-space: nowrap;
+    border-radius: 3px;
+    transition: ease-in .5s;
+    &:hover{
+        background: #4090db;
+        color: #ffffff;
+    }
+}
+.input-date {
+    display: flex;
+    margin-right: 31px;
+    @media (max-width:681px) {
+        margin-bottom: 20px;
+     }
+    a{  
+        position: relative;
+        z-index: 2;
+        padding: 0 5px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #cccccc;
+        background-color: #ebebeb;
+    }
+
+}
+
+.calendar {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+
+.btn-group {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0 27px 0;
+    a{
+        margin-right: 22px;
+        &.active{
+            svg{
+                fill:#3b8ede;
+            }
+        }
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+}
+
+.list-group{
+    &.active{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .list-item{
+            position: relative;
+            flex-direction: column;
+            height: 292px;
+            width: calc((100% - 60px) / 3);
+            justify-content: space-between;
+            padding: 10px;
+            margin-bottom: 30px;
+            @media (max-width:991px) {
+                width: calc((100% - 60px) / 2);
+            }
+            @media (max-width:681px) {
+                width: 100%;
+            }
+            &__img {
+                display: none;
+            }
+            &__imgGrid {
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+                width: 100%;
+                height: 100%;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            &__day {
+                flex: 0 0 38%;
+                width: 38%;
+                position: relative;
+                z-index: 2;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                bottom: -67px;
+                div{
+                    color: #ffffff;
+                }
+                h3{
+                    color: #ffffff;
+                    margin-right: auto;
+                }
+                i .heart{
+                    color: #ffffff;
+                }
+                i .comment{
+                    color: #ffffff;
+                }
+            }
+    
+            &__date {
+                flex: 0 0 22%;
+                width: 22%;
+                position: relative;
+                z-index: 2;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                div{
+                    color: #ffffff;
+                }
+                h3{
+                    color: #ffffff;
+                    margin-right: auto;
+                }
+                i .heart{
+                    color: #ffffff;
+                }
+                i .comment{
+                    color: #ffffff;
+                }
+            }
+    
+            &__upload {
+                flex: 0 0 17%;
+                width: 17%;
+                position: relative;
+                z-index: 2;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+                justify-content: center;
+                h3{
+                    margin-right: 5px;
+                }
+                h3,p{
+                    color: #ffffff;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}
+.list-item {
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    @media (max-width:681px) {
+        flex-wrap: wrap;
+    }
+    i{
+        display: inline-flex;
+        align-self: center;
+        .heart , .comment{
+            width: 17px;
+            height: 17px;
+            margin-right: 5px;
+        }
+    }
+    h3{
+        color: #262626;
+        font-family: "ProximaNova";
+        font-size: 17px;
+        font-weight: 600;
+        line-height: 24px;
+    }   
+        &__imgGrid{
+            display: none;
+        }
+		&__img {
+            flex: 0 0 95px;
+            width: 95px;
+            margin-right: 24px;
+            img{
+                width: 100%;
+            }
+            @media (max-width:681px) {
+                flex: 0 0 100%;
+                width: 100%;
+                div{
+                    margin-right: 0;
+
+                    }
+            }
+		}
+
+		&__day {
+            flex: 0 0 38%;
+            width: 38%;
+            @media (max-width:681px) {
+                flex: 0 0 33%;
+            }
+            @media (max-width:481px) {
+                flex: 0 0 100%;
+            }
+            div{
+                margin-right: 22px;
+                display: inline-flex;
+                align-items: center;
+                color: #262626;
+                font-family: "ProximaNova";
+                font-size: 17px;
+                font-weight: 700;
+                line-height: 24px;
+            }
+		}
+
+		&__date {
+            flex: 0 0 22%;
+            width: 22%;
+            @media (max-width:681px) {
+                flex: 0 0 33%;
+            }
+            @media (max-width:481px) {
+                flex: 0 0 100%;
+            }
+            div{
+                margin-right: 22px;
+                display: inline-flex;
+                align-items: center;
+                color: #262626;
+                font-family: "ProximaNova";
+                font-size: 17px;
+                font-weight: 700;
+                line-height: 24px;
+            }
+		}
+
+		&__upload {
+            flex: 0 0 17%;
+            width: 17%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            @media (max-width:681px) {
+                flex: 0 0 33%;
+            }
+            @media (max-width:481px) {
+                flex: 0 0 100%;
+                align-items: flex-start;
+            }
+            p{
+                color: #151515;
+                font-family: "Helvetica Neue";
+                font-size: 17px;
+                font-weight: 700;
+                line-height: 24px;
+            }
+		}
+}
+.load-more{
+    text-align: center;
+}
+.btn-more{
+    color: #000000;
+    font-family: "ProximaNova";
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+    white-space: nowrap;
+    border: 1px solid #000000;
+    background-color: #fafafa;
+    padding: 10px 29px;
+    display: inline-block;
+    border-radius: 27px;
+    transition: ease-in .5s;
+    &:hover{
+        background: #000000;
+        color: #ffffff;
+    }
+}
+
+.decor-footer{
+    bottom: 10%;
+    right: -10%;
+    position: absolute;
+    z-index: -1;
+    @media (max-width:681px) {
+        bottom: -5%;
+    }
+}
+
+.list-icon,.grid-icon{
+    width: 37px;
+    height: 37px;
+    fill: #cccccc;
+}
+.list-icon.active{
+    fill: #3b8ede !important;
+}
+.grid-icon{
+    padding: 7px;
+}
+//</ОСНОВНАЯ СЕТКА>===========================================================================================================

@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet" href="./src/main.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <svg display="none">
+        <symbol id="comment" viewBox="0 0 17 17">
+            <g clip-path="url(#clip0)">
+                <path
+                    d="M1.69988 -9.15527e-05L15.2999 -9.15527e-05C16.2349 -9.15527e-05 16.9999 0.764908 16.9999 1.69991V16.9999L13.5999 13.5999H1.69988C0.764879 13.5999 -0.00012093 12.8349 -0.00012093 11.8999V1.69991C-0.00012093 0.764908 0.764879 -9.15527e-05 1.69988 -9.15527e-05Z"
+                    fill="currentColor" />
+            </g>
+            <defs>
+                <clipPath id="clip0">
+                    <rect width="17" height="17" fill="white" transform="matrix(-1 0 0 1 16.9999 -9.15527e-05)" />
+                </clipPath>
+        </symbol>
+        <symbol id="heart" viewBox="0 0 17 17">
+            <path
+                d="M12.4844 0.996094C11.5619 0.996094 10.7161 1.28841 9.97067 1.86495C9.25597 2.41769 8.78013 3.12169 8.5 3.63362C8.21987 3.12166 7.74403 2.41769 7.02933 1.86495C6.28386 1.28841 5.43811 0.996094 4.51562 0.996094C1.94132 0.996094 0 3.10174 0 5.89402C0 8.91066 2.42194 10.9746 6.08842 14.0991C6.71105 14.6297 7.41678 15.2312 8.1503 15.8726C8.24699 15.9573 8.37117 16.0039 8.5 16.0039C8.62883 16.0039 8.75301 15.9573 8.8497 15.8727C9.58329 15.2311 10.289 14.6297 10.912 14.0988C14.5781 10.9746 17 8.91066 17 5.89402C17 3.10174 15.0587 0.996094 12.4844 0.996094Z"
+                fill="currentColor" />
+        </symbol>
+        <symbol id="grid-icon" viewBox="0 0 20 20">
+            <rect id="Rectangle-2" x="0" y="0" width="4" height="4"></rect>
+            <rect id="Rectangle-2-Copy-3" x="0" y="8" width="4" height="4"></rect>
+            <rect id="Rectangle-2-Copy-6" x="0" y="16" width="4" height="4"></rect>
+            <rect id="Rectangle-2-Copy" x="8" y="0" width="4" height="4"></rect>
+            <rect id="Rectangle-2-Copy-4" x="8" y="8" width="4" height="4"></rect>
+            <rect id="Rectangle-2-Copy-7" x="8" y="16" width="4" height="4"></rect>
+            <rect id="Rectangle-2-Copy-2" x="16" y="0" width="4" height="4"></rect>
+            <rect id="Rectangle-2-Copy-5" x="16" y="8" width="4" height="4"></rect>
+            <rect id="Rectangle-2-Copy-8" x="16" y="16" width="4" height="4"></rect>
+        </symbol>
+        <symbol id="list-icon" viewBox="0 0 20 20">
+            <path d="M1 4h2v2H1V4zm4 0h14v2H5V4zM1 9h2v2H1V9zm4 0h14v2H5V9zm-4 5h2v2H1v-2zm4 0h14v2H5v-2z" />
+        </symbol>
+
+    </svg>
+    <div class="wrapper">
+        <header>
+            <div class="decor-top">
+                <img src="./img/decor.svg" alt="decor">
+            </div>
+            <div class="container header-inner">
+                <div class="logo">
+                    <img src="./img/Logo.png" alt="logo">
+                </div>
+                <div class="monoblank-project">
+                    <div class="monoblank-project__top">
+                        <h2>monblanproject</h2>
+                        <a href="#" class="top-btn">Start on 17-02-2016</a>
+                    </div>
+                    <div class="monoblank-project__mid">
+                        <div><span>870</span>posts</div>
+                        <div><span>11,787</span>followers</div>
+                        <div><span>112</span>following</div>
+                    </div>
+                    <div class="monoblank-project__bottom">
+                        <span>Date</span>
+                        <div class="input-date">
+                            <input type="text" name="date" placeholder="from" />
+                            <a href="#" id="closeFrom" class="close"><img src="./img/close.png" alt="close"></a>
+                            <a href="#" id="calendarFrom" class="calendar"><img src="./img/date.png" alt="date"></a>
+                        </div>
+                        <div class="input-date">
+                            <input type="text" name="dateSecond" />
+                            <a href="#" id="closeSecond" class="close"><img src="./img/close.png" alt="close"></a>
+                            <a href="#" id="calendarFromSecond" class="calendar"><img src="./img/date.png"
+                                    alt="date"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <div class="btn-group">
+                    <a class="grid" href="#">
+                        <i>
+                            <svg class="grid-icon">
+                                <use xlink:href="#grid-icon"></use>
+                            </svg>
+                        </i>
+                    </a>
+                    <a class="list active" href="#">
+                        <i>
+                            <svg class="list-icon">
+                                <use xlink:href="#list-icon"></use>
+                            </svg>
+                        </i>
+                    </a>
+                </div>
+                <div class="row list-group">
+                    <div class="list-item">
+                        <div class="list-item__img">
+                            <img src="./img/01.jpg" alt="01">
+                        </div>
+                        <div class="list-item__imgGrid">
+                            <img src="./img/1.jpg" alt="01">
+                        </div>
+                        <div class="list-item__day">
+                            <h3>Today</h3>
+                            <div class="like">
+                                <i>
+                                    <svg class="heart">
+                                        <use xlink:href="#heart"></use>
+                                    </svg>
+                                </i>
+                                128</div>
+                            <div class="coment">
+                                <i>
+                                    <svg class="comment">
+                                        <use xlink:href="#comment"></use>
+                                    </svg>
+                                </i>
+                                31</div>
+                        </div>
+                        <div class="list-item__date">
+                            <h3>9-08-2016</h3>
+                            <div class="like">
+                                <i>
+                                    <svg class="heart">
+                                        <use xlink:href="#heart"></use>
+                                    </svg>
+                                </i>
+                                67</div>
+                            <div class="coment">
+                                <i>
+                                    <svg class="comment">
+                                        <use xlink:href="#comment"></use>
+                                    </svg>
+                                </i>
+                                22</div>
+                        </div>
+                        <div class="list-item__upload">
+                            <h3>Image upload</h3>
+                            <p>11-04-2016</p>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <div class="list-item__img">
+                            <img src="./img/02.jpg" alt="01">
+                        </div>
+                        <div class="list-item__imgGrid">
+                            <img src="./img/2.jpg" alt="01">
+                        </div>
+                        <div class="list-item__day">
+                            <h3>Today</h3>
+                            <div class="like">
+                                <i>
+                                    <svg class="heart">
+                                        <use xlink:href="#heart"></use>
+                                    </svg>
+                                </i>
+                                128</div>
+                            <div class="coment">
+                                <i>
+                                    <svg class="comment">
+                                        <use xlink:href="#comment"></use>
+                                    </svg>
+                                </i>
+                                31</div>
+                        </div>
+                        <div class="list-item__date">
+                            <h3>9-08-2016</h3>
+                            <div class="like">
+                                <i>
+                                    <svg class="heart">
+                                        <use xlink:href="#heart"></use>
+                                    </svg>
+                                </i>
+                                67</div>
+                            <div class="coment">
+                                <i>
+                                    <svg class="comment">
+                                        <use xlink:href="#comment"></use>
+                                    </svg>
+                                </i>
+                                22</div>
+                        </div>
+                        <div class="list-item__upload">
+                            <h3>Image upload</h3>
+                            <p>11-04-2016</p>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <div class="list-item__img">
+                            <img src="./img/03.jpg" alt="01">
+                        </div>
+                        <div class="list-item__imgGrid">
+                            <img src="./img/3.jpg" alt="01">
+                        </div>
+                        <div class="list-item__day">
+                            <h3>Today</h3>
+                            <div class="like">
+                                <i>
+                                    <svg class="heart">
+                                        <use xlink:href="#heart"></use>
+                                    </svg>
+                                </i>
+                                128</div>
+                            <div class="coment">
+                                <i>
+                                    <svg class="comment">
+                                        <use xlink:href="#comment"></use>
+                                    </svg>
+                                </i>
+                                31</div>
+                        </div>
+                        <div class="list-item__date">
+                            <h3>9-08-2016</h3>
+                            <div class="like">
+                                <i>
+                                    <svg class="heart">
+                                        <use xlink:href="#heart"></use>
+                                    </svg>
+                                </i>
+                                67</div>
+                            <div class="coment">
+                                <i>
+                                    <svg class="comment">
+                                        <use xlink:href="#comment"></use>
+                                    </svg>
+                                </i>
+                                22</div>
+                        </div>
+                        <div class="list-item__upload">
+                            <h3>Image upload</h3>
+                            <p>11-04-2016</p>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <div class="list-item__img">
+                            <img src="./img/04.jpg" alt="01">
+                        </div>
+                        <div class="list-item__imgGrid">
+                            <img src="./img/4.jpg" alt="01">
+                        </div>
+                        <div class="list-item__day">
+                            <h3>Today</h3>
+                            <div class="like">
+                                <i>
+                                    <svg class="heart">
+                                        <use xlink:href="#heart"></use>
+                                    </svg>
+                                </i>
+                                128</div>
+                            <div class="coment">
+                                <i>
+                                    <svg class="comment">
+                                        <use xlink:href="#comment"></use>
+                                    </svg>
+                                </i>
+                                31</div>
+                        </div>
+                        <div class="list-item__date">
+                            <h3>9-08-2016</h3>
+                            <div class="like">
+                                <i>
+                                    <svg class="heart">
+                                        <use xlink:href="#heart"></use>
+                                    </svg>
+                                </i>
+                                67</div>
+                            <div class="coment">
+                                <i>
+                                    <svg class="comment">
+                                        <use xlink:href="#comment"></use>
+                                    </svg>
+                                </i>
+                                22</div>
+                        </div>
+                        <div class="list-item__upload">
+                            <h3>Image upload</h3>
+                            <p>11-04-2016</p>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <div class="list-item__img">
+                            <img src="./img/05.jpg" alt="01">
+                        </div>
+                        <div class="list-item__imgGrid">
+                            <img src="./img/5.jpg" alt="01">
+                        </div>
+                        <div class="list-item__day">
+                            <h3>Today</h3>
+                            <div class="like">
+                                <i>
+                                    <svg class="heart">
+                                        <use xlink:href="#heart"></use>
+                                    </svg>
+                                </i>
+                                128</div>
+                            <div class="coment">
+                                <i>
+                                    <svg class="comment">
+                                        <use xlink:href="#comment"></use>
+                                    </svg>
+                                </i>
+                                31</div>
+                        </div>
+                        <div class="list-item__date">
+                            <h3>9-08-2016</h3>
+                            <div class="like">
+                                <i>
+                                    <svg class="heart">
+                                        <use xlink:href="#heart"></use>
+                                    </svg>
+                                </i>
+                                67</div>
+                            <div class="coment">
+                                <i>
+                                    <svg class="comment">
+                                        <use xlink:href="#comment"></use>
+                                    </svg>
+                                </i>
+                                22</div>
+                        </div>
+                        <div class="list-item__upload">
+                            <h3>Image upload</h3>
+                            <p>11-04-2016</p>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <div class="list-item__img">
+                            <img src="./img/06.jpg" alt="01">
+                        </div>
+                        <div class="list-item__imgGrid">
+                            <img src="./img/9.jpg" alt="01">
+                        </div>
+                        <div class="list-item__day">
+                            <h3>Today</h3>
+                            <div class="like">
+                                <i>
+                                    <svg class="heart">
+                                        <use xlink:href="#heart"></use>
+                                    </svg>
+                                </i>
+                                128</div>
+                            <div class="coment">
+                                <i>
+                                    <svg class="comment">
+                                        <use xlink:href="#comment"></use>
+                                    </svg>
+                                </i>
+                                31</div>
+                        </div>
+                        <div class="list-item__date">
+                            <h3>9-08-2016</h3>
+                            <div class="like">
+                                <i>
+                                    <svg class="heart">
+                                        <use xlink:href="#heart"></use>
+                                    </svg>
+                                </i>
+                                67</div>
+                            <div class="coment">
+                                <i>
+                                    <svg class="comment">
+                                        <use xlink:href="#comment"></use>
+                                    </svg>
+                                </i>
+                                22</div>
+                        </div>
+                        <div class="list-item__upload">
+                            <h3>Image upload</h3>
+                            <p>11-04-2016</p>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <div class="list-item__img">
+                            <img src="./img/07.jpg" alt="01">
+                        </div>
+                        <div class="list-item__imgGrid">
+                            <img src="./img/7.jpg" alt="01">
+                        </div>
+                        <div class="list-item__day">
+                            <h3>Today</h3>
+                            <div class="like">
+                                <i>
+                                    <svg class="heart">
+                                        <use xlink:href="#heart"></use>
+                                    </svg>
+                                </i>
+                                128</div>
+                            <div class="coment">
+                                <i>
+                                    <svg class="comment">
+                                        <use xlink:href="#comment"></use>
+                                    </svg>
+                                </i>
+                                31</div>
+                        </div>
+                        <div class="list-item__date">
+                            <h3>9-08-2016</h3>
+                            <div class="like">
+                                <i>
+                                    <svg class="heart">
+                                        <use xlink:href="#heart"></use>
+                                    </svg>
+                                </i>
+                                67</div>
+                            <div class="coment">
+                                <i>
+                                    <svg class="comment">
+                                        <use xlink:href="#comment"></use>
+                                    </svg>
+                                </i>
+                                22</div>
+                        </div>
+                        <div class="list-item__upload">
+                            <h3>Image upload</h3>
+                            <p>11-04-2016</p>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <div class="list-item__img">
+                            <img src="./img/08.jpg" alt="01">
+                        </div>
+                        <div class="list-item__imgGrid">
+                            <img src="./img/8.jpg" alt="01">
+                        </div>
+                        <div class="list-item__day">
+                            <h3>Today</h3>
+                            <div class="like">
+                                <i>
+                                    <svg class="heart">
+                                        <use xlink:href="#heart"></use>
+                                    </svg>
+                                </i>
+                                128</div>
+                            <div class="coment">
+                                <i>
+                                    <svg class="comment">
+                                        <use xlink:href="#comment"></use>
+                                    </svg>
+                                </i>
+                                31</div>
+                        </div>
+                        <div class="list-item__date">
+                            <h3>9-08-2016</h3>
+                            <div class="like">
+                                <i>
+                                    <svg class="heart">
+                                        <use xlink:href="#heart"></use>
+                                    </svg>
+                                </i>
+                                67</div>
+                            <div class="coment">
+                                <i>
+                                    <svg class="comment">
+                                        <use xlink:href="#comment"></use>
+                                    </svg>
+                                </i>
+                                22</div>
+                        </div>
+                        <div class="list-item__upload">
+                            <h3>Image upload</h3>
+                            <p>11-04-2016</p>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <div class="list-item__img">
+                            <img src="./img/09.jpg" alt="01">
+                        </div>
+                        <div class="list-item__imgGrid">
+                            <img src="./img/9.jpg" alt="01">
+                        </div>
+                        <div class="list-item__day">
+                            <h3>Today</h3>
+                            <div class="like">
+                                <i>
+                                    <svg class="heart">
+                                        <use xlink:href="#heart"></use>
+                                    </svg>
+                                </i>
+                                128</div>
+                            <div class="coment">
+                                <i>
+                                    <svg class="comment">
+                                        <use xlink:href="#comment"></use>
+                                    </svg>
+                                </i>
+                                31</div>
+                        </div>
+                        <div class="list-item__date">
+                            <h3>9-08-2016</h3>
+                            <div class="like">
+                                <i>
+                                    <svg class="heart">
+                                        <use xlink:href="#heart"></use>
+                                    </svg>
+                                </i>
+                                67</div>
+                            <div class="coment">
+                                <i>
+                                    <svg class="comment">
+                                        <use xlink:href="#comment"></use>
+                                    </svg>
+                                </i>
+                                22</div>
+                        </div>
+                        <div class="list-item__upload">
+                            <h3>Image upload</h3>
+                            <p>11-04-2016</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="load-more">
+                    <a href="#" class="btn-more">
+                        LOAD MORE
+                    </a>
+                </div>
+                <div class="decor-footer">
+                    <img src="./img/decor2.svg" alt="decor-footer">
+                </div>
+            </div>
+        </main>
+        <footer></footer>
+    </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

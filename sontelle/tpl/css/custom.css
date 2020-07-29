@@ -256,6 +256,7 @@
   }
   .product-accordion .card-header {
     background: #E5007C;
+    border-radius: 3px;
   }
   .product-accordion .card-header button {
     color: #fff;
@@ -279,6 +280,9 @@
   }
   .product-accordion .card-header button[aria-expanded="true"]::after {
     opacity: 0;
+  }
+  .product-accordion .card-header button:focus {
+    outline: none;
   }
   .product-accordion .card-body {
     margin-bottom: 20px;

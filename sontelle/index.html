@@ -1,0 +1,1991 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Sontelle</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<!--
+	<link rel="shortcut icon" href="img/icons/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="img/icons/favicon.png" type="image/png">
+	<link rel="shortcut icon" href="img/icons/favicon.gif" type="image/gif">
+	-->
+	<meta name="viewport" content="initial-scale=1" />
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="tpl/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="tpl/slick/slick.css">
+	<link rel="stylesheet" href="tpl/jquery-ui/jquery-ui.min.css">
+	<link rel="stylesheet" href="tpl/mCustomScrollbar/mCustomScrollbar.css">
+	<link rel="stylesheet" href="tpl/css/screen.css" media="screen">
+	<link rel="stylesheet" href="tpl/css/styles.css" media="screen">
+	<link rel="stylesheet" href="tpl/css/custom.css" media="screen">
+	<link
+		href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&display=swap&subset=cyrillic,cyrillic-ext,latin-ext"
+		rel="stylesheet">
+</head>
+
+<body>
+	<!-- BEGIN out -->
+	<div class="out">
+		<!-- BEGIN topline -->
+		<div class="topline">
+			<div class="container">
+				<a href="#" class="mobmenu-toggle"><span></span></a>
+				<div class="topline-cities">
+					<div class="city"><a href="#" data-toggle="modal" data-target=".modal-cities">Москва</a></div>
+					<div class="shops"><a href="#" data-toggle="modal" data-target=".modal-map">25 магазинов</a></div>
+				</div>
+				<div class="topline-menu">
+					<ul>
+						<li><a href="text-demo.html">Наша история</a></li>
+						<li class="sleep"><a href="text.html">Наука сна</a></li>
+						<li><a href="text-demo.html">Работа у нас</a></li>
+						<li><a href="text-demo.html">Оплата заказа</a></li>
+						<li><a href="text-demo.html">Статус заказа</a></li>
+						<li><a href="text-demo.html">Партнерам</a></li>
+						<li><a href="text-demo.html">Контакты</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- END topline -->
+
+		<!-- BEGIN header -->
+		<div class="header">
+			<div class="container">
+				<div class="header-logo">
+					<a href="index.html">
+						<img src="tpl/img/logo.svg" alt="">
+					</a>
+				</div>
+				<div class="header-search">
+					<form name="" id="" action="">
+						<button type="submit" class="button"></button>
+						<input type="text" name="s" class="text" placeholder="Поиск по сайту">
+					</form>
+				</div>
+				<div class="header-callback">
+					<a href="#" data-toggle="modal" data-target=".modal-callback"><i></i>Позвоните мне</a>
+				</div>
+				<div class="header-phones">
+					<ul>
+						<li><a href="tel:+8 (800) 555-11-04">+8 (800) 555-11-04</a></li>
+					</ul>
+				</div>
+				<div class="header-controls">
+					<ul>
+						<!--
+							Если пользователь залогинился, то к классу user добавить класс active
+							<li><a href="#" class="user active"></a></li>
+							Если в фаворитах есть товар, то к классу favorites добавить класс active
+							<li><a href="#" class="favorites"></a></li>
+							Корзина без товара
+							<li><a href="#" class="cart"></a></li>
+							Корзина с товаром
+							<li><a href="#" class="cart active"><span>22</span></a></li>
+						-->
+						<!--
+						<li><a href="#" class="user"></a></li>
+						-->
+						<li><a href="fav.html" class="favorites"></a></li>
+						<li><a href="list.html" class="list"></a></li>
+						<li class="dropdown">
+							<a href="#" class="cart active dropdown-toggle" data-toggle="dropdown"><span>2</span></a>
+							<div class="dropdown-menu">
+								<div class="cart-items">
+									<div class="item">
+										<div class="item-image">
+											<a href="product.html"><img src="tpl/img/products/product-1.png" alt=""></a>
+											<button class="delete"></button>
+										</div>
+										<div class="item-info">
+											<a href="product.html" class="name">Прямой диван Lenagold</a>
+											<p class="size">Размер 150х200 см</p>
+											<div class="price">
+												<span class="price-current">102 300</span><span class="price-old">120
+													300</span>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="item-image">
+											<a href="product.html"><img src="tpl/img/products/product-2.png" alt=""></a>
+											<button class="delete"></button>
+										</div>
+										<div class="item-info">
+											<a href="product.html" class="name">Прямой диван Жардин 3 </a>
+											<p class="size">Размер 190х220 см</p>
+											<div class="price">
+												<span class="price-current">132 000</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="cart-footer">
+									<div class="total">
+										Итого: <span class="total-price">232 300</span>
+									</div>
+									<div class="actions">
+										<a href="cart.html" class="btn btn-default">Оформить заказ</a>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- END header -->
+
+		<!-- BEGIN navigation -->
+		<div class="navigation">
+			<div class="container">
+				<ul>
+					<li class="dropdown dropdown-nav">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Матрасы</a>
+						<div class="dropdown-menu">
+							<div class="container">
+								<div class="sections">
+									<div class="section section-main">
+										<div class="section-heading">
+											Матрасы
+										</div>
+										<div class="section-body">
+											<div class="image">
+												<img src="tpl/img/nav/nav-1.png" alt="">
+											</div>
+										</div>
+										<div class="section-footer">
+											<a href="catalog.html" class="discount">Акции категории</a>
+										</div>
+									</div>
+									<div class="section type">
+										<div class="section-heading">
+											По типу
+										</div>
+										<div class="section-body">
+											<div class="list">
+												<ul>
+													<li><a href="catalog.html">Матрасы</a></li>
+													<li><a href="catalog.html">Наматрасники</a></li>
+													<li><a href="catalog.html">Подушки</a></li>
+													<li><a href="catalog.html">Одеяла</a></li>
+													<li><a href="catalog.html">Кровати</a></li>
+													<li><a href="catalog.html">Мебель для спальни</a></li>
+													<li><a href="catalog.html">Текстиль для дома</a></li>
+													<li><a href="catalog.html">Аксессуары для дома</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="section size">
+										<div class="section-heading">
+											По размеру
+										</div>
+										<div class="section-body">
+											<div class="list">
+												<ul>
+													<li><a href="catalog.html">70 х 140</a></li>
+													<li><a href="catalog.html">90 х 180</a></li>
+													<li><a href="catalog.html">90 х 200</a></li>
+													<li><a href="catalog.html">120 х 200</a></li>
+													<li><a href="catalog.html">140 х 190</a></li>
+													<li><a href="catalog.html">140 х 200</a></li>
+													<li><a href="catalog.html">160 х 200</a></li>
+													<li><a href="catalog.html">180 х 200</a></li>
+													<li><a href="catalog.html">180 х 220</a></li>
+													<li><a href="catalog.html">200 х 200</a></li>
+													<li><a href="catalog.html">200 х 220</a></li>
+												</ul>
+											</div>
+										</div>
+										<div class="section-footer">
+											<a href="#" class="link" data-toggle="modal" data-target=".modal-size">Нужен
+												другой размер?</a>
+										</div>
+									</div>
+									<div class="section symptoms">
+										<div class="section-heading">
+											По симптомам
+										</div>
+										<div class="section-body">
+											<div class="list">
+												<ul>
+													<li><a href="catalog.html">для беременных</a></li>
+													<li><a href="catalog.html">для сна на спине</a></li>
+													<li><a href="catalog.html">для сна на животе</a></li>
+													<li><a href="catalog.html">для сна на боку</a></li>
+													<li><a href="catalog.html">при болях в шее</a></li>
+													<li><a href="catalog.html">при болях в пояснице</a></li>
+													<li><a href="catalog.html">при отеках нижних конечностей</a></li>
+													<li><a href="catalog.html">при отеках верхних конечностей</a></li>
+													<li><a href="catalog.html">при аллергии</a></li>
+													<li><a href="catalog.html">универсальные</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li><a href="catalog.html">Кровати</a></li>
+					<li><a href="catalog.html">Подушки и одеяла</a></li>
+					<li><a href="catalog.html">Мебель для спальни</a></li>
+					<li><a href="catalog.html">Текстиль для дома</a></li>
+					<li class="dropdown dropdown-nav">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Для детей</a>
+						<div class="dropdown-menu">
+							<div class="container">
+								<div class="sections">
+									<div class="section section-main">
+										<div class="section-heading">
+											Для детей
+										</div>
+										<div class="section-body">
+											<div class="image">
+												<img src="tpl/img/nav/nav-1.png" alt="">
+											</div>
+										</div>
+										<div class="section-footer">
+											<a href="catalog.html" class="discount">Акции категории</a>
+										</div>
+									</div>
+									<div class="section type">
+										<div class="section-heading">
+											Разделы категории
+										</div>
+										<div class="section-body">
+											<div class="list">
+												<ul>
+													<li><a href="text-demo.html">Сонтельф</a></li>
+													<li><a href="catalog.html">Матрасы</a></li>
+													<li><a href="catalog.html">Наматрасники</a></li>
+													<li><a href="catalog.html">Кровати</a></li>
+													<li><a href="catalog.html">Подушки и одеяла</a></li>
+													<li><a href="catalog.html">Постельное белье</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="discount"><a href="catalog.html">Акции</a></li>
+					<!--
+					<li class="loyalty"><a href="text-demo.html">Программа лояльности</a></li>
+					-->
+				</ul>
+			</div>
+		</div>
+		<!-- END navigation -->
+
+		<!-- BEGIN banners -->
+		<div class="banners">
+			<div class="banners-carousel">
+				<div class="banner"><a href="product.html"><img src="tpl/img/banners/banner-1.jpg"></a></div>
+				<div class="banner"><a href="product.html"><img src="tpl/img/banners/banner-2.jpg"></a></div>
+				<div class="banner"><a href="product.html"><img src="tpl/img/banners/banner-3.jpg"></a></div>
+				<div class="banner"><a href="product.html"><img src="tpl/img/banners/banner-1.jpg"></a></div>
+				<div class="banner"><a href="product.html"><img src="tpl/img/banners/banner-2.jpg"></a></div>
+				<div class="banner"><a href="product.html"><img src="tpl/img/banners/banner-3.jpg"></a></div>
+			</div>
+		</div>
+		<!-- END banners -->
+		<!-- фильтр на глафной -->
+		<div class="page catalog">
+			<div class="main-filter filter-toggle"><a href="#"><span>Фильтр</span></a></div>
+			<div class="container">
+				<div class="row">
+					<div class="main-filter__content col-sm-12 col-md-3">
+						<div class="filter">
+							<div class="filter-content">
+								<a href="#" class="close">Назад к каталогу</a>
+								<div class="filter-section">
+									<div class="categories">
+										<div class="categories-heading">
+											Категории
+										</div>
+										<div class="categories-list">
+											<ul>
+												<li><a href="catalog.html">Матрасы</a></li>
+												<li><a href="catalog.html">Наматрасники</a></li>
+												<li><a href="catalog.html">Подушки</a></li>
+												<li><a href="catalog.html">Одеяла</a></li>
+												<li><a href="catalog.html">Кровати</a></li>
+												<li><a href="catalog.html">Мебель для спальни</a></li>
+												<li><a href="catalog.html">Текстиль для дома</a></li>
+												<li><a href="catalog.html">Аксессуары для дома</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="filter-section">
+									<div class="heading">
+										Цена, <i class="rub"></i>
+									</div>
+									<div class="uislider uislider-price">
+										<div id="price" class="uislider-container"></div>
+										<div class="uislider-values">
+											<div class="row">
+												<div class="col-xs-6">
+													<input id="price-min" type="text" name="price-min"
+														class="sliderValue numeric min" value="0">
+												</div>
+												<div class="col-xs-6">
+													<input id="price-max" type="text" name="price-max"
+														class="sliderValue numeric max" value="100">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="filter-section">
+									<div class="heading">
+										Длина, см
+									</div>
+									<div class="uislider uislider-length">
+										<div id="length" class="uislider-container"></div>
+										<div class="uislider-values">
+											<div class="row">
+												<div class="col-xs-6">
+													<input id="length-min" type="text" name="length-min"
+														class="sliderValue numeric min" value="0">
+												</div>
+												<div class="col-xs-6">
+													<input id="length-max" type="text" name="length-max"
+														class="sliderValue numeric max" value="100">
+												</div>
+											</div>
+										</div>
+									</div>
+									<br>
+									<br>
+									<div class="heading">
+										Ширина, см
+									</div>
+									<div class="uislider uislider-width">
+										<div id="width" class="uislider-container"></div>
+										<div class="uislider-values">
+											<div class="row">
+												<div class="col-xs-6">
+													<input id="width-min" type="text" name="width-min"
+														class="sliderValue numeric min" value="0">
+												</div>
+												<div class="col-xs-6">
+													<input id="width-max" type="text" name="width-max"
+														class="sliderValue numeric max" value="100">
+												</div>
+											</div>
+										</div>
+									</div>
+									<br>
+									<br>
+									<div class="heading">
+										Высота, см
+									</div>
+									<div class="uislider uislider-height">
+										<div id="height" class="uislider-container"></div>
+										<div class="uislider-values">
+											<div class="row">
+												<div class="col-xs-6">
+													<input id="height-min" type="text" name="height-min"
+														class="sliderValue numeric min" value="0">
+												</div>
+												<div class="col-xs-6">
+													<input id="height-max" type="text" name="height-max"
+														class="sliderValue numeric max" value="100">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="links">
+										<a href="#" data-toggle="modal" data-target=".modal-size">Нужен другой
+											размер?</a>
+									</div>
+								</div>
+								<!--
+												<div class="filter-section has-list">
+													<div class="heading">
+														Размер, см
+													</div>
+													<div class="list">
+														<ul>
+															<li><input type="checkbox" id="size-1"><label for="size-1">70 х 140</label></li>
+															<li><input type="checkbox" id="size-2"><label for="size-2">90 х 180</label></li>
+															<li><input type="checkbox" id="size-3"><label for="size-3">90 х 200</label></li>
+															<li><input type="checkbox" id="size-4"><label for="size-4">120 х 200</label></li>
+															<li><input type="checkbox" id="size-5"><label for="size-5">140 х 190</label></li>
+															<li><input type="checkbox" id="size-6"><label for="size-6">140 х 200</label></li>
+															<li><input type="checkbox" id="size-7"><label for="size-7">140 х 200</label></li>
+															<li><input type="checkbox" id="size-8"><label for="size-8">140 х 200</label></li>
+															<li><input type="checkbox" id="size-9"><label for="size-9">140 х 200</label></li>
+														</ul>
+														<div class="all">
+															<a href="#"><span>Показать все</span></a>
+														</div>
+														<div class="links">
+															<a href="#" data-toggle="modal" data-target=".modal-size">Нужен другой размер?</a>
+														</div>
+													</div>								
+												</div>
+												-->
+
+								<!-- Если в секции бедут список опций с классом list, то добавляем класс has-list -->
+								<div class="filter-section has-list">
+									<div class="heading">
+										Жесткость
+									</div>
+									<div class="list">
+										<ul>
+											<!-- id и for для одного элемента должны совпадать, а их название/нумерация может быть произвольной, но уникальной на странице  -->
+											<li><input type="checkbox" id="stiffness-1"><label
+													for="stiffness-1">1/4</label></li>
+											<li><input type="checkbox" id="stiffness-2"><label
+													for="stiffness-2">2/4</label></li>
+											<li><input type="checkbox" id="stiffness-3"><label
+													for="stiffness-3">3/4</label></li>
+											<li><input type="checkbox" id="stiffness-4"><label
+													for="stiffness-4">4/4</label></li>
+										</ul>
+									</div>
+								</div>
+								<div class="filter-section">
+									<div class="heading">
+										Вес на спальное место, кг
+									</div>
+									<div class="uislider">
+										<div id="weight" class="uislider-container"></div>
+										<div class="uislider-values">
+											<div class="row">
+												<div class="col-xs-6">
+													<input type="text" name="weight-min" class="sliderValue numeric min"
+														data-index="0" value="50">
+												</div>
+												<div class="col-xs-6">
+													<input type="text" name="weight-max" class="sliderValue numeric max"
+														data-index="1" value="500">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="filter-section has-list">
+									<div class="heading">
+										Тип матраса
+									</div>
+									<div class="list">
+										<ul>
+											<li><input type="checkbox" id="type-1"><label for="type-1">с
+													пружинами</label></li>
+											<li><input type="checkbox" id="type-2"><label
+													for="type-2">беспружинный</label></li>
+										</ul>
+									</div>
+								</div>
+								<div class="filter-section has-list">
+									<div class="heading">
+										Кол-во пружин на 1 м2
+									</div>
+									<div class="list">
+										<ul>
+											<li><input type="checkbox" id="springs-1"><label for="springs-1">144</label>
+											</li>
+											<li><input type="checkbox" id="springs-2"><label for="springs-2">256</label>
+											</li>
+											<li><input type="checkbox" id="springs-3"><label
+													for="springs-3">1000</label></li>
+										</ul>
+									</div>
+								</div>
+								<div class="filter-section has-list">
+									<div class="heading">
+										Наполнитель
+									</div>
+									<div class="list">
+										<ul>
+											<li><input type="checkbox" id="filler-1"><label
+													for="filler-1">Мемори</label></li>
+											<li><input type="checkbox" id="filler-2"><label for="filler-2">Мемори
+													массаж</label></li>
+											<li><input type="checkbox" id="filler-3"><label for="filler-3">Shape
+													Foam</label></li>
+											<li><input type="checkbox" id="filler-4"><label for="filler-4">Wave
+													Foam</label></li>
+											<li><input type="checkbox" id="filler-5"><label for="filler-5">Relax
+													Foam</label></li>
+											<li><input type="checkbox" id="filler-6"><label for="filler-6">Кокос</label>
+											</li>
+											<li><input type="checkbox" id="filler-7"><label for="filler-7">Relax
+													Foam и Кокос</label></li>
+											<li><input type="checkbox" id="filler-8"><label for="filler-8">Wave
+													Foam и Кокос</label></li>
+											<li><input type="checkbox" id="filler-9"><label for="filler-9">Shape
+													Foam и Кокос</label></li>
+										</ul>
+
+										<!-- Если больше 6 элементов в списке, то нужно добавить блок all-->
+										<div class="all">
+											<a href="#"><span>Показать все</span></a>
+										</div>
+									</div>
+								</div>
+								<div class="filter-section has-list">
+									<div class="heading">
+										Форма
+									</div>
+									<div class="list">
+										<ul>
+											<li><input type="checkbox" id="shape-1"><label for="shape-1">Круг</label>
+											</li>
+											<li><input type="checkbox" id="shape-2"><label for="shape-2">Квадрат</label>
+											</li>
+											<li><input type="checkbox" id="shape-3"><label for="shape-3">Овал</label>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="filter-section has-list">
+									<div class="heading">
+										Возраст
+									</div>
+									<div class="list">
+										<ul>
+											<li><input type="checkbox" id="age-1"><label for="age-1">Взрослый</label>
+											</li>
+											<li><input type="checkbox" id="age-2"><label for="age-2">Детский</label>
+											</li>
+											<li><input type="checkbox" id="age-3"><label for="age-3">для пожилых
+													людей</label></li>
+											<li><input type="checkbox" id="age-4"><label
+													for="age-4">Универсальный</label></li>
+										</ul>
+									</div>
+								</div>
+								<div class="filter-section has-list">
+									<div class="heading">
+										Предпочтения
+									</div>
+									<div class="list">
+										<ul>
+											<li><input type="checkbox" id="prefer-1"><label for="prefer-1">для
+													пары</label></li>
+											<li><input type="checkbox" id="prefer-2"><label for="prefer-2">для
+													одного</label></li>
+											<li><input type="checkbox" id="prefer-3"><label
+													for="prefer-3">универсальный</label></li>
+										</ul>
+									</div>
+								</div>
+
+								<div class="filter-section has-list">
+									<div class="heading">
+										Съемный чехол
+									</div>
+									<div class="list">
+										<ul>
+											<li><input type="checkbox" id="case-1"><label for="case-1">Да</label></li>
+											<li><input type="checkbox" id="case-2"><label for="case-2">Нет</label></li>
+											<li><input type="checkbox" id="case-3"><label
+													for="case-3">универсальный</label></li>
+										</ul>
+									</div>
+								</div>
+								<div class="filter-section colors has-list">
+									<div class="heading">
+										Цвет
+									</div>
+									<div class="list">
+										<ul>
+											<li>
+												<span class="code" style="background: #fff;"></span>
+												<input type="checkbox" id="color-1">
+												<label for="color-1">Белый</label>
+											</li>
+											<li>
+												<span class="code" style="background: #f5eabc;"></span>
+												<input type="checkbox" id="color-2">
+												<label for="color-2">Бежевый</label>
+											</li>
+											<li>
+												<span class="code" style="background: #cd853f;"></span>
+												<input type="checkbox" id="color-3">
+												<label for="color-3">Коричневый</label>
+											</li>
+											<li>
+												<span class="code" style="background: #4a90e2;"></span>
+												<input type="checkbox" id="color-4">
+												<label for="color-4">Синий</label>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<!-- подвал кнопка -->
+								<div class="filter-section__bottom">
+									<div class="filter-section__bottom-wrap">
+										<button type="button" class="trash-button"></button>
+										<button type="button" class="filter-button">
+											Найдено
+											моделей:<span>2816</span>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- фильтр на глафной -->
+		<!-- Плитка для мобильной версии сайта -->
+		<ul class="nav nav-tabs mob-menu" id="tabs">
+			<li><a href="catalog.html">
+					<img src="./tpl/img/icons/matras.svg" alt="matras"> Матрасы</a></li>
+			<li><a href="catalog.html"><img src="./tpl/img/icons/hit.svg" alt="matras">Хиты
+					продаж</a></li>
+			<li><a href="catalog.html"><img src="./tpl/img/icons/spaln.svg" alt="matras">Мебель для спальни</a>
+			</li>
+			<li><a href="catalog.html"><img src="./tpl/img/icons/beds.svg" alt="matras">Кровати</a></li>
+			<li><a href="catalog.html">
+					<img src="./tpl/img/icons/divan.svg" alt="matras">
+					Диваны</a></li>
+			<li><a href="catalog.html">
+					<img src="./tpl/img/icons/pillow.svg" alt="matras">
+					Подушки</a></li>
+			<li><a href="catalog.html">
+					<img src="./tpl/img/icons/forkids.svg" alt="matras">
+					Для детей</a></li>
+			<li><a href="catalog.html">
+					<img src="./tpl/img/icons/textile.svg" alt="matras">
+					Текстиль для дома</a></li>
+			<li class="discount"><a href="catalog.html">
+					<img src="./tpl/img/icons/akcii.svg" alt="matras">
+					Акции</a></li>
+		</ul>
+		<!-- Плитка для мобильной версии сайта -->
+		<!-- BEGIN products -->
+		<div class="products">
+			<div class="container">
+				<ul class="nav nav-tabs" id="tabs">
+					<li class="active"><a href="#tabs1-1" data-toggle="tab" class="tab">Хиты продаж</a></li>
+					<li><a href="#tabs1-2" data-toggle="tab" class="tab">Матрасы</a></li>
+					<li><a href="#tabs1-3" data-toggle="tab" class="tab">Кровати</a></li>
+					<li><a href="#tabs1-4" data-toggle="tab" class="tab">Диваны</a></li>
+					<li><a href="#tabs1-5" data-toggle="tab" class="tab">Подушки</a></li>
+				</ul>
+				<div class="tab-content">
+					<div class="tab-pane fade in active" id="tabs1-1">
+						<!-- Если нужно, чтобы превью товаров в моб версии сворачивались в слайдеры, то к классу products-list добавляется mobcarousel. Если класса mobcarousel не будет, то превью товаров будут отображатся плитками по 4-3-2-1 штук в ряд в заивисмости от разрешения экрана -->
+						<div class="products-list mobcarousel">
+							<div class="product mobslide">
+								<div class="wrapper">
+									<!-- Независимо от наличия меток labels в товаре добавляй блок с классом product-header (нужен будет для выравниявания высот) -->
+									<div class="product-header">
+										<div class="labels">
+											<ul>
+												<li class="popular">хит</li>
+												<li class="novelty">новинка</li>
+											</ul>
+										</div>
+									</div>
+									<div class="product-body">
+										<div class="image"><a href="product.html"><img
+													src="tpl/img/products/product-1.png" alt=""></a></div>
+										<div class="type"><a href="catalog.html">Прямой диван</a></div>
+										<div class="name"><a href="product.html">Бали М 2449а</a></div>
+									</div>
+									<div class="product-footer">
+										<div class="price">
+											<span class="price-old">120 300</span><br><span class="price-current">102
+												300</span>
+										</div>
+										<div class="cart"><a href="#"></a></div>
+									</div>
+								</div>
+							</div>
+							<div class="product mobslide">
+								<div class="wrapper">
+									<div class="product-header">
+										<div class="labels">
+											<ul>
+												<li class="popular">хит</li>
+												<li class="novelty">новинка</li>
+											</ul>
+										</div>
+									</div>
+									<div class="product-body">
+										<div class="image"><a href="product.html"><img
+													src="tpl/img/products/product-2.png" alt=""></a></div>
+										<div class="type"><a href="catalog.html">Прямой диван</a></div>
+										<div class="name"><a href="product.html">Бали М 2449а</a></div>
+									</div>
+									<div class="product-footer">
+										<div class="price">
+											<span class="price-old">120 300</span><br><span class="price-current">102
+												300</span>
+										</div>
+										<div class="cart"><a href="#"></a></div>
+									</div>
+								</div>
+							</div>
+							<div class="product mobslide">
+								<div class="wrapper">
+									<div class="product-header">
+										<div class="labels">
+											<ul>
+												<li class="popular">хит</li>
+											</ul>
+										</div>
+									</div>
+									<div class="product-body">
+										<div class="image"><a href="product.html"><img
+													src="tpl/img/products/product-3.png" alt=""></a></div>
+										<div class="type"><a href="catalog.html">Прямой диван</a></div>
+										<div class="name"><a href="product.html">Бали М 2449а</a></div>
+									</div>
+									<div class="product-footer">
+										<div class="price">
+											<span class="price-current">102 300</span>
+										</div>
+										<div class="cart"><a href="#"></a></div>
+									</div>
+								</div>
+							</div>
+							<div class="product mobslide">
+								<div class="wrapper">
+									<div class="product-header">
+										<div class="labels">
+											<ul>
+												<li class="popular">хит</li>
+												<li class="novelty">новинка</li>
+											</ul>
+										</div>
+									</div>
+									<div class="product-body">
+										<div class="image"><a href="product.html"><img
+													src="tpl/img/products/product-4.png" alt=""></a></div>
+										<div class="type"><a href="catalog.html">Прямой диван</a></div>
+										<div class="name"><a href="product.html">Бали М 2449а</a></div>
+									</div>
+									<div class="product-footer">
+										<div class="price">
+											<span class="price-old">120 300</span><br><span class="price-current">102
+												300</span>
+										</div>
+										<div class="cart"><a href="#"></a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="tabs1-2">
+						<div class="products-list mobcarousel">
+							<div class="product mobslide">
+								<div class="wrapper">
+									<div class="product-header">
+										<div class="labels">
+											<ul>
+												<li class="popular">хит</li>
+												<li class="novelty">новинка</li>
+											</ul>
+										</div>
+									</div>
+									<div class="product-body">
+										<div class="image"><a href="product.html"><img
+													src="tpl/img/products/product-1.png" alt=""></a></div>
+										<div class="type"><a href="catalog.html">Матрас</a></div>
+										<div class="name"><a href="product.html">Бали М 2449а</a></div>
+									</div>
+									<div class="product-footer">
+										<div class="price">
+											<span class="price-old">120 300</span><br><span class="price-current">102
+												300</span>
+										</div>
+										<div class="cart"><a href="#"></a></div>
+									</div>
+								</div>
+							</div>
+							<div class="product mobslide">
+								<div class="wrapper">
+									<div class="product-header">
+										<div class="labels">
+											<ul>
+												<li class="novelty">новинка</li>
+											</ul>
+										</div>
+									</div>
+									<div class="product-body">
+										<div class="image"><a href="product.html"><img
+													src="tpl/img/products/product-2.png" alt=""></a></div>
+										<div class="type"><a href="catalog.html">Матрас</a></div>
+										<div class="name"><a href="product.html">Бали М 2449а</a></div>
+									</div>
+									<div class="product-footer">
+										<div class="price">
+											<span class="price-old">120 300</span><br><span class="price-current">102
+												300</span>
+										</div>
+										<div class="cart"><a href="#"></a></div>
+									</div>
+								</div>
+							</div>
+							<div class="product mobslide">
+								<div class="wrapper">
+									<div class="product-header">
+									</div>
+									<div class="product-body">
+										<div class="image"><a href="product.html"><img
+													src="tpl/img/products/product-3.png" alt=""></a></div>
+										<div class="type"><a href="catalog.html">Матрас</a></div>
+										<div class="name"><a href="product.html">Бали М 2449а</a></div>
+									</div>
+									<div class="product-footer">
+										<div class="price">
+											<span class="price-current">102 300</span>
+										</div>
+										<div class="cart"><a href="#"></a></div>
+									</div>
+								</div>
+							</div>
+							<div class="product mobslide">
+								<div class="wrapper">
+									<div class="product-header">
+										<div class="labels">
+											<ul>
+												<li class="novelty">новинка</li>
+											</ul>
+										</div>
+									</div>
+									<div class="product-body">
+										<div class="image"><a href="product.html"><img
+													src="tpl/img/products/product-4.png" alt=""></a></div>
+										<div class="type"><a href="catalog.html">Матрас</a></div>
+										<div class="name"><a href="product.html">Бали М 2449а</a></div>
+									</div>
+									<div class="product-footer">
+										<div class="price">
+											<span class="price-current">102 300</span>
+										</div>
+										<div class="cart"><a href="#"></a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="tabs1-3">
+						<div class="products-list mobcarousel">
+							<div class="product mobslide">
+								<div class="wrapper">
+									<div class="product-header">
+										<div class="labels">
+											<ul>
+												<li class="novelty">новинка</li>
+											</ul>
+										</div>
+									</div>
+									<div class="product-body">
+										<div class="image"><a href="product.html"><img
+													src="tpl/img/products/product-1.png" alt=""></a></div>
+										<div class="type"><a href="catalog.html">Кровать</a></div>
+										<div class="name"><a href="product.html">Бали М 2449а</a></div>
+									</div>
+									<div class="product-footer">
+										<div class="price">
+											<span class="price-old">120 300</span><br><span class="price-current">102
+												300</span>
+										</div>
+										<div class="cart"><a href="#"></a></div>
+									</div>
+								</div>
+							</div>
+							<div class="product mobslide">
+								<div class="wrapper">
+									<div class="product-header">
+										<div class="labels">
+											<ul>
+												<li class="novelty">новинка</li>
+											</ul>
+										</div>
+									</div>
+									<div class="product-body">
+										<div class="image"><a href="product.html"><img
+													src="tpl/img/products/product-2.png" alt=""></a></div>
+										<div class="type"><a href="catalog.html">Кровать</a></div>
+										<div class="name"><a href="product.html">Бали М 2449а</a></div>
+									</div>
+									<div class="product-footer">
+										<div class="price">
+											<span class="price-current">102 300</span>
+										</div>
+										<div class="cart"><a href="#"></a></div>
+									</div>
+								</div>
+							</div>
+							<div class="product mobslide">
+								<div class="wrapper">
+									<div class="product-header">
+									</div>
+									<div class="product-body">
+										<div class="image"><a href="product.html"><img
+													src="tpl/img/products/product-3.png" alt=""></a></div>
+										<div class="type"><a href="catalog.html">Кровать</a></div>
+										<div class="name"><a href="product.html">Бали М 2449а</a></div>
+									</div>
+									<div class="product-footer">
+										<div class="price">
+											<span class="price-current">102 300</span>
+										</div>
+										<div class="cart"><a href="#"></a></div>
+									</div>
+								</div>
+							</div>
+							<div class="product mobslide">
+								<div class="wrapper">
+									<div class="product-header">
+										<div class="labels">
+											<ul>
+												<li class="novelty">новинка</li>
+											</ul>
+										</div>
+									</div>
+									<div class="product-body">
+										<div class="image"><a href="product.html"><img
+													src="tpl/img/products/product-4.png" alt=""></a></div>
+										<div class="type"><a href="catalog.html">Кровать</a></div>
+										<div class="name"><a href="product.html">Бали М 2449а</a></div>
+									</div>
+									<div class="product-footer">
+										<div class="price">
+											<span class="price-current">102 300</span>
+										</div>
+										<div class="cart"><a href="#"></a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="tabs1-4">
+						<div class="products-list mobcarousel">
+							<div class="product mobslide">
+								<div class="wrapper">
+									<div class="product-header">
+										<div class="labels">
+											<ul>
+												<li class="popular">хит</li>
+												<li class="novelty">новинка</li>
+											</ul>
+										</div>
+									</div>
+									<div class="product-body">
+										<div class="image"><a href="product.html"><img
+													src="tpl/img/products/product-1.png" alt=""></a></div>
+										<div class="type"><a href="catalog.html">Прямой диван</a></div>
+										<div class="name"><a href="product.html">Бали М 2449а</a></div>
+									</div>
+									<div class="product-footer">
+										<div class="price">
+											<span class="price-current">102 300</span>
+										</div>
+										<div class="cart"><a href="#"></a></div>
+									</div>
+								</div>
+							</div>
+							<div class="product mobslide">
+								<div class="wrapper">
+									<div class="product-header">
+										<div class="labels">
+											<ul>
+												<li class="popular">хит</li>
+												<li class="novelty">новинка</li>
+											</ul>
+										</div>
+									</div>
+									<div class="product-body">
+										<div class="image"><a href="product.html"><img
+													src="tpl/img/products/product-2.png" alt=""></a></div>
+										<div class="type"><a href="catalog.html">Прямой диван</a></div>
+										<div class="name"><a href="product.html">Бали М 2449а</a></div>
+									</div>
+									<div class="product-footer">
+										<div class="price">
+											<span class="price-old">120 300</span><br><span class="price-current">102
+												300</span>
+										</div>
+										<div class="cart"><a href="#"></a></div>
+									</div>
+								</div>
+							</div>
+							<div class="product mobslide">
+								<div class="wrapper">
+									<div class="product-header">
+									</div>
+									<div class="product-body">
+										<div class="image"><a href="product.html"><img
+													src="tpl/img/products/product-3.png" alt=""></a></div>
+										<div class="type"><a href="catalog.html">Прямой диван</a></div>
+										<div class="name"><a href="product.html">Бали М 2449а</a></div>
+									</div>
+									<div class="product-footer">
+										<div class="price">
+											<span class="price-current">102 300</span>
+										</div>
+										<div class="cart"><a href="#"></a></div>
+									</div>
+								</div>
+							</div>
+							<div class="product mobslide">
+								<div class="wrapper">
+									<div class="product-header">
+										<div class="labels">
+											<ul>
+												<li class="novelty">новинка</li>
+											</ul>
+										</div>
+									</div>
+									<div class="product-body">
+										<div class="image"><a href="product.html"><img
+													src="tpl/img/products/product-4.png" alt=""></a></div>
+										<div class="type"><a href="catalog.html">Прямой диван</a></div>
+										<div class="name"><a href="product.html">Бали М 2449а</a></div>
+									</div>
+									<div class="product-footer">
+										<div class="price">
+											<span class="price-old">120 300</span><br><span class="price-current">102
+												300</span>
+										</div>
+										<div class="cart"><a href="#"></a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="tabs1-5">
+						<div class="products-list mobcarousel">
+							<div class="product mobslide">
+								<div class="wrapper">
+									<div class="product-header">
+										<div class="labels">
+											<ul>
+												<li class="popular">хит</li>
+												<li class="novelty">новинка</li>
+											</ul>
+										</div>
+									</div>
+									<div class="product-body">
+										<div class="image"><a href="product.html"><img
+													src="tpl/img/products/product-1.png" alt=""></a></div>
+										<div class="type"><a href="catalog.html">Подушка</a></div>
+										<div class="name"><a href="product.html">Бали М 2449а</a></div>
+									</div>
+									<div class="product-footer">
+										<div class="price">
+											<span class="price-current">102 300</span>
+										</div>
+										<div class="cart"><a href="#"></a></div>
+									</div>
+								</div>
+							</div>
+							<div class="product mobslide">
+								<div class="wrapper">
+									<div class="product-header">
+										<div class="labels">
+											<ul>
+												<li class="popular">хит</li>
+												<li class="novelty">новинка</li>
+											</ul>
+										</div>
+									</div>
+									<div class="product-body">
+										<div class="image"><a href="product.html"><img
+													src="tpl/img/products/product-2.png" alt=""></a></div>
+										<div class="type"><a href="catalog.html">Подушка</a></div>
+										<div class="name"><a href="product.html">Бали М 2449а</a></div>
+									</div>
+									<div class="product-footer">
+										<div class="price">
+											<span class="price-current">102 300</span>
+										</div>
+										<div class="cart"><a href="#"></a></div>
+									</div>
+								</div>
+							</div>
+							<div class="product mobslide">
+								<div class="wrapper">
+									<div class="product-header">
+									</div>
+									<div class="product-body">
+										<div class="image"><a href="product.html"><img
+													src="tpl/img/products/product-3.png" alt=""></a></div>
+										<div class="type"><a href="catalog.html">Подушка</a></div>
+										<div class="name"><a href="product.html">Бали М 2449а</a></div>
+									</div>
+									<div class="product-footer">
+										<div class="price">
+											<span class="price-current">102 300</span>
+										</div>
+										<div class="cart"><a href="#"></a></div>
+									</div>
+								</div>
+							</div>
+							<div class="product mobslide">
+								<div class="wrapper">
+									<div class="product-header">
+										<div class="labels">
+											<ul>
+												<li class="novelty">новинка</li>
+											</ul>
+										</div>
+									</div>
+									<div class="product-body">
+										<div class="image"><a href="product.html"><img
+													src="tpl/img/products/product-4.png" alt=""></a></div>
+										<div class="type"><a href="catalog.html">Подушка</a></div>
+										<div class="name"><a href="product.html">Бали М 2449а</a></div>
+									</div>
+									<div class="product-footer">
+										<div class="price">
+											<span class="price-old">120 300</span><br><span class="price-current">102
+												300</span>
+										</div>
+										<div class="cart"><a href="#"></a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- END products -->
+
+		<!-- BEGIN products -->
+		<div class="products">
+			<div class="container">
+				<h2 class="caption">Распродажа</h2>
+				<div class="products-list mobcarousel">
+					<div class="product mobslide">
+						<div class="wrapper">
+							<!-- Независимо от наличия меток labels в товаре добавляй блок с классом product-header (нужен будет для выравниявания высот) -->
+							<div class="product-header">
+								<div class="labels">
+									<ul>
+										<li class="popular">хит</li>
+										<li class="novelty">новинка</li>
+									</ul>
+								</div>
+							</div>
+							<div class="product-body">
+								<div class="image"><a href="product.html"><img src="tpl/img/products/product-1.png"
+											alt=""></a></div>
+								<div class="type"><a href="catalog.html">Прямой диван</a></div>
+								<div class="name"><a href="product.html">Бали М 2449а</a></div>
+							</div>
+							<div class="product-footer">
+								<div class="price">
+									<span class="price-old">120 300</span><br><span class="price-current">102 300</span>
+								</div>
+								<div class="cart"><a href="#"></a></div>
+							</div>
+						</div>
+					</div>
+					<!-- Если товар в корзине, то добавить класс incart -->
+					<div class="product mobslide incart">
+						<div class="wrapper">
+							<div class="product-header">
+								<div class="labels">
+									<ul>
+										<li class="popular">хит</li>
+										<li class="novelty">новинка</li>
+									</ul>
+								</div>
+							</div>
+							<div class="product-body">
+								<div class="image"><a href="product.html"><img src="tpl/img/products/product-2.png"
+											alt=""></a></div>
+								<div class="type"><a href="catalog.html">Прямой диван</a></div>
+								<div class="name"><a href="product.html">Бали М 2449а</a></div>
+							</div>
+							<div class="product-footer">
+								<div class="price">
+									<span class="price-current">102 300</span>
+								</div>
+								<div class="cart"><a href="#"></a></div>
+							</div>
+						</div>
+					</div>
+					<div class="product mobslide mobslide">
+						<div class="wrapper">
+							<div class="product-header">
+							</div>
+							<div class="product-body">
+								<div class="image"><a href="product.html"><img src="tpl/img/products/product-3.png"
+											alt=""></a></div>
+								<div class="type"><a href="catalog.html">Прямой диван</a></div>
+								<div class="name"><a href="product.html">Бали М 2449а</a></div>
+							</div>
+							<div class="product-footer">
+								<div class="price">
+									<span class="price-current">102 300</span>
+								</div>
+								<div class="cart"><a href="#"></a></div>
+							</div>
+						</div>
+					</div>
+					<div class="product mobslide mobslide">
+						<div class="wrapper">
+							<div class="product-header">
+								<div class="labels">
+									<ul>
+										<li class="novelty">новинка</li>
+									</ul>
+								</div>
+							</div>
+							<div class="product-body">
+								<div class="image"><a href="product.html"><img src="tpl/img/products/product-4.png"
+											alt=""></a></div>
+								<div class="type"><a href="catalog.html">Прямой диван</a></div>
+								<div class="name"><a href="product.html">Бали М 2449а</a></div>
+							</div>
+							<div class="product-footer">
+								<div class="price">
+									<span class="price-current">102 300</span>
+								</div>
+								<div class="cart"><a href="#"></a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- END products -->
+
+		<!-- BEGIN subscribe-1 -->
+		<div class="subscribe-1">
+			<div class="container">
+				<div class="subscribe-content">
+					<div class="image">
+						<div class="wrapper">
+							<img src="tpl/img/subscribe.png" alt="">
+						</div>
+					</div>
+					<div class="form">
+						<div class="form-heading">
+							Подписаться на рассылку
+						</div>
+						<div class="form-info">
+							Скидки, новинки и полезные статьи о сне раз в неделю
+						</div>
+						<form name="" id="" action="">
+							<div class="row">
+								<div class="col-xs-7 col-sm-7">
+									<input type="email" name="email" class="text" placeholder="Введите ваш e-mail">
+								</div>
+								<div class="col-xs-5 col-sm-5">
+									<button type="submit" class="button">Подписаться</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- END subscribe-1 -->
+
+		<!-- BEGIN about -->
+		<div class="about">
+			<div class="container">
+				<div class="about-content">
+					<div class="section" style="background: url(tpl/img/about.jpg" );>
+						<div class="section-heading">
+							Наше роизводство
+						</div>
+						<div class="section-info">
+							Два завода в России, оснащенные<br> немецким оборудованием
+						</div>
+						<div class="section-more">
+							<a href="text-demo.html">Подробнее</a>
+						</div>
+					</div>
+					<div class="section">
+						<div class="section-heading">
+							История компании
+						</div>
+						<div class="section-info">
+							Мы создаем изделия<br> для правильного сна
+						</div>
+						<div class="section-more">
+							<a href="text-demo.html">Подробнее</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- END about -->
+
+		<!-- BEGIN articles -->
+		<div class="articles">
+			<div class="container">
+				<div class="caption caption-tabs">
+					<h2>Новости</h2>
+					<ul class="nav nav-tabs" id="tabs2">
+						<li class="active"><a href="#tabs2-1" data-toggle="tab" class="tab">Все</a></li>
+						<li><a href="#tabs2-2" data-toggle="tab" class="tab">Новости компании</a></li>
+						<li><a href="#tabs2-3" data-toggle="tab" class="tab">Пресса о нас</a></li>
+					</ul>
+				</div>
+				<div class="tab-content">
+					<div class="tab-pane active fade in" id="tabs2-1">
+						<div class="articles-list mobcarousel">
+							<div class="article mobslide">
+								<div class="wrapper">
+									<div class="article-name">
+										<a href="text-demo.html">Город Доброград приглашает попробовать жить
+											красиво!</a>
+									</div>
+									<div class="article-meta">
+										<div class="tag">наши статьи</div>
+										<div class="date">26 июля 2019</div>
+									</div>
+									<div class="article-text">
+										В интервью газете «Ведомости» Владимир Михайлович Седов подробно рассказал о
+										том, как и с какой целью создавался...
+									</div>
+								</div>
+							</div>
+							<div class="article mobslide">
+								<div class="wrapper">
+									<div class="article-name">
+										<a href="text-demo.html">«Мебельный бизнес»: флагманский салон</a>
+									</div>
+									<div class="article-meta">
+										<div class="tag">пресса о нас</div>
+										<div class="date">26 июля 2019</div>
+									</div>
+									<div class="article-text">
+										Ровно полгода прошло после запуска магазина нового поколения : территория
+										здорового сна», но компания...
+									</div>
+								</div>
+							</div>
+							<div class="article mobslide">
+								<div class="wrapper">
+									<div class="article-name">
+										<a href="text-demo.html">Современные гаджеты для здорового сна</a>
+									</div>
+									<div class="article-meta">
+										<div class="tag">наши статьи</div>
+										<div class="date">26 июля 2019</div>
+									</div>
+									<div class="article-text">
+										РБК стиль составил обзор последних новинок индустрии товаров для сна, которые
+										помогают нам спать...
+									</div>
+								</div>
+							</div>
+							<div class="article mobslide">
+								<div class="wrapper">
+									<div class="article-name">
+										<a href="text-demo.html">Производитель матрасов получает 55% выручки, продавая
+											тумбочки</a>
+									</div>
+									<div class="article-meta">
+										<div class="tag">наши статьи</div>
+										<div class="date">26 июля 2019</div>
+									</div>
+									<div class="article-text">
+										Крупнейший бренд матрасов зарабатывает на всем, что связано со сном. Одни только
+										текстильные товары - одеяла...
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="tabs2-2">
+						<div class="articles-list mobcarousel">
+							<div class="article mobslide">
+								<div class="wrapper">
+									<div class="article-name">
+										<a href="text-demo.html">Город Доброград приглашает попробовать жить
+											красиво!</a>
+									</div>
+									<div class="article-meta">
+										<div class="tag">наши статьи</div>
+										<div class="date">26 июля 2019</div>
+									</div>
+									<div class="article-text">
+										В интервью газете «Ведомости» Владимир Михайлович Седов подробно рассказал о
+										том, как и с какой целью создавался...
+									</div>
+								</div>
+							</div>
+							<div class="article mobslide">
+								<div class="wrapper">
+									<div class="article-name">
+										<a href="text-demo.html">«Мебельный бизнес»: флагманский салон</a>
+									</div>
+									<div class="article-meta">
+										<div class="tag">пресса о нас</div>
+										<div class="date">26 июля 2019</div>
+									</div>
+									<div class="article-text">
+										Ровно полгода прошло после запуска магазина нового поколения : территория
+										здорового сна», но компания...
+									</div>
+								</div>
+							</div>
+							<div class="article mobslide">
+								<div class="wrapper">
+									<div class="article-name">
+										<a href="text-demo.html">Современные гаджеты для здорового сна</a>
+									</div>
+									<div class="article-meta">
+										<div class="tag">наши статьи</div>
+										<div class="date">26 июля 2019</div>
+									</div>
+									<div class="article-text">
+										РБК стиль составил обзор последних новинок индустрии товаров для сна, которые
+										помогают нам спать...
+									</div>
+								</div>
+							</div>
+							<div class="article mobslide">
+								<div class="wrapper">
+									<div class="article-name">
+										<a href="text-demo.html">Производитель матрасов получает 55% выручки, продавая
+											тумбочки</a>
+									</div>
+									<div class="article-meta">
+										<div class="tag">наши статьи</div>
+										<div class="date">26 июля 2019</div>
+									</div>
+									<div class="article-text">
+										Крупнейший бренд матрасов зарабатывает на всем, что связано со сном. Одни только
+										текстильные товары - одеяла...
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="tabs2-3">
+						<div class="articles-list mobcarousel">
+							<div class="article mobslide">
+								<div class="wrapper">
+									<div class="article-name">
+										<a href="text-demo.html">Город Доброград приглашает попробовать жить
+											красиво!</a>
+									</div>
+									<div class="article-meta">
+										<div class="tag">наши статьи</div>
+										<div class="date">26 июля 2019</div>
+									</div>
+									<div class="article-text">
+										В интервью газете «Ведомости» Владимир Михайлович Седов подробно рассказал о
+										том, как и с какой целью создавался...
+									</div>
+								</div>
+							</div>
+							<div class="article mobslide">
+								<div class="wrapper">
+									<div class="article-name">
+										<a href="text-demo.html">«Мебельный бизнес»: флагманский салон</a>
+									</div>
+									<div class="article-meta">
+										<div class="tag">пресса о нас</div>
+										<div class="date">26 июля 2019</div>
+									</div>
+									<div class="article-text">
+										Ровно полгода прошло после запуска магазина нового поколения : территория
+										здорового сна», но компания...
+									</div>
+								</div>
+							</div>
+							<div class="article mobslide">
+								<div class="wrapper">
+									<div class="article-name">
+										<a href="text-demo.html">Современные гаджеты для здорового сна</a>
+									</div>
+									<div class="article-meta">
+										<div class="tag">наши статьи</div>
+										<div class="date">26 июля 2019</div>
+									</div>
+									<div class="article-text">
+										РБК стиль составил обзор последних новинок индустрии товаров для сна, которые
+										помогают нам спать...
+									</div>
+								</div>
+							</div>
+							<div class="article mobslide">
+								<div class="wrapper">
+									<div class="article-name">
+										<a href="text-demo.html">Производитель матрасов получает 55% выручки, продавая
+											тумбочки</a>
+									</div>
+									<div class="article-meta">
+										<div class="tag">наши статьи</div>
+										<div class="date">26 июля 2019</div>
+									</div>
+									<div class="article-text">
+										Крупнейший бренд матрасов зарабатывает на всем, что связано со сном. Одни только
+										текстильные товары - одеяла...
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- END articles -->
+
+		<!-- BEGIN subscribe-2 -->
+		<div class="subscribe-2">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-lg-9">
+						<div class="heading">
+							Подписаться на рассылку
+						</div>
+						<div class="form">
+							<form name="" id="" action="">
+								<div class="row">
+									<div class="col-xs-12 col-sm-4 col-md-4 col-lg-3 info">
+										Скидки, новинки и статьи<br> о сне раз в неделю
+									</div>
+									<div class="col-xs-7 col-sm-5 col-md-4 col-lg-5">
+										<input type="email" name="email" class="text" placeholder="Введите ваш e-mail">
+									</div>
+									<div class="col-xs-5 col-sm-3 col-md-4 col-lg-4">
+										<button type="submit" class="button">Подписаться</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="col-md-4 col-lg-3">
+						<div class="heading">
+							Следите за новостями
+						</div>
+						<div class="social">
+							<ul>
+								<li><a href="#" class="vk"></a></li>
+								<li><a href="#" class="yt"></a></li>
+								<li><a href="#" class="ok"></a></li>
+								<li><a href="#" class="fb"></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- END subscribe-2 -->
+
+		<!-- BEGIN footer -->
+		<div class="footer">
+			<div class="container">
+				<div class="footer-sections">
+					<div class="section">
+						<div class="section-heading">
+							О сне
+						</div>
+						<div class="section-content">
+							<ul class="menu">
+								<li><a href="newslist.html">Главное о здоровье</a></li>
+								<li><a href="text-demo.html">Спим правильно</a></li>
+								<li><a href="text-demo.html">Как правильно обустроить спальню</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="section">
+						<div class="section-heading">
+							О компании
+						</div>
+						<div class="section-content">
+							<ul class="menu">
+								<li><a href="text-demo.html">Принципы и миссия</a></li>
+								<li><a href="text-demo.html">Социальная политика</a></li>
+								<li><a href="text-demo.html">История компании</a></li>
+								<li><a href="text-demo.html">Производство</a></li>
+								<li><a href="text.html">Лаборатория сна</a></li>
+								<li><a href="docs.html">Сертификаты</a></li>
+								<li><a href="reviews.html">Отзывы</a></li>
+								<li><a href="text-demo.html">Видеообзор продукции</a></li>
+								<li><a href="newslist.html">Новости</a></li>
+								<li><a href="text-demo.html">Пресс-релиз</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="section">
+						<div class="section-heading">
+							Покупателям
+						</div>
+						<div class="section-content">
+							<ul class="menu">
+								<li><a href="catalog.html">Акции и скидки</a></li>
+								<li><a href="text-demo.html">Оплата и доставка</a></li>
+								<li><a href="text-demo.html">Как оформить заказ</a></li>
+								<li><a href="text-demo.html">Гарантия</a></li>
+								<li><a href="text-demo.html">Политика конфиденциальности</a></li>
+								<li><a href="text-demo.html">Услуги</a></li>
+								<li><a href="text-demo.html">Обмен и возврат товара</a></li>
+								<li><a href="text-demo.html">Рассрочка и кредит</a></li>
+								<li><a href="text-demo.html">Клуб любителей здорового сна</a></li>
+								<li><a href="text-demo.html">Сроки изготовления</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="section">
+						<div class="section-heading">
+							Партнерам
+						</div>
+						<div class="section-content">
+							<ul class="menu">
+								<li><a href="text-demo.html">Франчайзинг</a></li>
+								<li><a href="text-demo.html">Предложение для отелей</a></li>
+								<li><a href="text-demo.html">Become Our Partner Now</a></li>
+							</ul>
+						</div>
+						<div class="section-heading" style="margin-top:35px;">
+							Контакты
+						</div>
+						<div class="section-content">
+							<ul class="menu">
+								<li><a href="text-demo.html">Контакты подразделений</a></li>
+								<li><a href="text-demo.html">Оптовые продажи</a></li>
+							</ul>
+							<div class="cities">
+								<div class="city"><a href="#" data-toggle="modal" data-target=".modal-cities">Москва</a>
+								</div>
+								<div class="shops"><a href="map.html">25 магазинов</a></div>
+							</div>
+							<div class="phones">
+								<ul>
+									<li><a href="tel:+8 (800) 555-11-04">+8 (800) 555-11-04</a></li>
+								</ul>
+							</div>
+							<div class="callback">
+								<a href="#" data-toggle="modal" data-target=".modal-callback">Позвоните мне</a>
+							</div>
+							<div class="systems">
+								<img src="tpl/img/icons/visa.png" alt="">
+								<img src="tpl/img/icons/mc.png" alt="">
+								<img src="tpl/img/icons/maestro.png" alt="">
+								<img src="tpl/img/icons/mir.png" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer-copy">
+					© 2019 ООО «ОРИЕНТ ПЛЮС». Все права защищены.
+				</div>
+			</div>
+		</div>
+		<!-- END footer -->
+	</div>
+	<!-- END out -->
+
+	<!-- BEGIN modal-callback -->
+	<div class="modal modal-form modal-callback fade" tabindex="-1" role="dialog">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+					<div class="title">
+						<h4>Давайте<br> мы вам перезвоним</h4>
+						<p>Пожалуйста, заполните все поля<br> и ждите звонка</p>
+					</div>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-group">
+							<input type="text" class="form-control" name="name" id="" placeholder="Ваше имя">
+						</div>
+						<div class="form-group">
+							<input type="tel" class="form-control" name="phone" id="" placeholder="Телефон">
+						</div>
+						<button type="submit" class="btn btn-default">Перезвоните мне</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- END modal-callback -->
+
+	<!-- BEGIN modal-size -->
+	<div class="modal modal-form modal-size fade" tabindex="-1" role="dialog">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+					<div class="title">
+						<h4>Нужен другой размер?</h4>
+						<p>Пожалуйста, заполните все поля<br> и ждите звонка</p>
+					</div>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="row">
+							<div class="col-xs-6">
+								<div class="form-group">
+									<input type="text" class="form-control" name="length" id="" placeholder="Длина">
+								</div>
+							</div>
+							<div class="col-xs-6">
+								<div class="form-group">
+									<input type="text" class="form-control" name="width" id="" placeholder="Ширина">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-6">
+								<div class="form-group">
+									<input type="text" class="form-control" name="height" id="" placeholder="Высота">
+								</div>
+							</div>
+							<div class="col-xs-6">
+								<div class="form-group">
+									<input type="text" class="form-control" name="diameter" id="" placeholder="Диаметр">
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control" name="name" id="" placeholder="Ваше имя">
+						</div>
+						<div class="form-group">
+							<input type="tel" class="form-control" name="phone" id="" placeholder="Телефон">
+						</div>
+						<button type="submit" class="btn btn-default">Перезвоните мне</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- END modal-size -->
+
+	<!-- BEGIN modal-cities -->
+	<div class="modal modal-cities fade" tabindex="-1" role="dialog">
+		<div class="modal-dialog modal-md">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+					<div class="title">
+						<h4>Выберите город</h4>
+					</div>
+				</div>
+				<div class="modal-body">
+					<div class="cities">
+						<span>А</span>
+						<ul>
+							<li><a href="#">Архангельск</a></li>
+							<li><a href="#">Астрахань</a></li>
+						</ul>
+					</div>
+					<div class="cities">
+						<span>Б</span>
+						<ul>
+							<li><a href="#">Барнаул</a></li>
+							<li><a href="#">Белгород</a></li>
+							<li><a href="#">Брянск</a></li>
+						</ul>
+					</div>
+					<div class="cities">
+						<span>К</span>
+						<ul>
+							<li><a href="#">Казань</a></li>
+							<li><a href="#">Калуга</a></li>
+							<li><a href="#">Кемерово</a></li>
+							<li><a href="#">Киров</a></li>
+							<li><a href="#">Кострома</a></li>
+							<li><a href="#">Краснодар</a></li>
+							<li><a href="#">Красноярск</a></li>
+							<li><a href="#">Курск</a></li>
+						</ul>
+					</div>
+					<div class="cities">
+						<span>О</span>
+						<ul>
+							<li><a href="#">Омск</a></li>
+							<li><a href="#">Оренбург</a></li>
+							<li><a href="#">Орел</a></li>
+						</ul>
+					</div>
+					<div class="cities">
+						<span>П</span>
+						<ul>
+							<li><a href="#">Пенза</a></li>
+							<li><a href="#">Пермь</a></li>
+							<li><a href="#">Петрозаводск</a></li>
+						</ul>
+					</div>
+					<div class="cities">
+						<span>Т</span>
+						<ul>
+							<li><a href="#">Тамбов</a></li>
+							<li><a href="#">Тверь</a></li>
+							<li><a href="#">Тольятти</a></li>
+							<li><a href="#">Томск</a></li>
+							<li><a href="#">Тула</a></li>
+							<li><a href="#">Тюмень</a></li>
+						</ul>
+					</div>
+					<div class="cities">
+						<span>У</span>
+						<ul>
+							<li><a href="#">Улан-Удэ</a></li>
+							<li><a href="#">Ульяновск</a></li>
+							<li><a href="#">Уфа</a></li>
+						</ul>
+					</div>
+					<div class="cities">
+						<span>Х</span>
+						<ul>
+							<li><a href="#">Хабаровск</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- END modal-cities -->
+
+	<!-- BEGIN modal-map -->
+	<div class="modal modal-map fade" tabindex="-1" role="dialog">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+					<div class="title">
+						<h4>Наши магазины в Москве</h4>
+					</div>
+				</div>
+				<div class="modal-body">
+					<div class="map" id="map">
+						<a href="#" class="map-toggle"></a>
+					</div>
+					<div class="content mCustomScrollbar">
+						<div class="select">
+							<p>Выберите город</p>
+							<select name="">
+								<option value="">Москва</option>
+								<option value="">Санкт-Петербург</option>
+								<option value="">Омск</option>
+								<option value="">Тюмень</option>
+							</select>
+						</div>
+						<div class="addresses">
+							<div class="heading">
+								<div class="heading-address">Адрес</div>
+								<div class="heading-location">Расположение</div>
+								<div class="heading-phone">Телефон</div>
+							</div>
+							<ul>
+								<li>
+									<div class="address">
+										<a href="#">ул. Профсоюзная, д. 3, офис 112</a>
+										<span class="metro">м. Академическая</span>
+									</div>
+									<div class="location">тц «Глобус»</div>
+									<div class="phone"><a href="tel:+7 495 545-01-65">+7 495 545-01-65</a></div>
+								</li>
+								<li>
+									<div class="address">
+										<a href="#">ул. Профсоюзная, д. 56, офис 528</a>
+										<span class="metro">м. Новые Черемушки</span>
+									</div>
+									<div class="location">ТЦ «Черемушки»</div>
+									<div class="phone"><a href="tel:+7 495 545-01-65">+7 495 545-01-65</a></div>
+								</li>
+								<li>
+									<div class="address">
+										<a href="#">ул. Миклухо-Маклая, д. 36а</a>
+									</div>
+									<div class="location">ТЦ «Черемушки»</div>
+									<div class="phone"><a href="tel:+7 495 545-01-65">+7 495 545-01-65</a></div>
+								</li>
+								<li>
+									<div class="address">
+										<a href="#">пр-кт Вернадского, д. 39, офис 702</a>
+										<span class="metro">м. Проспект Вернадского</span>
+									</div>
+									<div class="location">тц «Вернадский»</div>
+									<div class="phone"><a href="tel:+7 495 545-01-65">+7 495 545-01-65</a></div>
+								</li>
+								<li>
+									<div class="address">
+										<a href="#">Ленинградский проспект 47</a>
+										<span class="metro">м. Аэропорт</span>
+									</div>
+									<div class="location">ТЦ «Черемушки»</div>
+									<div class="phone"><a href="tel:+7 495 545-01-65">+7 495 545-01-65</a></div>
+								</li>
+								<li>
+									<div class="address">
+										<a href="#">ул. Миклухо-Маклая, д. 36а</a>
+									</div>
+									<div class="location">ТЦ «Черемушки»</div>
+									<div class="phone"><a href="tel:+7 495 545-01-65">+7 495 545-01-65</a></div>
+								</li>
+								<li>
+									<div class="address">
+										<a href="#">пр-кт Вернадского, д. 39, офис 702</a>
+										<span class="metro">м. Проспект Вернадского</span>
+									</div>
+									<div class="location">тц «Вернадский»</div>
+									<div class="phone"><a href="tel:+7 495 545-01-65">+7 495 545-01-65</a></div>
+								</li>
+								<li>
+									<div class="address">
+										<a href="#">Ленинградский проспект 47</a>
+										<span class="metro">м. Аэропорт</span>
+									</div>
+									<div class="location">ТЦ «Черемушки»</div>
+									<div class="phone"><a href="tel:+7 495 545-01-65">+7 495 545-01-65</a></div>
+								</li>
+								<li>
+									<div class="address">
+										<a href="#">ул. Миклухо-Маклая, д. 36а</a>
+									</div>
+									<div class="location">ТЦ «Черемушки»</div>
+									<div class="phone"><a href="tel:+7 495 545-01-65">+7 495 545-01-65</a></div>
+								</li>
+								<li>
+									<div class="address">
+										<a href="#">пр-кт Вернадского, д. 39, офис 702</a>
+										<span class="metro">м. Проспект Вернадского</span>
+									</div>
+									<div class="location">тц «Вернадский»</div>
+									<div class="phone"><a href="tel:+7 495 545-01-65">+7 495 545-01-65</a></div>
+								</li>
+								<li>
+									<div class="address">
+										<a href="#">Ленинградский проспект 47</a>
+										<span class="metro">м. Аэропорт</span>
+									</div>
+									<div class="location">ТЦ «Черемушки»</div>
+									<div class="phone"><a href="tel:+7 495 545-01-65">+7 495 545-01-65</a></div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- END modal-map -->
+
+	<!--[if IE]><script src="tpl/js/html5shiv.js"></script><![endif]-->
+
+	<script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+
+	<script src="tpl/js/jquery.js"></script>
+	<script src="tpl/bootstrap/js/bootstrap.js"></script>
+	<script src="tpl/slick/slick.min.js"></script>
+	<script src="tpl/js/inputmask.bundle.js"></script>
+	<script src="tpl/jquery-ui/jquery-ui.min.js"></script>
+	<script src="tpl/jquery-ui/jquery-ui.touch-punch.js"></script>
+	<script src="tpl/mCustomScrollbar/mCustomScrollbar.js"></script>
+	<script src="tpl/js/scripts.js"></script>
+</body>
+
+</html>

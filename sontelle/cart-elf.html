@@ -1,0 +1,622 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Sontelle</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<!--
+	<link rel="shortcut icon" href="img/icons/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="img/icons/favicon.png" type="image/png">
+	<link rel="shortcut icon" href="img/icons/favicon.gif" type="image/gif">
+	-->	
+	<meta name="viewport" content="initial-scale=1"/>
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="tpl/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="tpl/slick/slick.css">
+	<link rel="stylesheet" href="tpl/css/screen.css" media="screen">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&display=swap&subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
+	
+	<style>
+		.ch-button {display:none; position:fixed;bottom:15px;right:15px;z-index:999;padding:11px 10px 7px 10px;border:1px solid #E5007C;border-radius:50%;}
+		.ch-button:hover {opacity:0.8;}
+		.ch-button img {x-width:45px;x-height:45px;}
+		
+		.ch-right-bottom {position:fixed;bottom:22px;right:22px;z-index:999;width: 119px;height: 200px;}
+
+		.ch-small-pages .ch-right-bottom {background: url(tpl/elf/Armature_idle.gif) bottom center no-repeat;background-size: contain;}
+
+		.ch-small-pages .ch-right-bottom.wait {right:-125px;background: url(tpl/elf/Armature_Sleep.gif) bottom center no-repeat;background-size: contain;width: 260px;height: 300px;}
+
+		.ch-small-cart .ch-right-bottom {background: url(tpl/elf/Armature_Shop.gif) bottom center no-repeat;background-size: contain;width: 100px;height: 200px;right:31px;}
+
+		.ch-small-cart .ch-right-bottom.wait {background: url(tpl/elf/Armature_Weep.gif) bottom center no-repeat;background-size: contain;width: 90px;height: 200px;right:35px;}
+		
+		.ch-small { display: none; }
+		.ch-small .ch-dialog {position:fixed;bottom:100px;right:150px;z-index:999;width:150px;}
+		.ch-small .ch-dialog div+div {margin-top:12px;}
+		.ch-small .ch-dialog .question {background:#FEEBDA;border:2px solid #F1B579;border-radius:10px;padding:7px;font-size:14px;font-weight:400;color:#511203;text-align:center;}
+		.ch-small .ch-dialog .answer a {display:block;font-size:12px;font-weight:400;color:#fff;padding:5px 0px;
+		background:#13CCAC;x-border:2px solid #13CCAC;border-radius:10px;text-align:center;width:70%;}
+		.ch-small .ch-dialog .answer:hover a {background:#E7007B;x-border-color:#A80059;color:#fff;}
+		
+		.ch-center {position:fixed;top:50%;margin-top:-200px;left:50%;margin-left:-118px;z-index:999; background: url(tpl/elf/Armature_greeting.gif) center center no-repeat; background-size: contain; width:375px;height: 400px;}
+		.ch-background {position:fixed;width:100%;height:100%;background:rgba(0,0,0,0.8);z-index:99;display:none;}
+		
+		.ch-background .ch-dialog {position:fixed;top:50%;margin-top:-200px;left:50%;margin-left:-300px;z-index:999;width:200px;}
+		.ch-background .ch-dialog div+div {margin-top:22px;}
+		.ch-background .ch-dialog .question {background:#FEEBDA;border:3px solid #F1B579;border-radius:15px;padding:15px 7px;font-size:16px;font-weight:bold;color:#511203;text-align:center;}
+		.ch-background .ch-dialog .answer a {display:block;font-size:16px;font-weight:bold;color:#fff;padding:10px 0px;
+		background:#13CCAC;x-border:2px solid #13CCAC;border-radius:10px;text-align:center;width:70%;}
+		.ch-background .ch-dialog .answer:hover a {background:#E7007B;x-border-color:#A80059;color:#fff;}
+	</style>
+	
+</head>
+<body>
+	<!-- BEGIN out -->
+	<div class="out">
+	
+		<!-- Блок с персонажем -->
+		<div class="characterOuter">
+			<!-- Кнопка вызова -->
+			<a href="#" class="ch-button"><img src="tpl/elf/logo-small.png"></a>
+			<!-- Персонаж справа внизу -->
+			<!-- Для страницы корзины к классу ch-small нужно добавлять ch-small-cart-->
+			<div class="ch-small ch-small-cart">
+				<div class="ch-right-bottom"></div>				
+				<!-- Блок диалога -->
+				<div class="ch-dialog">
+					<div class="question">
+						Может всё-таки нужна помощь?
+					</div>
+					<div class="answer" data-answer="small-yes">
+						<a href="#">Да</a>
+					</div>
+					<div class="answer" data-answer="small-no">
+						<a href="#">Нет</a>
+					</div>
+				</div>
+			</div>
+			<!-- Персонаж в центре экрана -->
+			<div class="ch-background">
+				<div class="ch-center"></div>				
+				<!-- Блок диалога -->
+				<div class="ch-dialog">
+					<div class="question">
+						Здравствуйте, Вам помочь?
+					</div>
+					<div class="answer" data-answer="background-yes">
+						<a href="#">Да</a>
+					</div>
+					<div class="answer" data-answer="background-no">
+						<a href="#">Нет</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+		<!-- BEGIN topline -->
+		<div class="topline">			
+			<div class="container">
+				<a href="#" class="mobmenu-toggle"><span></span></a>
+				<div class="topline-cities">
+					<div class="city" data-toggle="modal" data-target=".modal-cities"><a href="#">Москва</a></div>
+					<div class="shops"><a href="#">25 магазинов</a></div>
+				</div>
+				<div class="topline-menu">
+					<ul>
+						<li><a href="#">Наша история</a></li>
+						<li class="sleep"><a href="#">Наука сна</a></li>
+						<li><a href="#">Работа у нас</a></li>
+						<li><a href="#">Оплата заказа</a></li>
+						<li><a href="#">Статус заказа</a></li>
+						<li><a href="#">Партнерам</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- END topline -->
+
+		<!-- BEGIN header -->
+		<div class="header">
+			<div class="container">
+				<div class="header-logo">
+					<img src="tpl/img/logo.svg" alt="">
+				</div>
+				<div class="header-search">
+					<form name="" id="" action="">
+						<button type="submit" class="button"></button>
+						<input type="text" name="s" class="text" placeholder="Поиск по сайту">
+					</form>
+				</div>
+				<div class="header-callback">
+					<a href="#" data-toggle="modal" data-target=".modal-callback"><i></i>Позвоните мне</a>
+				</div>
+				<div class="header-phones">
+					<ul>
+						<li><a href="tel:+8 (800) 555-11-04">+8 (800) 555-11-04</a></li>
+					</ul>					
+				</div>
+				<div class="header-controls">
+					<ul>
+						<!--
+							Если пользователь залогинился, то к классу user добавить класс active
+							<li><a href="#" class="user active"></a></li>
+							Если в фаворитах есть товар, то к классу favorites добавить класс active
+							<li><a href="#" class="favorites"></a></li>
+							Корзина без товара
+							<li><a href="#" class="cart"></a></li>
+							Корзина с товаром
+							<li><a href="#" class="cart active"><span>22</span></a></li>
+						-->
+						<li><a href="#" class="user"></a></li>
+						<li><a href="#" class="favorites"></a></li>
+						<li><a href="#" class="list"></a></li>
+						<li class="dropdown">
+							<a href="#" class="cart active dropdown-toggle" data-toggle="dropdown"><span>2</span></a>
+							<div class="dropdown-menu">
+								<div class="cart-items">
+									<div class="item">
+										<div class="item-image">
+											<a href="#"><img src="tpl/img/products/product-1.png" alt=""></a>
+											<button class="delete"></button>
+										</div>
+										<div class="item-info">
+											<a href="#" class="name">Прямой диван Lenagold</a>
+											<p class="size">Размер 150х200 см</p>
+											<div class="price">
+												<span class="price-current">102 300</span><span class="price-old">120 300</span>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="item-image">
+											<a href="#"><img src="tpl/img/products/product-2.png" alt=""></a>
+											<button class="delete"></button>
+										</div>
+										<div class="item-info">
+											<a href="#" class="name">Прямой диван Жардин 3 </a>
+											<p class="size">Размер 190х220 см</p>
+											<div class="price">
+												<span class="price-current">132 000</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="cart-footer">
+									<div class="total">
+										Итого: <span class="total-price">232 300</span>
+									</div>
+									<div class="actions">
+										<a href="#" class="btn btn-default">Оформить заказ</a>
+									</div>									
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- END header -->
+
+		<!-- BEGIN navigation -->
+		<div class="navigation">
+			<div class="container">
+				<ul>
+					<li class="dropdown dropdown-nav">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Матрасы</a>
+						<div class="dropdown-menu">
+							<div class="container">
+								<div class="sections">
+									<div class="section section-main">
+										<div class="section-heading">
+											Матрасы
+										</div>
+										<div class="section-body">
+											<div class="image">
+												<img src="tpl/img/nav/nav-1.png" alt="">
+											</div>
+										</div>
+										<div class="section-footer">
+											<a href="#" class="discount">Акции категории</a>
+										</div>
+									</div>
+									<div class="section type">
+										<div class="section-heading">
+											По типу
+										</div>
+										<div class="section-body">
+											<div class="list">
+												<ul>
+													<li><a href="#">Матрасы</a></li>
+													<li><a href="#">Наматрасники</a></li>
+													<li><a href="#">Подушки</a></li>
+													<li><a href="#">Одеяла</a></li>
+													<li><a href="#">Кровати</a></li>
+													<li><a href="#">Мебель для спальни</a></li>
+													<li><a href="#">Текстиль для дома</a></li>
+													<li><a href="#">Аксессуары для дома</a></li>
+												</ul>
+											</div>
+										</div>									
+									</div>
+									<div class="section size">
+										<div class="section-heading">
+											По размеру
+										</div>
+										<div class="section-body">
+											<div class="list">
+												<ul>
+													<li><a href="#">70 х 140</a></li>
+													<li><a href="#">90 х 180</a></li>
+													<li><a href="#">90 х 200</a></li>
+													<li><a href="#">120 х 200</a></li>
+													<li><a href="#">140 х 190</a></li>
+													<li><a href="#">140 х 200</a></li>
+													<li><a href="#">160 х 200</a></li>
+													<li><a href="#">180 х 200</a></li>
+													<li><a href="#">180 х 220</a></li>
+													<li><a href="#">200 х 200</a></li>
+													<li><a href="#">200 х 220</a></li>
+												</ul>
+											</div>
+										</div>
+										<div class="section-footer">
+											<a href="#" class="link" data-toggle="modal" data-target=".modal-size">Нужен другой размер?</a>
+										</div>
+									</div>
+									<div class="section symptoms">
+										<div class="section-heading">
+											По симптомам
+										</div>
+										<div class="section-body">
+											<div class="list">
+												<ul>
+													<li><a href="#">для беременных</a></li>
+													<li><a href="#">для сна на спине</a></li>
+													<li><a href="#">для сна на животе</a></li>
+													<li><a href="#">для сна на боку</a></li>
+													<li><a href="#">при болях в шее</a></li>
+													<li><a href="#">при болях в пояснице</a></li>
+													<li><a href="#">при отеках нижних конечностей</a></li>
+													<li><a href="#">при отеках верхних конечностей</a></li>
+													<li><a href="#">при аллергии</a></li>
+													<li><a href="#">универсальные</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>							
+						</div>
+					</li>
+					<li><a href="#">Кровати</a></li>
+					<li><a href="#">Диваны</a></li>
+					<li><a href="#">Подушки и одеяла</a></li>
+					<li><a href="#">Мебель</a></li>
+					<li><a href="#">Для дома</a></li>
+					<li><a href="#">Для детей</a></li>
+					<li class="discount"><a href="#">Акции</a></li>
+					<li class="loyalty"><a href="#">Программа лояльности</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- END navigation -->
+
+		<!-- BEGIN cart -->		
+		<div class="page cart">			
+			<div class="container">				
+				<h1 class="page-title">Корзина</h1>
+			</div>
+		</div>
+
+		<!-- BEGIN subscribe-2 -->
+		<div class="subscribe-2">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-lg-9">
+						<div class="heading">
+							Подписаться на рассылку
+						</div>
+						<div class="form">
+							<form name="" id="" action="">
+								<div class="row">
+									<div class="col-xs-12 col-sm-4 col-md-4 col-lg-3 info">
+										Скидки, новинки и статьи<br> о сне раз в неделю
+									</div>
+									<div class="col-xs-7 col-sm-5 col-md-4 col-lg-5">
+										<input type="email" name="email" class="text" placeholder="Введите ваш e-mail">
+									</div>
+									<div class="col-xs-5 col-sm-3 col-md-4 col-lg-4">
+										<button type="submit" class="button">Подписаться</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="col-md-4 col-lg-3">
+						<div class="heading">
+							Следите за новостями
+						</div>
+						<div class="social">
+							<ul>
+								<li><a href="#" class="vk"></a></li>
+								<li><a href="#" class="yt"></a></li>
+								<li><a href="#" class="ok"></a></li>
+								<li><a href="#" class="fb"></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>				
+			</div>
+		</div>
+		<!-- END subscribe-2 -->
+
+		<!-- BEGIN footer -->
+		<div class="footer">
+			<div class="container">
+				<div class="footer-sections">
+					<div class="section">
+						<div class="section-heading">
+							Каталог
+						</div>
+						<div class="section-content">
+							<ul class="menu">
+								<li><a href="#">Матрасы</a></li>
+								<li><a href="#">Кровати</a></li>
+								<li><a href="#">Диваны</a></li>
+								<li><a href="#">Наматрасники</a></li>
+								<li><a href="#">Подушки</a></li>
+								<li><a href="#">Одеяла</a></li>
+								<li><a href="#">Постельное белье</a></li>
+								<li><a href="#">Мебель для спальни</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="section">
+						<div class="section-heading">
+							О компании
+						</div>
+						<div class="section-content">
+							<ul class="menu">
+								<li><a href="#">Принципы и миссия</a></li>
+								<li><a href="#">Социальная политика</a></li>
+								<li><a href="#">История компании</a></li>
+								<li><a href="#">Производство</a></li>
+								<li><a href="#">Лаборатория сна</a></li>
+								<li><a href="#">Сертификаты</a></li>
+								<li><a href="#">Новости</a></li>
+								<li><a href="#">Пресс-релиз</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="section">
+						<div class="section-heading">
+							Покупателям
+						</div>
+						<div class="section-content">
+							<ul class="menu">
+								<li><a href="#">Акции и скидки</a></li>
+								<li><a href="#">Оплата и доставка</a></li>
+								<li><a href="#">Как оформить заказ</a></li>
+								<li><a href="#">Гарантия</a></li>
+								<li><a href="#">Политика конфиденциальности</a></li>
+								<li><a href="#">Услуги</a></li>
+								<li><a href="#">Обмен и возврат товара</a></li>
+								<li><a href="#">Сроки изготовления</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="section">
+						<div class="section-heading">
+							Контакты
+						</div>
+						<div class="section-content">
+							<ul class="menu">
+								<li><a href="#">Контакты подразделений</a></li>
+								<li><a href="#">Оптовые продажи</a></li>
+							</ul>
+							<div class="cities">
+								<div class="city"><a href="#">Москва</a></div>
+								<div class="shops"><a href="#">25 магазинов</a></div>
+							</div>
+							<div class="phones">
+								<ul>
+									<li><a href="tel:+8 (800) 555-11-04">+8 (800) 555-11-04</a></li>
+								</ul>								
+							</div>
+							<div class="callback">
+								<a href="#" data-toggle="modal" data-target=".modal-callback">Позвоните мне</a>
+							</div>
+							<div class="systems">
+								<img src="tpl/img/icons/visa.png" alt="">
+								<img src="tpl/img/icons/mc.png" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer-copy">
+					© 2019 ООО «ОРИЕНТ ПЛЮС». Все права защищены.
+				</div>
+			</div>
+		</div>
+		<!-- END footer -->		
+	</div>
+	<!-- END out -->
+
+	<!-- BEGIN modal-callback -->
+	<div class="modal modal-form modal-callback fade" tabindex="-1" role="dialog">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+					<div class="title">
+						<h4>Давайте<br> мы вам перезвоним</h4>
+						<p>Пожалуйста, заполните все поля<br> и ждите звонка</p>
+					</div>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-group">
+							<input type="text" class="form-control" name="name" id="" placeholder="Ваше имя">
+						</div>
+						<div class="form-group">
+							<input type="tel" class="form-control" name="phone" id="" placeholder="Телефон">
+						</div>
+						<button type="submit" class="btn btn-default">Перезвоните мне</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- END modal-callback -->
+
+	<!-- BEGIN modal-size -->
+	<div class="modal modal-form modal-size fade" tabindex="-1" role="dialog">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+					<div class="title">
+						<h4>Нужен другой размер?</h4>
+						<p>Пожалуйста, заполните все поля<br> и ждите звонка</p>
+					</div>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="row">
+							<div class="col-xs-6">
+								<div class="form-group">
+									<input type="text" class="form-control" name="length" id="" placeholder="Длина">
+								</div>
+							</div>
+							<div class="col-xs-6">
+								<div class="form-group">
+									<input type="text" class="form-control" name="width" id="" placeholder="Ширина">
+								</div>	
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-6">
+								<div class="form-group">
+									<input type="text" class="form-control" name="height" id="" placeholder="Высота">
+								</div>
+							</div>
+							<div class="col-xs-6">
+								<div class="form-group">
+									<input type="text" class="form-control" name="diameter" id="" placeholder="Диаметр">
+								</div>	
+							</div>
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control" name="name" id="" placeholder="Ваше имя">
+						</div>
+						<div class="form-group">
+							<input type="tel" class="form-control" name="phone" id="" placeholder="Телефон">
+						</div>
+						<button type="submit" class="btn btn-default">Перезвоните мне</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- END modal-size -->
+
+	<!-- BEGIN modal-cities -->
+	<div class="modal modal-cities fade" tabindex="-1" role="dialog">
+		<div class="modal-dialog modal-md">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+					<div class="title">
+						<h4>Выберите город</h4>						
+					</div>
+				</div>
+				<div class="modal-body">
+					<div class="cities">
+						<span>А</span>
+						<ul>
+							<li><a href="#">Архангельск</a></li>
+							<li><a href="#">Астрахань</a></li>
+						</ul>
+					</div>
+					<div class="cities">
+						<span>Б</span>
+						<ul>
+							<li><a href="#">Барнаул</a></li>
+							<li><a href="#">Белгород</a></li>
+							<li><a href="#">Брянск</a></li>
+						</ul>
+					</div>
+					<div class="cities">
+						<span>К</span>
+						<ul>
+							<li><a href="#">Казань</a></li>
+							<li><a href="#">Калуга</a></li>
+							<li><a href="#">Кемерово</a></li>
+							<li><a href="#">Киров</a></li>
+							<li><a href="#">Кострома</a></li>
+							<li><a href="#">Краснодар</a></li>
+							<li><a href="#">Красноярск</a></li>
+							<li><a href="#">Курск</a></li>
+						</ul>
+					</div>
+					<div class="cities">
+						<span>О</span>
+						<ul>
+							<li><a href="#">Омск</a></li>
+							<li><a href="#">Оренбург</a></li>
+							<li><a href="#">Орел</a></li>
+						</ul>
+					</div>
+					<div class="cities">
+						<span>П</span>
+						<ul>
+							<li><a href="#">Пенза</a></li>
+							<li><a href="#">Пермь</a></li>
+							<li><a href="#">Петрозаводск</a></li>
+						</ul>
+					</div>
+					<div class="cities">
+						<span>Т</span>
+						<ul>
+							<li><a href="#">Тамбов</a></li>
+							<li><a href="#">Тверь</a></li>
+							<li><a href="#">Тольятти</a></li>
+							<li><a href="#">Томск</a></li>
+							<li><a href="#">Тула</a></li>
+							<li><a href="#">Тюмень</a></li>
+						</ul>
+					</div>
+					<div class="cities">
+						<span>У</span>
+						<ul>
+							<li><a href="#">Улан-Удэ</a></li>
+							<li><a href="#">Ульяновск</a></li>
+							<li><a href="#">Уфа</a></li>
+						</ul>
+					</div>
+					<div class="cities">
+						<span>Х</span>
+						<ul>
+							<li><a href="#">Хабаровск</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- END modal-cities -->
+
+	<!--[if IE]><script src="tpl/js/html5shiv.js"></script><![endif]-->
+	<script src="tpl/js/jquery.js"></script>
+	<script src="tpl/bootstrap/js/bootstrap.js"></script>	
+	<script src="tpl/slick/slick.min.js"></script>
+	<script src="tpl/js/inputmask.bundle.js"></script>
+	<script src="tpl/js/scripts.js"></script>
+
+	
+	<script src="tpl/js/jquery.cookie.min.js"></script>	
+	<script src="tpl/js/character.js"></script>	
+</body>
+</html>

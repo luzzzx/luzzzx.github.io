@@ -1,0 +1,6379 @@
+$cBase: #E5007C
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+
+
+a, a:before, a:after, a:hover, a:focus, .button
+	text-decoration: none
+	color: inherit
+	-webkit-transition: all .3s
+	-moz-transition: all .3s
+	-o-transition: all .3s
+	-ms-transition: all .3s
+	transition: all .3s
+
+body
+	font-family: 'Noto Sans', sans-serif
+	font-size: 14px
+	line-height: 1.2
+	color: #3d3d3d
+	background: #fefefe
+
+.openmenu
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	position: fixed
+	overflow: hidden
+
+.form-group
+	margin-bottom: 25px
+
+.form-control
+	font-size: 14px
+	color: #000
+	background: #F8F8F7
+	+placeholder-color(#9D9D9D)
+	height: 46px	
+	border-radius: 3px
+	-webkit-box-shadow: none
+	box-shadow: none
+	padding: 0 18px 2px
+	width: 100%
+	border: 0
+	font-family: 'Noto Sans', sans-serif
+	font-weight: 400
+	-webkit-transition: none
+	-moz-transition: none
+	-o-transition: none
+	-ms-transition: none
+	transition: none
+
+.form-control:hover, .form-control:focus, .form-control:active
+	border: 0
+	-webkit-box-shadow: none
+	box-shadow: none
+
+textarea.form-control
+	height: 140px
+	padding-top: 12px
+	padding-bottom: 12px
+	resize: none
+
+.form-control:-webkit-autofill, .form-control:-webkit-autofill:hover, .form-control:-webkit-autofill:focus, .form-control:-webkit-autofill
+	-webkit-text-fill-color: #000!important
+	-webkit-box-shadow: 0 0 0px 1000px #F8F8F7 inset
+
+input[type="tel"], input[type='text']
+	font-family: 'Noto Sans', sans-serif
+	font-weight: 400
+	
+input[type="checkbox"]
+	display: none
+
+input[type="checkbox"] + label
+	font-family: 'Noto Sans', sans-serif
+	font-weight: 400	
+	color: #9D9D9D
+	font-weight: normal
+	padding-left: 30px
+	position: relative
+	cursor: pointer
+
+input[type="checkbox"] + label:before
+	content: ""	
+	border: 1px solid #DADADA
+	border-radius: 3px
+	width: 20px
+	height: 20px
+	position: absolute
+	left: 0
+	top: -3px
+
+input[type="checkbox"]:checked + label:after
+	content: ""
+	width: 8px
+	height: 8px
+	background: $cBase
+	position: absolute
+	border-radius: 2px
+	top: 3px
+	left: 6px
+
+input[type="radio"]
+	display: none
+
+input[type="radio"] + label
+	font-family: 'Noto Sans', sans-serif
+	font-weight: 400	
+	color: #9D9D9D
+	font-weight: normal
+	padding-left: 30px
+	position: relative
+	cursor: pointer	
+
+	span
+		color: #9D9D9D
+		font-weight: 700
+
+	p
+		line-height: 1.6
+		margin-top: 10px
+
+input[type="radio"] + label:before
+	content: ""	
+	border: 1px solid #DADADA
+	background: #fff
+	border-radius: 3px
+	width: 20px
+	height: 20px
+	border-radius: 50%
+	position: absolute
+	left: 0
+	top: -3px
+
+input[type="radio"]:checked + label:after
+	content: ""
+	width: 8px
+	height: 8px
+	background: $cBase
+	position: absolute
+	border-radius: 50%
+	top: 3px
+	left: 6px
+
+.colors
+	
+	.code
+		width: 28px
+		height: 28px
+		position: absolute
+		display: block
+		left: 1px
+		top: -7px
+		border-radius: 50%
+	
+	input + label
+		padding-left: 40px
+
+	input[type="checkbox"] + label:before		
+		border: 1px solid #dadada
+		border-radius: 50%
+		width: 30px
+		height: 30px
+		top: -8px
+
+	input[type="checkbox"]:checked + label:after
+		border: 2px solid $cBase
+		border-radius: 50%
+		background: none
+		width: 28px
+		height: 28px
+		left: 1px
+		top: -7px
+
+.btn
+	padding: 12px 25px 14px
+	color: #fff
+	border-radius: 0
+	border: 0
+	font-size: 14px
+	outline: none
+	border-radius: 3px
+
+.btn-default
+	background: $cBase
+	border: 1px solid $cBase	
+	color: #fff
+
+.btn-default:hover, .btn-default:active, .btn-default:active:focus, .btn-default:focus, .btn-default.focus
+	background: $cBase - #101010
+	border-color: $cBase - #101010
+	color: #fff
+	outline: none
+	-webkit-box-shadow: none
+	box-shadow: none
+
+.btn-white
+	background: #fff
+	color: $cBase
+	border: 1px solid $cBase
+
+.btn-white:hover, .btn-white:active, .btn-white:active:focus, .btn-white:focus, .btn-white.focus
+	background: $cBase
+	color: #fff
+	outline: none
+	-webkit-box-shadow: none
+	box-shadow: none
+
+.ui-selectmenu-button.ui-button
+	width: 100%
+	background: #fff
+	border: 1px solid #dadada
+	padding: 15px
+	color: #9d9d9d
+	font-size: 16px
+
+	.ui-selectmenu-icon
+		margin-top: 4px
+		width: 14px
+		height: 8px
+		background: url(../img/icons/arrow-next.svg) center center no-repeat
+		background-size: contain
+		-webkit-transition: all .3s
+		-moz-transition: all .3s
+		-o-transition: all .3s
+		-ms-transition: all .3s
+		transition: all .3s
+
+.ui-selectmenu-button.ui-button:active
+	border: 1px solid #dadada
+	background: #fff
+	color: #9d9d9d
+
+.ui-selectmenu-button-open
+	
+	.ui-selectmenu-icon
+		-moz-transform: rotate(180deg)
+		-ms-transform: rotate(180deg)
+		-webkit-transform: rotate(180deg)
+		-o-transform: rotate(180deg)
+		transform: rotate(180deg)
+
+.ui-selectmenu-menu
+	border: 1px solid #9d9d9d
+	max-height: 281px
+
+	.ui-menu
+		padding: 0
+		overflow: hidden
+		
+		.ui-menu-item-wrapper
+			padding: 12px 15px
+
+	.ui-menu.ui-widget-content
+		color: #9d9d9d
+		border: 0
+
+.ui-state-active, .ui-widget-content .ui-state-active
+	border: 0
+	background: $cBase
+
+.ui-slider.ui-widget-content
+	background: #DADADA
+
+.ui-slider.ui-widget-content
+	border: 0
+
+.ui-slider-horizontal
+	height: 2px
+
+.ui-slider		
+
+	.ui-slider-handle
+		width: 9px
+		height: 9px
+		border-radius: 50%
+		background: $cBase
+		border: 0						
+		top: -4px
+		margin-left: -4px			
+		cursor: pointer
+
+		span
+			position: absolute
+			width: 50px
+			left: 50%
+			top: 15px
+			margin-left: -25px
+			text-align: center
+			display: block
+			position: relative			
+			color: #9d9d9d			
+			font-size: 14px
+
+	.ui-widget-header
+		background: $cBase
+		cursor: pointer
+		margin-left: -4px
+
+.uislider
+	margin-top: 24px
+
+.uislider-container
+	margin: 0 4px
+
+.uislider-values
+	overflow: hidden
+	margin-top: 25px
+
+	.sliderValue
+		height: 38px
+		width: 100%
+		border: 1px solid #DADADA
+		border-radius: 3px
+		padding: 0 10px
+		text-align: center
+		font-size: 14px
+	
+	.row
+
+		.col-xs-6:first-child
+			position: relative			
+
+		.col-xs-6:first-child:after
+			content: ""
+			position: absolute
+			top: 50%
+			margin-top: -1px
+			width: 14px
+			height: 2px
+			left: 100%
+			margin-left: -7px
+			background: #9D9D9D
+
+.uislider-container:before
+	content: ""
+	position: absolute			
+	bottom: 0
+	height: 2px
+	background: #DADADA
+	left: -5px
+	right: -5px
+
+.fancybox-button--zoom, .fancybox-button--play, .fancybox-button--thumbs
+	display: none!important
+
+.breadcrumb
+	padding: 0
+	margin-bottom: 50px
+	background: none
+	border-radius: 0
+	margin-top: 18px
+	color: #9D9D9D
+	font-size: 14px
+
+	a:hover
+		color: $cBase
+
+	> .active
+		color: #9D9D9D
+
+.out
+	width: 100%
+	min-width: 320px
+	margin: 0 auto	
+
+.caption
+	font-size: 24px
+	font-weight: 700
+	padding-bottom: 20px	
+	margin-bottom: 30px
+	position: relative
+	
+	h2
+		font-size: inherit
+		font-weight: 700
+
+.caption:after
+	content: ""
+	position: absolute
+	left: 0
+	right: 0
+	bottom: 0
+	height: 2px
+	background: #ececec
+	z-index: -1
+
+.caption-tabs
+	overflow: hidden
+	padding-bottom: 2px!important	
+	
+	h2
+		width: 30%
+		padding-right: 30px
+		float: left
+
+	.nav-tabs
+		float: right
+		width: 70%
+		border-color: transparent
+		position: relative
+		z-index: 1
+		top: 2px
+		text-align: right
+		font-weight: 400
+
+		> li	
+			margin-left: 0
+			margin-right: 0
+
+		> li + li
+			margin-left: 60px
+
+.mobmenu-toggle
+	display: none
+	position: absolute
+	right: 15px
+	top: 50%	
+	margin-top: -9px
+	width: 24px
+	height: 20px
+	z-index: 11
+
+	span
+		position: absolute
+		right: 0
+		top: 50%
+		margin-top: -1px
+		display: block
+		height: 2px
+		width: 100%
+		background: $cBase
+		-webkit-transition: background 0s .5s
+		-moz-transition: background 0s .5s
+		-o-transition: background 0s .5s
+		-ms-transition: background 0s .5s
+		transition: background 0s .5s
+
+	span:before, span:after
+		content: ""
+		position: absolute
+		left: 0
+		right: 0
+		height: 2px
+		background: $cBase
+		-webkit-transition-duration: 0.5s, 0.5s
+		-o-transition-duration: 0.5s, 0.5s
+		-moz-transition-duration: 0.5s, 0.5s
+		transition-duration: 0.5s, 0.5s
+		-webkit-transition-delay: 0.5s, 0s
+		-o-transition-delay: 0.5s, 0s
+		-moz-transition-delay: 0.5s, 0s
+		transition-delay: 0.5s, 0s
+
+	span:before
+		top: -6px
+		-webkit-transition-property: top, transform
+		-moz-transition-property: top, transform
+		-o-transition-property: top, transform
+		transition-property: top, transform
+
+	span:after
+		bottom: -6px
+		-webkit-transition-property: bottom, transform
+		-moz-transition-property: bottom, transform
+		-o-transition-property: bottom, transform
+		transition-property: bottom, transform
+
+.mobmenu-toggle.active
+
+	span
+		background: none
+
+	span:before
+		top: 0
+		-moz-transform: rotate(45deg)
+		-ms-transform: rotate(45deg)
+		-webkit-transform: rotate(45deg)
+		-o-transform: rotate(45deg)
+		transform: rotate(45deg)
+	 
+	span:after
+		bottom: 0
+		-moz-transform: rotate(-45deg)
+		-ms-transform: rotate(-45deg)
+		-webkit-transform: rotate(-45deg)
+		-o-transform: rotate(-45deg)
+		transform: rotate(-45deg)
+	 
+	span:before, span:after
+		-webkit-transition-delay: 0s, 0.5s
+		-o-transition-delay: 0s, 0.5s
+		-moz-transition-delay: 0s, 0.5s
+		transition-delay: 0s, 0.5s
+
+.mobmenu:before, .mobmenu:after
+	content: ""
+	position: absolute
+	width: 0
+	height: 100%
+	top: 0
+	background: #fff
+	-webkit-transition: width .5s ease
+	-moz-transition: width .5s ease
+	-o-transition: width .5s ease
+	-ms-transition: width .5s ease
+	transition: width .5s ease
+	z-index: -1
+
+.mobmenu:before	
+	left: 0
+
+.mobmenu:after
+	right: 0
+
+.mobmenu
+	background: transparent
+	display: none
+	position: fixed
+	left: 0
+	bottom: 120%
+	height: 100%	
+	width: 100%
+	z-index: 10	
+	overflow: hidden
+	text-align: center
+
+	> .container
+		height: 100%
+		width: 100%
+		-webkit-transition: opacity .5s ease
+		-moz-transition: opacity .5s ease
+		-o-transition: opacity .5s ease
+		-ms-transition: opacity .5s ease
+		transition: opacity .5s ease
+		opacity: 0
+		background: #fff
+		height: 100%
+		overflow: auto
+		position: relative
+		padding: 60px 0		
+
+	.additionally
+		display: table
+		width: 100%
+		padding-top: 60px
+
+		.wrapper
+			display: table-cell
+			vertical-align: middle
+
+	.mobmenu-links
+		font-size: 16px
+
+		li + li
+			margin-top: 15px
+
+		a:hover
+			color: $cBase
+
+		.sleep
+
+			a
+				padding-left: 23px
+				position: relative
+
+			a:before
+				content: ""
+				position: absolute
+				left: 0
+				top: 50%
+				margin-top: -7px
+				width: 15px
+				height: 15px
+				background: url(../img/icons/sleep.svg) center center no-repeat
+				background-size: contain
+
+	.mobmenu-callback
+		max-width: 180px
+		margin: 50px auto 0		
+
+		a
+			display: block
+			border: 1px solid #DADADA
+			padding: 14px 10px
+			border-radius: 30px
+			font-weight: 600
+			color: #9D9D9D
+			font-size: 14px
+			text-align: center
+
+			i
+				display: inline-block
+				position: relative
+				margin-right: 8px
+				width: 15px
+
+			i:before
+				content: ""
+				position: absolute
+				left: 0
+				top: 0
+				margin-top: -13px
+				width: 15px
+				height: 15px
+				background: url(../img/icons/phone.svg) center center no-repeat
+				background-size: contain				
+
+		a:hover
+			color: $cBase
+			border-color: $cBase
+
+	.mobmenu-navigation
+		display: none
+		text-align: center
+		font-size: 16px
+		padding-bottom: 50px		
+		border-bottom: 1px solid #DADADA
+		position: relative
+
+		li + li
+			margin-top: 15px	
+
+		a:hover
+			color: $cBase
+
+		.discount, .loyalty
+
+			a
+				padding-left: 30px
+				position: relative
+
+			a:before
+				content: ""
+				position: absolute
+				left: 0
+				top: 50%
+				width: 22px
+				height: 22px
+				margin-top: -11px
+				background-size: contain!important
+
+		.discount
+
+			a:before			
+				background: url(../img/icons/discount.svg) center center no-repeat
+
+		.loyalty
+
+			a:before
+				background: url(../img/icons/loyalty.svg) center center no-repeat
+
+	.mobmenu-navigation:after
+		content: ""
+		position: absolute
+		left: 50%
+		margin-left: -6px
+		bottom: -12px
+		width: 12px
+		height: 22px		
+		background: url(../img/icons/arrows.png) center center no-repeat
+		background-size: cover
+
+	.mobmenu-contacts
+		margin-top: 45px
+		text-align: center
+
+		ul
+			display: inline-block
+			text-align: left
+
+		li + li
+			margin-top: 20px
+
+		li
+			padding-left: 38px
+
+		.email:before, .phone:before
+			width: 26px
+			height: 26px
+			margin-top: -13px
+
+	.mobmenu-phones
+		display: none
+		text-align: center
+		padding: 0 5px
+		font-size: 18px
+		color: #9D9D9D
+		font-weight: 700
+		margin-top: 30px
+
+		li + li
+			margin-top: 2px
+
+		a:hover
+			color: $cBase
+
+	.mobmenu-search
+		display: none
+		position: absolute
+		left: 15px
+		top: 2px
+		right: 15px		
+
+		form
+			position: relative
+
+		.text
+			color: #9D9D9D
+			+placeholder-color(#9D9D9D)
+			padding: 0 42px 0 30px
+			height: 38px
+			width: 100%
+			font-size: 14px
+			border-bottom: 1px solid #DADADA
+
+		.text:-webkit-autofill, .text:-webkit-autofill:hover, .text:-webkit-autofill:focus, .text:-webkit-autofill
+			-webkit-text-fill-color: #9D9D9D!important
+			-webkit-box-shadow: 0 0 0px 1000px #FFF inset
+
+		.button
+			background: url(../img/icons/search.svg) 50% 50% no-repeat
+			position: absolute
+			width: 17px
+			height: 100%
+			left: 0
+			top: 0
+
+	.dropdown-menu
+		position: fixed
+		left: 0
+		right: 0
+		top: 0
+		height: 100%
+		z-index: 1000			
+		padding: 60px 0			
+		-webkit-box-shadow: none
+		box-shadow: none
+		overflow: auto
+		border: 0
+
+		.container
+			position: relative
+
+		.close
+			position: absolute
+			right: 15px
+			top: -50px
+			font-size: 14px
+			letter-spacing: normal
+			font-weight: 400
+			opacity: 1
+			color: #3d3d3d
+			border-bottom: 1px dashed #3d3d3d
+
+		.close:hover
+			color: #3d3d3d
+			opacity: 1
+			border-color: transparent
+
+		.sections
+			display: block
+			overflow: hidden
+
+		.section
+			padding: 7px 0 0 260px
+			float: left
+			width: 100%
+			margin: 0 0 40px
+			position: relative
+
+			.section-heading
+				font-weight: 700
+				color: #3D3D3D
+				margin-bottom: 18px		
+
+			.section-footer
+				margin: 14px 0
+
+			.discount
+				padding-left: 30px
+				position: relative
+				font-size: 16px
+				display: inline-block
+
+			.discount:before
+				content: ""
+				position: absolute
+				left: 0
+				top: 50%
+				width: 22px
+				height: 22px
+				margin-top: -12px
+				background-size: contain!important
+				background: url(../img/icons/discount.svg) center center no-repeat
+
+			.discount:hover
+				color: $cBase
+
+			.link
+				padding-bottom: 1px
+				border-bottom:	1px dashed #dadada
+
+			.link:hover
+				border-color: transparent
+
+			.list
+				margin: 0 -10px
+
+				ul
+					display: block
+					width: 100%
+					-moz-column-count: 2
+					-webkit-column-count: 2
+					column-count: 2
+
+					li						
+						margin: 0 0 14px							
+						padding: 0 10px					
+
+				a:hover
+					color: $cBase
+
+		.section-main
+			padding: 0!important
+			width: 200px
+			float: left
+			margin: 0 -200px 0 0
+			position: relative
+			z-index: 1
+
+			.section-heading
+				font-size: 20px
+
+			.image
+
+				img
+					width: 100%
+
+			.section-footer
+				padding-right: 20px
+
+		.section-main:after
+			content: ""
+			position: absolute
+			right: 0
+			top: 0
+			bottom: -9999px
+			width: 2px
+			background: #F5F5F5
+
+		.symptoms
+
+			.list
+
+				ul
+					-moz-column-count: 1
+					-webkit-column-count: 1
+					column-count: 1
+
+		.section:last-child
+			margin-bottom: -5px
+
+.mobmenu.open
+	bottom: 0
+
+.mobmenu.sliders:before, .mobmenu.sliders:after
+	width: 50%
+
+.mobmenu.showcontent
+
+	> .container
+		opacity: 1
+
+.topline
+	padding: 12px 0
+	box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.05)	
+
+	.container
+		font-size: 0
+		letter-spacing: -10px
+		position: relative
+
+		> div
+			display: inline-block
+			vertical-align: top
+			letter-spacing: normal
+
+	.topline-cities
+		font-size: 16px
+		width: 25%
+
+		> div
+			float: left
+
+			> a
+				position: relative
+				padding-bottom: 1px
+				display: block
+
+			> a:after
+				content: ""
+				position: absolute
+				left: 0
+				right: 0
+				bottom: 0
+				height: 1px
+				border-bottom: 1px dashed #DADADA
+				opacity: 1
+
+			a:hover:after
+				opacity: 0
+
+		.city			
+			color: $cBase
+			position: relative
+			padding-right: 20px
+			margin-right: 10px
+			max-width: 160px
+			white-space: pre
+
+			a
+				overflow: hidden
+
+		.city:after
+			content: ""
+			position: absolute
+			right: 0
+			top: 50%
+			margin-top: -7px
+			width: 13px
+			height: 15px
+			background: url(../img/icons/address.svg) center center no-repeat
+			background-size: contain
+
+		.shops
+			color: #9D9D9D
+
+	.topline-menu
+		padding: 2px 0 1px		
+		width: 75%
+		text-align: right
+		font-size: 0
+
+		li
+			font-size: 14px
+			display: inline-block
+			vertical-align: middle
+			margin-left: 45px
+
+		.sleep
+
+			a
+				padding-left: 23px
+				position: relative
+
+			a:before
+				content: ""
+				position: absolute
+				left: 0
+				top: 50%
+				margin-top: -8px
+				width: 15px
+				height: 15px
+				background: url(../img/icons/sleep.svg) center center no-repeat
+				background-size: contain
+
+		a:hover
+			color: $cBase
+
+.header
+	padding: 30px 0
+	
+	.container
+		font-size: 0
+		letter-spacing: -10px
+
+		> div
+			display: inline-block
+			vertical-align: middle
+			letter-spacing: normal
+
+	.header-logo
+		width: 15.8%
+		padding-right: 15px
+
+		img
+			width: 100%
+			max-width: 170px
+
+	.header-search
+		width: 28.2%
+		padding: 0 15px
+
+		form
+			position: relative
+
+		.text
+			color: #9D9D9D
+			+placeholder-color(#9D9D9D)
+			padding: 0 0 0 30px
+			height: 34px
+			width: 100%
+			font-size: 14px
+			border-bottom: 1px solid #DADADA
+
+		.text:-webkit-autofill, .text:-webkit-autofill:hover, .text:-webkit-autofill:focus, .text:-webkit-autofill
+			-webkit-text-fill-color: #9D9D9D!important
+			-webkit-box-shadow: 0 0 0px 1000px #FFF inset
+
+		.button
+			background: url(../img/icons/search.svg) 50% 50% no-repeat
+			position: absolute
+			width: 17px
+			height: 100%
+			left: 0
+			top: 0
+
+	.header-callback
+		width: 19.6%
+		padding: 0 15px
+
+		a
+			display: block
+			border: 1px solid #DADADA
+			padding: 14px 10px
+			border-radius: 30px
+			font-weight: 600
+			color: #9D9D9D
+			font-size: 14px
+			text-align: center
+
+			i
+				display: inline-block
+				position: relative
+				margin-right: 8px
+				width: 15px
+
+			i:before
+				content: ""
+				position: absolute
+				left: 0
+				top: 0
+				margin-top: -13px
+				width: 15px
+				height: 15px
+				background: url(../img/icons/phone.svg) center center no-repeat
+				background-size: contain				
+
+		a:hover
+			color: $cBase
+			border-color: $cBase
+
+	.header-phones
+		text-align: center
+		padding: 0 5px
+		width: 20%
+		font-size: 24px
+		color: #9D9D9D
+		font-weight: 700
+
+		li + li
+			margin-top: 2px
+
+		a:hover
+			color: $cBase
+
+	.header-controls
+		text-align: right
+		width: 16.4%
+		padding: 0 0 0 15px
+
+		ul
+			font-size: 0
+			letter-spacing: -10px
+
+		li
+			letter-spacing: normal
+			display: inline-block
+			vertical-align: middle
+
+		li + li
+			margin-left: 22px
+
+		a
+			display: block
+			background-size: contain!important
+
+		.user
+			background: url(../img/icons/user.svg) center center no-repeat
+			width: 20px
+			height: 24px		
+
+		.user.active
+			background: url(../img/icons/user-a.svg) center center no-repeat
+
+		.user:hover
+			background: url(../img/icons/user-h.svg) center center no-repeat
+
+		.favorites
+			background: url(../img/icons/favorites.svg) center center no-repeat
+			width: 23px
+			height: 21px
+
+		.favorites.active
+			background: url(../img/icons/favorites-a.svg) center center no-repeat
+
+		.favorites:hover
+			background: url(../img/icons/favorites-h.svg) center center no-repeat
+
+		.list
+			background: url(../img/icons/list.svg) center center no-repeat
+			width: 24px
+			height: 24px
+
+		.list.active
+			background: url(../img/icons/list-a.svg) center center no-repeat
+
+		.list:hover
+			background: url(../img/icons/list-h.svg) center center no-repeat		
+
+		.cart
+			background: url(../img/icons/cart.svg) center center no-repeat
+			width: 24px
+			height: 24px
+			position: relative			
+
+			span
+				position: absolute
+				right: -10px
+				top: -13px
+				display: inline-block
+				min-width: 18px
+				height: 18px
+				line-height: 18px
+				font-size: 10px
+				font-weight: 600
+				color: #fff
+				background: $cBase
+				text-align: center
+				border-radius: 9px
+				padding: 0 1px
+
+		.cart.active
+			background: url(../img/icons/cart-a.svg) center center no-repeat
+
+		.dropdown.open .cart, .cart:hover
+			background: url(../img/icons/cart-h.svg) center center no-repeat
+
+		.dropdown
+
+			.dropdown-toggle
+				position: relative
+
+			.dropdown-toggle:after
+				content: ""
+				position: absolute
+				bottom: -15px
+				height: 2px
+				left: -10px
+				right: -10px
+				background: $cBase
+				opacity: 0
+
+		.dropdown.open
+
+			.dropdown-toggle:after
+				opacity: 1
+
+		.dropdown-menu
+			left: auto			
+			right: -10px			
+			width: 280px
+			margin: 15px 0 0
+			padding: 0
+			background: #FEFEFE
+			border: 0
+			border-radius: 0
+			-webkit-box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1)
+			box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1)
+
+			a
+				display: inline-block
+
+		.cart-items
+			padding: 30px 20px
+
+			.item
+				display: table
+				width: 100%
+
+				> div
+					display: table-cell
+					vertical-align: top
+
+				.item-image
+					width: 40px
+					font-size: 0
+					position: relative
+					padding-bottom: 20px
+
+					a:hover
+						opacity: .8
+
+					img
+						width: 100%
+
+					.delete
+						display: block
+						width: 15px
+						height: 15px
+						background: url(../img/icons/delete.svg) center center no-repeat
+						background-size: contain
+						position: absolute
+						left: 50%
+						margin-left: -7px
+						bottom: 0
+
+					.delete:hover
+						background: url(../img/icons/delete-h.svg) center center no-repeat
+
+				.item-info
+					padding-left: 10px
+					font-size: 12px
+
+					.name
+						color: #3D3D3D
+						font-weight: 600
+						margin-bottom: 6px
+
+					.name:hover
+						color: $cBase
+
+					.size
+						color: #9D9D9D
+						margin-bottom: 8px
+
+					.price
+
+						.price-current
+							font-size: 14px
+							color: $cBase
+							margin-right: 10px
+							display: inline-block
+							position: relative
+							padding-right: 12px
+							vertical-align: bottom
+							font-weight: 600
+
+						.price-current:after
+							content: ""
+							position: absolute
+							display: block
+							top: 3px
+							right: 0
+							width: 8px
+							height: 10px
+							background: url(../img/icons/rub.svg) center center no-repeat
+							background-size: contain
+
+						.price-old
+							color: #9D9D9D							
+							position: relative
+							padding-right: 10px
+							display: inline-block
+							vertical-align: bottom
+
+						.price-old:before
+							content: ""
+							position: absolute
+							left: 0
+							right: 0
+							top: 50%
+							margin-top: -1px
+							height: 1px
+							background: #9D9D9D
+
+						.price-old:after
+							content: ""
+							position: absolute
+							display: block
+							top: 2px
+							right: 0
+							width: 7px
+							height: 9px
+							background: url(../img/icons/rub-o.svg) center center no-repeat
+							background-size: contain
+
+			.item + .item
+				margin-top: 24px
+				padding-top: 24px
+				border-top: 1px solid #F5F5F5
+
+		.cart-footer
+			padding: 25px 20px 30px
+			background: #F8F8F7
+			text-align: center
+
+			.total
+				font-size: 14px
+				color: #9D9D9D
+
+				.total-price
+					color: $cBase
+					padding-right: 12px
+					font-size: 16px
+					font-weight: 600
+					position: relative
+					display: inline-block
+
+				.total-price:after
+					content: ""
+					position: absolute
+					display: block
+					top: 3px
+					right: 0
+					width: 9px
+					height: 12px
+					background: url(../img/icons/rub.svg) center center no-repeat
+					background-size: contain
+
+			.actions
+				margin-top: 15px
+
+				a
+					display: inline-block
+					width: 100%
+					max-width: 200px
+
+.navigation
+	background: #f8f7f6
+	box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.05)	
+	position: relative
+
+	> .container
+
+		> ul
+			font-size: 0		
+			text-align: justify		
+			margin: 0 -8px
+
+			> li
+				font-size: 16px
+				display: inline-block
+				vertical-align: middle
+
+				> a
+					display: block
+					padding: 20px 8px
+					position: relative
+
+				> a:after
+					content: ""
+					position: absolute
+					left: 0
+					right: 0
+					bottom: 0
+					height: 2px
+					background: $cBase
+					opacity: 0
+
+				> a:hover:after
+					opacity: 1
+
+			.discount, .loyalty
+
+				a
+					padding-left: 30px
+
+				a:before
+					content: ""
+					position: absolute
+					left: 0
+					top: 50%
+					width: 22px
+					height: 22px
+					margin-top: -12px
+					background-size: contain!important
+
+			.discount
+
+				a:before			
+					background: url(../img/icons/discount.svg) center center no-repeat
+
+			.loyalty
+
+				a:before
+					background: url(../img/icons/loyalty.svg) center center no-repeat
+
+			.dropdown.open
+
+				> a:after
+					opacity: 1
+
+		> ul:after
+			width: 100%
+			height: 0
+			visibility: hidden
+			overflow: hidden
+			content: ''
+			display: inline-block	
+
+	.dropdown
+		position: static
+
+		.dropdown-menu
+			left: 0			
+			right: 0
+			width: auto
+			margin: 0
+			padding: 40px 0 60px
+			background: #FEFEFE
+			border: 0
+			border-radius: 0
+			-webkit-box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1)
+			box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1)
+				
+			a
+				display: inline-block
+
+		.sections
+			display: table
+			width: 100%
+
+		.section
+			font-size: 14px
+			padding: 10px 55px
+			color: #9D9D9D
+			display: table-cell
+			vertical-align: top
+
+			.section-heading
+				font-weight: 700
+				color: #3D3D3D
+				margin-bottom: 18px		
+
+			.section-footer
+				margin-top: 10px
+
+			.discount
+				padding-left: 30px
+				position: relative
+				font-size: 16px
+
+			.discount:before
+				content: ""
+				position: absolute
+				left: 0
+				top: 50%
+				width: 22px
+				height: 22px
+				margin-top: -12px
+				background-size: contain!important
+				background: url(../img/icons/discount.svg) center center no-repeat
+
+			.discount:hover
+				color: $cBase
+
+			.link
+				padding-bottom: 1px
+				border-bottom:	1px dashed #dadada
+
+			.link:hover
+				border-color: transparent
+
+			.list
+				margin: 0 -10px
+
+				ul
+					display: flex
+					flex-direction: column
+					flex-wrap: wrap
+					max-height: 260px					
+
+					li						
+						margin-bottom: 14px							
+						padding: 0 10px
+
+				a:hover
+					color: $cBase
+
+		.section-main
+			padding: 0!important
+			width: 200px
+
+			.section-heading
+				font-size: 24px
+
+			.section-body
+				height: 245px
+				display: table
+				width: 100%
+
+			.image
+				display: table-cell
+				vertical-align: middle
+				font-size: 0
+
+				img
+					width: 100%
+
+			.section-footer
+				padding-right: 20px
+
+		.symptoms
+			width: 36%
+			padding-right: 15px
+
+		.section + .section
+			border-left: 2px solid #F5F5F5
+
+
+
+
+
+.banners
+	font-size: 0
+	margin: 30px 0 0
+	overflow: hidden
+
+	.banners-carousel
+		padding: 0 15px
+		position: relative
+
+	.banners-carousel:before, .banners-carousel:after
+		content: ""
+		position: absolute
+		top: 0
+		bottom: 0
+		width: 14%
+		z-index: 1
+
+	.banners-carousel:before		
+		left: 0		
+		background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%)
+		background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%)
+		background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%)
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1)
+
+	.banners-carousel:after
+		right: 0
+		background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%)
+		background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%)
+		background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%)
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1)
+
+	.banner
+		padding: 0 5px
+
+	a
+		display: block
+
+	a:hover
+		opacity: 1
+
+	img
+		width: 100%
+
+	.slick-arrow
+		display: block
+		position: absolute
+		top: 50%
+		margin-top: -35px
+		z-index: 10
+		width: 26px
+		height: 50px
+		font-size: 0
+		opacity: .8
+		-webkit-transition: all .3s
+		-moz-transition: all .3s
+		-o-transition: all .3s
+		-ms-transition: all .3s
+		transition: all .3s
+		background-size: contain!important
+
+	.slick-arrow:hover
+		opacity: 1
+
+	.slick-prev
+		background: url(../img/icons/prev.png) 50% 50% no-repeat				
+		left: 25px
+
+	.slick-next
+		background: url(../img/icons/next.png) 50% 50% no-repeat
+		right: 25px
+
+.slick-dots
+	text-align: center
+	display: block
+	width: 100%
+	margin-top: 20px
+
+	li
+		display: inline-block
+		vertical-align: middle
+		font-size: 0
+		width: 10px
+		height: 10px
+		background: none
+		padding: 0
+		margin: 0 10px
+		border-radius: 50%
+		border: 2px solid #DADADA
+		cursor: pointer
+
+		button
+			display: none
+
+	li.slick-active
+		background: $cBase
+		border-color: $cBase
+
+.products
+	margin-top: 70px	
+
+	.tab-content
+		margin-top: 30px
+
+.nav-tabs 
+	font-size: 16px
+	border-bottom: 2px solid #ececec
+	text-align: center
+
+	> li	
+		float: none
+		display: inline-block
+		vertical-align: middle
+		margin: 0 40px -2px
+
+		> a
+			padding: 0 8px 15px
+			margin: 0
+			line-height: 1.2
+			border: 0
+			border-bottom: 2px solid transparent
+			border-radius: 0
+			color: #3d3d3d
+
+		> a:hover, > a:focus
+			background: none
+
+	> li.active > a, > li.active > a:hover, > li.active > a:focus
+		color: #3d3d3d
+		background: none
+		border: 0
+		border-bottom: 2px solid $cBase
+
+.products-list
+	margin: -2px
+	font-size: 0
+	letter-spacing: -10px
+	text-align: center
+
+.labels
+	font-size: 14px
+	font-weight: 700
+
+	li
+		padding-left: 14px
+		position: relative
+
+	li + li
+		margin-top: 6px
+
+	li:before
+		content: ""
+		position: absolute
+		left: 0
+		top: 50%
+		margin-top: -3px
+		width: 8px
+		height: 8px
+		border-radius: 50%
+
+	.popular
+		color: $cBase
+
+	.popular:before
+		background: $cBase
+
+	.novelty
+		color: #12CCAB
+
+	.novelty:before	
+		background: #12CCAB
+
+.product
+	padding: 2px
+	width: 25%
+	display: inline-block
+	vertical-align: top
+	letter-spacing: normal
+	text-align: left
+	
+	.wrapper
+		padding: 30px
+		background: #fafaf9	
+
+	.image
+		height: 180px
+		display: table
+		width: 100%
+		font-size: 0
+		text-align: center
+
+		a
+			display: table-cell
+			vertical-align: middle
+
+		a:hover
+			opacity: .8
+
+		img			
+			display: inline-block
+			max-width: 100%
+			max-height: 160px
+
+	.type
+		font-size: 14px
+		color: #9D9D9D
+
+		a
+			position: relative
+			border-bottom: 1px dashed #DADADA
+
+		a:hover
+			border-color: transparent
+
+	.name
+		font-size: 16px
+		font-weight: 700
+		margin-top: 12px
+
+		a:hover
+			color: $cBase
+
+	.product-footer
+		overflow: hidden
+		width: 100%
+		display: table
+		margin-top: 25px
+
+		> div
+			display: table-cell
+			vertical-align: middle
+
+	.price
+		padding-right: 30px		
+
+		span			
+			display: inline-block
+			position: relative			
+
+		.price-current
+			color: $cBase
+			padding-right: 12px
+			font-size: 16px
+			font-weight: 600
+
+		.price-current:after
+			content: ""
+			position: absolute
+			display: block
+			top: 3px
+			right: 0
+			width: 9px
+			height: 12px
+			background: url(../img/icons/rub.svg) center center no-repeat
+			background-size: contain
+
+		.price-old
+			color: #9D9D9D
+			padding-right: 10px
+			font-size: 12px
+			position: relative
+
+		.price-old:before
+			content: ""
+			position: absolute
+			left: 0
+			right: 0
+			top: 50%
+			margin-top: -1px
+			height: 1px
+			background: #9D9D9D
+
+		.price-old:after
+			content: ""
+			position: absolute
+			display: block
+			top: 2px
+			right: 0
+			width: 7px
+			height: 9px
+			background: url(../img/icons/rub-o.svg) center center no-repeat
+			background-size: contain
+
+	.cart		
+		width: 35px
+		height: 35px
+
+		a
+			display: block
+			width: 35px
+			height: 35px
+			background: url(../img/icons/cart-product.svg) center center no-repeat
+			background-size: contain
+
+.product.incart
+	
+	.wrapper
+		background: #fff
+
+	.cart
+
+		a
+			background: url(../img/icons/cart-product-a.svg) center center no-repeat
+			background-size: contain
+
+.subscribe-1
+	margin-top: 120px
+
+	.subscribe-content
+		background: #f8f8f7
+		width: 100%
+		display: table
+
+		> div
+			display: table-cell
+			vertical-align: middle
+
+	.image
+		font-size: 0
+		text-align: center
+		position: relative
+		width: 46%		
+
+		.wrapper
+			position: absolute
+			max-width: 100%			
+			max-height: 310px
+			left: 0
+			right: 0
+			top: -20px
+			padding: 0 30px
+
+		img
+			max-width: 100%
+
+	.form
+		width: 54%
+		padding: 65px 70px 65px 35px
+
+		.form-heading
+			font-size: 24px
+			font-weight: 700
+
+		.form-info
+			margin-top: 18px
+			font-size: 14px
+
+		form
+			margin-top: 28px
+
+			input
+				height: 58px
+				background: #fff
+				width: 100%
+				font-size: 14px
+				+placeholder-color(#9d9d9d)
+				color: #9d9d9d
+				padding: 0 20px
+				border-radius: 4px
+				border: 1px solid #dadada
+
+			.button
+				height: 58px
+				background: $cBase
+				color: #fff
+				font-size: 14px
+				text-align: center
+				border-radius: 4px
+				width: 100%
+				padding: 0 15px
+
+			.button:hover
+				background: $cBase - #101010
+
+.about
+	margin-top: 120px
+	
+	.about-content
+		width: 100%
+		display: table
+
+	.section
+		width: 50%
+		display: table-cell
+		vertical-align: top
+		padding: 75px 115px
+		background-size: cover!important
+		background-position: center center!important
+		background-repeat: no-repeat!important
+		border-top: 2px solid #ececec
+		border-bottom: 2px solid #ececec
+
+		.section-heading
+			font-size: 24px
+			font-weight: 700
+
+		.section-info
+			margin-top: 20px
+			font-size: 14px
+			line-height: 1.6
+
+		.section-more
+			margin-top: 45px
+
+			a
+				border-bottom: 1px dashed #d9d9d9
+
+			a:hover
+				border-bottom: 1px solid transparent
+
+	.section:first-child
+		border-color: $cBase
+
+.articles
+	margin-top: 80px
+
+	.slick-list:before
+		content: ""
+		position: absolute
+		left: 2px
+		top: 2px
+		right: 2px
+		bottom: 2px
+		background: #f8f8f7	
+		z-index: -1	
+
+.articles-list
+	margin: -2px
+	letter-spacing: -10px
+	font-size: 0
+	text-align: center
+	position: relative
+
+.article
+	padding: 2px
+	width: 25%
+	display: inline-block
+	vertical-align: top
+	letter-spacing: normal
+	text-align: left
+	font-size: 14px	
+
+	.wrapper
+		padding: 30px
+		background: #fefefe
+		-webkit-transition: background .3s
+		-moz-transition: background .3s
+		-o-transition: background .3s
+		-ms-transition: background .3s
+		transition: background .3s
+
+	.article-name
+		font-size: 16px
+		font-weight: 700
+		line-height: 1.3
+
+		a
+			color: #3d3d3d
+			border-bottom: 1px solid transparent
+
+	.article-meta
+		padding-left: 14px
+		position: relative
+		margin-top: 10px
+		color: #9D9D9D 		
+
+		.tag
+			font-weight: 700
+
+		.date
+			margin-top: 4px
+
+	.article-meta:before
+		content: ""
+		position: absolute
+		left: 0
+		top: 5px
+		width: 8px
+		height: 8px
+		border-radius: 50%
+		background: #dadada
+
+	.article-text
+		margin-top: 18px
+		line-height: 1.5
+
+.article:hover
+	
+	.wrapper
+		background: #f8f8f7
+
+	.article-name
+
+		a
+			border-color: #3d3d3d
+
+		a:hover
+			border-color: transparent
+
+.subscribe-2
+	margin-top: 60px
+	padding: 70px 0
+	box-shadow: 0 -3px 3px rgba(0, 0, 0, 0.05)	
+
+	.heading
+		font-size: 16px
+		font-weight: 700
+		margin-bottom: 25px
+
+	.form
+
+		.info
+			font-size: 14px
+			line-height: 1.6
+			padding-top: 6px
+
+		form
+
+			input
+				height: 58px
+				background: #fff
+				width: 100%
+				font-size: 14px
+				+placeholder-color(#9d9d9d)
+				color: #9d9d9d
+				padding: 0 20px
+				border-radius: 4px
+				border: 1px solid #dadada
+
+			.button
+				height: 58px
+				background: $cBase
+				color: #fff
+				font-size: 14px
+				text-align: center
+				border-radius: 4px
+				width: 100%
+				padding: 0 15px
+				max-width: 200px
+
+			.button:hover
+				background: $cBase - #101010
+
+.social
+	
+	ul
+		overflow: hidden
+		margin: -15px
+
+		li
+			float: left
+			margin: 15px			
+	
+	a
+		display: block
+		width: 44px
+		height: 44px
+		border-radius: 50%
+	
+	.vk
+		background: url(../img/icons/vk.svg) center center no-repeat #f8f8f7
+
+	.vk:hover
+		background: url(../img/icons/vk-h.svg) center center no-repeat $cBase
+
+	.yt
+		background: url(../img/icons/yt.svg) center center no-repeat #f8f8f7
+
+	.yt:hover
+		background: url(../img/icons/yt-h.svg) center center no-repeat $cBase
+
+	.ok
+		background: url(../img/icons/ok.svg) center center no-repeat #f8f8f7
+
+	.ok:hover
+		background: url(../img/icons/ok-h.svg) center center no-repeat $cBase
+
+	.fb
+		background: url(../img/icons/fb.svg) center center no-repeat #f8f8f7
+
+	.fb:hover
+		background: url(../img/icons/fb-h.svg) center center no-repeat $cBase
+
+.footer
+	background: #F8F8F7
+	padding: 80px 0 40px
+	overflow: hidden
+
+	.footer-sections
+		display: table
+		width: 100%
+
+		.section
+			font-size: 16px
+			display: table-cell
+			vertical-align: top
+			padding: 10px 60px 15px
+			text-align: left
+
+			.section-heading
+				font-size: 20px
+				font-weight: 700
+				margin-bottom: 30px
+
+			.section-content
+				color: #9D9D9D
+
+				.menu
+
+					a:hover
+						text-decoration: underline
+						color: #3d3d3d
+
+				li + li
+					margin-top: 25px
+
+		.section:first-child
+			padding-left: 0
+
+		.section:last-child
+			padding-right: 0
+
+		.section + .section
+			border-left: 3px solid #efefee
+
+	.cities
+		margin-top: 35px
+		font-size: 14px
+
+		a
+			position: relative
+			padding-bottom: 1px
+			display: inline-block
+
+		a:after
+			content: ""
+			position: absolute
+			left: 0
+			right: 0
+			bottom: 0
+			height: 1px
+			border-bottom: 1px dashed #DADADA
+			opacity: 1
+
+		a:hover:after
+			opacity: 0
+
+		.city
+			position: relative
+			padding-left: 18px
+
+		.city:after
+			content: ""
+			position: absolute
+			left: 0
+			top: 50%
+			margin-top: -8px
+			width: 13px
+			height: 15px
+			background: url(../img/icons/address.svg) center center no-repeat
+			background-size: contain
+
+		.shops
+			margin-top: 10px
+
+	.phones
+		font-size: 20px
+		font-weight: 700
+		margin-top: 30px
+
+		li + li
+			margin-top: 2px
+
+		a
+			color: #3D3D3D
+
+		a:hover
+			color: $cBase
+			text-decoration: none
+
+	.callback
+		margin-top: 15px
+
+		a
+			display: block
+			border: 1px solid #DADADA
+			padding: 14px 10px
+			border-radius: 30px
+			font-weight: 600
+			color: #9D9D9D
+			font-size: 14px
+			text-align: center
+			max-width: 190px
+
+		a:hover
+			color: $cBase
+			border-color: $cBase
+
+	.systems
+		margin: 36px -10px -10px
+
+		img
+			max-width: 78px
+			max-height: 26px
+			display: inline-block
+			vertical-align: middle
+			margin: 10px
+
+	.footer-copy
+		margin-top: 90px
+		text-align: center
+		font-size: 14px
+		color: #9D9D9D
+
+.modal-backdrop
+	background: #fff
+
+.modal-backdrop.in
+	filter: alpha(opacity=80)
+	opacity: .8
+
+.modal-sm
+	width: 100%
+	max-width: 390px
+
+	.modal-content
+		padding: 56px 55px 66px
+
+.modal-md
+	width: 100%
+	max-width: 970px
+
+	.modal-content
+		padding: 56px 100px 66px
+
+.modal
+	text-align: center
+	font-size: 0
+	letter-spacing: -10px
+
+	.modal-content 
+		border: 0
+		letter-spacing: normal
+		border-radius: 0
+		-webkit-box-shadow: none
+		box-shadow: none		
+		position: relative		
+		border-top: 2px solid $cBase
+		background: #FEFEFE		
+		-webkit-box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1)
+		box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1)
+	
+	.modal-header
+		margin: 0
+		border: 0
+		padding: 0
+
+		.title			
+
+			h4
+				font-size: 24px
+				font-weight: 700
+				line-height: 1.4
+
+			p
+				font-size: 14px				
+				margin-top: 15px
+				line-height: 1.6	
+
+	.modal-body
+		padding: 0
+		margin-top: 35px
+
+	.btn
+		width: 100%
+
+	.modal-dialog
+		display: inline-block
+		text-align: center
+		vertical-align: middle
+		margin: 0
+		padding: 10px
+
+	.close
+		position: absolute
+		right: 20px
+		top: 20px
+		float: none
+		text-shadow: none
+		filter: alpha(opacity=100)
+		opacity: 1
+		width: 20px
+		height: 20px
+		background: url(../img/icons/close.svg) center center no-repeat
+		background-size: contain
+
+	.close:hover
+		background: url(../img/icons/close-h.svg) center center no-repeat
+
+.modal:before
+	display: inline-block
+	vertical-align: middle
+	content: ""
+	height: 100%
+
+.modal-form
+	
+	form
+		max-width: 232px
+		margin: 0 auto
+
+		.row
+			margin: 0 -10px
+
+			> div
+				padding: 0 10px
+
+.modal-cities
+
+	.modal-body
+		font-size: 16px
+		text-align: left		
+		display: flex
+		flex-direction: column
+		flex-wrap: wrap
+		max-height: 400px
+		margin-left: -15px
+		margin-right: -15px
+		margin-bottom: -46px
+		align-content: space-around
+
+	.cities
+		margin-bottom: 46px		
+		padding: 0 15px
+
+		span
+			display: block
+			font-weight: 700
+			margin-bottom: 18px
+
+		li + li
+			margin-top: 15px
+
+		a:hover
+			color: $cBase
+
+.page
+	
+	.page-title
+		font-size: 24px
+		color: #3D3D3D
+		font-weight: 700
+		line-height: 1.2
+		margin-top: 38px
+		padding-bottom: 30px
+		border-bottom: 2px solid #F5F5F5
+
+.categories
+	
+	.categories-heading
+		font-size: 16px
+		font-weight: 700
+		margin-bottom: 20px
+
+	.categories-list
+
+		li + li
+			margin-top: 18px
+
+		a:hover
+			color: $cBase
+
+.catalog
+	
+	.container
+		position: relative
+
+	.products
+		margin-top: 30px
+	
+	.product
+		width: 33.33333333%
+		display: inline-block
+
+.filter-toggle
+	font-size: 16px
+	text-align: right
+	top: 32px
+	right: 15px
+	position: absolute
+	color: #9d9d9d
+	display: none
+
+	a
+		padding-right: 28px
+		position: relative
+
+		span
+			border-bottom: 1px dashed #DADADA
+
+	a:hover
+
+		span
+			border-color: transparent
+
+	a:after
+		content: ""
+		position: absolute
+		right: 0
+		top: 50%
+		margin-top: -9px
+		width: 20px
+		height: 20px
+		background: url(../img/icons/filter.png) center center no-repeat
+		background-size: contain
+
+.filter
+	border-right: 2px solid #F5F5F5
+	color: #9D9D9D
+	font-size: 14px
+
+	.filter-content
+		position: relative		
+
+		.close
+			display: none
+			position: absolute
+			right: 15px
+			top: 12px
+			font-size: 14px
+			letter-spacing: normal
+			font-weight: 400
+			opacity: 1
+			color: #3d3d3d
+			border-bottom: 1px dashed #3d3d3d
+
+		.close:hover
+			color: #3d3d3d
+			opacity: 1
+			border-color: transparent
+	
+	.filter-section
+		padding: 34px 30px
+		border-bottom: 2px solid #F5F5F5
+
+		.heading
+			font-weight: 700
+			padding-right: 35px
+			position: relative
+
+			.rub
+				display: inline-block
+				vertical-align: middle
+				background: url(../img/icons/rub-p.svg) center center no-repeat
+				background-size: contain
+				width: 9px
+				height: 10px
+				position: relative
+				top: -1px
+
+		.list
+
+			ul
+				margin-top: 24px
+
+			li
+				position: relative
+
+			li + li
+				margin-top: 15px
+
+			li:nth-child(n+7)
+				display: none
+
+		.all
+			margin-top: 25px
+
+			a
+				display: inline-block
+				padding-left: 12px
+				position: relative
+
+				span
+					padding-bottom: 1px
+					display: inline-block
+					border-bottom: 1px dashed #dadada
+
+			a:before, a:after
+				content: ""
+				position: absolute				
+				background: #9D9D9D
+
+			a:before
+				left: 0
+				top: 8px
+				width: 7px
+				height: 1px
+
+			a:after
+				left: 3px
+				top: 5px
+				width: 1px
+				height: 7px
+
+			a:hover
+
+				span
+					border-color: transparent
+
+			a.open:after
+				display: none
+
+		.links
+			margin-top: 25px
+
+			a
+				display: inline-block
+				padding-bottom: 1px
+				border-bottom: 1px dashed #dadada
+
+			a:hover
+				border-color: transparent
+
+	.colors
+
+		.list
+
+			li + li
+				margin-top: 25px
+
+	.has-list
+
+		.heading
+			cursor: pointer			
+
+		.heading:after
+			content: ""
+			position: absolute
+			right: 0
+			top: 6px
+			width: 13px
+			height: 8px
+			background: url(../img/icons/arrow-section.svg) center center no-repeat
+			background-size: contain
+			-webkit-transition: all .3s
+			-moz-transition: all .3s
+			-o-transition: all .3s
+			-ms-transition: all .3s
+			transition: all .3s
+
+	.has-list.up
+
+		.heading:after			
+			-moz-transform: rotate(180deg)
+			-ms-transform: rotate(180deg)
+			-webkit-transform: rotate(180deg)
+			-o-transform: rotate(180deg)
+			transform: rotate(180deg)
+
+.sort
+	font-size: 14px
+	color: #9d9d9d
+	margin-top: 34px
+	text-align: left
+		
+	p
+		display: inline-block
+		vertical-align: middle
+		margin-right: 10px
+		float: none
+
+	ul
+		display: inline-block
+		vertical-align: middle
+		font-size: 0
+		letter-spacing: -10px
+
+		li
+			letter-spacing: normal
+			display: inline-block
+			font-size: 14px
+			margin-right: 20px
+
+			a
+				display: inline-block
+				border-bottom: 1px dashed #DADADA
+				position: relative			
+
+			a:hover
+				border-color: transparent
+
+		.active
+
+			a
+				padding-right: 10px
+
+			a:after
+				content: ""
+				position: absolute
+				right: 0
+				top: 4px
+				margin-left: 3px
+				width: 9px
+				height: 12px
+				background-size: contain!important
+				background: url(../img/icons/arrow-sort.svg) center center no-repeat
+
+		.desc
+
+			a:after
+				top: 3px
+				-moz-transform: rotate(180deg)
+				-ms-transform: rotate(180deg)
+				-webkit-transform: rotate(180deg)
+				-o-transform: rotate(180deg)
+				transform: rotate(180deg)
+
+.view
+	text-align: right
+	font-size: 14px
+	color: #9d9d9d
+	margin-top: 25px
+
+	a
+		display: inline-block
+		padding: 10px 15px 10px 20px
+		font-size: 14px
+		border: 1px solid #dadada
+		border-radius: 20px
+		position: relative
+
+	a:hover
+		border-color: $cBase
+		color: $cBase
+	
+	.view-discount:before
+		content: ""
+		position: absolute
+		left: -10px
+		top: 50%
+		width: 22px
+		height: 22px
+		margin-top: -11px
+		background: url(../img/icons/discount.svg) center center no-repeat #fff
+		background-size: contain
+
+.pagination
+	font-size: 0
+	letter-spacing: -10px
+	margin: 50px 0 0
+	text-align: center
+	display: block
+	text-transform: uppercase
+
+	> li
+		display: inline-block
+		vertical-align: top
+		letter-spacing: normal
+		margin: 0
+		letter-spacing: normal
+		position: relative
+
+		> a, > span
+			text-align: center
+			padding: 0 30px
+			margin: 0
+			font-size: 14px
+			color: #c1c1c1
+			background: none
+			border: 0
+			height: 20px
+			line-height: 20px
+			border-radius: 0!important
+			display: block
+
+		> a:hover, a:focus
+			border: 0
+			color: #3D3D3D
+			background: none			
+
+	> li + li
+		border-left: 1px solid #ececec
+
+	> .active
+
+		> a, > a:hover
+			border: 0
+			background: none
+			color: #c1c1c1
+
+	> .active:after
+		content: ""
+		position: absolute
+		left: 0
+		right: 0
+		bottom: -6px
+		height: 2px
+		background: $cBase
+
+	.first, .last
+
+		a
+			position: relative
+
+		a:before
+			content: ""
+			position: absolute
+			top: 50%
+			margin-top: -5px
+			width: 12px
+			height: 9px			
+			background: url(../img/icons/arrow-pagination.svg) center center no-repeat
+			background-size: contain
+
+	.first
+
+		a:before
+			left: 0
+			background: url(../img/icons/arrow-pagination.svg) center center no-repeat			
+
+		a:hover:before
+			left: 8px
+
+	.last
+
+		a:before
+			right: 0
+			-moz-transform: rotate(180deg)
+			-ms-transform: rotate(180deg)
+			-webkit-transform: rotate(180deg)
+			-o-transform: rotate(180deg)
+			transform: rotate(180deg)
+
+		a:hover:before
+			right: 8px
+
+.product-detail
+
+	.images
+		overflow: hidden
+		position: relative
+
+		.labels
+			position: absolute
+			left: 100px
+			top: 5px
+			z-index: 2			
+
+		.discount
+			position: absolute
+			right: 0
+			top: 0
+			z-index: 2
+			min-width: 46px
+			height: 46px
+			line-height: 46px
+			border-radius: 50%
+			background: $cBase
+			color: #fff
+			font-size: 14px
+			font-weight: 700
+			text-align: center
+			padding: 0 5px
+
+		.images-thumbs
+			width: 70px
+			float: left
+			margin-right: -70px
+			text-align: center
+			position: relative
+			z-index: 1
+
+			.slick-arrow
+				display: inline-block				
+				width: 26px
+				height: 15px
+				font-size: 0
+				opacity: .4
+				-webkit-transition: all .3s
+				-moz-transition: all .3s
+				-o-transition: all .3s
+				-ms-transition: all .3s
+				transition: all .3s
+				background-size: contain!important
+
+			.slick-arrow:hover
+				opacity: 1
+
+			.slick-prev
+				background: url(../img/icons/arrow-prev.svg) 50% 50% no-repeat
+				left: 0
+
+			.slick-next
+				background: url(../img/icons/arrow-next.svg) 50% 50% no-repeat
+				right: 0
+
+			.thumb
+				height: 70px
+				border: 1px solid transparent
+				display: flex
+				align-items: center
+				justify-content: center
+				border-radius: 3px
+				cursor: pointer
+				padding: 10px
+
+				img
+					max-width: 100%
+					max-height: 50px
+
+			.thumb.slick-current
+				border-color: $cBase
+
+			img
+				width: 100%
+
+		.images-slides
+			font-size: 0
+			float: left
+			width: 100%
+			padding-left: 130px
+			padding-right: 30px
+			text-align: center			
+
+			.slide 
+				height: 390px
+				display: flex
+				align-items: center
+				justify-content: center
+
+				img
+					max-width: 100%
+					max-height: 390px
+					display: inline-block
+
+	.information
+		margin-bottom: 30px
+
+		.controls
+			margin-top: 30px
+			font-size: 0
+			letter-spacing: -10px
+
+			li
+				display: inline-block
+				vertical-align: top
+				font-size: 14px
+				letter-spacing: normal
+				margin-right: 15px
+
+			a
+				display: block					
+				padding-left: 30px
+				position: relative
+			
+			a:before
+				content: ""
+				position: absolute
+				left: 0
+				top: -2px
+				background-size: contain!important
+				width: 24px
+				height: 20px
+
+			.favorite:before
+				background: url(../img/icons/favorites.svg) center center no-repeat						
+
+			.favorite.active:before
+				background: url(../img/icons/favorites-h.svg) center center no-repeat
+
+			.compare:before
+				background: url(../img/icons/list.svg) center center no-repeat
+
+			.compare.active:before
+				background: url(../img/icons/list-h.svg) center center no-repeat
+
+	.name
+		font-weight: 700
+		font-size: 24px
+		color: #3D3D3D
+		margin-bottom: 30px
+
+	.art
+		font-size: 14px
+		color: #9d9d9d
+		display: inline-block
+		margin-right: 10px
+		vertical-align: top
+
+		span
+			color: #3d3d3d
+
+	.actions
+		background: none
+		margin: 0
+		padding: 0
+
+		.buy
+			padding: 0
+
+	.rating
+		font-size: 0
+		letter-spacing: -10px
+		margin-right: 10px
+		display: inline-block
+		vertical-align: top
+
+		span
+			letter-spacing: normal
+			display: inline-block
+			vertical-align: middle
+			width: 15px
+			height: 15px
+			background: url(../img/icons/star.svg) center center no-repeat
+			background-size: contain!important
+
+		span + span
+			margin-left: 5px
+
+	.rating[data-rating="1"]
+
+		span:nth-child(-n+1)
+			background: url(../img/icons/star-a.svg) center center no-repeat
+
+	.rating[data-rating="2"]
+
+		span:nth-child(-n+2)
+			background: url(../img/icons/star-a.svg) center center no-repeat
+
+	.rating[data-rating="3"]
+
+		span:nth-child(-n+3)
+			background: url(../img/icons/star-a.svg) center center no-repeat
+
+	.rating[data-rating="4"]
+
+		span:nth-child(-n+4)
+			background: url(../img/icons/star-a.svg) center center no-repeat
+
+	.rating[data-rating="5"]
+
+		span:nth-child(-n+5)
+			background: url(../img/icons/star-a.svg) center center no-repeat
+
+	.link
+		color: #9d9d9d
+		display: inline-block
+		vertical-align: top
+		font-size: 14px
+
+		a
+			border-bottom: 1px dashed #9d9d9d
+
+		a:hover
+			border-color: transparent
+
+	.select		
+		font-size: 0
+
+		> p
+			color: #9d9d9d
+			display: inline-block
+			vertical-align: middle
+			margin-right: 16px
+			font-size: 14px
+
+		.ui-selectmenu-button.ui-button
+			max-width: 160px
+			display: inline-block
+			vertical-align: middle
+
+		.links
+			text-align: center
+			margin-top: 10px
+
+			a
+				padding-bottom: 1px
+				border-bottom: 1px dashed #dadada
+
+			a:hover
+				border-color: transparent
+
+	.features
+		color: #9d9d9d
+		margin-top: 35px
+
+		.features-heading
+			font-size: 16px
+			font-weight: 700
+			margin-bottom: 20px
+
+		.features-text
+			line-height: 1.4
+			font-size: 14px
+			color: #3d3d3d
+
+			li
+				position: relative
+				padding-left: 10px
+
+			li:before
+				content: ""
+				position: absolute
+				left: 0
+				top: 8px
+				width: 4px
+				height: 4px
+				border-radius: 50%
+				background: #3d3d3d
+
+			li + li
+				margin-top: 12px
+
+	.characteristics
+		padding-left: 100px
+		margin-top: 28px
+
+		ul
+			display: table
+			width: 100%
+
+		li
+			display: table-cell
+			vertical-align: top
+			width: 33.33333333%
+			font-size: 14px
+			text-align: center
+			padding: 5px 10px
+			border-left: 1px solid #ececec
+
+			> span
+				font-weight: 600
+				color: #9d9d9d
+				margin-bottom: 10px
+				display: block
+
+			> p
+				color: #3d3d3d
+				font-size: 16px
+
+		li:last-child
+			border-right: 1px solid #ececec
+
+		.stiffness
+			font-size: 0
+			letter-spacing: -10px
+			margin-top: -1px
+
+			span
+				letter-spacing: normal
+				display: inline-block
+				margin: 0 5px
+				width: 8px
+				height: 8px
+				border-radius: 50%
+				border: 2px solid #9d9d9d			
+
+		.stiffness[data-stiffness="1"]
+
+			span:nth-child(-n+1)
+				border-color: $cBase
+
+		.stiffness[data-stiffness="2"]
+
+			span:nth-child(-n+2)
+				border-color: $cBase
+
+		.stiffness[data-stiffness="3"]
+
+			span:nth-child(-n+3)
+				border-color: $cBase
+
+		.stiffness[data-stiffness="4"]
+
+			span:nth-child(-n+4)
+				border-color: $cBase
+
+		.stiffness[data-stiffness="5"]
+
+			span:nth-child(-n+5)
+				border-color: $cBase
+
+		.stiffness + .stiffness
+			margin-top: 4px
+
+	.sizes
+
+		.uislider
+			font-size: 0
+
+			> p
+				display: inline-block
+				width: 100px
+				padding-right: 20px
+				vertical-align: middle
+				color: #9d9d9d
+				font-size: 14px
+
+			.uislider-container
+				display: inline-block
+				vertical-align: middle
+				width: 100%
+				max-width: 190px
+
+		.uislider + .uislider
+			margin-top: 30px
+
+	.sizes + *
+		margin-top: 50px
+
+	.nav-tabs
+		margin-top: 70px
+
+		> li
+			margin-left: 25px
+			margin-right: 25px
+
+	.description, .specification, .certificates, .reviews
+		margin-top: 45px
+
+	.description
+		font-size: 16px
+		color: #3d3d3d
+		line-height: 1.8
+
+		p + *, * + p, img + *
+			margin-top: 40px
+
+		* + h3, * + h4
+			margin-top: 50px
+
+		h3, h4
+			font-size: 16px
+			font-weight: 700
+			color: #9d9d9d
+			margin-bottom: 15px
+
+		h3 + *, h4 + *
+			margin-top: 0
+
+		ul
+
+			li
+				position: relative
+				padding-left: 10px
+
+			li:before
+				content: ""
+				position: absolute
+				left: 0
+				top: 12px
+				width: 4px
+				height: 4px
+				border-radius: 50%
+				background: #3d3d3d
+
+		ol
+			list-style-type: decimal
+			list-style-position: inside
+
+		li + li
+			margin-top: 5px
+
+	.specification
+		font-size: 14px
+		line-height: 1.4
+		color: #3d3d3d
+
+		tr:nth-child(even)
+			background: #f8f8f7
+
+		td
+			padding: 11px 15px
+			width: 50%
+
+		td:first-child
+			padding-left: 60px
+
+		td:last-child
+			padding-right: 60px
+
+		b
+			font-weight: 700
+
+.certificates
+	font-size: 0
+	letter-spacing: -10px
+	margin-left: -15px
+	margin-right: -15px
+	margin-bottom: -25px
+
+	.certificate
+		width: 20%
+		display: inline-block
+		vertical-align: top
+		letter-spacing: normal
+		padding: 5px 15px 25px
+
+		a
+			display: block
+			border: 1px solid #DADADA
+			padding: 20px
+			overflow: hidden
+
+			img
+				width: 100%
+				-webkit-transition: all .3s
+				-moz-transition: all .3s
+				-o-transition: all .3s
+				-ms-transition: all .3s
+				transition: all .3s
+
+		a:hover
+
+			img
+				-webkit-transform: scale(1.1)
+				-ms-transform: scale(1.1)
+				transform: scale(1.1)
+
+		p
+			text-align: center
+			font-size: 14px
+			color: #9D9D9D
+			margin-top: 10px
+			line-height: 1.4
+
+.reviews
+	padding-right: 15px
+
+	.reviews-heading
+		margin-bottom: 50px
+
+		p
+			font-size: 16px
+			font-weight: 700
+			color: #3D3D3D
+			margin-bottom: 20px
+
+		.count
+			color: #9D9D9D
+			display: inline-block
+			vertical-align: top
+
+	.review
+
+		.rating
+			margin: 0
+
+			span
+				width: 11px
+				height: 11px
+
+		.wrapper
+			padding: 40px
+			background: #F8F8F7
+			border-radius: 3px
+
+		.author
+			float: left
+			padding-right: 15px
+			color: #3D3D3D
+			font-weight: 700
+
+		.date
+			float: right
+			padding-left: 15px
+			text-align: right
+			color: #9D9D9D
+
+		.review-header
+			overflow: hidden			
+
+		.review-rating
+			margin-top: 15px
+
+		.review-text
+			color: #3D3D3D
+			line-height: 1.6
+			margin-top: 20px
+
+	.review + .review
+		margin-top: 15px
+
+	.comment
+		padding: 25px 40px
+
+		.comment-header
+			overflow: hidden
+
+			.author
+				padding-left: 30px
+				position: relative
+
+			.author:before
+				content: ""
+				position: absolute
+				left: 0
+				top: 3px
+				width: 10px
+				height: 10px
+				border-radius: 50%
+				background: $cBase
+
+		.comment-text
+			margin-top: 15px
+			color: #3D3D3D
+			padding-left: 30px
+
+.newreview
+	padding: 45px 27px 33px
+	border: 1px solid #F8F8F7
+	border-top: 0
+	margin-left: -15px
+
+	.newreview-heading
+		text-align: center
+		color: #3D3D3D
+		margin-bottom: 30px
+
+		span
+			font-size: 16px
+			font-weight: 700
+			display: block
+
+		p
+			margin-top: 10px
+			line-height: 1.6
+
+	.btn
+		width: 100%
+
+	.newrating
+		font-size: 0
+		text-align: center
+		margin-bottom: 25px
+
+		p
+			font-size: 14px
+			display: inline-block
+			margin-right: 8px
+			color: #3D3D3D
+			vertical-align: middle
+
+		.rating-input
+			display: inline-block
+			vertical-align: middle
+
+		label
+			float: right
+			cursor: pointer
+			display: block
+			width: 20px
+			height: 15px
+			background: url(../img/icons/star.svg) center center no-repeat
+			background-size: contain!important
+			position: relative
+			-webkit-transition: all .3s
+			-moz-transition: all .3s
+			-o-transition: all .3s
+			-ms-transition: all .3s
+			transition: all .3s
+
+		input
+			display: none
+
+		input + label
+			padding: 0
+
+		label:hover, label:hover ~ label, input[type="radio"]:checked ~ label
+			background: url(../img/icons/star-a.svg) center center no-repeat
+
+	.form-group-attach
+		text-align: center
+
+		#photo
+			display: none
+
+		.selectphoto
+			color: #9D9D9D
+			font-weight: 600
+			font-size: 14px
+			position: relative
+			padding-left: 27px					
+			cursor: pointer					
+
+		.selectphoto:before
+			content: ""
+			position: absolute
+			left: 0
+			top: -2px
+			width: 17px
+			height: 22px
+			background: url(../img/icons/attach.svg) center center no-repeat
+			background-size: contain!important
+			-webkit-transition: none
+			-moz-transition: none
+			-o-transition: none
+			-ms-transition: none
+			transition: none
+
+		.selectphoto.selected:before
+			background: url(../img/icons/attach-a.svg) center center no-repeat
+
+		p
+			font-size: 12px
+			color: #9D9D9D
+			line-height: 1.4
+			max-width: 240px
+			margin: 15px auto 0
+
+.product-actions, .actions
+	background: #F8F8F7
+	-webkit-box-shadow: none 0px 3px 10px rgba(0, 0, 0, 0.2)
+	box-shadow: none 0px 3px 10px rgba(0, 0, 0, 0.2)
+	
+	.buy
+		padding: 40px
+
+	.buy-price
+
+		p
+			color: #9D9D9D
+			font-weight: 700
+			margin-bottom: 5px
+
+		.price-current
+			font-size: 24px
+			color: $cBase			
+			display: inline-block
+			position: relative
+			padding-right: 18px
+			font-weight: 700
+
+		.price-current:after
+			content: ""
+			position: absolute
+			display: block
+			top: 5px
+			right: 0
+			width: 14px
+			height: 18px
+			background: url(../img/icons/rub-b.svg) center center no-repeat
+			background-size: contain
+
+		.price-old
+			color: #9D9D9D							
+			position: relative
+			padding-right: 10px
+			display: inline-block
+			margin-left: 20px
+
+		.price-old:before
+			content: ""
+			position: absolute
+			left: 0
+			right: 0
+			top: 50%
+			height: 1px
+			background: #9D9D9D
+
+		.price-old:after
+			content: ""
+			position: absolute
+			display: block
+			top: 3px
+			right: 0
+			width: 8px
+			height: 11px
+			background: url(../img/icons/rub-o.svg) center center no-repeat
+			background-size: contain
+
+	.buy-buttons
+		margin-top: 20px
+
+		.btn
+			display: block
+			width: 100%
+
+		.btn + .btn
+			margin-top: 15px
+
+	.buy-links
+		margin-top: 20px
+		text-align: center
+
+		.link
+			color: #9D9D9D
+			padding-bottom: 1px
+			border-bottom:	1px dashed #dadada
+
+		.link:hover
+			border-color: transparent
+
+	.controls
+		border-top: 1px solid #DADADA
+
+		ul
+			font-size: 0
+			letter-spacing: -10px
+
+			li
+				display: inline-block
+				vertical-align: top
+				letter-spacing: normal
+				width: 50%
+				text-align: center
+				font-size: 14px
+				color: #9D9D9D
+
+				a
+					display: block					
+					padding: 24px 15px
+
+					i						
+						display: block
+						margin: 0 auto 5px
+						background-size: contain!important
+						width: 24px
+						height: 20px
+
+				.favorite
+
+					i
+						background: url(../img/icons/favorites.svg) center center no-repeat						
+
+				.favorite.active
+
+					i
+						background: url(../img/icons/favorites-h.svg) center center no-repeat
+
+				.compare
+
+					i
+						background: url(../img/icons/list.svg) center center no-repeat
+
+				.compare.active
+
+					i
+						background: url(../img/icons/list-h.svg) center center no-repeat
+
+			li:nth-child(even)
+				border-left: 1px solid #DADADA
+
+.buy-counter, .counter
+	position: relative
+	height: 36px
+	color: #9D9D9D
+	font-size: 16px
+	text-align: center
+	margin-top: 18px
+	padding: 0 40px
+
+	a
+		display: block
+		width: 36px
+		height: 36px
+		line-height: 34px
+		position: absolute
+		top: 0
+		background: #fff
+		border: 1px solid #DADADA
+		border-radius: 3px
+
+	a:hover
+		background: $cBase
+		color: #fff
+
+	.down
+		left: 0
+
+	.up
+		right: 0
+
+	.count
+		width: 100%
+		height: 100%
+		background: #fff
+		padding: 0 15px
+		text-align: center
+		border: 1px solid #DADADA
+		border-radius: 3px
+
+.page-text	
+	
+	.breadcrumb
+		margin-bottom: 25px
+	
+	.page-title
+		margin: 0
+		border: 0
+		padding: 0 0 40px
+
+	.content
+		line-height: 1.8
+		font-size: 16px
+		overflow: hidden
+		font-size: 0
+		letter-spacing: -10px
+
+		*
+			letter-spacing: normal
+			font-size: 16px
+
+		a
+			color: #12ccab
+			border-bottom: 1px solid #12ccab
+
+		a:hover
+			border-color: transparent
+
+		b
+			font-weight: 700
+
+		* + h2, * + h3, * + h4, p + *, * + p, img + *
+			margin-top: 40px
+
+		p + ul, p + ol
+			margin-top: 15px
+
+		p > img
+			margin-top: 5px
+
+		* + table
+			margin-top: 18px
+
+		h2
+			font-size: 18px
+			font-weight: 700
+			color: #9d9d9d
+
+		h2, h3, h4
+			margin-bottom: 22px
+
+		h2 + *, h3 + *, h4 + *
+			margin-top: 0			
+		
+		h3, h4
+			font-size: 16px
+			font-weight: 700
+			color: #9d9d9d			
+
+		ul
+
+			li
+				position: relative
+				padding-left: 10px
+
+			li:before
+				content: ""
+				position: absolute
+				left: 0
+				top: 12px
+				width: 4px
+				height: 4px
+				border-radius: 50%
+				background: #3d3d3d
+
+		ol
+			list-style-type: decimal
+			list-style-position: inside
+
+		li + li
+			margin-top: 5px
+
+		table
+			border-top: 1px solid #f8f8f7
+
+			thead
+				font-weight: 700
+				color: #9d9d9d
+
+			tbody
+
+				tr:nth-child(odd)
+					background: #f8f8f7
+
+			td
+				padding: 11px 15px
+				width: 50%
+
+			td:first-child
+				padding-left: 60px
+
+			td:last-child
+				padding-right: 60px
+
+			b
+				font-weight: 700
+
+.sticky
+	position: fixed
+	z-index: 10
+
+.stop
+	position: relative
+	z-index: 10
+
+.cart
+	
+	.page-title
+		margin-bottom: 35px
+	
+	.product
+		width: 100%
+		display: table
+		padding: 30px 40px 30px 30px
+		overflow: hidden
+		position: relative
+
+		> div
+			display: table-cell
+			vertical-align: top
+
+		.product-image
+			width: 145px
+			font-size: 0
+			text-align: center
+
+			img
+				max-width: 100%	
+
+		.product-content
+			padding-left: 30px
+
+		.name
+			font-weight: 400
+
+		.size
+			color: #9D9D9D
+			font-size: 12px
+			margin-top: 10px
+
+		.counter			
+			float: left
+			width: 42%
+			margin-top: 20px
+
+		.price
+			width: 58%
+			padding: 0 0 0 20px
+			text-align: right
+			float: right
+			margin-top: 30px
+
+			.price-current
+				font-size: 18px
+				padding-right: 14px
+
+			.price-current:after
+				top: 4px
+				width: 10px
+				height: 13px
+
+			.price-old
+				margin-left: 18px
+
+		.delete
+			display: block
+			width: 25px
+			height: 25px
+			background: url(../img/icons/delete-cart.svg) center center no-repeat
+			background-size: contain
+			position: absolute
+			right: 10px
+			top: 30px
+
+		.delete:hover
+			background: url(../img/icons/delete-cart-h.svg) center center no-repeat
+
+		.bonus
+			margin-top: 15px
+			padding-left: 32px
+			position: relative
+			font-size: 12px
+			color: #9D9D9D
+
+			.bonus-price				
+				display: inline-block
+				position: relative
+				padding-right: 10px
+
+			.bonus-price:after
+				content: ""
+				position: absolute
+				display: block
+				top: 2px
+				right: 0
+				width: 7px
+				height: 9px
+				background: url(../img/icons/rub-o.svg) center center no-repeat
+				background-size: contain
+
+			p
+				color: #E5007C
+				font-size: 18px
+				margin-top: 2px
+
+		.bonus:before
+			content: ""
+			position: absolute
+			left: 0
+			top: 50%
+			margin-top: -11px
+			width: 22px
+			height: 22px
+			background: url(../img/icons/bonus.svg) center center no-repeat
+			background-size: contain
+
+	.product + .product
+		border-top: 1px solid #DADADA
+
+	.product-bonus
+		background: #F8F8F7
+
+	.sum
+		font-size: 16px
+		color: #9D9D9D
+		margin-top: 30px
+		font-weight: 700
+
+		span
+			font-size: 24px
+			color: $cBase			
+			display: inline-block
+			position: relative
+			padding-right: 18px
+			font-weight: 400
+
+		span:after
+			content: ""
+			position: absolute
+			display: block
+			top: 5px
+			right: 0
+			width: 14px
+			height: 18px
+			background: url(../img/icons/rub.svg) center center no-repeat
+			background-size: contain
+
+	.cart-order
+		padding-left: 20px
+
+		.heading
+			font-size: 24px
+			font-weight: 700
+			color: #3D3D3D
+			margin-bottom: 40px
+
+		.section
+			padding: 50px
+			background: #F8F8F7
+			box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1)
+			border-radius: 3px
+
+		.section + .section
+			border-top: 5px solid #fff
+
+		.block
+
+			.block-name
+				font-size: 16px
+				font-weight: 700
+				color: #9D9D9D
+				margin-bottom: 20px
+
+				a
+					font-weight: 400
+					border-bottom: 1px dashed #DADADA
+
+				a:hover
+					border-color: transparent
+
+			.form-control
+				background: #fff
+
+			.list
+
+				li + li
+					margin-top: 18px
+
+		.block + .block
+			margin-top: 45px
+
+		.points, .promo
+			font-size: 16px
+
+			p
+				display: inline-block
+				width: 52%
+				padding-right: 20px
+				position: relative
+				font-weight: 600
+				color: #9D9D9D
+				padding-left: 45px
+				vertical-align: middle
+
+			p:before
+				content: ""
+				position: absolute
+				left: 0
+				top: 50%
+
+			a
+				display: inline-block
+				vertical-align: middle
+				color: #9D9D9D
+				border-bottom: 1px dashed #dadada
+
+			a:hover
+				border-color: transparent
+
+			input
+				width: 200px
+				height: 46px
+				text-align: center
+				padding: 0 15px
+				display: inline-block
+				vertical-align: middle
+
+		.points
+
+			p
+
+				span
+					color: $cBase
+
+			p:before
+				width: 30px
+				height: 22px
+				background: url(../img/icons/points.svg) center center no-repeat
+				background-size: contain
+				margin-top: -11px
+
+		.promo
+			margin-top: 40px
+
+			p:before
+				width: 30px
+				height: 30px
+				margin-top: -15px
+				background: url(../img/icons/promo.svg) center center no-repeat
+				background-size: contain
+
+		.total
+			padding: 50px 100px
+			background: #fff
+
+			table
+				font-size: 16px
+
+				td
+					padding-top: 12px
+					padding-bottom: 12px
+
+				td:first-child
+					padding-right: 10px
+					color: #9D9D9D
+
+				td:last-child
+					padding-left: 10px
+					color: #3D3D3D
+					font-weight: 700
+					text-align: right
+
+				tbody
+
+					tr:last-child
+
+						td
+							padding-bottom: 26px
+
+			.price
+				padding-right: 12px
+				position: relative
+
+			.price:after
+				content: ""
+				position: absolute
+				display: block
+				top: 5px
+				right: 0
+				width: 9px
+				height: 12px
+				background: url(../img/icons/rub-bb.svg) center center no-repeat
+				background-size: contain
+
+			.sum
+				border-top: 1px solid #DADADA
+
+				td:first-child
+					padding-top: 32px
+
+		.btn
+			margin-top: 20px
+			width: 100%
+			padding: 16px 15px
+
+		.callbefore
+			text-align: center
+			margin-top: 22px
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+
+
++max-screen(1199)
+	
+	.breadcrumb
+		margin-bottom: 45px
+	
+	.caption
+		font-size: 22px
+
+	.caption-tabs
+		
+		.nav-tabs
+
+			> li + li
+				margin-left: 45px
+
+	.topline
+		padding: 10px 0
+
+		.topline-cities
+
+			.city
+				max-width: 110px
+
+		.topline-menu
+
+			li
+				margin-left: 25px
+
+			.sleep
+
+				a
+					padding-left: 22px
+
+	.header
+		padding: 30px 0
+		
+		.header-logo
+			width: 17%
+
+		.header-search
+			width: 24%
+
+		.header-callback
+			width: 22%
+
+			a
+				padding: 12px 10px
+
+		.header-phones
+			width: 21%
+			font-size: 20px
+
+		.header-controls
+			width: 16%
+
+			li + li
+				margin-left: 14px
+
+			.dropdown
+
+				.dropdown-toggle:after
+					bottom: -12px
+					left: 0
+					right: 0
+
+			.dropdown-menu
+				right: 0
+				margin-top: 12px
+
+	.navigation
+
+		> .container
+
+			> ul
+				margin: 0 -6px
+
+				> li
+					font-size: 15px
+
+					> a
+						padding: 15px 6px
+
+				.discount, .loyalty
+
+					a
+						padding-left: 25px
+
+					a:before
+						width: 18px
+						height: 18px
+						margin-top: -9px
+
+		.dropdown
+
+			.dropdown-menu
+				padding: 30px 0 40px
+
+			.section
+				padding: 7px 26px 10px
+
+				.section-heading
+					margin-bottom: 15px
+
+				.discount
+					padding-left: 25px
+					font-size: 14px
+
+				.discount:before
+					width: 18px
+					height: 18px
+					margin-top: -9px
+
+				.list
+					margin: 0 -10px
+
+					ul
+						display: flex
+						flex-direction: column
+						flex-wrap: wrap
+						max-height: 250px					
+
+						li						
+							margin-bottom: 12px							
+
+			.section-main
+				width: 120px
+
+				.section-heading
+					font-size: 20px
+
+			.symptoms
+				width: 41%
+
+	.banners
+		margin: 25px 0 0
+
+		.banners-carousel
+			padding: 0 10px
+
+		.slick-arrow
+			margin-top: -30px
+			width: 20px
+			height: 40px
+
+	.slick-dots
+
+		li
+			margin: 0 7px
+
+	.products
+		margin-top: 60px
+		
+		.tab-content
+			margin-top: 25px
+
+	.nav-tabs 
+
+		> li	
+			margin: 0 30px -2px
+
+			> a
+				padding: 0 6px 12px
+
+	.product
+		width: 33.33333333%
+
+	.subscribe-1
+		margin-top: 100px
+
+		.image
+			width: 49%
+
+			.wrapper
+				top: -10px
+				padding: 0 20px
+
+			img
+				max-width: 100%
+
+		.form
+			width: 51%
+			padding: 55px 50px 55px 30px
+
+			.form-heading
+				font-size: 22px
+
+			form
+
+				input, .button
+					height: 52px
+
+	.about
+		margin-top: 100px
+		
+		.section
+			padding: 65px 85px
+
+			.section-heading
+				font-size: 22px
+
+			.section-more
+				margin-top: 40px
+
+	.articles
+		margin-top: 60px
+
+	.article
+		width: 33.33333333%
+
+		.wrapper
+			padding: 25px
+
+	.subscribe-2
+		padding: 60px 0		
+
+		.heading
+			margin-bottom: 20px
+
+		.form
+
+			.info
+				padding-top: 3px
+
+			form
+
+				input
+					height: 52px
+
+				.button
+					height: 52px
+					max-width: 150px
+
+	.social
+		
+		ul
+			margin: -12px
+
+			li
+				margin: 12px
+		
+		a
+			width: 42px
+			height: 42px
+
+	.footer
+		padding: 70px 0 40px
+
+		.footer-sections
+
+			.section
+				font-size: 14px
+				padding: 10px 25px 15px
+
+				.section-heading
+					font-size: 18px
+					margin-bottom: 25px
+
+				.section-content
+
+					li + li
+						margin-top: 23px
+
+			.section + .section
+				border-left: 2px solid #efefee
+
+		.cities
+			margin-top: 25px
+
+		.phones
+			font-size: 18px
+			margin-top: 25px
+
+		.systems
+			margin: 25px -10px -10px
+
+			img
+				max-width: 65px
+				max-height: 22px
+
+		.footer-copy
+			margin-top: 70px
+
+	.modal-md
+		max-width: 840px
+
+		.modal-content
+			padding: 56px 80px 66px
+
+	.page
+		
+		.page-title
+			font-size: 22px
+			margin-top: 35px
+			padding-bottom: 28px
+
+	.catalog
+	
+		.product
+			width: 50%
+
+	.filter
+
+		.uislider-values
+			margin-top: 22px
+
+		.filter-section
+			padding: 30px 30px 30px 0
+
+			.all, .links
+				margin-top: 20px
+
+	.sort
+		margin-top: 30px
+		
+		ul
+
+			li
+				margin-right: 15px
+
+	.view
+		margin-top: 18px
+
+		a
+			padding: 10px 12px 10px 15px
+
+		.view-discount:before
+			left: -8px
+			width: 18px
+			height: 18px
+			margin-top: -8px
+
+	.pagination
+		margin: 45px 0 0
+
+		> li
+
+			> a, > span
+				padding: 0 25px
+
+		.first
+
+			a:hover:before
+				left: 5px
+
+		.last
+
+			a:hover:before
+				right: 5px
+
+	.page-text
+
+		.breadcrumb
+			margin-bottom: 20px
+		
+		.page-title
+			margin: 0
+			padding: 0 0 30px
+
+		.content
+			line-height: 1.7
+
+			* + h2, * + h3, * + h4, p + *, * + p, img + *
+				margin-top: 35px
+
+			h2 + *, h3 + *, h4 + *
+				margin-top: 0
+
+			p + ul, p + ol
+				margin-top: 15px
+
+			* + table
+				margin-top: 18px
+
+			h2
+				font-size: 18px
+
+			h2, h3, h4
+				margin-bottom: 20px
+
+			h3, h4
+				font-size: 16px
+
+			ul
+
+				li:before
+					top: 12px
+
+			table
+
+				td
+					padding: 10px 15px
+
+				td:first-child
+					padding-left: 50px
+
+				td:last-child
+					padding-right: 50px
+
+	.product-detail
+		margin-right: -15px
+		
+		.images
+			
+			.labels
+				left: 80px
+
+			.discount
+				right: 0
+				width: 45px
+				min-height: 45px
+				line-height: 45px
+
+			.images-thumbs
+				width: 60px
+				margin-right: -60px
+
+				.slick-arrow
+					width: 22px
+					height: 14px
+
+				.thumb
+					height: 60px
+
+					img
+						max-height: 45px
+
+			.images-slides
+				padding-left: 90px
+				padding-right: 10px
+
+				.slide 
+					height: 340px
+
+					img
+						max-height: 320px
+
+		.information
+			margin-bottom: 25px
+
+		.name
+			font-size: 22px
+			margin-bottom: 25px
+
+		.art
+			font-size: 14px
+			display: block
+			margin: 0 0 12px
+
+		.sizes
+
+			.uislider
+
+				> p
+					width: 100px
+					padding-right: 10px
+
+				.uislider-container
+					max-width: 130px
+
+			.uislider + .uislider
+				margin-top: 25px
+
+		.sizes + *
+			margin-top: 32px
+
+		.select
+
+			> p
+				width: 100px
+				margin-right: 0
+				padding-right: 10px
+				font-size: 14px
+
+			.ui-selectmenu-button.ui-button
+				max-width: 140px
+
+		.features
+			margin-top: 30px
+
+			.features-heading
+				font-size: 14px
+				margin-bottom: 15px
+
+			.features-text
+				font-size: 14px
+
+				li + li
+					margin-top: 10px
+
+		.characteristics
+			padding-left: 0
+			margin-top: 25px
+
+			li				
+
+				> p
+					font-size: 14px
+
+			.stiffness			
+
+				span
+					margin: 0 4px
+					width: 7px
+					height: 7px
+
+		.nav-tabs
+			margin-top: 65px
+
+			> li
+				margin-left: 14px
+				margin-right: 14px
+
+		.description, .specification, .certificates, .reviews
+			margin-top: 40px
+
+		.description
+			font-size: 15px
+			line-height: 1.7
+
+			p + *, * + p, img + *
+				margin-top: 35px
+
+			* + h3, * + h4
+				margin-top: 45px
+
+			h3, h4
+				font-size: 14px
+				margin-bottom: 15px
+
+			h3 + *, h4 + *
+				margin-top: 0
+
+			ul
+
+				li:before
+					top: 11px
+
+		.specification
+
+			td
+				padding: 10px 15px
+
+			td:first-child
+				padding-left: 40px
+
+			td:last-child
+				padding-right: 40px
+
+	.certificates		
+
+		.certificate
+			width: 25%
+
+			a
+				padding: 15px
+
+	.reviews
+		padding-right: 0
+
+		.reviews-heading
+			margin-bottom: 45px
+
+		.review
+
+			.wrapper
+				padding: 35px
+
+			.review-text
+				line-height: 1.5
+
+		.review + .review
+			margin-top: 15px
+
+		.comment
+			padding: 25px 35px
+
+	.newreview
+		padding: 35px
+		border: 1px solid #ececec
+		margin: 30px 0 0
+		text-align: center
+
+		.newreview-heading			
+			margin-bottom: 25px
+
+			p
+				
+				br
+					display: none
+
+		.btn
+			width: auto
+
+	.product-actions
+		margin-left: 15px
+		
+		.buy
+			padding: 35px
+
+		.buy-price
+
+			.price-current
+				font-size: 22px
+				margin-right: 15px
+				padding-right: 16px
+
+			.price-current:after
+				top: 4px
+				width: 12px
+				height: 18px
+
+		.controls
+
+			ul
+
+				li
+
+					a
+						padding: 20px 10px
+
+	.buy-counter, .counter		
+		height: 34px
+		padding: 0 38px
+
+		a
+			width: 34px
+			height: 34px
+			line-height: 34px
+
+	.cart
+		
+		.product
+			padding: 25px 35px 25px 0
+
+			.product-image
+				width: 130px
+
+			.counter			
+				float: none
+				width: 140px
+
+			.price
+				width: 100%
+				padding: 0
+				text-align: left
+				float: none
+				margin-top: 20px
+
+			.delete
+				right: 0
+
+		.product-bonus
+			background: #F8F8F7
+			padding-left: 15px
+			padding-right: 40px
+
+			.delete
+				right: 15px
+				top: 25px
+
+		.cart-order
+			padding-left: 0
+
+			.heading
+				font-size: 22px
+				margin-bottom: 35px
+
+			.section
+				padding: 40px
+
+			.block + .block
+
+			.points, .promo
+
+				p
+					width: 60%
+					max-width: 330px
+
+				input
+					width: 140px
+					height: 44px
+
+			.promo
+				margin-top: 35px
+
+			.total
+				padding: 40px 50px
+
+				table
+
+					td
+						padding-top: 10px
+						padding-bottom: 10px
+
+					tbody
+
+						tr:last-child
+
+							td
+								padding-bottom: 22px
+
+				.sum
+
+					td:first-child
+						padding-top: 28px
+
++max-screen(991)
+	
+	.breadcrumb
+		margin-bottom: 40px
+	
+	.ui-selectmenu-button.ui-button
+		padding: 12px 15px
+	
+	.caption
+		font-size: 20px
+		margin-bottom: 25px
+
+	.caption-tabs
+		
+		.nav-tabs
+
+			> li + li
+				margin-left: 30px
+
+	.mobmenu-toggle, .mobmenu
+		display: block
+
+	.mobmenu
+
+		.mobmenu-navigation
+			display: table
+			width: 100%
+
+			ul
+				display: table-cell
+				vertical-align: middle
+
+	.topline		
+
+		.topline-cities
+			width: 100%
+			font-size: 14px
+			display: block
+			padding-right: 40px
+
+			.city
+				max-width: 135px
+
+		.topline-menu
+			display: none!important
+
+	.header
+		padding: 20px 0
+		
+		.header-logo
+			width: 19%
+
+		.header-search
+			width: 35%
+
+			.text
+				height: 30px
+
+		.header-callback
+			display: none!important
+
+		.header-phones
+			width: 26%
+			font-size: 18px
+
+		.header-controls
+			width: 20%
+
+			li + li
+				margin-left: 12px
+
+	.navigation
+		display: none
+
+		> .container
+
+			> ul
+				margin: 0 -4px
+
+				> li
+					font-size: 12px
+
+					> a
+						padding: 12px 4px
+
+				.discount, .loyalty
+
+					a
+						padding-left: 20px
+
+					a:before
+						width: 15px
+						height: 15px
+						margin-top: -8px
+
+	.banners
+		margin: 0
+
+		.slick-arrow
+			margin-top: -30px
+			width: 15px
+			height: 30px
+
+	.slick-dots
+
+		li
+			margin: 0 4px
+
+	.products
+		margin-top: 50px
+
+		.tab-content
+			margin-top: 20px
+
+	.nav-tabs 
+		font-size: 15px
+
+		> li	
+			margin: 0 20px -2px
+
+			> a
+				padding: 0 4px 10px
+
+	.product
+		width: 50%
+		
+		.wrapper
+			padding: 25px
+
+	.subscribe-1	
+		margin-top: 80px
+
+		.image
+			width: 44%
+			padding: 20px
+
+			.wrapper
+				position: static
+				top: -10px
+				padding: 00
+
+		.form
+			width: 56%
+			padding: 45px 30px 45px 10px
+
+			.form-heading
+				font-size: 20px
+
+			form
+
+				input, .button
+					height: 44px
+
+	.about
+		margin-top: 80px
+		
+		.section
+			padding: 50px 55px
+
+			.section-heading
+				font-size: 20px
+
+			.section-more
+				margin-top: 35px
+
+	.article
+		width: 50%
+
+	.subscribe-2
+		padding: 50px 0		
+
+		.heading
+			margin-bottom: 15px
+
+		.form
+
+			.info
+				padding-top: 0
+				margin-bottom: 18px
+
+				br
+					display: none
+
+			form
+				margin-bottom: 40px
+
+				input
+					height: 44px
+
+				.button
+					height: 44px
+					max-width: 100%
+
+	.footer
+		padding: 60px 0 40px
+
+		.footer-sections
+			display: block
+			letter-spacing: -10px
+			font-size: 0
+
+			.section
+				letter-spacing: normal
+				font-size: 14px
+				padding: 0 15px!important
+				display: inline-block
+				vertical-align: top
+				width: 50%
+				margin-bottom: 35px
+
+				.section-heading
+					font-size: 16px
+					margin-bottom: 20px
+
+				.section-content
+
+					li + li
+						margin-top: 16px
+
+			.section + .section
+				border: 0
+
+		.cities
+			margin-top: 25px
+
+		.phones
+			font-size: 16px
+			margin-top: 25px
+
+		.footer-copy
+			margin-top: 30px
+
+	.modal-sm
+		max-width: 350px
+
+		.modal-content
+			padding: 48px 45px 55px
+
+	.modal-md
+		max-width: 720px
+
+		.modal-content
+			padding: 48px 45px 55px
+
+	.modal
+		
+		.modal-header
+
+			.title			
+
+				h4
+					font-size: 20px
+
+		.modal-body
+			margin-top: 30px
+
+		.close
+			right: 15px
+			top: 15px
+			width: 15px
+			height: 15px
+
+	
+	.filter
+		display: none
+		position: fixed
+		left: 0
+		right: 0
+		top: 0
+		height: 100%
+		z-index: 1000		
+		-webkit-box-shadow: none
+		box-shadow: none
+		overflow: auto
+		border: 0
+		background: #fff
+
+		.filter-content
+			max-width: 750px
+			margin: 0 auto
+			padding: 30px 0
+
+			.close
+				display: block
+
+		.filter-section
+			padding: 30px
+
+		.filter-section:last-child
+			border-bottom: 0
+
+	.filter-toggle
+		display: block
+
+	.page
+		
+		.page-title
+			font-size: 20px
+			margin-top: 30px
+			padding-bottom: 24px
+
+	.pagination
+		margin: 40px 0 0
+
+		> li
+
+			> a, > span
+				padding: 0 20px
+
+		.first
+
+			a:hover:before
+				left: 3px
+
+		.last
+
+			a:hover:before
+				right: 3px
+
+	.page-text		
+		
+		.page-title
+			margin: 0
+			padding: 0 0 25px
+
+		.content
+			line-height: 1.6
+
+			* + h2, * + h3, * + h4, p + *, * + p, img + *
+				margin-top: 30px
+
+			h2 + *, h3 + *, h4 + *
+				margin-top: 0
+
+			p + ul, p + ol
+				margin-top: 10px
+
+			ul
+
+				li:before
+					top: 11px
+
+			table
+
+				td
+					padding: 8px 10px
+
+				td:first-child
+					padding-left: 40px
+
+				td:last-child
+					padding-right: 40px
+
+	.product-detail
+		margin: 0
+		padding: 0
+
+		.information
+			padding: 0 200px 0 0
+			margin-bottom: 40px
+			position: relative
+
+			.art
+				display: inline-block
+				margin: 0 10px 0 0
+
+			.controls
+				position: absolute
+				right: 0
+				bottom: 0
+		
+		.name
+			font-size: 20px
+			margin-bottom: 15px
+
+		.sizes
+
+			.uislider
+
+				.uislider-container
+					max-width: 170px
+
+		.select		
+
+			.ui-selectmenu-button.ui-button
+				max-width: 180px
+
+		.nav-tabs
+			margin-top: 60px
+
+			> li
+				margin-left: 10px
+				margin-right: 10px
+
+		.description, .specification, .certificates, .reviews
+			margin-top: 35px
+
+		.description
+			font-size: 14px
+			line-height: 1.6
+
+			p + *, * + p, img + *
+				margin-top: 30px
+
+			* + h3, * + h4
+				margin-top: 40px
+
+			h3, h4
+				font-size: 14px
+				margin-bottom: 10px
+
+			h3 + *, h4 + *
+				margin-top: 0
+
+			ul
+
+				li:before
+					top: 10px
+
+		.specification
+
+			td
+				padding: 8px 15px
+
+			td:first-child
+				padding-left: 20px
+
+			td:last-child
+				padding-right: 20px
+
+	.reviews
+		padding: 0
+		margin: 30px 0 0
+
+		.reviews-heading
+			margin-bottom: 40px
+
+		.review
+
+			.wrapper
+				padding: 30px
+
+			.review-text
+				line-height: 1.4
+
+		.comment
+			padding: 25px 30px
+
+	.newreview
+		padding: 30px
+
+	.product-actions
+		
+		.buy
+			padding: 30px
+
+		.buy-price
+
+			.price-current
+				font-size: 22px
+				margin-right: 15px
+				padding-right: 16px
+
+			.price-current:after
+				top: 4px
+				width: 12px
+				height: 18px
+
+		.controls
+
+			ul
+
+				li
+
+					a
+						padding: 20px 10px
+
+	.cart
+		
+		.product
+			padding: 20px 35px 20px 0
+
+			.product-image
+				width: 160px
+
+			.counter			
+				float: left
+				width: 140px
+
+			.price
+				width: auto
+				padding: 0
+				text-align: right
+				float: right
+				margin-top: 30px
+
+			.delete
+				top: 20px
+
+		.sum
+			font-size: 15px
+
+			span
+				font-size: 21px
+				padding-right: 15px
+
+			span:after
+				top: 5px
+				width: 12px
+				height: 15px
+
+		.product-bonus
+			padding-left: 15px
+			padding-right: 40px
+
+		.cart-order
+			margin-top: 40px
+
+			.heading
+				font-size: 20px
+				margin-bottom: 30px
+
+			.section
+				padding: 30px
+
+			.promo
+				margin-top: 35px
+
+			.total
+				padding: 30px 30px 40px
+	
++max-screen(767)
+	
+	.breadcrumb
+		margin-bottom: 35px
+	
+	.caption
+		font-size: 18px
+		padding-bottom: 15px
+
+	.caption-tabs
+		
+		.nav-tabs
+
+			> li + li
+				margin-left: 15px
+	
+	.mobmenu
+
+		> .container
+			padding-top: 100px
+
+		.mobmenu-phones, .mobmenu-search
+			display: block
+
+		.mobmenu-links
+			font-size: 15px
+
+		.dropdown-menu
+
+			.section
+				padding: 5px 0 0 190px
+
+				.section-heading
+					margin-bottom: 15px
+
+				.discount
+					padding-left: 25px
+					font-size: 14px
+
+				.discount:before
+					width: 18px
+					height: 18px
+					margin-top: -9px
+
+			.section-main				
+				width: 150px
+				margin: 0 -150px 0 0
+
+				.section-heading
+					font-size: 18px
+
+			.section:last-child
+				margin-bottom: -5px
+
+			.type
+
+				.list
+
+					ul
+						-moz-column-count: 1
+						-webkit-column-count: 1
+						column-count: 1
+
+	.header
+		padding: 15px 0
+		
+		.header-logo
+			width: 40%
+
+		.header-search
+			display: none!important
+
+		.header-phones
+			display: none!important
+
+		.header-controls
+			width: 60%
+
+			.cart
+
+				span
+					right: 0
+					top: -8px
+					font-size: 8px
+					height: 16px
+					line-height: 16px
+					min-width: 16px
+
+	.banners
+		
+		.slick-prev
+			left: 20px
+
+		.slick-next
+			right: 20px
+
+	.slick-dots
+		margin-top: 15px
+
+	.products
+		margin-top: 40px		
+
+		.tab-content
+			margin-top: 15px
+
+	.nav-tabs 
+		font-size: 14px
+
+		> li	
+			margin: 0 10px -2px
+
+			> a
+				padding: 0 0 6px
+
+	.product
+		width: 100%
+		display: block
+
+	.subscribe-1
+		margin-top: 60px
+
+		.subscribe-content
+			display: block
+
+			> div
+				display: block
+
+		.image
+			width: 100%
+			padding: 0 20px
+
+			img
+				margin-top: -20px
+
+		.form
+			width: 100%
+			padding: 0 20px 20px
+			text-align: center
+			margin-top: 30px
+
+			.form-heading
+				font-size: 18px
+
+			.form-info
+				margin-top: 10px
+
+			form
+
+				input, .button
+					height: 44px
+
+	.about
+		margin-top: 60px
+		
+		.section
+			padding: 40px 20px
+
+			.section-heading
+				font-size: 18px
+
+			.section-info
+
+				br
+					display: none
+
+			.section-more
+				margin-top: 30px
+
+	.article
+		width: 100%
+		display: block
+
+	.subscribe-2
+		text-align: center
+
+		.form
+			padding: 0 20px
+
+	.social
+		text-align: center
+
+		ul
+			display: inline-block
+			vertical-align: top
+
+	.footer
+		padding: 40px 0
+
+		.footer-sections
+			
+			.section				
+			
+				.section-content
+
+					li + li
+						margin-top: 12px
+
+	.modal-md
+		max-width: 480px
+
+	.modal-cities
+
+		.modal-body
+			font-size: 14px
+			max-height: 550px
+			margin-left: -15px
+			margin-right: -15px
+			margin-bottom: -40px
+
+		.cities
+			margin-bottom: 40px
+			padding: 0 15px
+
+			span
+				margin-bottom: 15px
+
+			li + li
+				margin-top: 12px
+
+	.catalog
+	
+		.product
+			width: 50%	
+
+	.filter-toggle		
+		top: 28px
+
+	.sort
+		text-align: center
+
+		p
+			margin: 4px 10px
+
+		ul			
+
+			li				
+				margin: 4px 10px
+		
+	.view
+		text-align: center		
+		margin-top: 20px
+
+	.pagination
+
+		> li
+
+			> a, > span
+				padding: 0 15px
+
+		.first
+
+			a
+				padding-left: 20px
+
+			a:hover:before
+				left: 0
+
+		.last
+
+			a
+				padding-right: 20px
+
+			a:hover:before
+				right: 0
+
+	.page
+		
+		.page-title
+			margin-top: 25px
+			padding-bottom: 20px
+
+	.page-text
+		
+		.page-title
+			margin: 0
+			padding: 0 0 20px
+
+		.content
+			line-height: 1.6
+
+			*
+				font-size: 14px
+
+			* + h2, * + h3, * + h4, p + *, * + p, img + *
+				margin-top: 25px
+
+			h2 + *, h3 + *, h4 + *
+				margin-top: 0
+
+			p + ul, p + ol
+				margin-top: 5px
+
+			p
+				width: 100%!important
+				width: 100%!important
+				float: none!important
+				padding: 0!important
+
+			h2
+				font-size: 16px
+
+			h3, h4
+				font-size: 15px
+
+			h2, h3, h4
+				margin-bottom: 15px
+
+			ul
+
+				li:before
+					top: 10px
+
+			table
+
+				td
+					padding: 5px 10px
+
+				td:first-child
+					padding-left: 20px
+
+				td:last-child
+					padding-right: 20px		
+
+	.product-detail
+
+		.actions
+			margin-top: 45px
+			text-align: center
+
+			.buy-buttons
+				max-width: 240px
+				margin: 30px auto 0
+
+		.information
+			display: none
+			margin: 0 0 35px
+			padding: 0
+
+			.name
+				margin-bottom: 15px
+
+			.art
+				display: inline-block
+				margin-right: 10px
+
+			.controls
+				position: static
+		
+		.sizes
+			margin-top: 50px
+			text-align: center
+
+			p
+				text-align: left
+
+			.uislider
+
+				.uislider-container
+					max-width: 320px
+
+			.uislider + .uislider
+				margin-top: 40px
+
+		.select
+			text-align: center
+			margin-top: 40px
+
+			p
+				text-align: left
+
+			.ui-selectmenu-button.ui-button
+				max-width: 330px
+
+			.links
+				margin-top: 15px
+
+		.features
+			margin-top: 40px
+
+		.nav-tabs
+			margin-top: 50px
+
+			> li
+				margin-left: 6px
+				margin-right: 6px
+
+		.description, .specification, .certificates, .reviews
+			margin-top: 30px
+
+		.description
+
+			p + *, * + p, img + *
+				margin-top: 25px
+
+			* + h3, * + h4
+				margin-top: 35px
+
+			h3, h4
+				margin-bottom: 10px
+
+			h3 + *, h4 + *
+				margin-top: 0
+
+		.specification
+
+			td
+				padding: 8px 10px
+
+			td:first-child
+				padding-left: 10px
+
+			td:last-child
+				padding-right: 10px
+
+
+		.certificates
+			margin-left: -10px
+			margin-right: -10px
+			margin-bottom: -20px
+
+			.certificate
+				padding: 5px 10px 15px
+				
+				a
+					padding: 10px 
+
+				p
+					font-size: 12px				
+
+	.reviews
+
+		.reviews-heading
+			margin-bottom: 30px
+
+		.review
+
+			.wrapper
+				padding: 20px
+
+		.comment
+			padding: 25px 20px
+
+	.newreview
+		padding: 20px
+
+	.cart
+		
+		.product
+
+			.product-image
+				width: 140px
+
+			.counter			
+				float: none
+
+			.price
+				width: 100%
+				text-align: left
+				float: none
+				margin-top: 20px
+
+		.cart-order
+
+			.block
+
+				.block-name
+					font-size: 15px
+
+			.points, .promo
+				font-size: 14px
+
+			.heading
+				font-size: 18px
+				margin-bottom: 25px
+
+			.section
+				padding: 30px
+
++max-screen(480)
+	
+	.breadcrumb
+		margin-bottom: 30px
+	
+	.form-group
+		margin-bottom: 20px
+
+	.caption
+		font-size: 16px
+
+	.caption:after
+		height: 1px
+
+	.caption-tabs
+		margin-bottom: 20px
+
+		h2
+			float: none
+			width: 100%
+			padding-bottom: 15px
+			position: relative
+
+		h2:after
+			content: ""
+			position: absolute
+			left: 0
+			right: 0
+			bottom: 0
+			height: 1px
+			background: #ececec
+			z-index: -1
+		
+		.nav-tabs
+			float: none
+			width: 100%
+			text-align: center
+			margin-top: 25px
+
+			> li + li
+				margin: 6px 0 0
+
+	.caption-tabs:after
+		display: none
+
+	.mobmenu
+
+		.dropdown-menu
+
+			.section
+				padding: 2px 0 0 135px
+				margin: 0 0 30px
+
+				.list
+					margin: 0
+
+					ul
+
+						li
+							padding: 0
+							margin: 0 0 10px
+
+				.section-footer
+					margin: 10px 0
+
+			.section-main				
+				width: 115px
+				margin: 0 -115px 0 0
+
+				.section-heading
+					font-size: 16px
+
+			.section:last-child
+				margin-bottom: -8px
+
+			.size
+
+				.list
+
+					ul
+						-moz-column-count: 1
+						-webkit-column-count: 1
+						column-count: 1
+
+	.header
+		position: relative
+
+		.header-controls			
+
+			.user
+				width: 18px
+				height: 20px		
+
+			.favorites
+				width: 24px
+				height: 20px
+
+			.list
+				width: 20px
+				height: 20px
+
+			.cart
+				width: 22px
+				height: 22px
+
+			.dropdown
+				position: static
+
+				.dropdown-toggle:after
+					display: none
+
+				.dropdown-menu
+					left: 15px
+					right: 15px
+					width: auto
+					margin: 0
+
+			.cart-items
+
+				.item
+
+					.item-image
+						width: 60px
+
+					.item-info
+						padding-left: 15px
+						font-size: 13px
+
+	.banners
+
+		.banners-carousel:before, .banners-carousel:after
+			display: none
+
+	.nav-tabs
+		border: 0
+
+		> li
+			margin: 0
+			display: block
+
+			> a
+				padding: 0 0 1px
+				display: inline-block
+				margin: 0
+				border-bottom: 1px solid transparent
+
+		> li.active > a, > li.active > a:hover, > li.active > a:focus
+			border-bottom: 1px solid $cBase
+
+		> li + li
+			margin-top: 6px
+
+	.product
+		
+		.wrapper
+			padding: 20px
+		
+		.name
+			font-size: 15px
+
+		.product-footer
+			margin-top: 10px
+
+	.subscribe-1
+		margin-top: 50px
+
+		.image
+
+			img
+				margin-top: -15px
+
+		.form
+			
+			.form-heading
+				font-size: 16px
+
+			form
+				max-width: 250px
+				margin: 20px auto 0
+
+				.col-xs-7, .col-xs-5
+					width: 100%
+
+				.col-xs-5
+					margin-top: 15px
+
+	.about
+		margin-top: 40px
+
+		.about-content
+			display: block
+
+		.section
+			width: 100%
+			display: block
+			border-width: 1px
+		
+		.section
+			padding: 30px 20px
+
+			.section-heading
+				font-size: 16px
+
+			.section-info
+				line-height: 1.4
+				margin-top: 15px
+
+			.section-more
+				margin-top: 25px
+
+	.articles
+		margin-top: 40px
+
+		.slick-list:before
+			display: none
+
+	.article
+		
+		.wrapper
+			background: #f8f8f7
+		
+		.article-name
+			font-size: 15px
+
+	.subscribe-2
+		padding: 40px 0		
+
+		.form
+
+			form
+
+				input, .button
+					width: 100%
+					max-width: 250px
+					margin: 0 auto				
+
+				.button
+					margin-top: 15px
+
+				.row
+
+					> *
+						width: 100%
+
+	.social
+		
+		ul
+			margin: -10px
+
+			li
+				margin: 10px
+		
+		a
+			width: 40px
+			height: 40px
+
+
+	.footer
+
+		.footer-sections
+			display: block			
+			margin: 0
+
+			.section				
+				padding: 0!important
+				display: block
+				width: 100%
+				text-align: center
+				margin-bottom: 25px
+
+				.section-heading
+					margin-bottom: 10px
+					font-size: 14px
+
+				.section-content
+
+					li + li
+						margin-top: 6px
+
+		.cities
+			margin-top: 20px
+
+			.city
+				display: inline-block
+
+		.phones
+			font-size: 16px
+			margin-top: 20px
+
+		.callback
+
+			a
+				display: inline-block
+				width: 100%
+
+		.footer-copy
+			margin-top: 25px
+
+	.modal-sm
+		max-width: 320px
+
+		.modal-content 
+			padding: 38px 30px 45px
+
+	.modal-md
+		max-width: 320px
+
+		.modal-content 
+			padding: 38px 30px 45px
+
+	.modal
+		
+		.modal-header
+
+			.title			
+
+				h4
+					font-size: 16px
+
+				p
+					margin-top: 10px
+
+		.modal-body
+			margin-top: 30px
+
+
+	.modal-cities
+
+		.modal-body
+			max-height: 650px
+			margin-left: -10px
+			margin-right: -10px
+			margin-bottom: -30px
+
+		.cities
+			margin-bottom: 30px
+			padding: 0 10px
+
+			span
+				margin-bottom: 12px
+
+			li + li
+				margin-top: 10px
+
+	.page
+		
+		.page-title
+			margin-top: 20px
+			padding-bottom: 16px
+			font-size: 18px
+
+	.catalog
+	
+		.product
+			width: 100%
+			display: block
+
+	.filter-toggle
+		top: 24px
+
+	.pagination
+		margin-top: 35px
+
+		> li			
+
+			> a, > span
+				padding: 0 6px
+
+		> li + li
+			border: 0
+
+		> .active:after			
+			bottom: 0
+
+	.breadcrumb
+
+		.active
+			display: none
+	
+	.page-text		
+		
+		.page-title
+			margin: 0
+			padding: 0 0 20px
+
+		.content
+
+			* + h2, * + h3, * + h4, p + *, * + p, img + *
+				margin-top: 20px
+
+			h2 + *, h3 + *, h4 + *
+				margin-top: 0
+
+			h2, h3, h4
+				margin-bottom: 10px
+
+			table
+
+				td
+					padding: 5px 10px
+
+				td:first-child
+					padding-left: 10px
+
+				td:last-child
+					padding-right: 10px
+
+	.product-detail
+
+		.images
+			
+			.labels
+				left: 70px
+
+			.images-thumbs
+				width: 50px
+				margin-right: -50px
+
+				.slick-arrow
+					width: 18px
+					height: 12px
+
+				.thumb
+					height: 50px
+					padding: 5px
+
+					img
+						max-height: 40px
+
+			.images-slides
+				padding: 0 0 0 70px
+
+				.slide 
+					height: 288px
+
+					img
+						max-height: 260px
+
+		.characteristics
+
+			.stiffness
+				margin: 0
+
+				span
+					margin: 0 3px
+					width: 6px
+					height: 6px
+					border-width: 1px
+
+		.sizes			
+
+			.uislider
+
+				.uislider-container
+					max-width: 190px
+
+		.select		
+
+			.ui-selectmenu-button.ui-button
+				max-width: 198px
+
+		.nav-tabs
+			margin-top: 45px
+
+			> li
+				margin-left: 0
+				margin-right: 0
+
+		.description
+
+			p + *, * + p, img + *
+				margin-top: 20px
+
+			* + h3, * + h4
+				margin-top: 25px
+
+			h3, h4
+				margin-bottom: 10px
+
+			h3 + *, h4 + *
+				margin-top: 0
+
+		.certificates
+
+			.certificate
+				width: 33.33333333%
+				
+	.reviews
+
+		.reviews-heading
+			margin-bottom: 30px
+
+		.review
+
+			.wrapper
+				padding: 20px
+
+		.comment
+			padding: 25px 20px
+
+	.newreview
+		padding: 20px
+
+	.cart
+		
+		.product
+
+			.product-image
+				width: 100px
+
+			.product-content
+				padding-left: 20px
+
+			.price
+				
+				.price-current
+					margin-right: 15px
+
+				.price-old
+					margin-left: 0
+
+		.sum
+			margin-top: 15px
+
+			span
+				font-size: 18px
+				padding-right: 13px
+
+			span:after
+				top: 4px
+				width: 10px
+				height: 13px
+
+		.cart-order
+
+			.col-xs-6
+				width: 100%
+
+			.heading
+				font-size: 16px
+
+			.section
+				padding: 25px 20px
+
+			.points, .promo
+				font-size: 14px
+
+				p
+					display: block
+					width: 100%
+					padding-right: 0
+					padding-left: 40px
+
+				a
+					margin-left: 40px
+					margin-top: 10px
+
+				input
+					width: 200px
+					margin-left: 40px
+					margin-top: 15px
+					height: 40px
+
+			.total
+				padding: 15px 20px 30px
+
+				table
+					font-size: 14px
+
+					td
+						padding-top: 8px
+						padding-bottom: 8px
+
+					tbody
+
+						tr:last-child
+
+							td
+								padding-bottom: 20px
+
+				.price
+					padding-right: 11px
+					position: relative
+
+				.price:after
+					width: 8px
+					height: 10px
+
+				.sum
+
+					td:first-child
+						padding-top: 24px
+
++max-screen(359)
+	
+	.product-detail
+
+		.information			
+
+			.art
+				display: block
+				margin: 0 0 10px
+	
+		.certificates
+
+			.certificate
+				width: 50%
+
+		.sizes
+
+			.uislider
+
+				.uislider-container
+					max-width: 170px
+
+		.select
+
+			.ui-selectmenu-button.ui-button
+				max-width: 180px
+
++min-screen(992)
+
+	.openmenu
+		position: static!important
+		overflow: auto!important
+
+	.filter
+		position: static!important
+		display: block!important

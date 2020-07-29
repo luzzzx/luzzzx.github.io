@@ -5,7 +5,7 @@
     width: 100%;
     display: none;
     flex-wrap: wrap;
-    justify-content: space-between;
+    // justify-content: space-between;
     border: 1px solid #E5007C;
     li{
         padding: .5em;
@@ -74,7 +74,7 @@
             margin-top: -9px;
             width: 20px;
             height: 20px;
-            background: url(../img/icons/plitka.svg) center center no-repeat; 
+            background: url(../img/icons/filter-main.png) center center no-repeat;
             background-size: contain;
         }
         span{
@@ -92,6 +92,7 @@
 .filter-section {
 
     &__bottom {
+        display: none;
         position: fixed;
         bottom: 0;
         width: 100%;
@@ -163,6 +164,12 @@
 
 
 @media screen and (max-width: 480px){
+    .filter-section {
+
+        &__bottom {
+            display: block;
+        }
+    }
     .main-filter{
         display: block;
     }
@@ -202,6 +209,7 @@
         // }
         .card-header{
             background: #E5007C;
+            border-radius: 3px;
             button{
                 color: #fff;
                 text-decoration: none;
@@ -225,6 +233,9 @@
                         opacity: 0;
                     }
                 }
+                &:focus{
+                    outline: none;
+                }
             }
         }
         .card-body{
@@ -239,5 +250,10 @@
                margin: 0;
            }
         }
+    }
+
+    .product-detail .actions {
+        margin-top: 15px;
+        text-align: center;
     }
 }

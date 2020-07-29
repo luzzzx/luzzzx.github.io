@@ -213,6 +213,9 @@
 }
 
 @media screen and (max-width: 480px) {
+  .product-detail .images {
+    max-height: 228px;
+  }
   .filter-section__bottom {
     display: block;
   }

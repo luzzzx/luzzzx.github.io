@@ -176,6 +176,17 @@
         right: 0 !important;
         z-index: 20;
         border-bottom: none !important;
+        &::before{
+            content: "";
+            position: absolute;
+            left: 17%;
+            top: 15px;
+            width: 13px;
+            height: 8px;
+            background: url(../img/icons/arrow-section-top.svg) center center no-repeat ;
+            -webkit-transform: rotate(120deg);
+            transform: rotate(-90deg);
+        }
     }
     .product-detail .images {
         max-height: 228px;

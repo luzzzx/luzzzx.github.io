@@ -424,23 +424,14 @@
 								-->
 
 								<!-- Если в секции бедут список опций с классом list, то добавляем класс has-list -->
-								<div class="filter-section has-list">
+								<div class="filter-section has-list rigidity">
 									<div class="heading">
 										Жесткость
 									</div>
-									<!-- добавить класс rigidity в там где Жесткость  -->
-									<div class="list rigidity">
-										<!-- <ul>
-											 id и for для одного элемента должны совпадать, а их название/нумерация может быть произвольной, но уникальной на странице
-											<li><input type="checkbox" id="stiffness-1"><label
-													for="stiffness-1">1/4</label></li>
-											<li><input type="checkbox" id="stiffness-2"><label
-													for="stiffness-2">2/4</label></li>
-											<li><input type="checkbox" id="stiffness-3"><label
-													for="stiffness-3">3/4</label></li>
-											<li><input type="checkbox" id="stiffness-4"><label
-													for="stiffness-4">4/4</label></li>
-										</ul> -->
+									<div class="list" style="margin-top: 20px; display: block;">
+										<span>
+											Жесткость 1 сторона
+										</span>
 										<ul>
 											<li>
 												<input type="checkbox" id="stiffness-first-0" value="Мягкий"
@@ -467,6 +458,57 @@
 													name="attributes[33][]">
 												<label for="stiffness-first-4">Жесткий</label>
 											</li>
+										</ul>
+									</div>
+									<div class="list" style="margin-top: 20px; display: block;">
+										<span>
+											Жесткость 2 сторона
+										</span>
+										<ul>
+											<li>
+												<input type="checkbox" id="stiffness-0" value="Мягкий"
+													name="attributes[52][]">
+												<label for="stiffness-0">Мягкий</label>
+											</li>
+											<li>
+												<input type="checkbox" id="stiffness-1" value="Средне-мягкий"
+													name="attributes[52][]">
+												<label for="stiffness-1">Средне-мягкий</label>
+											</li>
+											<li>
+												<input type="checkbox" id="stiffness-2" value="Средний"
+													name="attributes[52][]">
+												<label for="stiffness-2">Средний</label>
+											</li>
+											<li>
+												<input type="checkbox" id="stiffness-3" value="Средне-жесткий"
+													name="attributes[52][]">
+												<label for="stiffness-3">Средне-жесткий</label>
+											</li>
+											<li>
+												<input type="checkbox" id="stiffness-4" value="Жесткий"
+													name="attributes[52][]">
+												<label for="stiffness-4">Жесткий</label>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="filter-section has-list">
+									<div class="heading">
+										Жесткость
+									</div>
+									<div class="list">
+										<ul>
+											<!-- id и for для одного элемента должны совпадать, а их название/нумерация может
+											быть произвольной, но уникальной на странице -->
+											<li><input type="checkbox" id="stiffness-1"><label
+													for="stiffness-1">1/4</label></li>
+											<li><input type="checkbox" id="stiffness-2"><label
+													for="stiffness-2">2/4</label></li>
+											<li><input type="checkbox" id="stiffness-3"><label
+													for="stiffness-3">3/4</label></li>
+											<li><input type="checkbox" id="stiffness-4"><label
+													for="stiffness-4">4/4</label></li>
 										</ul>
 									</div>
 								</div>

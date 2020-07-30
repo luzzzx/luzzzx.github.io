@@ -275,19 +275,16 @@
     }
 
     .rigidity{
-        ul{
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-            align-items: baseline;
-            li{
-                flex: 0 0 49%;
-                font-size: 12px;
-                label{
-                    padding-left: 25px;
-                }
+            .heading{
+                flex: 0 0 100%;
             }
-        }
+            .list{
+                flex: 0 0 49%
+            }
+        
 
     }
 }

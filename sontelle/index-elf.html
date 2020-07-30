@@ -1,5 +1,6 @@
 <!doctype html>
 <html>
+
 <head>
 	<meta charset="utf-8">
 	<title>Sontelle</title>
@@ -9,53 +10,194 @@
 	<link rel="shortcut icon" href="img/icons/favicon.ico" type="image/x-icon">
 	<link rel="shortcut icon" href="img/icons/favicon.png" type="image/png">
 	<link rel="shortcut icon" href="img/icons/favicon.gif" type="image/gif">
-	-->	
-	<meta name="viewport" content="initial-scale=1"/>
+	-->
+	<meta name="viewport" content="initial-scale=1" />
 	<meta name="viewport" content="width=device-width">
 	<link rel="stylesheet" href="tpl/bootstrap/css/bootstrap.css">
 	<link rel="stylesheet" href="tpl/slick/slick.css">
 	<link rel="stylesheet" href="tpl/css/screen.css" media="screen">
-	<link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&display=swap&subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
-	
+	<link
+		href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&display=swap&subset=cyrillic,cyrillic-ext,latin-ext"
+		rel="stylesheet">
+
 	<style>
-		.ch-button {display:none; position:fixed;bottom:15px;right:15px;z-index:999;padding:11px 10px 7px 10px;border:1px solid #E5007C;border-radius:50%;}
-		.ch-button:hover {opacity:0.8;}
-		.ch-button img {x-width:45px;x-height:45px;}
-		
-		.ch-right-bottom {position:fixed;bottom:22px;right:22px;z-index:999;width: 119px;height: 200px;}
+		.ch-button {
+			display: none;
+			position: fixed;
+			bottom: 15px;
+			right: 15px;
+			z-index: 999;
+			padding: 11px 10px 7px 10px;
+			border: 1px solid #E5007C;
+			border-radius: 50%;
+		}
 
-		.ch-small-pages .ch-right-bottom {background: url(tpl/elf/Armature_idle.gif) bottom center no-repeat;background-size: contain;}
+		.ch-button:hover {
+			opacity: 0.8;
+		}
 
-		.ch-small-pages .ch-right-bottom.wait {right:-125px;background: url(tpl/elf/Armature_Sleep.gif) bottom center no-repeat;background-size: contain;width: 260px;height: 300px;}
+		.ch-button img {
+			x-width: 45px;
+			x-height: 45px;
+		}
 
-		.ch-small-cart .ch-right-bottom {background: url(tpl/elf/Armature_Shop.gif) bottom center no-repeat;background-size: contain;width: 100px;height: 200px;right:31px;}
+		.ch-right-bottom {
+			position: fixed;
+			bottom: 22px;
+			right: 22px;
+			z-index: 999;
+			width: 119px;
+			height: 200px;
+		}
 
-		.ch-small-cart .ch-right-bottom.wait {background: url(tpl/elf/Armature_Weep.gif) bottom center no-repeat;background-size: contain;width: 90px;height: 200px;right:35px;}
-		
-		.ch-small { display: none; }
-		.ch-small .ch-dialog {position:fixed;bottom:100px;right:150px;z-index:999;width:150px;}
-		.ch-small .ch-dialog div+div {margin-top:12px;}
-		.ch-small .ch-dialog .question {background:#FEEBDA;border:2px solid #F1B579;border-radius:10px;padding:7px;font-size:14px;font-weight:400;color:#511203;text-align:center;}
-		.ch-small .ch-dialog .answer a {display:block;font-size:12px;font-weight:400;color:#fff;padding:5px 0px;
-		background:#13CCAC;x-border:2px solid #13CCAC;border-radius:10px;text-align:center;width:70%;}
-		.ch-small .ch-dialog .answer:hover a {background:#E7007B;x-border-color:#A80059;color:#fff;}
-		
-		.ch-center {position:fixed;top:50%;margin-top:-200px;left:50%;margin-left:-118px;z-index:999; background: url(tpl/elf/Armature_greeting.gif) center center no-repeat; background-size: contain; width:375px;height: 400px;}
-		.ch-background {position:fixed;width:100%;height:100%;background:rgba(0,0,0,0.8);z-index:99;display:none;}
-		
-		.ch-background .ch-dialog {position:fixed;top:50%;margin-top:-200px;left:50%;margin-left:-300px;z-index:999;width:200px;}
-		.ch-background .ch-dialog div+div {margin-top:22px;}
-		.ch-background .ch-dialog .question {background:#FEEBDA;border:3px solid #F1B579;border-radius:15px;padding:15px 7px;font-size:16px;font-weight:bold;color:#511203;text-align:center;}
-		.ch-background .ch-dialog .answer a {display:block;font-size:16px;font-weight:bold;color:#fff;padding:10px 0px;
-		background:#13CCAC;x-border:2px solid #13CCAC;border-radius:10px;text-align:center;width:70%;}
-		.ch-background .ch-dialog .answer:hover a {background:#E7007B;x-border-color:#A80059;color:#fff;}
+		.ch-small-pages .ch-right-bottom {
+			background: url(tpl/elf/Armature_idle.gif) bottom center no-repeat;
+			background-size: contain;
+		}
+
+		.ch-small-pages .ch-right-bottom.wait {
+			right: -125px;
+			background: url(tpl/elf/Armature_Sleep.gif) bottom center no-repeat;
+			background-size: contain;
+			width: 260px;
+			height: 300px;
+		}
+
+		.ch-small-cart .ch-right-bottom {
+			background: url(tpl/elf/Armature_Shop.gif) bottom center no-repeat;
+			background-size: contain;
+			width: 100px;
+			height: 200px;
+			right: 31px;
+		}
+
+		.ch-small-cart .ch-right-bottom.wait {
+			background: url(tpl/elf/Armature_Weep.gif) bottom center no-repeat;
+			background-size: contain;
+			width: 90px;
+			height: 200px;
+			right: 35px;
+		}
+
+		.ch-small {
+			display: none;
+		}
+
+		.ch-small .ch-dialog {
+			position: fixed;
+			bottom: 100px;
+			right: 150px;
+			z-index: 999;
+			width: 150px;
+		}
+
+		.ch-small .ch-dialog div+div {
+			margin-top: 12px;
+		}
+
+		.ch-small .ch-dialog .question {
+			background: #FEEBDA;
+			border: 2px solid #F1B579;
+			border-radius: 10px;
+			padding: 7px;
+			font-size: 14px;
+			font-weight: 400;
+			color: #511203;
+			text-align: center;
+		}
+
+		.ch-small .ch-dialog .answer a {
+			display: block;
+			font-size: 12px;
+			font-weight: 400;
+			color: #fff;
+			padding: 5px 0px;
+			background: #13CCAC;
+			x-border: 2px solid #13CCAC;
+			border-radius: 10px;
+			text-align: center;
+			width: 70%;
+		}
+
+		.ch-small .ch-dialog .answer:hover a {
+			background: #E7007B;
+			x-border-color: #A80059;
+			color: #fff;
+		}
+
+		.ch-center {
+			position: fixed;
+			top: 50%;
+			margin-top: -200px;
+			left: 50%;
+			margin-left: -118px;
+			z-index: 999;
+			background: url(tpl/elf/Armature_greeting.gif) center center no-repeat;
+			background-size: contain;
+			width: 375px;
+			height: 400px;
+		}
+
+		.ch-background {
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0.8);
+			z-index: 99;
+			display: none;
+		}
+
+		.ch-background .ch-dialog {
+			position: fixed;
+			top: 50%;
+			margin-top: -200px;
+			left: 50%;
+			margin-left: -300px;
+			z-index: 999;
+			width: 200px;
+		}
+
+		.ch-background .ch-dialog div+div {
+			margin-top: 22px;
+		}
+
+		.ch-background .ch-dialog .question {
+			background: #FEEBDA;
+			border: 3px solid #F1B579;
+			border-radius: 15px;
+			padding: 15px 7px;
+			font-size: 16px;
+			font-weight: bold;
+			color: #511203;
+			text-align: center;
+		}
+
+		.ch-background .ch-dialog .answer a {
+			display: block;
+			font-size: 16px;
+			font-weight: bold;
+			color: #fff;
+			padding: 10px 0px;
+			background: #13CCAC;
+			x-border: 2px solid #13CCAC;
+			border-radius: 10px;
+			text-align: center;
+			width: 70%;
+		}
+
+		.ch-background .ch-dialog .answer:hover a {
+			background: #E7007B;
+			x-border-color: #A80059;
+			color: #fff;
+		}
 	</style>
-	
+
 </head>
+
 <body>
 	<!-- BEGIN out -->
 	<div class="out">
-	
+
 		<!-- Блок с персонажем -->
 		<div class="characterOuter">
 			<!-- Кнопка вызова -->
@@ -63,7 +205,7 @@
 			<!-- Персонаж справа внизу -->
 			<!-- Для всех страниц, кроме корзины к классу ch-small нужно добавлять ch-small-pages-->
 			<div class="ch-small ch-small-pages">
-				<div class="ch-right-bottom"></div>				
+				<div class="ch-right-bottom"></div>
 				<!-- Блок диалога -->
 				<div class="ch-dialog">
 					<div class="question">
@@ -79,7 +221,7 @@
 			</div>
 			<!-- Персонаж в центре экрана -->
 			<div class="ch-background">
-				<div class="ch-center"></div>				
+				<div class="ch-center"></div>
 				<!-- Блок диалога -->
 				<div class="ch-dialog">
 					<div class="question">
@@ -94,9 +236,9 @@
 				</div>
 			</div>
 		</div>
-	
+
 		<!-- BEGIN topline -->
-		<div class="topline">			
+		<div class="topline">
 			<div class="container">
 				<a href="#" class="mobmenu-toggle"><span></span></a>
 				<div class="topline-cities">
@@ -135,7 +277,7 @@
 				<div class="header-phones">
 					<ul>
 						<li><a href="tel:+8 (800) 555-11-04">+8 (800) 555-11-04</a></li>
-					</ul>					
+					</ul>
 				</div>
 				<div class="header-controls">
 					<ul>
@@ -149,6 +291,8 @@
 							Корзина с товаром
 							<li><a href="#" class="cart active"><span>22</span></a></li>
 						-->
+						<li><a href="#" class="mobile-search" data-toggle="modal" data-target=".modal-search"></a>
+						</li>
 						<li><a href="#" class="user"></a></li>
 						<li><a href="#" class="favorites"></a></li>
 						<li><a href="#" class="list"></a></li>
@@ -165,7 +309,8 @@
 											<a href="#" class="name">Прямой диван Lenagold</a>
 											<p class="size">Размер 150х200 см</p>
 											<div class="price">
-												<span class="price-current">102 300</span><span class="price-old">120 300</span>
+												<span class="price-current">102 300</span><span class="price-old">120
+													300</span>
 											</div>
 										</div>
 									</div>
@@ -189,7 +334,7 @@
 									</div>
 									<div class="actions">
 										<a href="#" class="btn btn-default">Оформить заказ</a>
-									</div>									
+									</div>
 								</div>
 							</div>
 						</li>
@@ -238,7 +383,7 @@
 													<li><a href="#">Аксессуары для дома</a></li>
 												</ul>
 											</div>
-										</div>									
+										</div>
 									</div>
 									<div class="section size">
 										<div class="section-heading">
@@ -262,7 +407,8 @@
 											</div>
 										</div>
 										<div class="section-footer">
-											<a href="#" class="link" data-toggle="modal" data-target=".modal-size">Нужен другой размер?</a>
+											<a href="#" class="link" data-toggle="modal" data-target=".modal-size">Нужен
+												другой размер?</a>
 										</div>
 									</div>
 									<div class="section symptoms">
@@ -287,7 +433,7 @@
 										</div>
 									</div>
 								</div>
-							</div>							
+							</div>
 						</div>
 					</li>
 					<li><a href="#">Кровати</a></li>
@@ -326,7 +472,7 @@
 					<li><a href="#tabs1-4" data-toggle="tab" class="tab">Диваны</a></li>
 					<li><a href="#tabs1-5" data-toggle="tab" class="tab">Подушки</a></li>
 				</ul>
-			
+
 				<div class="tab-content">
 					<div class="tab-pane fade in active" id="tabs1-1">
 						<!-- Если нужно, чтобы превью товаров в моб версии сворачивались в слайдеры, то к классу products-list добавляется mobcarousel. Если класса mobcarousel не будет, то превью товаров будут отображатся плитками по 4-3-2-1 штук в ряд в заивисмости от разрешения экрана -->
@@ -334,22 +480,24 @@
 							<div class="product mobslide">
 								<div class="wrapper">
 									<!-- Независимо от наличия меток labels в товаре добавляй блок с классом product-header (нужен будет для выравниявания высот) -->
-									<div class="product-header">										
+									<div class="product-header">
 										<div class="labels">
 											<ul>
 												<li class="popular">хит</li>
 												<li class="novelty">новинка</li>
 											</ul>
-										</div>	
+										</div>
 									</div>
 									<div class="product-body">
-										<div class="image"><a href="#"><img src="tpl/img/products/product-1.png" alt=""></a></div>
+										<div class="image"><a href="#"><img src="tpl/img/products/product-1.png"
+													alt=""></a></div>
 										<div class="type"><a href="#">Прямой диван</a></div>
-										<div class="name"><a href="#">Бали М 2449а</a></div>	
+										<div class="name"><a href="#">Бали М 2449а</a></div>
 									</div>
 									<div class="product-footer">
 										<div class="price">
-											<span class="price-old">120 300</span><br><span class="price-current">102 300</span>
+											<span class="price-old">120 300</span><br><span class="price-current">102
+												300</span>
 										</div>
 										<div class="cart"><a href="#"></a></div>
 									</div>
@@ -366,13 +514,15 @@
 										</div>
 									</div>
 									<div class="product-body">
-										<div class="image"><a href="#"><img src="tpl/img/products/product-2.png" alt=""></a></div>
+										<div class="image"><a href="#"><img src="tpl/img/products/product-2.png"
+													alt=""></a></div>
 										<div class="type"><a href="#">Прямой диван</a></div>
-										<div class="name"><a href="#">Бали М 2449а</a></div>	
+										<div class="name"><a href="#">Бали М 2449а</a></div>
 									</div>
 									<div class="product-footer">
 										<div class="price">
-											<span class="price-old">120 300</span><br><span class="price-current">102 300</span>
+											<span class="price-old">120 300</span><br><span class="price-current">102
+												300</span>
 										</div>
 										<div class="cart"><a href="#"></a></div>
 									</div>
@@ -380,12 +530,13 @@
 							</div>
 							<div class="product mobslide">
 								<div class="wrapper">
-									<div class="product-header">											
+									<div class="product-header">
 									</div>
 									<div class="product-body">
-										<div class="image"><a href="#"><img src="tpl/img/products/product-3.png" alt=""></a></div>
+										<div class="image"><a href="#"><img src="tpl/img/products/product-3.png"
+													alt=""></a></div>
 										<div class="type"><a href="#">Прямой диван</a></div>
-										<div class="name"><a href="#">Бали М 2449а</a></div>	
+										<div class="name"><a href="#">Бали М 2449а</a></div>
 									</div>
 									<div class="product-footer">
 										<div class="price">
@@ -402,16 +553,18 @@
 											<ul>
 												<li class="novelty">новинка</li>
 											</ul>
-										</div>	
+										</div>
 									</div>
 									<div class="product-body">
-										<div class="image"><a href="#"><img src="tpl/img/products/product-4.png" alt=""></a></div>
+										<div class="image"><a href="#"><img src="tpl/img/products/product-4.png"
+													alt=""></a></div>
 										<div class="type"><a href="#">Прямой диван</a></div>
-										<div class="name"><a href="#">Бали М 2449а</a></div>	
+										<div class="name"><a href="#">Бали М 2449а</a></div>
 									</div>
 									<div class="product-footer">
 										<div class="price">
-											<span class="price-old">120 300</span><br><span class="price-current">102 300</span>
+											<span class="price-old">120 300</span><br><span class="price-current">102
+												300</span>
 										</div>
 										<div class="cart"><a href="#"></a></div>
 									</div>
@@ -422,23 +575,25 @@
 					<div class="tab-pane fade" id="tabs1-2">
 						<div class="products-list mobcarousel">
 							<div class="product mobslide">
-								<div class="wrapper">									
-									<div class="product-header">										
+								<div class="wrapper">
+									<div class="product-header">
 										<div class="labels">
 											<ul>
 												<li class="popular">хит</li>
 												<li class="novelty">новинка</li>
 											</ul>
-										</div>	
+										</div>
 									</div>
 									<div class="product-body">
-										<div class="image"><a href="#"><img src="tpl/img/products/product-1.png" alt=""></a></div>
+										<div class="image"><a href="#"><img src="tpl/img/products/product-1.png"
+													alt=""></a></div>
 										<div class="type"><a href="#">Матрас</a></div>
-										<div class="name"><a href="#">Бали М 2449а</a></div>	
+										<div class="name"><a href="#">Бали М 2449а</a></div>
 									</div>
 									<div class="product-footer">
 										<div class="price">
-											<span class="price-old">120 300</span><br><span class="price-current">102 300</span>
+											<span class="price-old">120 300</span><br><span class="price-current">102
+												300</span>
 										</div>
 										<div class="cart"><a href="#"></a></div>
 									</div>
@@ -455,13 +610,15 @@
 										</div>
 									</div>
 									<div class="product-body">
-										<div class="image"><a href="#"><img src="tpl/img/products/product-2.png" alt=""></a></div>
+										<div class="image"><a href="#"><img src="tpl/img/products/product-2.png"
+													alt=""></a></div>
 										<div class="type"><a href="#">Матрас</a></div>
-										<div class="name"><a href="#">Бали М 2449а</a></div>	
+										<div class="name"><a href="#">Бали М 2449а</a></div>
 									</div>
 									<div class="product-footer">
 										<div class="price">
-											<span class="price-old">120 300</span><br><span class="price-current">102 300</span>
+											<span class="price-old">120 300</span><br><span class="price-current">102
+												300</span>
 										</div>
 										<div class="cart"><a href="#"></a></div>
 									</div>
@@ -469,12 +626,13 @@
 							</div>
 							<div class="product mobslide">
 								<div class="wrapper">
-									<div class="product-header">											
+									<div class="product-header">
 									</div>
 									<div class="product-body">
-										<div class="image"><a href="#"><img src="tpl/img/products/product-3.png" alt=""></a></div>
+										<div class="image"><a href="#"><img src="tpl/img/products/product-3.png"
+													alt=""></a></div>
 										<div class="type"><a href="#">Матрас</a></div>
-										<div class="name"><a href="#">Бали М 2449а</a></div>	
+										<div class="name"><a href="#">Бали М 2449а</a></div>
 									</div>
 									<div class="product-footer">
 										<div class="price">
@@ -491,12 +649,13 @@
 											<ul>
 												<li class="novelty">новинка</li>
 											</ul>
-										</div>	
+										</div>
 									</div>
 									<div class="product-body">
-										<div class="image"><a href="#"><img src="tpl/img/products/product-4.png" alt=""></a></div>
+										<div class="image"><a href="#"><img src="tpl/img/products/product-4.png"
+													alt=""></a></div>
 										<div class="type"><a href="#">Матрас</a></div>
-										<div class="name"><a href="#">Бали М 2449а</a></div>	
+										<div class="name"><a href="#">Бали М 2449а</a></div>
 									</div>
 									<div class="product-footer">
 										<div class="price">
@@ -512,22 +671,24 @@
 						<div class="products-list mobcarousel">
 							<div class="product mobslide">
 								<div class="wrapper">
-									<div class="product-header">										
+									<div class="product-header">
 										<div class="labels">
 											<ul>
 												<li class="popular">хит</li>
 												<li class="novelty">новинка</li>
 											</ul>
-										</div>	
+										</div>
 									</div>
 									<div class="product-body">
-										<div class="image"><a href="#"><img src="tpl/img/products/product-1.png" alt=""></a></div>
+										<div class="image"><a href="#"><img src="tpl/img/products/product-1.png"
+													alt=""></a></div>
 										<div class="type"><a href="#">Кровать</a></div>
-										<div class="name"><a href="#">Бали М 2449а</a></div>	
+										<div class="name"><a href="#">Бали М 2449а</a></div>
 									</div>
 									<div class="product-footer">
 										<div class="price">
-											<span class="price-old">120 300</span><br><span class="price-current">102 300</span>
+											<span class="price-old">120 300</span><br><span class="price-current">102
+												300</span>
 										</div>
 										<div class="cart"><a href="#"></a></div>
 									</div>
@@ -544,9 +705,10 @@
 										</div>
 									</div>
 									<div class="product-body">
-										<div class="image"><a href="#"><img src="tpl/img/products/product-2.png" alt=""></a></div>
+										<div class="image"><a href="#"><img src="tpl/img/products/product-2.png"
+													alt=""></a></div>
 										<div class="type"><a href="#">Кровать</a></div>
-										<div class="name"><a href="#">Бали М 2449а</a></div>	
+										<div class="name"><a href="#">Бали М 2449а</a></div>
 									</div>
 									<div class="product-footer">
 										<div class="price">
@@ -558,12 +720,13 @@
 							</div>
 							<div class="product mobslide">
 								<div class="wrapper">
-									<div class="product-header">											
+									<div class="product-header">
 									</div>
 									<div class="product-body">
-										<div class="image"><a href="#"><img src="tpl/img/products/product-3.png" alt=""></a></div>
+										<div class="image"><a href="#"><img src="tpl/img/products/product-3.png"
+													alt=""></a></div>
 										<div class="type"><a href="#">Кровать</a></div>
-										<div class="name"><a href="#">Бали М 2449а</a></div>	
+										<div class="name"><a href="#">Бали М 2449а</a></div>
 									</div>
 									<div class="product-footer">
 										<div class="price">
@@ -580,12 +743,13 @@
 											<ul>
 												<li class="novelty">новинка</li>
 											</ul>
-										</div>	
+										</div>
 									</div>
 									<div class="product-body">
-										<div class="image"><a href="#"><img src="tpl/img/products/product-4.png" alt=""></a></div>
+										<div class="image"><a href="#"><img src="tpl/img/products/product-4.png"
+													alt=""></a></div>
 										<div class="type"><a href="#">Кровать</a></div>
-										<div class="name"><a href="#">Бали М 2449а</a></div>	
+										<div class="name"><a href="#">Бали М 2449а</a></div>
 									</div>
 									<div class="product-footer">
 										<div class="price">
@@ -601,18 +765,19 @@
 						<div class="products-list mobcarousel">
 							<div class="product mobslide">
 								<div class="wrapper">
-									<div class="product-header">										
+									<div class="product-header">
 										<div class="labels">
 											<ul>
 												<li class="popular">хит</li>
 												<li class="novelty">новинка</li>
 											</ul>
-										</div>	
+										</div>
 									</div>
 									<div class="product-body">
-										<div class="image"><a href="#"><img src="tpl/img/products/product-1.png" alt=""></a></div>
+										<div class="image"><a href="#"><img src="tpl/img/products/product-1.png"
+													alt=""></a></div>
 										<div class="type"><a href="#">Прямой диван</a></div>
-										<div class="name"><a href="#">Бали М 2449а</a></div>	
+										<div class="name"><a href="#">Бали М 2449а</a></div>
 									</div>
 									<div class="product-footer">
 										<div class="price">
@@ -633,13 +798,15 @@
 										</div>
 									</div>
 									<div class="product-body">
-										<div class="image"><a href="#"><img src="tpl/img/products/product-2.png" alt=""></a></div>
+										<div class="image"><a href="#"><img src="tpl/img/products/product-2.png"
+													alt=""></a></div>
 										<div class="type"><a href="#">Прямой диван</a></div>
-										<div class="name"><a href="#">Бали М 2449а</a></div>	
+										<div class="name"><a href="#">Бали М 2449а</a></div>
 									</div>
 									<div class="product-footer">
 										<div class="price">
-											<span class="price-old">120 300</span><br><span class="price-current">102 300</span>
+											<span class="price-old">120 300</span><br><span class="price-current">102
+												300</span>
 										</div>
 										<div class="cart"><a href="#"></a></div>
 									</div>
@@ -647,12 +814,13 @@
 							</div>
 							<div class="product mobslide">
 								<div class="wrapper">
-									<div class="product-header">											
+									<div class="product-header">
 									</div>
 									<div class="product-body">
-										<div class="image"><a href="#"><img src="tpl/img/products/product-3.png" alt=""></a></div>
+										<div class="image"><a href="#"><img src="tpl/img/products/product-3.png"
+													alt=""></a></div>
 										<div class="type"><a href="#">Прямой диван</a></div>
-										<div class="name"><a href="#">Бали М 2449а</a></div>	
+										<div class="name"><a href="#">Бали М 2449а</a></div>
 									</div>
 									<div class="product-footer">
 										<div class="price">
@@ -669,16 +837,18 @@
 											<ul>
 												<li class="novelty">новинка</li>
 											</ul>
-										</div>	
+										</div>
 									</div>
 									<div class="product-body">
-										<div class="image"><a href="#"><img src="tpl/img/products/product-4.png" alt=""></a></div>
+										<div class="image"><a href="#"><img src="tpl/img/products/product-4.png"
+													alt=""></a></div>
 										<div class="type"><a href="#">Прямой диван</a></div>
-										<div class="name"><a href="#">Бали М 2449а</a></div>	
+										<div class="name"><a href="#">Бали М 2449а</a></div>
 									</div>
 									<div class="product-footer">
 										<div class="price">
-											<span class="price-old">120 300</span><br><span class="price-current">102 300</span>
+											<span class="price-old">120 300</span><br><span class="price-current">102
+												300</span>
 										</div>
 										<div class="cart"><a href="#"></a></div>
 									</div>
@@ -690,18 +860,19 @@
 						<div class="products-list mobcarousel">
 							<div class="product mobslide">
 								<div class="wrapper">
-									<div class="product-header">										
+									<div class="product-header">
 										<div class="labels">
 											<ul>
 												<li class="popular">хит</li>
 												<li class="novelty">новинка</li>
 											</ul>
-										</div>	
+										</div>
 									</div>
 									<div class="product-body">
-										<div class="image"><a href="#"><img src="tpl/img/products/product-1.png" alt=""></a></div>
+										<div class="image"><a href="#"><img src="tpl/img/products/product-1.png"
+													alt=""></a></div>
 										<div class="type"><a href="#">Подушка</a></div>
-										<div class="name"><a href="#">Бали М 2449а</a></div>	
+										<div class="name"><a href="#">Бали М 2449а</a></div>
 									</div>
 									<div class="product-footer">
 										<div class="price">
@@ -722,9 +893,10 @@
 										</div>
 									</div>
 									<div class="product-body">
-										<div class="image"><a href="#"><img src="tpl/img/products/product-2.png" alt=""></a></div>
+										<div class="image"><a href="#"><img src="tpl/img/products/product-2.png"
+													alt=""></a></div>
 										<div class="type"><a href="#">Подушка</a></div>
-										<div class="name"><a href="#">Бали М 2449а</a></div>	
+										<div class="name"><a href="#">Бали М 2449а</a></div>
 									</div>
 									<div class="product-footer">
 										<div class="price">
@@ -736,12 +908,13 @@
 							</div>
 							<div class="product mobslide">
 								<div class="wrapper">
-									<div class="product-header">											
+									<div class="product-header">
 									</div>
 									<div class="product-body">
-										<div class="image"><a href="#"><img src="tpl/img/products/product-3.png" alt=""></a></div>
+										<div class="image"><a href="#"><img src="tpl/img/products/product-3.png"
+													alt=""></a></div>
 										<div class="type"><a href="#">Подушка</a></div>
-										<div class="name"><a href="#">Бали М 2449а</a></div>	
+										<div class="name"><a href="#">Бали М 2449а</a></div>
 									</div>
 									<div class="product-footer">
 										<div class="price">
@@ -758,16 +931,18 @@
 											<ul>
 												<li class="novelty">новинка</li>
 											</ul>
-										</div>	
+										</div>
 									</div>
 									<div class="product-body">
-										<div class="image"><a href="#"><img src="tpl/img/products/product-4.png" alt=""></a></div>
+										<div class="image"><a href="#"><img src="tpl/img/products/product-4.png"
+													alt=""></a></div>
 										<div class="type"><a href="#">Подушка</a></div>
-										<div class="name"><a href="#">Бали М 2449а</a></div>	
+										<div class="name"><a href="#">Бали М 2449а</a></div>
 									</div>
 									<div class="product-footer">
 										<div class="price">
-											<span class="price-old">120 300</span><br><span class="price-current">102 300</span>
+											<span class="price-old">120 300</span><br><span class="price-current">102
+												300</span>
 										</div>
 										<div class="cart"><a href="#"></a></div>
 									</div>
@@ -788,18 +963,19 @@
 					<div class="product mobslide">
 						<div class="wrapper">
 							<!-- Независимо от наличия меток labels в товаре добавляй блок с классом product-header (нужен будет для выравниявания высот) -->
-							<div class="product-header">										
+							<div class="product-header">
 								<div class="labels">
 									<ul>
 										<li class="popular">хит</li>
 										<li class="novelty">новинка</li>
 									</ul>
-								</div>	
+								</div>
 							</div>
 							<div class="product-body">
-								<div class="image"><a href="#"><img src="tpl/img/products/product-1.png" alt=""></a></div>
+								<div class="image"><a href="#"><img src="tpl/img/products/product-1.png" alt=""></a>
+								</div>
 								<div class="type"><a href="#">Прямой диван</a></div>
-								<div class="name"><a href="#">Бали М 2449а</a></div>	
+								<div class="name"><a href="#">Бали М 2449а</a></div>
 							</div>
 							<div class="product-footer">
 								<div class="price">
@@ -821,9 +997,10 @@
 								</div>
 							</div>
 							<div class="product-body">
-								<div class="image"><a href="#"><img src="tpl/img/products/product-2.png" alt=""></a></div>
+								<div class="image"><a href="#"><img src="tpl/img/products/product-2.png" alt=""></a>
+								</div>
 								<div class="type"><a href="#">Прямой диван</a></div>
-								<div class="name"><a href="#">Бали М 2449а</a></div>	
+								<div class="name"><a href="#">Бали М 2449а</a></div>
 							</div>
 							<div class="product-footer">
 								<div class="price">
@@ -835,12 +1012,13 @@
 					</div>
 					<div class="product mobslide mobslide">
 						<div class="wrapper">
-							<div class="product-header">											
+							<div class="product-header">
 							</div>
 							<div class="product-body">
-								<div class="image"><a href="#"><img src="tpl/img/products/product-3.png" alt=""></a></div>
+								<div class="image"><a href="#"><img src="tpl/img/products/product-3.png" alt=""></a>
+								</div>
 								<div class="type"><a href="#">Прямой диван</a></div>
-								<div class="name"><a href="#">Бали М 2449а</a></div>	
+								<div class="name"><a href="#">Бали М 2449а</a></div>
 							</div>
 							<div class="product-footer">
 								<div class="price">
@@ -857,12 +1035,13 @@
 									<ul>
 										<li class="novelty">новинка</li>
 									</ul>
-								</div>	
+								</div>
 							</div>
 							<div class="product-body">
-								<div class="image"><a href="#"><img src="tpl/img/products/product-4.png" alt=""></a></div>
+								<div class="image"><a href="#"><img src="tpl/img/products/product-4.png" alt=""></a>
+								</div>
 								<div class="type"><a href="#">Прямой диван</a></div>
-								<div class="name"><a href="#">Бали М 2449а</a></div>	
+								<div class="name"><a href="#">Бали М 2449а</a></div>
 							</div>
 							<div class="product-footer">
 								<div class="price">
@@ -872,7 +1051,7 @@
 							</div>
 						</div>
 					</div>
-				</div>					
+				</div>
 			</div>
 		</div>
 		<!-- END products -->
@@ -884,7 +1063,7 @@
 					<div class="image">
 						<div class="wrapper">
 							<img src="tpl/img/subscribe.png" alt="">
-						</div>						
+						</div>
 					</div>
 					<div class="form">
 						<div class="form-heading">
@@ -899,12 +1078,12 @@
 									<input type="email" name="email" class="text" placeholder="Введите ваш e-mail">
 								</div>
 								<div class="col-xs-5 col-sm-5">
-									<button type="submit" class="button">Подписаться</button>	
+									<button type="submit" class="button">Подписаться</button>
 								</div>
 							</div>
 						</form>
 					</div>
-				</div>	
+				</div>
 			</div>
 		</div>
 		<!-- END subscribe-1 -->
@@ -913,7 +1092,7 @@
 		<div class="about">
 			<div class="container">
 				<div class="about-content">
-					<div class="section" style="background: url(tpl/img/about.jpg");>
+					<div class="section" style="background: url(tpl/img/about.jpg" );>
 						<div class="section-heading">
 							Наше роизводство
 						</div>
@@ -935,7 +1114,7 @@
 							<a href="#">Подробнее</a>
 						</div>
 					</div>
-				</div>	
+				</div>
 			</div>
 		</div>
 		<!-- END about -->
@@ -964,7 +1143,8 @@
 										<div class="date">26 июля 2019</div>
 									</div>
 									<div class="article-text">
-										В интервью газете «Ведомости» Владимир Михайлович Седов подробно рассказал о том, как и с какой целью создавался...
+										В интервью газете «Ведомости» Владимир Михайлович Седов подробно рассказал о
+										том, как и с какой целью создавался...
 									</div>
 								</div>
 							</div>
@@ -978,7 +1158,8 @@
 										<div class="date">26 июля 2019</div>
 									</div>
 									<div class="article-text">
-										Ровно полгода прошло после запуска магазина нового поколения : территория здорового сна», но компания...
+										Ровно полгода прошло после запуска магазина нового поколения : территория
+										здорового сна», но компания...
 									</div>
 								</div>
 							</div>
@@ -992,7 +1173,8 @@
 										<div class="date">26 июля 2019</div>
 									</div>
 									<div class="article-text">
-										РБК стиль составил обзор последних новинок индустрии товаров для сна, которые помогают нам спать...
+										РБК стиль составил обзор последних новинок индустрии товаров для сна, которые
+										помогают нам спать...
 									</div>
 								</div>
 							</div>
@@ -1006,7 +1188,8 @@
 										<div class="date">26 июля 2019</div>
 									</div>
 									<div class="article-text">
-										Крупнейший бренд матрасов зарабатывает на всем, что связано со сном. Одни только текстильные товары - одеяла...
+										Крупнейший бренд матрасов зарабатывает на всем, что связано со сном. Одни только
+										текстильные товары - одеяла...
 									</div>
 								</div>
 							</div>
@@ -1024,7 +1207,8 @@
 										<div class="date">26 июля 2019</div>
 									</div>
 									<div class="article-text">
-										В интервью газете «Ведомости» Владимир Михайлович Седов подробно рассказал о том, как и с какой целью создавался...
+										В интервью газете «Ведомости» Владимир Михайлович Седов подробно рассказал о
+										том, как и с какой целью создавался...
 									</div>
 								</div>
 							</div>
@@ -1038,7 +1222,8 @@
 										<div class="date">26 июля 2019</div>
 									</div>
 									<div class="article-text">
-										Ровно полгода прошло после запуска магазина нового поколения : территория здорового сна», но компания...
+										Ровно полгода прошло после запуска магазина нового поколения : территория
+										здорового сна», но компания...
 									</div>
 								</div>
 							</div>
@@ -1052,7 +1237,8 @@
 										<div class="date">26 июля 2019</div>
 									</div>
 									<div class="article-text">
-										РБК стиль составил обзор последних новинок индустрии товаров для сна, которые помогают нам спать...
+										РБК стиль составил обзор последних новинок индустрии товаров для сна, которые
+										помогают нам спать...
 									</div>
 								</div>
 							</div>
@@ -1066,7 +1252,8 @@
 										<div class="date">26 июля 2019</div>
 									</div>
 									<div class="article-text">
-										Крупнейший бренд матрасов зарабатывает на всем, что связано со сном. Одни только текстильные товары - одеяла...
+										Крупнейший бренд матрасов зарабатывает на всем, что связано со сном. Одни только
+										текстильные товары - одеяла...
 									</div>
 								</div>
 							</div>
@@ -1084,7 +1271,8 @@
 										<div class="date">26 июля 2019</div>
 									</div>
 									<div class="article-text">
-										В интервью газете «Ведомости» Владимир Михайлович Седов подробно рассказал о том, как и с какой целью создавался...
+										В интервью газете «Ведомости» Владимир Михайлович Седов подробно рассказал о
+										том, как и с какой целью создавался...
 									</div>
 								</div>
 							</div>
@@ -1098,7 +1286,8 @@
 										<div class="date">26 июля 2019</div>
 									</div>
 									<div class="article-text">
-										Ровно полгода прошло после запуска магазина нового поколения : территория здорового сна», но компания...
+										Ровно полгода прошло после запуска магазина нового поколения : территория
+										здорового сна», но компания...
 									</div>
 								</div>
 							</div>
@@ -1112,7 +1301,8 @@
 										<div class="date">26 июля 2019</div>
 									</div>
 									<div class="article-text">
-										РБК стиль составил обзор последних новинок индустрии товаров для сна, которые помогают нам спать...
+										РБК стиль составил обзор последних новинок индустрии товаров для сна, которые
+										помогают нам спать...
 									</div>
 								</div>
 							</div>
@@ -1126,7 +1316,8 @@
 										<div class="date">26 июля 2019</div>
 									</div>
 									<div class="article-text">
-										Крупнейший бренд матрасов зарабатывает на всем, что связано со сном. Одни только текстильные товары - одеяла...
+										Крупнейший бренд матрасов зарабатывает на всем, что связано со сном. Одни только
+										текстильные товары - одеяла...
 									</div>
 								</div>
 							</div>
@@ -1174,7 +1365,7 @@
 							</ul>
 						</div>
 					</div>
-				</div>				
+				</div>
 			</div>
 		</div>
 		<!-- END subscribe-2 -->
@@ -1250,7 +1441,7 @@
 							<div class="phones">
 								<ul>
 									<li><a href="tel:+8 (800) 555-11-04">+8 (800) 555-11-04</a></li>
-								</ul>								
+								</ul>
 							</div>
 							<div class="callback">
 								<a href="#" data-toggle="modal" data-target=".modal-callback">Позвоните мне</a>
@@ -1267,7 +1458,7 @@
 				</div>
 			</div>
 		</div>
-		<!-- END footer -->		
+		<!-- END footer -->
 	</div>
 	<!-- END out -->
 
@@ -1320,7 +1511,7 @@
 							<div class="col-xs-6">
 								<div class="form-group">
 									<input type="text" class="form-control" name="width" id="" placeholder="Ширина">
-								</div>	
+								</div>
 							</div>
 						</div>
 						<div class="row">
@@ -1332,7 +1523,7 @@
 							<div class="col-xs-6">
 								<div class="form-group">
 									<input type="text" class="form-control" name="diameter" id="" placeholder="Диаметр">
-								</div>	
+								</div>
 							</div>
 						</div>
 						<div class="form-group">
@@ -1356,7 +1547,7 @@
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
 					<div class="title">
-						<h4>Выберите город</h4>						
+						<h4>Выберите город</h4>
 					</div>
 				</div>
 				<div class="modal-body">
@@ -1435,15 +1626,41 @@
 	</div>
 	<!-- END modal-cities -->
 
+
+	<!-- Modal search -->
+
+	<div class="modal modal-search fade" tabindex="-1" role="dialog">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+					<div class="title">
+						<h4>Поиск</h4>
+					</div>
+				</div>
+				<div class="modal-body">
+					<form name="" id="" action="" class="md-form">
+						<button type="submit" class="md-button"></button>
+						<input type="text" name="s" class="md-text" placeholder="Поиск по сайту">
+						<a href="#" class="md-btn__search">Поиск</a>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal search -->
+
 	<!--[if IE]><script src="tpl/js/html5shiv.js"></script><![endif]-->
 	<script src="tpl/js/jquery.js"></script>
-	<script src="tpl/bootstrap/js/bootstrap.js"></script>	
+	<script src="tpl/bootstrap/js/bootstrap.js"></script>
 	<script src="tpl/slick/slick.min.js"></script>
 	<script src="tpl/js/inputmask.bundle.js"></script>
 	<script src="tpl/js/scripts.js"></script>
 
-	
-	<script src="tpl/js/jquery.cookie.min.js"></script>	
-	<script src="tpl/js/character.js"></script>	
+
+	<script src="tpl/js/jquery.cookie.min.js"></script>
+	<script src="tpl/js/character.js"></script>
 </body>
+
 </html>

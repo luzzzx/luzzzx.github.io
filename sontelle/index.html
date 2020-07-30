@@ -296,13 +296,13 @@
 		<!-- END banners -->
 		<!-- фильтр на глафной -->
 		<div class="page catalog">
-			<div class="main-filter filter-toggle"><a href="#"><span>Подбор матрасов</span></a></div>
+			<div class="main-filter filter-toggle"><a href="#"><span>Подбор матраса</span></a></div>
 			<div class="container">
 				<div class="row">
 					<div class="main-filter__content col-sm-12 col-md-3">
 						<div class="filter">
 							<div class="filter-content">
-								<a href="#" class="close">Назад к каталогу</a>
+								<a href="#" class="close top-close">Назад к каталогу</a>
 								<div class="filter-section">
 									<div class="categories">
 										<div class="categories-heading">
@@ -438,17 +438,33 @@
 									<div class="heading">
 										Жесткость
 									</div>
-									<div class="list">
+									<div class="list rigidity">
 										<ul>
-											<!-- id и for для одного элемента должны совпадать, а их название/нумерация может быть произвольной, но уникальной на странице  -->
-											<li><input type="checkbox" id="stiffness-1"><label
-													for="stiffness-1">1/4</label></li>
-											<li><input type="checkbox" id="stiffness-2"><label
-													for="stiffness-2">2/4</label></li>
-											<li><input type="checkbox" id="stiffness-3"><label
-													for="stiffness-3">3/4</label></li>
-											<li><input type="checkbox" id="stiffness-4"><label
-													for="stiffness-4">4/4</label></li>
+											<li>
+												<input type="checkbox" id="stiffness-first-0" value="Мягкий"
+													name="attributes[33][]">
+												<label for="stiffness-first-0">Мягкий</label>
+											</li>
+											<li>
+												<input type="checkbox" id="stiffness-first-1" value="Средне-мягкий"
+													name="attributes[33][]">
+												<label for="stiffness-first-1">Средне-мягкий</label>
+											</li>
+											<li>
+												<input type="checkbox" id="stiffness-first-2" value="Средний"
+													name="attributes[33][]">
+												<label for="stiffness-first-2">Средний</label>
+											</li>
+											<li>
+												<input type="checkbox" id="stiffness-first-3" value="Средне-жесткий"
+													name="attributes[33][]">
+												<label for="stiffness-first-3">Средне-жесткий</label>
+											</li>
+											<li>
+												<input type="checkbox" id="stiffness-first-4" value="Жесткий"
+													name="attributes[33][]">
+												<label for="stiffness-first-4">Жесткий</label>
+											</li>
 										</ul>
 									</div>
 								</div>

@@ -164,6 +164,23 @@
 
 
 @media screen and (max-width: 480px){
+    .top-close{
+        width: 100%;
+        background: #Fff;
+        position: fixed !important;
+        height: 40px;
+        padding: 10px;
+        box-shadow: 0 2px 15px rgba(0,0,0,.3);
+        text-align: center;
+        top: 0 !important;
+        right: 0 !important;
+        z-index: 20;
+        border-bottom: none !important;
+    }
+    .product-detail .images {
+        max-height: 228px;
+    }
+
     .filter-section {
 
         &__bottom {
@@ -255,5 +272,22 @@
     .product-detail .actions {
         margin-top: 15px;
         text-align: center;
+    }
+
+    .rigidity{
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: baseline;
+            li{
+                flex: 0 0 49%;
+                font-size: 12px;
+                label{
+                    padding-left: 25px;
+                }
+            }
+        }
+
     }
 }

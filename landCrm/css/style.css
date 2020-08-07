@@ -365,8 +365,8 @@ main {
   width: 64%;
   position: absolute;
   z-index: -1;
-  top: -110px;
-  left: 0;
+  top: -220px;
+  left: -80px;
   height: 900px;
 }
 
@@ -828,7 +828,6 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  display: block;
 }
 
 @media (max-width: 590px) {
@@ -1750,6 +1749,11 @@ main {
   font-size: 14px;
   line-height: 17px;
   color: #000000;
+}
+
+.table-btn:hover {
+  background: #FC3C38;
+  color: #ffffff;
 }
 
 .yes {

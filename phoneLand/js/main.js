@@ -1,4 +1,13 @@
-AOS.init();
+AOS.init({
+    disable: 'mobile'
+});
+
+AOS.init({
+    disable: function () {
+        var maxWidth = 768;
+        return window.innerWidth < maxWidth;
+    }
+});
 $('.comment-slider').owlCarousel({
     loop: true,
     items: 3,

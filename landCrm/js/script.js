@@ -3,6 +3,7 @@ $(document).scroll(function () {
     $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
 });
 $(document).ready(function () {
+    AOS.init();
     $('.burger-menu').on("click", function () {
         $('.burger-menu').toggleClass('active');
     });
@@ -32,4 +33,5 @@ $(document).ready(function () {
         items: 1,
         nav: true,
     });
+
 });

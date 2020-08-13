@@ -385,7 +385,7 @@ main {
   max-width: 1280px;
   margin: 0 auto;
   width: 100%;
-  padding: 0 10px 30px 10px;
+  padding: 5px 10px 10px 10px;
   -webkit-transition: ease-in .3s;
   -o-transition: ease-in .3s;
   transition: ease-in .3s;
@@ -470,6 +470,7 @@ main {
 }
 
 .fixed-top.scrolled {
+  top: -1px;
   background: #FFFFFF;
   -webkit-box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
@@ -478,7 +479,7 @@ main {
 
 @media (max-width: 590px) {
   .fixed-top.scrolled .container-header {
-    padding: 0 15px 10px 15px;
+    padding: 5px 15px 10px 15px;
   }
   .fixed-top.scrolled .header-logo img {
     -webkit-transition: ease-in .3s;
@@ -498,7 +499,7 @@ main {
 }
 
 .header-logo {
-  margin-right: 24px;
+  margin-right: 44px;
 }
 
 .header-logo__disc {
@@ -817,6 +818,7 @@ main {
   font-size: 24px;
   line-height: 24px;
   color: #000000;
+  margin-bottom: 30px;
 }
 
 @media (max-width: 590px) {
@@ -986,6 +988,12 @@ main {
 }
 
 @media (max-width: 590px) {
+  .problem-card__text {
+    margin-left: 60px;
+  }
+}
+
+@media (max-width: 590px) {
   .problem-card {
     display: block;
   }
@@ -1029,6 +1037,12 @@ main {
 
 .benefit-title {
   margin-bottom: 50px;
+}
+
+@media (max-width: 590px) {
+  .benefit-title {
+    margin-bottom: 20px;
+  }
 }
 
 .benefit-subtitle {
@@ -1107,7 +1121,7 @@ main {
 
 @media (max-width: 590px) {
   .benefit-footer {
-    padding: 10px;
+    padding: 30px 10px 30px 10px;
     margin-top: 10px;
   }
 }
@@ -1209,6 +1223,10 @@ main {
   }
 }
 
+.howit-graph__main {
+  position: relative;
+}
+
 .howit-graph__main img {
   width: 104%;
   position: relative;
@@ -1221,8 +1239,48 @@ main {
   }
 }
 
+.graph-text {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 45%;
+  padding: 0px 5px;
+}
+
+.graph-text h3 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 22px;
+  margin-bottom: 10px;
+}
+
+.graph-text span {
+  color: #2689FE;
+}
+
+.graph-text p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+}
+
+@media (max-width: 590px) {
+  .graph-text {
+    display: block;
+    position: relative;
+    width: 100%;
+  }
+}
+
 .howit-card {
   width: 190px;
+}
+
+.howit-card span {
+  display: none;
 }
 
 @media (max-width: 1025px) {
@@ -1235,6 +1293,11 @@ main {
 
 @media (max-width: 590px) {
   .howit-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     text-align: left;
     background: #fff;
     -webkit-box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
@@ -1249,11 +1312,30 @@ main {
     height: 20px;
     background: #2689FE;
     position: absolute;
-    left: 50%;
+    left: 9%;
     top: -20px;
-    -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-            transform: translateX(-50%);
+    -webkit-transform: translateX(-9%);
+        -ms-transform: translateX(-9%);
+            transform: translateX(-9%);
+  }
+  .howit-card span {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    width: 15%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 15%;
+            flex: 0 0 15%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 18px;
+    font-size: 18px;
+    line-height: 20px;
+    color: #2689FE;
+    margin-top: 0px;
+    font-weight: 600;
   }
 }
 
@@ -1316,6 +1398,12 @@ main {
   font-size: 12px;
   line-height: 20px;
   color: #000000;
+}
+
+@media (max-width: 590px) {
+  .howit-card__text {
+    margin-left: 15%;
+  }
 }
 
 .offer {
@@ -1425,7 +1513,7 @@ main {
 .bitrix-table th {
   text-align: left;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 13px;
   line-height: 24px;
   color: #000000;
@@ -1767,7 +1855,7 @@ main {
 
 .paket-table tbody th {
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 13px;
   line-height: 14px;
   color: #000000;
@@ -1840,7 +1928,7 @@ main {
   -webkit-box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  padding: 53px 80px 20px 97px;
+  padding: 30px 80px 30px 97px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1902,7 +1990,7 @@ main {
 }
 
 .expiriance-title {
-  margin-bottom: 51px;
+  margin-bottom: 20px;
 }
 
 @media (max-width: 590px) {
@@ -2000,7 +2088,8 @@ main {
     -webkit-box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
             box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    padding: 10px;
+    padding: 20px 10px 10px 10px;
+    margin-bottom: 20px;
   }
 }
 
@@ -2035,7 +2124,7 @@ main {
 }
 
 .about-subtitle {
-  margin-bottom: 47px;
+  margin-bottom: 20px;
 }
 
 @media (max-width: 590px) {
@@ -2281,7 +2370,7 @@ main {
 
 .system-list .num {
   color: white;
-  background: #2980B9;
+  background: #2689FE;
   display: inline-block;
   text-align: center;
   margin: 5px 10px;
@@ -2378,7 +2467,7 @@ main {
 
 @media (max-width: 590px) {
   .system-audit__text {
-    text-align: left;
+    text-align: center;
   }
 }
 
@@ -2688,12 +2777,12 @@ footer {
   padding-bottom: 60px;
   background: url("../img/footer-decor.svg") no-repeat;
   background-size: 100%;
-  background-position: bottom 0px left -200px;
+  background-position: bottom 0px left -120px;
 }
 
 @media (max-width: 1025px) {
   .footer-body {
-    background-position: bottom 0px left -200px;
+    background-position: bottom 0px left -120px;
     background-size: 120%;
   }
 }
@@ -2829,6 +2918,19 @@ footer {
   color: #636363;
 }
 
+.footer-logo {
+  display: none;
+}
+
+@media (max-width: 590px) {
+  .footer-logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 20px;
+  }
+}
+
 .footer-bottom {
   padding: 48px 0;
   display: -webkit-box;
@@ -2848,9 +2950,9 @@ footer {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -2870,7 +2972,7 @@ footer {
   .footer-col a {
     font-size: 12px;
     line-height: 16px;
-    text-align: left;
+    text-align: center;
   }
 }
 
@@ -2887,6 +2989,12 @@ footer {
   .footer-col span {
     font-size: 12px;
     line-height: 16px;
+  }
+}
+
+@media (max-width: 590px) {
+  .footer-col {
+    margin-bottom: 10px;
   }
 }
 

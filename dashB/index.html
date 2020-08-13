@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./plugins/fontawesome-free/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <title>Dasboard</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <aside class="main-aside">
+            <nav>
+                <div class="burger"><i class="fas fa-bars"></i></div>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-coins"></i>
+                            <p>Coins</p>
+                    </li></a>
+                    <li><a href="#"><i class="fas fa-server"></i>
+                            <p>Dedicated servers</p>
+                        </a>
+                    </li>
+                    <li><a href="#"><i class="fas fa-server Ss-i"></i>
+                            <p>Staking servers</p>
+                        </a>
+
+                    </li>
+                    <li><a href="#"><i class="fas fa-server Ms-i"></i>
+                            <p>Masternode servers</p>
+                        </a>
+                    </li>
+                    <li><a href="#"><i class="fas fa-concierge-bell"></i>
+                            <p>Service fees</p>
+                        </a>
+
+                    </li>
+                    <li><a href="#"><i class="fas fa-users"></i>
+                            <p>Users</p>
+                        </a>
+                    </li>
+                    <li><a href="#"><i class="fas fa-wallet"></i>
+                            <p>Wallet operations</p>
+                        </a>
+                    </li>
+                    <li><a href="#"><i class="fas fa-broadcast-tower"></i>
+                            <p>Airdrop</p>
+                        </a>
+                    </li>
+                    <li><a href="#"><i class="fas fa-user-shield"></i>
+                            <p>Admin log</p>
+                        </a>
+                    </li>
+                    <li><a href="#"><i class="fas fa-clipboard-list"></i>
+                            <p>Express Trade log</p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <div class="main-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <button type="button" class="edit-btn btn btn-secondary">+ ADD NEW COIN</button>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4  ml-auto">
+                        <form class="form-inline">
+                            <div class="coins-form input-group input-group-sm">
+                                <input class="form-control form-control-navbar" type="search" placeholder="Search"
+                                    aria-label="Search">
+                                <div class="input-group-append">
+                                    <button class="btn btn-navbar" type="submit">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="table-name mt-5 mb-2">
+                    <div class="col-1">id</div>
+                    <div class="col-2">Project name</div>
+                    <div class="col-2">Balance</div>
+                    <div class="col-3">Delta balance</div>
+                    <div class="col-1">Fee</div>
+                    <div class="col-1">Status</div>
+                    <div class="col-2"></div>
+                </div>
+                <div class="table-wrapper" data-toggle="collapse" data-target="#collapseExample" aria-expanded="true"
+                    aria-controls="collapseExample">
+                    <div class="col-1">15</div>
+                    <div class="col-2">XAP <span>Apollon Network</span></div>
+                    <div class="col-2"><span>5405.4225</span>
+                        <span>145452.9451</span>
+                    </div>
+                    <div class="col-3">+23.4354</div>
+                    <div class="col-1">8%</div>
+                    <div class="col-1">Active</div>
+                    <div class="col-2"><a href="#" class="edit-btn btn btn-secondary">edit</a></div>
+                </div>
+                <div class="collapse card show" id="collapseExample">
+                    <div class="table-icons">
+                        <a href="#"><i class="fab fa-bitcoin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                    </div>
+                    <div class="btn-row">
+                        <a href="#" class="btn btn-secondary">BACKUP WALLET</a>
+                        <a href="#" class="btn btn-secondary">RESTORE WALLET</a>
+                        <a href="#" class="btn btn-secondary">ROLLBACK BC.</a>
+                        <a href="#" class="btn btn-secondary">DELETE BC.</a>
+                        <a href="#" class="btn btn-secondary">DELETE COINSERV</a>
+                    </div>
+                    <div class="table-section__wallet">
+                        <!-- <div class="row">
+                            <div class="col-4 ">
+                                <ul>
+                                    <li>Service wallet</li>
+                                    <li>POS wallet</li>
+                                    <li>zPOS wallet</li>
+                                    <li>Masternodes total balance</li>
+                                </ul>
+                            </div>
+                            <div class="col-4 data-wallet">
+                                <ul>
+                                    <li>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1A</li>
+                                    <li>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE2B</li>
+                                    <li>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGEKC</li>
+                                </ul>
+                            </div>
+                            <div class="col-4 data-wallet">
+                                <ul>
+                                    <li>5405.4225 XAP</li>
+                                    <li>45.9458 XAP</li>
+                                    <li>0 XAP</li>
+                                    <li>0 XAP</li>
+                                </ul>
+                            </div>
+                        </div> -->
+                        <table class="table table-responsive-lg">
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Service wallet</th>
+                                    <td>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1A</td>
+                                    <td>5405.4225 XAP</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">POS wallet</th>
+                                    <td>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE2B</td>
+                                    <td>5405.4225 XAP</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">zPOS wallet</th>
+                                    <td>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGEKC</td>
+                                    <td>0 XAP</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" colspan="2">Masternodes total balance</th>
+                                    <td>0 XAP</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="table-section__balance">
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="wb">
+                                    <span>Total wallets balance</span>
+                                    5473 XAP
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="db">
+                                    <span>Database balance</span>
+                                    5450 XAP
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="del-b">
+                                    <span>Delta balance</span>
+                                    +23 XAP
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-section__footer">
+                        <div class="row">
+                            <div class="col-7">
+                                <div class="comments-section">
+                                    <h2>Comments:</h2>
+                                    <span>This is comment section.</span>
+                                    <span>This is comment section.</span>
+                                    <span>This is comment section.</span>
+                                </div>
+                            </div>
+                            <div class="col-5">
+                                <div class="section-final">
+                                    <ul>
+                                        <li>Last block</li>
+                                        <li>Max servers</li>
+                                        <li>Referral rewards enabled</li>
+                                        <li>Masternodes</li>
+                                        <li>POS</li>
+                                        <li>zPOS</li>
+                                    </ul>
+                                    <ul>
+                                        <li>1234567789</li>
+                                        <li>21 / 30</li>
+                                        <li>10%</li>
+                                        <li>Yes</li>
+                                        <li>Yes</li>
+                                        <li>No</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-wrapper" data-toggle="collapse" data-target="#collapseExample2"" aria-expanded="
+                    false" aria-controls="collapseExample">
+                    <div class="col-1">15</div>
+                    <div class="col-2">BTXC <span>Bettex</span></div>
+                    <div class="col-2"><span>5405.4225</span>
+                        <span>145452.9451</span>
+                    </div>
+                    <div class="col-3">+23.4354</div>
+                    <div class="col-1">8%</div>
+                    <div class="col-1">Active</div>
+                    <div class="col-2"><a href="#" class="edit-btn btn btn-secondary">edit</a></div>
+                </div>
+                <div class="collapse card" id="collapseExample2">
+                    <div class="table-icons">
+                        <a href="#"><i class="fab fa-bitcoin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                    </div>
+                    <div class="btn-row">
+                        <a href="#" class="btn btn-secondary">BACKUP WALLET</a>
+                        <a href="#" class="btn btn-secondary">RESTORE WALLET</a>
+                        <a href="#" class="btn btn-secondary">ROLLBACK BC.</a>
+                        <a href="#" class="btn btn-secondary">DELETE BC.</a>
+                        <a href="#" class="btn btn-secondary">DELETE COINSERV</a>
+                    </div>
+                    <div class="table-section__wallet">
+                        <table class="table table-responsive-lg">
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Service wallet</th>
+                                    <td>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1A</td>
+                                    <td>5405.4225 XAP</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">POS wallet</th>
+                                    <td>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE2B</td>
+                                    <td>5405.4225 XAP</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">zPOS wallet</th>
+                                    <td>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGEKC</td>
+                                    <td>0 XAP</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" colspan="2">Masternodes total balance</th>
+                                    <td>0 XAP</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="table-section__balance">
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="wb">
+                                    <span>Total wallets balance</span>
+                                    5473 XAP
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="db">
+                                    <span>Database balance</span>
+                                    5450 XAP
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="del-b">
+                                    <span>Delta balance</span>
+                                    +23 XAP
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-section__footer">
+                        <div class="row">
+                            <div class="col-7">
+                                <div class="comments-section">
+                                    <h2>Comments:</h2>
+                                    <span>This is comment section.</span>
+                                    <span>This is comment section.</span>
+                                    <span>This is comment section.</span>
+                                </div>
+                            </div>
+                            <div class="col-5">
+                                <div class="section-final">
+                                    <ul>
+                                        <li>Last block</li>
+                                        <li>Max servers</li>
+                                        <li>Referral rewards enabled</li>
+                                        <li>Masternodes</li>
+                                        <li>POS</li>
+                                        <li>zPOS</li>
+                                    </ul>
+                                    <ul>
+                                        <li>1234567789</li>
+                                        <li>21 / 30</li>
+                                        <li>10%</li>
+                                        <li>Yes</li>
+                                        <li>Yes</li>
+                                        <li>No</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-wrapper" data-toggle="collapse" data-target="#collapseExample3"" aria-expanded="
+                    false" aria-controls="collapseExample">
+                    <div class="col-1">15</div>
+                    <div class="col-2">XBI <span>Bitcoin Incognito</span></div>
+                    <div class="col-2"><span>5405.4225</span>
+                        <span>145452.9451</span>
+                    </div>
+                    <div class="col-3">+23.4354</div>
+                    <div class="col-1">8%</div>
+                    <div class="col-1">Active</div>
+                    <div class="col-2"><a href="#" class="edit-btn btn btn-secondary">edit</a></div>
+                </div>
+                <div class="collapse card" id="collapseExample3">
+                    <div class="table-icons">
+                        <a href="#"><i class="fab fa-bitcoin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                    </div>
+                    <div class="btn-row">
+                        <a href="#" class="btn btn-secondary">BACKUP WALLET</a>
+                        <a href="#" class="btn btn-secondary">RESTORE WALLET</a>
+                        <a href="#" class="btn btn-secondary">ROLLBACK BC.</a>
+                        <a href="#" class="btn btn-secondary">DELETE BC.</a>
+                        <a href="#" class="btn btn-secondary">DELETE COINSERV</a>
+                    </div>
+                    <div class="table-section__wallet">
+                        <table class="table table-responsive-lg">
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Service wallet</th>
+                                    <td>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1A</td>
+                                    <td>5405.4225 XAP</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">POS wallet</th>
+                                    <td>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE2B</td>
+                                    <td>5405.4225 XAP</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">zPOS wallet</th>
+                                    <td>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGEKC</td>
+                                    <td>0 XAP</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" colspan="2">Masternodes total balance</th>
+                                    <td>0 XAP</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="table-section__balance">
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="wb">
+                                    <span>Total wallets balance</span>
+                                    5473 XAP
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="db">
+                                    <span>Database balance</span>
+                                    5450 XAP
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="del-b">
+                                    <span>Delta balance</span>
+                                    +23 XAP
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-section__footer">
+                        <div class="row">
+                            <div class="col-7">
+                                <div class="comments-section">
+                                    <h2>Comments:</h2>
+                                    <span>This is comment section.</span>
+                                    <span>This is comment section.</span>
+                                    <span>This is comment section.</span>
+                                </div>
+                            </div>
+                            <div class="col-5">
+                                <div class="section-final">
+                                    <ul>
+                                        <li>Last block</li>
+                                        <li>Max servers</li>
+                                        <li>Referral rewards enabled</li>
+                                        <li>Masternodes</li>
+                                        <li>POS</li>
+                                        <li>zPOS</li>
+                                    </ul>
+                                    <ul>
+                                        <li>1234567789</li>
+                                        <li>21 / 30</li>
+                                        <li>10%</li>
+                                        <li>Yes</li>
+                                        <li>Yes</li>
+                                        <li>No</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <aside class="control-aside">
+            <nav>
+                <ul>
+                    <li><a href="basic.html" class="btn btn-secondary">BASIC</a></li>
+                    <li><a href="knowledge.html" class="btn btn-secondary">KNOWLEDGEBASE</a></li>
+                    <li><a href="explorer.html" class="btn btn-secondary">EXPLORERS</a></li>
+                    <li><a href="config.html" class="btn btn-secondary">CONFIG</a></li>
+                    <li><a href="service.html" class="btn btn-secondary">SERVICE</a></li>
+                    <li><a href="balancing.html" class="btn btn-secondary">SMART BALANCING</a></li>
+                </ul>
+            </nav>
+        </aside>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

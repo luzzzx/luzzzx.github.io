@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./plugins/fontawesome-free/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <title>Dasboard</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <aside class="main-aside">
+            <nav>
+                <div class="burger"><i class="fas fa-bars"></i></div>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-coins"></i>
+                            <p>Coins</p>
+                    </li></a>
+                    <li><a href="#"><i class="fas fa-server"></i>
+                            <p>Dedicated servers</p>
+                        </a>
+                    </li>
+                    <li><a href="#"><i class="fas fa-server Ss-i"></i>
+                            <p>Staking servers</p>
+                        </a>
+
+                    </li>
+                    <li><a href="#"><i class="fas fa-server Ms-i"></i>
+                            <p>Masternode servers</p>
+                        </a>
+                    </li>
+                    <li><a href="#"><i class="fas fa-concierge-bell"></i>
+                            <p>Service fees</p>
+                        </a>
+
+                    </li>
+                    <li><a href="#"><i class="fas fa-users"></i>
+                            <p>Users</p>
+                        </a>
+                    </li>
+                    <li><a href="#"><i class="fas fa-wallet"></i>
+                            <p>Wallet operations</p>
+                        </a>
+                    </li>
+                    <li><a href="#"><i class="fas fa-broadcast-tower"></i>
+                            <p>Airdrop</p>
+                        </a>
+                    </li>
+                    <li><a href="#"><i class="fas fa-user-shield"></i>
+                            <p>Admin log</p>
+                        </a>
+                    </li>
+                    <li><a href="#"><i class="fas fa-clipboard-list"></i>
+                            <p>Express Trade log</p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <div class="main-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <form class="form-config">
+                        <div class="form-group col-6 config-form">
+                            <label for="DashFork">Connector:</label>
+                            <select id="DashFork" class="form-control">
+                                <option selected>DashFork</option>
+                                <option>Maintenance</option>
+                                <option>DashFork</option>
+                                <option>Insight</option>
+                                <option>Block</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-6 testnet">
+                            <label class="isTestnet" for="customSwitches"><span>Is testnet:
+                                </span></label>
+                            <div class="custom-control custom-switch custom-switch-featured">
+                                <input type="checkbox" class="custom-control-input" id="customSwitches">
+                                <label class="custom-control-label" for="customSwitches"></label>
+                            </div>
+                        </div>
+                        <div class="form-group col-6 config-form">
+                            <label class="form-check-label" for="P2P">
+                                P2P port:
+                            </label>
+                            <input type="text" class="form-control" id="P2P">
+                        </div>
+                        <div class="form-group col-6 config-form">
+                            <label class="form-check-label" for="RPC">
+                                RPC port:
+                            </label>
+                            <input type="text" class="form-control" id="RPC">
+                        </div>
+                        <div class="form-check col-6 mb-2">
+                            <label class="form-check-label mb-2" for="Node">
+                                Node URI:
+                            </label>
+                            <input type="text" class="form-control" id="Node">
+                        </div>
+                        <div class="form-check col-6 mb-2">
+                            <label class="form-check-label mb-2" for="SHA256">
+                                Node SHA256:
+                            </label>
+                            <input type="text" class="form-control" id="SHA256">
+                        </div>
+                        <div class="form-check col-6 mb-2">
+                            <label class="form-check-label mb-2" for="Bootstrap">
+                                Bootstrap URI:
+                            </label>
+                            <input type="text" class="form-control" id="Bootstrap">
+                        </div>
+                        <div class="form-check col-6 mb-2">
+                            <label class="form-check-label mb-2" for="BSHA256">
+                                Bootstrap SHA256:
+                            </label>
+                            <input type="text" class="form-control" id="BSHA256">
+                        </div>
+                        <div class="form-check col-6 mb-2">
+                            <label class="form-check-label mb-2" for="Binariespath">
+                                Binaries path:<i class="fas fa-question-circle" data-toggle="tooltip"
+                                    data-placement="right" title="" data-original-title="Tooltip on right"></i>
+                            </label>
+                            <input type="text" class="form-control" id="Binariespath">
+                        </div>
+                        <div class="form-check col-6 mb-2">
+                            <label class="form-check-label mb-2" for="filespath">
+                                Bootstrap files path:<i class="fas fa-question-circle" data-toggle="tooltip"
+                                    data-placement="right" title="" data-original-title="Tooltip on right"></i>
+                            </label>
+                            <input type="text" class="form-control" id="filespath">
+                        </div>
+                        <div class="form-check col-6 mb-2">
+                            <label class="form-check-label mb-2" for="coinName">
+                                Coin name:
+                            </label>
+                            <input type="text" class="form-control" id="coinName">
+                        </div>
+                        <div class="form-check col-6 mb-2">
+                            <label class="form-check-label mb-2" for="docker">
+                                Base docker image:
+                            </label>
+                            <select id="docker" class="form-control">
+                                <option selected>docker</option>
+                                <option>Maintenance</option>
+                                <option>docker</option>
+                                <option>Insight</option>
+                                <option>Block</option>
+                            </select>
+                        </div>
+                        <div class="form-check col-6 mb-2">
+                            <label class="form-check-label mb-2" for="version">
+                                Node version:
+                            </label>
+                            <input type="text" class="form-control" id="version">
+                        </div>
+                        <div class="form-check col-6 mb-2">
+                            <label class="form-check-label mb-2" for="Displayversion">
+                                Display node version:
+                            </label>
+                            <input type="text" class="form-control" id="Displayversion">
+                        </div>
+                        <div class="form-check col-6 mb-2">
+                            <label class="form-check-label mb-2" for="DaemonName">
+                                Daemon name:
+                            </label>
+                            <input type="text" class="form-control" id="DaemonName">
+                        </div>
+                        <div class="form-check col-6 mb-2">
+                            <label class="form-check-label mb-2" for="ClientName">
+                                Client name:
+                            </label>
+                            <input type="text" class="form-control" id="ClientName">
+                        </div>
+                        <div class="form-check col-6 mb-2">
+                            <label class="form-check-label mb-2" for="folder">
+                                Config folder:<i class="fas fa-question-circle" data-toggle="tooltip"
+                                    data-placement="right" title="" data-original-title="Tooltip on right"></i>
+                            </label>
+                            <input type="text" class="form-control" id="folder">
+                        </div>
+                        <div class="form-check col-6 mb-2">
+                            <label class="form-check-label mb-2" for="fileConfig">
+                                Config file name:<i class="fas fa-question-circle" data-toggle="tooltip"
+                                    data-placement="right" title="" data-original-title="Tooltip on right"></i>
+                            </label>
+                            <input type="text" class="form-control" id="fileConfig">
+                        </div>
+                        <div class="form-group col-12">
+                            <label for="Addnodes">Addnodes:</label>
+                            <textarea class="form-control" id="Addnodes" rows="3"></textarea>
+                        </div>
+                        <div class="form-group col-12">
+                            <label for="Reward">Reward config:</label>
+                            <textarea class="form-control" id="Reward" rows="3"></textarea>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <aside class="control-aside">
+            <nav>
+                <ul>
+                    <li><a href="#" class="btn btn-secondary">BASIC</a></li>
+                    <li><a href="#" class="btn btn-secondary">KNOWLEDGEBASE</a></li>
+                    <li><a href="#" class="btn btn-secondary">EXPLORERS</a></li>
+                    <li><a href="#" class="btn btn-secondary">CONFIG</a></li>
+                    <li><a href="#" class="btn btn-secondary">SERVICE</a></li>
+                    <li><a href="#" class="btn btn-secondary">SMART BALANCING</a></li>
+                </ul>
+            </nav>
+        </aside>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

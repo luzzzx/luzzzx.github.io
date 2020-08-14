@@ -293,6 +293,10 @@
   background: #869791;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Montserrat';
 }
@@ -765,9 +769,17 @@ main {
 .intro p {
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
-  line-height: 14px;
+  font-size: 20px;
+  line-height: 20px;
   color: #000000;
+}
+
+@media (max-width: 590px) {
+  .intro p {
+    font-size: 16px;
+    line-height: 14px;
+    font-weight: 600;
+  }
 }
 
 .intro ul {
@@ -826,6 +838,7 @@ main {
     font-size: 18px;
     line-height: 22px;
     margin-bottom: 17px;
+    text-align: center;
   }
 }
 
@@ -845,6 +858,9 @@ main {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -873,8 +889,8 @@ main {
 @media (max-width: 590px) {
   .intro__brands img {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 40%;
-            flex: 0 0 40%;
+        -ms-flex: 0 0 30%;
+            flex: 0 0 30%;
   }
 }
 
@@ -984,6 +1000,7 @@ main {
   .problem-card__title {
     height: auto;
     margin-bottom: 30px;
+    margin-left: 60px;
   }
 }
 
@@ -1403,6 +1420,8 @@ main {
 @media (max-width: 590px) {
   .howit-card__text {
     margin-left: 15%;
+    font-size: 14px;
+    line-height: 16px;
   }
 }
 
@@ -1513,7 +1532,7 @@ main {
 .bitrix-table th {
   text-align: left;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 13px;
   line-height: 24px;
   color: #000000;
@@ -1594,6 +1613,13 @@ main {
   line-height: 24px;
   color: #000000;
   margin-bottom: 4px;
+}
+
+@media (max-width: 590px) {
+  .bitrix-table .table-head span {
+    width: 150px;
+    display: block;
+  }
 }
 
 .bitrix-table .table-head p {
@@ -1855,7 +1881,7 @@ main {
 
 .paket-table tbody th {
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 13px;
   line-height: 14px;
   color: #000000;
@@ -2475,6 +2501,7 @@ main {
   background: #FC3C38;
   border-radius: 30px;
   color: #FFFFFF;
+  font-weight: 600;
 }
 
 .comment-title {
@@ -2799,6 +2826,7 @@ footer {
     background-size: cover;
     background-position: unset;
     padding-top: 20px;
+    padding-bottom: 20px;
   }
 }
 
@@ -2918,21 +2946,57 @@ footer {
   color: #636363;
 }
 
-.footer-logo {
-  display: none;
+.footer-top {
+  padding-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer-top .footer-contact a {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: right;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  color: #FFFFFF;
+  display: block;
+  margin-bottom: 10px;
 }
 
 @media (max-width: 590px) {
-  .footer-logo {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin-bottom: 20px;
+  .footer-top .footer-contact a {
+    font-size: 12px;
+  }
+}
+
+.footer-top .footer-contact p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: right;
+  color: #FFFFFF;
+  display: block;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 590px) {
+  .footer-top .footer-contact p {
+    font-size: 12px;
   }
 }
 
 .footer-bottom {
-  padding: 48px 0;
+  padding: 20px 0px 0px 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2968,6 +3032,16 @@ footer {
   display: block;
 }
 
+.footer-col a:first-child {
+  margin-bottom: 0px;
+}
+
+@media (max-width: 590px) {
+  .footer-col a:first-child {
+    margin-bottom: 50px;
+  }
+}
+
 @media (max-width: 590px) {
   .footer-col a {
     font-size: 12px;
@@ -2989,6 +3063,7 @@ footer {
   .footer-col span {
     font-size: 12px;
     line-height: 16px;
+    text-align: center;
   }
 }
 
@@ -3234,6 +3309,47 @@ footer {
   width: 100%;
 }
 
+.form-footer.price-tag {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 590px) {
+  .form-footer.price-tag {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.form-footer.price-tag .custom-control {
+  width: 320px;
+}
+
+@media (max-width: 590px) {
+  .form-footer.price-tag .custom-control {
+    width: 100%;
+  }
+}
+
+.form-footer.price-tag span {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+  margin-right: 40px;
+}
+
+@media (max-width: 590px) {
+  .form-footer.price-tag span {
+    margin-right: 0;
+  }
+}
+
 @media (max-width: 590px) {
   .form-footer {
     -webkit-box-orient: vertical;
@@ -3255,8 +3371,21 @@ footer {
 
 @media (max-width: 590px) {
   .form-footer button {
-    margin-top: 20px;
+    margin-top: 0px;
     margin-left: 0;
+  }
+}
+
+@media (max-width: 590px) {
+  .modal-price {
+    margin-top: 20px;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 

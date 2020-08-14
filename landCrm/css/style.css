@@ -3403,8 +3403,7 @@ footer {
 
 @media (max-width: 590px) {
   .form-footer button {
-    margin-top: 0px;
-    margin-left: 0;
+    margin-top: 30px;
   }
 }
 

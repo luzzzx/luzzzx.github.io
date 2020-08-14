@@ -21,7 +21,7 @@
                     <li><a href="index.html"><i class="fas fa-coins"></i>
                             <p>Coins</p>
                     </li></a>
-                    <li><a href="#"><i class="fas fa-server"></i>
+                    <li><a href="ddservers.html"><i class="fas fa-server"></i>
                             <p>Dedicated servers</p>
                         </a>
                     </li>
@@ -30,7 +30,7 @@
                         </a>
 
                     </li>
-                    <li><a href="#"><i class="fas fa-server Ms-i"></i>
+                    <li><a href="masternode.html"><i class="fas fa-server Ms-i"></i>
                             <p>Masternode servers</p>
                         </a>
                     </li>
@@ -63,10 +63,10 @@
             </nav>
         </aside>
         <div class="main-content">
-            <div class="container-fluid">
+            <div class="container">
                 <div class="row">
                     <div class="col-lg-4 col-md-4 col-sm-4">
-                        <button type="button" class="edit-btn btn btn-secondary">+ ADD NEW COIN</button>
+                        <a href="addcoin.html" class="edit-btn btn btn-secondary">+ ADD NEW COIN</a>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4  ml-auto">
                         <form class="form-inline">
@@ -86,79 +86,62 @@
                     <div class="col-1">id</div>
                     <div class="col-2">Project name</div>
                     <div class="col-2">Balance</div>
-                    <div class="col-3">Delta balance</div>
-                    <div class="col-1">Fee</div>
-                    <div class="col-1">Status</div>
-                    <div class="col-2"></div>
+                    <div class="col-2">Delta balance</div>
+                    <div class="col-2">Fee</div>
+                    <div class="col-2">Status</div>
+                    <div class="col-1"></div>
                 </div>
-                <div class="table-wrapper" data-toggle="collapse" data-target="#collapseExample" aria-expanded="true"
-                    aria-controls="collapseExample">
-                    <div class="col-1">15</div>
-                    <div class="col-2">XAP <span>Apollon Network</span></div>
-                    <div class="col-2"><span>5405.4225</span>
-                        <span>145452.9451</span>
+                <div class="table-wrapper">
+                    <div class="table-body-name" data-toggle="collapse" data-target="#collapseExample"
+                        aria-expanded="true" aria-controls="collapseExample">
+                        <div class="col-1">15</div>
+                        <div class="col-2">XAP <span>Apollon Network</span></div>
+                        <div class="col-2"><span>5405.4225</span>
+                            <span>145452.9451</span>
+                        </div>
+                        <div class="col-2">+23.4354</div>
+                        <div class="col-2">8%</div>
+                        <div class="col-2">Active</div>
+                        <div class="col-1"></div>
                     </div>
-                    <div class="col-3">+23.4354</div>
-                    <div class="col-1">8%</div>
-                    <div class="col-1">Active</div>
-                    <div class="col-2"><a href="#" class="edit-btn btn btn-secondary">edit</a></div>
+                    <a href="#" class="edit-btn btn-sm btn-secondary">edit</a>
                 </div>
-                <div class="collapse card show" id="collapseExample">
-                    <div class="table-icons">
-                        <a href="#"><i class="fab fa-bitcoin"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-discord"></i></a>
-                        <a href="#"><i class="fab fa-telegram"></i></a>
-                        <a href="#"><i class="fab fa-telegram"></i></a>
-                    </div>
-                    <div class="btn-row">
-                        <a href="#" class="btn btn-secondary">BACKUP WALLET</a>
-                        <a href="#" class="btn btn-secondary">RESTORE WALLET</a>
-                        <a href="#" class="btn btn-secondary">ROLLBACK BC.</a>
-                        <a href="#" class="btn btn-secondary">DELETE BC.</a>
-                        <a href="#" class="btn btn-secondary">DELETE COINSERV</a>
+                <div class="collapse card" id="collapseExample">
+                    <div class="icons-row">
+                        <div class="table-icons">
+                            <a href="#"><i class="fab fa-bitcoin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-discord"></i></a>
+                            <a href="#"><i class="fab fa-telegram"></i></a>
+                            <a href="#"><i class="fab fa-telegram"></i></a>
+                        </div>
+                        <div class="btn-row">
+                            <a href="#" class="btn-sm btn-secondary">BACKUP WALLET</a>
+                            <a href="#" class="btn-sm btn-secondary">RESTORE WALLET</a>
+                            <a href="#" class="btn-sm btn-secondary">ROLLBACK BC.</a>
+                            <a href="#" class="btn-sm btn-secondary">DELETE BC.</a>
+                            <a href="#" class="btn-sm btn-secondary">DELETE COINSERV</a>
+                        </div>
                     </div>
                     <div class="table-section__wallet">
-                        <!-- <div class="row">
-                            <div class="col-4 ">
-                                <ul>
-                                    <li>Service wallet</li>
-                                    <li>POS wallet</li>
-                                    <li>zPOS wallet</li>
-                                    <li>Masternodes total balance</li>
-                                </ul>
-                            </div>
-                            <div class="col-4 data-wallet">
-                                <ul>
-                                    <li>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1A</li>
-                                    <li>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE2B</li>
-                                    <li>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGEKC</li>
-                                </ul>
-                            </div>
-                            <div class="col-4 data-wallet">
-                                <ul>
-                                    <li>5405.4225 XAP</li>
-                                    <li>45.9458 XAP</li>
-                                    <li>0 XAP</li>
-                                    <li>0 XAP</li>
-                                </ul>
-                            </div>
-                        </div> -->
                         <table class="table table-responsive-lg">
                             <tbody>
                                 <tr>
                                     <th scope="row">Service wallet</th>
-                                    <td>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1A</td>
+                                    <td>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1A <a href="#" class="btn-copy"><i
+                                                class="far fa-copy"></i></a></td>
                                     <td>5405.4225 XAP</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">POS wallet</th>
-                                    <td>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE2B</td>
+                                    <td>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE2B <a href="#" class="btn-copy"><i
+                                                class="far fa-copy"></i></a></td>
                                     <td>5405.4225 XAP</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">zPOS wallet</th>
-                                    <td>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGEKC</td>
+                                    <td>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGEKC <a href="#" class="btn-copy"><i
+                                                class="far fa-copy"></i></a></td>
                                     <td>0 XAP</td>
                                 </tr>
                                 <tr>
@@ -223,49 +206,57 @@
                         </div>
                     </div>
                 </div>
-                <div class="table-wrapper" data-toggle="collapse" data-target="#collapseExample2"" aria-expanded="
-                    false" aria-controls="collapseExample">
-                    <div class="col-1">15</div>
-                    <div class="col-2">BTXC <span>Bettex</span></div>
-                    <div class="col-2"><span>5405.4225</span>
-                        <span>145452.9451</span>
+                <div class="table-wrapper">
+                    <div class="table-body-name" data-toggle="collapse" data-target="#collapseExample2"
+                        aria-expanded="true" aria-controls="collapseExample">
+                        <div class="col-1">15</div>
+                        <div class="col-2">BTXC <span>Bettex</span></div>
+                        <div class="col-2"><span>5405.4225</span>
+                            <span>145452.9451</span>
+                        </div>
+                        <div class="col-2">+23.4354</div>
+                        <div class="col-2">8%</div>
+                        <div class="col-2">Active</div>
+                        <div class="col-1"></div>
                     </div>
-                    <div class="col-3">+23.4354</div>
-                    <div class="col-1">8%</div>
-                    <div class="col-1">Active</div>
-                    <div class="col-2"><a href="#" class="edit-btn btn btn-secondary">edit</a></div>
+                    <a href="#" class="edit-btn btn-sm btn-secondary">edit</a>
                 </div>
                 <div class="collapse card" id="collapseExample2">
-                    <div class="table-icons">
-                        <a href="#"><i class="fab fa-bitcoin"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-discord"></i></a>
-                        <a href="#"><i class="fab fa-telegram"></i></a>
-                        <a href="#"><i class="fab fa-telegram"></i></a>
-                    </div>
-                    <div class="btn-row">
-                        <a href="#" class="btn btn-secondary">BACKUP WALLET</a>
-                        <a href="#" class="btn btn-secondary">RESTORE WALLET</a>
-                        <a href="#" class="btn btn-secondary">ROLLBACK BC.</a>
-                        <a href="#" class="btn btn-secondary">DELETE BC.</a>
-                        <a href="#" class="btn btn-secondary">DELETE COINSERV</a>
+                    <div class="icons-row">
+                        <div class="table-icons">
+                            <a href="#"><i class="fab fa-bitcoin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-discord"></i></a>
+                            <a href="#"><i class="fab fa-telegram"></i></a>
+                            <a href="#"><i class="fab fa-telegram"></i></a>
+                        </div>
+                        <div class="btn-row">
+                            <a href="#" class="btn-sm btn-secondary">BACKUP WALLET</a>
+                            <a href="#" class="btn-sm btn-secondary">RESTORE WALLET</a>
+                            <a href="#" class="btn-sm btn-secondary">ROLLBACK BC.</a>
+                            <a href="#" class="btn-sm btn-secondary">DELETE BC.</a>
+                            <a href="#" class="btn-sm btn-secondary">DELETE COINSERV</a>
+                        </div>
                     </div>
                     <div class="table-section__wallet">
                         <table class="table table-responsive-lg">
                             <tbody>
                                 <tr>
                                     <th scope="row">Service wallet</th>
-                                    <td>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1A</td>
+                                    <td>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1A <a href="#" class="btn-copy"><i
+                                                class="far fa-copy"></i></a></td>
                                     <td>5405.4225 XAP</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">POS wallet</th>
-                                    <td>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE2B</td>
+                                    <td>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE2B <a href="#" class="btn-copy"><i
+                                                class="far fa-copy"></i></a></td>
                                     <td>5405.4225 XAP</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">zPOS wallet</th>
-                                    <td>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGEKC</td>
+                                    <td>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGEKC <a href="#" class="btn-copy"><i
+                                                class="far fa-copy"></i></a></td>
                                     <td>0 XAP</td>
                                 </tr>
                                 <tr>
@@ -330,49 +321,57 @@
                         </div>
                     </div>
                 </div>
-                <div class="table-wrapper" data-toggle="collapse" data-target="#collapseExample3"" aria-expanded="
-                    false" aria-controls="collapseExample">
-                    <div class="col-1">15</div>
-                    <div class="col-2">XBI <span>Bitcoin Incognito</span></div>
-                    <div class="col-2"><span>5405.4225</span>
-                        <span>145452.9451</span>
+                <div class="table-wrapper">
+                    <div class="table-body-name" data-toggle="collapse" data-target="#collapseExample3"" aria-expanded="
+                        false" aria-controls="collapseExample">
+                        <div class="col-1">15</div>
+                        <div class="col-2">XBI <span>Bitcoin Incognito</span></div>
+                        <div class="col-2"><span>5405.4225</span>
+                            <span>145452.9451</span>
+                        </div>
+                        <div class="col-2">+23.4354</div>
+                        <div class="col-2">8%</div>
+                        <div class="col-2">Active</div>
+                        <div class="col-1"></div>
                     </div>
-                    <div class="col-3">+23.4354</div>
-                    <div class="col-1">8%</div>
-                    <div class="col-1">Active</div>
-                    <div class="col-2"><a href="#" class="edit-btn btn btn-secondary">edit</a></div>
+                    <a href="#" class="edit-btn btn-sm btn-secondary">edit</a>
                 </div>
                 <div class="collapse card" id="collapseExample3">
-                    <div class="table-icons">
-                        <a href="#"><i class="fab fa-bitcoin"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-discord"></i></a>
-                        <a href="#"><i class="fab fa-telegram"></i></a>
-                        <a href="#"><i class="fab fa-telegram"></i></a>
-                    </div>
-                    <div class="btn-row">
-                        <a href="#" class="btn btn-secondary">BACKUP WALLET</a>
-                        <a href="#" class="btn btn-secondary">RESTORE WALLET</a>
-                        <a href="#" class="btn btn-secondary">ROLLBACK BC.</a>
-                        <a href="#" class="btn btn-secondary">DELETE BC.</a>
-                        <a href="#" class="btn btn-secondary">DELETE COINSERV</a>
+                    <div class="icons-row">
+                        <div class="table-icons">
+                            <a href="#"><i class="fab fa-bitcoin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-discord"></i></a>
+                            <a href="#"><i class="fab fa-telegram"></i></a>
+                            <a href="#"><i class="fab fa-telegram"></i></a>
+                        </div>
+                        <div class="btn-row">
+                            <a href="#" class="btn-sm btn-secondary">BACKUP WALLET</a>
+                            <a href="#" class="btn-sm btn-secondary">RESTORE WALLET</a>
+                            <a href="#" class="btn-sm btn-secondary">ROLLBACK BC.</a>
+                            <a href="#" class="btn-sm btn-secondary">DELETE BC.</a>
+                            <a href="#" class="btn-sm btn-secondary">DELETE COINSERV</a>
+                        </div>
                     </div>
                     <div class="table-section__wallet">
                         <table class="table table-responsive-lg">
                             <tbody>
                                 <tr>
                                     <th scope="row">Service wallet</th>
-                                    <td>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1A</td>
+                                    <td>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1A <a href="#" class="btn-copy"><i
+                                                class="far fa-copy"></i></a></td>
                                     <td>5405.4225 XAP</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">POS wallet</th>
-                                    <td>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE2B</td>
+                                    <td>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE2B <a href="#" class="btn-copy"><i
+                                                class="far fa-copy"></i></a></td>
                                     <td>5405.4225 XAP</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">zPOS wallet</th>
-                                    <td>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGEKC</td>
+                                    <td>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGEKC <a href="#" class="btn-copy"><i
+                                                class="far fa-copy"></i></a></td>
                                     <td>0 XAP</td>
                                 </tr>
                                 <tr>

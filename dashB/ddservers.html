@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./plugins/fontawesome-free/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <title>Dasboard</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <aside class="main-aside">
+            <nav>
+                <div class="burger"><i class="fas fa-bars"></i></div>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-coins"></i>
+                            <p>Coins</p>
+                    </li></a>
+                    <li><a href="ddservers.html"><i class="fas fa-server"></i>
+                            <p>Dedicated servers</p>
+                        </a>
+                    </li>
+                    <li><a href="#"><i class="fas fa-server Ss-i"></i>
+                            <p>Staking servers</p>
+                        </a>
+
+                    </li>
+                    <li><a href="masternode.html"><i class="fas fa-server Ms-i"></i>
+                            <p>Masternode servers</p>
+                        </a>
+                    </li>
+                    <li><a href="#"><i class="fas fa-concierge-bell"></i>
+                            <p>Service fees</p>
+                        </a>
+
+                    </li>
+                    <li><a href="#"><i class="fas fa-users"></i>
+                            <p>Users</p>
+                        </a>
+                    </li>
+                    <li><a href="#"><i class="fas fa-wallet"></i>
+                            <p>Wallet operations</p>
+                        </a>
+                    </li>
+                    <li><a href="#"><i class="fas fa-broadcast-tower"></i>
+                            <p>Airdrop</p>
+                        </a>
+                    </li>
+                    <li><a href="#"><i class="fas fa-user-shield"></i>
+                            <p>Admin log</p>
+                        </a>
+                    </li>
+                    <li><a href="#"><i class="fas fa-clipboard-list"></i>
+                            <p>Express Trade log</p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <div class="main-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <a href="adddedicate.html" class="edit-btn btn btn-secondary">+ ADD NEW SERVER</a>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4  ml-auto">
+                        <form class="form-inline">
+                            <div class="coins-form input-group input-group-sm">
+                                <input class="form-control form-control-navbar" type="search" placeholder="Search"
+                                    aria-label="Search">
+                                <div class="input-group-append">
+                                    <button class="btn btn-navbar" type="submit">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="table-name mt-5 mb-2">
+                    <div class="col-3">Server host</div>
+                    <div class="col-2">Capacity <i class="fas fa-question-circle" data-toggle="tooltip"
+                            data-placement="right" title="" data-original-title="Tooltip on right"></i></div>
+                    <div class="col-2">Priority <i class="fas fa-question-circle" data-toggle="tooltip"
+                            data-placement="right" title="" data-original-title="CPU, MEM, HDD"></i></div>
+                    <div class="col-2">Load</div>
+                    <div class="col-2"></div>
+                </div>
+                <div class="table-wrapper">
+                    <div class="table-body-name" data-toggle="collapse" data-target="#collapseExample"
+                        aria-expanded="true" aria-controls="collapseExample">
+                        <div class="col-3">SOS5 <span>ns3767531.ip-213-32-7.eu</span></div>
+                        <div class="col-2">112 (7)</div>
+                        <div class="col-2"><span>87%</span><span>91%</span><span>56%</span></div>
+                        <div class="col-2">11</div>
+                        <div class="col-1"></div>
+                    </div>
+                    <a href="adddedicate.html" class="edit-btn btn-sm btn-secondary">edit</a>
+                </div>
+                <div class="collapse card" id="collapseExample">
+                    <div class="data-row">
+                        <div class="col-3">
+                            <div class="data-body">
+                                87%
+                                <span>CPU load</span>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="data-body">
+                                48.23/60 GB
+                                <span>MEM load</span>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="data-body">
+                                405/490 GB
+                                <span>SSD load</span>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="data-body">
+                                1.24/2.11 TB
+                                <span>HDD load</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

@@ -57,8 +57,8 @@
                                 <ul>
                                     <li><a href="#yours-off">О нас</a></li>
                                     <li><a href="#our-offer">Наши услуги</a></li>
-                                    <li><a href="#all-tarif">Тарифы</a></li>
                                     <li><a href="#menu-sert">Сертификаты</a></li>
+                                    <li><a href="#all-tarif">Тарифы</a></li>
                                     <li><a href="#menu-comments">Отзывы</a></li>
                                     <li><a href="#menu-faq">Вопрос-ответ</a></li>
                                     <li><a href="#benefit-menu">Ваши выгоды</a></li>
@@ -284,7 +284,7 @@
                     </div>
                 </div>
             </section>
-            <section class="howit" id="yours-off">
+            <section class="howit">
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
@@ -709,7 +709,8 @@
                                     <div class="col-lg-8 offset-lg-3 description-text">
                                         Организуйте бесплатную проверку вашего проекта для правильного подбора тарифов
                                         <br>
-                                        <a href="#">Записаться</a>на аудит бизнеса
+                                        <a href="#" data-toggle="modal" data-target="#rec">Записаться</a>на аудит
+                                        бизнеса
                                     </div>
                                 </div>
                             </div>
@@ -1082,7 +1083,7 @@
                     </div>
                 </div>
             </section>
-            <section class="about">
+            <section class="about" id="yours-off">
                 <div class="container">
                     <h2 class="section-title about-mobtitle" data-aos="fade-right">
                         Обо мне
@@ -1525,10 +1526,11 @@
                                 <h2 class="section-title footer-title">
                                     Внедрение CRM <br>
                                     от профессионалов <br>
-                                    <span>и увеличение прибыли на 30%</span>
+                                    <span>и увеличение прибыли от 30%</span>
                                 </h2>
                                 <h3 class="section-subtitle footer-subtitle">
-                                    Закажите бесплатный аудит вашего бизнеса до 31.08!
+                                    Закажите консультцию и узнайте за 60 минут <br>
+                                    Как мы помогли другим увеличить прибыль.Интересно ?
                                 </h3>
                                 <form action="" class="footer-form">
                                     <input type="text" placeholder="Ваше имя">
@@ -1561,20 +1563,28 @@
                                     <img src="./img/logo-footer.svg" alt="logo">
                                 </a>
                             </div>
+                            <div class="footer-bottom">
+                                <div class="footer-col">
+                                    <span>УНП 193422498</span>
+                                </div>
+                                <div class="footer-col">
+                                    <a href="#">Политка конфиденциальности</a>
+                                </div>
+                            </div>
                             <div class="footer-contact">
                                 <a href="tel:+375257579704">+375(25)757-97-04</a>
                                 <p>Пн-Пт с 9.00 - 19.00</p>
-                                <a href="mailto:info@topvil.com">info@topvil.com</a>
+                                <a href="mailto:info@topsvil.com">info@topsvil.com</a>
                             </div>
                         </div>
-                        <div class="footer-bottom">
+                        <!-- <div class="footer-bottom">
                             <div class="footer-col">
                                 <span>УНП 193422498</span>
                             </div>
                             <div class="footer-col">
                                 <a href="#">Политка конфиденциальности</a>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -1678,6 +1688,39 @@
                                     обработку персональных данных</label>
                             </div>
                             <button class="btn footer-btn" data-toggle="modal" data-target="#thx">Отправить</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- rec -->
+        <div class="modal fade" id="rec" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"></span>
+                    </button>
+                    <h2 class="modal-title">Записаться на аудит</h2>
+                    <h3 class="modal-subtitle">Заполните форму и мы свяжемся с Вами в течение 15 минут</h3>
+                    <form action="#" class="audit-modal-form">
+                        <div class="audit-modal-form__col">
+                            <input type="text" placeholder="Ваше имя">
+                        </div>
+                        <div class="audit-modal-form__col">
+                            <input type="tel" placeholder="Телефон">
+                        </div>
+                        <div class="call-form-footer">
+                            <div class="custom-control custom-radio">
+                                <input type="radio" class="custom-control-input" id="call-callback" name="example1"
+                                    value="customEx">
+                                <label class="custom-control-label" for="call-callback">Нажимая кнопку «Записаться», я
+                                    даю свое согласие на обработку моих персональных данных, в соответствии с
+                                    Федеральным законом от 27.07.2006 года
+                                    №152-ФЗ «О персональных данных», на условиях и для целей, определенных в Согласии на
+                                    обработку персональных данных</label>
+                            </div>
+                            <button class="btn footer-btn" data-toggle="modal" data-target="#thx">Записаться</button>
                         </div>
                     </form>
                 </div>
@@ -1874,7 +1917,6 @@
                             <input type="text" placeholder="Ваше имя">
                             <input type="email" placeholder="Email">
                             <input type="tel" placeholder="Телефон">
-                            <input type="text" placeholder="Название компании">
                         </div>
                         <div class="audit-modal-form__col">
                             <textarea class="modal-msg" placeholder="Коментарий"></textarea>
@@ -1914,7 +1956,6 @@
                             <input type="text" placeholder="Ваше имя">
                             <input type="email" placeholder="Email">
                             <input type="tel" placeholder="Телефон">
-                            <input type="text" placeholder="Название компании">
                         </div>
                         <div class="audit-modal-form__col">
                             <textarea class="modal-msg" placeholder="Коментарий"></textarea>
@@ -1954,7 +1995,6 @@
                             <input type="text" placeholder="Ваше имя">
                             <input type="email" placeholder="Email">
                             <input type="tel" placeholder="Телефон">
-                            <input type="text" placeholder="Название компании">
                         </div>
                         <div class="audit-modal-form__col">
                             <textarea class="modal-msg" placeholder="Коментарий"></textarea>

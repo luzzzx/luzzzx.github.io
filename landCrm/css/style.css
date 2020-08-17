@@ -1632,6 +1632,7 @@ main {
   margin-bottom: 4px;
   width: 100px;
   display: block;
+  margin: 0 auto;
 }
 
 @media (max-width: 590px) {

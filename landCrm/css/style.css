@@ -3368,6 +3368,12 @@ footer {
   width: 100%;
 }
 
+@media (max-width: 590px) {
+  .form-footer {
+    margin-top: 0px;
+  }
+}
+
 .form-footer.price-tag {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -3447,7 +3453,9 @@ footer {
 
 @media (max-width: 590px) {
   .form-footer button {
-    margin-top: 10px;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
     margin-bottom: 20px;
   }
 }
@@ -3490,4 +3498,154 @@ footer {
 .call-form-footer button {
   margin: 27px auto 0 auto;
   display: block;
+}
+
+#tasks .modal-dialog, #start .modal-dialog, #crm-plus .modal-dialog, #team .modal-dialog, #company .modal-dialog {
+  max-width: 650px;
+}
+
+#tasks .form-footer.price-tag, #start .form-footer.price-tag, #crm-plus .form-footer.price-tag, #team .form-footer.price-tag, #company .form-footer.price-tag {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#tasks .audit-modal-form__col, #start .audit-modal-form__col, #crm-plus .audit-modal-form__col, #team .audit-modal-form__col, #company .audit-modal-form__col {
+  margin: 0;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+}
+
+#tasks .form-footer, #start .form-footer, #crm-plus .form-footer, #team .form-footer, #company .form-footer {
+  margin-top: 37px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+@media (max-width: 590px) {
+  #tasks .form-footer, #start .form-footer, #crm-plus .form-footer, #team .form-footer, #company .form-footer {
+    margin-top: 0px;
+  }
+}
+
+#tasks .form-footer.price-tag, #start .form-footer.price-tag, #crm-plus .form-footer.price-tag, #team .form-footer.price-tag, #company .form-footer.price-tag {
+  margin-top: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#tasks .form-footer.price-tag .custom-control, #start .form-footer.price-tag .custom-control, #crm-plus .form-footer.price-tag .custom-control, #team .form-footer.price-tag .custom-control, #company .form-footer.price-tag .custom-control {
+  width: 420px;
+  margin-left: 10px;
+  margin-left: 0;
+}
+
+@media (max-width: 590px) {
+  #tasks .form-footer.price-tag .custom-control, #start .form-footer.price-tag .custom-control, #crm-plus .form-footer.price-tag .custom-control, #team .form-footer.price-tag .custom-control, #company .form-footer.price-tag .custom-control {
+    width: 100%;
+  }
+}
+
+#tasks .form-footer.price-tag span, #start .form-footer.price-tag span, #crm-plus .form-footer.price-tag span, #team .form-footer.price-tag span, #company .form-footer.price-tag span {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  text-align: center;
+  margin-right: 0;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  #tasks .form-footer.price-tag span, #start .form-footer.price-tag span, #crm-plus .form-footer.price-tag span, #team .form-footer.price-tag span, #company .form-footer.price-tag span {
+    margin-right: 5px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 590px) {
+  #tasks .form-footer.price-tag span, #start .form-footer.price-tag span, #crm-plus .form-footer.price-tag span, #team .form-footer.price-tag span, #company .form-footer.price-tag span {
+    margin-right: 0;
+    display: block;
+  }
+}
+
+@media (max-width: 590px) {
+  #tasks .form-footer, #start .form-footer, #crm-plus .form-footer, #team .form-footer, #company .form-footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+#tasks .form-footer .custom-control, #start .form-footer .custom-control, #crm-plus .form-footer .custom-control, #team .form-footer .custom-control, #company .form-footer .custom-control {
+  max-width: 480px;
+  margin-top: 0;
+}
+
+#tasks .form-footer button, #start .form-footer button, #crm-plus .form-footer button, #team .form-footer button, #company .form-footer button {
+  height: 50px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 590px) {
+  #tasks .form-footer button, #start .form-footer button, #crm-plus .form-footer button, #team .form-footer button, #company .form-footer button {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    margin-bottom: 20px;
+  }
+}
+
+#tasks .modal-price, #start .modal-price, #crm-plus .modal-price, #team .modal-price, #company .modal-price {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+  margin-top: 10px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#callback .modal-dialog, #call .modal-dialog {
+  max-width: 650px;
+}
+
+#callback .audit-modal-form__col, #call .audit-modal-form__col {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 80%;
+          flex: 0 0 80%;
+  margin: 0;
+}
+
+#callback .audit-modal-form__col input, #call .audit-modal-form__col input {
+  margin-bottom: 20px;
+}
+
+#callback .audit-modal-form, #call .audit-modal-form {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#callback .call-form-footer, #call .call-form-footer {
+  margin-top: 0;
 }

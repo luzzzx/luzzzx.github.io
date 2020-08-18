@@ -8,6 +8,10 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.standalone.min.css">
     <link rel="stylesheet" href="./css/style.min.css">
     <title>Dasboard</title>
 </head>
@@ -62,27 +66,39 @@
                 </ul>
             </nav>
         </aside>
-        <div class="main-content">
+        <div class="main-content col-9">
             <div class="container">
-                <div class="row">
-                    <div class="col-9">
-                        <div class="tab-content" id="v-pills-tabContent">
-                            <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
-                                aria-labelledby="v-pills-home-tab">
-                                <form class="form-basic">
+                <div class="tab-content" id="v-pills-tabContent">
+                    <div class="tab-pane fade show active" id="v-pills-basic" role="tabpanel"
+                        aria-labelledby="v-pills-basic-tab">
+                        <!-- Basic -->
+                        <div class="row">
+                            <div class="col-lg-12 mb-5">
+                                <div class="addCoin-title-row">
+                                    <div class="addcoin-title">
+                                        <p>ADD NEW COIN</p>
+                                        <h2>BASIC</h2>
+                                    </div>
+                                    <button class="btn btn-success px-3"><i class="fas fa-save mr-2"></i>SAVE</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <form class="form-basic no-gutters">
                                     <div class="form-group col-6">
-                                        <label for="formGroupExampleInput">Custom text:</label>
-                                        <input type="text" class="form-control" id="formGroupExampleInput"
+                                        <label for="NotificationBasic">Notification text</label>
+                                        <input type="text" class="form-control" id="NotificationBasic"
                                             placeholder="Example input">
                                     </div>
-                                    <div class="form-group col-6">
-                                        <label for="formGroupExampleInput2">Custom text link:</label>
-                                        <input type="text" class="form-control" id="formGroupExampleInput2"
-                                            placeholder="Another input">
+                                    <div class="form-group offset-1 col-5">
+                                        <label for="NotificationBasic2">Notification text</label>
+                                        <input type="text" class="form-control" id="NotificationBasic2"
+                                            placeholder="Example input">
                                     </div>
-                                    <div class="form-group col-6">
-                                        <label for="inputState">Status:</label>
-                                        <select id="inputState" class="form-control">
+                                    <div class="form-group mr-5 col-2">
+                                        <label for="statusBasic">Status:</label>
+                                        <select id="statusBasic" class="form-control bg-secondary text-white">
                                             <option selected>Maintenance</option>
                                             <option>Maintenance</option>
                                             <option>Maintenance</option>
@@ -90,24 +106,26 @@
                                             <option>Maintenance</option>
                                         </select>
                                     </div>
-                                    <div class="form-group col-6">
+                                    <div class="form-group col-6 ml-5 testnet">
+                                        <label class="isTestnet" for="BasicFeatured"><span>Featured
+                                            </span></label>
                                         <div class="custom-control custom-switch custom-switch-featured">
-                                            <input type="checkbox" class="custom-control-input" id="customSwitches">
-                                            <label class="custom-control-label"
-                                                for="customSwitches"><span>FEATURED</span></label>
+                                            <input type="checkbox" class="custom-control-input" id="BasicFeatured">
+                                            <label class="custom-control-label" for="BasicFeatured">
+                                            </label>
                                         </div>
                                     </div>
                                     <div class="form-group col-4">
-                                        <label for="formGroupExampleInput2">Name:</label>
-                                        <input type="text" class="form-control" id="formGroupExampleInput2"
-                                            placeholder="Another input">
+                                        <label for="basicCoinName">Coin name:</label>
+                                        <input type="text" class="form-control" id="basicCoinName"
+                                            placeholder="Example input">
                                     </div>
-                                    <div class="form-group col-4">
-                                        <label for="formGroupExampleInput2">Ticker:</label>
-                                        <input type="text" class="form-control" id="formGroupExampleInput2"
-                                            placeholder="Another input">
+                                    <div class="form-group mx-4 col-3">
+                                        <label for="basicCointicker">Coin ticker:</label>
+                                        <input type="text" class="form-control" id="basicCointicker"
+                                            placeholder="Example input">
                                     </div>
-                                    <div class="form-group col-4 cf-form">
+                                    <div class="form-group col-4 ml-auto cf-form">
                                         <div class="custom-file">
                                             <input type="file" class="custom-file-input" id="myInput"
                                                 aria-describedby="myInput">
@@ -116,9 +134,9 @@
                                             <!-- <a href="#" class="clear-form-file"><i class="fas fa-times"></i></a> -->
                                         </div>
                                     </div>
-                                    <div class="form-group col-6">
-                                        <label for="inputState">Market data source:</label>
-                                        <select id="inputState" class="form-control">
+                                    <div class="form-group mr-3 col-2">
+                                        <label for="BasicMarketDs">Market data source:</label>
+                                        <select id="BasicMarketDs" class="form-control bg-secondary text-white">
                                             <option selected>CoinGecko</option>
                                             <option>CoinGecko</option>
                                             <option>CoinGecko</option>
@@ -126,762 +144,859 @@
                                             <option>CoinGecko</option>
                                         </select>
                                     </div>
-                                    <div class="form-group col-6">
-                                        <label for="Coin">Coin ID:<i class="fas fa-question-circle"
-                                                data-toggle="tooltip" data-placement="right"
-                                                title="Tooltip on right"></i></label>
-                                        <input type="text" class="form-control" id="Coin" placeholder="Another input">
+                                    <div class="form-group mr-3 col-3">
+                                        <label for="BasicDsId">Data source coin ID<i class="fas fa-question-circle ml-2"
+                                                data-toggle="tooltip" data-placement="top"
+                                                title="Tooltip on top"></i></label>
+                                        <input type="text" class="form-control" id="BasicDsId"
+                                            placeholder="Example input">
+                                    </div>
+                                    <div class="form-group col-3">
+                                        <label for="BasicSendy">Sendy list ID<i class="fas fa-question-circle ml-2"
+                                                data-toggle="tooltip" data-placement="top"
+                                                title="Tooltip on top"></i></label>
+                                        <input type="text" class="form-control" id="BasicSendy"
+                                            placeholder="Example input">
+                                    </div>
+                                    <div class="form-group col-3 mb-n2 ml-auto">
+                                        <label class="sr-only" for="inlineFormCustomSelect">Preference</label>
+                                        <select class="custom-select" id="inlineFormCustomSelect">
+                                            <option selected>6</option>
+                                            <option value="1">5</option>
+                                            <option value="2">4</option>
+                                            <option value="3">3</option>
+                                            <option value="3">2</option>
+                                            <option value="3">1</option>
+                                        </select>
                                     </div>
                                     <div class="form-group col-6">
-                                        <label for="Sendy">Sendy list ID:</label>
-                                        <input type="text" class="form-control" id="Sendy" placeholder="Another input">
-                                    </div>
-                                    <div class="form-group col-6">
-                                        <label for="Amount">Amount decimals:</label>
-                                        <input type="text" class="form-control" id="Amount" placeholder="Another input">
-                                    </div>
-                                    <div class="form-group col-12">
                                         <label for="Comment">Comment:</label>
                                         <textarea class="form-control" id="Comment" rows="3"></textarea>
                                     </div>
-                                    <div class="col-lg-4 col-md-4 col-sm-4 ml-auto">
-                                        <button type="button" class="save btn btn-secondary">save</button>
-                                    </div>
                                 </form>
                             </div>
-                            <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
-                                aria-labelledby="v-pills-profile-tab">
-                                <form class="form-knowledge">
-                                    <div class="form-check col-12 mb-2">
-                                        <input class="form-check-input" type="checkbox" value="" id="Website">
-                                        <label class="form-check-label" for="Website">
-                                            Website:
-                                        </label>
-                                        <input type="text" class="form-control" id="Website">
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-KNOWLEDGEBASE" role="tabpanel"
+                        aria-labelledby="v-pills-KNOWLEDGEBASE-tab">
+                        <!-- KNOWLEDGEBASE -->
+                        <div class="row">
+                            <div class="col-lg-12 mb-5">
+                                <div class="addCoin-title-row">
+                                    <div class="addcoin-title">
+                                        <p>ADD NEW COIN</p>
+                                        <h2>KNOWLEDGEBASE</h2>
                                     </div>
-                                    <div class="form-check col-12 mb-2">
-                                        <input class="form-check-input" type="checkbox" value="" id="Block">
-                                        <label class="form-check-label" for="Block">
-                                            Block explorer:
-                                        </label>
-                                        <input type="text" class="form-control" id="Website">
-                                    </div>
-                                    <div class="form-check col-12 mb-2">
-                                        <input class="form-check-input" type="checkbox" value="" id="Github">
-                                        <label class="form-check-label" for="Github">
-                                            Github:
-                                        </label>
-                                        <input type="text" class="form-control" id="Website">
-                                    </div>
-                                    <div class="form-check col-12 mb-2">
-                                        <input class="form-check-input" type="checkbox" value="" id="Bitcointalk">
-                                        <label class="form-check-label" for="Bitcointalk">
-                                            Bitcointalk:
-                                        </label>
-                                        <input type="text" class="form-control" id="Website">
-                                    </div>
-                                    <div class="form-check col-12 mb-2">
-                                        <input class="form-check-input" type="checkbox" value="" id="Twitter">
-                                        <label class="form-check-label" for="Twitter">
-                                            Twitter:
-                                        </label>
-                                        <input type="text" class="form-control" id="Website">
-                                    </div>
-                                    <div class="form-check col-12 mb-2">
-                                        <input class="form-check-input" type="checkbox" value="" id="Facebook">
-                                        <label class="form-check-label" for="Facebook">
-                                            Facebook:
-                                        </label>
-                                        <input type="text" class="form-control" id="Website">
-                                    </div>
-                                    <div class="form-check col-12 mb-2">
-                                        <input class="form-check-input" type="checkbox" value="" id="Telegram">
-                                        <label class="form-check-label" for="Telegram">
-                                            Telegram:
-                                        </label>
-                                        <input type="text" class="form-control" id="Website">
-                                    </div>
-                                    <div class="form-check col-12 mb-2">
-                                        <input class="form-check-input" type="checkbox" value="" id="Discord">
-                                        <label class="form-check-label" for="Discord">
-                                            Discord:
-                                        </label>
-                                        <input type="text" class="form-control" id="Website">
-                                    </div>
-                                    <div class="form-check col-12 mb-2">
-                                        <input class="form-check-input" type="checkbox" value="" id="Knowledgebase">
-                                        <label class="form-check-label" for="Knowledgebase">
-                                            Knowledgebase:
-                                        </label>
-                                        <input type="text" class="form-control" id="Website">
-                                    </div>
-                                    <div class="form-check col-12 mb-2">
-                                        <input class="form-check-input" type="checkbox" value="" id="KYD">
-                                        <label class="form-check-label" for="KYD">
-                                            KYD:
-                                        </label>
-                                        <input type="text" class="form-control" id="Website">
-                                    </div>
-                                    <div class="form-group col-6">
-                                        <label for="URL1">Link URL 1:</label>
-                                        <input type="text" class="form-control" id="URL1" placeholder="Another input">
-                                    </div>
-                                    <div class="form-group col-6">
-                                        <label for="URL1">Link logo 1:</label>
-                                        <div class="custom-file">
-                                            <input type="file" class="custom-file-input" id="myInput"
-                                                aria-describedby="myInput">
-                                            <label class="custom-file-label" for="myInput"><i
-                                                    class="fas fa-cloud-upload-alt"></i>Choose file</label>
-                                            <!-- <a href="#" class="clear-form-file"><i class="fas fa-times"></i></a> -->
-                                        </div>
-                                    </div>
-                                    <div class="form-group col-6">
-                                        <label for="URL2">Link URL 2:</label>
-                                        <input type="text" class="form-control" id="URL2" placeholder="Another input">
-                                    </div>
-                                    <div class="form-group col-6">
-                                        <label for="URL2">Link logo 2:</label>
-                                        <div class="custom-file">
-                                            <input type="file" class="custom-file-input" id="myInput"
-                                                aria-describedby="myInput">
-                                            <label class="custom-file-label" for="myInput"><i
-                                                    class="fas fa-cloud-upload-alt"></i>Choose file</label>
-                                            <!-- <a href="#" class="clear-form-file"><i class="fas fa-times"></i></a> -->
-                                        </div>
-                                    </div>
-                                    <div class="form-group col-6">
-                                        <label for="URL3">Link URL 3:</label>
-                                        <input type="text" class="form-control" id="URL2" placeholder="Another input">
-                                    </div>
-                                    <div class="form-group col-6">
-                                        <label for="URL3">Link logo 3:</label>
-                                        <div class="custom-file">
-                                            <input type="file" class="custom-file-input" id="myInput"
-                                                aria-describedby="myInput">
-                                            <label class="custom-file-label" for="URL3"><i
-                                                    class="fas fa-cloud-upload-alt"></i>Choose file</label>
-                                            <!-- <a href="#" class="clear-form-file"><i class="fas fa-times"></i></a> -->
-                                        </div>
-                                    </div>
-                                    <div class="form-group col-12">
-                                        <label for="Description">Description:</label>
-                                        <textarea class="form-control" id="Description" rows="3"></textarea>
-                                    </div>
-                                    <div class="form-group col-12">
-                                        <label for="Type">Type:</label>
-                                        <input type="text" class="form-control" id="Type" placeholder="Another input">
-                                    </div>
-                                    <div class="form-group col-12">
-                                        <label for="Algorithm">Algorithm:</label>
-                                        <input type="text" class="form-control" id="Algorithm"
-                                            placeholder="Another input">
-                                    </div>
-                                    <div class="form-group col-12">
-                                        <label for="supply">Maximum supply:</label>
-                                        <input type="text" class="form-control" id="supply" placeholder="Another input">
-                                    </div>
-                                    <div class="form-group col-12">
-                                        <label for="Premine">Premine:</label>
-                                        <input type="text" class="form-control" id="Premine"
-                                            placeholder="Another input">
-                                    </div>
-                                    <div class="form-group col-12">
-                                        <label for="time">Block time (sec):</label>
-                                        <input type="text" class="form-control" id="time" placeholder="Another input">
-                                    </div>
-                                    <div class="form-group col-9">
-                                        <label for="Genesis">Genesis block:</label>
-                                        <input type="text" class="form-control" id="Genesis"
-                                            placeholder="Another input">
-                                    </div>
-                                    <div class="form-group col-4">
-                                        <label for="Dev">Dev activity score:</label>
-                                        <input type="text" class="form-control" id="Dev" placeholder="Another input">
-                                    </div>
-                                    <div class="form-group col-4">
-                                        <label for="Market">Market stats score:</label>
-                                        <input type="text" class="form-control" id="Market" placeholder="Another input">
-                                    </div>
-                                    <div class="form-group col-4">
-                                        <label for="Onchain">Onchain stats score:</label>
-                                        <input type="text" class="form-control" id="Onchain"
-                                            placeholder="Another input">
-                                    </div>
-                                    <div class="form-group col-4">
-                                        <label for="Product">Product score:</label>
-                                        <input type="text" class="form-control" id="Product"
-                                            placeholder="Another input">
-                                    </div>
-                                    <div class="form-group col-4">
-                                        <label for="Vision">Vision score:</label>
-                                        <input type="text" class="form-control" id="Vision" placeholder="Another input">
-                                    </div>
-                                    <div class="form-group col-4">
-                                        <label for="activity">Social activity score:</label>
-                                        <input type="text" class="form-control" id="activity"
-                                            placeholder="Another input">
-                                    </div>
-                                </form>
+                                    <button class="btn btn-success px-3"><i class="fas fa-save mr-2"></i>SAVE</button>
+                                </div>
                             </div>
-                            <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
-                                aria-labelledby="v-pills-messages-tab">
-                                <form class="form-explorer">
-                                    <div class="col-12">
-                                        <h2>Explorer 1</h2>
-                                    </div>
-                                    <div class="form-group col-12">
-                                        <label for="Internal">Internal:</label>
-                                        <input type="text" class="form-control" id="Internal"
-                                            placeholder="Another input">
-                                    </div>
-                                    <div class="form-group col-6">
-                                        <label for="explorer">Block explorer API:</label>
-                                        <select id="explorer" class="form-control">
-                                            <option selected>Insight</option>
-                                            <option>Maintenance</option>
-                                            <option>Insight</option>
-                                            <option>Insight</option>
-                                            <option>Block</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group col-6">
-                                        <label for="coin">Block explorer coin name:</label>
-                                        <input type="text" class="form-control" id="coin" placeholder="Another input">
-                                    </div>
-                                    <div class="col-12">
-                                        <h2>Explorer 2</h2>
-                                    </div>
-                                    <div class="form-group col-12">
-                                        <label for="Internal2">Internal:</label>
-                                        <input type="text" class="form-control" id="Internal2"
-                                            placeholder="Another input">
-                                    </div>
-                                    <div class="form-group col-6">
-                                        <label for="explorer2">Block explorer API:</label>
-                                        <select id="explorer2" class="form-control">
-                                            <option selected>Insight</option>
-                                            <option>Maintenance</option>
-                                            <option>Insight</option>
-                                            <option>Insight</option>
-                                            <option>Block</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group col-6">
-                                        <label for="coin2">Block explorer coin name:</label>
-                                        <input type="text" class="form-control" id="coin2" placeholder="Another input">
-                                    </div>
-                                    <div class="col-12">
-                                        <h2>Explorer 3</h2>
-                                    </div>
-                                    <div class="form-group col-12">
-                                        <label for="Internal3">Internal:</label>
-                                        <input type="text" class="form-control" id="Internal3"
-                                            placeholder="Another input">
-                                    </div>
-                                    <div class="form-group col-6">
-                                        <label for="explorer3">Block explorer API:</label>
-                                        <select id="explorer3" class="form-control">
-                                            <option selected>Insight</option>
-                                            <option>Maintenance</option>
-                                            <option>Insight</option>
-                                            <option>Insight</option>
-                                            <option>Block</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group col-6">
-                                        <label for="coin3">Block explorer coin name:</label>
-                                        <input type="text" class="form-control" id="coin3" placeholder="Another input">
-                                    </div>
-                                    <div class="col-12">
-                                        <h2>Explorer 4</h2>
-                                    </div>
-                                    <div class="form-group col-12">
-                                        <label for="Internal4">Internal:</label>
-                                        <input type="text" class="form-control" id="Internal4"
-                                            placeholder="Another input">
-                                    </div>
-                                    <div class="form-group col-6">
-                                        <label for="explorer4">Block explorer API:</label>
-                                        <select id="explorer4" class="form-control">
-                                            <option selected>Insight</option>
-                                            <option>Maintenance</option>
-                                            <option>Insight</option>
-                                            <option>Insight</option>
-                                            <option>Block</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group col-6">
-                                        <label for="coin4">Block explorer coin name:</label>
-                                        <input type="text" class="form-control" id="coin4" placeholder="Another input">
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="tab-pane fade" id="v-pills-settings" role="tabpanel"
-                                aria-labelledby="v-pills-settings-tab">
-                                <form class="form-config">
-                                    <div class="form-group col-6 config-form">
-                                        <label for="DashFork">Connector:</label>
-                                        <select id="DashFork" class="form-control">
-                                            <option selected>DashFork</option>
-                                            <option>Maintenance</option>
-                                            <option>DashFork</option>
-                                            <option>Insight</option>
-                                            <option>Block</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group col-6 testnet">
-                                        <label class="isTestnet" for="testnet"><span>Is testnet:
-                                            </span></label>
-                                        <div class="custom-control custom-switch custom-switch-featured">
-                                            <input type="checkbox" class="custom-control-input" id="testnet">
-                                            <label class="custom-control-label" for="testnet">
-                                            </label>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <form class="form-Knwoledge">
+                                    <div class="row">
+                                        <div class="form-group col-4">
+                                            <label for="WebsiteKnwoledge"><i
+                                                    class="fas fa-globe mr-2"></i>Website</label>
+                                            <input type="text" class="form-control" id="WebsiteKnwoledge"
+                                                placeholder="Example input">
+                                        </div>
+                                        <div class="form-group col-4">
+                                            <label for="ExplorerKnwoledge"><i
+                                                    class="fas fa-search mr-2"></i>Explorer</label>
+                                            <input type="text" class="form-control" id="ExplorerKnwoledge"
+                                                placeholder="Example input">
+                                        </div>
+                                        <div class="form-group col-4">
+                                            <label for="KnowledgebaseKnwoledge"><i
+                                                    class="fas fa-book mr-2"></i>Knowledgebase</label>
+                                            <input type="text" class="form-control" id="KnowledgebaseKnwoledge"
+                                                placeholder="Example input">
+                                        </div>
+                                        <div class="form-group col-4">
+                                            <label for="BitcointalkKnwoledge"><i
+                                                    class="fab fa-bitcoin mr-2"></i>Bitcointalk</label>
+                                            <input type="text" class="form-control" id="BitcointalkKnwoledge"
+                                                placeholder="Example input">
+                                        </div>
+                                        <div class="form-group col-4">
+                                            <label for="GithubKnwoledge"><i
+                                                    class="fab fa-github-square mr-2"></i>Github</label>
+                                            <input type="text" class="form-control" id="GithubKnwoledge"
+                                                placeholder="Example input">
+                                        </div>
+                                        <div class="form-group col-4">
+                                            <label for="FacebookKnwoledge"><i
+                                                    class="fab fa-facebook-square mr-2"></i>Facebook</label>
+                                            <input type="text" class="form-control" id="FacebookKnwoledge"
+                                                placeholder="Example input">
+                                        </div>
+                                        <div class="form-group col-4">
+                                            <label for="TwitterKnwoledge"><i
+                                                    class="fab fa-twitter-square mr-2"></i>Twitter</label>
+                                            <input type="text" class="form-control" id="TwitterKnwoledge"
+                                                placeholder="Example input">
+                                        </div>
+                                        <div class="form-group col-4">
+                                            <label for="TelegramKnwoledge"><i
+                                                    class="fab fa-telegram mr-2"></i>Telegram</label>
+                                            <input type="text" class="form-control" id="TelegramKnwoledge"
+                                                placeholder="Example input">
+                                        </div>
+                                        <div class="form-group col-4">
+                                            <label for="DiscordKnwoledge"><i
+                                                    class="fab fa-discord mr-2"></i>Discord</label>
+                                            <input type="text" class="form-control" id="DiscordKnwoledge"
+                                                placeholder="Example input">
+                                        </div>
+                                        <div class="form-group col-4">
+                                            <label for="KYDKnwoledge"><i
+                                                    class="fas fa-check-circle mr-2"></i>KYD</label>
+                                            <input type="text" class="form-control" id="KYDKnwoledge"
+                                                placeholder="Example input">
                                         </div>
                                     </div>
-                                    <div class="form-group col-6 config-form">
-                                        <label class="form-check-label" for="P2P">
-                                            P2P port:
-                                        </label>
-                                        <input type="text" class="form-control" id="P2P">
-                                    </div>
-                                    <div class="form-group col-6 config-form">
-                                        <label class="form-check-label" for="RPC">
-                                            RPC port:
-                                        </label>
-                                        <input type="text" class="form-control" id="RPC">
-                                    </div>
-                                    <div class="form-check col-6 mb-2">
-                                        <label class="form-check-label mb-2" for="Node">
-                                            Node URI:
-                                        </label>
-                                        <input type="text" class="form-control" id="Node">
-                                    </div>
-                                    <div class="form-check col-6 mb-2">
-                                        <label class="form-check-label mb-2" for="SHA256">
-                                            Node SHA256:
-                                        </label>
-                                        <input type="text" class="form-control" id="SHA256">
-                                    </div>
-                                    <div class="form-check col-6 mb-2">
-                                        <label class="form-check-label mb-2" for="Bootstrap">
-                                            Bootstrap URI:
-                                        </label>
-                                        <input type="text" class="form-control" id="Bootstrap">
-                                    </div>
-                                    <div class="form-check col-6 mb-2">
-                                        <label class="form-check-label mb-2" for="BSHA256">
-                                            Bootstrap SHA256:
-                                        </label>
-                                        <input type="text" class="form-control" id="BSHA256">
-                                    </div>
-                                    <div class="form-check col-6 mb-2">
-                                        <label class="form-check-label mb-2" for="Binariespath">
-                                            Binaries path:<i class="fas fa-question-circle" data-toggle="tooltip"
-                                                data-placement="right" title=""
-                                                data-original-title="Tooltip on right"></i>
-                                        </label>
-                                        <input type="text" class="form-control" id="Binariespath">
-                                    </div>
-                                    <div class="form-check col-6 mb-2">
-                                        <label class="form-check-label mb-2" for="filespath">
-                                            Bootstrap files path:<i class="fas fa-question-circle" data-toggle="tooltip"
-                                                data-placement="right" title=""
-                                                data-original-title="Tooltip on right"></i>
-                                        </label>
-                                        <input type="text" class="form-control" id="filespath">
-                                    </div>
-                                    <div class="form-check col-6 mb-2">
-                                        <label class="form-check-label mb-2" for="coinName">
-                                            Coin name:
-                                        </label>
-                                        <input type="text" class="form-control" id="coinName">
-                                    </div>
-                                    <div class="form-check col-6 mb-2">
-                                        <label class="form-check-label mb-2" for="docker">
-                                            Base docker image:
-                                        </label>
-                                        <select id="docker" class="form-control">
-                                            <option selected>docker</option>
-                                            <option>Maintenance</option>
-                                            <option>docker</option>
-                                            <option>Insight</option>
-                                            <option>Block</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-check col-6 mb-2">
-                                        <label class="form-check-label mb-2" for="version">
-                                            Node version:
-                                        </label>
-                                        <input type="text" class="form-control" id="version">
-                                    </div>
-                                    <div class="form-check col-6 mb-2">
-                                        <label class="form-check-label mb-2" for="Displayversion">
-                                            Display node version:
-                                        </label>
-                                        <input type="text" class="form-control" id="Displayversion">
-                                    </div>
-                                    <div class="form-check col-6 mb-2">
-                                        <label class="form-check-label mb-2" for="DaemonName">
-                                            Daemon name:
-                                        </label>
-                                        <input type="text" class="form-control" id="DaemonName">
-                                    </div>
-                                    <div class="form-check col-6 mb-2">
-                                        <label class="form-check-label mb-2" for="ClientName">
-                                            Client name:
-                                        </label>
-                                        <input type="text" class="form-control" id="ClientName">
-                                    </div>
-                                    <div class="form-check col-6 mb-2">
-                                        <label class="form-check-label mb-2" for="folder">
-                                            Config folder:<i class="fas fa-question-circle" data-toggle="tooltip"
-                                                data-placement="right" title=""
-                                                data-original-title="Tooltip on right"></i>
-                                        </label>
-                                        <input type="text" class="form-control" id="folder">
-                                    </div>
-                                    <div class="form-check col-6 mb-2">
-                                        <label class="form-check-label mb-2" for="fileConfig">
-                                            Config file name:<i class="fas fa-question-circle" data-toggle="tooltip"
-                                                data-placement="right" title=""
-                                                data-original-title="Tooltip on right"></i>
-                                        </label>
-                                        <input type="text" class="form-control" id="fileConfig">
-                                    </div>
-                                    <div class="form-group col-12">
-                                        <label for="Addnodes">Addnodes:</label>
-                                        <textarea class="form-control" id="Addnodes" rows="3"></textarea>
-                                    </div>
-                                    <div class="form-group col-12">
-                                        <label for="Reward">Reward config:</label>
-                                        <textarea class="form-control" id="Reward" rows="3"></textarea>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="tab-pane fade" id="v-pills-service" role="tabpanel"
-                                aria-labelledby="v-pills-service-tab">
-                                <form class="form-service">
-                                    <div class="form-check col-6 mb-2">
-                                        <label class="form-check-label mb-2" for="Mindeposit">
-                                            Min deposit amount:
-                                        </label>
-                                        <input type="text" class="form-control" id="Mindeposit">
-                                    </div>
-                                    <div class="form-check col-6 mb-2">
-                                        <label class="form-check-label mb-2" for="withdrawal">
-                                            Min withdrawal amount:
-                                        </label>
-                                        <input type="text" class="form-control" id="withdrawal">
-                                    </div>
-                                    <div class="form-check col-6 mb-2">
-                                        <label class="form-check-label mb-2" for="TXfee">
-                                            Min TX fee:
-                                        </label>
-                                        <input type="text" class="form-control" id="TXfee">
-                                    </div>
-                                    <div class="form-check col-6 mb-2">
-                                        <label class="form-check-label mb-2" for="MTXfee">
-                                            Max TX fee:
-                                        </label>
-                                        <input type="text" class="form-control" id="MTXfee">
-                                    </div>
-                                    <div class="form-check col-6 mb-2">
-                                        <label class="form-check-label mb-2" for="confirmations">
-                                            Coin transfer confirmations:
-                                        </label>
-                                        <input type="text" class="form-control" id="confirmations">
-                                    </div>
-                                    <div class="form-check col-6 mb-2">
-                                        <label class="form-check-label mb-2" for="reward">
-                                            Coin reward confirmations:
-                                        </label>
-                                        <input type="text" class="form-control" id="reward">
-                                    </div>
-                                    <div class="form-check col-6 mb-2">
-                                        <label class="form-check-label mb-2" for="prefixes">
-                                            Address prefixes:<i class="fas fa-question-circle" data-toggle="tooltip"
-                                                data-placement="right" title=""
-                                                data-original-title="Tooltip on right"></i>
-                                        </label>
-                                        <input type="text" class="form-control" id="prefixes">
-                                    </div>
-                                    <div class="form-check col-6 mb-2">
-                                        <label class="form-check-label mb-2" for="prefix">
-                                            Secret ket prefix:<i class="fas fa-question-circle" data-toggle="tooltip"
-                                                data-placement="right" title=""
-                                                data-original-title="Tooltip on right"></i>
-                                        </label>
-                                        <input type="text" class="form-control" id="prefix">
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="tab-pane fade" id="v-pills-smart" role="tabpanel"
-                                aria-labelledby="v-pills-smart-tab">
-                                <form class="form-service">
-                                    <div class="form-check col-12 mb-2">
-                                        <div class="balance-wrapper">
-                                            <div class="form-group col-6 balance-toggle-form">
-                                                <div class="custom-control custom-switch custom-switch-featured">
-                                                    <input type="checkbox" class="custom-control-input" id="balance"
-                                                        checked="checked">
-                                                    <label class="custom-control-label" for="balance"
-                                                        data-toggle="collapse" data-target="#collapseExample"
-                                                        aria-expanded="true" aria-controls="collapseExample">POS</label>
-                                                </div>
+                                    <div class="row">
+                                        <div class="form-group col-6">
+                                            <label for="URL1">Link URL 1:</label>
+                                            <input type="text" class="form-control" id="URL1"
+                                                placeholder="Another input">
+                                        </div>
+                                        <div class="form-group col-6">
+                                            <label for="URL1">Link logo 1:</label>
+                                            <div class="custom-file">
+                                                <input type="file" class="custom-file-input" id="myInput"
+                                                    aria-describedby="myInput">
+                                                <label class="custom-file-label" for="myInput"><i
+                                                        class="fas fa-cloud-upload-alt"></i>Choose file</label>
+                                                <!-- <a href="#" class="clear-form-file"><i class="fas fa-times"></i></a> -->
                                             </div>
                                         </div>
-                                        <div class="collapse card balance-card show" id="collapseExample">
-                                            <div class="form-check col-6 mt-4 mb-2">
-                                                <label for="ROI">Staking ROI provider:</label>
-                                                <select id="ROI" class="form-control">
-                                                    <option selected>provider</option>
-                                                    <option>provider</option>
-                                                    <option>provider</option>
-                                                    <option>CoinGecko</option>
-                                                    <option>CoinGecko</option>
-                                                </select>
+                                        <div class="form-group col-6">
+                                            <label for="URL2">Link URL 2:</label>
+                                            <input type="text" class="form-control" id="URL2"
+                                                placeholder="Another input">
+                                        </div>
+                                        <div class="form-group col-6">
+                                            <label for="URL2">Link logo 2:</label>
+                                            <div class="custom-file">
+                                                <input type="file" class="custom-file-input" id="myInput"
+                                                    aria-describedby="myInput">
+                                                <label class="custom-file-label" for="myInput"><i
+                                                        class="fas fa-cloud-upload-alt"></i>Choose file</label>
+                                                <!-- <a href="#" class="clear-form-file"><i class="fas fa-times"></i></a> -->
                                             </div>
-                                            <div class="form-check col-6 mt-4 mb-2">
-                                                <label class="form-check-label mb-2" for="ticker">
-                                                    Staking ROI provider ticker:<i class="fas fa-question-circle"
-                                                        data-toggle="tooltip" data-placement="right" title=""
-                                                        data-original-title="Tooltip on right"></i>
-                                                </label>
-                                                <input type="text" class="form-control" id="ticker">
+                                        </div>
+                                        <div class="form-group col-6">
+                                            <label for="URL3">Link URL 3:</label>
+                                            <input type="text" class="form-control" id="URL3"
+                                                placeholder="Another input">
+                                        </div>
+                                        <div class="form-group col-6">
+                                            <label for="URL3">Link logo 3:</label>
+                                            <div class="custom-file">
+                                                <input type="file" class="custom-file-input" id="myInput"
+                                                    aria-describedby="myInput">
+                                                <label class="custom-file-label" for="URL3"><i
+                                                        class="fas fa-cloud-upload-alt"></i>Choose file</label>
+                                                <!-- <a href="#" class="clear-form-file"><i class="fas fa-times"></i></a> -->
                                             </div>
-                                            <div class="form-check col-6 mb-2">
-                                                <label class="form-check-label mb-2" for="Staking">
-                                                    Staking input amount:<i class="fas fa-question-circle"
-                                                        data-toggle="tooltip" data-placement="right" title=""
-                                                        data-original-title="Tooltip on right"></i>
-                                                </label>
-                                                <input type="text" class="form-control" id="Staking">
-                                            </div>
-                                            <div class="form-check col-6 mb-2">
-                                                <label class="form-check-label mb-2" for="Minstaking">
-                                                    Min staking input amount:<i class="fas fa-question-circle"
-                                                        data-toggle="tooltip" data-placement="right" title=""
-                                                        data-original-title="Tooltip on right"></i>
-                                                </label>
-                                                <input type="text" class="form-control" id="Minstaking">
-                                            </div>
+                                        </div>
+                                        <div class="form-group col-12">
+                                            <label for="DescriptionKnwoledge">Description:</label>
+                                            <textarea class="form-control" id="DescriptionKnwoledge"
+                                                rows="3"></textarea>
+                                        </div>
+                                        <div class="form-group col-3">
+                                            <label for="TypeKnwoledge">Type</label>
+                                            <input type="text" class="form-control" id="TypeKnwoledge"
+                                                placeholder="Token">
+                                        </div>
+                                        <div class="form-group col-3">
+                                            <label for="AlgorithmKnwoledge">Algorithm</label>
+                                            <input type="text" class="form-control" id="AlgorithmKnwoledge"
+                                                placeholder="Tribus">
+                                        </div>
+                                        <div class="form-group col-3">
+                                            <label for="BlockTimeKnwoledge">Block time (seconds)</label>
+                                            <select class="custom-select" id="BlockTimeKnwoledge">
+                                                <option selected>120</option>
+                                                <option value="1">110</option>
+                                                <option value="2">100</option>
+                                                <option value="3">90</option>
+                                                <option value="3">80</option>
+                                                <option value="3">70</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-3">
+                                            <label for="GenesisKnwoledge">Genesis block</label>
+                                            <input type="text" class="form-control" id="GenesisKnwoledge"
+                                                placeholder="Tribus">
+                                        </div>
+                                        <div class="form-group col-4">
+                                            <label for="MaximumKnwoledge">Maximum supply</label>
+                                            <input type="text" class="form-control" id="MaximumKnwoledge"
+                                                placeholder="Maximum supply">
+                                        </div>
+                                        <div class="form-group col-4">
+                                            <label for="PremineKnwoledge">Premine</label>
+                                            <input type="text" class="form-control" id="PremineKnwoledge"
+                                                placeholder="Premine">
                                         </div>
                                     </div>
-                                    <div class="form-check col-12 mb-2">
-                                        <div class="balance-wrapper">
-                                            <div class="form-group col-6 balance-toggle-form">
-                                                <div class="custom-control custom-switch custom-switch-featured">
-                                                    <input type="checkbox" class="custom-control-input" id="balance2"
-                                                        checked="checked">
-                                                    <label class="custom-control-label" for="balance2"
-                                                        data-toggle="collapse" data-target="#collapseExample2"
-                                                        aria-expanded="true"
-                                                        aria-controls="collapseExample">zPOS</label>
-                                                </div>
-                                            </div>
+                                    <div class="row">
+                                        <div class="form-group col-2">
+                                            <label for="DevKnwoledge">Dev activity</label>
+                                            <input type="text" class="form-control" id="DevKnwoledge"
+                                                placeholder="7.55">
                                         </div>
-                                        <div class="collapse card balance-card show" id="collapseExample2">
-                                            <div class="form-check col-6 mt-4 mb-2">
-                                                <label for="ZPOSROI">ZPOS ROI provider:</label>
-                                                <select id="ZPOSROI" class="form-control">
-                                                    <option selected>ZPOSprovider</option>
-                                                    <option>ZPOSprovider</option>
-                                                    <option>provider</option>
-                                                    <option>ZPOSCoinGecko</option>
-                                                    <option>CoinGecko</option>
-                                                </select>
-                                            </div>
-                                            <div class="form-check col-6 mt-4 mb-2">
-                                                <label class="form-check-label mb-2" for="ZPOSticker">
-                                                    ZPOS ROI provider ticker:<i class="fas fa-question-circle"
-                                                        data-toggle="tooltip" data-placement="right" title=""
-                                                        data-original-title="Tooltip on right"></i>
-                                                </label>
-                                                <input type="text" class="form-control" id="ZPOSticker">
-                                            </div>
-                                            <div class="form-check col-6 mb-2">
-                                                <label class="form-check-label mb-2" for="ZPOSStaking">
-                                                    ZPOS input amount:<i class="fas fa-question-circle"
-                                                        data-toggle="tooltip" data-placement="right" title=""
-                                                        data-original-title="Tooltip on right"></i>
-                                                </label>
-                                                <input type="text" class="form-control" id="ZPOSStaking">
-                                            </div>
-                                            <div class="form-check col-6 mb-2">
-                                                <label class="form-check-label mb-2" for="ZPOSMinstaking">
-                                                    Min ZPOS input amount:<i class="fas fa-question-circle"
-                                                        data-toggle="tooltip" data-placement="right" title=""
-                                                        data-original-title="Tooltip on right"></i>
-                                                </label>
-                                                <input type="text" class="form-control" id="ZPOSMinstaking">
-                                            </div>
+                                        <div class="form-group col-2">
+                                            <label for="MarketKnwoledge">Market stats</label>
+                                            <input type="text" class="form-control" id="MarketKnwoledge"
+                                                placeholder="7.55">
                                         </div>
-                                    </div>
-                                    <div class="form-check col-12 mb-2">
-                                        <div class="balance-wrapper">
-                                            <div class="form-group col-6 balance-toggle-form">
-                                                <div class="custom-control custom-switch custom-switch-featured">
-                                                    <input type="checkbox" class="custom-control-input" id="balance3"
-                                                        checked="checked">
-                                                    <label class="custom-control-label" for="balance3"
-                                                        data-toggle="collapse" data-target="#collapseExample3"
-                                                        aria-expanded="true"
-                                                        aria-controls="collapseExample"><span>Masternode</span></label>
-                                                </div>
-                                            </div>
+                                        <div class="form-group col-2">
+                                            <label for="OnchainKnwoledge">Onchain stats</label>
+                                            <input type="text" class="form-control" id="OnchainKnwoledge"
+                                                placeholder="7.55">
                                         </div>
-                                        <div class="collapse card balance-card show" id="collapseExample3">
-                                            <div class="form-group mt-4 col-12">
-                                                <div class="custom-control custom-switch">
-                                                    <input type="checkbox" class="custom-control-input" id="wallet"
-                                                        checked="checked">
-                                                    <label class="custom-control-label" for="wallet">Use cold
-                                                        wallet</label>
-                                                </div>
-                                            </div>
-                                            <div class="form-group col-12">
-                                                <div class="custom-control custom-switch">
-                                                    <input type="checkbox" class="custom-control-input" id="sentinel"
-                                                        checked="checked">
-                                                    <label class="custom-control-label" for="sentinel">Use
-                                                        sentinel</label>
-                                                </div>
-                                            </div>
-                                            <div class="form-group col-12">
-                                                <div class="custom-control custom-switch">
-                                                    <input type="checkbox" class="custom-control-input" id="blockchain"
-                                                        checked="checked">
-                                                    <label class="custom-control-label" for="blockchain">Use blockchain
-                                                        snapshot</label>
-                                                </div>
-                                            </div>
-                                            <div class="form-group col-6">
-                                                <div class="custom-control custom-switch">
-                                                    <input type="checkbox" class="custom-control-input" id="IPv4"
-                                                        checked="checked">
-                                                    <label class="custom-control-label" for="IPv4">Use IPv4</label>
-                                                </div>
-                                            </div>
-                                            <div class="form-group col-6">
-                                                <div class="custom-control custom-switch">
-                                                    <input type="checkbox" class="custom-control-input" id="IPv6"
-                                                        checked="checked">
-                                                    <label class="custom-control-label" for="IPv6">Use IPv6</label>
-                                                </div>
-                                            </div>
-                                            <div class="form-group col-6">
-                                                <label for="provider">Masternode ROI provider:</label>
-                                                <select id="provider" class="form-control">
-                                                    <option selected>provider</option>
-                                                    <option>ROIprovider</option>
-                                                    <option>ROIprovider</option>
-                                                    <option>ROIprovider</option>
-                                                    <option>ROIBlock</option>
-                                                </select>
-                                            </div>
-                                            <div class="form-check col-6 mb-2">
-                                                <label class="form-check-label mb-2" for="ROIticker">
-                                                    Masternode ROI provider ticker:<i class="fas fa-question-circle"
-                                                        data-toggle="tooltip" data-placement="right" title=""
-                                                        data-original-title="Tooltip on right"></i>
-                                                </label>
-                                                <input type="text" class="form-control" id="ROIticker">
-                                            </div>
-                                            <div class="form-group col-12 config-form">
-                                                <label for="distribution">Rewards distribution mode:<i
-                                                        class="fas fa-question-circle" data-toggle="tooltip"
-                                                        data-placement="right" title=""
-                                                        data-original-title="Tooltip on right"></i></label>
-                                                <select id="distribution" class="form-control">
-                                                    <option selected>Default</option>
-                                                    <option>Maintenance</option>
-                                                    <option>DashFork</option>
-                                                    <option>Insight</option>
-                                                    <option>Block</option>
-                                                </select>
-                                            </div>
-                                            <div class="form-check col-6 mb-2">
-                                                <label class="form-check-label mb-2" for="collateral">
-                                                    Masternode collateral:<i class="fas fa-question-circle"
-                                                        data-toggle="tooltip" data-placement="right" title=""
-                                                        data-original-title="Tooltip on right"></i>
-                                                </label>
-                                                <input type="text" class="form-control" id="collateral">
-                                            </div>
-                                            <div class="form-check col-6 mb-2">
-                                                <label class="form-check-label mb-2" for="Minicollectible">
-                                                    Minimum collectible reward:<i class="fas fa-question-circle"
-                                                        data-toggle="tooltip" data-placement="right" title=""
-                                                        data-original-title="Tooltip on right"></i>
-                                                </label>
-                                                <input type="text" class="form-control" id="Minicollectible">
-                                            </div>
-                                            <div class="form-check col-6 mb-2">
-                                                <label class="form-check-label mb-2" for="confirmations">
-                                                    Collateral confirmations:<i class="fas fa-question-circle"
-                                                        data-toggle="tooltip" data-placement="right" title=""
-                                                        data-original-title="Tooltip on right"></i>
-                                                </label>
-                                                <input type="text" class="form-control" id="confirmations">
-                                            </div>
-                                            <div class="form-check col-6 mb-2">
-                                                <label class="form-check-label mb-2" for="Maxservers">
-                                                    Max servers:<i class="fas fa-question-circle" data-toggle="tooltip"
-                                                        data-placement="right" title=""
-                                                        data-original-title="Tooltip on right"></i>
-                                                </label>
-                                                <input type="text" class="form-control" id="Maxservers">
-                                            </div>
+                                        <div class="form-group col-2">
+                                            <label for="ProductKnwoledge">Product</label>
+                                            <input type="text" class="form-control" id="ProductKnwoledge"
+                                                placeholder="7.55">
+                                        </div>
+                                        <div class="form-group col-2">
+                                            <label for="VisionKnwoledge">Vision</label>
+                                            <input type="text" class="form-control" id="VisionKnwoledge"
+                                                placeholder="7.55">
+                                        </div>
+                                        <div class="form-group col-2">
+                                            <label for="SocialKnwoledge">Social activity</label>
+                                            <input type="text" class="form-control" id="SocialKnwoledge"
+                                                placeholder="7.55">
                                         </div>
                                     </div>
                                 </form>
                             </div>
                         </div>
                     </div>
-                    <div class="col-3 add-coin-nav">
-                        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist"
-                            aria-orientation="vertical">
-                            <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home"
-                                role="tab" aria-controls="v-pills-home" aria-selected="true">Basic</a>
-                            <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile"
-                                role="tab" aria-controls="v-pills-profile" aria-selected="false">KNOWLEDGEBASE</a>
-                            <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages"
-                                role="tab" aria-controls="v-pills-messages" aria-selected="false">EXPLORERS</a>
-                            <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings"
-                                role="tab" aria-controls="v-pills-settings" aria-selected="false">CONFIG</a>
-                            <a class="nav-link" id="v-pills-service-tab" data-toggle="pill" href="#v-pills-service"
-                                role="tab" aria-controls="v-pills-service" aria-selected="false">SERVICE</a>
-                            <a class="nav-link" id="v-pills-smart-tab" data-toggle="pill" href="#v-pills-smart"
-                                role="tab" aria-controls="v-pills-smart" aria-selected="false">SMART BALANCING</a>
+                    <div class="tab-pane fade" id="v-pills-EXPLORERS" role="tabpanel"
+                        aria-labelledby="v-pills-EXPLORERS-tab">
+                        <!-- EXPLORERS -->
+                        <div class="row">
+                            <div class="col-lg-12 mb-5">
+                                <div class="addCoin-title-row">
+                                    <div class="addcoin-title">
+                                        <p>ADD NEW COIN</p>
+                                        <h2>EXPLORERS</h2>
+                                    </div>
+                                    <button class="btn btn-success px-3"><i class="fas fa-save mr-2"></i>SAVE</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <form class="form-Knwoledge">
+                                    <div class="row">
+                                        <div class="form-group col-4">
+                                            <label for="ExplorerInternal1">Internal explorer 1
+                                                link</label>
+                                            <input type="text" class="form-control" id="ExplorerInternal1"
+                                                placeholder="Example input">
+                                        </div>
+                                        <div class="form-group col-4">
+                                            <label for="ExplorerAPI1">Explorer 1 API:</label>
+                                            <select id="ExplorerAPI1" class="form-control bg-secondary text-white">
+                                                <option selected="">Insight</option>
+                                                <option>Insight</option>
+                                                <option>Insight</option>
+                                                <option>Insight</option>
+                                                <option>Insight</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-4">
+                                            <label for="ExplorerCoin1">Explorer 1 coin name <i
+                                                    class="fas fa-question-circle ml-2" data-toggle="tooltip"
+                                                    data-placement="top" title=""
+                                                    data-original-title="Tooltip on top"></i></label>
+                                            <input type="text" class="form-control" id="ExplorerCoin1"
+                                                placeholder="Example input">
+                                        </div>
+                                        <div class="form-group col-4">
+                                            <label for="ExplorerInternal2">Internal explorer 2
+                                                link</label>
+                                            <input type="text" class="form-control" id="ExplorerInternal2"
+                                                placeholder="Example input">
+                                        </div>
+                                        <div class="form-group col-4">
+                                            <label for="ExplorerAPI2">Explorer 2 API:</label>
+                                            <select id="ExplorerAPI2" class="form-control bg-secondary text-white">
+                                                <option selected="">Insight</option>
+                                                <option>Insight</option>
+                                                <option>Insight</option>
+                                                <option>Insight</option>
+                                                <option>Insight</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-4">
+                                            <label for="ExplorerCoin2">Explorer 2 coin name <i
+                                                    class="fas fa-question-circle ml-2" data-toggle="tooltip"
+                                                    data-placement="top" title=""
+                                                    data-original-title="Tooltip on top"></i></label>
+                                            <input type="text" class="form-control" id="ExplorerCoin2"
+                                                placeholder="Example input">
+                                        </div>
+                                        <div class="form-group col-4">
+                                            <label for="ExplorerInternal3">Internal explorer 3
+                                                link</label>
+                                            <input type="text" class="form-control" id="ExplorerInternal3"
+                                                placeholder="Example input">
+                                        </div>
+                                        <div class="form-group col-4">
+                                            <label for="ExplorerAPI3">Explorer 3 API:</label>
+                                            <select id="ExplorerAPI3" class="form-control bg-secondary text-white">
+                                                <option selected="">Insight</option>
+                                                <option>Insight</option>
+                                                <option>Insight</option>
+                                                <option>Insight</option>
+                                                <option>Insight</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-4">
+                                            <label for="ExplorerCoin3">Explorer 3 coin name <i
+                                                    class="fas fa-question-circle ml-2" data-toggle="tooltip"
+                                                    data-placement="top" title=""
+                                                    data-original-title="Tooltip on top"></i></label>
+                                            <input type="text" class="form-control" id="ExplorerCoin3"
+                                                placeholder="Example input">
+                                        </div>
+                                        <div class="form-group col-4">
+                                            <label for="ExplorerInternal4">Internal explorer 4
+                                                link</label>
+                                            <input type="text" class="form-control" id="ExplorerInternal4"
+                                                placeholder="Example input">
+                                        </div>
+                                        <div class="form-group col-4">
+                                            <label for="ExplorerAPI4">Explorer 4 API:</label>
+                                            <select id="ExplorerAPI4" class="form-control bg-secondary text-white">
+                                                <option selected="">Insight</option>
+                                                <option>Insight</option>
+                                                <option>Insight</option>
+                                                <option>Insight</option>
+                                                <option>Insight</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-4">
+                                            <label for="ExplorerCoin4">Explorer 4 coin name <i
+                                                    class="fas fa-question-circle ml-2" data-toggle="tooltip"
+                                                    data-placement="top" title=""
+                                                    data-original-title="Tooltip on top"></i></label>
+                                            <input type="text" class="form-control" id="ExplorerCoin4"
+                                                placeholder="Example input">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-CONFIG" role="tabpanel" aria-labelledby="v-pills-CONFIG-tab">
+                        <!-- CONFIG -->
+                        <div class="row">
+                            <div class="col-lg-12 mb-5">
+                                <div class="addCoin-title-row">
+                                    <div class="addcoin-title">
+                                        <p>ADD NEW COIN</p>
+                                        <h2>CONFIG</h2>
+                                    </div>
+                                    <button class="btn btn-success px-3"><i class="fas fa-save mr-2"></i>SAVE</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-3">
+                                <label for="CONFIGConnector">Connector:</label>
+                                <select id="CONFIGConnector" class="form-control bg-secondary text-white">
+                                    <option selected="">DashFork</option>
+                                    <option>DashFork</option>
+                                    <option>DashFork</option>
+                                    <option>DashFork</option>
+                                    <option>DashFork</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-3 testnet">
+                                <label class="isTestnet" for="CONFIGFeatured"><span>Featured
+                                    </span></label>
+                                <div class="custom-control custom-switch custom-switch-featured">
+                                    <input type="checkbox" class="custom-control-input" id="CONFIGFeatured">
+                                    <label class="custom-control-label" for="CONFIGFeatured">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group col-2">
+                                <label for="CONFIGP2P">P2P port</label>
+                                <select class="custom-select" id="CONFIGP2P">
+                                    <option selected="">45921</option>
+                                    <option value="1">45922</option>
+                                    <option value="2">45921</option>
+                                    <option value="3">45921</option>
+                                    <option value="3">45921</option>
+                                    <option value="3">45921</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-2">
+                                <label for="CONFIGRPC">RPC port</label>
+                                <select class="custom-select" id="CONFIGRPC">
+                                    <option selected="">45922</option>
+                                    <option value="1">45922</option>
+                                    <option value="2">45921</option>
+                                    <option value="3">45921</option>
+                                    <option value="3">45921</option>
+                                    <option value="3">45921</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-5">
+                                <label for="CONFIGNode">Node URL</label>
+                                <input type="text" class="form-control" id="CONFIGNode" placeholder="Example input">
+                            </div>
+                            <div class="form-group col-7">
+                                <label for="CONFIGSHA256">Node SHA256</label>
+                                <input type="text" class="form-control" id="CONFIGSHA256" placeholder="Example input">
+                            </div>
+                            <div class="form-group col-5">
+                                <label for="CONFIGsnapshot">Bootstrap / snapshot URL</label>
+                                <input type="text" class="form-control" id="CONFIGsnapshot" placeholder="Example input">
+                            </div>
+                            <div class="form-group col-7">
+                                <label for="CONFIGsnapshotSHA256">Bootstrap / snapshot SHA256</label>
+                                <input type="text" class="form-control" id="CONFIGsnapshotSHA256"
+                                    placeholder="Example input">
+                            </div>
+                            <div class="form-group col-4">
+                                <label for="CONFIGBinaries">Binaries path <i class="fas fa-question-circle ml-2"
+                                        data-toggle="tooltip" data-placement="top" title=""
+                                        data-original-title="Tooltip on top"></i></label>
+                                <input type="text" class="form-control" id="CONFIGBinaries" placeholder="Example input">
+                            </div>
+                            <div class="form-group col-4">
+                                <label for="CONFIGsnapshotpath">Bootstrap / snapshot files path <i
+                                        class="fas fa-question-circle ml-2" data-toggle="tooltip" data-placement="top"
+                                        title="" data-original-title="Tooltip on top"></i></label>
+                                <input type="text" class="form-control" id="CONFIGsnapshotpath"
+                                    placeholder="Example input">
+                            </div>
+                            <div class="form-group col-4">
+                                <label for="CONFIGdocker">Base docker image:</label>
+                                <select id="CONFIGdocker" class="form-control bg-secondary text-white">
+                                    <option selected="">ubuntu-18</option>
+                                    <option>ubuntu-18</option>
+                                    <option>ubuntu-18</option>
+                                    <option>ubuntu-18</option>
+                                    <option>ubuntu-18</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-4">
+                                <label for="CONFIGCoinname">Coin name<i class="fas fa-question-circle ml-2"
+                                        data-toggle="tooltip" data-placement="top" title=""
+                                        data-original-title="Tooltip on top"></i></label>
+                                <input type="text" class="form-control" id="CONFIGCoinname" placeholder="Example input">
+                            </div>
+                            <div class="form-group col-3">
+                                <label for="CONFIGNodeversion">Node version</label>
+                                <input type="text" class="form-control" id="CONFIGNodeversion"
+                                    placeholder="Example input">
+                            </div>
+                            <div class="form-group col-3">
+                                <label for="CONFIGDisplayNodeversion">Display node version</label>
+                                <input type="text" class="form-control" id="CONFIGDisplayNodeversion"
+                                    placeholder="Example input">
+                            </div>
+                            <div class="form-group col-4">
+                                <label for="CONFIGDaemon">Daemon name<i class="fas fa-question-circle ml-2"
+                                        data-toggle="tooltip" data-placement="top" title=""
+                                        data-original-title="Tooltip on top"></i></label>
+                                <input type="text" class="form-control" id="CONFIGDaemon" placeholder="Example input">
+                            </div>
+                            <div class="form-group col-4">
+                                <label for="CONFIGClientname">Client name<i class="fas fa-question-circle ml-2"
+                                        data-toggle="tooltip" data-placement="top" title=""
+                                        data-original-title="Tooltip on top"></i></label>
+                                <input type="text" class="form-control" id="CONFIGClientname"
+                                    placeholder="Example input">
+                            </div>
+                            <div class="form-group col-5">
+                                <label for="CONFIGConfigfolder">Config folder<i class="fas fa-question-circle ml-2"
+                                        data-toggle="tooltip" data-placement="top" title=""
+                                        data-original-title="Tooltip on top"></i></label>
+                                <input type="text" class="form-control" id="CONFIGConfigfolder"
+                                    placeholder="Example input">
+                            </div>
+                            <div class="form-group col-5">
+                                <label for="CONFIGConfigfile">Config file name<i class="fas fa-question-circle ml-2"
+                                        data-toggle="tooltip" data-placement="top" title=""
+                                        data-original-title="Tooltip on top"></i></label>
+                                <input type="text" class="form-control" id="CONFIGConfigfile"
+                                    placeholder="Example input">
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="CONFIGAddnodes">Addnodes:</label>
+                                <textarea class="form-control" id="CONFIGAddnodes" rows="6"></textarea>
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="CONFIGRewards">Rewards config:</label>
+                                <textarea class="form-control" id="CONFIGRewards" rows="6"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-SERVICE" role="tabpanel"
+                        aria-labelledby="v-pills-SERVICE-tab">
+                        <!-- SERVICE -->
+                        <div class="row">
+                            <div class="col-lg-12 mb-5">
+                                <div class="addCoin-title-row">
+                                    <div class="addcoin-title">
+                                        <p>ADD NEW COIN</p>
+                                        <h2>SERVICE</h2>
+                                    </div>
+                                    <button class="btn btn-success px-3"><i class="fas fa-save mr-2"></i>SAVE</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-3">
+                                <label for="SERVICEdeposit">Minimum deposit amount</label>
+                                <input type="text" class="form-control" id="SERVICEdeposit" placeholder="Example input">
+                            </div>
+                            <div class="form-group col-3">
+                                <label for="SERVICEwithdrawal">Minimum withdrawal amount</label>
+                                <input type="text" class="form-control" id="SERVICEwithdrawal"
+                                    placeholder="Example input">
+                            </div>
+                            <div class="form-group col-3">
+                                <label for="SERVICETXfee">Minimum TX fee</label>
+                                <input type="text" class="form-control" id="SERVICETXfee" placeholder="Example input">
+                            </div>
+                            <div class="form-group col-3">
+                                <label for="SERVICEMaximumTXfee">Maximum TX fee</label>
+                                <input type="text" class="form-control" id="SERVICEMaximumTXfee"
+                                    placeholder="Example input">
+                            </div>
+                            <div class="form-group col-3">
+                                <label for="SERVICEtransferCoin">Coin transfer confirmations</label>
+                                <input type="text" class="form-control" id="SERVICEtransferCoin"
+                                    placeholder="Example input">
+                            </div>
+                            <div class="form-group col-3">
+                                <label for="SERVICErewardCoin">Coin reward confirmations</label>
+                                <input type="text" class="form-control" id="SERVICErewardCoin"
+                                    placeholder="Example input">
+                            </div>
+                            <div class="form-group col-3">
+                                <label for="CONFIGAddress">Address prefix<i class="fas fa-question-circle ml-2"
+                                        data-toggle="tooltip" data-placement="top" title=""
+                                        data-original-title="Tooltip on top"></i></label>
+                                <input type="text" class="form-control" id="CONFIGAddress" placeholder="Example input">
+                            </div>
+                            <div class="form-group col-3">
+                                <label for="CONFIGSecret">Secret key prefix<i class="fas fa-question-circle ml-2"
+                                        data-toggle="tooltip" data-placement="top" title=""
+                                        data-original-title="Tooltip on top"></i></label>
+                                <input type="text" class="form-control" id="CONFIGSecret" placeholder="Example input">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-SMART" role="tabpanel" aria-labelledby="v-pills-SMART-tab">
+                        <!-- SMART -->
+                        <div class="row">
+                            <div class="col-lg-12 mb-5">
+                                <div class="addCoin-title-row">
+                                    <div class="addcoin-title">
+                                        <p>ADD NEW COIN</p>
+                                        <h2>SMART BALANCING</h2>
+                                    </div>
+                                    <button class="btn btn-success px-3"><i class="fas fa-save mr-2"></i>SAVE</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <form class="form-service">
+                                <div class="form-check col-12 mb-2">
+                                    <div class="balance-wrapper">
+                                        <div class="form-group col-6 balance-toggle-form">
+                                            <div class="custom-control custom-switch custom-switch-featured">
+                                                <input type="checkbox" class="custom-control-input" id="balance"
+                                                    checked="checked">
+                                                <label class="custom-control-label" for="balance" data-toggle="collapse"
+                                                    data-target="#collapseExample" aria-expanded="true"
+                                                    aria-controls="collapseExample">POS</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="collapse card balance-card show" id="collapseExample">
+                                        <div class="col-12 py-4">
+                                            <div class="row">
+                                                <div class="form-group col-3">
+                                                    <label for="BALANCINGprovider">POS ROI provider:</label>
+                                                    <select id="BALANCINGprovider"
+                                                        class="form-control bg-secondary text-white">
+                                                        <option selected="">Integrnal</option>
+                                                        <option>Integrnal</option>
+                                                        <option>Integrnal</option>
+                                                        <option>Integrnal</option>
+                                                        <option>Integrnal</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group col-3">
+                                                    <label for="BALANCINGPOSROI">POS ROI provider ticker<i
+                                                            class="fas fa-question-circle ml-2" data-toggle="tooltip"
+                                                            data-placement="top" title=""
+                                                            data-original-title="Tooltip on top"></i></label>
+                                                    <input type="text" class="form-control" id="BALANCINGPOSROI"
+                                                        placeholder="Example input">
+                                                </div>
+                                                <div class="form-group col-3">
+                                                    <label for="BALANCINGinput">POS input amount<i
+                                                            class="fas fa-question-circle ml-2" data-toggle="tooltip"
+                                                            data-placement="top" title=""
+                                                            data-original-title="Tooltip on top"></i></label>
+                                                    <input type="text" class="form-control" id="BALANCINGinput"
+                                                        placeholder="Example input">
+                                                </div>
+                                                <div class="form-group col-3">
+                                                    <label for="BALANCINGMininput">Min POS input amount<i
+                                                            class="fas fa-question-circle ml-2" data-toggle="tooltip"
+                                                            data-placement="top" title=""
+                                                            data-original-title="Tooltip on top"></i></label>
+                                                    <input type="text" class="form-control" id="BALANCINGMininput"
+                                                        placeholder="Example input">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-check col-12 mb-2">
+                                    <div class="balance-wrapper">
+                                        <div class="form-group col-6 balance-toggle-form">
+                                            <div class="custom-control custom-switch custom-switch-featured">
+                                                <input type="checkbox" class="custom-control-input" id="balance2"
+                                                    checked="checked">
+                                                <label class="custom-control-label" for="balance2"
+                                                    data-toggle="collapse" data-target="#collapseExample2"
+                                                    aria-expanded="true" aria-controls="collapseExample">zPOS</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="collapse card balance-card show" id="collapseExample2">
+                                        <div class="col-12 py-4">
+                                            <div class="row">
+                                                <div class="form-group col-3">
+                                                    <label for="BALANCINGzPOSprovider">zPOS ROI provider:</label>
+                                                    <select id="BALANCINGzPOSprovider"
+                                                        class="form-control bg-secondary text-white">
+                                                        <option selected="">Integrnal</option>
+                                                        <option>Integrnal</option>
+                                                        <option>Integrnal</option>
+                                                        <option>Integrnal</option>
+                                                        <option>Integrnal</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group col-3">
+                                                    <label for="BALANCINGPOSzPOSROI">zPOS ROI provider tickerr<i
+                                                            class="fas fa-question-circle ml-2" data-toggle="tooltip"
+                                                            data-placement="top" title=""
+                                                            data-original-title="Tooltip on top"></i></label>
+                                                    <input type="text" class="form-control" id="BALANCINGPOSzPOSROI"
+                                                        placeholder="Example input">
+                                                </div>
+                                                <div class="form-group col-3">
+                                                    <label for="BALANCINGzPOSinput">zPOS input amount<i
+                                                            class="fas fa-question-circle ml-2" data-toggle="tooltip"
+                                                            data-placement="top" title=""
+                                                            data-original-title="Tooltip on top"></i></label>
+                                                    <input type="text" class="form-control" id="BALANCINGzPOSinput"
+                                                        placeholder="Example input">
+                                                </div>
+                                                <div class="form-group col-3">
+                                                    <label for="BALANCINGMzMinininput">zMin POS input amount<i
+                                                            class="fas fa-question-circle ml-2" data-toggle="tooltip"
+                                                            data-placement="top" title=""
+                                                            data-original-title="Tooltip on top"></i></label>
+                                                    <input type="text" class="form-control" id="BALANCINGMzMinininput"
+                                                        placeholder="Example input">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-check col-12 mb-2">
+                                    <div class="balance-wrapper">
+                                        <div class="form-group col-6 balance-toggle-form">
+                                            <div class="custom-control custom-switch custom-switch-featured">
+                                                <input type="checkbox" class="custom-control-input" id="balance3"
+                                                    checked="checked">
+                                                <label class="custom-control-label" for="balance3"
+                                                    data-toggle="collapse" data-target="#collapseExample3"
+                                                    aria-expanded="true"
+                                                    aria-controls="collapseExample"><span>Masternode</span></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="collapse card balance-card show" id="collapseExample3">
+                                        <div class="col-12 py-4">
+                                            <div class="row">
+                                                <div class="form-group col-3 testnet">
+                                                    <label class="isTestnet" for="BALANCINGwallet">Use cold
+                                                        wallet</label>
+                                                    <div class="custom-control custom-switch">
+                                                        <input type="checkbox"
+                                                            class="custom-control-input custom-switch-featured"
+                                                            id="BALANCINGwallet" checked="checked">
+                                                        <label class="custom-control-label"
+                                                            for="BALANCINGwallet"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-2 testnet">
+                                                    <label class="isTestnet" for="BALANCINGsentinel">Use
+                                                        sentinel</label>
+                                                    <div class="custom-control custom-switch custom-switch-featured">
+                                                        <input type="checkbox" class="custom-control-input"
+                                                            id="BALANCINGsentinel" checked="checked">
+                                                        <label class="custom-control-label"
+                                                            for="BALANCINGsentinel"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-3 testnet">
+                                                    <label class="isTestnet" for="BALANCINGblockchain">Use
+                                                        blockchain
+                                                        snapshot</label>
+                                                    <div class="custom-control custom-switch custom-switch-featured">
+                                                        <input type="checkbox" class="custom-control-input"
+                                                            id="BALANCINGblockchain" checked="checked">
+                                                        <label class="custom-control-label"
+                                                            for="BALANCINGblockchain"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-2 testnet">
+                                                    <label class="isTestnet" for="BALANCINGUseIPv4">Use
+                                                        IPv4</label>
+                                                    <div class="custom-control custom-switch custom-switch-featured">
+                                                        <input type="checkbox" class="custom-control-input"
+                                                            id="BALANCINGUseIPv4" checked="checked">
+                                                        <label class="custom-control-label"
+                                                            for="BALANCINGUseIPv4"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-2 testnet">
+                                                    <label class="isTestnet" for="BALANCINGUseIPv6">Use
+                                                        IPv6</label>
+                                                    <div class="custom-control custom-switch custom-switch-featured">
+                                                        <input type="checkbox" class="custom-control-input"
+                                                            id="BALANCINGUseIPv6" checked="checked">
+                                                        <label class="custom-control-label"
+                                                            for="BALANCINGUseIPv6"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-4">
+                                                    <label for="BALANCINGzPOSproviderNodes">zPOS ROI provider:</label>
+                                                    <select id="BALANCINGzPOSproviderNodes"
+                                                        class="form-control bg-secondary text-white">
+                                                        <option selected="">Integrnal</option>
+                                                        <option>Integrnal</option>
+                                                        <option>Integrnal</option>
+                                                        <option>Integrnal</option>
+                                                        <option>Integrnal</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group col-4">
+                                                    <label for="BALANCINGPOSzPOSROINodes">zPOS ROI provider ticker<i
+                                                            class="fas fa-question-circle ml-2" data-toggle="tooltip"
+                                                            data-placement="top" title=""
+                                                            data-original-title="Tooltip on top"></i></label>
+                                                    <input type="text" class="form-control"
+                                                        id="BALANCINGPOSzPOSROINodes" placeholder="Example input">
+                                                </div>
+                                                <div class="form-group col-3">
+                                                    <label for="BALANCINGzPOSproviderNodes">Rewards distribution mode:<i
+                                                            class="fas fa-question-circle ml-2" data-toggle="tooltip"
+                                                            data-placement="top" title=""
+                                                            data-original-title="Tooltip on top">
+                                                        </i> </label>
+                                                    <select id="BALANCINGzPOSproviderNodes"
+                                                        class="form-control bg-secondary text-white">
+                                                        <option selected="">default</option>
+                                                        <option>default</option>
+                                                        <option>default</option>
+                                                        <option>default</option>
+                                                        <option>default</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group col-3">
+                                                    <label for="BALANCINGMasternode">Masternode collateral</label>
+                                                    <input type="text" class="form-control" id="BALANCINGMasternode"
+                                                        placeholder="Example input">
+                                                </div>
+                                                <div class="form-group col-3">
+                                                    <label for="BALANCINGcollectible">Minimum collectible reward<i
+                                                            class="fas fa-question-circle ml-2" data-toggle="tooltip"
+                                                            data-placement="top" title=""
+                                                            data-original-title="Tooltip on top"></i></label>
+                                                    <input type="text" class="form-control" id="BALANCINGcollectible"
+                                                        placeholder="Example input">
+                                                </div>
+                                                <div class="form-group col-3">
+                                                    <label for="BALANCINGMzCollateral">Collateral confirmations<i
+                                                            class="fas fa-question-circle ml-2" data-toggle="tooltip"
+                                                            data-placement="top" title=""
+                                                            data-original-title="Tooltip on top"></i></label>
+                                                    <input type="text" class="form-control" id="BALANCINGMzCollateral"
+                                                        placeholder="Example input">
+                                                </div>
+                                                <div class="form-group col-3">
+                                                    <label for="BALANCINGMMaxserverst">Max servers<i
+                                                            class="fas fa-question-circle ml-2" data-toggle="tooltip"
+                                                            data-placement="top" title=""
+                                                            data-original-title="Tooltip on top"></i></label>
+                                                    <input type="text" class="form-control" id="BALANCINGMMaxserverst"
+                                                        placeholder="Example input">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
+                <!--  -->
             </div>
         </div>
-        <aside class="control-aside">
-            <nav>
-                <ul>
-                    <li><a href="basic.html" class="btn btn-secondary">BASIC</a></li>
-                    <li><a href="knowledge.html" class="btn btn-secondary">KNOWLEDGEBASE</a></li>
-                    <li><a href="explorer.html" class="btn btn-secondary">EXPLORERS</a></li>
-                    <li><a href="config.html" class="btn btn-secondary">CONFIG</a></li>
-                    <li><a href="service.html" class="btn btn-secondary">SERVICE</a></li>
-                    <li><a href="balancing.html" class="btn btn-secondary">SMART BALANCING</a></li>
-                </ul>
-            </nav>
-        </aside>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-        crossorigin="anonymous"></script>
-    <script src="./js/main.js"></script>
+        <div class="nav flex-column nav-pills col-2" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <a class="nav-link active" id="v-pills-basic-tab" data-toggle="pill" href="#v-pills-basic" role="tab"
+                aria-controls="v-pills-basic" aria-selected="true">BASIC</a>
+            <a class="nav-link" id="v-pills-KNOWLEDGEBASE-tab" data-toggle="pill" href="#v-pills-KNOWLEDGEBASE"
+                role="tab" aria-controls="v-pills-KNOWLEDGEBASE" aria-selected="false">KNOWLEDGEBASE</a>
+            <a class="nav-link" id="v-pills-EXPLORERS-tab" data-toggle="pill" href="#v-pills-EXPLORERS" role="tab"
+                aria-controls="v-pills-EXPLORERS" aria-selected="false">EXPLORERS</a>
+            <a class="nav-link" id="v-pills-CONFIG-tab" data-toggle="pill" href="#v-pills-CONFIG" role="tab"
+                aria-controls="v-pills-CONFIG" aria-selected="false">CONFIG</a>
+            <a class="nav-link" id="v-pills-SERVICE-tab" data-toggle="pill" href="#v-pills-SERVICE" role="tab"
+                aria-controls="v-pills-SERVICE" aria-selected="false">SERVICE</a>
+            <a class="nav-link" id="v-pills-SMART-tab" data-toggle="pill" href="#v-pills-SMART" role="tab"
+                aria-controls="v-pills-SMART" aria-selected="false">SMART BALANCING
+            </a>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+        <script src="./js/main.js"></script>
 </body>
 
 </html>

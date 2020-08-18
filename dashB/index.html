@@ -64,392 +64,738 @@
         </aside>
         <div class="main-content">
             <div class="container">
+                <h2 class="page-title display-4">Coins</h2>
                 <div class="row">
-                    <div class="col-lg-4 col-md-4 col-sm-4">
-                        <a href="addcoin.html" class="edit-btn btn btn-secondary">+ ADD NEW COIN</a>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-4  ml-auto">
-                        <form class="form-inline">
-                            <div class="coins-form input-group input-group-sm">
-                                <input class="form-control form-control-navbar" type="search" placeholder="Search"
-                                    aria-label="Search">
-                                <div class="input-group-append">
-                                    <button class="btn btn-navbar" type="submit">
-                                        <i class="fas fa-search"></i>
-                                    </button>
-                                </div>
+                    <div class="col-12">
+                        <div class="subtitle-row">
+                            <a href="addcoin.html" class="edit-btn btn btn-secondary"><i
+                                    class="far fa-plus-square mr-2 shadow-sm"></i>ADD NEW COIN</a>
+                            <div class="custom-control custom-switch">
+                                <input type="checkbox" class="custom-control-input" id="HideDelisted"
+                                    onchange="chBoxDel()">
+                                <label class="custom-control-label" for="HideDelisted"><span>HideDelisted</span></label>
                             </div>
-                        </form>
+                            <!-- Search form -->
+                            <input class="form-control col-lg-3 col-md-3 ml-auto" type="text" placeholder="Search"
+                                aria-label="Search">
+                        </div>
                     </div>
                 </div>
                 <div class="table-name mt-5 mb-2">
-                    <div class="col-1">id</div>
-                    <div class="col-2">Project name</div>
-                    <div class="col-2">Balance</div>
+                    <div class="col-1 ml-3">id</div>
+                    <div class="col-2">Coin</div>
+                    <div class="col-3">Balance<i class="fas fa-question-circle ml-2" data-toggle="tooltip"
+                            data-placement="top" title="" data-original-title="Tooltip on top"></i></div>
                     <div class="col-2">Delta balance</div>
                     <div class="col-2">Fee</div>
-                    <div class="col-2">Status</div>
+                    <div class="col-1">Status</div>
                     <div class="col-1"></div>
                 </div>
-                <div class="table-wrapper">
-                    <div class="table-body-name" data-toggle="collapse" data-target="#collapseExample"
-                        aria-expanded="true" aria-controls="collapseExample">
-                        <div class="col-1">15</div>
-                        <div class="col-2">XAP <span>Apollon Network</span></div>
-                        <div class="col-2"><span>5405.4225</span>
-                            <span>145452.9451</span>
-                        </div>
-                        <div class="col-2">+23.4354</div>
-                        <div class="col-2">8%</div>
-                        <div class="col-2">Active</div>
-                        <div class="col-1"></div>
+                <!-- cards -->
+                <div class="card-name py-3 mt-2 rounded" href="#collapseCoinCard1" data-toggle="collapse"
+                    aria-expanded="false" aria-controls="collapseCoinCard1">
+                    <div class="col-1 ml-3">1</div>
+                    <div class="col-2"><span class="text-info">Apollon Network</span>XAP</div>
+                    <div class="col-3"><span>1 300 485 494.99353455</span><span>1 300 485 494.99353455</span>
                     </div>
-                    <a href="#" class="edit-btn btn-sm btn-secondary">edit</a>
+                    <div class="col-2 text-success">+34 294 949</div>
+                    <div class="col-2">15%</div>
+                    <div class="col-1 text-success">Active</div>
+                    <div class="col-1"></div>
                 </div>
-                <div class="collapse card" id="collapseExample">
-                    <div class="icons-row">
-                        <div class="table-icons">
-                            <a href="#"><i class="fab fa-bitcoin"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-discord"></i></a>
-                            <a href="#"><i class="fab fa-telegram"></i></a>
-                            <a href="#"><i class="fab fa-telegram"></i></a>
+                <div class="collapse main-card" id="collapseCoinCard1">
+                    <div class="card card-body rounded">
+                        <div class="row card-btns">
+                            <div class="col-lg-12">
+                                <a href="#" class="btn-sm btn-primary mr-2">BACKUP WALLET</a>
+                                <a href="#" class="btn-sm btn-primary mr-2">RESTORE WALLET</a>
+                                <a href="#" class="btn-sm btn-primary mr-2">ROLLBACK BC.</a>
+                                <a href="#" class="btn-sm btn-primary mr-2">DELETE BC.</a>
+                                <a href="#" class="btn-sm btn-primary">DELETE COINSERV</a>
+                            </div>
                         </div>
-                        <div class="btn-row">
-                            <a href="#" class="btn-sm btn-secondary">BACKUP WALLET</a>
-                            <a href="#" class="btn-sm btn-secondary">RESTORE WALLET</a>
-                            <a href="#" class="btn-sm btn-secondary">ROLLBACK BC.</a>
-                            <a href="#" class="btn-sm btn-secondary">DELETE BC.</a>
-                            <a href="#" class="btn-sm btn-secondary">DELETE COINSERV</a>
-                        </div>
-                    </div>
-                    <div class="table-section__wallet">
-                        <table class="table table-responsive-lg">
-                            <tbody>
-                                <tr>
-                                    <th scope="row">Service wallet</th>
-                                    <td>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1A <a href="#" class="btn-copy"><i
-                                                class="far fa-copy"></i></a></td>
-                                    <td>5405.4225 XAP</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">POS wallet</th>
-                                    <td>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE2B <a href="#" class="btn-copy"><i
-                                                class="far fa-copy"></i></a></td>
-                                    <td>5405.4225 XAP</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">zPOS wallet</th>
-                                    <td>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGEKC <a href="#" class="btn-copy"><i
-                                                class="far fa-copy"></i></a></td>
-                                    <td>0 XAP</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" colspan="2">Masternodes total balance</th>
-                                    <td>0 XAP</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="table-section__balance">
-                        <div class="row">
-                            <div class="col-4">
-                                <div class="wb">
-                                    <span>Total wallets balance</span>
-                                    5473 XAP
+                        <div class="row no-gutters align-items-center">
+                            <div class="col-lg-5 col-md-5">
+                                <div class="card-icons mt-3 py-2 px-2 rounded bg-light">
+                                    <a href="#"><i class="text-info fas fa-globe"></i></a>
+                                    <a href="#"><i class="ml-2 text-info fas fa-search"></i></a>
+                                    <a href="#"><i class="ml-2 text-info fas fa-book"></i></a>
+                                    <a href="#"><i class="ml-2 text-info fab fa-bitcoin"></i></a>
+                                    <a href="#"><i class="ml-2 text-info fab fa-github-square"></i></a>
+                                    <a href="#"><i class="ml-2 text-info fab fa-twitter-square"></i></a>
+                                    <a href="#"><i class="ml-2 text-info fab fa-facebook-square"></i></a>
+                                    <a href="#"><i class="ml-2 text-info fab fa-discord"></i></a>
+                                    <a href="#"><i class="ml-2 text-info fab fa-telegram"></i></a>
+                                    <a href="#"><i class="ml-2 text-info fas fa-external-link-square-alt"></i></a>
+                                    <a href="#"><i class="ml-2 text-info fas fa-external-link-square-alt"></i></a>
                                 </div>
                             </div>
-                            <div class="col-4">
-                                <div class="db">
-                                    <span>Database balance</span>
-                                    5450 XAP
-                                </div>
-                            </div>
-                            <div class="col-4">
-                                <div class="del-b">
-                                    <span>Delta balance</span>
-                                    +23 XAP
+                            <div class="col-lg-7 col-md-7">
+                                <div class="card-indicators ml-4 mt-3">
+                                    <span class="bg-success text-white btn-sm px-5">POS</span>
+                                    <span class="bg-warning text-white btn-sm px-5">zPOS</span>
+                                    <span class="bg-success text-white btn-sm px-5">Masternodes</span>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="table-section__footer">
-                        <div class="row">
-                            <div class="col-7">
-                                <div class="comments-section">
-                                    <h2>Comments:</h2>
-                                    <span>This is comment section.</span>
-                                    <span>This is comment section.</span>
-                                    <span>This is comment section.</span>
+                        <div class="row mt-4">
+                            <div class="col-lg-9">
+                                <div class="table-section__wallet">
+                                    <table class="table table-bordered table-responsive-lg">
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">Service wallet</th>
+                                                <td><span>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1A</span><a href="#"
+                                                        class="btn-copy"><i class="ml-4 far fa-copy"></i></a></td>
+                                                <td>5405.4225 XAP</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">POS wallet</th>
+                                                <td><span>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1A</span><a href="#"
+                                                        class="btn-copy"><i class="ml-4 far fa-copy"></i></a></td>
+                                                <td>5405.4225 XAP</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">zPOS wallet</th>
+                                                <td><span>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1A</span><a href="#"
+                                                        class="btn-copy"><i class="ml-4 far fa-copy"></i></a></td>
+                                                <td>0 XAP</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" colspan="2">Masternodes total balance</th>
+                                                <td>0 XAP</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
-                            <div class="col-5">
-                                <div class="section-final">
-                                    <ul>
-                                        <li>Last block</li>
-                                        <li>Max servers</li>
-                                        <li>Referral rewards enabled</li>
-                                        <li>Masternodes</li>
-                                        <li>POS</li>
-                                        <li>zPOS</li>
-                                    </ul>
-                                    <ul>
-                                        <li>1234567789</li>
-                                        <li>21 / 30</li>
-                                        <li>10%</li>
-                                        <li>Yes</li>
-                                        <li>Yes</li>
-                                        <li>No</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="table-wrapper">
-                    <div class="table-body-name" data-toggle="collapse" data-target="#collapseExample2"
-                        aria-expanded="true" aria-controls="collapseExample">
-                        <div class="col-1">15</div>
-                        <div class="col-2">BTXC <span>Bettex</span></div>
-                        <div class="col-2"><span>5405.4225</span>
-                            <span>145452.9451</span>
-                        </div>
-                        <div class="col-2">+23.4354</div>
-                        <div class="col-2">8%</div>
-                        <div class="col-2">Active</div>
-                        <div class="col-1"></div>
-                    </div>
-                    <a href="#" class="edit-btn btn-sm btn-secondary">edit</a>
-                </div>
-                <div class="collapse card" id="collapseExample2">
-                    <div class="icons-row">
-                        <div class="table-icons">
-                            <a href="#"><i class="fab fa-bitcoin"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-discord"></i></a>
-                            <a href="#"><i class="fab fa-telegram"></i></a>
-                            <a href="#"><i class="fab fa-telegram"></i></a>
-                        </div>
-                        <div class="btn-row">
-                            <a href="#" class="btn-sm btn-secondary">BACKUP WALLET</a>
-                            <a href="#" class="btn-sm btn-secondary">RESTORE WALLET</a>
-                            <a href="#" class="btn-sm btn-secondary">ROLLBACK BC.</a>
-                            <a href="#" class="btn-sm btn-secondary">DELETE BC.</a>
-                            <a href="#" class="btn-sm btn-secondary">DELETE COINSERV</a>
-                        </div>
-                    </div>
-                    <div class="table-section__wallet">
-                        <table class="table table-responsive-lg">
-                            <tbody>
-                                <tr>
-                                    <th scope="row">Service wallet</th>
-                                    <td>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1A <a href="#" class="btn-copy"><i
-                                                class="far fa-copy"></i></a></td>
-                                    <td>5405.4225 XAP</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">POS wallet</th>
-                                    <td>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE2B <a href="#" class="btn-copy"><i
-                                                class="far fa-copy"></i></a></td>
-                                    <td>5405.4225 XAP</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">zPOS wallet</th>
-                                    <td>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGEKC <a href="#" class="btn-copy"><i
-                                                class="far fa-copy"></i></a></td>
-                                    <td>0 XAP</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" colspan="2">Masternodes total balance</th>
-                                    <td>0 XAP</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="table-section__balance">
-                        <div class="row">
-                            <div class="col-4">
-                                <div class="wb">
-                                    <span>Total wallets balance</span>
-                                    5473 XAP
-                                </div>
-                            </div>
-                            <div class="col-4">
-                                <div class="db">
-                                    <span>Database balance</span>
-                                    5450 XAP
-                                </div>
-                            </div>
-                            <div class="col-4">
-                                <div class="del-b">
-                                    <span>Delta balance</span>
-                                    +23 XAP
+                            <div class="ml-auto col-lg-3">
+                                <div class="card-comments-section">
+                                    <h2 class="font-weight-bold">Comments</h2>
+                                    <p>text ever since the 1500s, when an unknown printer took a galley of type and
+                                        scrambled it to make a type specimen book. It has survived not only five
+                                        centuries, but also the leap into electronic typesetting, remaining scrambled it
+                                        to make a type specimen book. It has survived not only five
+                                        centuries, but also the leap into electronic typesetting, remainingscrambled it
+                                        to make a type specimen book. It has survived not only five
+                                        centuries, but also the leap into electronic typesetting, remaining</p>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="table-section__footer">
-                        <div class="row">
-                            <div class="col-7">
-                                <div class="comments-section">
-                                    <h2>Comments:</h2>
-                                    <span>This is comment section.</span>
-                                    <span>This is comment section.</span>
-                                    <span>This is comment section.</span>
+                        <div class="row mt-2">
+                            <div class="col-lg-6">
+                                <div class="card-total-balnce">
+                                    <table class="table table-responsive-lg">
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">Total wallet balance</th>
+                                                <td><span> 1 485 494.99353455 XAP</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Total database balance</th>
+                                                <td><span> 1 485 494.99353455 XAP</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Delta balance</th>
+                                                <td><span> 1 485 494.99353455 XAP</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
-                            <div class="col-5">
-                                <div class="section-final">
-                                    <ul>
-                                        <li>Last block</li>
-                                        <li>Max servers</li>
-                                        <li>Referral rewards enabled</li>
-                                        <li>Masternodes</li>
-                                        <li>POS</li>
-                                        <li>zPOS</li>
-                                    </ul>
-                                    <ul>
-                                        <li>1234567789</li>
-                                        <li>21 / 30</li>
-                                        <li>10%</li>
-                                        <li>Yes</li>
-                                        <li>Yes</li>
-                                        <li>No</li>
-                                    </ul>
+                            <div class="col-lg-6">
+                                <div class="card-last-block">
+                                    <table class="table table-responsive-lg">
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">Last block</th>
+                                                <td><span>123456789</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Wallet version</th>
+                                                <td><span>Dash-23.4.034-aur</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Max mn servers</th>
+                                                <td>
+                                                    <p class="text-success">21/30</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Referral rewards</th>
+                                                <td><span>8%</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="table-wrapper">
-                    <div class="table-body-name" data-toggle="collapse" data-target="#collapseExample3"" aria-expanded="
-                        false" aria-controls="collapseExample">
-                        <div class="col-1">15</div>
-                        <div class="col-2">XBI <span>Bitcoin Incognito</span></div>
-                        <div class="col-2"><span>5405.4225</span>
-                            <span>145452.9451</span>
-                        </div>
-                        <div class="col-2">+23.4354</div>
-                        <div class="col-2">8%</div>
-                        <div class="col-2">Active</div>
-                        <div class="col-1"></div>
+                <div class="card-name py-3 mt-2 rounded" href="#collapseCoinCard2" data-toggle="collapse"
+                    aria-expanded="false" aria-controls="collapseCoinCard2">
+                    <div class="col-1 ml-3">9999</div>
+                    <div class="col-2"><span class="text-info">Know Your Developerdevelo</span>KYD</div>
+                    <div class="col-3"><span>1 300 485 494.99353455</span><span>1 300 485 494.99353455</span>
                     </div>
-                    <a href="#" class="edit-btn btn-sm btn-secondary">edit</a>
+                    <div class="col-2 text-success">-11 344</div>
+                    <div class="col-2">15%</div>
+                    <div class="col-1 text-warning">Maintenance</div>
+                    <div class="col-1"></div>
                 </div>
-                <div class="collapse card" id="collapseExample3">
-                    <div class="icons-row">
-                        <div class="table-icons">
-                            <a href="#"><i class="fab fa-bitcoin"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-discord"></i></a>
-                            <a href="#"><i class="fab fa-telegram"></i></a>
-                            <a href="#"><i class="fab fa-telegram"></i></a>
+                <div class="collapse main-card" id="collapseCoinCard2">
+                    <div class="card card-body rounded">
+                        <div class="row card-btns">
+                            <div class="col-lg-12">
+                                <a href="#" class="btn-sm btn-primary mr-2">BACKUP WALLET</a>
+                                <a href="#" class="btn-sm btn-primary mr-2">RESTORE WALLET</a>
+                                <a href="#" class="btn-sm btn-primary mr-2">ROLLBACK BC.</a>
+                                <a href="#" class="btn-sm btn-primary mr-2">DELETE BC.</a>
+                                <a href="#" class="btn-sm btn-primary">DELETE COINSERV</a>
+                            </div>
                         </div>
-                        <div class="btn-row">
-                            <a href="#" class="btn-sm btn-secondary">BACKUP WALLET</a>
-                            <a href="#" class="btn-sm btn-secondary">RESTORE WALLET</a>
-                            <a href="#" class="btn-sm btn-secondary">ROLLBACK BC.</a>
-                            <a href="#" class="btn-sm btn-secondary">DELETE BC.</a>
-                            <a href="#" class="btn-sm btn-secondary">DELETE COINSERV</a>
-                        </div>
-                    </div>
-                    <div class="table-section__wallet">
-                        <table class="table table-responsive-lg">
-                            <tbody>
-                                <tr>
-                                    <th scope="row">Service wallet</th>
-                                    <td>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1A <a href="#" class="btn-copy"><i
-                                                class="far fa-copy"></i></a></td>
-                                    <td>5405.4225 XAP</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">POS wallet</th>
-                                    <td>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE2B <a href="#" class="btn-copy"><i
-                                                class="far fa-copy"></i></a></td>
-                                    <td>5405.4225 XAP</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">zPOS wallet</th>
-                                    <td>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGEKC <a href="#" class="btn-copy"><i
-                                                class="far fa-copy"></i></a></td>
-                                    <td>0 XAP</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row" colspan="2">Masternodes total balance</th>
-                                    <td>0 XAP</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="table-section__balance">
-                        <div class="row">
-                            <div class="col-4">
-                                <div class="wb">
-                                    <span>Total wallets balance</span>
-                                    5473 XAP
+                        <div class="row no-gutters align-items-center">
+                            <div class="col-lg-5 col-md-5">
+                                <div class="card-icons mt-3 py-2 px-2 rounded bg-light">
+                                    <a href="#"><i class="text-info fas fa-globe"></i></a>
+                                    <a href="#"><i class="ml-2 text-info fas fa-search"></i></a>
+                                    <a href="#"><i class="ml-2 text-info fas fa-book"></i></a>
+                                    <a href="#"><i class="ml-2 text-info fab fa-bitcoin"></i></a>
+                                    <a href="#"><i class="ml-2 text-info fab fa-github-square"></i></a>
+                                    <a href="#"><i class="ml-2 text-info fab fa-twitter-square"></i></a>
+                                    <a href="#"><i class="ml-2 text-info fab fa-facebook-square"></i></a>
+                                    <a href="#"><i class="ml-2 text-info fab fa-discord"></i></a>
+                                    <a href="#"><i class="ml-2 text-info fab fa-telegram"></i></a>
+                                    <a href="#"><i class="ml-2 text-info fas fa-external-link-square-alt"></i></a>
+                                    <a href="#"><i class="ml-2 text-info fas fa-external-link-square-alt"></i></a>
                                 </div>
                             </div>
-                            <div class="col-4">
-                                <div class="db">
-                                    <span>Database balance</span>
-                                    5450 XAP
-                                </div>
-                            </div>
-                            <div class="col-4">
-                                <div class="del-b">
-                                    <span>Delta balance</span>
-                                    +23 XAP
+                            <div class="col-lg-7 col-md-7">
+                                <div class="card-indicators ml-4 mt-3">
+                                    <span class="bg-success text-white btn-sm px-5">POS</span>
+                                    <span class="bg-warning text-white btn-sm px-5">zPOS</span>
+                                    <span class="bg-success text-white btn-sm px-5">Masternodes</span>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="table-section__footer">
-                        <div class="row">
-                            <div class="col-7">
-                                <div class="comments-section">
-                                    <h2>Comments:</h2>
-                                    <span>This is comment section.</span>
-                                    <span>This is comment section.</span>
-                                    <span>This is comment section.</span>
+                        <div class="row mt-4">
+                            <div class="col-lg-9">
+                                <div class="table-section__wallet">
+                                    <table class="table table-bordered table-responsive-lg">
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">Service wallet</th>
+                                                <td><span>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1A</span><a href="#"
+                                                        class="btn-copy"><i class="ml-4 far fa-copy"></i></a></td>
+                                                <td>5405.4225 XAP</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">POS wallet</th>
+                                                <td><span>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1A</span><a href="#"
+                                                        class="btn-copy"><i class="ml-4 far fa-copy"></i></a></td>
+                                                <td>5405.4225 XAP</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">zPOS wallet</th>
+                                                <td><span>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1A</span><a href="#"
+                                                        class="btn-copy"><i class="ml-4 far fa-copy"></i></a></td>
+                                                <td>0 XAP</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" colspan="2">Masternodes total balance</th>
+                                                <td>0 XAP</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
-                            <div class="col-5">
-                                <div class="section-final">
-                                    <ul>
-                                        <li>Last block</li>
-                                        <li>Max servers</li>
-                                        <li>Referral rewards enabled</li>
-                                        <li>Masternodes</li>
-                                        <li>POS</li>
-                                        <li>zPOS</li>
-                                    </ul>
-                                    <ul>
-                                        <li>1234567789</li>
-                                        <li>21 / 30</li>
-                                        <li>10%</li>
-                                        <li>Yes</li>
-                                        <li>Yes</li>
-                                        <li>No</li>
-                                    </ul>
+                            <div class="ml-auto col-lg-3">
+                                <div class="card-comments-section">
+                                    <h2 class="font-weight-bold">Comments</h2>
+                                    <p>text ever since the 1500s, when an unknown printer took a galley of type and
+                                        scrambled it to make a type specimen book. It has survived not only five
+                                        centuries, but also the leap into electronic typesetting, remaining scrambled it
+                                        to make a type specimen book. It has survived not only five
+                                        centuries, but also the leap into electronic typesetting, remainingscrambled it
+                                        to make a type specimen book. It has survived not only five
+                                        centuries, but also the leap into electronic typesetting, remaining</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-lg-6">
+                                <div class="card-total-balnce">
+                                    <table class="table table-responsive-lg">
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">Total wallet balance</th>
+                                                <td><span> 1 485 494.99353455 XAP</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Total database balance</th>
+                                                <td><span> 1 485 494.99353455 XAP</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Delta balance</th>
+                                                <td><span> 1 485 494.99353455 XAP</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="card-last-block">
+                                    <table class="table table-responsive-lg">
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">Last block</th>
+                                                <td><span>123456789</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Wallet version</th>
+                                                <td><span>Dash-23.4.034-aur</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Max mn servers</th>
+                                                <td>
+                                                    <p class="text-success">21/30</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Referral rewards</th>
+                                                <td><span>8%</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="card-name py-3 mt-2 rounded" href="#collapseCoinCard3" data-toggle="collapse"
+                    aria-expanded="false" aria-controls="collapseCoinCard2">
+                    <div class="col-1 ml-3">9999</div>
+                    <div class="col-2"><span class="text-info">Know Your Developerdevelo</span>KYD</div>
+                    <div class="col-3"><span>1 300 485 494.99353455</span><span>1 300 485 494.99353455</span>
+                    </div>
+                    <div class="col-2 text-success">-11 344</div>
+                    <div class="col-2">15%</div>
+                    <div class="col-1 text-warning">Maintenance</div>
+                    <div class="col-1"></div>
+                </div>
+                <div class="collapse main-card" id="collapseCoinCard3">
+                    <div class="card card-body rounded">
+                        <div class="row card-btns">
+                            <div class="col-lg-12">
+                                <a href="#" class="btn-sm btn-primary mr-2">BACKUP WALLET</a>
+                                <a href="#" class="btn-sm btn-primary mr-2">RESTORE WALLET</a>
+                                <a href="#" class="btn-sm btn-primary mr-2">ROLLBACK BC.</a>
+                                <a href="#" class="btn-sm btn-primary mr-2">DELETE BC.</a>
+                                <a href="#" class="btn-sm btn-primary">DELETE COINSERV</a>
+                            </div>
+                        </div>
+                        <div class="row no-gutters align-items-center">
+                            <div class="col-lg-5 col-md-5">
+                                <div class="card-icons mt-3 py-2 px-2 rounded bg-light">
+                                    <a href="#"><i class="text-info fas fa-globe"></i></a>
+                                    <a href="#"><i class="ml-2 text-info fas fa-search"></i></a>
+                                    <a href="#"><i class="ml-2 text-info fas fa-book"></i></a>
+                                    <a href="#"><i class="ml-2 text-info fab fa-bitcoin"></i></a>
+                                    <a href="#"><i class="ml-2 text-info fab fa-github-square"></i></a>
+                                    <a href="#"><i class="ml-2 text-info fab fa-twitter-square"></i></a>
+                                    <a href="#"><i class="ml-2 text-info fab fa-facebook-square"></i></a>
+                                    <a href="#"><i class="ml-2 text-info fab fa-discord"></i></a>
+                                    <a href="#"><i class="ml-2 text-info fab fa-telegram"></i></a>
+                                    <a href="#"><i class="ml-2 text-info fas fa-external-link-square-alt"></i></a>
+                                    <a href="#"><i class="ml-2 text-info fas fa-external-link-square-alt"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-7 col-md-7">
+                                <div class="card-indicators ml-4 mt-3">
+                                    <span class="bg-success text-white btn-sm px-5">POS</span>
+                                    <span class="bg-warning text-white btn-sm px-5">zPOS</span>
+                                    <span class="bg-success text-white btn-sm px-5">Masternodes</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-lg-9">
+                                <div class="table-section__wallet">
+                                    <table class="table table-bordered table-responsive-lg">
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">Service wallet</th>
+                                                <td><span>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1A</span><a href="#"
+                                                        class="btn-copy"><i class="ml-4 far fa-copy"></i></a></td>
+                                                <td>5405.4225 XAP</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">POS wallet</th>
+                                                <td><span>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1A</span><a href="#"
+                                                        class="btn-copy"><i class="ml-4 far fa-copy"></i></a></td>
+                                                <td>5405.4225 XAP</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">zPOS wallet</th>
+                                                <td><span>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1A</span><a href="#"
+                                                        class="btn-copy"><i class="ml-4 far fa-copy"></i></a></td>
+                                                <td>0 XAP</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" colspan="2">Masternodes total balance</th>
+                                                <td>0 XAP</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="ml-auto col-lg-3">
+                                <div class="card-comments-section">
+                                    <h2 class="font-weight-bold">Comments</h2>
+                                    <p>text ever since the 1500s, when an unknown printer took a galley of type and
+                                        scrambled it to make a type specimen book. It has survived not only five
+                                        centuries, but also the leap into electronic typesetting, remaining scrambled it
+                                        to make a type specimen book. It has survived not only five
+                                        centuries, but also the leap into electronic typesetting, remainingscrambled it
+                                        to make a type specimen book. It has survived not only five
+                                        centuries, but also the leap into electronic typesetting, remaining</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-lg-6">
+                                <div class="card-total-balnce">
+                                    <table class="table table-responsive-lg">
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">Total wallet balance</th>
+                                                <td><span> 1 485 494.99353455 XAP</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Total database balance</th>
+                                                <td><span> 1 485 494.99353455 XAP</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Delta balance</th>
+                                                <td><span> 1 485 494.99353455 XAP</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="card-last-block">
+                                    <table class="table table-responsive-lg">
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">Last block</th>
+                                                <td><span>123456789</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Wallet version</th>
+                                                <td><span>Dash-23.4.034-aur</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Max mn servers</th>
+                                                <td>
+                                                    <p class="text-success">21/30</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Referral rewards</th>
+                                                <td><span>8%</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-name py-3 mt-2 rounded" href="#collapseCoinCard4" data-toggle="collapse"
+                    aria-expanded="false" aria-controls="collapseCoinCard4">
+                    <div class="col-1 ml-3">78</div>
+                    <div class="col-2"><span class="text-info">Midas</span>MIDAS</div>
+                    <div class="col-3"><span>1 300 485 494.99353455</span><span>1 300 485 494.99353455</span>
+                    </div>
+                    <div class="col-2 text-success">-11 344</div>
+                    <div class="col-2">15%</div>
+                    <div class="col-1 text-secondary name-status">Delisted</div>
+                    <div class="col-1"></div>
+                </div>
+                <div class="collapse main-card" id="collapseCoinCard4">
+                    <div class="card card-body rounded">
+                        <div class="row card-btns">
+                            <div class="col-lg-12">
+                                <a href="#" class="btn-sm btn-primary mr-2">BACKUP WALLET</a>
+                                <a href="#" class="btn-sm btn-primary mr-2">RESTORE WALLET</a>
+                                <a href="#" class="btn-sm btn-primary mr-2">ROLLBACK BC.</a>
+                                <a href="#" class="btn-sm btn-primary mr-2">DELETE BC.</a>
+                                <a href="#" class="btn-sm btn-primary">DELETE COINSERV</a>
+                            </div>
+                        </div>
+                        <div class="row no-gutters align-items-center">
+                            <div class="col-lg-5 col-md-5">
+                                <div class="card-icons mt-3 py-2 px-2 rounded bg-light">
+                                    <a href="#"><i class="text-info fas fa-globe"></i></a>
+                                    <a href="#"><i class="ml-2 text-info fas fa-search"></i></a>
+                                    <a href="#"><i class="ml-2 text-info fas fa-book"></i></a>
+                                    <a href="#"><i class="ml-2 text-info fab fa-bitcoin"></i></a>
+                                    <a href="#"><i class="ml-2 text-info fab fa-github-square"></i></a>
+                                    <a href="#"><i class="ml-2 text-info fab fa-twitter-square"></i></a>
+                                    <a href="#"><i class="ml-2 text-info fab fa-facebook-square"></i></a>
+                                    <a href="#"><i class="ml-2 text-info fab fa-discord"></i></a>
+                                    <a href="#"><i class="ml-2 text-info fab fa-telegram"></i></a>
+                                    <a href="#"><i class="ml-2 text-info fas fa-external-link-square-alt"></i></a>
+                                    <a href="#"><i class="ml-2 text-info fas fa-external-link-square-alt"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-7 col-md-7">
+                                <div class="card-indicators ml-4 mt-3">
+                                    <span class="bg-success text-white btn-sm px-5">POS</span>
+                                    <span class="bg-warning text-white btn-sm px-5">zPOS</span>
+                                    <span class="bg-success text-white btn-sm px-5">Masternodes</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-lg-9">
+                                <div class="table-section__wallet">
+                                    <table class="table table-bordered table-responsive-lg">
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">Service wallet</th>
+                                                <td><span>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1A</span><a href="#"
+                                                        class="btn-copy"><i class="ml-4 far fa-copy"></i></a></td>
+                                                <td>5405.4225 XAP</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">POS wallet</th>
+                                                <td><span>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1A</span><a href="#"
+                                                        class="btn-copy"><i class="ml-4 far fa-copy"></i></a></td>
+                                                <td>5405.4225 XAP</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">zPOS wallet</th>
+                                                <td><span>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1A</span><a href="#"
+                                                        class="btn-copy"><i class="ml-4 far fa-copy"></i></a></td>
+                                                <td>0 XAP</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" colspan="2">Masternodes total balance</th>
+                                                <td>0 XAP</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="ml-auto col-lg-3">
+                                <div class="card-comments-section">
+                                    <h2 class="font-weight-bold">Comments</h2>
+                                    <p>text ever since the 1500s, when an unknown printer took a galley of type and
+                                        scrambled it to make a type specimen book. It has survived not only five
+                                        centuries, but also the leap into electronic typesetting, remaining scrambled it
+                                        to make a type specimen book. It has survived not only five
+                                        centuries, but also the leap into electronic typesetting, remainingscrambled it
+                                        to make a type specimen book. It has survived not only five
+                                        centuries, but also the leap into electronic typesetting, remaining</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-lg-6">
+                                <div class="card-total-balnce">
+                                    <table class="table table-responsive-lg">
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">Total wallet balance</th>
+                                                <td><span> 1 485 494.99353455 XAP</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Total database balance</th>
+                                                <td><span> 1 485 494.99353455 XAP</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Delta balance</th>
+                                                <td><span> 1 485 494.99353455 XAP</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="card-last-block">
+                                    <table class="table table-responsive-lg">
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">Last block</th>
+                                                <td><span>123456789</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Wallet version</th>
+                                                <td><span>Dash-23.4.034-aur</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Max mn servers</th>
+                                                <td>
+                                                    <p class="text-success">21/30</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Referral rewards</th>
+                                                <td><span>8%</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-name py-3 mt-2 rounded" href="#collapseCoinCard5" data-toggle="collapse"
+                    aria-expanded="false" aria-controls="collapseCoinCard5">
+                    <div class="col-1 ml-3">78</div>
+                    <div class="col-2"><span class="text-info">Midas</span>MIDAS</div>
+                    <div class="col-3"><span>1 300 485 494.99353455</span><span>1 300 485 494.99353455</span>
+                    </div>
+                    <div class="col-2 text-success">-11 344</div>
+                    <div class="col-2">15%</div>
+                    <div class="col-1 text-secondary name-status">Delisted</div>
+                    <div class="col-1"></div>
+                </div>
+                <div class="collapse main-card" id="collapseCoinCard5">
+                    <div class="card card-body rounded">
+                        <div class="row card-btns">
+                            <div class="col-lg-12">
+                                <a href="#" class="btn-sm btn-primary mr-2">BACKUP WALLET</a>
+                                <a href="#" class="btn-sm btn-primary mr-2">RESTORE WALLET</a>
+                                <a href="#" class="btn-sm btn-primary mr-2">ROLLBACK BC.</a>
+                                <a href="#" class="btn-sm btn-primary mr-2">DELETE BC.</a>
+                                <a href="#" class="btn-sm btn-primary">DELETE COINSERV</a>
+                            </div>
+                        </div>
+                        <div class="row no-gutters align-items-center">
+                            <div class="col-lg-5 col-md-5">
+                                <div class="card-icons mt-3 py-2 px-2 rounded bg-light">
+                                    <a href="#"><i class="text-info fas fa-globe"></i></a>
+                                    <a href="#"><i class="ml-2 text-info fas fa-search"></i></a>
+                                    <a href="#"><i class="ml-2 text-info fas fa-book"></i></a>
+                                    <a href="#"><i class="ml-2 text-info fab fa-bitcoin"></i></a>
+                                    <a href="#"><i class="ml-2 text-info fab fa-github-square"></i></a>
+                                    <a href="#"><i class="ml-2 text-info fab fa-twitter-square"></i></a>
+                                    <a href="#"><i class="ml-2 text-info fab fa-facebook-square"></i></a>
+                                    <a href="#"><i class="ml-2 text-info fab fa-discord"></i></a>
+                                    <a href="#"><i class="ml-2 text-info fab fa-telegram"></i></a>
+                                    <a href="#"><i class="ml-2 text-info fas fa-external-link-square-alt"></i></a>
+                                    <a href="#"><i class="ml-2 text-info fas fa-external-link-square-alt"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-7 col-md-7">
+                                <div class="card-indicators ml-4 mt-3">
+                                    <span class="bg-success text-white btn-sm px-5">POS</span>
+                                    <span class="bg-warning text-white btn-sm px-5">zPOS</span>
+                                    <span class="bg-success text-white btn-sm px-5">Masternodes</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-lg-9">
+                                <div class="table-section__wallet">
+                                    <table class="table table-bordered table-responsive-lg">
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">Service wallet</th>
+                                                <td><span>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1A</span><a href="#"
+                                                        class="btn-copy"><i class="ml-4 far fa-copy"></i></a></td>
+                                                <td>5405.4225 XAP</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">POS wallet</th>
+                                                <td><span>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1A</span><a href="#"
+                                                        class="btn-copy"><i class="ml-4 far fa-copy"></i></a></td>
+                                                <td>5405.4225 XAP</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">zPOS wallet</th>
+                                                <td><span>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1A</span><a href="#"
+                                                        class="btn-copy"><i class="ml-4 far fa-copy"></i></a></td>
+                                                <td>0 XAP</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" colspan="2">Masternodes total balance</th>
+                                                <td>0 XAP</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="ml-auto col-lg-3">
+                                <div class="card-comments-section">
+                                    <h2 class="font-weight-bold">Comments</h2>
+                                    <p>text ever since the 1500s, when an unknown printer took a galley of type and
+                                        scrambled it to make a type specimen book. It has survived not only five
+                                        centuries, but also the leap into electronic typesetting, remaining scrambled it
+                                        to make a type specimen book. It has survived not only five
+                                        centuries, but also the leap into electronic typesetting, remainingscrambled it
+                                        to make a type specimen book. It has survived not only five
+                                        centuries, but also the leap into electronic typesetting, remaining</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-lg-6">
+                                <div class="card-total-balnce">
+                                    <table class="table table-responsive-lg">
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">Total wallet balance</th>
+                                                <td><span> 1 485 494.99353455 XAP</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Total database balance</th>
+                                                <td><span> 1 485 494.99353455 XAP</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Delta balance</th>
+                                                <td><span> 1 485 494.99353455 XAP</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="card-last-block">
+                                    <table class="table table-responsive-lg">
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">Last block</th>
+                                                <td><span>123456789</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Wallet version</th>
+                                                <td><span>Dash-23.4.034-aur</span></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Max mn servers</th>
+                                                <td>
+                                                    <p class="text-success">21/30</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Referral rewards</th>
+                                                <td><span>8%</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- cards -->
+
             </div>
         </div>
-        <aside class="control-aside">
-            <nav>
-                <ul>
-                    <li><a href="basic.html" class="btn btn-secondary">BASIC</a></li>
-                    <li><a href="knowledge.html" class="btn btn-secondary">KNOWLEDGEBASE</a></li>
-                    <li><a href="explorer.html" class="btn btn-secondary">EXPLORERS</a></li>
-                    <li><a href="config.html" class="btn btn-secondary">CONFIG</a></li>
-                    <li><a href="service.html" class="btn btn-secondary">SERVICE</a></li>
-                    <li><a href="balancing.html" class="btn btn-secondary">SMART BALANCING</a></li>
-                </ul>
-            </nav>
-        </aside>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

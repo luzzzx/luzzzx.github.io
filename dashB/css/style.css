@@ -139,10 +139,23 @@ h6 {
   display: block;
   overflow: hidden;
   white-space: nowrap;
+  line-height: 26px;
 }
 
 .card-name:hover {
   background: #d6d9dd;
+}
+
+.edit-card-btn {
+  position: absolute;
+  top: 18px;
+  z-index: 3;
+  right: 30px;
+}
+
+.wrapper-card {
+  position: relative;
+  margin-bottom: 20px;
 }
 
 .card-body {
@@ -185,6 +198,16 @@ h6 {
   -webkit-line-clamp: 7;
   -webkit-box-orient: vertical;
   overflow-y: hidden;
+}
+
+.card-comments-staking {
+  border: 1px solid #dee2e6;
+  padding: 10px 30px 20px 10px;
+}
+
+.card-comments-staking p {
+  font-size: 16px;
+  line-height: 20px;
 }
 
 .card-total-balnce {
@@ -231,6 +254,29 @@ h6 {
   border-top: none;
 }
 
+.card-server-body {
+  text-align: center;
+}
+
+.card-server-body span {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+}
+
+.pagination-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.pagination-row span {
+  margin-left: auto;
+}
+
 .addCoin-title-row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -268,6 +314,58 @@ h6 {
 
 .nav-pills .nav-link {
   border-radius: 0;
+}
+
+.users-header-change {
+  border: 1px solid #dee2e6;
+  padding: 10px;
+}
+
+.users-header-change h2 {
+  font-weight: 700;
+}
+
+.users-header-referals {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.users-header-referals__top,
+.users-header-referals__bottom {
+  text-align: center;
+}
+
+.users-header-referals__top span,
+.users-header-referals__bottom span {
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.users-header-referals__top p,
+.users-header-referals__bottom p {
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.users-header-comment {
+  height: 173px;
+  overflow: hidden;
+}
+
+.users-header-comment h2 {
+  font-weight: 700;
+}
+
+.users-header-comment p {
+  display: -webkit-box;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
+  overflow-y: hidden;
 }
 
 .main-aside {

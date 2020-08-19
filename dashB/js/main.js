@@ -28,6 +28,10 @@ function chBoxDel() {
 }
 $(function () {
     $('#GenesisKnwoledge ').datepicker();
+    $('#LockedtillBalances ').datepicker();
+    $('#Otherdiscountexpire ').datepicker();
+    $('#OtherMultiplierexpire ').datepicker();
+
 });
 // let delist = $("#HideDelisted");
 // if (delist.prop("checked")) {

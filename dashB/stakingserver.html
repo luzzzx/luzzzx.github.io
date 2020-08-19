@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./plugins/fontawesome-free/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <title>Dasboard</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <aside class="main-aside">
+            <nav>
+                <div class="burger"><i class="fas fa-bars"></i></div>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-coins"></i>
+                            <p>Coins</p>
+                    </li></a>
+                    <li><a href="ddservers.html"><i class="fas fa-server"></i>
+                            <p>Dedicated servers</p>
+                        </a>
+                    </li>
+                    <li><a href="#"><i class="fas fa-server Ss-i"></i>
+                            <p>Staking servers</p>
+                        </a>
+
+                    </li>
+                    <li><a href="masternode.html"><i class="fas fa-server Ms-i"></i>
+                            <p>Masternode servers</p>
+                        </a>
+                    </li>
+                    <li><a href="#"><i class="fas fa-concierge-bell"></i>
+                            <p>Service fees</p>
+                        </a>
+
+                    </li>
+                    <li><a href="#"><i class="fas fa-users"></i>
+                            <p>Users</p>
+                        </a>
+                    </li>
+                    <li><a href="#"><i class="fas fa-wallet"></i>
+                            <p>Wallet operations</p>
+                        </a>
+                    </li>
+                    <li><a href="#"><i class="fas fa-broadcast-tower"></i>
+                            <p>Airdrop</p>
+                        </a>
+                    </li>
+                    <li><a href="#"><i class="fas fa-user-shield"></i>
+                            <p>Admin log</p>
+                        </a>
+                    </li>
+                    <li><a href="#"><i class="fas fa-clipboard-list"></i>
+                            <p>Express Trade log</p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <div class="main-content">
+            <div class="container">
+                <h2 class="page-title display-4">Staking servers</h2>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="subtitle-row">
+                            <div class="form-group col-2">
+                                <label for="CoinsStaking"></label>
+                                <select id="CoinsStaking" class="form-control bg-secondary text-white">
+                                    <option selected>Coins</option>
+                                    <option>Coins</option>
+                                    <option>Coins</option>
+                                    <option>Coins</option>
+                                    <option>Coins</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-2">
+                                <label for="ProvidersStaking"></label>
+                                <select id="ProvidersStaking" class="form-control bg-secondary text-white">
+                                    <option selected>Providers</option>
+                                    <option>Providers</option>
+                                    <option>Providers</option>
+                                    <option>Providers</option>
+                                    <option>Providers</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-2">
+                                <label for="StatusesStaking"></label>
+                                <select id="StatusesStaking" class="form-control bg-secondary text-white">
+                                    <option selected>Statuses</option>
+                                    <option>Statuses</option>
+                                    <option>Statuses</option>
+                                    <option>Statuses</option>
+                                    <option>Statuses</option>
+                                </select>
+                            </div>
+                            <button class="btn btn-success col-2">APPLY</button>
+                            <!-- Search form -->
+                            <input class="form-control col-lg-3 col-md-3 ml-auto" type="text" placeholder="Search"
+                                aria-label="Search">
+                        </div>
+                        <div class="btns-subtitle px-3">
+                            <a href="#" class="btn-sm btn-primary mr-2">CREATE WALLET BACKUP</a>
+                            <a href="#" class="btn-sm btn-primary mr-2">RESTORE WALLET</a>
+                            <a href="#" class="btn-sm btn-primary mr-2">CLEAN WALLET</a>
+                            <a href="#" class="btn-sm btn-primary mr-2">DELETE BC.</a>
+                            <a href="#" class="btn-sm btn-danger">DESTROY REQUEST</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-name masternode-table mt-5 mb-2">
+                    <div class="col-1 ml-3"> <input type="checkbox" value="" id="masternodeID">
+                        <label class="form-check-label" for="masternodeID">
+                            ID
+                        </label></div>
+                    <div class="col-1">Provider</div>
+                    <div class="col-2">Name</div>
+                    <div class="col-2">Last reward</div>
+                    <div class="col-2">Last block</div>
+                    <div class="col-2">Server status</div>
+                    <div class="col-2">Staking status<i class="fas fa-question-circle ml-2" data-toggle="tooltip"
+                            data-placement="top" title="" data-original-title="Tooltip on top"></i></div>
+                </div>
+                <!-- cards -->
+                <div class="wrapper-card">
+                    <div class="card-name py-3 mt-2 rounded" href="#StakingCard1" data-toggle="collapse"
+                        aria-expanded="false" aria-controls="StakingCard1">
+                        <div class="col-1 ml-3">
+                            <input type="checkbox" value="" id="stakingID1">
+                            <label class="form-check-label" for="stakingID1">
+                                9999
+                            </label>
+                        </div>
+                        <div class="col-1"><span>Manual</span>SOS2</div>
+                        <div class="col-2 staking-name"><span>send-13843</span>
+                        </div>
+                        <div class="col-2">03/04/2019 23:32:44</div>
+                        <div class="col-2">4197354344</div>
+                        <div class="col-2"><span class="text-warning">InitializationRequested</span></div>
+                        <div class="col-2"><span class="text-success">Active</span></div>
+                    </div>
+                    <div class="collapse main-card" id="StakingCard1">
+                        <div class="card card-body rounded">
+                            <div class="row mt-4">
+                                <div class="col-lg-12">
+                                    <div class="table-section__masternode">
+                                        <table class="table table-bordered table-responsive-lg">
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">Wallet</th>
+                                                    <td><span>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1A</span><a href="#"
+                                                            class="btn-copy"><i class="ml-4 far fa-copy"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Available</th>
+                                                    <td><span>1 485 494.99353455 XAP</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Maturing</th>
+                                                    <td><span>1 485 494.99353455 XAP</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Date created</th>
+                                                    <td>10/10/2019 8:30:44 AM</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">IP address</th>
+                                                    <td>2001:41d0:700:1cbb:1c00::9a</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">External ID</th>
+                                                    <td><span>f63c4d170007d73d696ee11bdc186e6cdb4b72670abf36fddbb761aa74c6f3bc</span><a
+                                                            href="#" class="btn-copy"><i
+                                                                class="ml-4 far fa-copy"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Collateral TXID</th>
+                                                    <td><span>f63c4d170007d73d696ee11bdc186e6cdb4b72670abf36fddbb761aa74c6f3bc</span><a
+                                                            href="#" class="btn-copy"><i
+                                                                class="ml-4 far fa-copy"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Withdrawal TXID</th>
+                                                    <td><span>f63c4d170007d73d696ee11bdc186e6cdb4b72670abf36fddbb761aa74c6f3bc</span><a
+                                                            href="#" class="btn-copy"><i
+                                                                class="ml-4 far fa-copy"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Last TX</th>
+                                                    <td><span>f63c4d170007d73d696ee11bdc186e6cdb4b72670abf36fddbb761aa74c6f3bc</span><a
+                                                            href="#" class="btn-copy"><i
+                                                                class="ml-4 far fa-copy"></i></a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="col-lg-8">
+                                    <div class="card-comments-staking">
+                                        <h2 class="font-weight-bold">Staking status</h2>
+                                        <p>text ever since the 1500s, when an unknown printer took a galley of type and
+                                            scrambled it to make a type specimen book. It has survived not only five
+                                            centuries, but also the leap into electronic typesetting, remaining
+                                            essentially unchanged. It was popularised in the 1960s with the release of
+                                            Letraset sheets containing Lorem Ipsum passages, and more recently with
+                                            desktop publishing software like Aldus PageMaker including versions of Lorem
+                                            Ipsum.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper-card">
+                    <div class="card-name py-3 mt-2 rounded" href="#StakingCard2" data-toggle="collapse"
+                        aria-expanded="false" aria-controls="StakingCard2">
+                        <div class="col-1 ml-3">
+                            <input type="checkbox" value="" id="stakingID2">
+                            <label class="form-check-label" for="stakingID2">
+                                9999
+                            </label>
+                        </div>
+                        <div class="col-1"><span>Manual</span>SOS2</div>
+                        <div class="col-2 staking-name"><span>send-13843</span>
+                        </div>
+                        <div class="col-2">03/04/2019 23:32:44</div>
+                        <div class="col-2">4197354344</div>
+                        <div class="col-2"><span class="text-warning">InitializationRequested</span></div>
+                        <div class="col-2"><span class="text-success">Active</span></div>
+                    </div>
+                    <div class="collapse main-card" id="StakingCard2">
+                        <div class="card card-body rounded">
+                            <div class="row mt-4">
+                                <div class="col-lg-12">
+                                    <div class="table-section__masternode">
+                                        <table class="table table-bordered table-responsive-lg">
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">Wallet</th>
+                                                    <td><span>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1A</span><a href="#"
+                                                            class="btn-copy"><i class="ml-4 far fa-copy"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Available</th>
+                                                    <td><span>1 485 494.99353455 XAP</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Maturing</th>
+                                                    <td><span>1 485 494.99353455 XAP</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Date created</th>
+                                                    <td>10/10/2019 8:30:44 AM</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">IP address</th>
+                                                    <td>2001:41d0:700:1cbb:1c00::9a</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">External ID</th>
+                                                    <td><span>f63c4d170007d73d696ee11bdc186e6cdb4b72670abf36fddbb761aa74c6f3bc</span><a
+                                                            href="#" class="btn-copy"><i
+                                                                class="ml-4 far fa-copy"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Collateral TXID</th>
+                                                    <td><span>f63c4d170007d73d696ee11bdc186e6cdb4b72670abf36fddbb761aa74c6f3bc</span><a
+                                                            href="#" class="btn-copy"><i
+                                                                class="ml-4 far fa-copy"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Withdrawal TXID</th>
+                                                    <td><span>f63c4d170007d73d696ee11bdc186e6cdb4b72670abf36fddbb761aa74c6f3bc</span><a
+                                                            href="#" class="btn-copy"><i
+                                                                class="ml-4 far fa-copy"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Last TX</th>
+                                                    <td><span>f63c4d170007d73d696ee11bdc186e6cdb4b72670abf36fddbb761aa74c6f3bc</span><a
+                                                            href="#" class="btn-copy"><i
+                                                                class="ml-4 far fa-copy"></i></a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="col-lg-8">
+                                    <div class="card-comments-staking">
+                                        <h2 class="font-weight-bold">Staking status</h2>
+                                        <p>text ever since the 1500s, when an unknown printer took a galley of type and
+                                            scrambled it to make a type specimen book. It has survived not only five
+                                            centuries, but also the leap into electronic typesetting, remaining
+                                            essentially unchanged. It was popularised in the 1960s with the release of
+                                            Letraset sheets containing Lorem Ipsum passages, and more recently with
+                                            desktop publishing software like Aldus PageMaker including versions of Lorem
+                                            Ipsum.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper-card">
+                    <div class="card-name py-3 mt-2 rounded" href="#StakingCard3" data-toggle="collapse"
+                        aria-expanded="false" aria-controls="StakingCard3">
+                        <div class="col-1 ml-3">
+                            <input type="checkbox" value="" id="stakingID3">
+                            <label class="form-check-label" for="stakingID3">
+                                9999
+                            </label>
+                        </div>
+                        <div class="col-1"><span>Manual</span>SOS2</div>
+                        <div class="col-2 staking-name"><span>send-13843</span>
+                        </div>
+                        <div class="col-2">03/04/2019 23:32:44</div>
+                        <div class="col-2">4197354344</div>
+                        <div class="col-2"><span class="text-warning">InitializationRequested</span></div>
+                        <div class="col-2"><span class="text-success">Active</span></div>
+                    </div>
+                    <div class="collapse main-card" id="StakingCard3">
+                        <div class="card card-body rounded">
+                            <div class="row mt-4">
+                                <div class="col-lg-12">
+                                    <div class="table-section__masternode">
+                                        <table class="table table-bordered table-responsive-lg">
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">Wallet</th>
+                                                    <td><span>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1A</span><a href="#"
+                                                            class="btn-copy"><i class="ml-4 far fa-copy"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Available</th>
+                                                    <td><span>1 485 494.99353455 XAP</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Maturing</th>
+                                                    <td><span>1 485 494.99353455 XAP</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Date created</th>
+                                                    <td>10/10/2019 8:30:44 AM</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">IP address</th>
+                                                    <td>2001:41d0:700:1cbb:1c00::9a</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">External ID</th>
+                                                    <td><span>f63c4d170007d73d696ee11bdc186e6cdb4b72670abf36fddbb761aa74c6f3bc</span><a
+                                                            href="#" class="btn-copy"><i
+                                                                class="ml-4 far fa-copy"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Collateral TXID</th>
+                                                    <td><span>f63c4d170007d73d696ee11bdc186e6cdb4b72670abf36fddbb761aa74c6f3bc</span><a
+                                                            href="#" class="btn-copy"><i
+                                                                class="ml-4 far fa-copy"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Withdrawal TXID</th>
+                                                    <td><span>f63c4d170007d73d696ee11bdc186e6cdb4b72670abf36fddbb761aa74c6f3bc</span><a
+                                                            href="#" class="btn-copy"><i
+                                                                class="ml-4 far fa-copy"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Last TX</th>
+                                                    <td><span>f63c4d170007d73d696ee11bdc186e6cdb4b72670abf36fddbb761aa74c6f3bc</span><a
+                                                            href="#" class="btn-copy"><i
+                                                                class="ml-4 far fa-copy"></i></a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="col-lg-8">
+                                    <div class="card-comments-staking">
+                                        <h2 class="font-weight-bold">Staking status</h2>
+                                        <p>text ever since the 1500s, when an unknown printer took a galley of type and
+                                            scrambled it to make a type specimen book. It has survived not only five
+                                            centuries, but also the leap into electronic typesetting, remaining
+                                            essentially unchanged. It was popularised in the 1960s with the release of
+                                            Letraset sheets containing Lorem Ipsum passages, and more recently with
+                                            desktop publishing software like Aldus PageMaker including versions of Lorem
+                                            Ipsum.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- cards -->
+                <!-- pgination -->
+                <div class="pagination-row">
+                    <span>Rows per page</span>
+                    <div class="form-group pagination-pages mx-4">
+                        <select id="pagination" class="form-control bg-secondary text-white">
+                            <option selected>50</option>
+                            <option>40</option>
+                            <option>30</option>
+                            <option>20</option>
+                            <option>10</option>
+                        </select>
+                    </div>
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

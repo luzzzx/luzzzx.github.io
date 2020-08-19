@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./plugins/fontawesome-free/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <title>Dasboard</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <aside class="main-aside">
+            <nav>
+                <div class="burger"><i class="fas fa-bars"></i></div>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-coins"></i>
+                            <p>Coins</p>
+                    </li></a>
+                    <li><a href="ddservers.html"><i class="fas fa-server"></i>
+                            <p>Dedicated servers</p>
+                        </a>
+                    </li>
+                    <li><a href="#"><i class="fas fa-server Ss-i"></i>
+                            <p>Staking servers</p>
+                        </a>
+
+                    </li>
+                    <li><a href="masternode.html"><i class="fas fa-server Ms-i"></i>
+                            <p>Masternode servers</p>
+                        </a>
+                    </li>
+                    <li><a href="#"><i class="fas fa-concierge-bell"></i>
+                            <p>Service fees</p>
+                        </a>
+
+                    </li>
+                    <li><a href="#"><i class="fas fa-users"></i>
+                            <p>Users</p>
+                        </a>
+                    </li>
+                    <li><a href="#"><i class="fas fa-wallet"></i>
+                            <p>Wallet operations</p>
+                        </a>
+                    </li>
+                    <li><a href="#"><i class="fas fa-broadcast-tower"></i>
+                            <p>Airdrop</p>
+                        </a>
+                    </li>
+                    <li><a href="#"><i class="fas fa-user-shield"></i>
+                            <p>Admin log</p>
+                        </a>
+                    </li>
+                    <li><a href="#"><i class="fas fa-clipboard-list"></i>
+                            <p>Express Trade log</p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <div class="main-content">
+            <div class="container">
+                <h2 class="page-title display-4">Dedicated servers</h2>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="subtitle-row">
+                            <a href="config.html" class="edit-btn btn btn-secondary"><i
+                                    class="far fa-plus-square mr-2 shadow-sm"></i>ADD NEW SERVER</a>
+                            <!-- Search form -->
+                            <input class="form-control col-lg-3 col-md-3 ml-auto" type="text" placeholder="Search"
+                                aria-label="Search">
+                        </div>
+                    </div>
+                </div>
+                <div class="table-name mt-5 mb-2">
+                    <div class="col-6 ml-3">Server host</div>
+                    <div class="col-2">Capacity<i class="fas fa-question-circle ml-2" data-toggle="tooltip"
+                            data-placement="top" title="" data-original-title="Tooltip on top"></i></div>
+                    <div class="col-1">Priority</div>
+                    <div class="col-1">Load<i class="fas fa-question-circle ml-2" data-toggle="tooltip"
+                            data-placement="top" title="" data-original-title="Tooltip on top"></i></div>
+                </div>
+                <!-- cards -->
+                <div class="wrapper-card">
+                    <div class="card-name py-3 mt-2 rounded" href="#collapseDdserverCard1" data-toggle="collapse"
+                        aria-expanded="false" aria-controls="collapseDdserverCard1">
+                        <div class="col-6 ml-3"><span class="text-info">SOS5</span>ns3767531.ip-213-32-7.eu</div>
+                        <div class="col-2"><span class="text-warning">(112) 7</span></div>
+                        <div class="col-1">11</div>
+                        <div class="col-1"><span>11.11%</span><span>43.91%</span><span>99.70%</span></div>
+                    </div>
+                    <a href="#" class="btn-primary btn-sm edit-card-btn">edit</a>
+                    <div class="collapse main-card" id="collapseDdserverCard1">
+                        <div class="card card-body rounded">
+                            <div class="row align-items-center">
+                                <div class="col-3">
+                                    <div class="card-server-body">
+                                        <span>11.11%</span>
+                                        <p>CPU load</p>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="card-server-body">
+                                        <span>42.85/82.01GB</span>
+                                        <p>MEM load</p>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="card-server-body">
+                                        <span>304/378GB</span>
+                                        <p>SSD load</p>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="card-server-body">
+                                        <span>2304/8378GB</span>
+                                        <p>HDD load</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper-card">
+                    <div class="card-name py-3 mt-2 rounded" href="#collapseDdserverCard2" data-toggle="collapse"
+                        aria-expanded="false" aria-controls="collapseDdserverCard2">
+                        <div class="col-6 ml-3"><span class="text-info">SOS5</span>ns3767531.ip-213-32-7.eu</div>
+                        <div class="col-2"><span class="text-warning">(112) 7</span></div>
+                        <div class="col-1">11</div>
+                        <div class="col-1"><span>11.11%</span><span>43.91%</span><span>99.70%</span></div>
+                    </div>
+                    <a href="#" class="btn-primary btn-sm edit-card-btn">edit</a>
+                    <div class="collapse main-card" id="collapseDdserverCard2">
+                        <div class="card card-body rounded">
+                            <div class="row align-items-center">
+                                <div class="col-3">
+                                    <div class="card-server-body">
+                                        <span>11.11%</span>
+                                        <p>CPU load</p>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="card-server-body">
+                                        <span>42.85/82.01GB</span>
+                                        <p>MEM load</p>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="card-server-body">
+                                        <span>304/378GB</span>
+                                        <p>SSD load</p>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="card-server-body">
+                                        <span>2304/8378GB</span>
+                                        <p>HDD load</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper-card">
+                    <div class="card-name py-3 mt-2 rounded" href="#collapseDdserverCard3" data-toggle="collapse"
+                        aria-expanded="false" aria-controls="collapseDdserverCard3">
+                        <div class="col-6 ml-3"><span class="text-info">SOS5</span>ns3767531.ip-213-32-7.eu</div>
+                        <div class="col-2"><span class="text-warning">(112) 7</span></div>
+                        <div class="col-1">11</div>
+                        <div class="col-1"><span>11.11%</span><span>43.91%</span><span>99.70%</span></div>
+                    </div>
+                    <a href="#" class="btn-primary btn-sm edit-card-btn">edit</a>
+                    <div class="collapse main-card" id="collapseDdserverCard3">
+                        <div class="card card-body rounded">
+                            <div class="row align-items-center">
+                                <div class="col-3">
+                                    <div class="card-server-body">
+                                        <span>11.11%</span>
+                                        <p>CPU load</p>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="card-server-body">
+                                        <span>42.85/82.01GB</span>
+                                        <p>MEM load</p>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="card-server-body">
+                                        <span>304/378GB</span>
+                                        <p>SSD load</p>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="card-server-body">
+                                        <span>2304/8378GB</span>
+                                        <p>HDD load</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

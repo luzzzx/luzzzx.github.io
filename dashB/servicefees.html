@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./plugins/fontawesome-free/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.standalone.min.css">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <title>Dasboard</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <aside class="main-aside">
+            <nav>
+                <div class="burger"><i class="fas fa-bars"></i></div>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-coins"></i>
+                            <p>Coins</p>
+                    </li></a>
+                    <li><a href="ddservers.html"><i class="fas fa-server"></i>
+                            <p>Dedicated servers</p>
+                        </a>
+                    </li>
+                    <li><a href="stakingserver.html"><i class="fas fa-server Ss-i"></i>
+                            <p>Staking servers</p>
+                        </a>
+
+                    </li>
+                    <li><a href="masternode.html"><i class="fas fa-server Ms-i"></i>
+                            <p>Masternode servers</p>
+                        </a>
+                    </li>
+                    <li><a href="servicefees.html"><i class="fas fa-concierge-bell"></i>
+                            <p>Service fees</p>
+                        </a>
+
+                    </li>
+                    <li><a href="users.html"><i class="fas fa-users"></i>
+                            <p>Users</p>
+                        </a>
+                    </li>
+                    <li><a href="walletoperations.html"><i class="fas fa-wallet"></i>
+                            <p>Wallet operations</p>
+                        </a>
+                    </li>
+                    <li><a href="airdrop.html"><i class="fas fa-broadcast-tower"></i>
+                            <p>Airdrop</p>
+                        </a>
+                    </li>
+                    <li><a href="admin.html"><i class="fas fa-user-shield"></i>
+                            <p>Admin log</p>
+                        </a>
+                    </li>
+                    <li><a href="expresstrade.html"><i class="fas fa-clipboard-list"></i>
+                            <p>Express Trade log</p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <div class="main-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 mb-5">
+                        <div class="addCoin-title-row">
+                            <h2 class="page-title display-4">Service fees</h2>
+                            <button class="btn btn-success px-3"><i class="fas fa-save mr-2"></i>SAVE</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-name mt-5 mb-2">
+                    <div class="col-1 ml-3">id</div>
+                    <div class="col-2">Coin</div>
+                    <div class="col-3">Service fee</div>
+                    <div class="col-3">Deposit fee<i class="fas fa-question-circle ml-2" data-toggle="tooltip"
+                            data-placement="top" title="" data-original-title="Tooltip on top"></i></div>
+                    <div class="col-3">Withdraw fee<i class="fas fa-question-circle ml-2" data-toggle="tooltip"
+                            data-placement="top" title="" data-original-title="Tooltip on top"></i></div>
+                </div>
+                <!-- cards -->
+                <div class="wrapper-card">
+                    <div class="card-name py-3 mt-2 rounded" href="#Servicefee1" data-toggle="collapse"
+                        aria-expanded="false" aria-controls="Servicefee1">
+                        <div class="col-1 ml-3">33</div>
+                        <div class="col-2"><span class="text-info">Apollon Network</span>XAP</div>
+                        <div class="col-3 indicator-serv"><span></span>
+                        </div>
+                        <div class="col-3 indicator-dep"><span></span></div>
+                        <div class="col-3 indicator-win"><span></span></div>
+                    </div>
+                    <div class="collapse main-card" id="Servicefee1">
+                        <div class="card card-body rounded">
+                            <div class="row">
+                                <div class="form-group col-4 testnet">
+                                    <label class="isTestnet" for="ServiceDeposit"><span>Deposit fee is portion
+                                        </span></label>
+                                    <div class="custom-control custom-switch custom-switch-ServiceDeposit">
+                                        <input type="checkbox" class="custom-control-input" id="ServiceDeposit">
+                                        <label class="custom-control-label" for="ServiceDeposit">
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group col-4 testnet">
+                                    <label class="isTestnet" for="ServiceWithdrawal"><span>Withdrawal fee is portion
+                                        </span></label>
+                                    <div class="custom-control custom-switch custom-switch-featured">
+                                        <input type="checkbox" class="custom-control-input" id="ServiceWithdrawal">
+                                        <label class="custom-control-label" for="ServiceWithdrawal">
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-6">
+                                    <label for="ServiceReward">Fee+Reward collection address</label>
+                                    <input type="text" class="form-control" id="ServiceReward"
+                                        placeholder="Example input">
+                                </div>
+                                <div class="form-group col-6">
+                                    <label for="statusBasic">Fee collection Exchange</label>
+                                    <select id="statusBasic" class="form-control bg-secondary text-white">
+                                        <option selected="">Graviex</option>
+                                        <option>Graviex</option>
+                                        <option>Graviex</option>
+                                        <option>Graviex</option>
+                                        <option>Graviex</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-4">
+                                    <label for="Serviceamount">Fee collection min amount</label>
+                                    <input type="text" class="form-control" id="Serviceamount"
+                                        placeholder="Example input">
+                                </div>
+                                <div class="form-group col-4">
+                                    <label for="Servicecollection">Reward collection min amount</label>
+                                    <input type="text" class="form-control" id="Servicecollection"
+                                        placeholder="Example input">
+                                </div>
+                                <div class="form-group col-4">
+                                    <label for="ServiceDelisting">Delisting wallet</label>
+                                    <input type="text" class="form-control" id="ServiceDelisting"
+                                        placeholder="Example input">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-6">
+                                    <label for="ServiceComment">Comment:</label>
+                                    <textarea class="form-control" id="ServiceComment" rows="4"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper-card">
+                    <div class="card-name py-3 mt-2 rounded" href="#Servicefee2" data-toggle="collapse"
+                        aria-expanded="false" aria-controls="Servicefee2">
+                        <div class="col-1 ml-3">33</div>
+                        <div class="col-2"><span class="text-info">Apollon Network</span>XAP</div>
+                        <div class="col-3 indicator-serv"><span></span></div>
+                        <div class="col-3 indicator-dep"><span></span></div>
+                        <div class="col-3 indicator-win"><span></span></div>
+                    </div>
+                    <div class="collapse main-card" id="Servicefee2">
+                        <div class="card card-body rounded">
+                            <div class="row">
+                                <div class="form-group col-4 testnet">
+                                    <label class="isTestnet" for="ServiceDeposit2"><span>Deposit fee is portion
+                                        </span></label>
+                                    <div class="custom-control custom-switch custom-switch-ServiceDeposit">
+                                        <input type="checkbox" class="custom-control-input" id="ServiceDeposit2">
+                                        <label class="custom-control-label" for="ServiceDeposit2">
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group col-4 testnet">
+                                    <label class="isTestnet" for="ServiceWithdrawal2"><span>Withdrawal fee is portion
+                                        </span></label>
+                                    <div class="custom-control custom-switch custom-switch-featured">
+                                        <input type="checkbox" class="custom-control-input" id="ServiceWithdrawal2">
+                                        <label class="custom-control-label" for="ServiceWithdrawal2">
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-6">
+                                    <label for="ServiceReward">Fee+Reward collection address</label>
+                                    <input type="text" class="form-control" id="ServiceReward"
+                                        placeholder="Example input">
+                                </div>
+                                <div class="form-group col-6">
+                                    <label for="statusBasic">Fee collection Exchange</label>
+                                    <select id="statusBasic" class="form-control bg-secondary text-white">
+                                        <option selected="">Graviex</option>
+                                        <option>Graviex</option>
+                                        <option>Graviex</option>
+                                        <option>Graviex</option>
+                                        <option>Graviex</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-4">
+                                    <label for="Serviceamount">Fee collection min amount</label>
+                                    <input type="text" class="form-control" id="Serviceamount"
+                                        placeholder="Example input">
+                                </div>
+                                <div class="form-group col-4">
+                                    <label for="Servicecollection">Reward collection min amount</label>
+                                    <input type="text" class="form-control" id="Servicecollection"
+                                        placeholder="Example input">
+                                </div>
+                                <div class="form-group col-4">
+                                    <label for="ServiceDelisting">Delisting wallet</label>
+                                    <input type="text" class="form-control" id="ServiceDelisting"
+                                        placeholder="Example input">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-6">
+                                    <label for="ServiceComment">Comment:</label>
+                                    <textarea class="form-control" id="ServiceComment" rows="4"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper-card">
+                    <div class="card-name py-3 mt-2 rounded" href="#Servicefee3" data-toggle="collapse"
+                        aria-expanded="false" aria-controls="Servicefee3">
+                        <div class="col-1 ml-3">33</div>
+                        <div class="col-2"><span class="text-info">Apollon Network</span>XAP</div>
+                        <div class="col-3 indicator-serv"><span></span>
+                        </div>
+                        <div class="col-3 indicator-dep"><span></span></div>
+                        <div class="col-3 indicator-win"><span></span></div>
+                    </div>
+                    <div class="collapse main-card" id="Servicefee3">
+                        <div class="card card-body rounded">
+                            <div class="row">
+                                <div class="form-group col-4 testnet">
+                                    <label class="isTestnet" for="ServiceDeposit3"><span>Deposit fee is portion
+                                        </span></label>
+                                    <div class="custom-control custom-switch custom-switch-ServiceDeposit">
+                                        <input type="checkbox" class="custom-control-input" id="ServiceDeposit3">
+                                        <label class="custom-control-label" for="ServiceDeposit3">
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group col-4 testnet">
+                                    <label class="isTestnet" for="ServiceWithdrawal3"><span>Withdrawal fee is portion
+                                        </span></label>
+                                    <div class="custom-control custom-switch custom-switch-featured">
+                                        <input type="checkbox" class="custom-control-input" id="ServiceWithdrawal3">
+                                        <label class="custom-control-label" for="ServiceWithdrawal3">
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-6">
+                                    <label for="ServiceReward">Fee+Reward collection address</label>
+                                    <input type="text" class="form-control" id="ServiceReward"
+                                        placeholder="Example input">
+                                </div>
+                                <div class="form-group col-6">
+                                    <label for="statusBasic">Fee collection Exchange</label>
+                                    <select id="statusBasic" class="form-control bg-secondary text-white">
+                                        <option selected="">Graviex</option>
+                                        <option>Graviex</option>
+                                        <option>Graviex</option>
+                                        <option>Graviex</option>
+                                        <option>Graviex</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-4">
+                                    <label for="Serviceamount">Fee collection min amount</label>
+                                    <input type="text" class="form-control" id="Serviceamount"
+                                        placeholder="Example input">
+                                </div>
+                                <div class="form-group col-4">
+                                    <label for="Servicecollection">Reward collection min amount</label>
+                                    <input type="text" class="form-control" id="Servicecollection"
+                                        placeholder="Example input">
+                                </div>
+                                <div class="form-group col-4">
+                                    <label for="ServiceDelisting">Delisting wallet</label>
+                                    <input type="text" class="form-control" id="ServiceDelisting"
+                                        placeholder="Example input">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-6">
+                                    <label for="ServiceComment">Comment:</label>
+                                    <textarea class="form-control" id="ServiceComment" rows="4"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

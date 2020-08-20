@@ -34,7 +34,7 @@
                             <p>Masternode servers</p>
                         </a>
                     </li>
-                    <li><a href="#"><i class="fas fa-concierge-bell"></i>
+                    <li><a href="servicefees.html"><i class="fas fa-concierge-bell"></i>
                             <p>Service fees</p>
                         </a>
 
@@ -43,19 +43,19 @@
                             <p>Users</p>
                         </a>
                     </li>
-                    <li><a href="#"><i class="fas fa-wallet"></i>
+                    <li><a href="walletoperations.html"><i class="fas fa-wallet"></i>
                             <p>Wallet operations</p>
                         </a>
                     </li>
-                    <li><a href="#"><i class="fas fa-broadcast-tower"></i>
+                    <li><a href="airdrop.html"><i class="fas fa-broadcast-tower"></i>
                             <p>Airdrop</p>
                         </a>
                     </li>
-                    <li><a href="#"><i class="fas fa-user-shield"></i>
+                    <li><a href="admin.html"><i class="fas fa-user-shield"></i>
                             <p>Admin log</p>
                         </a>
                     </li>
-                    <li><a href="#"><i class="fas fa-clipboard-list"></i>
+                    <li><a href="expresstrade.html"><i class="fas fa-clipboard-list"></i>
                             <p>Express Trade log</p>
                         </a>
                     </li>
@@ -112,8 +112,10 @@
                                     <a href="#" class="btn-sm btn-primary mr-2">BACKUP WALLET</a>
                                     <a href="#" class="btn-sm btn-primary mr-2">RESTORE WALLET</a>
                                     <a href="#" class="btn-sm btn-primary mr-2">ROLLBACK BC.</a>
-                                    <a href="#" class="btn-sm btn-primary mr-2">DELETE BC.</a>
-                                    <a href="#" class="btn-sm btn-primary">DELETE COINSERV</a>
+                                    <a href="#" class="btn-sm btn-primary mr-2" data-toggle="modal"
+                                        data-target="#ModalDELETE">DELETE BC.</a>
+                                    <a href=" #" class="btn-sm btn-primary" data-toggle="modal"
+                                        data-target="#ModalDELETE">DELETE COINSERV</a>
                                 </div>
                             </div>
                             <div class="row no-gutters align-items-center">
@@ -255,8 +257,10 @@
                                 <a href="#" class="btn-sm btn-primary mr-2">BACKUP WALLET</a>
                                 <a href="#" class="btn-sm btn-primary mr-2">RESTORE WALLET</a>
                                 <a href="#" class="btn-sm btn-primary mr-2">ROLLBACK BC.</a>
-                                <a href="#" class="btn-sm btn-primary mr-2">DELETE BC.</a>
-                                <a href="#" class="btn-sm btn-primary">DELETE COINSERV</a>
+                                <a href="#" class="btn-sm btn-primary mr-2" data-toggle="modal"
+                                    data-target="#ModalDELETE">DELETE BC.</a>
+                                <a href="#" class="btn-sm btn-primary" data-toggle="modal"
+                                    data-target="#ModalDELETE">DELETE COINSERV</a>
                             </div>
                         </div>
                         <div class="row no-gutters align-items-center">
@@ -395,8 +399,10 @@
                                 <a href="#" class="btn-sm btn-primary mr-2">BACKUP WALLET</a>
                                 <a href="#" class="btn-sm btn-primary mr-2">RESTORE WALLET</a>
                                 <a href="#" class="btn-sm btn-primary mr-2">ROLLBACK BC.</a>
-                                <a href="#" class="btn-sm btn-primary mr-2">DELETE BC.</a>
-                                <a href="#" class="btn-sm btn-primary">DELETE COINSERV</a>
+                                <a href="#" class="btn-sm btn-primary mr-2" data-toggle="modal"
+                                    data-target="#ModalDELETE">DELETE BC.</a>
+                                <a href="#" class="btn-sm btn-primary" data-toggle="modal"
+                                    data-target="#ModalDELETE">DELETE COINSERV</a>
                             </div>
                         </div>
                         <div class="row no-gutters align-items-center">
@@ -535,8 +541,10 @@
                                 <a href="#" class="btn-sm btn-primary mr-2">BACKUP WALLET</a>
                                 <a href="#" class="btn-sm btn-primary mr-2">RESTORE WALLET</a>
                                 <a href="#" class="btn-sm btn-primary mr-2">ROLLBACK BC.</a>
-                                <a href="#" class="btn-sm btn-primary mr-2">DELETE BC.</a>
-                                <a href="#" class="btn-sm btn-primary">DELETE COINSERV</a>
+                                <a href="#" class="btn-sm btn-primary mr-2" data-toggle="modal"
+                                    data-target="#ModalDELETE">DELETE BC.</a>
+                                <a href="#" class="btn-sm btn-primary" data-toggle="modal"
+                                    data-target="#ModalDELETE">DELETE COINSERV</a>
                             </div>
                         </div>
                         <div class="row no-gutters align-items-center">
@@ -675,8 +683,10 @@
                                 <a href="#" class="btn-sm btn-primary mr-2">BACKUP WALLET</a>
                                 <a href="#" class="btn-sm btn-primary mr-2">RESTORE WALLET</a>
                                 <a href="#" class="btn-sm btn-primary mr-2">ROLLBACK BC.</a>
-                                <a href="#" class="btn-sm btn-primary mr-2">DELETE BC.</a>
-                                <a href="#" class="btn-sm btn-primary">DELETE COINSERV</a>
+                                <a href="#" class="btn-sm btn-primary mr-2" data-toggle="modal"
+                                    data-target="#ModalDELETE">DELETE BC.</a>
+                                <a href="#" class="btn-sm btn-primary" data-toggle="modal"
+                                    data-target="#ModalDELETE">DELETE COINSERV</a>
                             </div>
                         </div>
                         <div class="row no-gutters align-items-center">
@@ -799,6 +809,24 @@
                 </div>
                 <!-- cards -->
 
+            </div>
+        </div>
+    </div>
+    <!-- modal -->
+    <div class="modal fade" id="ModalDELETE" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <h5 class="modal-title" id="exampleModalLabel">Do you really want to DELETE COINSERV?</h5>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-primary px-4">Yes</button>
+                    <button type="button" class="btn btn-danger px-4" data-dismiss="modal">No</button>
+                </div>
             </div>
         </div>
     </div>

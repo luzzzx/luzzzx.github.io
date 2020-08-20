@@ -25,7 +25,7 @@
                             <p>Dedicated servers</p>
                         </a>
                     </li>
-                    <li><a href="#"><i class="fas fa-server Ss-i"></i>
+                    <li><a href="stakingserver.html"><i class="fas fa-server Ss-i"></i>
                             <p>Staking servers</p>
                         </a>
 
@@ -34,28 +34,28 @@
                             <p>Masternode servers</p>
                         </a>
                     </li>
-                    <li><a href="#"><i class="fas fa-concierge-bell"></i>
+                    <li><a href="servicefees.html"><i class="fas fa-concierge-bell"></i>
                             <p>Service fees</p>
                         </a>
 
                     </li>
-                    <li><a href="#"><i class="fas fa-users"></i>
+                    <li><a href="users.html"><i class="fas fa-users"></i>
                             <p>Users</p>
                         </a>
                     </li>
-                    <li><a href="#"><i class="fas fa-wallet"></i>
+                    <li><a href="walletoperations.html"><i class="fas fa-wallet"></i>
                             <p>Wallet operations</p>
                         </a>
                     </li>
-                    <li><a href="#"><i class="fas fa-broadcast-tower"></i>
+                    <li><a href="airdrop.html"><i class="fas fa-broadcast-tower"></i>
                             <p>Airdrop</p>
                         </a>
                     </li>
-                    <li><a href="#"><i class="fas fa-user-shield"></i>
+                    <li><a href="admin.html"><i class="fas fa-user-shield"></i>
                             <p>Admin log</p>
                         </a>
                     </li>
-                    <li><a href="#"><i class="fas fa-clipboard-list"></i>
+                    <li><a href="expresstrade.html"><i class="fas fa-clipboard-list"></i>
                             <p>Express Trade log</p>
                         </a>
                     </li>
@@ -106,9 +106,12 @@
                         <div class="btns-subtitle px-3">
                             <a href="#" class="btn-sm btn-primary mr-2">CREATE WALLET BACKUP</a>
                             <a href="#" class="btn-sm btn-primary mr-2">RESTORE WALLET</a>
-                            <a href="#" class="btn-sm btn-primary mr-2">CLEAN WALLET</a>
-                            <a href="#" class="btn-sm btn-primary mr-2">DELETE BC.</a>
-                            <a href="#" class="btn-sm btn-danger">DESTROY REQUEST</a>
+                            <a href="#" class="btn-sm btn-primary mr-2" data-toggle="modal"
+                                data-target="#ModalDELETE">CLEAN WALLET</a>
+                            <a href="#" class="btn-sm btn-primary mr-2" data-toggle="modal"
+                                data-target="#ModalDELETE">DELETE BC.</a>
+                            <a href="#" class="btn-sm btn-danger" data-toggle="modal" data-target="#ModalDELETE">DESTROY
+                                REQUEST</a>
                         </div>
                     </div>
                 </div>
@@ -425,6 +428,24 @@
                             </li>
                         </ul>
                     </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal -->
+    <div class="modal fade" id="ModalDELETE" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <h5 class="modal-title" id="exampleModalLabel">Do you really want to DELETE COINSERV?</h5>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-primary px-4">Yes</button>
+                    <button type="button" class="btn btn-danger px-4" data-dismiss="modal">No</button>
                 </div>
             </div>
         </div>

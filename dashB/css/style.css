@@ -994,3 +994,46 @@ h6 {
 .pagination-next {
   margin-left: 5px;
 }
+
+.indicator-serv span,
+.indicator-win span,
+.indicator-dep span {
+  position: relative;
+  width: 90px;
+  height: 40px;
+  background-color: #FFFFFF;
+  border: 1px solid #DEE2E6;
+  border-radius: 7px;
+  overflow: inherit;
+}
+
+.indicator-serv.active span::before,
+.indicator-win.active span::before,
+.indicator-dep.active span::before {
+  content: '';
+  background: #007BFF;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  z-index: 10;
+}
+
+.modal-header,
+.modal-footer {
+  border: none;
+}
+
+.modal-title {
+  text-align: center;
+  font-size: 28px;
+}
+
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 580px;
+    margin: 1.75rem auto;
+  }
+}

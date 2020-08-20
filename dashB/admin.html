@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./plugins/fontawesome-free/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <title>Dasboard</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <aside class="main-aside">
+            <nav>
+                <div class="burger"><i class="fas fa-bars"></i></div>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-coins"></i>
+                            <p>Coins</p>
+                    </li></a>
+                    <li><a href="ddservers.html"><i class="fas fa-server"></i>
+                            <p>Dedicated servers</p>
+                        </a>
+                    </li>
+                    <li><a href="stakingserver.html"><i class="fas fa-server Ss-i"></i>
+                            <p>Staking servers</p>
+                        </a>
+
+                    </li>
+                    <li><a href="masternode.html"><i class="fas fa-server Ms-i"></i>
+                            <p>Masternode servers</p>
+                        </a>
+                    </li>
+                    <li><a href="servicefees.html"><i class="fas fa-concierge-bell"></i>
+                            <p>Service fees</p>
+                        </a>
+
+                    </li>
+                    <li><a href="users.html"><i class="fas fa-users"></i>
+                            <p>Users</p>
+                        </a>
+                    </li>
+                    <li><a href="walletoperations.html"><i class="fas fa-wallet"></i>
+                            <p>Wallet operations</p>
+                        </a>
+                    </li>
+                    <li><a href="airdrop.html"><i class="fas fa-broadcast-tower"></i>
+                            <p>Airdrop</p>
+                        </a>
+                    </li>
+                    <li><a href="admin.html"><i class="fas fa-user-shield"></i>
+                            <p>Admin log</p>
+                        </a>
+                    </li>
+                    <li><a href="expresstrade.html"><i class="fas fa-clipboard-list"></i>
+                            <p>Express Trade log</p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <div class="main-content">
+            <div class="container">
+                <h2 class="page-title display-4">Admin log</h2>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="subtitle-row">
+                            <div class="form-group col-2">
+                                <label for="SortUsers"></label>
+                                <select id="SortUsers" class="form-control bg-secondary text-white">
+                                    <option selected>Coins</option>
+                                    <option>Coins</option>
+                                    <option>Coins</option>
+                                    <option>Coins</option>
+                                    <option>Coins</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-2">
+                                <label for="SortUsers"></label>
+                                <select id="SortUsers" class="form-control bg-secondary text-white">
+                                    <option selected>Status</option>
+                                    <option>Status</option>
+                                    <option>Status</option>
+                                    <option>Status</option>
+                                    <option>Status</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-2">
+                                <label for="OrderUsers"></label>
+                                <select id="OrderUsers" class="form-control bg-secondary text-white">
+                                    <option selected>Date</option>
+                                    <option>Date</option>
+                                    <option>Date</option>
+                                    <option>Date</option>
+                                    <option>Date</option>
+                                </select>
+                            </div>
+                            <!-- Search form -->
+                            <button class="btn btn-success ml-2 px-4">APPLY</button>
+                            <input class="form-control col-lg-4 col-md-4 ml-auto" type="text" placeholder="Search"
+                                aria-label="Search">
+                        </div>
+                    </div>
+                </div>
+                <!-- table -->
+                <div class="row">
+                    <div class="col-12">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Time</th>
+                                    <th scope="col">User</th>
+                                    <th scope="col">IP address</th>
+                                    <th scope="col">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>25/04/2019 17:04:45</td>
+                                    <td>admin1@gmail.com</td>
+                                    <td>51.77.227.3</td>
+                                    <td>@Added 400 SCRIV to user228@gmail.com - lock till 25/04/2019</td>
+                                </tr>
+                                <tr>
+                                    <td>25/04/2019 17:04:45</td>
+                                    <td>user1@gmail.com</td>
+                                    <td>51.77.227.3</td>
+                                    <td>Ticket #47091 closed</td>
+                                </tr>
+                                <tr>
+                                    <td>25/04/2019 17:04:45</td>
+                                    <td>user1@gmail.com</td>
+                                    <td>51.77.227.3</td>
+                                    <td>Ticket #47091 closed</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </table>
+
+                    </div>
+                </div>
+                <!-- table -->
+                <!-- pgination -->
+                <div class="pagination-row">
+                    <span>Rows per page</span>
+                    <div class="form-group pagination-pages mx-4">
+                        <select id="pagination" class="form-control bg-secondary text-white">
+                            <option selected>50</option>
+                            <option>40</option>
+                            <option>30</option>
+                            <option>20</option>
+                            <option>10</option>
+                        </select>
+                    </div>
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

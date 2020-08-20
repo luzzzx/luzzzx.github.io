@@ -26,17 +26,21 @@ function chBoxDel() {
         $('.card-name:contains("Delisted")').next().attr('style', '')
     }
 }
+
+$('.custom-switch-ServiceDeposit input:checkbox').change(function () {
+    if ($(this).is(":checked")) {
+        $(this).closest('.main-card').prev().find('.indicator-dep').addClass('active')
+    } else {
+        $(this).closest('.main-card').prev().find('.indicator-dep').removeClass('active')
+    }
+});
+
+
 $(function () {
     $('#GenesisKnwoledge ').datepicker();
     $('#LockedtillBalances ').datepicker();
     $('#Otherdiscountexpire ').datepicker();
     $('#OtherMultiplierexpire ').datepicker();
+    $('#AirdroLocked ').datepicker();
 
 });
-// let delist = $("#HideDelisted");
-// if (delist.prop("checked")) {
-//     console.log('hi');
-// }
-// $(".card-name").text().indexOf('Delisted').hide();
-
-// $(".card-name").find($('.name-status')).text()

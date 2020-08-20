@@ -8,10 +8,6 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.standalone.min.css">
     <link rel="stylesheet" href="./css/style.min.css">
     <title>Dasboard</title>
 </head>
@@ -68,36 +64,67 @@
         </aside>
         <div class="main-content">
             <div class="container">
+                <h2 class="page-title display-4">Express Trade log</h2>
                 <div class="row">
-                    <div class="col-lg-12 mb-5">
-                        <div class="addCoin-title-row">
-                            <div class="addcoin-title">
-                                <p>01dragonslayer@gmail.com</p>
-                                <h2>SCRIV BALANCE HISTORY</h2>
+                    <div class="col-12">
+                        <div class="subtitle-row">
+                            <div class="form-group col-2">
+                                <label for="SortUsers"></label>
+                                <select id="SortUsers" class="form-control bg-secondary text-white">
+                                    <option selected>Coins</option>
+                                    <option>Coins</option>
+                                    <option>Coins</option>
+                                    <option>Coins</option>
+                                    <option>Coins</option>
+                                </select>
                             </div>
+                            <div class="form-group col-2">
+                                <label for="SortUsers"></label>
+                                <select id="SortUsers" class="form-control bg-secondary text-white">
+                                    <option selected>Status</option>
+                                    <option>Status</option>
+                                    <option>Status</option>
+                                    <option>Status</option>
+                                    <option>Status</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-2">
+                                <label for="OrderUsers"></label>
+                                <select id="OrderUsers" class="form-control bg-secondary text-white">
+                                    <option selected>Date</option>
+                                    <option>Date</option>
+                                    <option>Date</option>
+                                    <option>Date</option>
+                                    <option>Date</option>
+                                </select>
+                            </div>
+                            <!-- Search form -->
+                            <button class="btn btn-success ml-2 px-4">APPLY</button>
+                            <input class="form-control col-lg-4 col-md-4 ml-auto" type="text"
+                                placeholder="TX hash, wallet address, user email, ..." aria-label="Search">
                         </div>
                     </div>
                 </div>
-                <div class="table-name users-table mt-1 mb-2">
-                    <div class="col-2 ml-3 text-secondary">Operation ID</div>
-                    <div class="col-2 text-secondary">Date</div>
-                    <div class="col-2 text-secondary">Balance</div>
-                    <div class="col-2 text-secondary">Type</div>
-                    <div class="col-2 text-secondary">Amount</div>
-                    <div class="col-2 text-secondary">Status</div>
+                <div class="table-name masternode-table mt-5 mb-2">
+                    <div class="col-1 ml-3">Order ID</div>
+                    <div class="col-2">Date</div>
+                    <div class="col-3">User</div>
+                    <div class="col-2">Operation</div>
+                    <div class="col-2">Status</div>
+                    <div class="col-2">Profit</div>
                 </div>
                 <!-- cards -->
                 <div class="wrapper-card">
-                    <div class="card-name py-3 mt-2 rounded" href="#historyCard1" data-toggle="collapse"
-                        aria-expanded="false" aria-controls="historyCard1">
-                        <div class="col-2 ml-3"><span>9999999</span></div>
-                        <div class="col-2"><span>05/18/2020 00:00:00</span></div>
-                        <div class="col-2"><span>37 384 939.00344299</span></div>
-                        <div class="col-2">Deposit Completed</div>
-                        <div class="col-2">37 384 939.00344299</div>
-                        <div class="col-2">Pending (4/35)</div>
+                    <div class="card-name py-3 mt-2 rounded" href="#expresslogCard1" data-toggle="collapse"
+                        aria-expanded="false" aria-controls="expresslogCard1">
+                        <div class="col-1 ml-3">301</div>
+                        <div class="col-2">10/10/2019 8:30:44 AM</div>
+                        <div class="col-3">01dragonslayer@gmail.com</div>
+                        <div class="col-2">Buy SCRIV</div>
+                        <div class="col-2">Completed</div>
+                        <div class="col-2">+0.00000341 BTC</div>
                     </div>
-                    <div class="collapse main-card" id="historyCard1">
+                    <div class="collapse main-card" id="expresslogCard1">
                         <div class="card card-body rounded">
                             <div class="row mt-4">
                                 <div class="col-lg-9">
@@ -105,12 +132,13 @@
                                         <table class="table table-bordered table-responsive-lg">
                                             <tbody>
                                                 <tr>
-                                                    <th scope="row">Wallet</th>
-                                                    <td><span>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1A</span><a href="#"
-                                                            class="btn-copy"><i class="ml-4 far fa-copy"></i></a></td>
+                                                    <th scope="row">10/10/2019 8:30:44 AM</th>
+                                                    <td><span>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1AASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1A</span><a
+                                                            href="#" class="btn-copy"><i
+                                                                class="ml-4 far fa-copy"></i></a></td>
                                                 </tr>
                                                 <tr>
-                                                    <th scope="row">TXID</th>
+                                                    <th scope="row">10/10/2019 8:30:44 AM</th>
                                                     <td><span>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1AASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1A</span><a
                                                             href="#" class="btn-copy"><i
                                                                 class="ml-4 far fa-copy"></i></a></td>
@@ -124,16 +152,16 @@
                     </div>
                 </div>
                 <div class="wrapper-card">
-                    <div class="card-name py-3 mt-2 rounded" href="#historyCard2" data-toggle="collapse"
-                        aria-expanded="false" aria-controls="historyCard2">
-                        <div class="col-2 ml-3"><span>9999999</span></div>
-                        <div class="col-2"><span>05/18/2020 00:00:00</span></div>
-                        <div class="col-2"><span>37 384 939.00344299</span></div>
-                        <div class="col-2">Deposit Completed</div>
-                        <div class="col-2">37 384 939.00344299</div>
-                        <div class="col-2">Pending (4/35)</div>
+                    <div class="card-name py-3 mt-2 rounded" href="#expresslogCard2" data-toggle="collapse"
+                        aria-expanded="false" aria-controls="expresslogCard2">
+                        <div class="col-1 ml-3">301</div>
+                        <div class="col-2">10/10/2019 8:30:44 AM</div>
+                        <div class="col-3">01dragonslayer@gmail.com</div>
+                        <div class="col-2">Buy SCRIV</div>
+                        <div class="col-2">Completed</div>
+                        <div class="col-2">+0.00000341 BTC</div>
                     </div>
-                    <div class="collapse main-card" id="historyCard2">
+                    <div class="collapse main-card" id="expresslogCard2">
                         <div class="card card-body rounded">
                             <div class="row mt-4">
                                 <div class="col-lg-9">
@@ -141,12 +169,13 @@
                                         <table class="table table-bordered table-responsive-lg">
                                             <tbody>
                                                 <tr>
-                                                    <th scope="row">Wallet</th>
-                                                    <td><span>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1A</span><a href="#"
-                                                            class="btn-copy"><i class="ml-4 far fa-copy"></i></a></td>
+                                                    <th scope="row">10/10/2019 8:30:44 AM</th>
+                                                    <td><span>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1AASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1A</span><a
+                                                            href="#" class="btn-copy"><i
+                                                                class="ml-4 far fa-copy"></i></a></td>
                                                 </tr>
                                                 <tr>
-                                                    <th scope="row">TXID</th>
+                                                    <th scope="row">10/10/2019 8:30:44 AM</th>
                                                     <td><span>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1AASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1A</span><a
                                                             href="#" class="btn-copy"><i
                                                                 class="ml-4 far fa-copy"></i></a></td>
@@ -160,16 +189,16 @@
                     </div>
                 </div>
                 <div class="wrapper-card">
-                    <div class="card-name py-3 mt-2 rounded" href="#historyCard3" data-toggle="collapse"
-                        aria-expanded="false" aria-controls="historyCard3">
-                        <div class="col-2 ml-3"><span>9999999</span></div>
-                        <div class="col-2"><span>05/18/2020 00:00:00</span></div>
-                        <div class="col-2"><span>37 384 939.00344299</span></div>
-                        <div class="col-2">Deposit Completed</div>
-                        <div class="col-2">37 384 939.00344299</div>
-                        <div class="col-2">Pending (4/35)</div>
+                    <div class="card-name py-3 mt-2 rounded" href="#expresslogCard3" data-toggle="collapse"
+                        aria-expanded="false" aria-controls="expresslogCard3">
+                        <div class="col-1 ml-3">301</div>
+                        <div class="col-2">10/10/2019 8:30:44 AM</div>
+                        <div class="col-3">01dragonslayer@gmail.com</div>
+                        <div class="col-2">Buy SCRIV</div>
+                        <div class="col-2">Completed</div>
+                        <div class="col-2">+0.00000341 BTC</div>
                     </div>
-                    <div class="collapse main-card" id="historyCard3">
+                    <div class="collapse main-card" id="expresslogCard3">
                         <div class="card card-body rounded">
                             <div class="row mt-4">
                                 <div class="col-lg-9">
@@ -177,12 +206,13 @@
                                         <table class="table table-bordered table-responsive-lg">
                                             <tbody>
                                                 <tr>
-                                                    <th scope="row">Wallet</th>
-                                                    <td><span>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1A</span><a href="#"
-                                                            class="btn-copy"><i class="ml-4 far fa-copy"></i></a></td>
+                                                    <th scope="row">10/10/2019 8:30:44 AM</th>
+                                                    <td><span>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1AASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1A</span><a
+                                                            href="#" class="btn-copy"><i
+                                                                class="ml-4 far fa-copy"></i></a></td>
                                                 </tr>
                                                 <tr>
-                                                    <th scope="row">TXID</th>
+                                                    <th scope="row">10/10/2019 8:30:44 AM</th>
                                                     <td><span>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1AASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1A</span><a
                                                             href="#" class="btn-copy"><i
                                                                 class="ml-4 far fa-copy"></i></a></td>
@@ -196,16 +226,16 @@
                     </div>
                 </div>
                 <div class="wrapper-card">
-                    <div class="card-name py-3 mt-2 rounded" href="#historyCard4" data-toggle="collapse"
-                        aria-expanded="false" aria-controls="historyCard4">
-                        <div class="col-2 ml-3"><span>9999999</span></div>
-                        <div class="col-2"><span>05/18/2020 00:00:00</span></div>
-                        <div class="col-2"><span>37 384 939.00344299</span></div>
-                        <div class="col-2">Deposit Completed</div>
-                        <div class="col-2">37 384 939.00344299</div>
-                        <div class="col-2">Pending (4/35)</div>
+                    <div class="card-name py-3 mt-2 rounded" href="#expresslogCard4" data-toggle="collapse"
+                        aria-expanded="false" aria-controls="expresslogCard4">
+                        <div class="col-1 ml-3">301</div>
+                        <div class="col-2">10/10/2019 8:30:44 AM</div>
+                        <div class="col-3">01dragonslayer@gmail.com</div>
+                        <div class="col-2">Buy SCRIV</div>
+                        <div class="col-2">Completed</div>
+                        <div class="col-2">+0.00000341 BTC</div>
                     </div>
-                    <div class="collapse main-card" id="historyCard4">
+                    <div class="collapse main-card" id="expresslogCard4">
                         <div class="card card-body rounded">
                             <div class="row mt-4">
                                 <div class="col-lg-9">
@@ -213,12 +243,13 @@
                                         <table class="table table-bordered table-responsive-lg">
                                             <tbody>
                                                 <tr>
-                                                    <th scope="row">Wallet</th>
-                                                    <td><span>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1A</span><a href="#"
-                                                            class="btn-copy"><i class="ml-4 far fa-copy"></i></a></td>
+                                                    <th scope="row">10/10/2019 8:30:44 AM</th>
+                                                    <td><span>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1AASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1A</span><a
+                                                            href="#" class="btn-copy"><i
+                                                                class="ml-4 far fa-copy"></i></a></td>
                                                 </tr>
                                                 <tr>
-                                                    <th scope="row">TXID</th>
+                                                    <th scope="row">10/10/2019 8:30:44 AM</th>
                                                     <td><span>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1AASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1A</span><a
                                                             href="#" class="btn-copy"><i
                                                                 class="ml-4 far fa-copy"></i></a></td>
@@ -276,8 +307,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
-    <script
-        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
     <script src="./js/main.js"></script>
 </body>
 

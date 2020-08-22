@@ -85,95 +85,90 @@
                         </div>
                         <div class="row">
                             <div class="col-12">
-                                <form class="form-basic no-gutters">
-                                    <div class="form-group col-6">
-                                        <label for="NotificationBasic">Notification text</label>
-                                        <input type="text" class="form-control" id="NotificationBasic"
-                                            placeholder="Example input">
-                                    </div>
-                                    <div class="form-group offset-1 col-5">
-                                        <label for="NotificationBasic2">Notification text</label>
-                                        <input type="text" class="form-control" id="NotificationBasic2"
-                                            placeholder="Example input">
-                                    </div>
-                                    <div class="form-group mr-5 col-2">
-                                        <label for="statusBasic">Status:</label>
-                                        <select id="statusBasic" class="form-control bg-secondary text-white">
-                                            <option selected>Maintenance</option>
-                                            <option>Maintenance</option>
-                                            <option>Maintenance</option>
-                                            <option>Maintenance</option>
-                                            <option>Maintenance</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group col-6 ml-5 testnet">
-                                        <label class="isTestnet" for="BasicFeatured"><span>Featured
-                                            </span></label>
-                                        <div class="custom-control custom-switch custom-switch-featured">
-                                            <input type="checkbox" class="custom-control-input" id="BasicFeatured">
-                                            <label class="custom-control-label" for="BasicFeatured">
-                                            </label>
+                                <div class="row">
+                                    <form class="form-basic no-gutters">
+                                        <div class="form-group col-6">
+                                            <label for="NotificationBasic">Notification text</label>
+                                            <input type="text" class="form-control" id="NotificationBasic"
+                                                placeholder="Example input">
                                         </div>
-                                    </div>
-                                    <div class="form-group col-4">
-                                        <label for="basicCoinName">Coin name:</label>
-                                        <input type="text" class="form-control" id="basicCoinName"
-                                            placeholder="Example input">
-                                    </div>
-                                    <div class="form-group mx-4 col-3">
-                                        <label for="basicCointicker">Coin ticker:</label>
-                                        <input type="text" class="form-control" id="basicCointicker"
-                                            placeholder="Example input">
-                                    </div>
-                                    <div class="form-group col-4 ml-auto cf-form">
-                                        <div class="custom-file">
-                                            <input type="file" class="custom-file-input" id="myInput"
-                                                aria-describedby="myInput">
-                                            <label class="custom-file-label" for="myInput"><i
-                                                    class="fas fa-cloud-upload-alt"></i>Choose file</label>
-                                            <!-- <a href="#" class="clear-form-file"><i class="fas fa-times"></i></a> -->
+                                        <div class="form-group offset-1 col-5">
+                                            <label for="NotificationBasic2">Notification text</label>
+                                            <input type="text" class="form-control" id="NotificationBasic2"
+                                                placeholder="Example input">
                                         </div>
-                                    </div>
-                                    <div class="form-group mr-3 col-2">
-                                        <label for="BasicMarketDs">Market data source:</label>
-                                        <select id="BasicMarketDs" class="form-control bg-secondary text-white">
-                                            <option selected>CoinGecko</option>
-                                            <option>CoinGecko</option>
-                                            <option>CoinGecko</option>
-                                            <option>CoinGecko</option>
-                                            <option>CoinGecko</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group mr-3 col-3">
-                                        <label for="BasicDsId">Data source coin ID<i class="fas fa-question-circle ml-2"
-                                                data-toggle="tooltip" data-placement="top"
-                                                title="Tooltip on top"></i></label>
-                                        <input type="text" class="form-control" id="BasicDsId"
-                                            placeholder="Example input">
-                                    </div>
-                                    <div class="form-group col-3">
-                                        <label for="BasicSendy">Sendy list ID<i class="fas fa-question-circle ml-2"
-                                                data-toggle="tooltip" data-placement="top"
-                                                title="Tooltip on top"></i></label>
-                                        <input type="text" class="form-control" id="BasicSendy"
-                                            placeholder="Example input">
-                                    </div>
-                                    <div class="form-group col-3 mb-n2 ml-auto">
-                                        <label class="sr-only" for="inlineFormCustomSelect">Preference</label>
-                                        <select class="custom-select" id="inlineFormCustomSelect">
-                                            <option selected>6</option>
-                                            <option value="1">5</option>
-                                            <option value="2">4</option>
-                                            <option value="3">3</option>
-                                            <option value="3">2</option>
-                                            <option value="3">1</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group col-6">
-                                        <label for="Comment">Comment:</label>
-                                        <textarea class="form-control" id="Comment" rows="3"></textarea>
-                                    </div>
-                                </form>
+                                        <div class="form-group mr-5 col-2">
+                                            <label for="statusBasic">Status</label>
+                                            <select id="statusBasic" class="form-control bg-secondary text-white">
+                                                <option selected>Maintenance</option>
+                                                <option>Maintenance</option>
+                                                <option>Maintenance</option>
+                                                <option>Maintenance</option>
+                                                <option>Maintenance</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-6 ml-5 testnet">
+                                            <label class="isTestnet" for="BasicFeatured"><span>Featured
+                                                </span></label>
+                                            <div class="custom-control custom-switch custom-switch-featured">
+                                                <input type="checkbox" class="custom-control-input" id="BasicFeatured">
+                                                <label class="custom-control-label" for="BasicFeatured">
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-4">
+                                            <label for="basicCoinName">Coin name</label>
+                                            <input type="text" class="form-control" id="basicCoinName"
+                                                placeholder="Example input">
+                                        </div>
+                                        <div class="form-group mx-4 col-3">
+                                            <label for="basicCointicker">Coin ticker</label>
+                                            <input type="text" class="form-control" id="basicCointicker"
+                                                placeholder="Example input">
+                                        </div>
+                                        <div class="form-group col-4 ml-auto mb-4">
+                                            <label for="basiclogo">logo</label>
+                                            <div class="custom-file">
+                                                <input type="file" class="custom-file-input" id="basiclogo"
+                                                    aria-describedby="basiclogo" accept="image/png/svg">
+                                                <label class=" custom-file-label" for="basiclogo"></label>
+                                                <a href="#" class="clear-form-file"><i class="fas fa-times"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="form-group mr-3 col-2">
+                                            <label for="BasicMarketDs">Market data source</label>
+                                            <select id="BasicMarketDs" class="form-control bg-secondary text-white">
+                                                <option selected>CoinGecko</option>
+                                                <option>CoinGecko</option>
+                                                <option>CoinGecko</option>
+                                                <option>CoinGecko</option>
+                                                <option>CoinGecko</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group mr-3 col-3">
+                                            <label for="BasicDsId">Data source coin ID<i
+                                                    class="fas fa-question-circle ml-2" data-toggle="tooltip"
+                                                    data-placement="top" title="Tooltip on top"></i></label>
+                                            <input type="text" class="form-control" id="BasicDsId"
+                                                placeholder="Example input">
+                                        </div>
+                                        <div class="form-group col-3">
+                                            <label for="BasicSendy">Sendy list ID<i class="fas fa-question-circle ml-2"
+                                                    data-toggle="tooltip" data-placement="top"
+                                                    title="Tooltip on top"></i></label>
+                                            <input type="text" class="form-control" id="BasicSendy"
+                                                placeholder="Example input">
+                                        </div>
+                                        <div class="form-group col-2 ml-auto">
+                                            <label for="inlineFormCustomSelect">Amount decimals</label>
+                                            <input type="number" class="form-control" id="inlineFormCustomSelect">
+                                        </div>
+                                        <div class="form-group col-6">
+                                            <label for="Comment">Comment:</label>
+                                            <textarea class="form-control" id="Comment" rows="3"></textarea>
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -258,52 +253,49 @@
                                     </div>
                                     <div class="row">
                                         <div class="form-group col-6">
-                                            <label for="URL1">Link URL 1:</label>
+                                            <label for="URL1">Link URL 1</label>
                                             <input type="text" class="form-control" id="URL1"
                                                 placeholder="Another input">
                                         </div>
                                         <div class="form-group col-6">
-                                            <label for="URL1">Link logo 1:</label>
+                                            <label for="URL1">Link logo 1</label>
                                             <div class="custom-file">
                                                 <input type="file" class="custom-file-input" id="myInput"
-                                                    aria-describedby="myInput">
-                                                <label class="custom-file-label" for="myInput"><i
-                                                        class="fas fa-cloud-upload-alt"></i>Choose file</label>
-                                                <!-- <a href="#" class="clear-form-file"><i class="fas fa-times"></i></a> -->
+                                                    aria-describedby="myInput" accept="png/svg">
+                                                <label class="custom-file-label" for="myInput"></label>
+                                                <a href="#" class="clear-form-file"><i class="fas fa-times"></i></a>
                                             </div>
                                         </div>
                                         <div class="form-group col-6">
-                                            <label for="URL2">Link URL 2:</label>
+                                            <label for="URL2">Link URL 2</label>
                                             <input type="text" class="form-control" id="URL2"
                                                 placeholder="Another input">
                                         </div>
                                         <div class="form-group col-6">
-                                            <label for="URL2">Link logo 2:</label>
+                                            <label for="URL2">Link logo 2</label>
                                             <div class="custom-file">
                                                 <input type="file" class="custom-file-input" id="myInput"
-                                                    aria-describedby="myInput">
-                                                <label class="custom-file-label" for="myInput"><i
-                                                        class="fas fa-cloud-upload-alt"></i>Choose file</label>
-                                                <!-- <a href="#" class="clear-form-file"><i class="fas fa-times"></i></a> -->
+                                                    aria-describedby="myInput" accept="png/svg">
+                                                <label class="custom-file-label" for="myInput"></label>
+                                                <a href="#" class="clear-form-file"><i class="fas fa-times"></i></a>
                                             </div>
                                         </div>
                                         <div class="form-group col-6">
-                                            <label for="URL3">Link URL 3:</label>
+                                            <label for="URL3">Link URL 3</label>
                                             <input type="text" class="form-control" id="URL3"
                                                 placeholder="Another input">
                                         </div>
                                         <div class="form-group col-6">
-                                            <label for="URL3">Link logo 3:</label>
+                                            <label for="URL3">Link logo 3</label>
                                             <div class="custom-file">
                                                 <input type="file" class="custom-file-input" id="myInput"
-                                                    aria-describedby="myInput">
-                                                <label class="custom-file-label" for="URL3"><i
-                                                        class="fas fa-cloud-upload-alt"></i>Choose file</label>
-                                                <!-- <a href="#" class="clear-form-file"><i class="fas fa-times"></i></a> -->
+                                                    aria-describedby="myInput" accept="png/svg">
+                                                <label class="custom-file-label" for="URL3"></label>
+                                                <a href="#" class="clear-form-file"><i class="fas fa-times"></i></a>
                                             </div>
                                         </div>
                                         <div class="form-group col-12">
-                                            <label for="DescriptionKnwoledge">Description:</label>
+                                            <label for="DescriptionKnwoledge">Description</label>
                                             <textarea class="form-control" id="DescriptionKnwoledge"
                                                 rows="3"></textarea>
                                         </div>
@@ -405,7 +397,7 @@
                                                 placeholder="Example input">
                                         </div>
                                         <div class="form-group col-4">
-                                            <label for="ExplorerAPI1">Explorer 1 API:</label>
+                                            <label for="ExplorerAPI1">Explorer 1 API</label>
                                             <select id="ExplorerAPI1" class="form-control bg-secondary text-white">
                                                 <option selected="">Insight</option>
                                                 <option>Insight</option>
@@ -429,7 +421,7 @@
                                                 placeholder="Example input">
                                         </div>
                                         <div class="form-group col-4">
-                                            <label for="ExplorerAPI2">Explorer 2 API:</label>
+                                            <label for="ExplorerAPI2">Explorer 2 API</label>
                                             <select id="ExplorerAPI2" class="form-control bg-secondary text-white">
                                                 <option selected="">Insight</option>
                                                 <option>Insight</option>
@@ -453,7 +445,7 @@
                                                 placeholder="Example input">
                                         </div>
                                         <div class="form-group col-4">
-                                            <label for="ExplorerAPI3">Explorer 3 API:</label>
+                                            <label for="ExplorerAPI3">Explorer 3 API</label>
                                             <select id="ExplorerAPI3" class="form-control bg-secondary text-white">
                                                 <option selected="">Insight</option>
                                                 <option>Insight</option>
@@ -477,7 +469,7 @@
                                                 placeholder="Example input">
                                         </div>
                                         <div class="form-group col-4">
-                                            <label for="ExplorerAPI4">Explorer 4 API:</label>
+                                            <label for="ExplorerAPI4">Explorer 4 API</label>
                                             <select id="ExplorerAPI4" class="form-control bg-secondary text-white">
                                                 <option selected="">Insight</option>
                                                 <option>Insight</option>
@@ -585,7 +577,7 @@
                                     placeholder="Example input">
                             </div>
                             <div class="form-group col-4">
-                                <label for="CONFIGdocker">Base docker image:</label>
+                                <label for="CONFIGdocker">Base docker image</label>
                                 <select id="CONFIGdocker" class="form-control bg-secondary text-white">
                                     <option selected="">ubuntu-18</option>
                                     <option>ubuntu-18</option>
@@ -638,11 +630,11 @@
                                     placeholder="Example input">
                             </div>
                             <div class="form-group col-6">
-                                <label for="CONFIGAddnodes">Addnodes:</label>
+                                <label for="CONFIGAddnodes">Addnodes</label>
                                 <textarea class="form-control" id="CONFIGAddnodes" rows="6"></textarea>
                             </div>
                             <div class="form-group col-6">
-                                <label for="CONFIGRewards">Rewards config:</label>
+                                <label for="CONFIGRewards">Rewards config</label>
                                 <textarea class="form-control" id="CONFIGRewards" rows="6"></textarea>
                             </div>
                         </div>
@@ -735,7 +727,7 @@
                                         <div class="col-12 py-4">
                                             <div class="row">
                                                 <div class="form-group col-3">
-                                                    <label for="BALANCINGprovider">POS ROI provider:</label>
+                                                    <label for="BALANCINGprovider">POS ROI provider</label>
                                                     <select id="BALANCINGprovider"
                                                         class="form-control bg-secondary text-white">
                                                         <option selected="">Integrnal</option>
@@ -789,7 +781,7 @@
                                         <div class="col-12 py-4">
                                             <div class="row">
                                                 <div class="form-group col-3">
-                                                    <label for="BALANCINGzPOSprovider">zPOS ROI provider:</label>
+                                                    <label for="BALANCINGzPOSprovider">zPOS ROI provider</label>
                                                     <select id="BALANCINGzPOSprovider"
                                                         class="form-control bg-secondary text-white">
                                                         <option selected="">Integrnal</option>
@@ -846,9 +838,8 @@
                                                 <div class="form-group col-3 testnet">
                                                     <label class="isTestnet" for="BALANCINGwallet">Use cold
                                                         wallet</label>
-                                                    <div class="custom-control custom-switch">
-                                                        <input type="checkbox"
-                                                            class="custom-control-input custom-switch-featured"
+                                                    <div class="custom-control custom-switch custom-switch-featured">
+                                                        <input type="checkbox" class="custom-control-input"
                                                             id="BALANCINGwallet" checked="checked">
                                                         <label class="custom-control-label"
                                                             for="BALANCINGwallet"></label>
@@ -896,7 +887,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="form-group col-4">
-                                                    <label for="BALANCINGzPOSproviderNodes">zPOS ROI provider:</label>
+                                                    <label for="BALANCINGzPOSproviderNodes">zPOS ROI provider</label>
                                                     <select id="BALANCINGzPOSproviderNodes"
                                                         class="form-control bg-secondary text-white">
                                                         <option selected="">Integrnal</option>
@@ -915,7 +906,7 @@
                                                         id="BALANCINGPOSzPOSROINodes" placeholder="Example input">
                                                 </div>
                                                 <div class="form-group col-3">
-                                                    <label for="BALANCINGzPOSproviderNodes">Rewards distribution mode:<i
+                                                    <label for="BALANCINGzPOSproviderNodes">Rewards distribution mode<i
                                                             class="fas fa-question-circle ml-2" data-toggle="tooltip"
                                                             data-placement="top" title=""
                                                             data-original-title="Tooltip on top">

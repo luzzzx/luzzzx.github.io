@@ -104,13 +104,14 @@
                                 aria-label="Search">
                         </div>
                         <div class="btns-subtitle px-3">
-                            <a href="#" class="btn-sm btn-primary mr-2">CREATE WALLET BACKUP</a>
-                            <a href="#" class="btn-sm btn-primary mr-2">RESTORE WALLET</a>
-                            <a href="#" class="btn-sm btn-primary mr-2" data-toggle="modal"
-                                data-target="#ModalDELETE">CLEAN WALLET</a>
-                            <a href="#" class="btn-sm btn-primary mr-2" data-toggle="modal"
-                                data-target="#ModalDELETE">DELETE BC.</a>
-                            <a href="#" class="btn-sm btn-danger" data-toggle="modal" data-target="#ModalDELETE">DESTROY
+                            <a href="#" class="btn-sm btn-primary mr-2 cw-popup" data-placement="bottom">CREATE WALLET
+                                BACKUP</a>
+                            <a href="#" class="btn-sm btn-primary mr-2 rw-popup" data-placement="bottom">RESTORE
+                                WALLET</a>
+                            <a href="#" class="btn-sm btn-primary mr-2 cleanw-popup" data-placement="bottom">CLEAN
+                                WALLET</a>
+                            <a href="#" class="btn-sm btn-primary mr-2 bc-popup" data-placement="bottom">DELETE BC.</a>
+                            <a href="#" class="btn-sm btn-danger dr-popup" data-placement="bottom">DESTROY
                                 REQUEST</a>
                         </div>
                     </div>
@@ -129,337 +130,935 @@
                             data-placement="top" title="" data-original-title="Tooltip on top"></i></div>
                 </div>
                 <!-- cards -->
-                <div class="wrapper-card">
-                    <div class="card-name py-3 mt-2 rounded" href="#StakingCard1" data-toggle="collapse"
-                        aria-expanded="false" aria-controls="StakingCard1">
-                        <div class="col-1 ml-3">
-                            <input type="checkbox" value="" id="stakingID1">
-                            <label class="form-check-label" for="stakingID1">
-                                9999
-                            </label>
-                        </div>
-                        <div class="col-1"><span>Manual</span>SOS2</div>
-                        <div class="col-2 staking-name"><span>send-13843</span>
-                        </div>
-                        <div class="col-2">03/04/2019 23:32:44</div>
-                        <div class="col-2">4197354344</div>
-                        <div class="col-2"><span class="text-warning">InitializationRequested</span></div>
-                        <div class="col-2"><span class="text-success">Active</span></div>
-                    </div>
-                    <div class="collapse main-card" id="StakingCard1">
-                        <div class="card card-body rounded">
-                            <div class="row mt-4">
-                                <div class="col-lg-12">
-                                    <div class="table-section__masternode">
-                                        <table class="table table-bordered table-responsive-lg">
-                                            <tbody>
-                                                <tr>
-                                                    <th scope="row">Wallet</th>
-                                                    <td><span>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1A</span><a href="#"
-                                                            class="btn-copy"><i class="ml-4 far fa-copy"></i></a></td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">Available</th>
-                                                    <td><span>1 485 494.99353455 XAP</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">Maturing</th>
-                                                    <td><span>1 485 494.99353455 XAP</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">Date created</th>
-                                                    <td>10/10/2019 8:30:44 AM</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">IP address</th>
-                                                    <td>2001:41d0:700:1cbb:1c00::9a</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">External ID</th>
-                                                    <td><span>f63c4d170007d73d696ee11bdc186e6cdb4b72670abf36fddbb761aa74c6f3bc</span><a
-                                                            href="#" class="btn-copy"><i
-                                                                class="ml-4 far fa-copy"></i></a></td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">Collateral TXID</th>
-                                                    <td><span>f63c4d170007d73d696ee11bdc186e6cdb4b72670abf36fddbb761aa74c6f3bc</span><a
-                                                            href="#" class="btn-copy"><i
-                                                                class="ml-4 far fa-copy"></i></a></td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">Withdrawal TXID</th>
-                                                    <td><span>f63c4d170007d73d696ee11bdc186e6cdb4b72670abf36fddbb761aa74c6f3bc</span><a
-                                                            href="#" class="btn-copy"><i
-                                                                class="ml-4 far fa-copy"></i></a></td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">Last TX</th>
-                                                    <td><span>f63c4d170007d73d696ee11bdc186e6cdb4b72670abf36fddbb761aa74c6f3bc</span><a
-                                                            href="#" class="btn-copy"><i
-                                                                class="ml-4 far fa-copy"></i></a></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div id="list-cards">
+                            <ul class="list">
+                                <li>
+                                    <div class="wrapper-card">
+                                        <div class="card-name rounded" href="#StakingCard3" data-toggle="collapse"
+                                            aria-expanded="false" aria-controls="StakingCard3">
+                                            <div class="col-1 ml-3">
+                                                <input type="checkbox" value="" id="stakingID3">
+                                                <label class="form-check-label" for="stakingID3">
+                                                    9999
+                                                </label>
+                                            </div>
+                                            <div class="col-1"><span>Manual</span>SOS2</div>
+                                            <div class="col-2 staking-name"><span>send-13843</span>
+                                            </div>
+                                            <div class="col-2">03/04/2019 23:32:44</div>
+                                            <div class="col-2">4197354344</div>
+                                            <div class="col-2"><span class="text-warning">InitializationRequested</span>
+                                            </div>
+                                            <div class="col-2"><span class="text-success">Active</span></div>
+                                        </div>
+                                        <div class="collapse main-card" id="StakingCard3">
+                                            <div class="card card-body rounded">
+                                                <div class="row mt-4">
+                                                    <div class="col-lg-12">
+                                                        <div class="table-section__masternode">
+                                                            <table class="table table-bordered table-responsive-lg">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <th scope="row">Wallet</th>
+                                                                        <td><span>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1A</span><a
+                                                                                href="#" class="btn-copy"><i
+                                                                                    class="ml-4 far fa-copy"></i></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">Available</th>
+                                                                        <td><span>1 485 494.99353455 XAP</span></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">Maturing</th>
+                                                                        <td><span>1 485 494.99353455 XAP</span></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">Date created</th>
+                                                                        <td>10/10/2019 8:30:44 AM</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">IP address</th>
+                                                                        <td>2001:41d0:700:1cbb:1c00::9a</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">External ID</th>
+                                                                        <td><span>f63c4d170007d73d696ee11bdc186e6cdb4b72670abf36fddbb761aa74c6f3bc</span><a
+                                                                                href="#" class="btn-copy"><i
+                                                                                    class="ml-4 far fa-copy"></i></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">Collateral TXID</th>
+                                                                        <td><span>f63c4d170007d73d696ee11bdc186e6cdb4b72670abf36fddbb761aa74c6f3bc</span><a
+                                                                                href="#" class="btn-copy"><i
+                                                                                    class="ml-4 far fa-copy"></i></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">Withdrawal TXID</th>
+                                                                        <td><span>f63c4d170007d73d696ee11bdc186e6cdb4b72670abf36fddbb761aa74c6f3bc</span><a
+                                                                                href="#" class="btn-copy"><i
+                                                                                    class="ml-4 far fa-copy"></i></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">Last TX</th>
+                                                                        <td><span>f63c4d170007d73d696ee11bdc186e6cdb4b72670abf36fddbb761aa74c6f3bc</span><a
+                                                                                href="#" class="btn-copy"><i
+                                                                                    class="ml-4 far fa-copy"></i></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-8">
+                                                        <div class="card-comments-staking">
+                                                            <h2 class="font-weight-bold">Staking status</h2>
+                                                            <p>text ever since the 1500s, when an unknown printer took a
+                                                                galley
+                                                                of type and
+                                                                scrambled it to make a type specimen book. It has
+                                                                survived
+                                                                not
+                                                                only five
+                                                                centuries, but also the leap into electronic
+                                                                typesetting,
+                                                                remaining
+                                                                essentially unchanged. It was popularised in the 1960s
+                                                                with
+                                                                the
+                                                                release of
+                                                                Letraset sheets containing Lorem Ipsum passages, and
+                                                                more
+                                                                recently with
+                                                                desktop publishing software like Aldus PageMaker
+                                                                including
+                                                                versions of Lorem
+                                                                Ipsum.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-lg-8">
-                                    <div class="card-comments-staking">
-                                        <h2 class="font-weight-bold">Staking status</h2>
-                                        <p>text ever since the 1500s, when an unknown printer took a galley of type and
-                                            scrambled it to make a type specimen book. It has survived not only five
-                                            centuries, but also the leap into electronic typesetting, remaining
-                                            essentially unchanged. It was popularised in the 1960s with the release of
-                                            Letraset sheets containing Lorem Ipsum passages, and more recently with
-                                            desktop publishing software like Aldus PageMaker including versions of Lorem
-                                            Ipsum.</p>
+                                </li>
+                                <li>
+                                    <div class="wrapper-card">
+                                        <div class="card-name rounded" href="#StakingCard2" data-toggle="collapse"
+                                            aria-expanded="false" aria-controls="StakingCard2">
+                                            <div class="col-1 ml-3">
+                                                <input type="checkbox" value="" id="stakingID2">
+                                                <label class="form-check-label" for="stakingID2">
+                                                    992
+                                                </label>
+                                            </div>
+                                            <div class="col-1"><span>Manual</span>SOS2</div>
+                                            <div class="col-2 staking-name"><span>send-13843</span>
+                                            </div>
+                                            <div class="col-2">03/04/2019 23:32:44</div>
+                                            <div class="col-2">4197354344</div>
+                                            <div class="col-2"><span class="text-warning">InitializationRequested</span>
+                                            </div>
+                                            <div class="col-2"><span class="text-success">Active</span></div>
+                                        </div>
+                                        <div class="collapse main-card" id="StakingCard2">
+                                            <div class="card card-body rounded">
+                                                <div class="row mt-4">
+                                                    <div class="col-lg-12">
+                                                        <div class="table-section__masternode">
+                                                            <table class="table table-bordered table-responsive-lg">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <th scope="row">Wallet</th>
+                                                                        <td><span>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1A</span><a
+                                                                                href="#" class="btn-copy"><i
+                                                                                    class="ml-4 far fa-copy"></i></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">Available</th>
+                                                                        <td><span>1 485 494.99353455 XAP</span></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">Maturing</th>
+                                                                        <td><span>1 485 494.99353455 XAP</span></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">Date created</th>
+                                                                        <td>10/10/2019 8:30:44 AM</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">IP address</th>
+                                                                        <td>2001:41d0:700:1cbb:1c00::9a</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">External ID</th>
+                                                                        <td><span>f63c4d170007d73d696ee11bdc186e6cdb4b72670abf36fddbb761aa74c6f3bc</span><a
+                                                                                href="#" class="btn-copy"><i
+                                                                                    class="ml-4 far fa-copy"></i></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">Collateral TXID</th>
+                                                                        <td><span>f63c4d170007d73d696ee11bdc186e6cdb4b72670abf36fddbb761aa74c6f3bc</span><a
+                                                                                href="#" class="btn-copy"><i
+                                                                                    class="ml-4 far fa-copy"></i></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">Withdrawal TXID</th>
+                                                                        <td><span>f63c4d170007d73d696ee11bdc186e6cdb4b72670abf36fddbb761aa74c6f3bc</span><a
+                                                                                href="#" class="btn-copy"><i
+                                                                                    class="ml-4 far fa-copy"></i></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">Last TX</th>
+                                                                        <td><span>f63c4d170007d73d696ee11bdc186e6cdb4b72670abf36fddbb761aa74c6f3bc</span><a
+                                                                                href="#" class="btn-copy"><i
+                                                                                    class="ml-4 far fa-copy"></i></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-8">
+                                                        <div class="card-comments-staking">
+                                                            <h2 class="font-weight-bold">Staking status</h2>
+                                                            <p>text ever since the 1500s, when an unknown printer took a
+                                                                galley
+                                                                of type and
+                                                                scrambled it to make a type specimen book. It has
+                                                                survived
+                                                                not
+                                                                only five
+                                                                centuries, but also the leap into electronic
+                                                                typesetting,
+                                                                remaining
+                                                                essentially unchanged. It was popularised in the 1960s
+                                                                with
+                                                                the
+                                                                release of
+                                                                Letraset sheets containing Lorem Ipsum passages, and
+                                                                more
+                                                                recently with
+                                                                desktop publishing software like Aldus PageMaker
+                                                                including
+                                                                versions of Lorem
+                                                                Ipsum.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
+                                </li>
+                                <li>
+                                    <div class="wrapper-card">
+                                        <div class="card-name rounded" href="#StakingCard4" data-toggle="collapse"
+                                            aria-expanded="false" aria-controls="StakingCard4">
+                                            <div class="col-1 ml-3">
+                                                <input type="checkbox" value="" id="stakingID4">
+                                                <label class="form-check-label" for="stakingID4">
+                                                    9
+                                                </label>
+                                            </div>
+                                            <div class="col-1"><span>Manual</span>SOS2</div>
+                                            <div class="col-2 staking-name"><span>send-13843</span>
+                                            </div>
+                                            <div class="col-2">03/04/2019 23:32:44</div>
+                                            <div class="col-2">4197354344</div>
+                                            <div class="col-2"><span class="text-warning">InitializationRequested</span>
+                                            </div>
+                                            <div class="col-2"><span class="text-success">Active</span></div>
+                                        </div>
+                                        <div class="collapse main-card" id="StakingCard4">
+                                            <div class="card card-body rounded">
+                                                <div class="row mt-4">
+                                                    <div class="col-lg-12">
+                                                        <div class="table-section__masternode">
+                                                            <table class="table table-bordered table-responsive-lg">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <th scope="row">Wallet</th>
+                                                                        <td><span>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1A</span><a
+                                                                                href="#" class="btn-copy"><i
+                                                                                    class="ml-4 far fa-copy"></i></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">Available</th>
+                                                                        <td><span>1 485 494.99353455 XAP</span></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">Maturing</th>
+                                                                        <td><span>1 485 494.99353455 XAP</span></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">Date created</th>
+                                                                        <td>10/10/2019 8:30:44 AM</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">IP address</th>
+                                                                        <td>2001:41d0:700:1cbb:1c00::9a</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">External ID</th>
+                                                                        <td><span>f63c4d170007d73d696ee11bdc186e6cdb4b72670abf36fddbb761aa74c6f3bc</span><a
+                                                                                href="#" class="btn-copy"><i
+                                                                                    class="ml-4 far fa-copy"></i></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">Collateral TXID</th>
+                                                                        <td><span>f63c4d170007d73d696ee11bdc186e6cdb4b72670abf36fddbb761aa74c6f3bc</span><a
+                                                                                href="#" class="btn-copy"><i
+                                                                                    class="ml-4 far fa-copy"></i></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">Withdrawal TXID</th>
+                                                                        <td><span>f63c4d170007d73d696ee11bdc186e6cdb4b72670abf36fddbb761aa74c6f3bc</span><a
+                                                                                href="#" class="btn-copy"><i
+                                                                                    class="ml-4 far fa-copy"></i></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">Last TX</th>
+                                                                        <td><span>f63c4d170007d73d696ee11bdc186e6cdb4b72670abf36fddbb761aa74c6f3bc</span><a
+                                                                                href="#" class="btn-copy"><i
+                                                                                    class="ml-4 far fa-copy"></i></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-8">
+                                                        <div class="card-comments-staking">
+                                                            <h2 class="font-weight-bold">Staking status</h2>
+                                                            <p>text ever since the 1500s, when an unknown printer took a
+                                                                galley
+                                                                of type and
+                                                                scrambled it to make a type specimen book. It has
+                                                                survived
+                                                                not
+                                                                only five
+                                                                centuries, but also the leap into electronic
+                                                                typesetting,
+                                                                remaining
+                                                                essentially unchanged. It was popularised in the 1960s
+                                                                with
+                                                                the
+                                                                release of
+                                                                Letraset sheets containing Lorem Ipsum passages, and
+                                                                more
+                                                                recently with
+                                                                desktop publishing software like Aldus PageMaker
+                                                                including
+                                                                versions of Lorem
+                                                                Ipsum.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="wrapper-card">
+                                        <div class="card-name rounded" href="#StakingCard5" data-toggle="collapse"
+                                            aria-expanded="false" aria-controls="StakingCard5">
+                                            <div class="col-1 ml-3">
+                                                <input type="checkbox" value="" id="stakingID5">
+                                                <label class="form-check-label" for="stakingID5">
+                                                    95
+                                                </label>
+                                            </div>
+                                            <div class="col-1"><span>Manual</span>SOS2</div>
+                                            <div class="col-2 staking-name"><span>send-13843</span>
+                                            </div>
+                                            <div class="col-2">03/04/2019 23:32:44</div>
+                                            <div class="col-2">4197354344</div>
+                                            <div class="col-2"><span class="text-warning">InitializationRequested</span>
+                                            </div>
+                                            <div class="col-2"><span class="text-success">Active</span></div>
+                                        </div>
+                                        <div class="collapse main-card" id="StakingCard5">
+                                            <div class="card card-body rounded">
+                                                <div class="row mt-4">
+                                                    <div class="col-lg-12">
+                                                        <div class="table-section__masternode">
+                                                            <table class="table table-bordered table-responsive-lg">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <th scope="row">Wallet</th>
+                                                                        <td><span>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1A</span><a
+                                                                                href="#" class="btn-copy"><i
+                                                                                    class="ml-4 far fa-copy"></i></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">Available</th>
+                                                                        <td><span>1 485 494.99353455 XAP</span></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">Maturing</th>
+                                                                        <td><span>1 485 494.99353455 XAP</span></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">Date created</th>
+                                                                        <td>10/10/2019 8:30:44 AM</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">IP address</th>
+                                                                        <td>2001:41d0:700:1cbb:1c00::9a</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">External ID</th>
+                                                                        <td><span>f63c4d170007d73d696ee11bdc186e6cdb4b72670abf36fddbb761aa74c6f3bc</span><a
+                                                                                href="#" class="btn-copy"><i
+                                                                                    class="ml-4 far fa-copy"></i></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">Collateral TXID</th>
+                                                                        <td><span>f63c4d170007d73d696ee11bdc186e6cdb4b72670abf36fddbb761aa74c6f3bc</span><a
+                                                                                href="#" class="btn-copy"><i
+                                                                                    class="ml-4 far fa-copy"></i></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">Withdrawal TXID</th>
+                                                                        <td><span>f63c4d170007d73d696ee11bdc186e6cdb4b72670abf36fddbb761aa74c6f3bc</span><a
+                                                                                href="#" class="btn-copy"><i
+                                                                                    class="ml-4 far fa-copy"></i></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">Last TX</th>
+                                                                        <td><span>f63c4d170007d73d696ee11bdc186e6cdb4b72670abf36fddbb761aa74c6f3bc</span><a
+                                                                                href="#" class="btn-copy"><i
+                                                                                    class="ml-4 far fa-copy"></i></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-8">
+                                                        <div class="card-comments-staking">
+                                                            <h2 class="font-weight-bold">Staking status</h2>
+                                                            <p>text ever since the 1500s, when an unknown printer took a
+                                                                galley
+                                                                of type and
+                                                                scrambled it to make a type specimen book. It has
+                                                                survived
+                                                                not
+                                                                only five
+                                                                centuries, but also the leap into electronic
+                                                                typesetting,
+                                                                remaining
+                                                                essentially unchanged. It was popularised in the 1960s
+                                                                with
+                                                                the
+                                                                release of
+                                                                Letraset sheets containing Lorem Ipsum passages, and
+                                                                more
+                                                                recently with
+                                                                desktop publishing software like Aldus PageMaker
+                                                                including
+                                                                versions of Lorem
+                                                                Ipsum.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="wrapper-card">
+                                        <div class="card-name rounded" href="#StakingCard6" data-toggle="collapse"
+                                            aria-expanded="false" aria-controls="StakingCard6">
+                                            <div class="col-1 ml-3">
+                                                <input type="checkbox" value="" id="stakingID6">
+                                                <label class="form-check-label" for="stakingID6">
+                                                    59
+                                                </label>
+                                            </div>
+                                            <div class="col-1"><span>Manual</span>SOS2</div>
+                                            <div class="col-2 staking-name"><span>send-13843</span>
+                                            </div>
+                                            <div class="col-2">03/04/2019 23:32:44</div>
+                                            <div class="col-2">4197354344</div>
+                                            <div class="col-2"><span class="text-warning">InitializationRequested</span>
+                                            </div>
+                                            <div class="col-2"><span class="text-success">Active</span></div>
+                                        </div>
+                                        <div class="collapse main-card" id="StakingCard6">
+                                            <div class="card card-body rounded">
+                                                <div class="row mt-4">
+                                                    <div class="col-lg-12">
+                                                        <div class="table-section__masternode">
+                                                            <table class="table table-bordered table-responsive-lg">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <th scope="row">Wallet</th>
+                                                                        <td><span>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1A</span><a
+                                                                                href="#" class="btn-copy"><i
+                                                                                    class="ml-4 far fa-copy"></i></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">Available</th>
+                                                                        <td><span>1 485 494.99353455 XAP</span></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">Maturing</th>
+                                                                        <td><span>1 485 494.99353455 XAP</span></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">Date created</th>
+                                                                        <td>10/10/2019 8:30:44 AM</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">IP address</th>
+                                                                        <td>2001:41d0:700:1cbb:1c00::9a</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">External ID</th>
+                                                                        <td><span>f63c4d170007d73d696ee11bdc186e6cdb4b72670abf36fddbb761aa74c6f3bc</span><a
+                                                                                href="#" class="btn-copy"><i
+                                                                                    class="ml-4 far fa-copy"></i></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">Collateral TXID</th>
+                                                                        <td><span>f63c4d170007d73d696ee11bdc186e6cdb4b72670abf36fddbb761aa74c6f3bc</span><a
+                                                                                href="#" class="btn-copy"><i
+                                                                                    class="ml-4 far fa-copy"></i></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">Withdrawal TXID</th>
+                                                                        <td><span>f63c4d170007d73d696ee11bdc186e6cdb4b72670abf36fddbb761aa74c6f3bc</span><a
+                                                                                href="#" class="btn-copy"><i
+                                                                                    class="ml-4 far fa-copy"></i></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">Last TX</th>
+                                                                        <td><span>f63c4d170007d73d696ee11bdc186e6cdb4b72670abf36fddbb761aa74c6f3bc</span><a
+                                                                                href="#" class="btn-copy"><i
+                                                                                    class="ml-4 far fa-copy"></i></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-8">
+                                                        <div class="card-comments-staking">
+                                                            <h2 class="font-weight-bold">Staking status</h2>
+                                                            <p>text ever since the 1500s, when an unknown printer took a
+                                                                galley
+                                                                of type and
+                                                                scrambled it to make a type specimen book. It has
+                                                                survived
+                                                                not
+                                                                only five
+                                                                centuries, but also the leap into electronic
+                                                                typesetting,
+                                                                remaining
+                                                                essentially unchanged. It was popularised in the 1960s
+                                                                with
+                                                                the
+                                                                release of
+                                                                Letraset sheets containing Lorem Ipsum passages, and
+                                                                more
+                                                                recently with
+                                                                desktop publishing software like Aldus PageMaker
+                                                                including
+                                                                versions of Lorem
+                                                                Ipsum.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="wrapper-card">
+                                        <div class="card-name rounded" href="#StakingCard7" data-toggle="collapse"
+                                            aria-expanded="false" aria-controls="StakingCard7">
+                                            <div class="col-1 ml-3">
+                                                <input type="checkbox" value="" id="stakingID7">
+                                                <label class="form-check-label" for="stakingID7">
+                                                    69
+                                                </label>
+                                            </div>
+                                            <div class="col-1"><span>Manual</span>SOS2</div>
+                                            <div class="col-2 staking-name"><span>send-13843</span>
+                                            </div>
+                                            <div class="col-2">03/04/2019 23:32:44</div>
+                                            <div class="col-2">4197354344</div>
+                                            <div class="col-2"><span class="text-warning">InitializationRequested</span>
+                                            </div>
+                                            <div class="col-2"><span class="text-success">Active</span></div>
+                                        </div>
+                                        <div class="collapse main-card" id="StakingCard7">
+                                            <div class="card card-body rounded">
+                                                <div class="row mt-4">
+                                                    <div class="col-lg-12">
+                                                        <div class="table-section__masternode">
+                                                            <table class="table table-bordered table-responsive-lg">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <th scope="row">Wallet</th>
+                                                                        <td><span>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1A</span><a
+                                                                                href="#" class="btn-copy"><i
+                                                                                    class="ml-4 far fa-copy"></i></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">Available</th>
+                                                                        <td><span>1 485 494.99353455 XAP</span></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">Maturing</th>
+                                                                        <td><span>1 485 494.99353455 XAP</span></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">Date created</th>
+                                                                        <td>10/10/2019 8:30:44 AM</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">IP address</th>
+                                                                        <td>2001:41d0:700:1cbb:1c00::9a</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">External ID</th>
+                                                                        <td><span>f63c4d170007d73d696ee11bdc186e6cdb4b72670abf36fddbb761aa74c6f3bc</span><a
+                                                                                href="#" class="btn-copy"><i
+                                                                                    class="ml-4 far fa-copy"></i></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">Collateral TXID</th>
+                                                                        <td><span>f63c4d170007d73d696ee11bdc186e6cdb4b72670abf36fddbb761aa74c6f3bc</span><a
+                                                                                href="#" class="btn-copy"><i
+                                                                                    class="ml-4 far fa-copy"></i></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">Withdrawal TXID</th>
+                                                                        <td><span>f63c4d170007d73d696ee11bdc186e6cdb4b72670abf36fddbb761aa74c6f3bc</span><a
+                                                                                href="#" class="btn-copy"><i
+                                                                                    class="ml-4 far fa-copy"></i></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">Last TX</th>
+                                                                        <td><span>f63c4d170007d73d696ee11bdc186e6cdb4b72670abf36fddbb761aa74c6f3bc</span><a
+                                                                                href="#" class="btn-copy"><i
+                                                                                    class="ml-4 far fa-copy"></i></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-8">
+                                                        <div class="card-comments-staking">
+                                                            <h2 class="font-weight-bold">Staking status</h2>
+                                                            <p>text ever since the 1500s, when an unknown printer took a
+                                                                galley
+                                                                of type and
+                                                                scrambled it to make a type specimen book. It has
+                                                                survived
+                                                                not
+                                                                only five
+                                                                centuries, but also the leap into electronic
+                                                                typesetting,
+                                                                remaining
+                                                                essentially unchanged. It was popularised in the 1960s
+                                                                with
+                                                                the
+                                                                release of
+                                                                Letraset sheets containing Lorem Ipsum passages, and
+                                                                more
+                                                                recently with
+                                                                desktop publishing software like Aldus PageMaker
+                                                                including
+                                                                versions of Lorem
+                                                                Ipsum.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="wrapper-card">
+                                        <div class="card-name rounded" href="#StakingCard8" data-toggle="collapse"
+                                            aria-expanded="false" aria-controls="StakingCard8">
+                                            <div class="col-1 ml-3">
+                                                <input type="checkbox" value="" id="stakingID8">
+                                                <label class="form-check-label" for="stakingID8">
+                                                    10
+                                                </label>
+                                            </div>
+                                            <div class="col-1"><span>Manual</span>SOS2</div>
+                                            <div class="col-2 staking-name"><span>send-13843</span>
+                                            </div>
+                                            <div class="col-2">03/04/2019 23:32:44</div>
+                                            <div class="col-2">4197354344</div>
+                                            <div class="col-2"><span class="text-warning">InitializationRequested</span>
+                                            </div>
+                                            <div class="col-2"><span class="text-success">Active</span></div>
+                                        </div>
+                                        <div class="collapse main-card" id="StakingCard8">
+                                            <div class="card card-body rounded">
+                                                <div class="row mt-4">
+                                                    <div class="col-lg-12">
+                                                        <div class="table-section__masternode">
+                                                            <table class="table table-bordered table-responsive-lg">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <th scope="row">Wallet</th>
+                                                                        <td><span>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1A</span><a
+                                                                                href="#" class="btn-copy"><i
+                                                                                    class="ml-4 far fa-copy"></i></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">Available</th>
+                                                                        <td><span>1 485 494.99353455 XAP</span></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">Maturing</th>
+                                                                        <td><span>1 485 494.99353455 XAP</span></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">Date created</th>
+                                                                        <td>10/10/2019 8:30:44 AM</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">IP address</th>
+                                                                        <td>2001:41d0:700:1cbb:1c00::9a</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">External ID</th>
+                                                                        <td><span>f63c4d170007d73d696ee11bdc186e6cdb4b72670abf36fddbb761aa74c6f3bc</span><a
+                                                                                href="#" class="btn-copy"><i
+                                                                                    class="ml-4 far fa-copy"></i></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">Collateral TXID</th>
+                                                                        <td><span>f63c4d170007d73d696ee11bdc186e6cdb4b72670abf36fddbb761aa74c6f3bc</span><a
+                                                                                href="#" class="btn-copy"><i
+                                                                                    class="ml-4 far fa-copy"></i></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">Withdrawal TXID</th>
+                                                                        <td><span>f63c4d170007d73d696ee11bdc186e6cdb4b72670abf36fddbb761aa74c6f3bc</span><a
+                                                                                href="#" class="btn-copy"><i
+                                                                                    class="ml-4 far fa-copy"></i></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">Last TX</th>
+                                                                        <td><span>f63c4d170007d73d696ee11bdc186e6cdb4b72670abf36fddbb761aa74c6f3bc</span><a
+                                                                                href="#" class="btn-copy"><i
+                                                                                    class="ml-4 far fa-copy"></i></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-8">
+                                                        <div class="card-comments-staking">
+                                                            <h2 class="font-weight-bold">Staking status</h2>
+                                                            <p>text ever since the 1500s, when an unknown printer took a
+                                                                galley
+                                                                of type and
+                                                                scrambled it to make a type specimen book. It has
+                                                                survived
+                                                                not
+                                                                only five
+                                                                centuries, but also the leap into electronic
+                                                                typesetting,
+                                                                remaining
+                                                                essentially unchanged. It was popularised in the 1960s
+                                                                with
+                                                                the
+                                                                release of
+                                                                Letraset sheets containing Lorem Ipsum passages, and
+                                                                more
+                                                                recently with
+                                                                desktop publishing software like Aldus PageMaker
+                                                                including
+                                                                versions of Lorem
+                                                                Ipsum.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="wrapper-card">
+                                        <div class="card-name rounded" href="#StakingCard9" data-toggle="collapse"
+                                            aria-expanded="false" aria-controls="StakingCard9">
+                                            <div class="col-1 ml-3">
+                                                <input type="checkbox" value="" id="stakingID9">
+                                                <label class="form-check-label" for="stakingID9">
+                                                    155
+                                                </label>
+                                            </div>
+                                            <div class="col-1"><span>Manual</span>SOS2</div>
+                                            <div class="col-2 staking-name"><span>send-13843</span>
+                                            </div>
+                                            <div class="col-2">03/04/2019 23:32:44</div>
+                                            <div class="col-2">4197354344</div>
+                                            <div class="col-2"><span class="text-warning">InitializationRequested</span>
+                                            </div>
+                                            <div class="col-2"><span class="text-success">Active</span></div>
+                                        </div>
+                                        <div class="collapse main-card" id="StakingCard9">
+                                            <div class="card card-body rounded">
+                                                <div class="row mt-4">
+                                                    <div class="col-lg-12">
+                                                        <div class="table-section__masternode">
+                                                            <table class="table table-bordered table-responsive-lg">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <th scope="row">Wallet</th>
+                                                                        <td><span>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1A</span><a
+                                                                                href="#" class="btn-copy"><i
+                                                                                    class="ml-4 far fa-copy"></i></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">Available</th>
+                                                                        <td><span>1 485 494.99353455 XAP</span></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">Maturing</th>
+                                                                        <td><span>1 485 494.99353455 XAP</span></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">Date created</th>
+                                                                        <td>10/10/2019 8:30:44 AM</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">IP address</th>
+                                                                        <td>2001:41d0:700:1cbb:1c00::9a</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">External ID</th>
+                                                                        <td><span>f63c4d170007d73d696ee11bdc186e6cdb4b72670abf36fddbb761aa74c6f3bc</span><a
+                                                                                href="#" class="btn-copy"><i
+                                                                                    class="ml-4 far fa-copy"></i></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">Collateral TXID</th>
+                                                                        <td><span>f63c4d170007d73d696ee11bdc186e6cdb4b72670abf36fddbb761aa74c6f3bc</span><a
+                                                                                href="#" class="btn-copy"><i
+                                                                                    class="ml-4 far fa-copy"></i></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">Withdrawal TXID</th>
+                                                                        <td><span>f63c4d170007d73d696ee11bdc186e6cdb4b72670abf36fddbb761aa74c6f3bc</span><a
+                                                                                href="#" class="btn-copy"><i
+                                                                                    class="ml-4 far fa-copy"></i></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">Last TX</th>
+                                                                        <td><span>f63c4d170007d73d696ee11bdc186e6cdb4b72670abf36fddbb761aa74c6f3bc</span><a
+                                                                                href="#" class="btn-copy"><i
+                                                                                    class="ml-4 far fa-copy"></i></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-8">
+                                                        <div class="card-comments-staking">
+                                                            <h2 class="font-weight-bold">Staking status</h2>
+                                                            <p>text ever since the 1500s, when an unknown printer took a
+                                                                galley
+                                                                of type and
+                                                                scrambled it to make a type specimen book. It has
+                                                                survived
+                                                                not
+                                                                only five
+                                                                centuries, but also the leap into electronic
+                                                                typesetting,
+                                                                remaining
+                                                                essentially unchanged. It was popularised in the 1960s
+                                                                with
+                                                                the
+                                                                release of
+                                                                Letraset sheets containing Lorem Ipsum passages, and
+                                                                more
+                                                                recently with
+                                                                desktop publishing software like Aldus PageMaker
+                                                                including
+                                                                versions of Lorem
+                                                                Ipsum.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="pagination-row">
+                                <span>Rows per page</span>
+                                <div class="form-group pagination-pages mx-4">
+                                    <select id="pagination" class="form-control bg-secondary text-white">
+                                        <option selected>3</option>
+                                        <option>2</option>
+                                        <option>1</option>
+                                    </select>
                                 </div>
+                                <ul class="pagination"></ul>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="wrapper-card">
-                    <div class="card-name py-3 mt-2 rounded" href="#StakingCard2" data-toggle="collapse"
-                        aria-expanded="false" aria-controls="StakingCard2">
-                        <div class="col-1 ml-3">
-                            <input type="checkbox" value="" id="stakingID2">
-                            <label class="form-check-label" for="stakingID2">
-                                9999
-                            </label>
-                        </div>
-                        <div class="col-1"><span>Manual</span>SOS2</div>
-                        <div class="col-2 staking-name"><span>send-13843</span>
-                        </div>
-                        <div class="col-2">03/04/2019 23:32:44</div>
-                        <div class="col-2">4197354344</div>
-                        <div class="col-2"><span class="text-warning">InitializationRequested</span></div>
-                        <div class="col-2"><span class="text-success">Active</span></div>
-                    </div>
-                    <div class="collapse main-card" id="StakingCard2">
-                        <div class="card card-body rounded">
-                            <div class="row mt-4">
-                                <div class="col-lg-12">
-                                    <div class="table-section__masternode">
-                                        <table class="table table-bordered table-responsive-lg">
-                                            <tbody>
-                                                <tr>
-                                                    <th scope="row">Wallet</th>
-                                                    <td><span>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1A</span><a href="#"
-                                                            class="btn-copy"><i class="ml-4 far fa-copy"></i></a></td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">Available</th>
-                                                    <td><span>1 485 494.99353455 XAP</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">Maturing</th>
-                                                    <td><span>1 485 494.99353455 XAP</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">Date created</th>
-                                                    <td>10/10/2019 8:30:44 AM</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">IP address</th>
-                                                    <td>2001:41d0:700:1cbb:1c00::9a</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">External ID</th>
-                                                    <td><span>f63c4d170007d73d696ee11bdc186e6cdb4b72670abf36fddbb761aa74c6f3bc</span><a
-                                                            href="#" class="btn-copy"><i
-                                                                class="ml-4 far fa-copy"></i></a></td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">Collateral TXID</th>
-                                                    <td><span>f63c4d170007d73d696ee11bdc186e6cdb4b72670abf36fddbb761aa74c6f3bc</span><a
-                                                            href="#" class="btn-copy"><i
-                                                                class="ml-4 far fa-copy"></i></a></td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">Withdrawal TXID</th>
-                                                    <td><span>f63c4d170007d73d696ee11bdc186e6cdb4b72670abf36fddbb761aa74c6f3bc</span><a
-                                                            href="#" class="btn-copy"><i
-                                                                class="ml-4 far fa-copy"></i></a></td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">Last TX</th>
-                                                    <td><span>f63c4d170007d73d696ee11bdc186e6cdb4b72670abf36fddbb761aa74c6f3bc</span><a
-                                                            href="#" class="btn-copy"><i
-                                                                class="ml-4 far fa-copy"></i></a></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                                <div class="col-lg-8">
-                                    <div class="card-comments-staking">
-                                        <h2 class="font-weight-bold">Staking status</h2>
-                                        <p>text ever since the 1500s, when an unknown printer took a galley of type and
-                                            scrambled it to make a type specimen book. It has survived not only five
-                                            centuries, but also the leap into electronic typesetting, remaining
-                                            essentially unchanged. It was popularised in the 1960s with the release of
-                                            Letraset sheets containing Lorem Ipsum passages, and more recently with
-                                            desktop publishing software like Aldus PageMaker including versions of Lorem
-                                            Ipsum.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="wrapper-card">
-                    <div class="card-name py-3 mt-2 rounded" href="#StakingCard3" data-toggle="collapse"
-                        aria-expanded="false" aria-controls="StakingCard3">
-                        <div class="col-1 ml-3">
-                            <input type="checkbox" value="" id="stakingID3">
-                            <label class="form-check-label" for="stakingID3">
-                                9999
-                            </label>
-                        </div>
-                        <div class="col-1"><span>Manual</span>SOS2</div>
-                        <div class="col-2 staking-name"><span>send-13843</span>
-                        </div>
-                        <div class="col-2">03/04/2019 23:32:44</div>
-                        <div class="col-2">4197354344</div>
-                        <div class="col-2"><span class="text-warning">InitializationRequested</span></div>
-                        <div class="col-2"><span class="text-success">Active</span></div>
-                    </div>
-                    <div class="collapse main-card" id="StakingCard3">
-                        <div class="card card-body rounded">
-                            <div class="row mt-4">
-                                <div class="col-lg-12">
-                                    <div class="table-section__masternode">
-                                        <table class="table table-bordered table-responsive-lg">
-                                            <tbody>
-                                                <tr>
-                                                    <th scope="row">Wallet</th>
-                                                    <td><span>ASN3PsSrgNcwQsh1v679pzqT1ERnYeGE1A</span><a href="#"
-                                                            class="btn-copy"><i class="ml-4 far fa-copy"></i></a></td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">Available</th>
-                                                    <td><span>1 485 494.99353455 XAP</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">Maturing</th>
-                                                    <td><span>1 485 494.99353455 XAP</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">Date created</th>
-                                                    <td>10/10/2019 8:30:44 AM</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">IP address</th>
-                                                    <td>2001:41d0:700:1cbb:1c00::9a</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">External ID</th>
-                                                    <td><span>f63c4d170007d73d696ee11bdc186e6cdb4b72670abf36fddbb761aa74c6f3bc</span><a
-                                                            href="#" class="btn-copy"><i
-                                                                class="ml-4 far fa-copy"></i></a></td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">Collateral TXID</th>
-                                                    <td><span>f63c4d170007d73d696ee11bdc186e6cdb4b72670abf36fddbb761aa74c6f3bc</span><a
-                                                            href="#" class="btn-copy"><i
-                                                                class="ml-4 far fa-copy"></i></a></td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">Withdrawal TXID</th>
-                                                    <td><span>f63c4d170007d73d696ee11bdc186e6cdb4b72670abf36fddbb761aa74c6f3bc</span><a
-                                                            href="#" class="btn-copy"><i
-                                                                class="ml-4 far fa-copy"></i></a></td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">Last TX</th>
-                                                    <td><span>f63c4d170007d73d696ee11bdc186e6cdb4b72670abf36fddbb761aa74c6f3bc</span><a
-                                                            href="#" class="btn-copy"><i
-                                                                class="ml-4 far fa-copy"></i></a></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                                <div class="col-lg-8">
-                                    <div class="card-comments-staking">
-                                        <h2 class="font-weight-bold">Staking status</h2>
-                                        <p>text ever since the 1500s, when an unknown printer took a galley of type and
-                                            scrambled it to make a type specimen book. It has survived not only five
-                                            centuries, but also the leap into electronic typesetting, remaining
-                                            essentially unchanged. It was popularised in the 1960s with the release of
-                                            Letraset sheets containing Lorem Ipsum passages, and more recently with
-                                            desktop publishing software like Aldus PageMaker including versions of Lorem
-                                            Ipsum.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- cards -->
-                <!-- pgination -->
-                <div class="pagination-row">
-                    <span>Rows per page</span>
-                    <div class="form-group pagination-pages mx-4">
-                        <select id="pagination" class="form-control bg-secondary text-white">
-                            <option selected>50</option>
-                            <option>40</option>
-                            <option>30</option>
-                            <option>20</option>
-                            <option>10</option>
-                        </select>
-                    </div>
-                    <nav aria-label="Page navigation example">
-                        <ul class="pagination">
-                            <li class="page-item">
-                                <a class="page-link" href="#" aria-label="Previous">
-                                    <span aria-hidden="true">&laquo;</span>
-                                    <span class="sr-only">Previous</span>
-                                </a>
-                            </li>
-                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item">
-                                <a class="page-link" href="#" aria-label="Next">
-                                    <span aria-hidden="true">&raquo;</span>
-                                    <span class="sr-only">Next</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- modal -->
-    <div class="modal fade" id="ModalDELETE" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <h5 class="modal-title" id="exampleModalLabel">Do you really want to DELETE COINSERV?</h5>
-                <div class="modal-footer justify-content-center">
-                    <button type="button" class="btn btn-primary px-4">Yes</button>
-                    <button type="button" class="btn btn-danger px-4" data-dismiss="modal">No</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-        crossorigin="anonymous"></script>
-    <script src="./js/main.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+            crossorigin="anonymous"></script>
+        <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+        <script src="./js/main.js"></script>
 </body>
 
 </html>

@@ -122,6 +122,10 @@ h6 {
   display: block;
 }
 
+.card {
+  border: none;
+}
+
 .card-name {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -133,6 +137,7 @@ h6 {
   background: #f8f9fa;
   position: relative;
   z-index: 2;
+  padding: 10px 0;
 }
 
 .card-name span {
@@ -146,22 +151,11 @@ h6 {
   background: #d6d9dd;
 }
 
-.edit-card-btn {
-  position: absolute;
-  top: 18px;
-  z-index: 3;
-  right: 30px;
-}
-
 .wrapper-card {
   position: relative;
-  margin-bottom: 20px;
-}
-
-.card-body {
-  border: 2px solid #F8F9FB;
-  border-radius: 4px;
-  top: -2px;
+  margin-bottom: 0.25rem;
+  border: 2px solid #d6d9dd;
+  border-radius: 7px;
 }
 
 .card-icons {
@@ -277,6 +271,43 @@ h6 {
   margin-left: auto;
 }
 
+.pagination li.active a {
+  z-index: 2;
+  color: #0056b3;
+  text-decoration: none;
+  background-color: #e9ecef;
+  border-color: #dee2e6;
+}
+
+.pagination a {
+  position: relative;
+  display: block;
+  padding: .5rem .75rem;
+  margin-left: -1px;
+  line-height: 1.25;
+  color: #007bff;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+}
+
+.pagination a:hover {
+  z-index: 2;
+  color: #0056b3;
+  text-decoration: none;
+  background-color: #e9ecef;
+  border-color: #dee2e6;
+}
+
+.popover-header {
+  text-align: center;
+}
+
+.popover-body .media {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .addCoin-title-row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -314,6 +345,88 @@ h6 {
 
 .nav-pills .nav-link {
   border-radius: 0;
+}
+
+.clear-form-file {
+  position: absolute;
+  top: 0px;
+  color: #000000;
+  right: 0;
+  z-index: 9;
+  width: 38px;
+  height: 38px;
+  background: #F5C6CB;
+  border: 1px solid #6C757D;
+  border-radius: 7px;
+}
+
+.clear-form-file i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.custom-file-input:lang(en) ~ .custom-file-label::after {
+  content: "Upload";
+  cursor: pointer;
+}
+
+.custom-file-input,
+.custom-file {
+  cursor: pointer;
+}
+
+.custom-file .custom-file-label {
+  text-align: center;
+}
+
+.custom-file-label::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 3;
+  display: block;
+  height: calc(1.5em + .75rem);
+  padding: .375rem .75rem;
+  line-height: 1.5;
+  color: #495057;
+  content: "Browse";
+  background-color: #C3E6CB !important;
+  border-left: inherit;
+  border-color: #6C757D !important;
+  border: 1px solid;
+  border-radius: 0 .25rem .25rem 0;
+  cursor: pointer;
+}
+
+.custom-file-label::after {
+  position: absolute;
+  top: 0;
+  right: initial;
+  bottom: 0;
+  z-index: 3;
+  display: block;
+  height: calc(1.5em + .75rem);
+  padding: .375rem .75rem;
+  line-height: 1.5;
+  color: #495057;
+  content: "Browse";
+  background-color: #e9ecef;
+  border-left: inherit;
+  border-radius: 0 .25rem .25rem 0;
+  cursor: pointer;
+}
+
+.balance-wrapper .custom-control-label {
+  position: relative;
+  margin-bottom: 10px;
+  vertical-align: top;
+  padding: 3px;
 }
 
 .users-header-change {
@@ -780,14 +893,6 @@ h6 {
   margin-left: 50%;
 }
 
-.clear-form-file {
-  position: absolute;
-  top: 5px;
-  color: #000000;
-  right: 150px;
-  z-index: 9;
-}
-
 .form-knowledge {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -995,6 +1100,21 @@ h6 {
   margin-left: 5px;
 }
 
+.indicator-serv label,
+.indicator-win label,
+.indicator-dep label {
+  width: 90px;
+  height: 1px;
+  position: absolute;
+}
+
+.indicator-serv input,
+.indicator-win input,
+.indicator-dep input {
+  width: 90px;
+  position: relative;
+}
+
 .indicator-serv span,
 .indicator-win span,
 .indicator-dep span {
@@ -1007,9 +1127,9 @@ h6 {
   overflow: inherit;
 }
 
-.indicator-serv.active span::before,
-.indicator-win.active span::before,
-.indicator-dep.active span::before {
+.indicator-serv.active label::after,
+.indicator-win.active label::after,
+.indicator-dep.active label::after {
   content: '';
   background: #007BFF;
   width: 10px;
@@ -1035,5 +1155,39 @@ h6 {
   .modal-dialog {
     max-width: 580px;
     margin: 1.75rem auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .subtitle-row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .subtitle-row .custom-switch {
+    margin-left: 0;
+  }
+
+  .card-btns .col-lg-12 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+
+  .card-btns .col-lg-12 a {
+    margin: 10px;
+    text-align: center;
   }
 }

@@ -34,3 +34,12 @@ $(function () {
         items: 1,
     });
 });
+
+$(window).ready(function () {
+    var viewport = $(window).width();
+
+    if (viewport <= 759) {
+        var mvp = document.getElementById('vp');
+        mvp.setAttribute('content', 'user-scalable=no,width=480');
+    }
+});

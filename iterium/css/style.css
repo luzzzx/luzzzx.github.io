@@ -467,7 +467,7 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -590,6 +590,7 @@ nav {
 
 .burger-header.active span {
   height: 0;
+  background: transparent;
 }
 
 .burger-header.active span:before {
@@ -614,19 +615,11 @@ nav {
   position: absolute;
   right: 490px;
   top: 0;
-  -webkit-transform: translateX(1000%);
-      -ms-transform: translateX(1000%);
-          transform: translateX(1000%);
   height: 100vh;
+  min-height: 100%;
   width: 100%;
   background-color: #232424;
-  -webkit-transition: ease-in-out .3s;
-  -o-transition: ease-in-out .3s;
-  transition: ease-in-out .3s;
   padding: 54px 94px 75px 127px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -634,6 +627,15 @@ nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  display: none;
+  -webkit-transform: translateX(1000%);
+      -ms-transform: translateX(1000%);
+          transform: translateX(1000%);
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  -o-transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 
 .burger-menu__phone {
@@ -646,6 +648,9 @@ nav {
 }
 
 .burger-menu.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-transform: translateX(100%);
       -ms-transform: translateX(100%);
           transform: translateX(100%);
@@ -1173,7 +1178,6 @@ nav {
   font-weight: 300;
   line-height: 30.01px;
   margin-left: 170px;
-  margin-top: 43px;
 }
 
 .form {
@@ -1469,13 +1473,13 @@ footer {
     padding-right: 10px;
     padding-left: 10px;
   }
-
-  #counter {
-    display: none;
-  }
 }
 
 @media (max-width: 1440px) {
+  #counter {
+    display: none;
+  }
+
   .comfort-card__img {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 25%;
@@ -1488,6 +1492,7 @@ footer {
 
   .comfort-card__text {
     margin-left: 0;
+    margin-top: 43px;
   }
 }
 
@@ -1697,12 +1702,32 @@ footer {
     font-size: 38px;
   }
 
+  .advantages {
+    padding-top: 100px;
+  }
+
+  .comfort {
+    padding-top: 100px;
+  }
+
   .comfort-title {
     font-size: 25px;
   }
 
   .form-descrip h2 {
     font-size: 42px;
+  }
+
+  .footer-contact,
+  .footer-social,
+  .footer-nav {
+    margin-bottom: 85px;
+  }
+
+  .footer-contact:last-child,
+  .footer-social:last-child,
+  .footer-nav:last-child {
+    margin-bottom: 0;
   }
 
   .footer-nav {
@@ -1715,6 +1740,10 @@ footer {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 50%;
             flex: 0 0 50%;
+  }
+
+  .footer-rights {
+    width: 230px;
   }
 }
 

@@ -686,6 +686,7 @@ menu li a:hover {
     padding-top: 47px;
     padding-left: 20px;
     width: 100%;
+    overflow-Y: auto;
   }
 
   .menu-footer__rights div {
@@ -728,5 +729,15 @@ menu li a:hover {
   #slides .slide figcaption {
     font-size: 35px;
     line-height: 46px;
+    bottom: 9%;
+    right: 4%;
+    text-align: right;
+    -webkit-transform: translateY(-9%);
+        -ms-transform: translateY(-9%);
+            transform: translateY(-9%);
+  }
+
+  #slides .slide figcaption div {
+    margin-top: 30px;
   }
 }

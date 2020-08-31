@@ -4,372 +4,121 @@
 <head>
     <meta charset="UTF-8">
     <meta id="vp" name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/8a0c8e51ba.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/style.min.css">
     <title>Test</title>
 </head>
 
 <body>
-    <div class="wrapper">
-        <header>
-            <div class="main-wraper">
-                <div class="owl-carousel main-slider">
-                    <div class="main-slider__item">
-                        <img src="./img/mainbg.png" alt="main">
-                        <h2 class="main-slider__title">общественный туалет
-                            для городского парка</h2>
-                        <div class="main-slider__footer">
-                            <a href="#" class="main-slider__lang">LANGUAGE</a>
-                            <span>Сборно-разборные конструкции и здания</span>
-                            <a href="#" class="main-slider__more">СМОТРЕТЬ ПРОЕКТ</a>
-                        </div>
-                    </div>
-                    <div class="main-slider__item">
-                        <img src="./img/mainbg.png" alt="main">
-                        <h2 class="main-slider__title">Заголовок для слайдера</h2>
-                        <div class="main-slider__footer">
-                            <a href="#" class="main-slider__lang">LANGUAGE</a>
-                            <span>Сборно-разборные конструкции и здания</span>
-                            <a href="#" class="main-slider__more">СМОТРЕТЬ ПРОЕКТ</a>
-                        </div>
-                    </div>
-                    <div class="main-slider__item">
-                        <img src="./img/mainbg.png" alt="main">
-                        <h2 class="main-slider__title">Заголовок для слайдера один</h2>
-                        <div class="main-slider__footer">
-                            <a href="#" class="main-slider__lang">LANGUAGE</a>
-                            <span>Сборно-разборные конструкции и здания</span>
-                            <a href="#" class="main-slider__more">СМОТРЕТЬ ПРОЕКТ</a>
-                        </div>
-                    </div>
-                    <div class="main-slider__item">
-                        <img src="./img/mainbg.png" alt="main">
-                        <h2 class="main-slider__title">Заголовок для слайдера два</h2>
-                        <div class="main-slider__footer">
-                            <a href="#" class="main-slider__lang">LANGUAGE</a>
-                            <span>Сборно-разборные конструкции и здания</span>
-                            <a href="#" class="main-slider__more">СМОТРЕТЬ ПРОЕКТ</a>
-                        </div>
-                    </div>
-                    <div class="main-slider__item">
-                        <img src="./img/mainbg.png" alt="main">
-                        <h2 class="main-slider__title">Заголовок для слайдера два</h2>
-                        <div class="main-slider__footer">
-                            <a href="#" class="main-slider__lang">LANGUAGE</a>
-                            <span>Сборно-разборные конструкции и здания</span>
-                            <a href="#" class="main-slider__more">СМОТРЕТЬ ПРОЕКТ</a>
-                        </div>
-                    </div>
+    <header>
+        <nav>
+            <a href="#">
+                <img src="./img/logo.png" alt="logo">
+            </a>
+            <div class="header-social">
+                <a class="header-social__icon" href="#"></a>
+                <a class="header-social__icon" href="#"></a>
+                <a class="header-social__icon" href="#"></a>
+            </div>
+            <a class="header-phone" href="#">8 (800) 2000 500</a>
+            <input id="toggle" type="checkbox">
+            <label class="menu__btn" for="toggle">
+                <span></span>
+            </label>
+            <menu>
+                <a class="menu__phone" href="#">8 (800) 2000 500</a>
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Проекты</a></li>
+                <li><a href="#">История</a></li>
+                <li><a href="#">Новости</a></li>
+                <li><a href="#">Контакты</a></li>
+                <div class="menu-footer__rights">
+                    <a href="#">LANGUAGE</a>
+                    <div>Все права защищены<span>© 2020 ITERIUM.TECH</span></div>
                 </div>
-                <div id="counter"></div>
-                <nav>
-                    <div class="logo">
-                        <a href="#">
-                            <img src="./img/logo.png" alt="logo">
-                        </a>
-                    </div>
-                    <div class="nav-menu">
-                        <div class="social-header">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-vk"></i></a>
-                        </div>
-                        <a class="header-phone" href="tel:88002000500">8 (800) 2000 500</a>
-                        <div class="burger-header">
-                            <span></span>
-                        </div>
-                        <div class="burger-menu">
-                            <a class="burger-menu__phone" href="tel:88002000500">8 (800) 2000 500</a>
-                            <ul>
-                                <li><a href="#">Главная</a></li>
-                                <li><a href="#">Проекты</a></li>
-                                <li><a href="#">История</a></li>
-                                <li><a href="#">Новости</a></li>
-                                <li><a href="#">Контакты</a></li>
-                            </ul>
-                            <div class="menu-footer">
-                                <a href="#">LANGUAGE</a>
-                                <div class="social-menu">
-                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#"><i class="fab fa-instagram"></i></a>
-                                    <a href="#"><i class="fab fa-vk"></i></a>
+            </menu>
+        </nav>
+        <article id="slider">
+            <input type="radio" name="slider" id="slide1" checked>
+            <input type="radio" name="slider" id="slide2">
+            <input type="radio" name="slider" id="slide3">
+            <input type="radio" name="slider" id="slide4">
+            <input type="radio" name="slider" id="slide5">
+            <div id="slides">
+                <div id="overflow">
+                    <div class="inner">
+                        <figure class="slide slide_1">
+                            <img src="./img/mainbg.png" alt="mainslide">
+                            <figcaption>общественный туалет<br> <span>
+                                    для городского парка</span>
+                                <div>
+                                    <span>Сборно-разборные конструкции и здания</span>
+                                    <a href="#">СМОТРЕТЬ ПРОЕКТ</a>
                                 </div>
-                                <div class="menu-footer__rights">
-                                    Все права защищены
-                                    <span> © 2020 ITERIUM.TECH</span>
+                            </figcaption>
+                        </figure>
+                        <figure class="slide slide_2">
+                            <img src="./img/mainbg.png" alt="mainslide">
+                            <figcaption>общественный туалет <br>
+                                для городского парка2
+                                <div>
+                                    <span>Сборно-разборные конструкции и здания</span>
+                                    <a href="#">СМОТРЕТЬ ПРОЕКТ</a>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-        </header>
-        <section class="best">
-            <div class="content-row">
-                <div class="content-col">
-                    <div class="content-wrapper">
-                        <div class="best-content">
-                            <h2 class="content-title">ЭТО ЛУЧШЕ</h2>
-                            <h3>Стационарные
-                                яхты из будущего</h3>
-                            <p>
-                                Лёгкие и футуристичные, сборно-разборные и автономные. Эти здания очень необычные. Они
-                                не
-                                нуждаются в фундаменте и могут стоять где угодно:
-                                в лесу или на городской площади, на парковке перед торговым центром или в парке. Или
-                                даже
-                                прямо
-                                в воде, возле берега. Не обязательно покупать
-                                землю - можно просто взять в аренду лесной участок или акваторию живописного озера.
-                            </p>
-                            <p>
-                                Не нужно тратить время и средства на подготовку проектной документации и получение
-                                разрешения
-                                на строительство. Это не объекты недвижимости.
-                                Это лучше.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="content-col">
-                    <div class="slider-best owl-carousel">
-                        <img src="./img/01.png" alt="slide">
-                        <img src="./img/01.png" alt="slide">
-                        <img src="./img/01.png" alt="slide">
-                        <img src="./img/01.png" alt="slide">
+                            </figcaption>
+                        </figure>
+                        <figure class="slide slide_3">
+                            <img src="./img/mainbg.png" alt="mainslide">
+                            <figcaption>общественный туалет
+                                для городского парка3
+                                <div>
+                                    <span>Сборно-разборные конструкции и здания</span>
+                                    <a href="#">СМОТРЕТЬ ПРОЕКТ</a>
+                                </div>
+                            </figcaption>
+                        </figure>
+                        <figure class="slide slide_4">
+                            <img src="./img/mainbg.png" alt="mainslide">
+                            <figcaption>общественный туалет
+                                для городского парка4
+                                <div>
+                                    <span>Сборно-разборные конструкции и здания</span>
+                                    <a href="#">СМОТРЕТЬ ПРОЕКТ</a>
+                                </div>
+                            </figcaption>
+                        </figure>
+                        <figure class="slide slide_5">
+                            <img src="./img/mainbg.png" alt="mainslide">
+                            <figcaption>общественный туалет
+                                для городского парка5
+                                <div>
+                                    <span>Сборно-разборные конструкции и здания</span>
+                                    <a href="#">СМОТРЕТЬ ПРОЕКТ</a>
+                                </div>
+                            </figcaption>
+                        </figure>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section class="advantages">
-            <div class="container-advantages">
-                <h2 class="content-title">ПРЕИМУЩЕСТВА</h2>
-                <div class="content-row">
-                    <div class="content-col">
-                        <div class="advantages-list">
-                            <ul>
-                                <li>
-                                    <p>Можно разместить там, где запрещено строить</p>
-                                </li>
-                                <li>
-                                    <p>Идеальное решение для территорий в аренде</p>
-                                </li>
-                                <li>
-                                    <p>Не является недвижимостью</p>
-                                </li>
-                                <li>
-                                    <p>Фундамент не нужен</p>
-                                </li>
-                                <li>
-                                    <p>Всегда можно разобрать и перевезти в другое место</p>
-                                </li>
-                                <li>
-                                    <p>Не требует подключения к коммуникациям</p>
-                                </li>
-                                <li>
-                                    <p>Футуристичная архитектура в стиле hi-tech</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="content-col">
-                        <div class="advantages-list">
-                            <ul>
-                                <li>
-                                    <p>Можно разместить там, где запрещено строить</p>
-                                </li>
-                                <li>
-                                    <p>Идеальное решение для территорий в аренде</p>
-                                </li>
-                                <li>
-                                    <p>Не является недвижимостью</p>
-                                </li>
-                                <li>
-                                    <p>Фундамент не нужен</p>
-                                </li>
-                                <li>
-                                    <p>Всегда можно разобрать и перевезти в другое место</p>
-                                </li>
-                                <li>
-                                    <p>Не требует подключения к коммуникациям</p>
-                                </li>
-                                <li>
-                                    <p>Футуристичная архитектура в стиле hi-tech</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                <div id="bullets">
+                    <label for="slide1"></label>
+                    <label for="slide2"></label>
+                    <label for="slide3"></label>
+                    <label for="slide4"></label>
+                    <label for="slide5"></label>
+                    <a href="#" class="lang">LANGUAGE</a>
+                </div>
+                <div id="counter">
+                    <span>01</span>
+                    <span>02</span>
+                    <span>03</span>
+                    <span>04</span>
+                    <span>05</span>
+                    /05
                 </div>
             </div>
-        </section>
-        <section class="transform">
-            <div class="content-row">
-                <div class="content-col">
-                    <div class="slider-best owl-carousel">
-                        <img src="./img/02.png" alt="slide">
-                        <img src="./img/02.png" alt="slide">
-                        <img src="./img/02.png" alt="slide">
-                        <img src="./img/02.png" alt="slide">
-                    </div>
-                </div>
-                <div class="content-col">
-                    <div class="content-wrapper">
-                        <div class="transform-content">
-                            <h2>ТРАНСФОРМАЦИЯ И КОМФОРТ</h2>
-                            <h3>КОМФОРТАБЕЛЬНЫЕ
-                                БИЗНЕС-ПОМЕЩЕНИЯ</h3>
-                            <p>
-                                За пару часов заменить стену на панорамное окно, расширить санузел или перенести его в
-                                любую другую часть здания.
-                            </p>
-                            <p>
-
-                                На лето превратить отапливаемый банкетный зал в открытую террасу или добавить второй
-                                этаж. Без каких-либо строительных работ и грузоподъёмной техники. В капитальных зданиях
-                                такое невозможно представить. Сборно-разборная конструкция предусматривает это по
-                                определению.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="comfort">
-            <div class="container">
-                <h2 class="comfort-title">ТРАНСФОРМАЦИЯ И КОМФОРТ</h2>
-                <div class="comfort-row">
-                    <div class="comfort-col">
-                        <div class="comfort-card">
-                            <div class="comfort-card__img">
-                                <img src="./img/i.png" alt="icon">
-                            </div>
-                            <h2 class="comfort-card__title">
-                                100% свободная
-                                планировка</h2>
-                            <p class="comfort-card__text">
-                                За пару часов заменить стену
-                                на панорамное окно, расширить санузел или перенести его
-                                в любую другую часть
-                            </p>
-                        </div>
-                    </div>
-                    <div class="comfort-col">
-                        <div class="comfort-card">
-                            <div class="comfort-card__img">
-                                <img src="./img/i.png" alt="icon">
-                            </div>
-                            <h2 class="comfort-card__title">
-                                100% свободная
-                                планировка</h2>
-                            <p class="comfort-card__text">
-                                За пару часов заменить стену
-                                на панорамное окно, расширить санузел или перенести его
-                                в любую другую часть
-                            </p>
-                        </div>
-                    </div>
-                    <div class="comfort-col">
-                        <div class="comfort-card">
-                            <div class="comfort-card__img">
-                                <img src="./img/i.png" alt="icon">
-                            </div>
-                            <h2 class="comfort-card__title">
-                                100% свободная
-                                планировка</h2>
-                            <p class="comfort-card__text">
-                                За пару часов заменить стену
-                                на панорамное окно, расширить санузел или перенести его
-                                в любую другую часть
-                            </p>
-                        </div>
-                    </div>
-                    <div class="comfort-col">
-                        <div class="comfort-card">
-                            <div class="comfort-card__img">
-                                <img src="./img/i.png" alt="icon">
-                            </div>
-                            <h2 class="comfort-card__title">
-                                100% свободная
-                                планировка</h2>
-                            <p class="comfort-card__text">
-                                За пару часов заменить стену
-                                на панорамное окно, расширить санузел или перенести его
-                                в любую другую часть
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="form">
-            <div class="container">
-                <div class="form-row">
-                    <div class="form-descrip">
-                        <h2>ОСТАВЬТЕ ЗАЯВКУ <br>
-                            НА ПРОЕКТИРОВАНИЕ</h2>
-                        <p>Заполните необходимые поля, после чего нажмите кнопку отправить. Наш менеджер свяжется с вами
-                            в ближайшее время для обсуждения вашего проекта.</p>
-                    </div>
-                    <div class="form-main">
-                        <div class="form-body">
-                            <input type="text" placeholder="Ваше имя*">
-                            <input type="tel" placeholder="Номер телефона*">
-                            <input type="email" placeholder="E-mail*">
-                            <a href="#" class="form-btn">ОТПРАВИТЬ ЗАЯВКУ</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <footer>
-            <div class="container">
-                <a href="#" class="footer-logo">
-                    <img src="./img/logo.png" alt="logo">
-                </a>
-                <div class="footer-row">
-                    <div class="footer-contact">
-                        <h2>Контакты</h2>
-                        <p> 36340 г. Москва <br>
-                            ул. Северная д 245, 3 этаж, 102 оф.</p>
-                        <a href="#">
-                            8 (800) 2000 600
-                        </a>
-                        <a href="#">
-                            info@iterium.studio.com
-                        </a>
-                    </div>
-                    <div class="footer-nav">
-                        <h2>НАВИГАЦИЯ</h2>
-                        <ul>
-                            <li><a href="#">Компания</a> </li>
-                            <li><a href="#">Структура</a> </li>
-                            <li><a href="#">Контакты</a> </li>
-                            <li><a href="#">Проекты</a> </li>
-                            <li><a href="#">Заявка</a> </li>
-                            <li><a href="#">Оферта</a> </li>
-                            <li><a href="#">Портфолио</a> </li>
-                            <li><a href="#">Вакансии</a> </li>
-                            <li><a href="#">Новости</a> </li>
-                        </ul>
-                    </div>
-                    <div class="footer-social">
-                        <h2>СОЦСЕТИ</h2>
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-vk"></i></a>
-                    </div>
-                </div>
-                <div class="footer-rights">
-                    © 2020 <span>ITERIUM.SRUDIO</span> Все права защищены.
-                </div>
-            </div>
-        </footer>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
-        crossorigin="anonymous"></script>
-    <script src="./js/owl.carousel.min.js"></script>
-    <script src="./js/main.js"></script>
+        </article>
+    </header>
+    <main></main>
+    <footer></footer>
 </body>
 
 </html>

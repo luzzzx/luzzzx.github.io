@@ -1793,6 +1793,13 @@ footer .menu-row nav menu li a {
 }
 
 @media (max-width: 683px) {
+  header::before {
+    background: url("../img/top-bg-m.svg") center no-repeat;
+    background-size: cover;
+    height: 6px;
+    width: 100%;
+  }
+
   .header-top {
     background: #FFFFFF;
     -webkit-box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.07);
@@ -1983,9 +1990,6 @@ footer .menu-row nav menu li a {
     border-bottom: 1px solid #F0F0F0;
     padding: 10px 0;
     margin-bottom: 0;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 100%;
-            flex: 0 0 100%;
     padding: 7px 0 11px 0;
     -ms-flex-pack: distribute;
         justify-content: space-around;
@@ -2040,9 +2044,6 @@ footer .menu-row nav menu li a {
     -webkit-box-shadow: 0 10px 22px rgba(0, 0, 0, 0.06);
             box-shadow: 0 10px 22px rgba(0, 0, 0, 0.06);
     margin-bottom: 0;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 100%;
-            flex: 0 0 100%;
     margin-right: -20px;
     margin-left: -20px;
     margin-bottom: 7px;
@@ -2126,10 +2127,12 @@ footer .menu-row nav menu li a {
   .desc-text {
     overflow: hidden;
     -o-text-overflow: ellipsis;
-       text-overflow: ellipsis;
+    text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 8;
     -webkit-box-orient: vertical;
+    display: -webkit-box;
+    height: 180px;
   }
 
   .desc-more__btn {
@@ -2375,7 +2378,6 @@ footer .menu-row nav menu li a {
   }
 
   .footer-row nav menu {
-    display: none;
     border-bottom: 1px solid #2D2D2D;
   }
 

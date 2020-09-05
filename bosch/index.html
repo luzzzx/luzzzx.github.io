@@ -28,6 +28,9 @@
             </div>
             <div class="header-top__search">
                 <input type="text" placeholder="Поиск">
+                <span class="mob-search">
+                    <img src="./img/search-btn.svg" alt="search">
+                </span>
             </div>
             <menu class="header-top__privat">
                 <li><a class="header-top__privat-room" href="#">Личный кабинет</a></li>
@@ -40,6 +43,7 @@
                 <div class="header-top__basket-img">
                     <img src="./img/basket.svg" alt="basket">
                 </div>
+                <span class="mob-count">0</span>
                 <div class="header-top__basket-name">
                     <p>Корзина</p>
                     <span class="basket-qny">5 товаров</span>
@@ -136,18 +140,19 @@
                                 <img src="./img/star-r.svg" alt="star">
                                 <img src="./img/star-t.svg" alt="star">
                                 <img src="./img/star-t.svg" alt="star">
+                                <a href="#">3 отзыва</a>
                             </div>
                             <div class="product-card__caption-compare">
                                 <a href="#" class="label-share">
-                                    <img src="./img/share-sm.svg" alt="share">
+                                    <img src="./img/compare-sm.svg" alt="share">
                                     Сравнить
                                 </a>
                                 <a href="#" class="label-compare">
-                                    <img src="./img/compare-sm.svg" alt="compare">
+                                    <img src="./img/share-sm.svg" alt="compare">
                                     Поделиться
                                 </a>
                                 <a href="#" class="label-like">
-                                    <img src="./img/share-sm.svg" alt="save">
+                                    <img src="./img/save-sm.svg" alt="save">
                                     В избранное
                                 </a>
                             </div>
@@ -184,9 +189,37 @@
                                 <a href="#"><img src="./img/product-thumb.jpg" alt="color"></a>
                             </div>
                         </div>
+                        <div class="menu-mobile">
+                            <menu>
+                                <li>
+                                    <a href="#">
+                                        <img src="./img/burger-mob.svg" alt="burger">
+                                        Меню
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="./img/room-mob.svg" alt="burger">
+                                        Кабинет
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="./img/phone-mob.svg" alt="burger">
+                                        Телефон
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="./img/whats-mob.svg" alt="burger">
+                                        WhatsApp
+                                    </a>
+                                </li>
+                            </menu>
+                        </div>
                     </article>
                 </div>
-                <div class="row">
+                <div class="row-feature">
                     <article class="feature">
                         <h2>Характеристики</h2>
                         <div class="feature-table">
@@ -214,95 +247,105 @@
                             <span class="table-val">203 х 60 х 66 мм</span>
                             <div class="table-name"><span>Цвет</span></div>
                             <span class="table-val">Черный</span>
+                            <a href="#" class="feature-more__btn">Посмотреть все харрактеристики</a>
                         </div>
-                        <h3>Холод</h3>
-                        <div class="feature-table">
-                            <div class="table-name"><span>Система NoFrost</span></div>
-                            <span class="table-val">Есть, полный</span>
-                        </div>
-                        <h3>Холодильное отделение</h3>
-                        <div class="feature-table">
-                            <div class="table-name"><span>Количество полок в холодильном отделении</span></div>
-                            <span class="table-val">4</span>
-                            <div class="table-name"><span>Количество ящиков в холодильном отделении</span></div>
-                            <span class="table-val">3</span>
-                            <div class="table-name"><span>Материал полок</span></div>
-                            <span class="table-val">Закаленное стекло / пластик / металл</span>
-                            <div class="table-name"><span>Кол-во переставляемых полок в холод.отделении</span></div>
-                            <span class="table-val">3 + полка для бутылок</span>
-                            <div class="table-name"><span>Количество подставок для яиц</span></div>
-                            <span class="table-val">4 (16 яиц)</span>
-                        </div>
-                        <h3>Морозильное отделение</h3>
-                        <div class="feature-table">
-                            <div class="table-name"><span>Количество выдвижных ящиков в морозильной камере (шт)</span>
+                        <div class="feature-more">
+                            <h3>Холод</h3>
+                            <div class="feature-table">
+                                <div class="table-name"><span>Система NoFrost</span></div>
+                                <span class="table-val">Есть, полный</span>
                             </div>
-                            <span class="table-val">3</span>
-                            <div class="table-name"><span>Количество морозильных отделений с откидной крышкой
-                                    (шт)</span></div>
-                            <span class="table-val">3</span>
-                            <div class="table-name"><span>Регулируемая температура мороз.отделение</span></div>
-                            <span class="table-val">Есть</span>
-                        </div>
-                        <h3>Холодильное отделение</h3>
-                        <div class="feature-table">
-                            <div class="table-name"><span>Объем холодильной камеры</span></div>
-                            <span class="table-val">279 л (полезный объем)</span>
-                            <div class="table-name"><span>Объем морозильной камеры </span></div>
-                            <span class="table-val">87 л (полезный объем)</span>
-                        </div>
-                        <h3>Мощность</h3>
-                        <div class="feature-table">
-                            <div class="table-name"><span>Напряжение (В)</span></div>
-                            <span class="table-val">220 - 240 В</span>
-                        </div>
-                        <h3>Другие функции и особенности</h3>
-                        <div class="feature-table">
-                            <div class="table-name"><span>Индикатор открытой двери</span></div>
-                            <span class="table-val">Есть</span>
-                            <div class="table-name"><span>Индикация температуры для холод.отделения</span></div>
-                            <span class="table-val">Есть</span>
-                            <div class="table-name"><span>Генератор льда</span></div>
-                            <span class="table-val">Нет</span>
-                            <div class="table-name"><span>Возможность перевешивания двери</span></div>
-                            <span class="table-val">Есть</span>
-                            <div class="table-name"><span>Режим суперзамораживания</span></div>
-                            <span class="table-val">Есть</span>
-                            <div class="table-name"><span>Полка для бутылок</span></div>
-                            <span class="table-val">Есть (5 бутылок)</span>
-                            <div class="table-name"><span>Страна производства</span></div>
-                            <span class="table-val">Россия</span>
-                            <div class="table-name"><span>Режим отпуск</span></div>
-                            <span class="table-val">Есть</span>
-                            <div class="table-name"><span>Освещение</span></div>
-                            <span class="table-val">LED light, LED spot</span>
+                            <h3>Холодильное отделение</h3>
+                            <div class="feature-table">
+                                <div class="table-name"><span>Количество полок в холодильном отделении</span></div>
+                                <span class="table-val">4</span>
+                                <div class="table-name"><span>Количество ящиков в холодильном отделении</span></div>
+                                <span class="table-val">3</span>
+                                <div class="table-name"><span>Материал полок</span></div>
+                                <span class="table-val">Закаленное стекло / пластик / металл</span>
+                                <div class="table-name"><span>Кол-во переставляемых полок в холод.отделении</span></div>
+                                <span class="table-val">3 + полка для бутылок</span>
+                                <div class="table-name"><span>Количество подставок для яиц</span></div>
+                                <span class="table-val">4 (16 яиц)</span>
+                            </div>
+                            <h3>Морозильное отделение</h3>
+                            <div class="feature-table">
+                                <div class="table-name"><span>Количество выдвижных ящиков в морозильной камере
+                                        (шт)</span>
+                                </div>
+                                <span class="table-val">3</span>
+                                <div class="table-name"><span>Количество морозильных отделений с откидной крышкой
+                                        (шт)</span></div>
+                                <span class="table-val">3</span>
+                                <div class="table-name"><span>Регулируемая температура мороз.отделение</span></div>
+                                <span class="table-val">Есть</span>
+                            </div>
+                            <h3>Холодильное отделение</h3>
+                            <div class="feature-table">
+                                <div class="table-name"><span>Объем холодильной камеры</span></div>
+                                <span class="table-val">279 л (полезный объем)</span>
+                                <div class="table-name"><span>Объем морозильной камеры </span></div>
+                                <span class="table-val">87 л (полезный объем)</span>
+                            </div>
+                            <h3>Мощность</h3>
+                            <div class="feature-table">
+                                <div class="table-name"><span>Напряжение (В)</span></div>
+                                <span class="table-val">220 - 240 В</span>
+                            </div>
+                            <h3>Другие функции и особенности</h3>
+                            <div class="feature-table">
+                                <div class="table-name"><span>Индикатор открытой двери</span></div>
+                                <span class="table-val">Есть</span>
+                                <div class="table-name"><span>Индикация температуры для холод.отделения</span></div>
+                                <span class="table-val">Есть</span>
+                                <div class="table-name"><span>Генератор льда</span></div>
+                                <span class="table-val">Нет</span>
+                                <div class="table-name"><span>Возможность перевешивания двери</span></div>
+                                <span class="table-val">Есть</span>
+                                <div class="table-name"><span>Режим суперзамораживания</span></div>
+                                <span class="table-val">Есть</span>
+                                <div class="table-name"><span>Полка для бутылок</span></div>
+                                <span class="table-val">Есть (5 бутылок)</span>
+                                <div class="table-name"><span>Страна производства</span></div>
+                                <span class="table-val">Россия</span>
+                                <div class="table-name"><span>Режим отпуск</span></div>
+                                <span class="table-val">Есть</span>
+                                <div class="table-name"><span>Освещение</span></div>
+                                <span class="table-val">LED light, LED spot</span>
+                            </div>
                         </div>
                     </article>
                     <article class="specification">
                         <div class="desc">
                             <h2>Описание</h2>
-                            <p>
-                                Эта модель будет замечательным приобретением для тех, кому необходимо хранить
-                                действительно
-                                большое количество разнообразных продуктов. Если у вас большая семья или вы любите
-                                запасаться едой на долгое время, изредка заезжая в магазин, то вы особенно оцените
-                                возможности этого прибора. Производительный компрессор: поддерживает температуру в обоих
-                                отделениях на заданном уровне и работает с низким уровнем шума. Технология NoFrost:
-                                система
-                                ветреного автоматического размораживания равномерно распределяет холодный сухой воздух
-                                так,
-                                чтобы в камере холодильника не образовывался лед. Модель снабжена зоной свежести
-                                VitaFresh
-                                plus,которя позволяет сохронять продукты более длительное время.
-                            </p>
-                            <p>
-                                Технология VitaFresh: сохрёаняет продукты свежими в два раза дольше – благодаря очень
-                                низким
-                                температурам для рыбы и для мяса и оптимальной влажности для фруктов и овощей;
-                                Свежесть и чистота в холодильнике благодаря специальному фильтру AirFresh, который
-                                задерживает неприятные запахи и бактерии;
-                                Автоматическая установка экономичного режима работы;
-                            </p>
+                            <div class="desc-text">
+                                <p>
+                                    Эта модель будет замечательным приобретением для тех, кому необходимо хранить
+                                    действительно
+                                    большое количество разнообразных продуктов. Если у вас большая семья или вы любите
+                                    запасаться едой на долгое время, изредка заезжая в магазин, то вы особенно оцените
+                                    возможности этого прибора. Производительный компрессор: поддерживает температуру в
+                                    обоих
+                                    отделениях на заданном уровне и работает с низким уровнем шума. Технология NoFrost:
+                                    система
+                                    ветреного автоматического размораживания равномерно распределяет холодный сухой
+                                    воздух
+                                    так,
+                                    чтобы в камере холодильника не образовывался лед. Модель снабжена зоной свежести
+                                    VitaFresh
+                                    plus,которя позволяет сохронять продукты более длительное время.
+                                </p>
+                                <p>
+                                    Технология VitaFresh: сохрёаняет продукты свежими в два раза дольше – благодаря
+                                    очень
+                                    низким
+                                    температурам для рыбы и для мяса и оптимальной влажности для фруктов и овощей;
+                                    Свежесть и чистота в холодильнике благодаря специальному фильтру AirFresh, который
+                                    задерживает неприятные запахи и бактерии;
+                                    Автоматическая установка экономичного режима работы;
+                                </p>
+                            </div>
+                            <a href="#" class="desc-more__btn">Посмотреть полное описпние</a>
                         </div>
                         <div class="documentation">
                             <h2>Дополнительная документация <span>3</span></h2>
@@ -396,6 +439,7 @@
                                 </div>
                             </div>
                             <a href="#" class="comment-btn">Оставить отзыв</a>
+                            <a href="#" class="comments-more__btn">Посмотреть ещё <span>2</span> отзыва</a>
                         </div>
                     </article>
                 </div>
@@ -841,10 +885,10 @@
         </section>
     </main>
     <footer>
-        <div class="container">
+        <div class="container-footer">
             <div class="menu-row">
                 <nav>
-                    <span>Мелкая бытовая техника</span>
+                    <span class="togler">Мелкая бытовая техника</span>
                     <menu>
                         <li>
                             <a href="#">Мультиварки</a>
@@ -859,10 +903,10 @@
                             <a href="#">Соковыжималки</a>
                         </li>
                     </menu>
-                    <a href="#">+6 категорий</a>
+                    <a class="more-menu" href="#">+6 категорий</a>
                 </nav>
                 <nav>
-                    <span>Крупная бытовая техника</span>
+                    <span class="togler">Крупная бытовая техника</span>
                     <menu>
                         <li>
                             <a href="#">Холодильники</a>
@@ -877,10 +921,10 @@
                             <a href="#">Духовые шкафы</a>
                         </li>
                     </menu>
-                    <a href="#">+6 категорий</a>
+                    <a class="more-menu" href="#">+6 категорий</a>
                 </nav>
                 <nav>
-                    <span>Техника для дома</span>
+                    <span class="togler">Техника для дома</span>
                     <menu>
                         <li>
                             <a href="#">Утюги</a>
@@ -895,10 +939,10 @@
                             <a href="#">Сушильные машины</a>
                         </li>
                     </menu>
-                    <a href="#">+6 категорий</a>
+                    <a class="more-menu" href="#">+6 категорий</a>
                 </nav>
                 <nav>
-                    <span>Встраиваемая техника</span>
+                    <span class="togler">Встраиваемая техника</span>
                     <menu>
                         <li>
                             <a href="#">Холодильники</a>
@@ -923,7 +967,7 @@
                     <p>Флагманский интернет-магазин бытовой техники Bosch в Казахстане</p>
                 </div>
                 <nav>
-                    <span>Информация</span>
+                    <span class="togler">Информация</span>
                     <menu>
                         <li>
                             <a href="#">Магазины</a>
@@ -940,13 +984,12 @@
                     </menu>
                 </nav>
                 <div class="footer-contacts">
-                    <span class="footer-adress"><img src="./img/contacts.png" alt="cont"> Алматы, Самал-2, 111, <br>
+                    <span class="footer-adress"><img src="./img/contacts.png" alt="cont"> Алматы, Самал-2, 111,
                         Достык Plaza, 1 этаж</span>
                     <a href="#" class="footer-phone"><img src="./img/tel-footer.svg" alt="cont"> +7 747 094 85 04</a>
                     <span class="footer-whats">
                         <img src="./img/whats-footer.svg" alt="whats">
-                        +7 771 805 09 60 <br>
-                        WhatsApp консультации
+                        +7 771 805 09 60 WhatsApp консультации
                     </span>
                     <a href="#" class="footer-mail"><img src="./img/mail-footer.svg" alt="cont">info@bscenter.kz</a>
                 </div>
@@ -964,6 +1007,11 @@
                         <img src="./img/cloud-footer.png" alt="cloud">
                     </a>
                 </div>
+            </div>
+            <div class="mobile-cards">
+                <img src="./img/visa-footer.png" alt="visa">
+                <img src="./img/mcard-footer.png" alt="mcard">
+                <img src="./img/cloud-footer.png" alt="cloud">
             </div>
         </div>
     </footer>

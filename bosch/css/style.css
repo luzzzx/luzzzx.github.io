@@ -136,6 +136,7 @@ header::before {
   line-height: 18px;
   text-transform: capitalize;
   color: #000000;
+  margin-bottom: 4px;
 }
 
 .header-top__location-city {
@@ -266,7 +267,7 @@ header::before {
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
-  line-height: 21px;
+  line-height: 26px;
   color: #000000;
   -webkit-transition: linear .3s;
   -o-transition: linear .3s;
@@ -328,13 +329,13 @@ header::before {
 }
 
 .basket-qny::after {
-  content: '/';
+  content: ' /';
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
   line-height: 14px;
-  color: #6F6F6F;
+  color: #D7D7D7;
 }
 
 .drop-down::before {
@@ -396,6 +397,7 @@ menu li a:hover {
   display: inline-block;
   margin-right: 7px;
   vertical-align: middle;
+  margin-bottom: 2px;
 }
 
 .product-card {
@@ -433,6 +435,9 @@ menu li a:hover {
   display: -ms-flexbox;
   display: flex;
   width: 450px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .product-thumb {
@@ -500,6 +505,10 @@ menu li a:hover {
   margin-right: 18px;
 }
 
+.label-btns a:last-child {
+  margin-right: 14px;
+}
+
 .label-super {
   background: #DB00FF;
   border: 1px solid #DB00FF;
@@ -541,6 +550,14 @@ menu li a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.product-card__caption-marks .marks img {
+  margin-right: 5px;
+}
+
+.product-card__caption-marks .marks img:last-child {
+  margin-right: 0;
 }
 
 .product-card__caption-marks .marks a {
@@ -653,9 +670,15 @@ menu li a:hover {
 
 .product-card__caption-pice {
   margin-bottom: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.product-card__caption-pice span {
+.product-card__caption-pice p {
   margin-right: 20px;
 }
 
@@ -669,6 +692,10 @@ menu li a:hover {
   display: inline-block;
 }
 
+.product-card__caption-pice .cur-price span {
+  font-size: 25px;
+}
+
 .product-card__caption-pice .old-rpice {
   font-family: 'Roboto';
   font-style: normal;
@@ -676,8 +703,24 @@ menu li a:hover {
   font-size: 20px;
   line-height: 23px;
   color: #000000;
-  text-decoration: line-through;
   display: inline-block;
+  position: relative;
+}
+
+.product-card__caption-pice .old-rpice span {
+  font-size: 16px;
+}
+
+.product-card__caption-pice .old-rpice::before {
+  content: '';
+  width: 100%;
+  height: 1px;
+  background: #003EDF;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .product-card__caption-pice .bonus-price {
@@ -688,10 +731,14 @@ menu li a:hover {
   line-height: 19px;
   text-align: center;
   color: #FFFFFF;
-  padding: 5px 5px;
+  padding: 3px 8px;
   background: #003EDF;
   border-radius: 6px;
   display: inline-block;
+}
+
+.product-card__caption-pice .bonus-price span {
+  font-size: 14px;
 }
 
 .product-card__caption-buy {
@@ -704,6 +751,9 @@ menu li a:hover {
 
 .product-card__caption-color {
   display: inline-block;
+  position: relative;
+  top: -12px;
+  left: 30px;
 }
 
 .breadcrumb {
@@ -853,6 +903,7 @@ menu li a:hover {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin-top: 23px;
 }
 
 .feature {
@@ -988,7 +1039,7 @@ menu li a:hover {
 }
 
 .desc {
-  margin-bottom: 32px;
+  margin-bottom: 43px;
 }
 
 .desc-more__btn {
@@ -1006,7 +1057,7 @@ menu li a:hover {
 }
 
 .documentation {
-  margin-bottom: 32px;
+  margin-bottom: 45px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1037,6 +1088,7 @@ menu li a:hover {
 }
 
 .documentation-card p {
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -1187,6 +1239,11 @@ menu li a:hover {
   line-height: 23px;
   color: #000000;
   margin-right: 25px;
+  display: inline-block;
+}
+
+.card__curr-price span {
+  font-size: 16px;
 }
 
 .card .card-bonus {
@@ -1200,6 +1257,11 @@ menu li a:hover {
   border-radius: 6px;
   padding: 4px 8px;
   white-space: nowrap;
+  display: inline-block;
+}
+
+.card .card-bonus span {
+  font-size: 10px;
 }
 
 .card .old-price {
@@ -1209,8 +1271,24 @@ menu li a:hover {
   font-size: 16px;
   line-height: 19px;
   color: #000000;
-  text-decoration: line-through;
-  display: block;
+  display: inline-block;
+  position: relative;
+}
+
+.card .old-price span {
+  font-size: 14px;
+}
+
+.card .old-price::before {
+  content: '';
+  width: 100%;
+  height: 1px;
+  background: #003EDF;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .card-img {
@@ -1699,6 +1777,12 @@ footer .menu-row nav menu li a {
     margin-bottom: 10px;
   }
 
+  .product-card__caption-color {
+    position: unset;
+    top: 0;
+    left: 0;
+  }
+
   .specification {
     margin-left: 63px;
   }
@@ -1968,6 +2052,12 @@ footer .menu-row nav menu li a {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 
   .product-card__caption-pice span {

@@ -1884,6 +1884,13 @@ footer .menu-row nav menu li a {
     width: 100%;
   }
 
+  header {
+    position: fixed;
+    top: 0;
+    background: #ffffffff;
+    z-index: 99;
+  }
+
   .header-top {
     background: #FFFFFF;
     -webkit-box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.07);
@@ -1963,6 +1970,10 @@ footer .menu-row nav menu li a {
 
   .header-top__basket-name {
     display: none;
+  }
+
+  .product-card {
+    margin-top: 78px;
   }
 
   .product-card__img {
@@ -2151,6 +2162,10 @@ footer .menu-row nav menu li a {
     padding: 12px;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    background: #ffffffff;
+    z-index: 99;
   }
 
   .menu-mobile menu li a {
@@ -2513,6 +2528,7 @@ footer .menu-row nav menu li a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    margin-bottom: 78px;
   }
 }
 

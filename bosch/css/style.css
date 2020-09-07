@@ -148,15 +148,15 @@ header::before {
   content: '';
   background: url("../img/rec.svg") center no-repeat;
   background-size: cover;
-  width: 4px;
-  height: 4px;
+  width: 9px;
+  height: 7px;
   display: inline-block;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
-  left: -9px;
+  left: -14px;
 }
 
 .header-top__location-lang {
@@ -342,11 +342,13 @@ header::before {
   content: '';
   background: url("../img/rec.svg") center no-repeat;
   background-size: cover;
-  width: 4px;
-  height: 4px;
+  width: 9px;
+  height: 7px;
   display: inline-block;
   margin-right: 3px;
   vertical-align: middle;
+  position: relative;
+  bottom: 3px;
 }
 
 nav {
@@ -416,7 +418,7 @@ menu li a:hover {
 }
 
 .product-slide {
-  margin-left: 77px;
+  margin-left: 71px;
   border: 1px solid #E5E5E5;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -441,7 +443,7 @@ menu li a:hover {
 }
 
 .product-thumb {
-  width: 60px;
+  width: 64px;
   float: left;
   margin-right: -60px;
   text-align: center;
@@ -470,7 +472,7 @@ menu li a:hover {
 }
 
 .product-thumb .product-thumb__slide {
-  height: 60px !important;
+  height: 68px !important;
   margin: 1px;
   border: 1px solid transparent;
   display: -webkit-box;
@@ -490,7 +492,7 @@ menu li a:hover {
   border: 1px solid #E5E5E5;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin: 7px 0;
+  margin: 3px 0;
 }
 
 .product-thumb .product-thumb__slide.slick-slide.slick-current {
@@ -541,6 +543,9 @@ menu li a:hover {
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 40px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .product-card__caption-marks .marks {
@@ -586,6 +591,7 @@ menu li a:hover {
 
 .product-card__caption-compare a img {
   margin-right: 2px;
+  vertical-align: middle;
 }
 
 .product-card__caption-garanty {
@@ -669,7 +675,8 @@ menu li a:hover {
 }
 
 .product-card__caption-pice {
-  margin-bottom: 8px;
+  margin-top: 9px;
+  margin-bottom: 2px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -752,7 +759,7 @@ menu li a:hover {
 .product-card__caption-color {
   display: inline-block;
   position: relative;
-  top: -12px;
+  top: -13px;
   left: 30px;
 }
 
@@ -833,7 +840,7 @@ menu li a:hover {
   left: 0;
 }
 
-.btn-kredit span {
+.btn-kredit p {
   font-family: 'Roboto';
   display: inline-block;
   font-style: normal;
@@ -842,6 +849,12 @@ menu li a:hover {
   line-height: 24px;
   color: #F14635;
   margin-left: 52px;
+  display: inline-block;
+}
+
+.btn-kredit p p {
+  font-size: 10;
+  display: inline-block;
 }
 
 .menu-mobile menu {
@@ -871,6 +884,7 @@ menu li a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-top: 10px;
 }
 
 .color-row a {
@@ -943,9 +957,10 @@ menu li a:hover {
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
-  line-height: 27px;
+  line-height: 18px;
   color: #8A8A8A;
   display: inline-block;
+  margin-bottom: 14px;
 }
 
 .feature-table .table-name span {
@@ -959,7 +974,7 @@ menu li a:hover {
   content: "";
   position: absolute;
   left: 0;
-  top: 17px;
+  top: 11px;
   display: block;
   width: 100%;
   border-bottom: 1px solid #F0F0F0;
@@ -972,7 +987,7 @@ menu li a:hover {
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
-  line-height: 27px;
+  line-height: 18px;
   color: #000000;
   display: inline-block;
   vertical-align: top;
@@ -1195,6 +1210,10 @@ menu li a:hover {
   padding: 8px 12px;
 }
 
+.product-related {
+  margin-top: 25px;
+}
+
 .product-related,
 .recently-viewed {
   margin-bottom: 60px;
@@ -1238,7 +1257,7 @@ menu li a:hover {
   font-size: 20px;
   line-height: 23px;
   color: #000000;
-  margin-right: 25px;
+  margin-right: 16px;
   display: inline-block;
 }
 
@@ -1258,6 +1277,7 @@ menu li a:hover {
   padding: 4px 8px;
   white-space: nowrap;
   display: inline-block;
+  margin-right: 50px;
 }
 
 .card .card-bonus span {
@@ -1340,16 +1360,16 @@ menu li a:hover {
 
 .product-related__row .slick-slide,
 .recently-viewed__row .slick-slide {
-  margin: 0 10px;
+  margin: 0 10px 0 0;
 }
 
 .product-related__row .slick-prev.slick-arrow,
 .recently-viewed__row .slick-prev.slick-arrow {
   font-size: 0;
   background: url("../img/prev-b.svg") center no-repeat;
-  width: 39px;
-  height: 39px;
-  top: 50%;
+  width: 42px;
+  height: 42px;
+  top: 44%;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -1361,9 +1381,9 @@ menu li a:hover {
 .recently-viewed__row .slick-next.slick-arrow {
   font-size: 0;
   background: url("../img/next-b.svg") center no-repeat;
-  width: 39px;
-  height: 39px;
-  top: 50%;
+  width: 42px;
+  height: 42px;
+  top: 44%;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -1416,8 +1436,7 @@ menu li a:hover {
 
 .feedback-form h3 {
   font-family: 'Roboto';
-  font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 18px;
   line-height: 24px;
   color: #FFFFFF;
@@ -1435,11 +1454,11 @@ menu li a:hover {
   color: #999999;
   padding: 8px 17px;
   margin-right: 20px;
+  width: 266px;
 }
 
 .feedback-form input::-webkit-input-placeholder {
   font-family: 'Roboto';
-  font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 24px;
@@ -1448,7 +1467,6 @@ menu li a:hover {
 
 .feedback-form input::-moz-placeholder {
   font-family: 'Roboto';
-  font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 24px;
@@ -1457,7 +1475,6 @@ menu li a:hover {
 
 .feedback-form input:-ms-input-placeholder {
   font-family: 'Roboto';
-  font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 24px;
@@ -1466,7 +1483,6 @@ menu li a:hover {
 
 .feedback-form input::-ms-input-placeholder {
   font-family: 'Roboto';
-  font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 24px;
@@ -1475,7 +1491,6 @@ menu li a:hover {
 
 .feedback-form input::placeholder {
   font-family: 'Roboto';
-  font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 24px;
@@ -1484,15 +1499,14 @@ menu li a:hover {
 
 .feedback-form button {
   font-family: 'Roboto';
-  font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 16px;
   line-height: 19px;
   text-align: center;
   color: #FFFFFF;
   background: #FF0000;
   border-radius: 6px;
-  padding: 12px;
+  padding: 12px 17px;
 }
 
 footer {
@@ -1653,14 +1667,24 @@ footer .menu-row nav menu li a {
   font-style: normal;
   font-weight: 300;
   font-size: 13px;
-  line-height: 32px;
+  line-height: 19px;
   color: #DDDDDD;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 200px;
 }
 
 .footer-row .footer-contacts .footer-adress img {
   vertical-align: middle;
-  margin-right: 5px;
+  margin-right: -10px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-top: 2px;
+  margin-left: 0px;
+  position: relative;
+  left: -18px;
 }
 
 .footer-row .footer-contacts .footer-phone {
@@ -2042,6 +2066,7 @@ footer .menu-row nav menu li a {
     -webkit-box-ordinal-group: 5;
         -ms-flex-order: 4;
             order: 4;
+    margin-bottom: 14px;
   }
 
   .product-card__caption-compare {
@@ -2056,7 +2081,7 @@ footer .menu-row nav menu li a {
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
-    margin-bottom: 10px;
+    margin-bottom: 14px;
   }
 
   .product-card__caption-pice {
@@ -2071,6 +2096,7 @@ footer .menu-row nav menu li a {
             align-items: center;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    margin-bottom: 7px;
   }
 
   .product-card__caption-pice span {
@@ -2094,13 +2120,14 @@ footer .menu-row nav menu li a {
     padding: 10px 0;
     margin-bottom: 0;
     padding: 7px 0 11px 0;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin-left: -20px;
     margin-right: -20px;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 
   .product-card__caption-color {
@@ -2119,20 +2146,33 @@ footer .menu-row nav menu li a {
 
   .btn-buy {
     font-size: 13px;
-    margin-right: 5px;
+    margin-right: 12px;
     padding: 0px 17px;
     line-height: 35px;
   }
 
   .btn-basket {
-    font-size: 13px;
+    font-size: 14px;
     margin-right: 5px;
-    padding: 0px 7px;
-    line-height: 35px;
+    padding: 0px 9px;
+    line-height: 33px;
+    margin-right: 8px;
   }
 
-  .btn-kredit span {
+  .btn-kredit::before {
+    width: 36px;
+    height: 36px;
+    background-size: cover;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+
+  .btn-kredit p {
     font-size: 13px;
+    margin-left: 36px;
+    line-height: 17px;
   }
 
   .btn-kredit {
@@ -2219,6 +2259,10 @@ footer .menu-row nav menu li a {
 
   .feature-more {
     display: none;
+  }
+
+  .specification h2 {
+    margin-bottom: 13px;
   }
 
   .desc {
@@ -2310,6 +2354,7 @@ footer .menu-row nav menu li a {
 
   .card .card-bonus {
     display: none;
+    margin-right: 0;
   }
 
   .card-img-label .label-super {
@@ -2496,6 +2541,16 @@ footer .menu-row nav menu li a {
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
     margin-bottom: 25px;
+  }
+
+  .footer-row .footer-contacts .footer-adress {
+    display: inline-block;
+    max-width: 100%;
+  }
+
+  .footer-row .footer-contacts .footer-adress img {
+    margin: 0;
+    position: unset;
   }
 
   .footer-row .footer-links {

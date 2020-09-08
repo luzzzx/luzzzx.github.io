@@ -541,6 +541,84 @@ header {
   margin-left: auto;
 }
 
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.popup__body {
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 30px 10px;
+}
+
+.popup__content {
+  background-color: #555555;
+  max-width: 809px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 130px 90px;
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-transition: all .8s;
+  -o-transition: all .8s;
+  transition: all .8s;
+}
+
+.popup__content img {
+  margin-bottom: 66px;
+}
+
+.popup__content h2 {
+  color: #ffffff;
+  font-family: "Proxima Nova";
+  font-size: 31px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.popup__close {
+  position: absolute;
+  top: 41px;
+  right: 41px;
+  width: 32px;
+  height: 32px;
+  background: url("../img/close_icon.png") center no-repeat;
+  background-size: cover;
+}
+
+.popup:target {
+  opacity: 1;
+  visibility: visible;
+}
+
 body {
   color: #000;
   font-size: 14px;

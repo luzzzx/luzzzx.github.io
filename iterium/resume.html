@@ -197,9 +197,11 @@
                     <input type="text" class="form-input__full" placeholder="Интересы / хобби">
                     <textarea name="mail" id="mail" cols="30" rows="10"
                         placeholder="Сопроводительное письмо"></textarea>
-                    <button class="submit">
+                    <!-- <button class="submit">
                         <img src="./img/arrow_icon.png" alt="submit">
-                        ОТПРАВИТЬ РЕЗЮМЕ</button>
+                        ОТПРАВИТЬ РЕЗЮМЕ</button> -->
+                    <a href="#popup" class="submit"> <img src="./img/arrow_icon.png" alt="submit">
+                        ОТПРАВИТЬ РЕЗЮМЕ</a>
                     <button class="download">
                         <img src="./img/arrow_icond.png" alt="download">
                         Скачать pdf-версию резюме</button>
@@ -251,7 +253,15 @@
             </div>
         </div>
     </footer>
-    <script src="./js/main.js"></script>
+    <section id="popup" class="popup">
+        <div class="popup__body">
+            <article class="popup__content">
+                <a href="#" class="popup__close"></a>
+                <img src="./img/check_icon-pop.png" alt="popup">
+                <h2>Ваше резюме успешно отправлено</h2>
+            </article>
+        </div>
+    </section>
 </body>
 
 </html>

@@ -520,6 +520,15 @@ header {
   line-height: 30px;
   margin-bottom: 100px;
   text-align: left;
+  -webkit-transition: ease-in-out .3s;
+  -o-transition: ease-in-out .3s;
+  transition: ease-in-out .3s;
+}
+
+.form article form .add-btn:hover,
+.form article form .submit:hover,
+.form article form .download:hover {
+  color: #ffb320;
 }
 
 .form article form .add-btn img,

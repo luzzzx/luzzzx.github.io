@@ -602,6 +602,7 @@ header {
   font-size: 31px;
   font-weight: 400;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .popup__close {
@@ -2337,6 +2338,14 @@ footer nav {
 
   .form article form .download {
     margin-left: 0;
+  }
+
+  .popup__content {
+    padding: 130px 10px;
+  }
+
+  .popup__content h2 {
+    max-width: 367px;
   }
 
   .container {

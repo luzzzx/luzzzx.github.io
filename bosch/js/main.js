@@ -56,7 +56,7 @@ $(document).ready(function () {
                 breakpoint: 683,
                 settings: {
                     arrows: false,
-                    slidesToShow: 2.2,
+                    slidesToShow: 2,
                     slidesToScroll: 1,
                 }
             }
@@ -91,7 +91,7 @@ $(document).ready(function () {
                 breakpoint: 683,
                 settings: {
                     arrows: false,
-                    slidesToShow: 2.2,
+                    slidesToShow: 2,
                     slidesToScroll: 1,
                 }
             }

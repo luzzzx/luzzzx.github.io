@@ -2135,6 +2135,10 @@ footer .menu-row nav menu li a {
     margin-bottom: 14px;
   }
 
+  .product-card__caption-stock .instock {
+    margin-right: 10px;
+  }
+
   .product-card__caption-stock .bonus {
     font-size: 14px;
   }
@@ -2219,7 +2223,7 @@ footer .menu-row nav menu li a {
     margin-bottom: 10px;
     -webkit-box-shadow: 0 -2px 62px rgba(0, 0, 0, 0.06);
             box-shadow: 0 -2px 62px rgba(0, 0, 0, 0.06);
-    padding: 18px 30px;
+    padding: 18px 20px;
     margin-left: -20px;
     margin-right: -20px;
   }
@@ -2338,7 +2342,7 @@ footer .menu-row nav menu li a {
     -webkit-box-shadow: 0 21px 91px rgba(0, 0, 0, 0.06);
             box-shadow: 0 21px 91px rgba(0, 0, 0, 0.06);
     margin-right: -20px;
-    padding: 20px 14px 9px 14px;
+    padding: 20px 14px 9px 20px;
     width: 100%;
     margin-bottom: 11px;
   }
@@ -2456,7 +2460,9 @@ footer .menu-row nav menu li a {
   .card {
     width: 142px !important;
     background: #FFFFFF;
-    padding: 17px;
+    -webkit-box-shadow: 1px 0 7px -2px rgba(0, 0, 0, 0.35);
+            box-shadow: 1px 0 7px -2px rgba(0, 0, 0, 0.35);
+    border-radius: 6px;
   }
 
   .card .label-btns {
@@ -2467,9 +2473,29 @@ footer .menu-row nav menu li a {
     margin-right: 16px;
   }
 
+  .card .card-price {
+    padding: 0 14px;
+  }
+
+  .card__curr-price {
+    font-size: 15px;
+  }
+
+  .card__curr-price span {
+    font-size: 10px;
+  }
+
   .card .card-bonus {
     display: none;
     margin-right: 0;
+  }
+
+  .card .old-price {
+    font-size: 13px;
+  }
+
+  .card .old-price span {
+    font-size: 10px;
   }
 
   .card-img {
@@ -2478,15 +2504,20 @@ footer .menu-row nav menu li a {
 
   .card-img-label .label-super {
     display: none;
+    width: 96%;
   }
 
   .card-img-label .label-compare {
     display: none;
   }
 
+  .card-name {
+    padding: 0 14px;
+  }
+
   .product-related__row .slick-slide,
   .recently-viewed__row .slick-slide {
-    margin: 0 4px 0 4px;
+    margin: 2px 7px 2px 2px;
   }
 
   .feedback-form {
@@ -2723,7 +2754,7 @@ footer .menu-row nav menu li a {
 
   .card .label-btns a:last-child {
     display: block;
-    margin-right: 0;
+    margin-right: 10px;
   }
 }
 

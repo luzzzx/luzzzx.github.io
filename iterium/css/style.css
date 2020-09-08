@@ -122,6 +122,416 @@ h6 {
   font-size: inherit;
 }
 
+header {
+  background: url("../img/resume-bg.png") center no-repeat;
+  background-size: cover;
+  min-height: 100%;
+  height: 100vh;
+}
+
+.intro {
+  min-height: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+.intro h1 {
+  color: #ffb320;
+  font-family: "Proxima Nova";
+  font-size: 32px;
+  font-weight: 400;
+  margin-bottom: 75px;
+}
+
+.intro h2 {
+  color: #ffffff;
+  font-family: "ProximaNova-Light";
+  font-size: 72px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.intro-footer {
+  background: transparent;
+  padding: 0;
+  position: absolute;
+  bottom: 75px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
+}
+
+.intro-footer .lang {
+  margin-left: 0;
+}
+
+.intro-footer .scroll {
+  width: 60px;
+  height: 40px;
+  background: url("../img/scroll-down.png") center no-repeat;
+  background-size: cover;
+}
+
+.qa {
+  background-color: #1c1c1c;
+}
+
+.qa .qa-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 143px 90px 0 90px;
+}
+
+.qa .qa-body__title {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 28%;
+          flex: 0 0 28%;
+  margin-right: 224px;
+}
+
+.qa .qa-body__title h2 {
+  color: #ffb320;
+  font-family: "ProximaNova-Light";
+  font-size: 48px;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: right;
+}
+
+.qa .qa-body__title.white h2 {
+  color: #ffffff;
+}
+
+.qa .qa-body__text {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 60%;
+          flex: 0 0 60%;
+}
+
+.qa .qa-body__text p {
+  color: #ffffff;
+  font-family: "ProximaNova-Light";
+  font-size: 26px;
+  font-weight: 300;
+  line-height: 30px;
+  margin-bottom: 34px;
+}
+
+.qa .qa-body__text ul li {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 64px;
+}
+
+.qa .qa-body__text ul li span {
+  color: #ffffff;
+  font-family: "ProximaNova-Light";
+  font-size: 26px;
+  font-weight: 300;
+  line-height: 36px;
+  margin-left: 95px;
+  display: inline-block;
+}
+
+.qa .qa-body__text ul li:before {
+  content: " ";
+  background: url("../img/check-big.png") no-repeat center;
+  display: inline-block;
+  width: 55px;
+  height: 55px;
+  vertical-align: top;
+  background-size: cover;
+  position: absolute;
+}
+
+.form article {
+  padding: 176px 100px;
+}
+
+.form article .article-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 134px;
+}
+
+.form article h1 {
+  color: #ffffff;
+  font-family: "ProximaNova-Light";
+  font-size: 52px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.form article p {
+  color: #ffffff;
+  font-family: "ProximaNova-Light";
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 30px;
+}
+
+.form article p span {
+  color: #f1a920;
+}
+
+.form article h2 {
+  color: #ffb320;
+  font-family: "ProximaNova-Light";
+  font-size: 36px;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+  width: 100%;
+}
+
+.form article h3 {
+  color: #ffffff;
+  font-family: "ProximaNova-Light";
+  font-size: 28px;
+  font-weight: 300;
+  text-transform: uppercase;
+  width: 100%;
+  margin-bottom: 57px;
+}
+
+.form article form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.form article form input {
+  width: 49%;
+  border-radius: 4px;
+  background-color: #4b4b4b;
+  margin-bottom: 60px;
+  color: #bfbfbf;
+  font-family: "ProximaNova-Light";
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 29.99px;
+  padding: 15px 39px;
+}
+
+.form article form input::-webkit-input-placeholder {
+  color: #bfbfbf;
+  font-family: "ProximaNova-Light";
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 29.99px;
+}
+
+.form article form input::-moz-placeholder {
+  color: #bfbfbf;
+  font-family: "ProximaNova-Light";
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 29.99px;
+}
+
+.form article form input:-ms-input-placeholder {
+  color: #bfbfbf;
+  font-family: "ProximaNova-Light";
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 29.99px;
+}
+
+.form article form input::-ms-input-placeholder {
+  color: #bfbfbf;
+  font-family: "ProximaNova-Light";
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 29.99px;
+}
+
+.form article form input::placeholder {
+  color: #bfbfbf;
+  font-family: "ProximaNova-Light";
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 29.99px;
+}
+
+.form article form textarea {
+  width: 100%;
+  border-radius: 4px;
+  background-color: #4b4b4b;
+  margin-bottom: 60px;
+  color: #bfbfbf;
+  font-family: "ProximaNova-Light";
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 29.99px;
+  padding: 15px 39px;
+  resize: none;
+}
+
+.form article form textarea::-webkit-input-placeholder {
+  color: #bfbfbf;
+  font-family: "ProximaNova-Light";
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 29.99px;
+}
+
+.form article form textarea::-moz-placeholder {
+  color: #bfbfbf;
+  font-family: "ProximaNova-Light";
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 29.99px;
+}
+
+.form article form textarea:-ms-input-placeholder {
+  color: #bfbfbf;
+  font-family: "ProximaNova-Light";
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 29.99px;
+}
+
+.form article form textarea::-ms-input-placeholder {
+  color: #bfbfbf;
+  font-family: "ProximaNova-Light";
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 29.99px;
+}
+
+.form article form textarea::placeholder {
+  color: #bfbfbf;
+  font-family: "ProximaNova-Light";
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 29.99px;
+}
+
+.form article form fieldset {
+  border-radius: 4px;
+  border: 6px solid #626262;
+  padding: 10px 34px;
+  display: block;
+  width: 100%;
+  margin-bottom: 107px;
+}
+
+.form article form fieldset div {
+  float: right;
+}
+
+.form article form fieldset span {
+  width: 100px;
+  height: 100px;
+  border-radius: 4px;
+  background-color: #292929;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 10px 15px;
+}
+
+.form article form fieldset span:last-child {
+  margin-right: 0;
+}
+
+.form article form fieldset label {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100px;
+  height: 100px;
+  background: url("../img/add-photo.png") center no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  margin: 10px 15px;
+}
+
+.form article form fieldset input {
+  width: unset;
+  display: inline-block;
+  vertical-align: middle;
+  display: none;
+}
+
+.form article form fieldset p {
+  font-family: "ProximaNova-Light";
+  font-size: 32px;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #ffffff;
+  display: inline-block;
+  margin-top: 50px;
+}
+
+.form article form .form-input__full {
+  width: 100%;
+}
+
+.form article form .porfolio p {
+  color: #ffb320;
+  font-family: "ProximaNova-Light";
+  font-size: 36px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.form article form .add-btn,
+.form article form .submit,
+.form article form .download {
+  background: transparent;
+  position: relative;
+  color: #ffffff;
+  font-family: "Proxima Nova";
+  font-size: 28px;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 30px;
+  margin-bottom: 100px;
+  text-align: left;
+}
+
+.form article form .add-btn img,
+.form article form .submit img,
+.form article form .download img {
+  margin-right: 36px;
+}
+
+.form article form .download {
+  margin-left: auto;
+}
+
 body {
   color: #000;
   font-size: 14px;
@@ -1431,6 +1841,32 @@ footer nav {
 }
 
 @media (max-width: 1280px) {
+  .qa .qa-body {
+    padding: 143px 0 0 0;
+  }
+
+  .qa .qa-body__title {
+    margin-right: 50px;
+  }
+
+  .form article {
+    padding: 176px 20px;
+  }
+
+  .form article .article-title {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+
+  .form article h1 {
+    margin-bottom: 59px;
+  }
+
   .header-social__icon {
     display: none;
   }
@@ -1704,6 +2140,118 @@ footer nav {
 }
 
 @media (max-width: 768px) {
+  .intro h2 {
+    font-size: 45px;
+  }
+
+  .intro-footer {
+    bottom: 55px;
+  }
+
+  .intro-footer .scroll {
+    margin: 0 auto;
+    width: 44px;
+    height: 29px;
+  }
+
+  .qa .qa-body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 97px 0 0 0;
+  }
+
+  .qa .qa-body__title {
+    margin-right: 0;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    width: 100%;
+  }
+
+  .qa .qa-body__title h2 {
+    text-align: left;
+    margin-bottom: 74px;
+    font-size: 40px;
+  }
+
+  .qa .qa-body__text p {
+    font-size: 22px;
+  }
+
+  .qa .qa-body__text ul li span {
+    font-size: 22px;
+    margin-left: 85px;
+  }
+
+  .qa .qa-body__text ul li:before {
+    width: 45px;
+    height: 45px;
+    top: 5px;
+  }
+
+  .form article {
+    padding: 100px 0;
+  }
+
+  .form article h1 {
+    margin-left: 22px;
+  }
+
+  .form article p {
+    margin-left: 22px;
+  }
+
+  .form article h2 {
+    font-size: 32px;
+    margin-left: 22px;
+  }
+
+  .form article h3 {
+    font-size: 28px;
+    margin-left: 22px;
+  }
+
+  .form article form input {
+    width: 100%;
+    padding: 15px 25px;
+  }
+
+  .form article form textarea {
+    padding: 15px 25px;
+  }
+
+  .form article form fieldset {
+    text-align: center;
+    padding: 10px 10px;
+  }
+
+  .form article form fieldset div {
+    float: unset;
+    display: inline-block;
+  }
+
+  .form article form fieldset p {
+    margin: 50px 0 56px 0;
+  }
+
+  .form article form .add-btn,
+  .form article form .submit,
+  .form article form .download {
+    font-size: 24px;
+  }
+
+  .form article form .add-btn img,
+  .form article form .submit img,
+  .form article form .download img {
+    margin-right: 15px;
+  }
+
+  .form article form .download {
+    margin-left: 0;
+  }
+
   .container {
     padding: 0px 20px;
   }
@@ -1749,6 +2297,12 @@ footer nav {
 }
 
 @media (max-width: 480px) {
+  .form article form .add-btn,
+  .form article form .submit,
+  .form article form .download {
+    font-size: 18px;
+  }
+
   header menu {
     padding-top: 47px;
     padding-left: 20px;
@@ -1816,6 +2370,10 @@ footer nav {
 }
 
 @media (max-width: 475px) {
+  .intro h2 {
+    font-size: 30px;
+  }
+
   .menu__phone {
     margin-bottom: 0;
   }

@@ -287,6 +287,7 @@ header::before {
   display: inline-block;
   vertical-align: middle;
   margin-right: 5px;
+  margin-top: -5px;
 }
 
 .header-top__basket {
@@ -308,6 +309,15 @@ header::before {
 
 .header-top__basket-img img {
   width: 100%;
+}
+
+.header-top__basket-name b {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 9px;
+  line-height: 13px;
+  color: #6E6E6E;
 }
 
 .header-top__basket-name p {
@@ -753,13 +763,13 @@ menu li a:hover {
   display: -ms-inline-flexbox;
   display: inline-flex;
   position: relative;
-  top: -32px;
+  top: -38px;
 }
 
 .product-card__caption-color {
   display: inline-block;
   position: relative;
-  top: -13px;
+  top: -19px;
   left: 30px;
 }
 
@@ -798,7 +808,7 @@ menu li a:hover {
   color: #FFFFFF;
   background: #FF0000;
   border-radius: 6px;
-  padding: 16px 19px;
+  padding: 16px 21px;
   margin-right: 18px;
   display: inline-block;
   vertical-align: top;
@@ -836,7 +846,7 @@ menu li a:hover {
   width: 52px;
   height: 52px;
   position: absolute;
-  top: 0;
+  top: -2px;
   left: 0;
 }
 
@@ -852,8 +862,8 @@ menu li a:hover {
   display: inline-block;
 }
 
-.btn-kredit p p {
-  font-size: 10;
+.btn-kredit p span {
+  font-size: 13px;
   display: inline-block;
 }
 
@@ -933,7 +943,7 @@ menu li a:hover {
   font-size: 30px;
   line-height: 38px;
   color: #000000;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 
 .feature h3 {
@@ -991,6 +1001,7 @@ menu li a:hover {
   color: #000000;
   display: inline-block;
   vertical-align: top;
+  margin-bottom: 15px;
 }
 
 .feature-table .feature-more__btn {
@@ -1037,7 +1048,7 @@ menu li a:hover {
   font-size: 30px;
   line-height: 36px;
   color: #000000;
-  margin-bottom: 20px;
+  margin-bottom: 17px;
   display: inline-block;
   position: relative;
 }
@@ -1227,7 +1238,7 @@ menu li a:hover {
   font-size: 30px;
   line-height: 36px;
   color: #000000;
-  margin-bottom: 20px;
+  margin-bottom: 17px;
   display: inline-block;
   position: relative;
 }
@@ -1246,8 +1257,23 @@ menu li a:hover {
 }
 
 .card {
-  width: 250px;
+  width: 236px !important;
   cursor: pointer;
+}
+
+.card .label-super {
+  padding: 6px 9px;
+}
+
+.card .card-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .card__curr-price {
@@ -1360,20 +1386,20 @@ menu li a:hover {
 
 .product-related__row .slick-slide,
 .recently-viewed__row .slick-slide {
-  margin: 0 10px 0 0;
+  margin: 0 30px 0 0;
 }
 
 .product-related__row .slick-prev.slick-arrow,
 .recently-viewed__row .slick-prev.slick-arrow {
   font-size: 0;
   background: url("../img/prev-b.svg") center no-repeat;
-  width: 42px;
-  height: 42px;
-  top: 44%;
+  width: 53px;
+  height: 53px;
+  top: 41%;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
-  left: -40px;
+  left: -75px;
   position: absolute;
 }
 
@@ -1381,13 +1407,13 @@ menu li a:hover {
 .recently-viewed__row .slick-next.slick-arrow {
   font-size: 0;
   background: url("../img/next-b.svg") center no-repeat;
-  width: 42px;
-  height: 42px;
-  top: 44%;
+  width: 53px;
+  height: 53px;
+  top: 41%;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
-  right: -40px;
+  right: -75px;
   position: absolute;
 }
 
@@ -1667,13 +1693,14 @@ footer .menu-row nav menu li a {
   font-style: normal;
   font-weight: 300;
   font-size: 13px;
-  line-height: 19px;
+  line-height: 23px;
   color: #DDDDDD;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   max-width: 200px;
+  margin-bottom: 10px;
 }
 
 .footer-row .footer-contacts .footer-adress img {
@@ -1681,7 +1708,7 @@ footer .menu-row nav menu li a {
   margin-right: -10px;
   -ms-flex-item-align: start;
       align-self: flex-start;
-  margin-top: 2px;
+  margin-top: 8px;
   margin-left: 0px;
   position: relative;
   left: -18px;
@@ -1695,6 +1722,7 @@ footer .menu-row nav menu li a {
   line-height: 32px;
   color: #DDDDDD;
   display: block;
+  margin-bottom: 10px;
 }
 
 .footer-row .footer-contacts .footer-phone img {
@@ -1707,9 +1735,15 @@ footer .menu-row nav menu li a {
   font-style: normal;
   font-weight: 300;
   font-size: 13px;
-  line-height: 32px;
+  line-height: 23px;
   color: #DDDDDD;
   display: block;
+  margin-bottom: 10px;
+}
+
+.footer-row .footer-contacts .footer-whats span {
+  display: block;
+  margin-left: 22px;
 }
 
 .footer-row .footer-contacts .footer-whats img {
@@ -1722,7 +1756,7 @@ footer .menu-row nav menu li a {
   font-style: normal;
   font-weight: 300;
   font-size: 13px;
-  line-height: 32px;
+  line-height: 23px;
   color: #DDDDDD;
 }
 
@@ -2551,6 +2585,11 @@ footer .menu-row nav menu li a {
   .footer-row .footer-contacts .footer-adress img {
     margin: 0;
     position: unset;
+  }
+
+  .footer-row .footer-contacts .footer-whats span {
+    display: inline-block;
+    margin-left: 0;
   }
 
   .footer-row .footer-links {

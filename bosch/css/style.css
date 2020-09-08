@@ -327,6 +327,7 @@ header::before {
   font-size: 16px;
   line-height: 18px;
   color: #000000;
+  margin-bottom: 2px;
 }
 
 .header-top__basket-name span {
@@ -514,11 +515,11 @@ menu li a:hover {
 }
 
 .label-btns a {
-  margin-right: 18px;
+  margin-right: 16px;
 }
 
 .label-btns a:last-child {
-  margin-right: 14px;
+  margin-right: 20px;
 }
 
 .label-super {
@@ -534,7 +535,6 @@ menu li a:hover {
   line-height: 16px;
   color: #FFFFFF;
   padding: 6px 12px;
-  margin-left: 9px;
   white-space: nowrap;
 }
 
@@ -545,7 +545,7 @@ menu li a:hover {
   font-size: 30px;
   line-height: 42px;
   color: #000000;
-  margin-bottom: 18px;
+  margin-bottom: 8px;
 }
 
 .product-card__caption-marks {
@@ -961,7 +961,7 @@ menu li a:hover {
 }
 
 .feature-table .table-name {
-  width: 52%;
+  width: 47%;
   position: relative;
   font-family: 'Roboto';
   font-style: normal;
@@ -970,7 +970,7 @@ menu li a:hover {
   line-height: 18px;
   color: #8A8A8A;
   display: inline-block;
-  margin-bottom: 14px;
+  margin-bottom: 10px;
 }
 
 .feature-table .table-name span {
@@ -992,7 +992,7 @@ menu li a:hover {
 }
 
 .feature-table .table-val {
-  width: 42%;
+  width: 38%;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: normal;
@@ -1001,7 +1001,7 @@ menu li a:hover {
   color: #000000;
   display: inline-block;
   vertical-align: top;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .feature-table .feature-more__btn {
@@ -1161,7 +1161,7 @@ menu li a:hover {
 }
 
 .comment-block {
-  margin-bottom: 36px;
+  margin-bottom: 46px;
 }
 
 .comment-block__header {
@@ -1476,9 +1476,9 @@ menu li a:hover {
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 25px;
   color: #999999;
-  padding: 8px 17px;
+  padding: 9px 17px;
   margin-right: 20px;
   width: 266px;
 }
@@ -1562,8 +1562,8 @@ footer .menu-row {
 
 footer .menu-row nav {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 25%;
-          flex: 0 0 25%;
+      -ms-flex: 0 0 17%;
+          flex: 0 0 17%;
   background: transparent;
 }
 
@@ -1616,16 +1616,28 @@ footer .menu-row nav menu li a {
   padding: 0 15px;
 }
 
+.menu-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .footer-row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .footer-row .logo {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 25%;
-          flex: 0 0 25%;
+      -ms-flex: 0 0 17%;
+          flex: 0 0 17%;
 }
 
 .footer-row .logo img {
@@ -1644,8 +1656,8 @@ footer .menu-row nav menu li a {
 
 .footer-row nav {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 25%;
-          flex: 0 0 25%;
+      -ms-flex: 0 0 17%;
+          flex: 0 0 17%;
   background: transparent;
 }
 
@@ -1684,8 +1696,8 @@ footer .menu-row nav menu li a {
 
 .footer-row .footer-contacts {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 25%;
-          flex: 0 0 25%;
+      -ms-flex: 0 0 17%;
+          flex: 0 0 17%;
 }
 
 .footer-row .footer-contacts .footer-adress {
@@ -1767,8 +1779,8 @@ footer .menu-row nav menu li a {
 
 .footer-row .footer-links {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 25%;
-          flex: 0 0 25%;
+      -ms-flex: 0 0 17%;
+          flex: 0 0 17%;
 }
 
 .footer-row .footer-links a {

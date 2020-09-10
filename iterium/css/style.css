@@ -194,6 +194,8 @@ header {
 
 .qa {
   background-color: #1c1c1c;
+  padding-bottom: 217px !important;
+  padding-top: 32px !important;
 }
 
 .qa .qa-body {
@@ -338,12 +340,15 @@ header {
   border-radius: 4px;
   background-color: #4b4b4b;
   margin-bottom: 60px;
-  color: #bfbfbf;
+  color: #ffffff;
   font-family: "ProximaNova-Light";
   font-size: 24px;
   font-weight: 300;
   line-height: 29.99px;
   padding: 15px 39px;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
 }
 
 .form article form input::-webkit-input-placeholder {
@@ -352,6 +357,9 @@ header {
   font-size: 24px;
   font-weight: 300;
   line-height: 29.99px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .form article form input::-moz-placeholder {
@@ -360,6 +368,9 @@ header {
   font-size: 24px;
   font-weight: 300;
   line-height: 29.99px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .form article form input:-ms-input-placeholder {
@@ -368,6 +379,9 @@ header {
   font-size: 24px;
   font-weight: 300;
   line-height: 29.99px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .form article form input::-ms-input-placeholder {
@@ -376,6 +390,9 @@ header {
   font-size: 24px;
   font-weight: 300;
   line-height: 29.99px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .form article form input::placeholder {
@@ -384,6 +401,10 @@ header {
   font-size: 24px;
   font-weight: 300;
   line-height: 29.99px;
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
 }
 
 .form article form textarea {
@@ -724,7 +745,7 @@ header #toggle:checked ~ .menu__btn > span::after {
 header #toggle:checked ~ menu {
   visibility: visible;
   right: 0;
-  margin-right: -120px;
+  margin-right: -115px;
   position: absolute;
 }
 
@@ -738,19 +759,40 @@ header #toggle:checked ~ menu {
   display: inline-block;
   margin-right: 37px;
   border-radius: 100%;
+  -webkit-transition: linear .3s;
+  -o-transition: linear .3s;
+  transition: linear .3s;
 }
 
 .header-social__icon:nth-child(1) {
-  background: url("../img/fb.png") center no-repeat;
+  background: url("../img/fb.svg") center no-repeat;
+  background-size: cover;
+}
+
+.header-social__icon:nth-child(1):hover {
+  background: url("../img/fb-h.svg") center no-repeat;
+  background-size: cover;
 }
 
 .header-social__icon:nth-child(2) {
-  background: url("../img/inst.png") center no-repeat;
+  background: url("../img/inst.svg") center no-repeat;
+  background-size: cover;
+}
+
+.header-social__icon:nth-child(2):hover {
+  background: url("../img/inst-h.svg") center no-repeat;
+  background-size: cover;
 }
 
 .header-social__icon:nth-child(3) {
-  background: url("../img/vk.png") center no-repeat;
+  background: url("../img/vk.svg") center no-repeat;
+  background-size: cover;
   margin-right: 0;
+}
+
+.header-social__icon:nth-child(3):hover {
+  background: url("../img/vk-h.svg") center no-repeat;
+  background-size: cover;
 }
 
 .header-phone {
@@ -1725,11 +1767,12 @@ footer nav {
 
 .footer-logo {
   position: relative;
-  display: inline-block;
+  display: block;
   margin-bottom: 178px;
 }
 
 .footer-logo img {
+  max-width: 340px;
   width: 100%;
 }
 
@@ -1835,22 +1878,40 @@ footer nav {
   margin-right: 37px;
   border-radius: 100%;
   margin-bottom: 20px;
+  -webkit-transition: linear .3s;
+  -o-transition: linear .3s;
+  transition: linear .3s;
 }
 
-.footer-social a:nth-of-type(1) {
-  background: url("../img/fb.png") center no-repeat;
+.footer-social a:nth-child(2) {
+  background: url("../img/fb-f.svg") center no-repeat;
   background-size: cover;
 }
 
-.footer-social a:nth-of-type(2) {
-  background: url("../img/inst.png") center no-repeat;
+.footer-social a:nth-child(2):hover {
+  background: url("../img/fb-h.svg") center no-repeat;
   background-size: cover;
 }
 
-.footer-social a:nth-of-type(3) {
-  background: url("../img/vk.png") center no-repeat;
+.footer-social a:nth-child(3) {
+  background: url("../img/inst-f.svg") center no-repeat;
+  background-size: cover;
+}
+
+.footer-social a:nth-child(3):hover {
+  background: url("../img/inst-h.svg") center no-repeat;
+  background-size: cover;
+}
+
+.footer-social a:nth-child(4) {
+  background: url("../img/vk-f.svg") center no-repeat;
   background-size: cover;
   margin-right: 0;
+}
+
+.footer-social a:nth-child(4):hover {
+  background: url("../img/vk-h.svg") center no-repeat;
+  background-size: cover;
 }
 
 .footer-rights {
@@ -1884,8 +1945,8 @@ footer nav {
 
 @media (max-width: 1752px) {
   header nav {
-    padding-right: 10px;
-    padding-left: 10px;
+    padding-left: 96px;
+    padding-right: 96px;
   }
 
   header #toggle:checked ~ menu {
@@ -2352,6 +2413,11 @@ footer nav {
     padding: 0px 20px;
   }
 
+  header nav {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
   .best .best-content h2 {
     font-size: 42px;
     line-height: 48px;
@@ -2405,6 +2471,10 @@ footer nav {
     width: 100%;
   }
 
+  header menu li {
+    margin-top: auto;
+  }
+
   .menu-footer__rights div {
     display: none;
   }
@@ -2423,19 +2493,40 @@ footer nav {
     margin-right: 10px;
     border-radius: 100%;
     line-height: 35px;
+    -webkit-transition: linear .3s;
+    -o-transition: linear .3s;
+    transition: linear .3s;
   }
 
   .menu-footer__rights .menu-social__icon:nth-child(1) {
-    background: url("../img/fb.png") center no-repeat;
+    background: url("../img/fb.svg") center no-repeat;
+    background-size: cover;
+  }
+
+  .menu-footer__rights .menu-social__icon:nth-child(1):hover {
+    background: url("../img/fb-h.svg") center no-repeat;
+    background-size: cover;
   }
 
   .menu-footer__rights .menu-social__icon:nth-child(2) {
-    background: url("../img/inst.png") center no-repeat;
+    background: url("../img/inst.svg") center no-repeat;
+    background-size: cover;
+  }
+
+  .menu-footer__rights .menu-social__icon:nth-child(2):hover {
+    background: url("../img/inst-h.svg") center no-repeat;
+    background-size: cover;
   }
 
   .menu-footer__rights .menu-social__icon:nth-child(3) {
-    background: url("../img/vk.png") center no-repeat;
+    background: url("../img/vk.svg") center no-repeat;
+    background-size: cover;
     margin-right: 0;
+  }
+
+  .menu-footer__rights .menu-social__icon:nth-child(3):hover {
+    background: url("../img/vk-h.svg") center no-repeat;
+    background-size: cover;
   }
 
   .menu-footer__rights a {
@@ -2467,7 +2558,7 @@ footer nav {
 
 @media (max-width: 475px) {
   .intro h2 {
-    font-size: 30px;
+    font-size: 42px;
   }
 
   .menu__phone {
@@ -2509,5 +2600,11 @@ footer nav {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
+  }
+}
+
+@media (max-width: 350px) {
+  .intro h2 {
+    font-size: 30px;
   }
 }

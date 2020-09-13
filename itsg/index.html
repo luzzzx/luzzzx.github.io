@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.min.css">
     <title>ITSG</title>
 </head>
@@ -15,9 +16,12 @@
         <div class="row">
             <nav class="navbar navbar-expand-lg">
                 <a class="navbar-brand" href="#"><img src="./img/logo_m.svg" alt="logo"></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+                    data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <menu class="navbar-nav">
@@ -26,25 +30,25 @@
                         <li><a href="#">Тарифы</a></li>
                         <li><a href="#">Контакты</a></li>
                     </menu>
-                    <a href="#" class="btn-header">Заказать звонок</a>
-                    <div class="header-lang">
+                    <a href="#" class="btn-header" data-toggle="modal" data-target="#callbackpopup">Заказать звонок</a>
+                    <!-- <div class="header-lang">
                         <a href="#">Ru</a>
-                    </div>
+                    </div> -->
                 </div>
             </nav>
         </div>
         <div class="row">
             <div class="col-lg-10 offset-lg-1">
                 <article class="intro">
-                    <a class="btn-aut" href="#">Аутсорсинг</a>
-                    <h1>Экспертиза, оптимизация <br>
+                    <a class="btn-aut" href="#" data-aos="fade-up">Аутсорсинг</a>
+                    <h1 data-aos="fade-up">Экспертиза, оптимизация <br>
                         и обслуживание ИТ-инфраструктур</h1>
-                    <h2>
+                    <h2 data-aos="fade-up">
                         Поможем наладить эффективную и беспрерывную работу офисной техники, программ, бухгалтерии,
                         серверов и IP-телефонии. Поддержим работоспособность всех систем и дадим гарантию на
                         обслуживание.
                     </h2>
-                    <a href="tel:+78122136821" class="intro-phone">+7 812 213 6821</a>
+                    <a href="tel:+78122136821" class="intro-phone" data-aos="fade-up">+7 812 213 6821</a>
                 </article>
             </div>
         </div>
@@ -58,41 +62,41 @@
         <article class="container">
             <h2>Что получит ваш бизнес:</h2>
             <div class="row">
-                <div class="col-lg-5 offset-lg-1 card-business">
+                <div class="col-lg-5 offset-lg-1 card-business" data-aos="fade-up">
                     <span>1</span>
                     <h3>Сокращение издержек</h3>
                     <p>Нанимая сервисную компанию, вы сокращаете расходы компании на зарплатный фонд штатного
                         айтишника. И за справедливую цену получаете целый ИТ-отдел вместо одного специалиста.</p>
                 </div>
-                <div class="col-lg-5 offset-lg-1 card-business">
+                <div class="col-lg-5 offset-lg-1 card-business" data-aos="fade-up">
                     <span>2</span>
                     <h3>Ускорение процессов</h3>
                     <p>В нашем штате больше семидесяти опытных ИТ-специалистов, которые обрабатывают заявки всех ваших
                         сотрудников одновременно. Больше не будет задержек работы из-за зависающей 1С или неработающей
                         почты.</p>
                 </div>
-                <div class="col-lg-5 offset-lg-1 card-business">
+                <div class="col-lg-5 offset-lg-1 card-business" data-aos="fade-up">
                     <span>3</span>
                     <h3>Безопасность</h3>
                     <p>Мы строим ИТ-инфраструктуру так, чтобы в ней не было лазеек для кибератак не только снаружи, но и
                         внутри компании: можем настроить ограниченный доступ к файлам для каждого отдельного сотрудника.
                     </p>
                 </div>
-                <div class="col-lg-5 offset-lg-1 card-business">
+                <div class="col-lg-5 offset-lg-1 card-business" data-aos="fade-up">
                     <span>4</span>
                     <h3>Устойчивое развитие</h3>
                     <p>Растем сами и помогаем нашим клиентам развиваться с нами — оказываем консалтинговые услуги на
                         отдельных ИТ-проектах, помогаем масштабировать бизнес, осуществляем быстрый и эффективный
                         переезд всего офиса за один день.</p>
                 </div>
-                <div class="col-lg-5 offset-lg-1 card-business">
+                <div class="col-lg-5 offset-lg-1 card-business" data-aos="fade-up">
                     <span>5</span>
                     <h3>Гибкость и универсальность</h3>
                     <p>Если нужно — контактируем с ИТ-подрядчиками клиента: другими сервисными компаниями, провайдерами,
                         телефонией. Для международных представительств — работаем совместно или под руководством
                         головного ИТ-отдела.</p>
                 </div>
-                <div class="col-lg-5 offset-lg-1 card-business">
+                <div class="col-lg-5 offset-lg-1 card-business" data-aos="fade-up">
                     <span>6</span>
                     <h3>Контроль и прозрачность</h3>
                     <p>Ведем учет всех входящих заявок в нашей CRM-системе. Анализируем заявки от каждого клиента и
@@ -107,7 +111,7 @@
                 Создайте технологическое преимущество
                 для своей компании, вместе с IT Support Group
             </h2>
-            <a href="#">Заказать звонок</a>
+            <a href="#" data-toggle="modal" data-target="#callbackpopup">Заказать звонок</a>
         </article>
     </section>
     <section class="howit">
@@ -120,23 +124,23 @@
                 <div class="col-10 offset-1">
                     <nav>
                         <div class="nav nav-tabs row" id="nav-tab" role="tablist">
-                            <a class="nav-link active col-3" id="nav-home-tab" data-toggle="tab" href="#nav-home"
-                                role="tab" aria-controls="nav-home" aria-selected="true">
+                            <a class="nav-link active col-lg-3 col-md-3" id="nav-home-tab" data-toggle="tab"
+                                href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">
                                 <span class="icon"></span>
                                 <span class="text">1. Проводим аудит</span>
                             </a>
-                            <a class="nav-link col-3" id="nav-profile-tab" data-toggle="tab" href="#nav-profile"
-                                role="tab" aria-controls="nav-profile" aria-selected="false">
+                            <a class="nav-link col-lg-3 col-md-3" id="nav-profile-tab" data-toggle="tab"
+                                href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">
                                 <span class="icon"></span>
                                 <span class="text">2. Заключаем договор</span>
                             </a>
-                            <a class="nav-link col-3" id="nav-contact-tab" data-toggle="tab" href="#nav-contact"
-                                role="tab" aria-controls="nav-contact" aria-selected="false">
+                            <a class="nav-link col-lg-3 col-md-3" id="nav-contact-tab" data-toggle="tab"
+                                href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">
                                 <span class="icon"></span>
                                 <span class="text">3. Работаем</span>
                             </a>
-                            <a class="nav-link col-3" id="nav-contact-tab1" data-toggle="tab" href="#nav-contact1"
-                                role="tab" aria-controls="nav-contact1" aria-selected="false">
+                            <a class="nav-link col-lg-3 col-md-3" id="nav-contact-tab1" data-toggle="tab"
+                                href="#nav-contact1" role="tab" aria-controls="nav-contact1" aria-selected="false">
                                 <span class="icon"></span>
                                 <span class="text">4. Советуем</span>
                             </a>
@@ -189,10 +193,12 @@
                 </div>
                 <div class="col-lg-7">
                     <div class="outsource-intro">
-                        <h2>Аутсорсинг:</h2>
-                        <h3>Это полноценный отдел на заменуи в поддержку штатным ИТ-специалистам.</h3>
-                        <a href="#" class="outsource-intro__btn">Заказать звонок</a>
-                        <div class="outsource-list">
+                        <h2 data-aos="fade-up">Аутсорсинг:</h2>
+                        <h3 data-aos="fade-up">Это полноценный отдел на заменуи в поддержку штатным ИТ-специалистам.
+                        </h3>
+                        <a href="#" class="outsource-intro__btn" data-aos="fade-up" data-toggle="modal"
+                            data-target="#callbackpopup">Заказать звонок</a>
+                        <div class="outsource-list" data-aos="fade-up">
                             <h2>Удаленный ИТ-отдел:</h2>
                             <ul>
                                 <li>обслуживает компьютеры, сети и серверы;</li>
@@ -311,7 +317,7 @@
                             Максимальное время реагирования на заявку — за это время мы увидим ваш запрос и назначим
                             ИТ-специалиста, который вам поможет.
                         </h3>
-                        <a href="#">Заказать звонок</a>
+                        <a href="#" data-toggle="modal" data-target="#callbackpopup">Заказать звонок</a>
                     </div>
                 </div>
             </article>
@@ -325,26 +331,26 @@
                 повышать эффективность вашего бизнеса.
             </h3>
             <div class="row">
-                <div class="col-10 offset-1">
+                <div class="col-lg-10 offset-lg-1">
                     <nav>
                         <div class="nav nav-tabs row" id="nav-tab" role="tablist">
-                            <a class="nav-link active col-3" id="nav-year-tab" data-toggle="tab" href="#nav-year"
-                                role="tab" aria-controls="nav-year" aria-selected="true">
+                            <a class="nav-link active col-lg-3 col-md-3" id="nav-year-tab" data-toggle="tab"
+                                href="#nav-year" role="tab" aria-controls="nav-year" aria-selected="true">
                                 <span class="num">14</span>
                                 <span class="text">лет успешной работы</span>
                             </a>
-                            <a class="nav-link col-3" id="nav-company-tab" data-toggle="tab" href="#nav-company"
-                                role="tab" aria-controls="nav-company" aria-selected="false">
+                            <a class="nav-link col-lg-3 col-md-3" id="nav-company-tab" data-toggle="tab"
+                                href="#nav-company" role="tab" aria-controls="nav-company" aria-selected="false">
                                 <span class="num">500</span>
                                 <span class="text">500 обслуженных компаний</span>
                             </a>
-                            <a class="nav-link col-3" id="nav-expert-tab" data-toggle="tab" href="#nav-expert"
-                                role="tab" aria-controls="nav-expert" aria-selected="false">
+                            <a class="nav-link col-lg-3 col-md-3" id="nav-expert-tab" data-toggle="tab"
+                                href="#nav-expert" role="tab" aria-controls="nav-expert" aria-selected="false">
                                 <span class="num">70</span>
                                 <span class="text">70 ИТ-экспертов</span>
                             </a>
-                            <a class="nav-link col-3" id="nav-place-tab" data-toggle="tab" href="#nav-place" role="tab"
-                                aria-controls="nav-place" aria-selected="false">
+                            <a class="nav-link col-lg-3 col-md-3" id="nav-place-tab" data-toggle="tab" href="#nav-place"
+                                role="tab" aria-controls="nav-place" aria-selected="false">
                                 <span class="num">6</span>
                                 <span class="text">6 отделов </span>
                             </a>
@@ -388,7 +394,7 @@
                 <div class="col-12">
                     <h2>В чем наша сила:</h2>
                 </div>
-                <div class="col-lg-3 offset-lg-1">
+                <div class="col-lg-3 offset-lg-1" data-aos="fade-up">
                     <div class="power-card">
                         <h3>Знания</h2>
                             <p>За 14 лет работы мы накопили огромный багаж знаний. Эти знания не пропадают даром: мы
@@ -399,7 +405,7 @@
                                 мастер — повышение квалификации и надбавку к зарплате.</p>
                     </div>
                 </div>
-                <div class="col-lg-3 offset-lg-1">
+                <div class="col-lg-3 offset-lg-1" data-aos="fade-up">
                     <div class="power-card">
                         <h3>Стандарты</h2>
                             <p>
@@ -413,7 +419,7 @@
                             </p>
                     </div>
                 </div>
-                <div class="col-lg-3 offset-lg-1">
+                <div class="col-lg-3 offset-lg-1" data-aos="fade-up">
                     <div class="power-card">
                         <h3>Отношение к профессии</h2>
                             <p>
@@ -587,9 +593,11 @@
                     <div class="calc-body">
                         <h2>Посчитайте стоимость сервиса
                             для своей компании:</h2>
-                        <label for="customRange3">Example range
-                            <input type="range" class="custom-range" min="0" max="40" step="1" id="customRange3">
+                        <label for="customRange3"><span class="users-comp__label">35</span>
+                            <input type="range" id="users-comp" class="custom-range" min="0" max="41" value="35"
+                                step="1" id="customRange3">
                             <div class="custom-tick">
+                                <span></span>
                                 <span></span>
                                 <span></span>
                                 <span></span>
@@ -634,10 +642,11 @@
                                 Количество пользователей (компьютеров), 625 ₽ за единицу.
                             </p>
                         </label>
-                        <label for="customRange4">Example range
-                            <input type="range" class="custom-range custom-range2" min="0" max="5" step="1"
-                                id="customRange4">
+                        <label for="customRange4"><span class="server__label">0</span>
+                            <input type="range" id="qnty-servers" class="custom-range custom-range2" value="0" min="0"
+                                max="6" step="1" id="customRange4">
                             <div class="custom-tick2">
+                                <span></span>
                                 <span></span>
                                 <span></span>
                                 <span></span>
@@ -648,19 +657,31 @@
                                 Количество серверов
                             </p>
                         </label>
-                        <div class="can-toggle demo-rebrand-2">
+                        <div class="can-toggle contact-toggle demo-rebrand-2">
                             <input id="e" type="checkbox">
                             <label for="e">
                                 <div class="can-toggle__label-text"> У вас есть IP-телефония? (+ 2 500 ₽)</div>
                                 <div class="can-toggle__switch" data-checked="Нет" data-unchecked="Да"></div>
                             </label>
                         </div>
+                        <div class="calc-max__users">
+                            <div class="max-users__body">
+                                <div class="max-users__img">
+                                    <img src="./img/max-users.png" alt="max">
+                                </div>
+                                <p>
+                                    Вы отметили, что в вашей компании 40 или больше сотрудников. В этом случае мы
+                                    рекомендуем вам воспользоваться услугой аутстаффинга.
+                                </p>
+                            </div>
+                        </div>
                         <span class="calc-body__sum">
                             Оценочная стоимость обслуживания в месяц:*
                         </span>
                         <div class="calc-body__price">
-                            <span class="price">21 875 ₽</span>
-                            <a href="#" class="calc-btn">Оформить подписку</a>
+                            <span class="price">23 450 ₽</span>
+                            <a href="#" class="calc-btn" data-toggle="modal" data-target="#subscription">Оформить
+                                подписку</a>
                         </div>
                         <span class="calc-body__cons">
                             *Узнайте итоговую стоимость у нашего менеджера.
@@ -682,8 +703,25 @@
                             <li>Установка и настройка 1С</li>
                             <li>Настройка и обновление Java</li>
                             <li>Закупка и установка сертификатов</li>
-                            <li>Настройка и обслуживание серверов (появляется при сдвиге бегунка «количество серверов»)
+                            <li class="setings-calc">Настройка и обслуживание серверов</li>
+                        </ul>
+                    </article>
+                    <article class="outstaffing">
+                        <h2>Что такое аутстаффинг? Это когда мы выделяем одного ИТ-специалиста или целую команду для
+                            работы в офисе клиента.</h2>
+                        <ul>
+                            <li>вы получаете квалифицированного ИТ-специалиста и его «бэкапера» — специалиста на замену,
+                                на случай, если тот заболеет;
                             </li>
+                            <li>вам не нужно разбираться с документами — мы работаем с вами по стандартному договору
+                                оказания услуг, а вся кадровая документация ведется нами;
+                            </li>
+                            <li>если в компании возникла проблема, которую аутстаффер не может решить самостоятельно —
+                                наш отдел выездных и серверных специалистов и третья линия Удаленной поддержки
+                                подключатся к работе;
+                            </li>
+                            <li>аутстаффер работает не только в роли айтишника, но и выполняет функцию ИТ-менеджера —
+                                вся коммуникация с сервисными и серверными специалистами осуществляется через него.</li>
                         </ul>
                     </article>
                 </div>
@@ -696,7 +734,7 @@
                 Создайте технологическое преимущество
                 для своей компании, вместе с IT Support Group
             </h2>
-            <a href="#">Заказать звонок</a>
+            <a href="#" data-toggle="modal" data-target="#callbackpopup">Заказать звонок</a>
         </article>
     </section>
     <section class="coment-slider">
@@ -749,16 +787,17 @@
         <div class="container">
             <article class="row">
                 <div class="col-lg-6 offset-lg-1">
-                    <h2>Бесплатный аудит всей
+                    <h2 data-aos="fade-up">Бесплатный аудит всей
                         ИТ-инфраструктуры</h2>
-                    <p>
+                    <p data-aos="fade-up">
                         Оставьте заявку на бесплатный ИТ-аудит, и наш специалист проверит, как у вас все работает на
                         самом деле. Напишет отчет и даст дальнейшие рекомендации, как можно увеличить мощность вашего
                         бизнеса.
                     </p>
-                    <div class="audit-contact-us">
+                    <div class="audit-contact-us" data-aos="fade-up">
                         <input type="tel">
-                        <a href="#" class="btn-audit">Заказать звонок</a>
+                        <a href="#" class="btn-audit">Заказать
+                            звонок</a>
                     </div>
                 </div>
                 <!-- <div class="col-lg-6">
@@ -767,6 +806,9 @@
                     </div>
                 </div> -->
             </article>
+        </div>
+        <div class="audit-decor">
+            <img src="./img/big_hug_mug.png" alt="big">
         </div>
     </section>
     <section class="contact">
@@ -849,7 +891,7 @@
 <footer>
     <div class="container">
         <div class="row">
-            <article class="footer-body">
+            <article class="footer-body col-12">
                 <a href="#">
                     <img src="./img/footer-logo.svg" alt="logo">
                 </a>
@@ -857,17 +899,110 @@
                     IT Support Group 2006-2020
                 </span>
                 <p>
-                    Сделано в <a href="#">Рояль Кусто</a>
+                    Сделано в <a href="https://royalkusto.kz/">Рояль Кусто</a>
                 </p>
             </article>
         </div>
     </div>
 </footer>
+<!-- Modal -->
+<div class="modal fade" id="callbackpopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content callback-modal">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <img src="./img/close-x.svg" alt="close">
+            </button>
+            <h2>Оставьте номер своего телефона
+                и мы свяжемся с вами в течении часа.</h2>
+            <form class="callback-form__modal">
+                <input id="cb-tel" type="tel">
+                <button id="cb-btn" type="submit">Перезвоните мне!</button>
+                <div id="note"></div>
+            </form>
+            <div class="logo">
+                <img src="./img/logo_m.svg" alt=" logo">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="subscription" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-subscription modal-dialog-centered" role="document">
+        <div class="modal-content callback-modal">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <img src="./img/close-x.svg" alt="close">
+            </button>
+            <h1 сlass="main-title">Оформить подписку</h1>
+            <form class="subscription-form__modal" id="ajax_form" action="">
+                <input type="name" id="subName" name="Name" placeholder="Имя*">
+                <input type="tel" id="subTel" name="Phonenumber" placeholder="Номер телефона*">
+                <input type="email" id="subMail" placeholder="e-mail*">
+                <input type="text" id="subCompany" placeholder="Компания*">
+                <div id="param-subs">
+                    <span>Параметры вашей подписки:</span>
+                    <span class="param-subs__price">
+
+                    </span>
+                    <span>Вы получаете ИТ-аусорсинг для вашей комапнии.</span>
+                    <div class="param-subs__params">
+                        <p>компьютеров - <span class="param-subs__comp"></span></p>
+                        <p> серверов – <span class="param-subs__server"></span></p>
+                        <p> IP-телефония – <span class="param-subs__ip"></span></p>
+                        <div class="logo">
+                            <img src="./img/logo_m.svg" alt=" logo">
+                        </div>
+                    </div>
+                </div>
+                <label>ВНИМАНИЕ! Стоимость является оценочной, точная стоимость <br> обслуживания предоставляется
+                    менеджером
+                    IT
+                    Support Group</label>
+                <button type="submit" id="sndMail">Отправить запрос</button>
+            </form>
+            <div id="result_form"></div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="thanks" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content callback-modal">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <img src="./img/close-x.svg" alt="close">
+            </button>
+            <h2>Спасибо! Обычно мы отвечаем на письма
+                в течении двух рабочих дней, но можем и пораньше.</h2>
+            <div class="logo">
+                <img src="./img/logo_m.svg" alt=" logo">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="manager" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content callback-modal">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <img src="./img/close-x.svg" alt="close">
+            </button>
+            <h2>Наши менеджеры свяжутся с вами в течении часа.</h2>
+            <div class="logo">
+                <img src="./img/logo_m.svg" alt=" logo">
+            </div>
+        </div>
+    </div>
+</div>
 
 <body>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/inputmask/inputmask.min.js"></script>
     <script src="./js/owl.carousel.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
         integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
@@ -875,7 +1010,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./js/main.js"></script>
+    <script src="./js/mail.js"></script>
 </body>
 
 </html>

@@ -2379,6 +2379,11 @@ menu li a:hover {
   position: relative;
 }
 
+.audit .audit-body {
+  position: relative;
+  z-index: 5;
+}
+
 .audit .audit-decor {
   position: absolute;
   bottom: -100px;

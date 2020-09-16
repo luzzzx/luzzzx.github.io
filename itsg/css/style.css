@@ -3598,6 +3598,11 @@ footer .footer-body a {
     margin-bottom: 20px;
   }
 
+  .calc-list,
+  .outstaffing {
+    padding-top: 0;
+  }
+
   .coment-slider .slider-item {
     padding: 20px;
   }

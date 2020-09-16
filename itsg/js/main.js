@@ -2,9 +2,16 @@ AOS.init();
 
 $('.slider').owlCarousel({
     center: true,
-    items: 1.4,
     loop: true,
     margin: 50,
+    responsive: {
+        0: {
+            items: 1,
+        },
+        550: {
+            items: 1.2,
+        },
+    },
     autoplay: true,
     autoplayTimeout: 3000
 });
@@ -32,7 +39,8 @@ $('#users-comp').on("change mousemove touchmove", function () {
     if (valComp === 41) {
         $('.users-comp__label').text(`>40`);
         $('.calc-max__users').css("border-bottom", "unset");
-        $('.max-users__body').css("opacity", "1");
+        // $('.max-users__body').css("opacity", "1");
+        $('.calc-max__users').slideDown();
         $('.calc-list').css({ "opacity": "0", "position": "absolute" });
         $('.outstaffing').css({ "visibility": "unset", "opacity": "1", "position": "unset" });
         $('.contact-toggle').css("visibility", "hidden");
@@ -42,7 +50,8 @@ $('#users-comp').on("change mousemove touchmove", function () {
     }
     else {
         $('.calc-max__users').css("border-bottom", "2px solid #00ACCD");
-        $('.max-users__body').css("opacity", "0");
+        // $('.max-users__body').css("opacity", "0");
+        $('.calc-max__users').slideUp();
         $('.outstaffing').css({ "position": "absolute", "visibility": "hidden", "opacity": "0" });
         $('.calc-list').css({ "opacity": "1", "position": "unset" });
         $('.contact-toggle').css("visibility", "visible");
@@ -90,7 +99,8 @@ $('#qnty-servers').on("change mousemove touchmove", function () {
     if (valServ >= 6) {
         $('.server__label').text('');
         $('.calc-max__users').css("border-bottom", "unset");
-        $('.max-users__body').css("opacity", "1");
+        // $('.max-users__body').css("opacity", "1");
+        $('.calc-max__users').slideDown();
         $('.calc-list').css({ "opacity": "0", "position": "absolute" });
         $('.outstaffing').css({ "visibility": "unset", "opacity": "1", "position": "unset" });
         $("#users-comp").attr("value", "41");
@@ -100,7 +110,8 @@ $('#qnty-servers').on("change mousemove touchmove", function () {
     }
     else {
         $('.calc-max__users').css("border-bottom", "2px solid #00ACCD");
-        $('.max-users__body').css("opacity", "0");
+        // $('.max-users__body').css("opacity", "0");
+        $('.calc-max__users').slideUp();
         $('.outstaffing').css({ "position": "absolute", "visibility": "hidden", "opacity": "0" });
         $('.calc-list').css({ "opacity": "1", "position": "unset" });
         $('.contact-toggle').css("visibility", "visible");

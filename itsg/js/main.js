@@ -24,7 +24,7 @@ var compTotal = 0,
     check = 0;
 
 
-$('#users-comp').change(function () {
+$('#users-comp').on("change mousemove touchmove", function () {
     var valComp = parseInt($(this).val()),
         compParam = parseInt($(this).val());
 
@@ -77,7 +77,7 @@ function calcComp(compParam) {
     }
 }
 
-$('#qnty-servers').change(function () {
+$('#qnty-servers').on("change mousemove touchmove", function () {
     var valServ = parseInt($(this).val()),
         servParam = parseInt($(this).val());
     $('.server__label').text(valServ);
@@ -144,7 +144,7 @@ function sumCalc(check, srvTotal, compTotal) {
     } else {
         totalSum = p1 + p2 + p3;
     }
-    $('.price').text(totalSum + " ₽");
-    $('.param-subs__price').text(totalSum + " ₽/месяц");
+    $('.price').text(totalSum.toLocaleString('ru') + " ₽");
+    $('.param-subs__price').text(totalSum.toLocaleString('ru') + " ₽/месяц");
 
 }

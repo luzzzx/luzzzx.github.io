@@ -441,8 +441,8 @@
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="team-card">
-                            <div class="team-card__img">
-                                <img src="./img/01.png" alt="avatar">
+                            <div class="team-card__img img-1">
+
                             </div>
                             <div class="team-card__text">
                                 <h2>Алексей Белимов</h2>
@@ -452,8 +452,8 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="team-card">
-                            <div class="team-card__img">
-                                <img src="./img/02.png" alt="avatar">
+                            <div class="team-card__img img-2">
+
                             </div>
                             <div class="team-card__text">
                                 <h2>Дмитрий Резниченко</h2>
@@ -463,8 +463,8 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="team-card">
-                            <div class="team-card__img">
-                                <img src="./img/03.png" alt="avatar">
+                            <div class="team-card__img img-3">
+
                             </div>
                             <div class="team-card__text">
                                 <h2>Игорь Хегай</h2>
@@ -474,8 +474,8 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="team-card">
-                            <div class="team-card__img">
-                                <img src="./img/04.png" alt="avatar">
+                            <div class="team-card__img img-4">
+
                             </div>
                             <div class="team-card__text">
                                 <h2>Евгений Затылкин</h2>
@@ -485,8 +485,8 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="team-card">
-                            <div class="team-card__img">
-                                <img src="./img/05.png" alt="avatar">
+                            <div class="team-card__img img-5">
+
                             </div>
                             <div class="team-card__text">
                                 <h2>Александра Панарина</h2>
@@ -497,8 +497,8 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="team-card">
-                            <div class="team-card__img">
-                                <img src="./img/06.png" alt="avatar">
+                            <div class="team-card__img img-6">
+
                             </div>
                             <div class="team-card__text">
                                 <h2>Игорь Авдошкин</h2>
@@ -509,8 +509,8 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="team-card">
-                            <div class="team-card__img">
-                                <img src="./img/07.png" alt="avatar">
+                            <div class="team-card__img img-7">
+
                             </div>
                             <div class="team-card__text">
                                 <h2>Александр Басов</h2>
@@ -521,8 +521,8 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="team-card">
-                            <div class="team-card__img">
-                                <img src="./img/08.png" alt="avatar">
+                            <div class="team-card__img img-8">
+
                             </div>
                             <div class="team-card__text">
                                 <h2>Эльмира Мустафина</h2>
@@ -533,8 +533,8 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="team-card">
-                            <div class="team-card__img">
-                                <img src="./img/09.png" alt="avatar">
+                            <div class="team-card__img img-9">
+
                             </div>
                             <div class="team-card__text">
                                 <h2>Елена Нефедова</h2>
@@ -553,7 +553,7 @@
                     Сервисная компания, как юридическое лицо, отвечает за сохранность и работоспособность
                     ИТ-инфраструктуры вашего бизнеса. Это безопаснее и надежнее приходящих и штатных ИТ-специалистов.
                 </h2>
-                <a href="#">Заказать звонок</a>
+                <a href="#" data-toggle="modal" data-target="#callbackpopup">Заказать звонок</a>
             </div>
             <span>Игорь Хегай, технический директор IT Support Group</span>
         </article>
@@ -698,8 +698,6 @@
                             <li>Настройка сети и установка ПО</li>
                             <li>Установка программ, необходимых для работы (Office, Outlook, подключение принтера)</li>
                             <li>Установка и обновление антивируса</li>
-                            <li>Настройка и обновление COHO, Tumar, банкинга, кабинета налогоплательщика и приложения
-                                формирования ЭЦП</li>
                             <li>Установка и настройка 1С</li>
                             <li>Настройка и обновление Java</li>
                             <li>Закупка и установка сертификатов</li>
@@ -794,11 +792,11 @@
                         самом деле. Напишет отчет и даст дальнейшие рекомендации, как можно увеличить мощность вашего
                         бизнеса.
                     </p>
-                    <div class="audit-contact-us" data-aos="fade-up">
-                        <input type="tel">
-                        <a href="#" class="btn-audit">Заказать
+                    <form class="audit-contact-us callback-form__modal" data-aos="fade-up">
+                        <input type="tel" name="tel">
+                        <button class="btn-audit" type="submit">Заказать
                             звонок</a>
-                    </div>
+                    </form>
                 </div>
                 <!-- <div class="col-lg-6">
                     <div class="audit-img">
@@ -816,14 +814,14 @@
             <article class="row">
                 <div class="col-lg-6">
                     <h2>Напишите нам</h2>
-                    <form action="">
-                        <input type="name" placeholder=" Имя*">
-                        <input type="tel" placeholder="Номер телефона*">
-                        <input type="email" placeholder="e-mail*">
-                        <input type="text" placeholder="Компания*">
-                        <input type="text" placeholder="Сообщение*">
+                    <form class="contact-main__form">
+                        <input type="name" placeholder=" Имя*" name="name">
+                        <input type="tel" placeholder="Номер телефона*" name="tel">
+                        <input type="email" placeholder="e-mail*" name="email">
+                        <input type="text" placeholder="Компания*" name="company">
+                        <input type="text" placeholder="Сообщение*" name="text">
                         <div class="can-toggle contact-toggle demo-rebrand-2">
-                            <input id="form-contact" type="checkbox">
+                            <input id="form-contact" type="checkbox" name="sub">
                             <label for="form-contact">
                                 <div class="can-toggle__switch" data-checked="Нет" data-unchecked="Да"></div>
                                 <div class="can-toggle__label-text">Я хочу получать новости и полезные статьи от IT
@@ -852,40 +850,38 @@
         </div>
     </section>
     <section class="map">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <article class="adress">
-                        <a href="#" class="adress-title">+7 812 213 68 21</a>
-                        <p>
-                            195027, Санкт-Петербург проспект Энергетиков, д. 9к6, стр. 1
-                        </p>
-                        <ul>
-                            <li><span>Нур-Султан</span><a href="#">+7 717 264 61 12</a></li>
-                            <li><span>Алматы</span><a href="#">+7 717 264 61 12</a></li>
-                            <li><span>Шымкент</span><a href="#">+7 717 264 61 12</a></li>
-                        </ul>
-                        <div class="adress__social">
-                            <a href="#">
-                                <img src="./img/inst.svg" alt="social">
-                            </a>
-                            <a href="#">
-                                <img src="./img/Icons_FB.png" alt="social">
-                            </a>
-                            <a href="#">
-                                <img src="./img/Icons_linkedin.svg" alt="social">
-                            </a>
-                            <a href="#">
-                                <img src="./img/Icons_youtube.svg" alt="social">
-                            </a>
-                            <a href="#" class="adress-mail">
-                                it@itsg.spb.ru
-                            </a>
-                        </div>
-                    </article>
-                </div>
+        <iframe
+            src="https://yandex.ru/map-widget/v1/?um=constructor%3A921b9c4fc4f5866f46fda0f9aa7b1c8ac2d143fae678e708dc7d4668710bc534&amp;source=constructor"
+            width="100%" height="590" frameborder="0"></iframe>
+        <article class="adress">
+            <h2>Санкт-Петербург</h2>
+            <a href="#" class="adress-title">+7 812 213 68 21</a>
+            <p>
+                195027, Санкт-Петербург проспект Энергетиков, д. 9к6, стр. 1
+            </p>
+            <ul>
+                <li><span>Нур-Султан</span><a href="#">+7 717 264 61 12</a></li>
+                <li><span>Алматы</span><a href="#">+7 717 264 61 12</a></li>
+                <li><span>Шымкент</span><a href="#">+7 717 264 61 12</a></li>
+            </ul>
+            <div class="adress__social">
+                <a href="#">
+                    <img src="./img/inst.svg" alt="social">
+                </a>
+                <a href="#">
+                    <img src="./img/Icons_FB.png" alt="social">
+                </a>
+                <a href="#">
+                    <img src="./img/Icons_linkedin.svg" alt="social">
+                </a>
+                <a href="#">
+                    <img src="./img/Icons_youtube.svg" alt="social">
+                </a>
+                <a href="#" class="adress-mail">
+                    it@itsg.spb.ru
+                </a>
             </div>
-        </div>
+        </article>
     </section>
 </main>
 <footer>
@@ -916,7 +912,7 @@
             <h2>Оставьте номер своего телефона
                 и мы свяжемся с вами в течении часа.</h2>
             <form class="callback-form__modal">
-                <input id="cb-tel" type="tel">
+                <input id="cb-tel" type="tel" name="tel">
                 <button id="cb-btn" type="submit">Перезвоните мне!</button>
                 <div id="note"></div>
             </form>
@@ -935,11 +931,11 @@
                 <img src="./img/close-x.svg" alt="close">
             </button>
             <h1 сlass="main-title">Оформить подписку</h1>
-            <form class="subscription-form__modal" id="ajax_form" action="">
+            <form class="subscription-form__modal" id="ajax_form">
                 <input type="name" id="subName" name="Name" placeholder="Имя*">
                 <input type="tel" id="subTel" name="Phonenumber" placeholder="Номер телефона*">
-                <input type="email" id="subMail" placeholder="e-mail*">
-                <input type="text" id="subCompany" placeholder="Компания*">
+                <input type="email" id="subMail" name="email" placeholder="e-mail*">
+                <input type="text" id="subCompany" name="text" placeholder="Компания*">
                 <div id="param-subs">
                     <span>Параметры вашей подписки:</span>
                     <span class="param-subs__price">
@@ -999,8 +995,8 @@
 </div>
 
 <body>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"
+        integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ=="
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/inputmask/inputmask.min.js"></script>
     <script src="./js/owl.carousel.min.js"></script>

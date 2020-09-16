@@ -8,8 +8,11 @@ $headers .= "From: test.ru <test.ru>\r\n";
 
 $name = trim($_POST["name"]);
 $phone = trim($_POST["tel"]);
-$massage = trim($_POST["massage"]); //Поля
+$email = trim($_POST["email"]);
+$company = trim($_POST["company"]);
+$sub = trim($_POST["sub"]);
+$massage = trim($_POST["text"]); //Поля
 
-$message = "Имя: $name <br/> Телефон: $phone <br/> Сообщение: $massage";
+$message = "Имя: $name <br/> Телефон: $phone <br/> Сообщение: $email <br/> Сообщение: $company <br/> Сообщение: $sub <br/> Сообщение: $massage";
 
 mail($recepient, $subject, $message, $headers); ?>

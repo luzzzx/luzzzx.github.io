@@ -927,7 +927,7 @@ menu li a:hover {
   position: absolute;
   top: 30px;
   left: 0;
-  font-family: 'Gilroy';
+  font-family: 'Source Sans Pro';
   font-style: normal;
   font-weight: 800;
   font-size: 200px;
@@ -1213,7 +1213,7 @@ menu li a:hover {
 }
 
 .howit .tab-pane .number {
-  font-family: 'Gilroy';
+  font-family: 'Source Sans Pro';
   font-style: normal;
   font-weight: 800;
   font-size: 150px;

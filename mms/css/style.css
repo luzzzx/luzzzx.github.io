@@ -1968,6 +1968,10 @@ main {
     display: none;
   }
 
+  .sale-menu img {
+    margin-right: 0;
+  }
+
   .menu-mobile {
     display: -webkit-box;
     display: -ms-flexbox;

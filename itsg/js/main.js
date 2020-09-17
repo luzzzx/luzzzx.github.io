@@ -67,17 +67,20 @@ $('#users-comp').on("change mousemove touchmove", function () {
 
 function calcComp(compParam) {
     if (compParam <= '4') {
-        compTotal = compParam * 3500;
+        compTotal = 3500;
+        $('.for-one').text(`3500`);
     }
     else if ((compParam >= 5) && (compParam <= 10)) {
         compTotal = compParam * 900;
-
+        $('.for-one').text(`900`);
     }
     else if ((compParam > 10) && (compParam <= 20)) {
         compTotal = compParam * 750;
+        $('.for-one').text(`750`);
     }
     else if ((compParam >= 21) && (compParam <= 40)) {
         compTotal = compParam * 670;
+        $('.for-one').text(`670`);
     }
     else if (compParam === 41) {
         compTotal = 50000;

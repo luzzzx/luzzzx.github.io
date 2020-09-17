@@ -10,6 +10,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="./css/style.min.css">
     <title>Matrasshop</title>
 </head>
@@ -3064,82 +3065,259 @@
                         </h2>
                     </div>
                     <div class="col-12">
-                        <nav class="news-nav">
-                            <a href="#" class="active">Все</a>
-                            <a href="#">Новости компании</a>
-                            <a href="#">Пресса о нас</a>
-                        </nav>
+                        <ul class="nav nav-pills news-nav" id="pills-tab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="pills-all-tab" data-toggle="pill" href="#pills-all"
+                                    role="tab" aria-controls="pills-all" aria-selected="true">Все</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="pills-news-tab" data-toggle="pill" href="#pills-news" role="tab"
+                                    aria-controls="pills-news" aria-selected="false">Новости компании</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="pills-about-tab" data-toggle="pill" href="#pills-about"
+                                    role="tab" aria-controls="pills-about" aria-selected="false">Пресса о нас</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <div class="matras-slider">
-                    <div class="col-3">
-                        <div class="news-body">
-                            <div class="news-body__img">
-                                <img src="./img/n1.png" alt="news">
+                <div class="tab-content" id="pills-tabContent" role="tablist">
+                    <div class="tab-pane fade show active" id="pills-all" role="tabpanel"
+                        aria-labelledby="pills-all-tab">
+                        <div class="matras-slider">
+                            <div class="col-3">
+                                <div class="news-body">
+                                    <div class="news-body__img">
+                                        <img src="./img/n1.png" alt="news">
+                                    </div>
+                                    <span>14 апреля 2020</span>
+                                    <h2>В это нелёгкое время главное – это забота об окружающих</h2>
+                                    <p>
+                                        О роли сна в поддержании здоровья человека ученые знали всегда. Но до последнего
+                                        времени
+                                        наука даже не подозревала, насколько с ...
+                                    </p>
+                                    <a href="#">Подробнее</a>
+                                </div>
                             </div>
-                            <span>14 апреля 2020</span>
-                            <h2>В это нелёгкое время главное – это забота об окружающих</h2>
-                            <p>
-                                О роли сна в поддержании здоровья человека ученые знали всегда. Но до последнего времени
-                                наука даже не подозревала, насколько с ...
-                            </p>
-                            <a href="#">Подробнее</a>
+                            <div class="col-3">
+                                <div class="news-body">
+                                    <div class="news-body__img">
+                                        <img src="./img/n2.png" alt="news">
+                                    </div>
+                                    <span>14 апреля 2020</span>
+                                    <h2>В это нелёгкое время главное – это забота об окружающих</h2>
+                                    <p>
+                                        О роли сна в поддержании здоровья человека ученые знали всегда. Но до последнего
+                                        времени
+                                        наука даже не подозревала, насколько с ...
+                                    </p>
+                                    <a href="#">Подробнее</a>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="news-body">
+                                    <div class="news-body__img">
+                                        <img src="./img/n3.png" alt="news">
+                                    </div>
+                                    <span>14 апреля 2020</span>
+                                    <h2>В это нелёгкое время главное – это забота об окружающих</h2>
+                                    <p>
+                                        О роли сна в поддержании здоровья человека ученые знали всегда. Но до последнего
+                                        времени
+                                        наука даже не подозревала, насколько с ...
+                                    </p>
+                                    <a href="#">Подробнее</a>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="news-body">
+                                    <div class="news-body__img">
+                                        <img src="./img/n4.png" alt="news">
+                                    </div>
+                                    <span>14 апреля 2020</span>
+                                    <h2>В это нелёгкое время главное – это забота об окружающих</h2>
+                                    <p>
+                                        О роли сна в поддержании здоровья человека ученые знали всегда. Но до последнего
+                                        времени
+                                        наука даже не подозревала, насколько с ...
+                                    </p>
+                                    <a href="#">Подробнее</a>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="news-body">
+                                    <div class="news-body__img">
+                                        <img src="./img/n1.png" alt="news">
+                                    </div>
+                                    <span>14 апреля 2020</span>
+                                    <h2>В это нелёгкое время главное – это забота об окружающих</h2>
+                                    <p>
+                                        О роли сна в поддержании здоровья человека ученые знали всегда. Но до последнего
+                                        времени
+                                        наука даже не подозревала, насколько с ...
+                                    </p>
+                                    <a href="#">Подробнее</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-3">
-                        <div class="news-body">
-                            <div class="news-body__img">
-                                <img src="./img/n2.png" alt="news">
+                    <div class="tab-pane fade" id="pills-news" role="tabpanel" aria-labelledby="pills-news-tab">
+                        <div class="matras-slider">
+                            <div class="col-3">
+                                <div class="news-body">
+                                    <div class="news-body__img">
+                                        <img src="./img/n1.png" alt="news">
+                                    </div>
+                                    <span>14 апреля 2024</span>
+                                    <h2>В это нелёгкое время главное – это забота об окружающих</h2>
+                                    <p>
+                                        О роли сна в поддержании здоровья человека ученые знали всегда. Но до последнего
+                                        времени
+                                        наука даже не подозревала, насколько с ...
+                                    </p>
+                                    <a href="#">Подробнее</a>
+                                </div>
                             </div>
-                            <span>14 апреля 2020</span>
-                            <h2>В это нелёгкое время главное – это забота об окружающих</h2>
-                            <p>
-                                О роли сна в поддержании здоровья человека ученые знали всегда. Но до последнего времени
-                                наука даже не подозревала, насколько с ...
-                            </p>
-                            <a href="#">Подробнее</a>
+                            <div class="col-3">
+                                <div class="news-body">
+                                    <div class="news-body__img">
+                                        <img src="./img/n2.png" alt="news">
+                                    </div>
+                                    <span>14 апреля 2024</span>
+                                    <h2>В это нелёгкое время главное – это забота об окружающих</h2>
+                                    <p>
+                                        О роли сна в поддержании здоровья человека ученые знали всегда. Но до последнего
+                                        времени
+                                        наука даже не подозревала, насколько с ...
+                                    </p>
+                                    <a href="#">Подробнее</a>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="news-body">
+                                    <div class="news-body__img">
+                                        <img src="./img/n3.png" alt="news">
+                                    </div>
+                                    <span>14 апреля 2024</span>
+                                    <h2>В это нелёгкое время главное – это забота об окружающих</h2>
+                                    <p>
+                                        О роли сна в поддержании здоровья человека ученые знали всегда. Но до последнего
+                                        времени
+                                        наука даже не подозревала, насколько с ...
+                                    </p>
+                                    <a href="#">Подробнее</a>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="news-body">
+                                    <div class="news-body__img">
+                                        <img src="./img/n4.png" alt="news">
+                                    </div>
+                                    <span>14 апреля 2024</span>
+                                    <h2>В это нелёгкое время главное – это забота об окружающих</h2>
+                                    <p>
+                                        О роли сна в поддержании здоровья человека ученые знали всегда. Но до последнего
+                                        времени
+                                        наука даже не подозревала, насколько с ...
+                                    </p>
+                                    <a href="#">Подробнее</a>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="news-body">
+                                    <div class="news-body__img">
+                                        <img src="./img/n1.png" alt="news">
+                                    </div>
+                                    <span>14 апреля 2024</span>
+                                    <h2>В это нелёгкое время главное – это забота об окружающих</h2>
+                                    <p>
+                                        О роли сна в поддержании здоровья человека ученые знали всегда. Но до последнего
+                                        времени
+                                        наука даже не подозревала, насколько с ...
+                                    </p>
+                                    <a href="#">Подробнее</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-3">
-                        <div class="news-body">
-                            <div class="news-body__img">
-                                <img src="./img/n3.png" alt="news">
+                    <div class="tab-pane fade" id="pills-about" role="tabpanel" aria-labelledby="pills-about-tab">
+                        <div class="matras-slider">
+                            <div class="col-3">
+                                <div class="news-body">
+                                    <div class="news-body__img">
+                                        <img src="./img/n1.png" alt="news">
+                                    </div>
+                                    <span>14 апреля 2023</span>
+                                    <h2>В это нелёгкое время главное – это забота об окружающих</h2>
+                                    <p>
+                                        О роли сна в поддержании здоровья человека ученые знали всегда. Но до последнего
+                                        времени
+                                        наука даже не подозревала, насколько с ...
+                                    </p>
+                                    <a href="#">Подробнее</a>
+                                </div>
                             </div>
-                            <span>14 апреля 2020</span>
-                            <h2>В это нелёгкое время главное – это забота об окружающих</h2>
-                            <p>
-                                О роли сна в поддержании здоровья человека ученые знали всегда. Но до последнего времени
-                                наука даже не подозревала, насколько с ...
-                            </p>
-                            <a href="#">Подробнее</a>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="news-body">
-                            <div class="news-body__img">
-                                <img src="./img/n4.png" alt="news">
+                            <div class="col-3">
+                                <div class="news-body">
+                                    <div class="news-body__img">
+                                        <img src="./img/n2.png" alt="news">
+                                    </div>
+                                    <span>14 апреля 2023</span>
+                                    <h2>В это нелёгкое время главное – это забота об окружающих</h2>
+                                    <p>
+                                        О роли сна в поддержании здоровья человека ученые знали всегда. Но до последнего
+                                        времени
+                                        наука даже не подозревала, насколько с ...
+                                    </p>
+                                    <a href="#">Подробнее</a>
+                                </div>
                             </div>
-                            <span>14 апреля 2020</span>
-                            <h2>В это нелёгкое время главное – это забота об окружающих</h2>
-                            <p>
-                                О роли сна в поддержании здоровья человека ученые знали всегда. Но до последнего времени
-                                наука даже не подозревала, насколько с ...
-                            </p>
-                            <a href="#">Подробнее</a>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="news-body">
-                            <div class="news-body__img">
-                                <img src="./img/n1.png" alt="news">
+                            <div class="col-3">
+                                <div class="news-body">
+                                    <div class="news-body__img">
+                                        <img src="./img/n3.png" alt="news">
+                                    </div>
+                                    <span>14 апреля 2023</span>
+                                    <h2>В это нелёгкое время главное – это забота об окружающих</h2>
+                                    <p>
+                                        О роли сна в поддержании здоровья человека ученые знали всегда. Но до последнего
+                                        времени
+                                        наука даже не подозревала, насколько с ...
+                                    </p>
+                                    <a href="#">Подробнее</a>
+                                </div>
                             </div>
-                            <span>14 апреля 2020</span>
-                            <h2>В это нелёгкое время главное – это забота об окружающих</h2>
-                            <p>
-                                О роли сна в поддержании здоровья человека ученые знали всегда. Но до последнего времени
-                                наука даже не подозревала, насколько с ...
-                            </p>
-                            <a href="#">Подробнее</a>
+                            <div class="col-3">
+                                <div class="news-body">
+                                    <div class="news-body__img">
+                                        <img src="./img/n4.png" alt="news">
+                                    </div>
+                                    <span>14 апреля 2023</span>
+                                    <h2>В это нелёгкое время главное – это забота об окружающих</h2>
+                                    <p>
+                                        О роли сна в поддержании здоровья человека ученые знали всегда. Но до последнего
+                                        времени
+                                        наука даже не подозревала, насколько с ...
+                                    </p>
+                                    <a href="#">Подробнее</a>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="news-body">
+                                    <div class="news-body__img">
+                                        <img src="./img/n1.png" alt="news">
+                                    </div>
+                                    <span>14 апреля 2023</span>
+                                    <h2>В это нелёгкое время главное – это забота об окружающих</h2>
+                                    <p>
+                                        О роли сна в поддержании здоровья человека ученые знали всегда. Но до последнего
+                                        времени
+                                        наука даже не подозревала, насколько с ...
+                                    </p>
+                                    <a href="#">Подробнее</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -3268,9 +3446,9 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
+    <script src="./js/slick.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/inputmask/inputmask.min.js"></script>
-    <script src="./js/owl.carousel.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
         integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
         crossorigin="anonymous"></script>

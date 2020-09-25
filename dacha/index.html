@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <title>Dacha</title>
+</head>
+
+<body class="bg-main">
+    <svg style="display: none;">
+        <symbol id="line" viewBox="0 0 134 14">
+            <path
+                d="M1 8.99999L27.9834 5.72928C31.9799 5.24487 36.0201 5.24487 40.0166 5.72928L60.9834 8.27072C64.9799 8.75513 69.0201 8.75513 73.0166 8.27072L93.9834 5.72928C97.9799 5.24487 102.02 5.24487 106.017 5.72928L133 9"
+                stroke="#currentColor" stroke-width="10" />
+        </symbol>
+        <symbol id="pre-c" viewBox="0 0 12 12">
+            <g clip-path="url(#clip0)">
+                <path
+                    d="M11.9568 9.4182L11.2598 7.38984C11.5958 6.70308 11.7733 5.93929 11.7745 5.1708C11.7766 3.83456 11.2596 2.57111 10.3188 1.61322C9.37776 0.655135 8.12381 0.115814 6.78787 0.0946498C5.40259 0.0727591 4.10049 0.599682 3.12158 1.57857C2.17766 2.52248 1.65411 3.76684 1.63754 5.0966C0.707207 5.79705 0.158089 6.88912 0.159894 8.05559C0.160761 8.60145 0.283621 9.14405 0.516426 9.63472L0.0363546 11.0318C-0.046169 11.2719 0.0141124 11.5327 0.193691 11.7123C0.320066 11.8387 0.486684 11.906 0.658035 11.906C0.730129 11.906 0.803067 11.8941 0.8742 11.8696L2.27129 11.3896C2.76195 11.6224 3.30456 11.7452 3.85042 11.7461C3.85238 11.7461 3.85426 11.7461 3.85623 11.7461C5.04006 11.746 6.14045 11.1828 6.83835 10.2296C7.56461 10.2105 8.28318 10.0347 8.9328 9.71691L10.9612 10.4139C11.0457 10.4429 11.1324 10.4571 11.218 10.4571C11.4217 10.4571 11.6197 10.3771 11.7699 10.2269C11.9832 10.0135 12.0549 9.70362 11.9568 9.4182ZM3.85618 11.0318C3.85466 11.0318 3.85304 11.0318 3.85152 11.0318C3.36838 11.0311 2.88859 10.912 2.46411 10.6874C2.37683 10.6412 2.27436 10.6333 2.18103 10.6653L0.748457 11.1576L1.24072 9.72502C1.27278 9.63167 1.26481 9.5292 1.21864 9.44194C0.994059 9.01744 0.87495 8.53767 0.8742 8.05451C0.873005 7.27734 1.17533 6.54073 1.70401 5.98915C1.87669 7.04187 2.37842 8.01195 3.15613 8.77582C3.92809 9.53405 4.89845 10.0168 5.94545 10.1746C5.39261 10.7195 4.64739 11.0318 3.85618 11.0318ZM11.2647 9.72181C11.2444 9.74213 11.2203 9.74766 11.1932 9.73833L9.02179 8.99218C8.98408 8.97921 8.94485 8.97279 8.90575 8.97279C8.84812 8.97279 8.7907 8.98674 8.73874 9.01425C8.11874 9.34224 7.41815 9.51619 6.71263 9.51727C6.71031 9.51727 6.7082 9.51727 6.70588 9.51727C4.3419 9.51727 2.38925 7.59694 2.3518 5.23352C2.33293 4.04324 2.7857 2.92459 3.62666 2.08363C4.46762 1.24267 5.58646 0.790065 6.77657 0.808815C9.14226 0.846339 11.0639 2.8026 11.0603 5.16968C11.0591 5.87519 10.8852 6.57581 10.5573 7.19576C10.5111 7.28302 10.5031 7.38549 10.5352 7.47884L11.2813 9.65028C11.2906 9.67747 11.285 9.70154 11.2647 9.72181Z"
+                    fill="#currentColor" />
+                <path
+                    d="M8.83341 3.26984H4.57809C4.38084 3.26984 4.22095 3.42975 4.22095 3.62698C4.22095 3.82423 4.38086 3.98412 4.57809 3.98412H8.83341C9.03066 3.98412 9.19055 3.8242 9.19055 3.62698C9.19055 3.42975 9.03066 3.26984 8.83341 3.26984Z"
+                    fill="#currentColor" />
+                <path
+                    d="M8.83341 4.73865H4.57809C4.38084 4.73865 4.22095 4.89856 4.22095 5.09579C4.22095 5.29302 4.38086 5.45293 4.57809 5.45293H8.83341C9.03066 5.45293 9.19055 5.29302 9.19055 5.09579C9.19055 4.89856 9.03066 4.73865 8.83341 4.73865Z"
+                    fill="#currentColor" />
+                <path
+                    d="M7.19543 6.20746H4.57809C4.38084 6.20746 4.22095 6.36737 4.22095 6.5646C4.22095 6.76185 4.38086 6.92174 4.57809 6.92174H7.19541C7.39266 6.92174 7.55255 6.76183 7.55255 6.5646C7.55255 6.36737 7.39268 6.20746 7.19543 6.20746Z"
+                    fill="#currentColor" />
+            </g>
+            <defs>
+                <clipPath id="clip0">
+                    <rect width="12" height="12" fill="#currentColor" />
+                </clipPath>
+            </defs>
+        </symbol>
+        <symbol id="pre-v" viewBox="0 0 12 12">
+            <path
+                d="M11.9237 5.76661C11.8165 5.61997 9.26224 2.17584 5.99994 2.17584C2.73765 2.17584 0.183235 5.61997 0.0761486 5.76647C-0.0253829 5.9056 -0.0253829 6.0943 0.0761486 6.23342C0.183235 6.38007 2.73765 9.82419 5.99994 9.82419C9.26224 9.82419 11.8165 6.38005 11.9237 6.23354C12.0254 6.09444 12.0254 5.9056 11.9237 5.76661ZM5.99994 9.03299C3.59691 9.03299 1.51564 6.74706 0.899533 5.99975C1.51484 5.25179 3.59176 2.96705 5.99994 2.96705C8.40285 2.96705 10.484 5.25258 11.1003 6.00029C10.485 6.74823 8.40812 9.03299 5.99994 9.03299Z"
+                fill="#currentColor" />
+            <path
+                d="M5.99995 3.6264C4.69115 3.6264 3.62631 4.69124 3.62631 6.00004C3.62631 7.30884 4.69115 8.37368 5.99995 8.37368C7.30875 8.37368 8.37359 7.30884 8.37359 6.00004C8.37359 4.69124 7.30875 3.6264 5.99995 3.6264ZM5.99995 7.58245C5.12737 7.58245 4.41754 6.8726 4.41754 6.00004C4.41754 5.12748 5.12739 4.41763 5.99995 4.41763C6.87251 4.41763 7.58236 5.12748 7.58236 6.00004C7.58236 6.8726 6.87253 7.58245 5.99995 7.58245Z"
+                fill="#currentColor" />
+
+        </symbol>
+    </svg>
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <a href="#" class="header-logo">
+                    <img src="./img/logo-main.svg" alt="logo">
+                </a>
+                <form class="search-mobile">
+                    <label class="search">
+                        <input type="text" placeholder="Поиск по сатьям">
+                        <button><img src="./img/btn-search.svg" alt="search"></button>
+                    </label>
+                </form>
+                <button class="burger">
+                    <span></span>
+                </button>
+                <a href="#" class="private">
+                    <img src="./img/enter-mobile.svg" alt="private">
+                    <img class="user-icon" src="./img/user.svg" alt="user">
+                    <!-- добавляем класс active появляется иконка user -->
+                </a>
+                <div class="drop-down__room">
+                    <span>Сергей Петров</span>
+                    <ul>
+                        <li><a href="#">Избранное</a></li>
+                        <li><a href="#">Настройка уведомлений</a></li>
+                        <li><a href="#">Удалить профиль</a></li>
+                    </ul>
+                    <a href="#">Выйти</a>
+                </div>
+                <nav>
+                    <div class="wrapper">
+                        <ul class="main-menu">
+                            <li class="dd-menu"><a href="#">Категории</a>
+                                <div class="drop-down">
+                                    <ul>
+                                        <li><a href="#">Цветы</a></li>
+                                        <li><a href="#">Деревья</a></li>
+                                        <li><a href="#">Удобрения</a></li>
+                                        <li><a href="#">Реставрация</a></li>
+                                        <li><a href="#">Аксессуары</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="#">Популярное</a></li>
+                        </ul>
+                        <form class="search-main">
+                            <label class="search">
+                                <input type="text" placeholder="Поиск по сатьям">
+                                <button><img src="./img/btn-search.svg" alt="search"></button>
+                            </label>
+                        </form>
+                        <a href="#" class="private">
+                            <img class="user-icon" src="./img/user.svg" alt="user">
+                            <!-- добавляем класс active появляется иконка user -->
+                            <img class="private-icon" src="./img/enter.svg" alt="private">Войти
+                        </a>
+                        <div class="drop-down__room">
+                            <span>Сергей Петров</span>
+                            <ul>
+                                <li><a href="#">Избранное</a></li>
+                                <li><a href="#">Настройка уведомлений</a></li>
+                                <li><a href="#">Удалить профиль</a></li>
+                            </ul>
+                            <a href="#">Выйти</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="header-mid">
+                <nav>
+                    <a class="mobile-link" href="#">Категории</a>
+                    <ul>
+                        <li><a href="#"><img src="./img/m1.svg" alt="menu">Цветы<svg class="line">
+                                    <use xlink:href="#line"></use>
+                                </svg></a></li>
+                        <li><a href="#"><img src="./img/m2.svg" alt="menu">Деревья<svg class="line">
+                                    <use xlink:href="#line"></use>
+                                </svg></a></li>
+                        <li><a href="#"><img src="./img/m3.svg" alt="menu">Удобрения<svg class="line">
+                                    <use xlink:href="#line"></use>
+                                </svg></a></li>
+                        <li><a href="#"><img src="./img/m4.svg" alt="menu">Реставрация<svg class="line">
+                                    <use xlink:href="#line"></use>
+                                </svg></a></li>
+                        <li><a href="#"><img src="./img/m5.svg" alt="menu">Аксессуары<svg class="line">
+                                    <use xlink:href="#line"></use>
+                                </svg></a></li>
+                    </ul>
+                    <a class="mobile-link" href="#">Популярное</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-3 col-md-6">
+                    <div class="card-main">
+                        <div class="card-img">
+                            <img src="./img/c1.png" alt="card-img">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-wrapp">
+                                <h2>
+                                    Вьющиеся розы вокруг окон и балконов
+                                </h2>
+                                <div class="card-tags">
+                                    <a href="#">#Благоустройство</a>
+                                    <a href="#">#Цветы</a>
+                                    <a href="#">#Розы</a>
+                                    <a href="#">#Сад</a>
+                                    <a href="#">#Популярное</a>
+                                </div>
+                                <div class="card-botom">
+                                    <a href="#"><svg class="icon-card">
+                                            <use xlink:href="#pre-c"></use>
+                                        </svg> 25</a>
+                                    <a href="#">
+                                        <svg class="icon-card">
+                                            <use xlink:href="#pre-v"></use>
+                                        </svg> 156</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-3 col-md-6">
+                    <div class="card-main">
+                        <div class="card-img">
+                            <img src="./img/c2.png" alt="card-img">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-wrapp">
+                                <h2>
+                                    Прививка Камелий
+                                </h2>
+                                <div class="card-tags">
+                                    <a href="#">#Благоустройство</a>
+                                    <a href="#">#Цветы</a>
+                                    <a href="#">#Розы</a>
+                                    <a href="#">#Сад</a>
+                                    <a href="#">#Популярное</a>
+                                </div>
+                                <div class="card-botom">
+                                    <a href="#"><svg class="icon-card">
+                                            <use xlink:href="#pre-c"></use>
+                                        </svg> 25</a>
+                                    <a href="#">
+                                        <svg class="icon-card">
+                                            <use xlink:href="#pre-v"></use>
+                                        </svg> 156</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-3 col-md-6">
+                    <div class="card-main">
+                        <div class="card-img">
+                            <img src="./img/c3.png" alt="card-img">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-wrapp">
+                                <h2>
+                                    Желтые цветочки радуют
+                                    каждую душу
+                                </h2>
+                                <div class="card-tags">
+                                    <a href="#">#Благоустройство</a>
+                                    <a href="#">#Цветы</a>
+                                    <a href="#">#Розы</a>
+                                    <a href="#">#Сад</a>
+                                    <a href="#">#Популярное</a>
+                                </div>
+                                <div class="card-botom">
+                                    <a href="#"><svg class="icon-card">
+                                            <use xlink:href="#pre-c"></use>
+                                        </svg> 25</a>
+                                    <a href="#">
+                                        <svg class="icon-card">
+                                            <use xlink:href="#pre-v"></use>
+                                        </svg> 156</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-3 col-md-6">
+                    <div class="card-main">
+                        <div class="card-img">
+                            <img src="./img/c4.png" alt="card-img">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-wrapp">
+                                <h2>
+                                    Экзотические цветы
+                                    на участке
+                                </h2>
+                                <div class="card-tags">
+                                    <a href="#">#Благоустройство</a>
+                                    <a href="#">#Цветы</a>
+                                    <a href="#">#Розы</a>
+                                    <a href="#">#Сад</a>
+                                    <a href="#">#Популярное</a>
+                                </div>
+                                <div class="card-botom">
+                                    <a href="#"><svg class="icon-card">
+                                            <use xlink:href="#pre-c"></use>
+                                        </svg> 25</a>
+                                    <a href="#">
+                                        <svg class="icon-card">
+                                            <use xlink:href="#pre-v"></use>
+                                        </svg> 156</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-3 col-md-6">
+                    <div class="card-main">
+                        <div class="card-img">
+                            <img src="./img/c5.png" alt="card-img">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-wrapp">
+                                <h2>
+                                    Вьющиеся розы вокруг
+                                    окон и балконов
+                                </h2>
+                                <div class="card-tags">
+                                    <a href="#">#Благоустройство</a>
+                                    <a href="#">#Цветы</a>
+                                    <a href="#">#Розы</a>
+                                    <a href="#">#Сад</a>
+                                    <a href="#">#Популярное</a>
+                                </div>
+                                <div class="card-botom">
+                                    <a href="#"><svg class="icon-card">
+                                            <use xlink:href="#pre-c"></use>
+                                        </svg> 25</a>
+                                    <a href="#">
+                                        <svg class="icon-card">
+                                            <use xlink:href="#pre-v"></use>
+                                        </svg> 156</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-3 col-md-6">
+                    <div class="card-main">
+                        <div class="card-img">
+                            <img src="./img/c6.png" alt="card-img">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-wrapp">
+                                <h2>
+                                    Советы экспертов.
+                                    Уход за садом
+                                </h2>
+                                <div class="card-tags">
+                                    <a href="#">#Благоустройство</a>
+                                    <a href="#">#Цветы</a>
+                                    <a href="#">#Розы</a>
+                                    <a href="#">#Сад</a>
+                                    <a href="#">#Популярное</a>
+                                </div>
+                                <div class="card-botom">
+                                    <a href="#"><svg class="icon-card">
+                                            <use xlink:href="#pre-c"></use>
+                                        </svg> 25</a>
+                                    <a href="#">
+                                        <svg class="icon-card">
+                                            <use xlink:href="#pre-v"></use>
+                                        </svg> 156</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-3 col-md-6">
+                    <div class="card-main">
+                        <div class="card-img">
+                            <img src="./img/c7.png" alt="card-img">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-wrapp">
+                                <h2>
+                                    Вьющиеся розы вокруг
+                                    окон и балконов
+                                </h2>
+                                <div class="card-tags">
+                                    <a href="#">#Благоустройство</a>
+                                    <a href="#">#Цветы</a>
+                                    <a href="#">#Розы</a>
+                                    <a href="#">#Сад</a>
+                                    <a href="#">#Популярное</a>
+                                </div>
+                                <div class="card-botom">
+                                    <a href="#"><svg class="icon-card">
+                                            <use xlink:href="#pre-c"></use>
+                                        </svg> 25</a>
+                                    <a href="#">
+                                        <svg class="icon-card">
+                                            <use xlink:href="#pre-v"></use>
+                                        </svg> 156</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-3 col-md-6">
+                    <div class="card-main">
+                        <div class="card-img">
+                            <img src="./img/c8.png" alt="card-img">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-wrapp">
+                                <h2>
+                                    Реставрация старых
+                                    дачных домиков
+                                </h2>
+                                <div class="card-tags">
+                                    <a href="#">#Благоустройство</a>
+                                    <a href="#">#Цветы</a>
+                                    <a href="#">#Розы</a>
+                                    <a href="#">#Сад</a>
+                                    <a href="#">#Популярное</a>
+                                </div>
+                                <div class="card-botom">
+                                    <a href="#"><svg class="icon-card">
+                                            <use xlink:href="#pre-c"></use>
+                                        </svg> 25</a>
+                                    <a href="#">
+                                        <svg class="icon-card">
+                                            <use xlink:href="#pre-v"></use>
+                                        </svg> 156</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-3 col-md-6">
+                    <div class="card-main">
+                        <div class="card-img">
+                            <img src="./img/c9.png" alt="card-img">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-wrapp">
+                                <h2>
+                                    Лучшие удобрения
+                                    для цветов
+                                </h2>
+                                <div class="card-tags">
+                                    <a href="#">#Благоустройство</a>
+                                    <a href="#">#Цветы</a>
+                                    <a href="#">#Розы</a>
+                                    <a href="#">#Сад</a>
+                                    <a href="#">#Популярное</a>
+                                </div>
+                                <div class="card-botom">
+                                    <a href="#"><svg class="icon-card">
+                                            <use xlink:href="#pre-c"></use>
+                                        </svg> 25</a>
+                                    <a href="#">
+                                        <svg class="icon-card">
+                                            <use xlink:href="#pre-v"></use>
+                                        </svg> 156</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-3 col-md-6">
+                    <div class="card-main">
+                        <div class="card-img">
+                            <img src="./img/c1.png" alt="card-img">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-wrapp">
+                                <h2>
+                                    Вьющиеся розы вокруг окон и балконов
+                                </h2>
+                                <div class="card-tags">
+                                    <a href="#">#Благоустройство</a>
+                                    <a href="#">#Цветы</a>
+                                    <a href="#">#Розы</a>
+                                    <a href="#">#Сад</a>
+                                    <a href="#">#Популярное</a>
+                                </div>
+                                <div class="card-botom">
+                                    <a href="#"><svg class="icon-card">
+                                            <use xlink:href="#pre-c"></use>
+                                        </svg> 25</a>
+                                    <a href="#">
+                                        <svg class="icon-card">
+                                            <use xlink:href="#pre-v"></use>
+                                        </svg> 156</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-3 col-md-6">
+                    <div class="card-main">
+                        <div class="card-img">
+                            <img src="./img/c2.png" alt="card-img">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-wrapp">
+                                <h2>
+                                    Прививка Камелий
+                                </h2>
+                                <div class="card-tags">
+                                    <a href="#">#Благоустройство</a>
+                                    <a href="#">#Цветы</a>
+                                    <a href="#">#Розы</a>
+                                    <a href="#">#Сад</a>
+                                    <a href="#">#Популярное</a>
+                                </div>
+                                <div class="card-botom">
+                                    <a href="#"><svg class="icon-card">
+                                            <use xlink:href="#pre-c"></use>
+                                        </svg> 25</a>
+                                    <a href="#">
+                                        <svg class="icon-card">
+                                            <use xlink:href="#pre-v"></use>
+                                        </svg> 156</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-3 col-md-6">
+                    <div class="card-main">
+                        <div class="card-img">
+                            <img src="./img/c3.png" alt="card-img">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-wrapp">
+                                <h2>
+                                    Желтые цветочки радуют
+                                    каждую душу
+                                </h2>
+                                <div class="card-tags">
+                                    <a href="#">#Благоустройство</a>
+                                    <a href="#">#Цветы</a>
+                                    <a href="#">#Розы</a>
+                                    <a href="#">#Сад</a>
+                                    <a href="#">#Популярное</a>
+                                </div>
+                                <div class="card-botom">
+                                    <a href="#"><svg class="icon-card">
+                                            <use xlink:href="#pre-c"></use>
+                                        </svg> 25</a>
+                                    <a href="#">
+                                        <svg class="icon-card">
+                                            <use xlink:href="#pre-v"></use>
+                                        </svg> 156</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-3 col-md-6">
+                    <div class="card-main">
+                        <div class="card-img">
+                            <img src="./img/c4.png" alt="card-img">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-wrapp">
+                                <h2>
+                                    Экзотические цветы
+                                    на участке
+                                </h2>
+                                <div class="card-tags">
+                                    <a href="#">#Благоустройство</a>
+                                    <a href="#">#Цветы</a>
+                                    <a href="#">#Розы</a>
+                                    <a href="#">#Сад</a>
+                                    <a href="#">#Популярное</a>
+                                </div>
+                                <div class="card-botom">
+                                    <a href="#"><svg class="icon-card">
+                                            <use xlink:href="#pre-c"></use>
+                                        </svg> 25</a>
+                                    <a href="#">
+                                        <svg class="icon-card">
+                                            <use xlink:href="#pre-v"></use>
+                                        </svg> 156</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-3 col-md-6">
+                    <div class="card-main">
+                        <div class="card-img">
+                            <img src="./img/c5.png" alt="card-img">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-wrapp">
+                                <h2>
+                                    Вьющиеся розы вокруг
+                                    окон и балконов
+                                </h2>
+                                <div class="card-tags">
+                                    <a href="#">#Благоустройство</a>
+                                    <a href="#">#Цветы</a>
+                                    <a href="#">#Розы</a>
+                                    <a href="#">#Сад</a>
+                                    <a href="#">#Популярное</a>
+                                </div>
+                                <div class="card-botom">
+                                    <a href="#"><svg class="icon-card">
+                                            <use xlink:href="#pre-c"></use>
+                                        </svg> 25</a>
+                                    <a href="#">
+                                        <svg class="icon-card">
+                                            <use xlink:href="#pre-v"></use>
+                                        </svg> 156</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-3 col-md-6">
+                    <div class="card-main">
+                        <div class="card-img">
+                            <img src="./img/c6.png" alt="card-img">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-wrapp">
+                                <h2>
+                                    Советы экспертов.
+                                    Уход за садом
+                                </h2>
+                                <div class="card-tags">
+                                    <a href="#">#Благоустройство</a>
+                                    <a href="#">#Цветы</a>
+                                    <a href="#">#Розы</a>
+                                    <a href="#">#Сад</a>
+                                    <a href="#">#Популярное</a>
+                                </div>
+                                <div class="card-botom">
+                                    <a href="#"><svg class="icon-card">
+                                            <use xlink:href="#pre-c"></use>
+                                        </svg> 25</a>
+                                    <a href="#">
+                                        <svg class="icon-card">
+                                            <use xlink:href="#pre-v"></use>
+                                        </svg> 156</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-body">
+                <div class="footer-wrapp">
+                    <div class="footer-main">
+                        <a href="#" id="mail-us" data-toggle="modal" data-target="#contact-us">
+                            <svg class="line">
+                                <use xlink:href="#line"></use>
+                            </svg>
+                            Написать нам
+                        </a>
+                        <a class="footer-logo" href="#">
+                            <img src="./img/Logo-footer.svg" alt="logo-footer">
+                        </a>
+                        <a href="#" class="private" data-toggle="modal" data-target="#authorization">
+                            <img src="./img/ent-footer.svg" alt="private">Войти
+                        </a>
+                    </div>
+                    <div class="footer-bottom">
+                        <a href="#">Политика конфеденциальности</a>
+                        <span>© 2020 Все права защищены.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- contact-us -->
+    <div class="modal fade" id="contact-us" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-content__inner">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    </button>
+                    <h2 class="title">Написать нам</h2>
+                    <form class="contact-us">
+                        <input type="name" placeholder="Ваше имя">
+                        <input type="email" name="email" placeholder="Ваш e-mail">
+                        <textarea name="msg" placeholder="Сообщение "></textarea>
+                        <div class="submit-form">
+                            <!-- <span>Я согласен на обработку персональных данных</span> -->
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="agree">
+                                <label class="custom-control-label" for="agree">Я согласен на обработку персональных
+                                    данных</label>
+                            </div>
+                            <button class="modal-btn">Отправить</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- author -->
+    <div class="modal fade" id="authorization" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-content__inner">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    </button>
+                    <h2 class="title">Авторизация</h2>
+                    <form class="register">
+                        <input type="email" name="email" placeholder="e-mail">
+                        <input type="password" name="password" placeholder="Пароль">
+                        <div class="authorization-row">
+                            <a href="#" data-toggle="modal" data-dismiss="modal" data-target="#register">Регистрация</a>
+                            <button class="modal-btn">Войти</button>
+                        </div>
+                    </form>
+                    <div class="enter-social">
+                        <h3 class="subtitle">Войти с помощью соцсетей</h3>
+                        <div class="social">
+                            <a href="#"><img src="./img/odnoklassniki.svg" alt="social"></a>
+                            <a href="#"><img src="./img/vk.svg" alt="social"></a>
+                            <a href="#"><img src="./img/google-plus.svg" alt="social"></a>
+                            <a href="#"><img src="./img/facebook.svg" alt="social"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- register -->
+    <div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-content__inner">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    </button>
+                    <h2 class="title">Регистрация</h2>
+                    <form class="register-form">
+                        <input type="name" placeholder="Ваше имя">
+                        <input type="email" name="email" placeholder="Ваш e-mail">
+                        <div class="submit-form">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="agree-reg">
+                                <label class="custom-control-label" for="agree-reg">Я согласен на обработку персональных
+                                    данных</label>
+                            </div>
+                            <button class="modal-btn" data-toggle="modal" data-dismiss="modal"
+                                data-target="#thanks">Создать аккаунт</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- password -->
+    <div class="modal fade" id="restore" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-content__inner">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    </button>
+                    <h2 class="title">Восстановление пароля</h2>
+                    <h3>Мы отправили Вам письмо с паролем и ссылкой,
+                        чтобы подтвердить, что это Вы</h3>
+                    <form class="restore-form">
+                        <input type="email" name="email" placeholder="Ваш e-mail">
+                        <div class="submit-form">
+                            <button class="modal-btn">Сбросить пароль</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- thanks -->
+    <div class="modal fade" id="thanks" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-content__inner">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    </button>
+                    <h2 class="title">Спасибо за регистрацию</h2>
+                    <h3>Мы отправили Вам письмо с паролем и ссылкой,
+                        чтобы подтвердить, что это Вы</h3>
+                    <button class="modal-btn" data-dismiss="modal" aria-label="Close">Ок, спасибо</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"
+        integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/inputmask/inputmask.min.js"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

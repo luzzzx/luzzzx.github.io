@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <title>Interior</title>
+</head>
+
+<body>
+    <header>
+
+        <div class="container">
+            <nav>
+                <button class="burger">
+                    <span></span>
+                </button>
+                <a href="#" class="logo">
+                    <img src="./img/logo.svg" alt="logo">
+                </a>
+                <ul class="main-menu">
+                    <div class="logo-mobile">
+                        <img src="./img/logo.svg" alt="logo">
+                    </div>
+                    <li><a href="#">Умный дом</a></li>
+                    <li><a href="#">Своими руками</a></li>
+                    <li><a href="#">Реставрация</a></li>
+                    <a href="#" class="close-menu"><i class="fi-x"></i></a>
+                </ul>
+                <form>
+                    <button>
+                        <img src="./img/bi_search.svg" alt="search">
+                    </button>
+                </form>
+                <a href="#" class="user">
+                    <img src="./img/user.svg" alt="user">
+                </a>
+                <div class="drop-down__menu">
+                    <span>Сергей Петров</span>
+                    <ul>
+                        <li><a href="#">Избранное</a></li>
+                        <li><a href="#">Настройка уведомлений</a></li>
+                        <li><a href="#">Удалить профиль</a></li>
+                    </ul>
+                    <a href="#">Выйти</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAuthor">
+                modalAuthor
+            </button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalPassword">
+                modalPassword
+            </button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalRegister">
+                modalRegister
+            </button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalThanks">
+                modalThanks
+            </button>
+        </div>
+    </main>
+    <footer></footer>
+    <!-- modalAuthor -->
+    <div class="modal fade" id="modalAuthor" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <h1 class="modal-title">Авторизация</h1>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="modal-body">
+                    <h3>Вы можете войти с помощью</h3>
+                    <div class="modal-social">
+                        <a href="#"><img src="./img/fb.svg" alt="fb"></a>
+                        <a href="#"><img src="./img/vk.svg" alt="vk"></a>
+                        <a href="#"><img src="./img/google.svg" alt="google"></a>
+                    </div>
+                    <h3>или e-mail</h3>
+                    <form>
+                        <input type="email" placeholder="E-mail">
+                        <input type="password" placeholder="Пароль">
+                        <button>Войти</button>
+                    </form>
+                    <a class="forget-btn" data-dismiss="modal" aria-label="Close" data-toggle="modal"
+                        data-target="#modalPassword">Забыли
+                        пароль?</a>
+                    <a class="create-btn" data-dismiss="modal" aria-label="Close" data-toggle="modal"
+                        data-target="#modalRegister">Нет
+                        аккаунта? Создать!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modalPassword -->
+    <div class="modal fade" id="modalPassword" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <h1 class="modal-title">Восстановление пароля</h1>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="modal-body">
+                    <h3>Пожалуйста, введите свой адрес электронной почты,
+                        мы вышлем письмо с новым паролем:</h3>
+                    <form>
+                        <input type="email" placeholder="E-mail">
+                        <button>Сбросить пароль</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modalRegister -->
+    <div class="modal fade" id="modalRegister" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <h1 class="modal-title">Регистрация</h1>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="modal-body">
+                    <form>
+                        <input type="name" placeholder="Имя">
+                        <input type="email" placeholder="E-mail">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="agree-reg">
+                            <label class="custom-control-label" for="agree-reg">Я согласен на обработку моих
+                                персональных данных
+                                и с условиями использования сервиса</label>
+                        </div>
+                        <button>Создать аккаунт</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modalThanks -->
+    <div class="modal fade" id="modalThanks" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <h1 class="modal-title">Спасибо за регистрацию</h1>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="modal-body">
+                    <h3>Мы отпраили вам письмо с паролем и ссылкой,
+                        чтобы подтвердить, что это вы.</h3>
+                    <form>
+                        <button data-dismiss="modal" aria-label="Close">ОК, спасибо</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"
+        integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ=="
+        crossorigin="anonymous"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script async src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

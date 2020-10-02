@@ -1693,11 +1693,16 @@ nav form button:focus {
   outline: none;
 }
 
+nav .user-menu {
+  position: relative;
+}
+
 nav .user {
   margin-left: 2.2rem;
   width: 45px;
   height: 45px;
   position: relative;
+  display: block;
 }
 
 nav .user img {
@@ -1716,7 +1721,7 @@ nav .user img {
 .drop-down__menu {
   position: absolute;
   width: 262px;
-  top: 90px;
+  top: 67px;
   right: 0;
   background: #FAAA27;
   border-radius: 15px;
@@ -1988,6 +1993,14 @@ nav .user img {
 }
 
 .breadcrumb-item {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: #1A1A1A;
+}
+
+.breadcrumb-item a {
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -2414,8 +2427,289 @@ nav .user img {
   color: #FAAA27;
 }
 
+.note {
+  text-align: left;
+  display: inline-block;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 48px;
+  color: #000000;
+  margin-bottom: 40px;
+}
+
+.note:after {
+  content: '';
+  background: url(../img/h2-line.svg) no-repeat;
+  background-size: contain;
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+}
+
+.togglers {
+  margin-bottom: 103px;
+}
+
+.togglers h3 {
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 36px;
+  color: #000000;
+  margin-bottom: 30px;
+}
+
+.togglers .custom-switch {
+  padding-left: 0;
+  margin-bottom: 25px;
+}
+
+.togglers .custom-switch .custom-control-label {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 20px;
+  color: #000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.togglers .custom-switch .custom-control-label:after {
+  left: unset;
+  right: 23px;
+  background: #C4C4C4;
+  width: 25px;
+  height: 25px;
+  top: 2px;
+  border-radius: 50%;
+}
+
+.togglers .custom-switch .custom-control-label::before {
+  top: 0;
+  right: 0;
+  left: unset;
+  background: #EAEAEA;
+  border-radius: 28px;
+  border: none;
+  width: 52px;
+  height: 29px;
+}
+
+.togglers .custom-switch .custom-control-input:checked ~ .custom-control-label::after {
+  background-color: #fff;
+  -webkit-transform: translateX(1.15rem);
+      -ms-transform: translateX(1.15rem);
+          transform: translateX(1.15rem);
+  background: #FAAA27;
+}
+
+.togglers .custom-control-input:checked ~ .custom-control-label::before {
+  background: #FFE5A3;
+  border: none;
+}
+
+.modal-content {
+  position: relative;
+  padding: 50px 83px;
+}
+
+.modal-content h1 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 48px;
+  color: #1A1A1A;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.modal-content h3 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 26px;
+  color: #1A1A1A;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.modal-content .close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.modal-content .close:focus {
+  border: none;
+  outline: none;
+}
+
+.modal-content .modal-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.modal-content .modal-social a {
+  padding: 15px 80px;
+  background: #4283F4;
+  border-radius: 15px;
+  -webkit-transition: linear .3s;
+  -o-transition: linear .3s;
+  transition: linear .3s;
+}
+
+.modal-content .modal-social a:hover {
+  opacity: .8;
+}
+
+.modal-content form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.modal-content form .custom-checkbox {
+  margin-bottom: 30px;
+}
+
+.modal-content form .custom-checkbox .custom-control-label {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 26px;
+  color: #1A1A1A;
+}
+
+.modal-content form .custom-checkbox .custom-control-label::before {
+  border: 1px solid #796225;
+  border-radius: 3px;
+}
+
+.modal-content form .custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
+  background: none;
+  width: 7px;
+  height: 7px;
+  background: #FAAA27;
+  border-radius: 1px;
+  top: .54rem;
+  left: -1.25rem;
+}
+
+.modal-content form .custom-control-input:checked ~ .custom-control-label::before {
+  background: transparent;
+}
+
+.modal-content form input {
+  border: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 26px;
+  color: #1A1A1A;
+  border-bottom: 1px solid #989898;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+}
+
+.modal-content form input:focus {
+  border: none;
+  border-bottom: 1px solid #989898;
+  outline: none;
+}
+
+.modal-content form input::-webkit-input-placeholder {
+  color: #989898;
+}
+
+.modal-content form input::-moz-placeholder {
+  color: #989898;
+}
+
+.modal-content form input:-ms-input-placeholder {
+  color: #989898;
+}
+
+.modal-content form input::-ms-input-placeholder {
+  color: #989898;
+}
+
+.modal-content form input::placeholder {
+  color: #989898;
+}
+
+.modal-content form button {
+  background: #FAAA27;
+  border-radius: 45px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  color: #FFFFFF;
+  border: none;
+  padding: 29px 0;
+  margin-bottom: 15px;
+  -webkit-transition: linear .3s;
+  -o-transition: linear .3s;
+  transition: linear .3s;
+}
+
+.modal-content form button:hover {
+  opacity: .8;
+}
+
+.modal-content form button:focus {
+  border: none;
+  outline: none;
+}
+
+.modal-content .forget-btn {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 26px;
+  color: #1A1A1A;
+  text-align: right;
+  display: block;
+  margin-bottom: 30px;
+}
+
+.modal-content .create-btn {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 27px;
+  color: #1A1A1A;
+  display: block;
+  text-align: center;
+}
+
 .container {
   max-width: 1710px;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .anchor-top {
@@ -2446,6 +2740,13 @@ nav .user img {
           transform: translate(-50%, -50%);
 }
 
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 769px;
+    margin: 1.75rem auto;
+  }
+}
+
 @media (max-width: 1212px) {
   nav .main-menu li {
     margin-right: 2rem;
@@ -2473,12 +2774,12 @@ nav .user img {
     height: 100%;
     min-height: 100vh;
     background: #FFFFFF;
-    width: 260px;
-    padding: 40px 0 0 20px;
+    width: 249px;
+    padding: 32px 0 0 20px;
     -webkit-transition: linear .3s;
     -o-transition: linear .3s;
     transition: linear .3s;
-    z-index: 10;
+    z-index: 1050;
   }
 
   nav .main-menu.active {
@@ -2509,7 +2810,7 @@ nav .user img {
     display: block;
     position: absolute;
     right: 10px;
-    top: 34px;
+    top: 25px;
     font-style: normal;
     font-weight: normal;
     font-size: 25px;
@@ -2569,7 +2870,57 @@ nav .user img {
   }
 }
 
+@media (max-width: 713px) {
+  .modal-content {
+    padding: 20px 17px;
+  }
+
+  .modal-content h1 {
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  .modal-content h3 {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .modal-content .modal-social a {
+    padding: 8px 32px;
+  }
+
+  .modal-content form .custom-checkbox .custom-control-label {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .modal-content form input {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .modal-content form button {
+    font-size: 18px;
+    line-height: 22px;
+    padding: 22px 0;
+  }
+
+  .modal-content .forget-btn {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .modal-content .create-btn {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
 @media (max-width: 540px) {
+  header {
+    margin-bottom: 20px;
+  }
+
   nav .logo img {
     width: 83px;
   }
@@ -2712,5 +3063,49 @@ nav .user img {
   .comment-footer .dislike i,
   .comment-footer .like i {
     font-size: 16px;
+  }
+
+  .note {
+    display: block;
+    text-align: left;
+    font-size: 28px;
+    line-height: 34px;
+    margin-bottom: 20px;
+  }
+
+  .togglers {
+    margin-bottom: 20px;
+  }
+
+  .togglers h3 {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+
+  .togglers .custom-switch {
+    margin-bottom: 5px;
+  }
+
+  .togglers .custom-switch .custom-control-label {
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  .togglers .custom-switch .custom-control-label:after {
+    width: 12px;
+    height: 12px;
+    right: 12px;
+    top: 1px;
+  }
+
+  .togglers .custom-switch .custom-control-label::before {
+    width: 26px;
+    height: 13px;
+  }
+
+  .togglers .custom-switch .custom-control-input:checked ~ .custom-control-label::after {
+    -webkit-transform: translateX(0.75rem);
+        -ms-transform: translateX(0.75rem);
+            transform: translateX(0.75rem);
   }
 }

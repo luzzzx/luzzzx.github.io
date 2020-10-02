@@ -1845,7 +1845,7 @@ nav .user img {
   color: #ffffff;
 }
 
-.card-body h2 {
+.card-body .title-card {
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
@@ -1853,6 +1853,14 @@ nav .user img {
   color: #1A1A1A;
   display: block;
   margin-bottom: 19px;
+  -webkit-transition: linear .3s;
+  -o-transition: linear .3s;
+  transition: linear .3s;
+}
+
+.card-body .title-card:hover {
+  text-decoration: none;
+  color: #FAAA27;
 }
 
 .card-body p {
@@ -2692,6 +2700,7 @@ nav .user img {
   text-align: right;
   display: block;
   margin-bottom: 30px;
+  cursor: pointer;
 }
 
 .modal-content .create-btn {
@@ -2702,6 +2711,7 @@ nav .user img {
   color: #1A1A1A;
   display: block;
   text-align: center;
+  cursor: pointer;
 }
 
 .container {

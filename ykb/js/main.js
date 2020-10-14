@@ -45,8 +45,6 @@ $(document).ready(function () {
             }
         }
     })
-    $('.comments-slider .owl-prev').addClass('icon-prev');
-    $('.comments-slider .owl-next').addClass('icon-next');
 
     $(document).on('click', '.dropdown-menu', function (e) {
         e.stopPropagation();
@@ -60,7 +58,7 @@ $(document).ready(function () {
     // burger menu
 
     $('.header-top__burger').on('click', function () {
-
+        $('body').toggleClass('lock');
         $('.header-top__burger').toggleClass('active');
         $('.main-menu').toggleClass('active');
 
@@ -72,4 +70,17 @@ $(document).ready(function () {
     //         // $('.dropdown-menu').toggle();
     //     }
     // });
+
+    // side menu
+    $('.mobile-side').on('click', function () {
+        $(this).next('.side-menu__body').slideToggle();
+    });
+    // about
+
+    $('.about-age__slider').owlCarousel({
+        loop: false,
+        items: 1,
+        nav: true,
+        dots: true,
+    })
 });

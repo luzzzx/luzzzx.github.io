@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <title>Yakb</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <a href="#" class="logo">
+                    <img src="./img/logo.png" alt="logo">
+                </a>
+                <ul class="header-top__menu">
+                    <li><a href="#">Индивидуальным застройщикам</a></li>
+                    <li><a href="#">Корпоративным клиентам</a></li>
+                    <li class="header-top__social">
+                        <a href="#"><img src="./img/inst.svg" alt="icon"></a>
+                        <a href="#"><img src="./img/fb.svg" alt="icon"></a>
+                        <a href="#"><img src="./img/ok.svg" alt="icon"></a>
+                        <a href="#"><img src="./img/vk.svg" alt="icon"></a>
+                    </li>
+                </ul>
+                <div class="header-top__callback">
+                    <div class="callback__img">
+                        <img src="./img/phone.svg" alt="icon">
+                    </div>
+                    <div class="callback__content">
+                        <a class="callback__content-tel" href="tel:+79224630045">+7 (922) 463-00-45</a>
+                        <a class="callback__content-btn" href="#" data-toggle="modal" data-target="#modalcallback">Заказать звонок</a>
+                    </div>
+                </div>
+                <button type="button" class="header-top__burger">
+                    <span></span>
+                </button>
+            </div>
+        </div>
+        <div class="nav">
+            <div class="container">
+                <nav class="main-menu">
+                    <a class="link-mobile" href="#">Индивидуальным застройщикам</a>
+                    <a class="link-mobile" href="#">Корпоративным клиентам</a>
+                    <ul>
+                        <li><a href="#">О заводе <span class="icon-shevron"></span></a></li>
+                        <li class="dropdown"><a href="#" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">Услуги и технологии
+                                <span class="icon-shevron"></span></a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                <a href="#">Проектирование и визуализация<span class="icon-shevron"></span></a>
+                                <div class="dropdown-submenu">
+                                    <a href="#" class="submenu">Реализация
+                                        материалов<span class="icon-shevron"></span></a>
+                                    <div class="dropdown-menu">
+                                        <a href="#">Реализация ЛКМ</a>
+                                        <a href="#">Реализация комплектующих</a>
+                                    </div>
+                                </div>
+                                <a href="#">Обработка древесины<span class="icon-shevron"></span></a>
+                                <a href="#">Бруc клееный<span class="icon-shevron"></span></a>
+                                <a href="#">Оконные конструкции<span class="icon-shevron"></span></a>
+                                <a href="#">Материалы для защиты древесины<span class="icon-shevron"></span></a>
+                                <a href="#">Столярные изделия<span class="icon-shevron"></span></a>
+                                <a href="#">Панели МХМ<span class="icon-shevron"></span></a>
+                                <a href="#">Отходы деревообработки<span class="icon-shevron"></span></a>
+                                <a href="#">Погонажные изделия<span class="icon-shevron"></span></a>
+                                <a href="#">Стропильные системы и конструкции<span class="icon-shevron"></span></a>
+                                <a href="#">Топливные брикеты<span class="icon-shevron"></span></a>
+                                <a href="#">Метизы. Элементы крепления<span class="icon-shevron"></span></a>
+                            </div>
+                        </li>
+                        <li><a href="#">Наши проекты <span class="icon-shevron"></span></a></li>
+                        <li><a href="#">Новости <span class="icon-shevron"></span></a></li>
+                        <li><a href="#">Контакты <span class="icon-shevron"></span></a></li>
+                    </ul>
+                    <div class="lang">
+                        <a class="active" href="#">RU</a>
+                        <a href="#">EN</a>
+                    </div>
+                    <a href="#" class="nav-search">
+                        <img src="./img/search.svg" alt="icon">
+                    </a>
+                    <a href="#" class="nav-user">
+                        <img src="./img/user.svg" alt="icon">
+                    </a>
+                    <div class="header-top__social-mobile">
+                        <a href="#"><img src="./img/inst.svg" alt="icon"></a>
+                        <a href="#"><img src="./img/fb.svg" alt="icon"></a>
+                        <a href="#"><img src="./img/ok.svg" alt="icon"></a>
+                        <a href="#"><img src="./img/vk.svg" alt="icon"></a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="title-page page">
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Главная</a></li>
+                        <li class="breadcrumb-item"><a href="#">Продукция</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Столярные</li>
+                    </ol>
+                </nav>
+                <h2>Столярные изделия</h2>
+            </div>
+        </section>
+        <div class="container">
+            <div class="row">
+                <aside class="col-lg-3 side-menu">
+                    <a class="mobile-side" href="#">Меню</a>
+                    <div class="side-menu__body">
+                        <ul>
+                            <li><a href="#" class="submenu">Проектирование и визуализация<span
+                                        class="icon-shevron"></span></a>
+                                <div class="dropdown-menu">
+                                    <a href="#">Реализация ЛКМ</a>
+                                    <a href="#">Реализация комплектующих</a>
+                                </div>
+                            </li>
+                            <li><a href="#">Реализация материалов<span class="icon-shevron"></span></a></li>
+                            <li><a href="#">Обработка древесины<span class="icon-shevron"></span></a></li>
+                            <li><a href="#">Бруc клееный<span class="icon-shevron"></span></a></li>
+                            <li><a href="#">Оконные конструкции<span class="icon-shevron"></span></a></li>
+                            <li><a href="#">Материалы для защиты древесины<span class="icon-shevron"></span></a></li>
+                            <li><a href="#">Столярные изделия<span class="icon-shevron"></span></a></li>
+                            <li><a href="#">Панели МХМ<span class="icon-shevron"></span></a></li>
+                            <li><a href="#">Отходы деревообработки<span class="icon-shevron"></span></a></li>
+                            <li><a href="#">Погонажные изделия<span class="icon-shevron"></span></a></li>
+                            <li><a href="#">Стропильные системы и конструкции<span class="icon-shevron"></span></a></li>
+                            <li><a href="#">Топливные брикеты<span class="icon-shevron"></span></a></li>
+                            <li><a href="#">Метизы. Элементы крепления<span class="icon-shevron"></span></a></li>
+                        </ul>
+                    </div>
+                </aside>
+                <div class="content-body--page col-lg-9">
+                    <h2>Проектирование</h2>
+                    <p>Для расчета проекта отправьте нам ваш рисунок планировки. На основании данных мы подготовим для
+                        вас проект деревянных конструкций и архитектурных решений (КД, АР). Мы работаем с
+                        профессиональными программа для деревянного домостроения "К-3 Коттедж", "SEMA", "Cadwork".</p>
+                    <img src="./img/project-main.png" alt="project-intro">
+                    <h3>Что необходимо для <span>расчета проекта?</span></h3>
+                    <p>Для расчета проекта отправьте нам ваш рисунок планировки. На основании данных мы подготовим для
+                        вас проект деревянных конструкций и архитектурных решений (КД, АР)/</p>
+                    <h3>Состав проекта:</h3>
+                    <ul>
+                        <li>
+                            <p>Ведомость материалов из программы( стеновой материал, материалы перекрытий, доски на
+                                стропила и т.д.которые заложены в проекте, Винтовые опоры, шпильки, полотно джутовое)
+                            </p>
+                        </li>
+                        <li>
+                            <p>3д виды ( фасады, разрезы, планы этажей, планы балок (пол,потолок), план кровли, план
+                                стропил, развёртки скатов, развёртки стен, таблица проёмов, таблица пазов и торцов
+                                брёвен, таблица брёвен, таблица раскроя брёвен</p>
+                        </li>
+                        <li>
+                            <p>
+                                По необходимости: планы по венцам, ведомость по венцам</p>
+                        </li>
+                        <li>
+                            <p>Машинный файл в формате .bvn</p>
+                        </li>
+                    </ul>
+                    <div class="project-page__images">
+                        <img src="./img/prewiew-1.png" alt="prewiew">
+                        <img src="./img/prewiew-2.png" alt="prewiew">
+                        <img src="./img/prewiew-3.png" alt="prewiew">
+                    </div>
+                    <h2 class="section-title">Контроль качества выпускаемой продукции:</h2>
+                    <div class="row control-body no-gutters">
+                        <div class="col-lg-6 control-img">
+                            <div class="control-img__block">
+                                <img src="./img/control-img1.png" alt="contol-image">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="control-content__block">
+                                <h2>Первая ступень</h2>
+                                <p>Первоклассное сырье. Только из здоровой крепкой отборной северной древесины возможно создание надежного строительного материала для наших домов. Весь материал приобретается у крупных надежных лесозаготовителей Ямала и Севера Югры и проверенный на происхождение по единой системе ЛЕСЕГАИС.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row control-body no-gutters">
+                        <div class="col-lg-6">
+                                <div class="control-content__block">
+                                    <h2>Вторая ступень</h2>
+                                    <p>
+                                        Оптимальный процесс сушки для достижения максимальной крепости и однородности древесины. Управление процессом сушки осуществляется посредством постоянного контроля над влажностью доски и температурой в камере посредством датчиков, расположенных непосредственно на древесине.
+                                    </p>
+                                </div>
+                        </div>
+                        <div class="col-lg-6 control-img">
+                                <div class="control-img__block">
+                                    <img src="./img/control-img12.png" alt="contol-image">
+                                </div>
+                        </div>
+                    </div>
+                    <div class="row control-body no-gutters">
+                        <div class="col-lg-6 control-img">
+                                <div class="control-img__block">
+                                    <img src="./img/control-img3.png" alt="contol-image">
+                                </div>
+                        </div>
+                        <div class="col-lg-6">
+                                <div class="control-content__block">
+                                    <h2>Третья ступень</h2>
+                                    <p>
+                                        Полностью автоматизированная линия, связывающая в единую цепочку этап оптимизации и удаления дефектов материале, строгание и склейку доски в ламели. В итого достигается однородностьи максимальный уровень качества древесины в ламели. Для склеивания применяется один из самых современных и экологически чистых клеевых составов.
+                                    </p>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="row control-body no-gutters mb-5">
+                        <div class="col-lg-6">
+                                <div class="control-content__block">
+                                    <h2>Четвертая ступень</h2>
+                                    <p>
+                                        Регулярные тесты в лаборатории выборочных образцов из каждой партии выпускаемой продукции на соответствие европейским стандартам качества и технологическим требованиям производимой продукции.
+                                    </p>
+                                </div>
+                        </div>
+                        <div class="col-lg-6 control-img">
+                                <div class="control-img__block">
+                                    <img src="./img/control-img4.png" alt="contol-image">
+                                </div>
+                        </div>
+                    </div>
+                    <div class="solution">
+                        <img src="./img/prod-img.png" alt="product">
+                        <a href="#" class="download-link">Памятка по хранению, транспортировке и уходу за деревянными конструкциями</a>
+                        <a href="#" class="download-link">Техусловия 5366_018_09550713_2016</a>
+                    </div>
+                    <h2>Наши преимущества:</h2>
+                    <div class="our-advantages">
+                        <div class="our-advantages__block">
+                            <img src="./img/control-icon.svg" alt="icon">
+                            <p>
+                                Создан при участии
+                                правительства ЯНАО
+                            </p>
+                        </div>
+                        <div class="our-advantages__block">
+                            <img src="./img/control-icon2.svg" alt="icon">
+                            <p>
+                                Собственная <br>
+                                лесозаготовительная <br>
+                                компания
+                            </p>
+                        </div>
+                        <div class="our-advantages__block">
+                            <img src="./img/control-icon3.svg" alt="icon">
+                            <p>
+                                Уставный капитал <br>
+                                2,2 млрд.рублей
+                            </p>
+                        </div>
+                    </div>
+                    <div class="tables">
+                        <h2>Брус клееный профилированный Порода: Сосна/Ель</h2>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                      <th scope="col">«№</th>
+                                      <th scope="col">Наименование</th>
+                                      <th scope="col">Высота мм</th>
+                                      <th scope="col">Ширина мм</th>
+                                      <th scope="col">Ед. изм.</th>
+                                      <th scope="col">Длина мм</th>
+                                      <th scope="col">Цена, руб. (с НДС)</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <th scope="row">1</th>
+                                      <td>Брус клееный
+                                        профилированный
+                                        (погонаж).</td>
+                                      <td>188</td>
+                                      <td>126/168/210 /252</td>
+                                      <td>До 13 500</td>
+                                      <td>куб.м.</td>
+                                      <td>35 000,00</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Брус клееный
+                                          профилированный
+                                          (погонаж).</td>
+                                        <td>188</td>
+                                        <td>126/168/210 /252</td>
+                                        <td>До 13 500</td>
+                                        <td>куб.м.</td>
+                                        <td>35 000,00</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Брус клееный
+                                          профилированный
+                                          (погонаж).</td>
+                                        <td>188</td>
+                                        <td>126/168/210 /252</td>
+                                        <td>До 13 500</td>
+                                        <td>куб.м.</td>
+                                        <td>35 000,00</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">4</th>
+                                        <td>Брус клееный
+                                          профилированный
+                                          (погонаж).</td>
+                                        <td>188</td>
+                                        <td>126/168/210 /252</td>
+                                        <td>До 13 500</td>
+                                        <td>куб.м.</td>
+                                        <td>35 000,00</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">5</th>
+                                        <td>Брус клееный
+                                          профилированный
+                                          (погонаж).</td>
+                                        <td>188</td>
+                                        <td>126/168/210 /252</td>
+                                        <td>До 13 500</td>
+                                        <td>куб.м.</td>
+                                        <td>35 000,00</td>
+                                    </tr>
+                                  </tbody>
+                            </table>
+                        </div>
+                        <h2>Балки перекрытий</h2>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                      <th scope="col">«№</th>
+                                      <th scope="col">Наименование</th>
+                                      <th scope="col">Высота мм</th>
+                                      <th scope="col">Ширина мм</th>
+                                      <th scope="col">Ед. изм.</th>
+                                      <th scope="col">Длина мм</th>
+                                      <th scope="col">Цена, руб. (с НДС)</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <th scope="row">1</th>
+                                      <td>Брус клееный
+                                        профилированный
+                                        (погонаж).</td>
+                                      <td>188</td>
+                                      <td>126/168/210 /252</td>
+                                      <td>До 13 500</td>
+                                      <td>куб.м.</td>
+                                      <td>35 000,00</td>
+                                    </tr>
+                                  </tbody>
+                            </table>
+                        </div>
+                        <h2>Брус клееный профилированный Порода: Сосна/Ель</h2>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                      <th scope="col">«№</th>
+                                      <th scope="col">Наименование</th>
+                                      <th scope="col">Высота мм</th>
+                                      <th scope="col">Ширина мм</th>
+                                      <th scope="col">Ед. изм.</th>
+                                      <th scope="col">Длина мм</th>
+                                      <th scope="col">Цена, руб. (с НДС)</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <th scope="row">1</th>
+                                      <td>Брус клееный
+                                        профилированный
+                                        (погонаж).</td>
+                                      <td>188</td>
+                                      <td>126/168/210 /252</td>
+                                      <td>До 13 500</td>
+                                      <td>куб.м.</td>
+                                      <td>35 000,00</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Брус клееный
+                                          профилированный
+                                          (погонаж).</td>
+                                        <td>188</td>
+                                        <td>126/168/210 /252</td>
+                                        <td>До 13 500</td>
+                                        <td>куб.м.</td>
+                                        <td>35 000,00</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Брус клееный
+                                          профилированный
+                                          (погонаж).</td>
+                                        <td>188</td>
+                                        <td>126/168/210 /252</td>
+                                        <td>До 13 500</td>
+                                        <td>куб.м.</td>
+                                        <td>35 000,00</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">4</th>
+                                        <td>Брус клееный
+                                          профилированный
+                                          (погонаж).</td>
+                                        <td>188</td>
+                                        <td>126/168/210 /252</td>
+                                        <td>До 13 500</td>
+                                        <td>куб.м.</td>
+                                        <td>35 000,00</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">5</th>
+                                        <td>Брус клееный
+                                          профилированный
+                                          (погонаж).</td>
+                                        <td>188</td>
+                                        <td>126/168/210 /252</td>
+                                        <td>До 13 500</td>
+                                        <td>куб.м.</td>
+                                        <td>35 000,00</td>
+                                    </tr>
+                                  </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="form">
+                        <div class="form__img">
+                            <img src="./img/form.png" alt="form-image">
+                        </div>
+                        <form>
+                            <h2>Оформить заявку на услугу</h2>
+                            <p>
+                                Оформите заявку на услугу. Мы свяжемся с вами в ближайшее время, ответим на все интересующие вопросы.
+                            </p>
+                            <input type="text" placeholder="Ваше имя" required>
+                            <input type="tel" placeholder="Телефон" required>
+                            <input type="email" placeholder="E-mail" required>
+                            <input type="text" placeholder="Интересующий товар/услуга" required>
+                            <textarea placeholder="Ваше сообщение" required></textarea>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="agree">
+                                <label class="custom-control-label" for="agree">Я согласен на <a href="#">обработку
+                                        персональных данных</a></label>
+                            </div>
+                            <button type="button">Отправить</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-top__logo">
+                    <img src="./img/footer-logo.png" alt="logo">
+                    <p>
+                        Производство клееного <br>
+                        бруса и панелей-МХМ
+                    </p>
+                </div>
+                <div class="footer-top__menu">
+                    <h2>Компания</h2>
+                    <ul>
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Награды и сертификаты</a></li>
+                        <li><a href="#">Отзывы</a></li>
+                        <li><a href="#">Вопросы и ответы</a></li>
+                        <li><a href="#">Реквизиты</a></li>
+                        <li><a href="#">Вакансии</a></li>
+                        <li><a href="#">Компенсация затрат</a></li>
+                    </ul>
+                </div>
+                <div class="footer-top__menu">
+                    <h2>Каталог</h2>
+                    <ul>
+                        <li><a href="#">Брус клееный</a></li>
+                        <li><a href="#">Панели МХМ</a></li>
+                        <li><a href="#">Оконные конструкции</a></li>
+                        <li><a href="#">Столярные изделия</a></li>
+                        <li><a href="#">Стропильные системы</a></li>
+                        <li><a href="#">Топливные брикеты</a></li>
+                        <li><a href="#">Погонажные изделия</a></li>
+                        <li><a href="#">Отходы деревообработки</a></li>
+                        <li><a href="#">Материалы для защиты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-top__menu">
+                    <h2>Услуги</h2>
+                    <ul>
+                        <li><a href="#">Проектирование</a></li>
+                        <li><a href="#">Реализация материалов</a></li>
+                        <li><a href="#">Обработка древесины</a></li>
+                    </ul>
+                </div>
+                <div class="footer-top__menu">
+                    <h2>Контакты</h2>
+                    <ul>
+                        <li>
+                            <p>ЯНАО, г. Тарко-Сале, <br>
+                                тер. Северо-Западный, <br>
+                                промузел, д.5</p>
+                        </li>
+                        <li>
+                            <p>
+                                +7 (922) 463-00-45 <br>
+                                Пн. – Пт.: с 8:00 до 17:30 <br>
+                                Сб., Вс.: выходной <br>
+                            </p>
+                        </li>
+                        <li><a href="#">info@yamallpk.ru</a></li>
+                    </ul>
+                </div>
+                <div class="social-footer">
+                    <a href="#"><span class="icon-inst"></span></a>
+                    <a href="#"><span class="icon-fb"></span></a>
+                    <a href="#"><span class="icon-ok"></span></a>
+                    <a href="#"><span class="icon-vk"></span></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2020 ООО «ЯЛПК». Все права защищены. </span>
+        </div>
+    </footer>
+            <!-- modal -->
+            <div class="modal fade" id="modallogin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                        <h2>Личный кабинет</h2>
+                        <form>
+                            <input type="text" placeholder="Логин">
+                            <label class="password">
+                                <input type="password" placeholder="Пароль">
+                                <a href="#">Забыли пароль?</a>
+                            </label>
+                            <div class="custom-control custom-checkbox modal-check">
+                                <input type="checkbox" class="custom-control-input" id="agree">
+                                <label class="custom-control-label" for="agree">Запомнить меня</label>
+                            </div>
+                            <button type="button">Войти</button>
+                        </form>
+                        <span class="modal-register">Еще нет аккаунта?<a href="#">Зарегестрироваться</a></span>
+                        <p>или войти с помощью</p>
+                        <div class="scial-row__modal">
+                            <a href="#"><img src="./img/lvj-icon.svg" alt="icon"></a>
+                            <a href="#"><img src="./img/maili-icon.svg" alt="icon"></a>
+                            <a href="#"><img src="./img/Li-icon.svg" alt="icon"></a>
+                            <a href="#"><img src="./img/g2-icon.svg" alt="icon"></a>
+                        </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- обратный звонок -->
+              <div class="modal fade" id="modalcallback" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                        <h2>Обратный звонок</h2>
+                        <h3>Оставьте ваши контакты и наш оператор
+                            свяжеться с вами в ближайшее время</h3>
+                        <form>
+                            <input type="name" placeholder="Ваше имя">
+                            <input type="tel" placeholder="Телефон">
+                            <div class="custom-control custom-checkbox modal-check">
+                                <input type="checkbox" class="custom-control-input" id="agree">
+                                <label class="custom-control-label" for="agree">Запомнить меня</label>
+                            </div>
+                            <button type="button">Отправить</button>
+                        </form>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- обратный звонок -->
+              <div class="modal fade" id="modalregister" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                        <h2>Регистрация</h2>
+                        <h3>Оставьте ваши контакты и наш оператор
+                            свяжеться с вами в ближайшее время</h3>
+                        <form>
+                            <input type="name" placeholder="ФИО">
+                            <input type="email" placeholder="Email">
+                            <input type="tel" placeholder="Телефон">
+                            <input type="password" placeholder="Пароль">
+                            <input type="password" placeholder="Подтвердите пароль">
+                            <div class="custom-control custom-checkbox modal-check">
+                                <input type="checkbox" class="custom-control-input" id="agree">
+                                <label class="custom-control-label" for="agree">Запомнить меня</label>
+                            </div>
+                            <button type="button">Зарегестрироваться</button>
+                        </form>
+                  </div>
+                </div>
+              </div>
+    
+            <!-- обратный звонок -->
+              <div class="modal fade" id="modalquestion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                        <h2>Задать вопрос</h2>
+                        <form>
+                            <input type="name" placeholder="Имя">
+                            <input type="tel" placeholder="Телефон">
+                            <input type="email" placeholder="Email">
+                            <input type="text" placeholder="Интересующий товар/услуга">
+                            <textarea placeholder="Ваше сообщение"></textarea>
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="validatedCustomFile" required>
+                                <label class="custom-file-label" for="validatedCustomFile">Прикрепить файл</label>
+                            </div>
+                            <button type="button">Отправить</button>
+                        </form>
+                  </div>
+                </div>
+              </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"
+        integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ=="
+        crossorigin="anonymous"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script async src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

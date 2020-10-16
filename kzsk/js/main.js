@@ -1,5 +1,13 @@
 AOS.init();
 $(document).ready(function () {
+    // preloader
+    $(window).on('load', function () {
+        setTimeout(function () {
+            $('.load-content').css("opacity", "1");
+        }, 6500)
+        $('.pre-loader').delay(6500).fadeOut('slow'); // и скрываем сам блок прелоудера.
+    });
+
     // animat
     particlesJS("particles-js", {
         "particles": {

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,900;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"/>
+    <link rel="stylesheet" href="./css/style.min.css">
+    <title>GoToFly</title>
+</head>
+
+<body>
+    <header class="header-page">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg">
+          <a class="navbar-brand" href="#">
+              <img src="./img/logo.svg" alt="logo">
+          </a>         
+          <div class="collapse navbar-collapse header-page__menu" id="navbar-main">
+            <div class='menu-top'>
+                <div class="header-adress">
+                    <span>Адрес: г. Днепр, бульвар Славы 8, пом. 331</span>
+                    <span>Тел.: +38  098 705 85 54</span>
+                </div>
+                <a href="#" class="btn btn-header" data-toggle="modal" data-target="#modalcallback">Заказать звонок</a>
+            </div>
+            <div class='menu-bottom'>
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Поиск тура</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Горящие туры</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Прокат</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Магазин</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Страхование</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Новости</a>
+                  </li>
+                </ul>
+                <a href="#" class="btn btn-header">Оставить заявку</a>
+            </div>
+          </div>
+          <a href="#" class="btn btn-header btn-header--mobile" data-toggle="modal" data-target="#modalcallback">Заказать звонок</a>
+          <button class="burger-menu">
+            <span class="burger"></span>
+          </button> 
+      </nav>
+    </div>
+    </header>
+    <main>
+        <div class="container product-container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#">Главная</a></li>
+                  <li class="breadcrumb-item"><a href="#">Прокат</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Прокат Экшн-камера Xiaomi XiaoYi 4K</li>
+                </ol>
+            </nav>
+            <h2 class="page-title">Прокат Экшн-камера Xiaomi XiaoYi 4K</h2>
+            <div class="product-row">
+                <div class="product-table">
+                    <h3>Стоимость аренды камеры GoPro (полностью за комплект)</h3>
+                    <table class="product-table__body table table-sm">
+                        <thead>
+                          <tr>
+                            <th scope="col">Сроки аренды 
+                                камеры</th>
+                            <th scope="col">Стоимость, 
+                                грн</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>2 дня</td>
+                            <td>300</td>
+                          </tr>
+                          <tr>
+                            <td>3 дня</td>
+                            <td>400</td>
+                          </tr>
+                          <tr>
+                            <td>4 дня</td>
+                            <td>500</td>
+                          </tr>
+                          <tr>
+                            <td>5 дня</td>
+                            <td>600</td>
+                          </tr>
+                          <tr>
+                            <td>6 дня</td>
+                            <td>700</td>
+                          </tr>
+                          <tr>
+                            <td>Неделя</td>
+                            <td>800</td>
+                          </tr>
+                          <tr>
+                            <td>10 дней</td>
+                            <td>1100</td>
+                          </tr>
+                          <tr>
+                            <td>2 Недели</td>
+                            <td>1400</td>
+                          </tr>
+                          <tr>
+                            <td>больше 14 дней</td>
+                            <td>договорная</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+                <div class="product-slider">
+                    <div class="product-slider__body owl-carousel">
+                        <img src="./img/camera.png" alt="main-img" data-hash="one">
+                        <img src="./img/camera.png" alt="main-img" data-hash="two">
+                        <img src="./img/camera.png" alt="main-img" data-hash="three">
+                    </div>
+                    <div class="product-slider__thumb">
+                        <a href="#one" class="active"><img src="./img/camera-thumb.png" alt="thumb-img"></a>
+                        <a href="#two"><img src="./img/camera-thumb2.png" alt="thumb-img"></a>
+                        <a href="#three"><img src="./img/camera-thumb3.png" alt="thumb-img"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-caption">
+                <span>Условия проката:</span>
+                <div class="product-caption__block">
+                    <p>Для получения камеры GoPro в аренду необходимо оставить залог в размере 2000 грн или паспорт. Все залоговые суммы и способ внесения залога 
+                        указывается в Договоре аренды. Залоговые деньги будут возвращены арендатору в полном объеме при условии возврата исправного оборудования по 
+                        окончанию срока аренды.
+                    </p>
+                    <p>
+                        В случае утери или неисправности прокатного оборудования ущерб должен быть возмещен Арендатором в размере полной стоимости или комплекта 
+                        в целом, или отдельного аксессуара. Стоимость оборудования оговорена в договоре, который составляется на момент сдачи оборудования в прокат в 
+                        двух экземплярах.
+                    </p>
+                </div>
+                <span>В базовый комплект проката камеры входит:</span>
+                <div class="product-caption__block">
+                    <ol>
+                        <li>Монопод или Поплавок</li>
+                        <li>SD-карта 64 Гб</li>
+                        <li>USB кабель</li>
+                        <li>Зарядное устройство</li>
+                        <li>Аквабокс</li>
+                    </ol>
+                </div>
+                <span>Характеристики камеры:</span>
+                <div class="product-caption__block">
+                    <ul>
+                        <li>Разрешение видео 3840x2160 (4K)</li>
+                        <li>Размер матрицы 1/2.3"</li>
+                        <li>Количество мегапикселей 12 Мп</li>
+                        <li>Диафрагма f/2.8 </li>
+                        <li>Беспроводные технологии Wi-Fi,</li>
+                        <li>Bluetooth</li>
+                        <li>Емкость аккумулятора 1200 мАч</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="product-order">
+                <a href="#" class="btn product-btn">Забронировать</a>
+                <p>+38 (098) 705 85 54</p>
+            </div>
+        </div>
+        <div class="footer-top">
+            <div class="container">
+              <div class="footer-top__content">
+                  <h2>НЕТ ВРЕМЕНИ НА ПОИСК ТУРА?</h2>
+                  <span>Оставьте заявку и мы свяжемся с Вами в ближайшее время</span>
+              </div>
+              <a href="#" class="btn btn-header">Оставить заявку</a>
+            </div>
+          </div>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="footer-row">
+          <div class="footer-col catalog">
+            <h2>Каталог</h2>
+            <ul class="footer-menu">
+              <li><a href="#">Заказ</a></li>
+              <li><a href="#">О нас</a></li>
+              <li><a href="#">Отзывы </a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h2>Контакты:</h2>
+            <ul class="footer-menu">
+              <li><a href="#">+38 098 705 85 54</a></li>
+              <li>г. Днепр, бульвар Славы 8, пом. 331</li>
+              <li>goflystravel@gmail.com</li>
+            </ul>
+          </div>
+          <div class="footer-info">
+            <div class="footer-logo">
+              <img src="./img/logo.svg" alt="logo">
+            </div>
+            <div class="footer-adress">
+              <div class="footer-social">
+                <a href="#"><img src="./img/fb.png" alt="social-icon"></a>
+                <a href="#"><img src="./img/inst.png" alt="social-icon"></a>
+              </div>
+              <p class="footer-phone">+38 (098) 705 85 54</p>
+              <span>GPS координаты:</span>
+              <a href="#">48°24'48.6"N 35°03'52.6"E</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="modal fade" id="modalcallback" tabindex="-1" role="dialog" aria-labelledby="modalcallback" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <a href="#" class="modal-close" data-dismiss="modal" aria-label="Close"><img src="./img/close.svg" alt="close-icon"></a>
+          <h2>Заказать звонок</h2>
+          <form>
+            <input type="text" placeholder="Ваше имя">
+            <input type="text" placeholder="Телефон">
+            <button type="button">Заказать звонок</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"
+        integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/inputmask/inputmask.min.js"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

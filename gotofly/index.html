@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,900;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <title>GoToFly</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+          <nav class="navbar navbar-expand-lg">
+              <a class="navbar-brand" href="#">
+                  <img src="./img/logo.svg" alt="logo">
+              </a>
+              <div class="collapse navbar-collapse" id="navbar-main">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Поиск тура</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Горящие туры</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Прокат</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Магазин</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Страхование</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Новости</a>
+                  </li>
+                </ul>
+                <a href="tel:+380987058554" class="mobile-phone">+38 098 705 85 54</a>
+                <div class="social-mobile">
+                  <a href="#"><img src="./img/fb.png" alt="social-icon"></a>
+                  <a href="#"><img src="./img/inst.png" alt="social-icon"></a>
+                </div>
+              </div>
+              <a href="#" class="btn btn-header" data-toggle="modal" data-target="#modalcallback">Заказать звонок</a>
+              <button class="burger-menu">
+                <span class="burger"></span>
+              </button>    
+          </nav>
+          <div class="header-intro">
+            <img src="./img/intro.png" alt="header-intro">
+            <a href="#" class="btn-tour" data-toggle="modal" data-target="#exampleModalCenter">Найти тур</a>
+          </div>
+        </div>
+    </header>
+    <main>
+      <section class="side-social">
+        <a class="telegram" href="#"><img src="./img/telegram.png" alt="tg"></a>
+        <a class="viber" href="#"><img src="./img/viber.png" alt="viber"></a>
+        <a class="phone-call" href="#"><img src="./img/phone-call.png" alt="phone"></a>
+      </section>
+      <section class="filter">
+        <div class="container">
+          <div class="filter-body" id="exampleModalCenter">
+            <!-- место для фильтра -->
+            <img src="./img/filter.png" alt="filter">
+          </div>
+        </div>
+      </section>
+      <section class="hot-tour">
+        <div class="container">
+          <!-- место для секции Горящие Туры -->
+          <img src="./img/hot-tour.png" alt="hot-tour">
+        </div>
+      </section>
+      <section class="services">
+        <div class="container">
+          <h2 class="main-title">НАШИ  УСЛУГИ</h2>
+          <div class="services-row">
+            <div class="services-card">
+              <img src="./img/s1.png" alt="services-img">
+              <a href="#">Прокат масок</a>
+            </div>
+            <div class="services-card">
+              <img src="./img/s2.png" alt="services-img">
+              <a href="#">Товары для путешествий</a>
+            </div>
+            <div class="services-card">
+              <img src="./img/s3.png" alt="services-img">
+              <a href="#">Страхование</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="comments">
+        <div class="container">
+          <h2 class="main-title">ОТЗЫВЫ</h2>
+          <div class="comments-body">
+            <div class="comments-body-left">
+              <img src="./img/slider-bg.png" alt="slider-bg-img">
+            </div>
+            <div class="comments-body-slider owl-carousel">
+              <div class="slider-item">
+                <div class="slider-item__header">
+                  <div class="slider-item__avatar">
+                    <img src="./img/avatar-sl.png" alt="avatar">
+                  </div>
+                  <div class="slider-item__name">
+                    <p>Валентина Дзюба</p>
+                    <span>Испания</span>
+                  </div>
+                </div>
+                <div class="slider-item__body">
+                  <p>Душа моя озарена неземной радостью, как эти 
+                    чудесные весенние утра, которыми я наслаждаюсь 
+                    от всего сердца. Я совсем один и блаженствую 
+                    в здешнем краю, словно созданном. </p>
+                </div>
+                <div class="slider-decor">
+                  <img src="./img/quote.png" alt="quote">
+                </div>
+              </div>
+              <div class="slider-item">
+                <div class="slider-item__header">
+                  <div class="slider-item__avatar">
+                    <img src="./img/avatar-sl.png" alt="avatar">
+                  </div>
+                  <div class="slider-item__name">
+                    <p>Валентина Дзюба</p>
+                    <span>Испания</span>
+                  </div>
+                </div>
+                <div class="slider-item__body">
+                  <p>Душа моя озарена неземной радостью, как эти 
+                    чудесные весенние утра, которыми я наслаждаюсь 
+                    от всего сердца. Я совсем один и блаженствую 
+                    в здешнем краю, словно созданном. </p>
+                </div>
+                <div class="slider-decor">
+                  <img src="./img/quote.png" alt="quote">
+                </div>
+              </div>
+              <div class="slider-item">
+                <div class="slider-item__header">
+                  <div class="slider-item__avatar">
+                    <img src="./img/avatar-sl.png" alt="avatar">
+                  </div>
+                  <div class="slider-item__name">
+                    <p>Валентина Дзюба</p>
+                    <span>Испания</span>
+                  </div>
+                </div>
+                <div class="slider-item__body">
+                  <p>Душа моя озарена неземной радостью, как эти 
+                    чудесные весенние утра, которыми я наслаждаюсь 
+                    от всего сердца. Я совсем один и блаженствую 
+                    в здешнем краю, словно созданном. </p>
+                </div>
+                <div class="slider-decor">
+                  <img src="./img/quote.png" alt="quote">
+                </div>
+              </div>
+              <div class="slider-item">
+                <div class="slider-item__header">
+                  <div class="slider-item__avatar">
+                    <img src="./img/avatar-sl.png" alt="avatar">
+                  </div>
+                  <div class="slider-item__name">
+                    <p>Валентина Дзюба</p>
+                    <span>Испания</span>
+                  </div>
+                </div>
+                <div class="slider-item__body">
+                  <p>Душа моя озарена неземной радостью, как эти 
+                    чудесные весенние утра, которыми я наслаждаюсь 
+                    от всего сердца. Я совсем один и блаженствую 
+                    в здешнем краю, словно созданном. </p>
+                </div>
+                <div class="slider-decor">
+                  <img src="./img/quote.png" alt="quote">
+                </div>
+              </div>
+              <div class="slider-item">
+                <div class="slider-item__header">
+                  <div class="slider-item__avatar">
+                    <img src="./img/avatar-sl.png" alt="avatar">
+                  </div>
+                  <div class="slider-item__name">
+                    <p>Валентина Дзюба</p>
+                    <span>Испания</span>
+                  </div>
+                </div>
+                <div class="slider-item__body">
+                  <p>Душа моя озарена неземной радостью, как эти 
+                    чудесные весенние утра, которыми я наслаждаюсь 
+                    от всего сердца. Я совсем один и блаженствую 
+                    в здешнем краю, словно созданном. </p>
+                </div>
+                <div class="slider-decor">
+                  <img src="./img/quote.png" alt="quote">
+                </div>
+              </div>
+              <div class="slider-item">
+                <div class="slider-item__header">
+                  <div class="slider-item__avatar">
+                    <img src="./img/avatar-sl.png" alt="avatar">
+                  </div>
+                  <div class="slider-item__name">
+                    <p>Валентина Дзюба</p>
+                    <span>Испания</span>
+                  </div>
+                </div>
+                <div class="slider-item__body">
+                  <p>Душа моя озарена неземной радостью, как эти 
+                    чудесные весенние утра, которыми я наслаждаюсь 
+                    от всего сердца. Я совсем один и блаженствую 
+                    в здешнем краю, словно созданном. </p>
+                </div>
+                <div class="slider-decor">
+                  <img src="./img/quote.png" alt="quote">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="news">
+        <div class="container">
+          <h2 class="main-title">ТУРИСТИЧЕСКИЕ НОВОСТИ</h2>
+          <div class="news-row">
+            <div class="news-card">
+              <div class="news-card__img">
+                <img src="./img/c1.png" alt="news-image">
+              </div>
+              <div class="news-card__body">
+                <div class="news-card__date">
+                  <img src="./img/calendar.png" alt="calendar">
+                  <span>Июнь 21, 2019</span>
+                </div>
+                <h2>
+                  Отдых для двоих
+                </h2>
+                <p>
+                  Душа моя озарена неземной радостью, 
+                  как эти чудесные весенние утра, 
+                  которыми я наслаждаюсь.
+                </p>
+                <a href="#" class="news-btn">Подробнее</a>
+              </div>
+            </div>
+            <div class="news-card">
+              <div class="news-card__img">
+                <img src="./img/c2.png" alt="news-image">
+              </div>
+              <div class="news-card__body">
+                <div class="news-card__date">
+                  <img src="./img/calendar.png" alt="calendar">
+                  <span>Июнь 21, 2019</span>
+                </div>
+                <h2>
+                  Отдых в Черногории
+                </h2>
+                <p>
+                  Душа моя озарена неземной радостью, 
+                  как эти чудесные весенние утра, 
+                  которыми я наслаждаюсь.
+                </p>
+                <a href="#" class="news-btn">Подробнее</a>
+            </div>
+            </div>
+            <div class="news-card">
+              <div class="news-card__img">
+                <img src="./img/c3.png" alt="news-image">
+              </div>
+              <div class="news-card__body">
+                <div class="news-card__date">
+                  <img src="./img/calendar.png" alt="calendar">
+                  <span>Июнь 21, 2019</span>
+                </div>
+                <h2>
+                  Водный туризм
+                </h2>
+                <p>
+                  Душа моя озарена неземной радостью, 
+                  как эти чудесные весенние утра, 
+                  которыми я наслаждаюсь.
+                </p>
+                <a href="#" class="news-btn">Подробнее</a>
+            </div>
+            </div>
+          </div>
+          <a href="#" class="more-btn">Больше новостей</a>
+        </div>
+      </section>
+      <section class="contact-us">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 align-self-center">
+              <div class="contact-us__body">
+                <span>не нашли что искали?</span>
+                <h2>Подберем лучшие 
+                  и выгодные туры для Вас 
+                  и Ваших родных</h2>
+                <p>Маленький ручеек Даль журчит по всей стране и 
+                  обеспечивает ее всеми необходимыми правилами.
+                  Эта парадигматическая страна</p>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <form class="contact-us__form">
+                <input type="text" placeholder="Имя">
+                <input type="text" placeholder="Телефон">
+                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                  <option selected>Направления</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+                <input type="text" placeholder="дд.мм.гггг">
+                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                  <option selected>Срок</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+                <div class="group-select">
+                  <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                    <option selected>Взрослые</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                  <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                    <option selected>Дети</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+                <textarea></textarea>
+                <button class="btn-send" type="button">отправить</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="partners">
+        <div class="container">
+          <h2 class="main-title">
+            НАШИ ПАРТНЕРЫ
+          </h2>
+          <div class="partners-row">
+            <div class="img-block">
+              <img src="./img/b1.png" alt="partner">
+            </div>
+            <div class="img-block">
+              <img src="./img/b2.png" alt="partner">
+            </div>
+            <div class="img-block">
+              <img src="./img/b3.png" alt="partner">
+            </div>
+            <div class="img-block">
+              <img src="./img/b4.png" alt="partner">
+            </div>
+            <div class="img-block">
+              <img src="./img/b5.png" alt="partner">
+            </div>
+            <div class="img-block">
+              <img src="./img/b6.png" alt="partner">
+            </div>
+            <div class="img-block">
+              <img src="./img/b7.png" alt="partner">
+            </div>
+            <div class="img-block">
+              <img src="./img/b8.png" alt="partner">
+            </div>
+            <div class="img-block">
+              <img src="./img/b9.png" alt="partner">
+            </div>
+            <div class="img-block">
+              <img src="./img/b10.png" alt="partner">
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="footer-top">
+        <div class="container">
+          <div class="footer-top__content">
+              <h2>НЕТ ВРЕМЕНИ НА ПОИСК ТУРА?</h2>
+              <span>Оставьте заявку и мы свяжемся с Вами в ближайшее время</span>
+          </div>
+          <a href="#" class="btn btn-header">Оставить заявку</a>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="footer-row">
+          <div class="footer-col catalog">
+            <h2>Каталог</h2>
+            <ul class="footer-menu">
+              <li><a href="#">Заказ</a></li>
+              <li><a href="#">О нас</a></li>
+              <li><a href="#">Отзывы </a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h2>Контакты:</h2>
+            <ul class="footer-menu">
+              <li><a href="#">+38 098 705 85 54</a></li>
+              <li>г. Днепр, бульвар Славы 8, пом. 331</li>
+              <li>goflystravel@gmail.com</li>
+            </ul>
+          </div>
+          <div class="footer-info">
+            <div class="footer-logo">
+              <img src="./img/logo.svg" alt="logo">
+            </div>
+            <div class="footer-adress">
+              <div class="footer-social">
+                <a href="#"><img src="./img/fb.png" alt="social-icon"></a>
+                <a href="#"><img src="./img/inst.png" alt="social-icon"></a>
+              </div>
+              <p class="footer-phone">+38 (098) 705 85 54</p>
+              <span>GPS координаты:</span>
+              <a href="#">48°24'48.6"N 35°03'52.6"E</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="modal fade" id="modalcallback" tabindex="-1" role="dialog" aria-labelledby="modalcallback" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <a href="#" class="modal-close" data-dismiss="modal" aria-label="Close"><img src="./img/close.svg" alt="close-icon"></a>
+          <h2>Заказать звонок</h2>
+          <form>
+            <input type="text" placeholder="Ваше имя">
+            <input type="text" placeholder="Телефон">
+            <button type="button">Заказать звонок</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"
+        integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/inputmask/inputmask.min.js"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

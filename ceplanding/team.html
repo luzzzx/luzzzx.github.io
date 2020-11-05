@@ -7,13 +7,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.min.css">
     <title>Doer Group</title>
 </head>
 
 <body >
 
-    <header>
+    <header class="fixed-top">
         <div class="container">
             <nav class="nav-menu">
                 <button type="button" class="burger-btn">
@@ -56,7 +57,7 @@
                     <div class="main-menu__adress-block">
                         <p>info@doer-group.ru</p>
                     </div>
-                    <button class="menu-btn" type="button">Оставить заявку</button>
+                    <button class="menu-btn" type="button" data-toggle="modal" data-target="#request">Оставить заявку</button>
                 </div>
             </div>
         </div>
@@ -64,7 +65,7 @@
     <section class="hero">
         <div class="container">
             <div class="row">
-                <div class="col-lg-5 col-md-6 hero-content">
+                <div class="col-lg-5 col-md-6 hero-content" data-aos="fade-up">
                     <h1>
                        <span>Команда</span><br>
                         Doer Group
@@ -90,10 +91,10 @@
             <div class="container-sm">
                 <h2 class="section-title">Наши эксперты</h2>
                 <div class="row our-team__row">
-                    <div class="col-lg-5 our-team__photo">
+                    <div class="col-lg-5 our-team__photo" data-aos="fade-right">
                         <img src="./img/image-1.jpg" alt="Радислав Гандапас фото">
                     </div>
-                    <div class="col-lg-7">
+                    <div class="col-lg-7" data-aos="fade-left">
                         <div class="our-team__description">
                             <h2>Радислав Гандапас</h2>
                             <h3>
@@ -110,7 +111,7 @@
                     </div>
                 </div>
                 <div class="row our-team__row">
-                    <div class="col-lg-7">
+                    <div class="col-lg-7" data-aos="fade-right">
                         <div class="our-team__description">
                             <h2>Сергей Азимов</h2>
                             <h3>
@@ -125,15 +126,15 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-5 our-team__photo">
+                    <div class="col-lg-5 our-team__photo" data-aos="fade-left">
                         <img src="./img/image-2.jpg" alt="Радислав Гандапас фото">
                     </div>
                 </div>
                 <div class="row our-team__row">
-                    <div class="col-lg-5 our-team__photo">
+                    <div class="col-lg-5 our-team__photo" data-aos="fade-right">
                         <img src="./img/image-3.jpg" alt="Радислав Гандапас фото">
                     </div>
-                    <div class="col-lg-7">
+                    <div class="col-lg-7" data-aos="fade-left">
                         <div class="our-team__description">
                             <h2>Владимир Герасичев</h2>
                             <h3>
@@ -202,6 +203,30 @@
             </div>
         </div>
     </footer>
+    <!-- Modal -->
+    <div class="modal fade" id="request" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="main-form__body">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h2>У Вас остались <br>
+                    вопросы?</h2>
+                <h3>Заполните форму и наш экспет свяжется с Вами</h3>
+                <form>
+                    <input type="text" placeholder="Ваше имя">
+                    <input type="tel" placeholder="Ваш телефон">
+                    <button class="menu-btn" type="button">Оставить заявку</button>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                        <label class="custom-control-label" for="customCheck1">Даю согласие на обработку персональных данных</label>
+                    </div>
+                </form>
+            </div>
+        </div>
+        </div>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"
     integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ=="
     crossorigin="anonymous"></script>
@@ -211,6 +236,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
     integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
     crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="./js/main.js"></script>
 </body>
 

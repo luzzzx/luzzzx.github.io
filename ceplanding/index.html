@@ -13,7 +13,7 @@
 
 <body >
 
-    <header>
+    <header class="fixed-top">
         <div class="container">
             <nav class="nav-menu">
                 <button type="button" class="burger-btn">
@@ -56,7 +56,7 @@
                     <div class="main-menu__adress-block">
                         <p>info@doer-group.ru</p>
                     </div>
-                    <button class="menu-btn" type="button">Оставить заявку</button>
+                    <button class="menu-btn" type="button" data-toggle="modal" data-target="#request">Оставить заявку</button>
                 </div>
             </div>
         </div>
@@ -82,6 +82,30 @@
             </div>
         </div>
     </main>
+    <!-- Modal -->
+    <div class="modal fade" id="request" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="main-form__body">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h2>У Вас остались <br>
+                    вопросы?</h2>
+                <h3>Заполните форму и наш экспет свяжется с Вами</h3>
+                <form>
+                    <input type="text" placeholder="Ваше имя">
+                    <input type="tel" placeholder="Ваш телефон">
+                    <button class="menu-btn" type="button">Оставить заявку</button>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                        <label class="custom-control-label" for="customCheck1">Даю согласие на обработку персональных данных</label>
+                    </div>
+                </form>
+            </div>
+        </div>
+        </div>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"
         integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ=="
         crossorigin="anonymous"></script>
@@ -92,6 +116,7 @@
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./js/main.js"></script>
 </body>
 

@@ -33,6 +33,11 @@ $(document).ready(function () {
         $('body').toggleClass('lock');
     });
     
+
+    $('input[type="tel"]').inputmask({
+        "mask": "+7(999) 999-99-99",
+        showMaskOnHover: false
+    })
     // anim
     particlesJS("particles-js", {
         "particles": {
@@ -163,5 +168,8 @@ $(document).ready(function () {
     requestAnimationFrame(update);;
 
     // anim
+
+    // mask
+
 
 });

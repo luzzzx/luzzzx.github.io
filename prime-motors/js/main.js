@@ -1,6 +1,5 @@
 $(document).ready(function () {
     $('.comments-slider').owlCarousel({
-        center: true,
         loop: true,
         margin: 30,
         nav: true,
@@ -33,8 +32,66 @@ $(document).ready(function () {
         }
     });
 
-    $('.phone-menu').on("click", function (e) {
+    // текст в комментариях 
+
+    $('.more-btn').on("click", function (e) {
         e.preventDefault();
-        $(this).next('.drop-phone-menu').slideToggle();
+        let par =  $(this).parent('.comments-slider__item').parent('.owl-item');
+        par.toggleClass('showContent');
+        var raplaceText = par.hasClass('showContent') ? "Скрыть текст" : "Читать больше";
+        $(this).text(raplaceText);
     });
+
+    $('#request-form').on("click", function (e) {
+        e.preventDefault();
+        $('.request-body').toggleClass('formSend');
+    });
+    
+    $('#send-more').on("click", function (e) {
+        e.preventDefault();
+        $('.request-body').toggleClass('formSend');
+    });
+
+    // сервис слайды 
+    
+    $('.service-slider__body').owlCarousel({
+        center: true,
+        loop: true,
+        margin: 30,
+        nav: true,
+        navText : ['<span class="icon-prev"></span>','<span class="icon-next"></span>'],
+        responsive: {
+            0: {
+                items: 1,
+            },
+            550: {
+                items: 3,
+            },
+        }
+    });
+
+    // список услуг кнопка
+    $('.serv-list__btn').on("click", function (e) {
+        e.preventDefault();
+        $(this).toggleClass('active')
+        $(this).parent().next('.sub-item').slideToggle();
+    });
+    
+    // slider comfort
+
+    $('.comfort-slider').owlCarousel({
+        loop: true,
+        margin: 30,
+        nav: true,
+        navText : ['<span class="icon-prev"></span>','<span class="icon-next"></span>'],
+        responsive: {
+            0: {
+                items: 1,
+            },
+            550: {
+                items: 4,
+            },
+        }
+    });
+
 });

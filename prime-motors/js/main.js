@@ -9,6 +9,9 @@ $(document).ready(function () {
                 items: 1,
             },
             550: {
+                items: 2,
+            },
+            960: {
                 items: 3,
             },
         },
@@ -24,9 +27,14 @@ $(document).ready(function () {
         navText : ['<span class="icon-prev"></span>','<span class="icon-next"></span>'],
         responsive: {
             0: {
-                items: 1,
+                items: 2,
+                center: false,
             },
             550: {
+                items: 3,
+                center: false,
+            },
+            960: {
                 items: 5,
             },
         }
@@ -94,4 +102,56 @@ $(document).ready(function () {
         }
     });
 
+
+    // mobile menu
+
+    $('.drp-down-link').on("click", function (e) {
+        e.preventDefault();
+        $(this).toggleClass('active')
+        $(this).next('ul').toggle();
+    });
+
+    $('.mobile-nav__burger').on("click", function (e) {
+        e.preventDefault();
+        $(this).toggleClass('active');
+        $('.mobile-menu').toggleClass('active');
+    });
+    $('.btn-close-menu').on("click", function (e) {
+        e.preventDefault();
+        $('.mobile-nav__burger').toggleClass('active');
+        $('.mobile-menu').toggleClass('active');
+    });
+
+
+    // modal
+    $('.mobile-nav__phone').on("click", function (e) {
+        e.preventDefault();
+        $(this).toggleClass('active');
+        $('.contact-us-modal').toggleClass('active');
+    });
+    $('.contact-us-modal__close').on("click", function (e) {
+        e.preventDefault();
+        $(this).toggleClass('active');
+        $('.contact-us-modal').toggleClass('active');
+    });
+
+
+    // search
+    $('.mobile-search .form-control').focus(function() {
+        $('.mobile-search').addClass('active');
+        $('.mobile-nav__back').addClass('active');
+        $('.mobile-nav__burger').addClass('hide');
+        $('.mobile-nav__basket').addClass('hide');
+        $('.form-search_isearch').hide();
+        $('.form-search_iclose').show();
+    });
+    $('.mobile-nav__back').focus(function() {
+        $('.mobile-search').removeClass('active');
+        $('.mobile-nav__back').removeClass('active');
+        $('.mobile-nav__burger').removeClass('hide');
+        $('.mobile-nav__basket').removeClass('hide');
+        $('.form-search_isearch').show();
+        $('.form-search_iclose').hide();
+    });
 });
+

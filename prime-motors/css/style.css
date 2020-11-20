@@ -1667,6 +1667,10 @@ footer {
   background: #FAFAFA;
 }
 
+.serv-list .serv-list__title {
+  margin-bottom: 32px;
+}
+
 .serv-list__main .serv-list__body {
   padding: 0;
   list-style: none;
@@ -1949,7 +1953,7 @@ footer {
 }
 
 .comfort {
-  margin-bottom: 100px;
+  padding: 77px 0;
 }
 
 .comfort h3 {
@@ -2895,6 +2899,7 @@ footer {
 
   .advantages-card {
     margin-bottom: 30px;
+    height: auto;
   }
 
   .comments {

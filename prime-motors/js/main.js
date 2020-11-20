@@ -74,7 +74,9 @@ $(document).ready(function () {
         navText : ['<span class="icon-prev"></span>','<span class="icon-next"></span>'],
         responsive: {
             0: {
-                items: 1,
+                items: 1.2,
+                margin: 10,
+                center: false,
             },
             550: {
                 items: 2,
@@ -86,6 +88,31 @@ $(document).ready(function () {
         }
     });
 
+    // удалить слайдер
+    $(window).on('load resize', function () {
+        if ($(this).width() < 768) {
+          $(".comfort-slider").trigger('destroy.owl.carousel');
+          $('.comfort-slider').removeClass('owl-carousel');
+        } else {
+            $('.comfort-slider').addClass('owl-carousel');
+            $('.comfort-slider').owlCarousel({
+                loop: true,
+                margin: 30,
+                nav: true,
+                navText : ['<span class="icon-prev"></span>','<span class="icon-next"></span>'],
+                responsive: {
+                    0: {
+                        items: 3,
+                    },
+                    960: {
+                        items: 4,
+                    },
+                }
+            });
+        }
+      })
+    // удалить слайдер
+    
     // список услуг кнопка
     $('.serv-list__btn').on("click", function (e) {
         e.preventDefault();
@@ -95,20 +122,20 @@ $(document).ready(function () {
     
     // slider comfort
 
-    $('.comfort-slider').owlCarousel({
-        loop: true,
-        margin: 30,
-        nav: true,
-        navText : ['<span class="icon-prev"></span>','<span class="icon-next"></span>'],
-        responsive: {
-            0: {
-                items: 1,
-            },
-            550: {
-                items: 4,
-            },
-        }
-    });
+    // $('.comfort-slider').owlCarousel({
+    //     loop: true,
+    //     margin: 30,
+    //     nav: true,
+    //     navText : ['<span class="icon-prev"></span>','<span class="icon-next"></span>'],
+    //     responsive: {
+    //         0: {
+    //             items: 1,
+    //         },
+    //         550: {
+    //             items: 4,
+    //         },
+    //     }
+    // });
 
 
     // mobile menu

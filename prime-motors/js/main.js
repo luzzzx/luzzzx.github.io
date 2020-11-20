@@ -77,6 +77,10 @@ $(document).ready(function () {
                 items: 1,
             },
             550: {
+                items: 2,
+                center: false,
+            },
+            960: {
                 items: 3,
             },
         }

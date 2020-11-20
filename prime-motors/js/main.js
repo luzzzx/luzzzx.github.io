@@ -89,6 +89,7 @@ $(document).ready(function () {
     });
 
     // удалить слайдер
+
     $(window).on('load resize', function () {
         if ($(this).width() < 768) {
           $(".comfort-slider").trigger('destroy.owl.carousel');
@@ -121,21 +122,6 @@ $(document).ready(function () {
     });
     
     // slider comfort
-
-    // $('.comfort-slider').owlCarousel({
-    //     loop: true,
-    //     margin: 30,
-    //     nav: true,
-    //     navText : ['<span class="icon-prev"></span>','<span class="icon-next"></span>'],
-    //     responsive: {
-    //         0: {
-    //             items: 1,
-    //         },
-    //         550: {
-    //             items: 4,
-    //         },
-    //     }
-    // });
 
 
     // mobile menu
@@ -208,6 +194,13 @@ $(document).ready(function () {
     $('.close-button').on("click", function (e) {
         e.preventDefault();
         $('input').val('');
+    });
+
+    // modal
+    $('.modal-req-btn').on("click", function (e) {
+        e.preventDefault();
+        $('#modal-req').modal('toggle');
+        $('#modal-thx').modal('toggle');
     });
 
 });

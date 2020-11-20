@@ -1663,7 +1663,8 @@ footer {
 }
 
 .serv-list {
-  margin-bottom: 60px;
+  padding: 60px 0;
+  background: #FAFAFA;
 }
 
 .serv-list__main .serv-list__body {
@@ -1673,6 +1674,7 @@ footer {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 6px;
+  background: #fff;
 }
 
 .serv-list__main .serv-list__body li {
@@ -1959,6 +1961,12 @@ footer {
   margin-bottom: 40px;
 }
 
+.comfort-slider .owl-stage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .comfort-slider .owl-prev {
   margin-right: 20px;
 }
@@ -1994,9 +2002,10 @@ footer {
 .comfort-slider__card {
   padding: 32px 24px;
   background: #FFFFFF;
-  -webkit-box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.08);
-          box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.08);
+          box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.08);
   border-radius: 6px;
+  height: 100%;
 }
 
 .slider-card__header {

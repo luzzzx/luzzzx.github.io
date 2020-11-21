@@ -74,7 +74,7 @@ $(document).ready(function () {
         navText : ['<span class="icon-prev"></span>','<span class="icon-next"></span>'],
         responsive: {
             0: {
-                items: 1.2,
+                items: 1.3,
                 margin: 20,
                 center: false,
             },

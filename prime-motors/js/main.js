@@ -232,9 +232,7 @@ $(document).ready(function () {
         if ($(this).width() < 769) {
           $(".road-slider").trigger('destroy.owl.carousel');
           $('.road-slider').removeClass('owl-carousel');
-          if ($('.road-slider__item').length > 3) {
-            $('.road-slider__item:gt(2)').hide();
-          }
+          $('.road-slider__item:gt(2)').hide();
         } else {
             $('.road-slider').addClass('owl-carousel');
             $('.road-slider').owlCarousel({

@@ -233,6 +233,9 @@ $(document).ready(function () {
           $(".road-slider").trigger('destroy.owl.carousel');
           $('.road-slider').removeClass('owl-carousel');
           $('.road-slider__item:gt(2)').hide();
+        //   if ($('.road-slider__item').length > 3) {
+        //     $('.road-slider__item:gt(2)').hide();
+        //   }
         } else {
             $('.road-slider').addClass('owl-carousel');
             $('.road-slider').owlCarousel({

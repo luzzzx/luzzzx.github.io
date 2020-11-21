@@ -3734,6 +3734,7 @@ footer {
 
   .service-slider__item {
     width: auto;
+    min-height: 300px;
   }
 }
 

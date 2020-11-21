@@ -3584,6 +3584,10 @@ footer {
             order: 3;
   }
 
+  .road-slider__item.extra {
+    display: none;
+  }
+
   .road-btn,
   #show-more-road {
     margin: 0;

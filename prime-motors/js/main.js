@@ -232,10 +232,10 @@ $(document).ready(function () {
         if ($(this).width() < 769) {
           $(".road-slider").trigger('destroy.owl.carousel');
           $('.road-slider').removeClass('owl-carousel');
-          $('.road-slider__item:gt(2)').hide();
-        //   if ($('.road-slider__item').length > 3) {
-        //     $('.road-slider__item:gt(2)').hide();
-        //   }
+          if ($('.road-slider__item').length > 3) {
+            $('.road-slider__item:gt(2)').addClass('extra');
+            // $('.road-slider__item:gt(2)').hide();
+          }
         } else {
             $('.road-slider').addClass('owl-carousel');
             $('.road-slider').owlCarousel({
@@ -261,7 +261,7 @@ $(document).ready(function () {
     
     $('#show-more-road').on('click', function() {
         //toggle elements with class .ty-compact-list that their index is bigger than 2
-        $('.road-slider__item:gt(2)').toggle();
+        $('.road-slider__item.extra').toggle();
         //change text of show more element just for demonstration purposes to this demo
         $(this).text() === 'Скрыть' ? $(this).text('Показать больше') : $(this).text('Скрыть');
     });

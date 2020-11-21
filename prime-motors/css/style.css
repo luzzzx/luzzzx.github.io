@@ -3526,6 +3526,11 @@ footer {
 }
 
 @media (max-width: 768px) {
+  .service-slider__item {
+    width: auto;
+    min-height: 300px;
+  }
+
   .repair-description__slider {
     max-width: calc(100% - 40px);
     display: -webkit-box;
@@ -3730,11 +3735,6 @@ footer {
 
   .brands-slider__item {
     width: auto;
-  }
-
-  .service-slider__item {
-    width: auto;
-    min-height: 300px;
   }
 }
 

@@ -75,7 +75,7 @@ $(document).ready(function () {
         responsive: {
             0: {
                 items: 1.2,
-                margin: 10,
+                margin: 20,
                 center: false,
             },
             550: {
@@ -181,16 +181,8 @@ $(document).ready(function () {
         $('.mobile-nav__basket').addClass('hide');
         $('.search-button').addClass('active');
         $('.close-button').addClass('active');
-        // if ($('.mobile-search').hasClass('active')) {
-        //     $('.mobile-search #search').keyup(function(){
-        //         $('.search-list').addClass('active');
-        //     });
-        // }
-        // else{
-        //     $('.search-list').removeClass('active');
-        // }
-
     });
+
     $('.mobile-nav__back').on("click", function () {
         $('.mobile-search').removeClass('active');
         $('.mobile-nav__back').removeClass('active');
@@ -270,7 +262,7 @@ $(document).ready(function () {
         //toggle elements with class .ty-compact-list that their index is bigger than 2
         $('.road-slider__item:gt(2)').toggle();
         //change text of show more element just for demonstration purposes to this demo
-        $(this).text() === 'Show more' ? $(this).text('Показать больше') : $(this).text('Скрыть');
+        $(this).text() === 'Скрыть' ? $(this).text('Показать больше') : $(this).text('Скрыть');
     });
 
 

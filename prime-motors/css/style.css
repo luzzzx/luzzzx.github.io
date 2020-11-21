@@ -793,6 +793,12 @@ footer {
 
 .header-menu__main .login {
   margin-left: auto;
+  background: transparent;
+}
+
+.header-menu__main .login:focus {
+  border: none;
+  outline: none;
 }
 
 .header-menu__main .login .icon-login {
@@ -1645,6 +1651,7 @@ footer {
   bottom: 3%;
   left: 24px;
   min-height: 110px;
+  width: calc(100% - 48px);
 }
 
 .service-slider__item .product-slide__price p {

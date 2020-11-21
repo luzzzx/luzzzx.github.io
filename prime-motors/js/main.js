@@ -181,6 +181,14 @@ $(document).ready(function () {
         $('.mobile-nav__basket').addClass('hide');
         $('.search-button').addClass('active');
         $('.close-button').addClass('active');
+        // if ($('.mobile-search').hasClass('active')) {
+        //     $('.mobile-search #search').keyup(function(){
+        //         $('.search-list').addClass('active');
+        //     });
+        // }
+        // else{
+        //     $('.search-list').removeClass('active');
+        // }
 
     });
     $('.mobile-nav__back').on("click", function () {
@@ -190,6 +198,7 @@ $(document).ready(function () {
         $('.mobile-nav__basket').removeClass('hide');
         $('.search-button').removeClass('active');
         $('.close-button').removeClass('active');
+        $('.search-list').removeClass('active');
     });
     $('.close-button').on("click", function (e) {
         e.preventDefault();
@@ -203,5 +212,72 @@ $(document).ready(function () {
         $('#modal-thx').modal('toggle');
     });
 
+
+    // repair slider
+
+    $('.repair-description__slider').owlCarousel({
+        // center: true,
+        // loop: true,
+        dots: false,
+        nav: true,
+        navText : ['<span class="icon-prev"></span>','<span class="icon-next"></span>'],
+        responsive: {
+            0: {
+                items: 3,
+            },
+            768: {
+                items: 3,
+            },
+            960: {
+                items: 6,
+            },
+        }
+    });
+
+    // road slider
+
+    $(window).on('load resize', function () {
+        if ($(this).width() < 769) {
+          $(".road-slider").trigger('destroy.owl.carousel');
+          $('.road-slider').removeClass('owl-carousel');
+          if ($('.road-slider__item').length > 3) {
+            $('.road-slider__item:gt(2)').hide();
+          }
+        } else {
+            $('.road-slider').addClass('owl-carousel');
+            $('.road-slider').owlCarousel({
+                loop: true,
+                margin: 30,
+                nav: true,
+                navText : ['<span class="icon-prev"></span>','<span class="icon-next"></span>'],
+                responsive: {
+                    0: {
+                        items: 3,
+                    },
+                    960: {
+                        items: 3,
+                    },
+                }
+            });
+        }
+      })
+
+
+    //   show more road
+      
+    
+    $('#show-more-road').on('click', function() {
+        //toggle elements with class .ty-compact-list that their index is bigger than 2
+        $('.road-slider__item:gt(2)').toggle();
+        //change text of show more element just for demonstration purposes to this demo
+        $(this).text() === 'Show more' ? $(this).text('Показать больше') : $(this).text('Скрыть');
+    });
+
+
+    // поиск
+    $('.mobile-search #search').keyup(function(){
+            $('.search-list').addClass('active');
+    });
+    
 });
 

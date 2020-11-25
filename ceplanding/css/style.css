@@ -1481,6 +1481,9 @@ header nav {
   width: 49px;
   height: 5px;
   display: block;
+  -webkit-transition: linear .1s;
+  -o-transition: linear .1s;
+  transition: linear .1s;
 }
 
 .clients-slider .owl-next {
@@ -1508,6 +1511,9 @@ header nav {
   width: 49px;
   height: 5px;
   display: block;
+  -webkit-transition: linear .1s;
+  -o-transition: linear .1s;
+  transition: linear .1s;
 }
 
 .cep-history {

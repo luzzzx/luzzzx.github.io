@@ -45,8 +45,56 @@ $(document).ready(function () {
         $('#cep-2-modal').toggleClass('active');
         $('.model-main').toggleClass('active');
     });
+
+    $('#cep-3').on("click", function () {
+        $('#cep-3-modal').toggleClass('active');
+        $('.model-main').toggleClass('active');
+    });
+
+    $('#box-1').on("click", function () {
+        $('#box-1-modal').toggleClass('active');
+        $('.model-main').toggleClass('active');
+    });
+    $('#box-2').on("click", function () {
+        $('#box-2-modal').toggleClass('active');
+        $('.model-main').toggleClass('active');
+    });
+    $('#box-3').on("click", function () {
+        $('#box-3-modal').toggleClass('active');
+        $('.model-main').toggleClass('active');
+    });
+
+    $('#screen').on("click", function () {
+        $('#screen-modal').toggleClass('active');
+        $('.model-main').toggleClass('active');
+    });
     // model maket
-    
+
+    // slider
+
+    $('.clients-slider').owlCarousel({
+        loop: true,
+        center: false,
+        margin: 0,
+        items: 6,
+        nav: true,
+        navText : ['<span class="icon-prev"></span>','<span class="icon-next"></span>']
+        // responsive: {
+        //     0: {
+        //         items: 1,
+        //         margin: 5,
+        //     },
+        //     550: {
+        //         items: 2,
+        //         margin: 10,
+        //     },
+        //     960: {
+        //         items: 3,
+        //     },
+        // },
+        // autoplay: true,
+        // autoplayTimeout: 5000
+    });
     // anim
     particlesJS("particles-js", {
         "particles": {

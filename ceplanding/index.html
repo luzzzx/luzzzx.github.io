@@ -5,8 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.min.css">
     <title>Doer Group</title>
 </head>
@@ -22,7 +25,7 @@
                     <span class="icon-burger-i"></span>
                 </button>
                 <span class="header-menu">Меню</span>
-                <a href="#" class="main-logo"><img src="./img/logo.svg" alt="main-logo"></a>
+                <a href="#" class="main-logo"><img src="./img/dg-logo.svg" alt="main-logo"></a>
                 <a href="#" class="header-tg"><span class="icon-tg-icon"></span></a>
                 <a href="#" class="header-wtsp"><span class="icon-wtsp-icon"></span></a>
                 <a href="tel:+88005000310" class="header-tel">8 800 500 03 10</a>
@@ -41,24 +44,28 @@
                         <li><a href="#">Контакты</a></li>
                     </ul>
                 </div>
+                <div class="col-lg-6 main-menu__adress">
+                    <button class="close-menu">
+                        <span></span>
+                    </button>
+                    <div class="main-menu__social">
+                        <a href="#" class="menu-wtsp"><span class="icon-wtsp-icon"></span></a>
+                        <a href="#" class="menu-tg"><span class="icon-tg-icon"></span></a>
+                    </div>
+                    <div class="main-menu__adress-block">
+                        <p>8 800 500 03 10</p>
+                        <p>8 499 460 03 10</p>
+                    </div>
+                    <div class="main-menu__adress-block">
+                        <p>info@doer-group.ru</p>
+                    </div>
+                    <div class="main-menu__adress-block">
+                        <p>141011, Московская область, г. Мытищи, </p>
+                        <p>Фуражный проезд 4, офис 314</p>
+                    </div>
+                    <button class="menu-btn" type="button" data-toggle="modal" data-target="#request">Оставить заявку</button>
+                </div>
             </div>
-        </div>
-        <div class="col-lg-6 main-menu__adress">
-            <button class="close-menu">
-                <span></span>
-            </button>
-            <div class="main-menu__adress-block">
-                <p>141011, Московская область, г. Мытищи, </p>
-                <p>Фуражный проезд 4, офис 314</p>
-            </div>
-            <div class="main-menu__adress-block">
-                <span>8 800 500 03 10</span><a href="#" class="menu-wtsp"><span class="icon-wtsp-icon"></span></a><a href="#" class="menu-tg"><span class="icon-tg-icon"></span></a>
-                <p>8 499 460 03 10</p>
-            </div>
-            <div class="main-menu__adress-block">
-                <p>info@doer-group.ru</p>
-            </div>
-            <button class="menu-btn" type="button" data-toggle="modal" data-target="#request">Оставить заявку</button>
         </div>
     </section>
     <main class="home">
@@ -80,6 +87,9 @@
                     </div>
                   </div>
             </div>
+        </div>
+        <div class="intro-music">
+            <audio src="./files/1.mp3" autoplay></audio>
         </div>
     </main>
     <!-- Modal -->
@@ -118,6 +128,7 @@
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/4.0.9/jquery.inputmask.bundle.min.js" integrity="sha512-VpQwrlvKqJHKtIvpL8Zv6819FkTJyE1DoVNH0L2RLn8hUPjRjkS/bCYurZs0DX9Ybwu9oHRHdBZR9fESaq8Z8A==" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/owl.carousel.min.js"></script>
     <script src="./js/main.js"></script>
 </body>
 

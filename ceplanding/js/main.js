@@ -39,40 +39,49 @@ $(document).ready(function () {
     $('#cep-1').on("click", function () {
         $('#cep-1-modal').toggleClass('active');
         $('.model-main').toggleClass('active');
+        $('.modal-mask').addClass('active');
+
     });
     
     $('#cep-2').on("click", function () {
         $('#cep-2-modal').toggleClass('active');
         $('.model-main').toggleClass('active');
+        $('.modal-mask').addClass('active');
     });
 
     $('#cep-3').on("click", function () {
         $('#cep-3-modal').toggleClass('active');
         $('.model-main').toggleClass('active');
+        $('.modal-mask').addClass('active');
     });
 
     $('#box-1').on("click", function () {
         $('#box-1-modal').toggleClass('active');
         $('.model-main').toggleClass('active');
+        $('.modal-mask').addClass('active');
     });
     $('#box-2').on("click", function () {
         $('#box-2-modal').toggleClass('active');
         $('.model-main').toggleClass('active');
+        $('.modal-mask').addClass('active');
     });
     $('#box-3').on("click", function () {
         $('#box-3-modal').toggleClass('active');
         $('.model-main').toggleClass('active');
+        $('.modal-mask').addClass('active');
     });
 
     $('#screen').on("click", function () {
         $('#screen-modal').toggleClass('active');
         $('.model-main').toggleClass('active');
+        $('.modal-mask').addClass('active');
     });
 
     $('.modal-close').on("click", function (e) {
         e.preventDefault();
         $(this).parent().removeClass('active');
         $('.model-main').removeClass('active');
+        $('.modal-mask').removeClass('active');
     });
     // model maket
 
@@ -110,6 +119,7 @@ $(document).ready(function () {
         // autoplay: true,
         // autoplayTimeout: 5000
     });
+
     // anim
     particlesJS("particles-js", {
         "particles": {
@@ -227,7 +237,5 @@ $(document).ready(function () {
     // mask
 
     // model maket
-
-
 
 });

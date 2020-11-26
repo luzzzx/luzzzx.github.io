@@ -3079,6 +3079,10 @@ header nav {
   margin-bottom: 0;
 }
 
+.description-block__title h2 span img {
+  width: auto;
+}
+
 .description-block p {
   font-style: normal;
   font-weight: normal;
@@ -4334,6 +4338,10 @@ a*:hover {
     right: 34%;
     position: absolute;
     z-index: 10;
+  }
+
+  .description-block__title h2 span img {
+    width: 10%;
   }
 
   .description-block p {

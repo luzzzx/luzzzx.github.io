@@ -83,6 +83,13 @@ $(document).ready(function () {
         $('.model-main').removeClass('active');
         $('.modal-mask').removeClass('active');
     });
+
+    $('.modal-mask').on("click", function (e) {
+        e.preventDefault();
+        $('.model-main').removeClass('active');
+        $('.modal-mask').removeClass('active');
+        $('.model-body__card').removeClass('active');
+    });
     // model maket
 
 
@@ -105,7 +112,7 @@ $(document).ready(function () {
         navText : ['<span class="icon-prev"></span>','<span class="icon-next"></span>'],
         responsive: {
             0: {
-                items: 1,
+                items: 2,
                 margin: 30,
             },
             550: {

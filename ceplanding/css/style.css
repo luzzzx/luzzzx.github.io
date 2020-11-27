@@ -2657,7 +2657,7 @@ header nav {
 }
 
 .geo-main .c1 p::before {
-  width: 60% !important;
+  width: 31% !important;
 }
 
 .geo-main .c3 {
@@ -2687,7 +2687,7 @@ header nav {
 }
 
 .geo-main .c4 p::before {
-  width: 60% !important;
+  width: 38% !important;
 }
 
 .geo-main .c5 {
@@ -3336,6 +3336,7 @@ header nav {
   background: #0B7544;
   border: none;
   padding: 0 32px;
+  margin-top: 0;
 }
 
 .form-footer button:focus {
@@ -3899,7 +3900,12 @@ a*:hover {
   }
 
   .list-history-banner {
-    display: none;
+    right: -115px;
+    top: -28px;
+  }
+
+  .list-history-banner span {
+    padding: 0;
   }
 
   .list-history-banner__mobile {
@@ -3956,6 +3962,19 @@ a*:hover {
     margin: 14px 0;
     top: unset;
     right: unset;
+  }
+
+  .list-history li.active .list-history-banner,
+  .list-history li:hover .list-history-banner {
+    -webkit-filter: none;
+            filter: none;
+  }
+
+  .list-history li.active .list-history-banner span,
+  .list-history li:hover .list-history-banner span {
+    -webkit-clip-path: none;
+            clip-path: none;
+    background: transparent;
   }
 
   .list-history-desc {
@@ -4622,6 +4641,10 @@ a*:hover {
             align-items: center;
   }
 
+  .documents-body {
+    margin-bottom: 100px;
+  }
+
   .documents-body__links a {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
@@ -4818,6 +4841,22 @@ a*:hover {
 
   .clients-slider .owl-nav {
     padding: 40px 0;
+  }
+
+  .list-history li:nth-child(2) .list-history__people .list-history__range {
+    width: calc(96% - 105px);
+  }
+
+  .list-history li:nth-child(3) .list-history__people .list-history__range {
+    width: calc(82% - 105px);
+  }
+
+  .list-history li:nth-child(4) .list-history__people .list-history__range {
+    width: calc(75% - 105px);
+  }
+
+  .list-history li:nth-child(5) .list-history__people .list-history__range {
+    width: calc(50% - 105px);
   }
 
   .list-history__range {

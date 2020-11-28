@@ -42,6 +42,8 @@ header nav {
 
 header nav .logo {
   margin-right: 100px;
+  position: relative;
+  z-index: 20;
 }
 
 header nav .main-menu {
@@ -803,6 +805,17 @@ footer {
   header nav .main-menu.active {
     left: 0;
     position: fixed;
+  }
+
+  header nav .main-menu.active::before {
+    content: '';
+    width: 80%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 80px;
+    background: #FFFFFF;
+    z-index: 19;
   }
 
   header nav .main-menu li {

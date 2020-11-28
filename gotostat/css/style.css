@@ -83,6 +83,10 @@ header nav .main-menu li a {
   color: #151515;
 }
 
+header nav .main-menu li a .iconify {
+  margin-left: 9px;
+}
+
 .drp-d {
   position: relative;
 }

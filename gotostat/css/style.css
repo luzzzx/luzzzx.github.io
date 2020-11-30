@@ -778,6 +778,14 @@ footer {
   width: 100%;
 }
 
+@media (max-width: 1622px) {
+  header nav .main-menu {
+    -webkit-box-flex: unset;
+        -ms-flex: unset;
+            flex: unset;
+  }
+}
+
 @media (max-width: 1350px) {
   header nav {
     -webkit-box-pack: justify;

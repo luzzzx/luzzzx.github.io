@@ -41,7 +41,6 @@ header nav {
 }
 
 header nav .logo {
-  margin-right: 100px;
   position: relative;
   z-index: 20;
 }
@@ -62,6 +61,9 @@ header nav .main-menu {
   -webkit-transition: ease-in-out .3s;
   -o-transition: ease-in-out .3s;
   transition: ease-in-out .3s;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 1417px;
+          flex: 0 0 1417px;
 }
 
 header nav .main-menu li {
@@ -84,7 +86,7 @@ header nav .main-menu li a {
 }
 
 header nav .main-menu li a .iconify {
-  margin-left: 9px;
+  margin-left: 8px;
 }
 
 .drp-d {

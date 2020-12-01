@@ -808,6 +808,10 @@ table tbody tr:nth-of-type(odd) {
   margin-bottom: 50px;
 }
 
+.blog-row .popular-card:hover {
+  text-decoration: none;
+}
+
 .page-pagination {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1070,6 +1074,7 @@ article figure i {
   width: 100%;
   resize: none;
   padding: 5px;
+  height: 233px;
 }
 
 .comments-form label input {

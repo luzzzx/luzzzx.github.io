@@ -664,6 +664,16 @@ footer .footer-body span {
   border: none;
 }
 
+.show-more {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 130%;
+  color: #15A1FF;
+  margin-bottom: 60px;
+  display: none;
+}
+
 @media (min-width: 576px) {
   .modal-dialog {
     max-width: 788px;
@@ -970,19 +980,24 @@ footer .footer-body span {
   #success .main-btn {
     width: 100%;
   }
+
+  .show-more {
+    display: block;
+  }
 }
 
 @media (max-width: 750px) {
   .tarif ul {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    padding: 0 0 33px 0;
   }
 }

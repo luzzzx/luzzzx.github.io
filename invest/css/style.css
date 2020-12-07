@@ -43,7 +43,6 @@ button:focus {
 }
 
 .logo:hover {
-  color: #FFFFFF;
   text-decoration: none;
 }
 
@@ -686,6 +685,34 @@ footer .footer-body span {
   display: none;
 }
 
+#links {
+  position: fixed;
+  bottom: 10px;
+  width: 100%;
+  padding-top: 10px;
+  list-style: none;
+  text-align: center;
+  z-index: 99999;
+}
+
+#links li {
+  display: inline;
+  padding: 0 5px;
+}
+
+#links li label {
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+
+#links li.active label {
+  background-color: white;
+}
+
 @media (min-width: 576px) {
   .modal-dialog {
     max-width: 788px;
@@ -705,8 +732,7 @@ footer .footer-body span {
 
 @media (max-width: 991px) {
   .decor-header img {
-    width: 90%;
-    height: 645px;
+    width: 100%;
   }
 
   .hero-row {
@@ -931,7 +957,7 @@ footer .footer-body span {
   }
 
   footer .footer-bg {
-    height: 400px;
+    bottom: -100%;
   }
 
   footer .footer-body {
@@ -954,7 +980,7 @@ footer .footer-body span {
   }
 
   .modal-content {
-    padding: 62px 27px;
+    padding: 32px 27px;
   }
 
   .modal-content .close {
@@ -1004,6 +1030,7 @@ footer .footer-body span {
 
   .modal-content .enter-form .vk-btn img {
     margin-right: 7px;
+    width: 26px;
   }
 
   #success .main-btn {

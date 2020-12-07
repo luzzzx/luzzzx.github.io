@@ -1,11 +1,15 @@
 $(document).ready(function () {
+ 
 	$('[data-fancybox="gallery"]').fancybox({
 		toolbar  : false,
 		smallBtn : true,
-		arrows: false,
+		arrows: true,
 		loop : false,
 		transitionEffect: "slide",
+		// afterLoad   : addLinks,
+		// beforeClose : removeLinks
 	})
+
 
 	$(window).on('load resize', function () {
         if ($(this).width() < 769) {

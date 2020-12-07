@@ -220,6 +220,11 @@ article {
   color: #15A1FF;
 }
 
+.descrip a:focus {
+  outline: unset;
+  border: none;
+}
+
 .descrip p {
   font-style: normal;
   font-weight: normal;
@@ -368,6 +373,12 @@ article {
   top: -32px;
   right: -26px;
   z-index: 3;
+}
+
+.tarif-price span {
+  font-size: 59px !important;
+  color: #FFFFFF !important;
+  font-weight: 600 !important;
 }
 
 .tarif-decor {
@@ -520,6 +531,7 @@ footer .footer-body span {
   line-height: 150%;
   color: #808080;
   border: none;
+  border-radius: unset;
   border-bottom: 1px solid #8C8C8C;
 }
 
@@ -788,12 +800,13 @@ footer .footer-body span {
   }
 
   .enter-btn {
-    padding: 0;
+    padding: 0 10px;
     color: #15A1FF;
     background: transparent;
     border: unset;
     -webkit-box-shadow: unset;
             box-shadow: unset;
+    margin-right: 10px;
   }
 
   .enter-btn:hover {
@@ -863,9 +876,17 @@ footer .footer-body span {
     padding-left: 30px;
   }
 
+  .tarif ul li.extra {
+    display: none;
+  }
+
   .tarif ul li::before {
     width: 17px;
     height: 15px;
+  }
+
+  .tarif-price span {
+    font-size: 25px !important;
   }
 
   .tarif-price {
@@ -905,8 +926,12 @@ footer .footer-body span {
     max-width: 230px;
   }
 
+  footer {
+    background: #15a1ff;
+  }
+
   footer .footer-bg {
-    height: 340px;
+    height: 400px;
   }
 
   footer .footer-body {
@@ -948,6 +973,10 @@ footer .footer-body span {
   .modal-content .form-btns::after {
     width: calc(100% + 54px);
     left: -27px;
+  }
+
+  .modal-content .form-btns {
+    padding-bottom: 46px;
   }
 
   .modal-content .form-btns .main-btn {

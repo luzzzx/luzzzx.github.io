@@ -21,6 +21,10 @@ button:focus {
   width: 100%;
 }
 
+header {
+  min-height: 102px;
+}
+
 .nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -31,7 +35,35 @@ button:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 27px 0;
+  padding: 27px 15px;
+  -webkit-transition: linear .3s;
+  -o-transition: linear .3s;
+  transition: linear .3s;
+}
+
+.nav.scrolled {
+  background: #ffffff;
+  -webkit-box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.nav.scrolled .logo {
+  color: #000000;
+}
+
+.container-header {
+  max-width: 1240px;
+  margin: 0 auto;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .logo {
@@ -387,6 +419,10 @@ article {
   z-index: 2;
 }
 
+.tarif-decor img {
+  width: 100%;
+}
+
 .tarif-header {
   padding-bottom: 38px;
   position: relative;
@@ -604,13 +640,13 @@ footer .footer-body span {
   width: calc(100% + 140px);
   bottom: 0;
   left: -70px;
-  border: 1px dashed #8C8C8C;
+  border-bottom: 1px dashed #8C8C8C;
 }
 
 .modal-content .enter-form button {
+  border-radius: 100px;
   width: 190px;
   height: 55px;
-  border-radius: 100px;
 }
 
 .modal-content .enter-form .vk-btn {
@@ -622,6 +658,7 @@ footer .footer-body span {
   color: #FFFFFF;
   border: none;
   margin-right: 20px;
+  padding: 17px 30px;
 }
 
 .modal-content .enter-form .vk-btn img {
@@ -638,6 +675,7 @@ footer .footer-body span {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background: #ffffff;
+  padding: 17px 46px;
 }
 
 #modalPass .form-btns::after,
@@ -785,7 +823,7 @@ footer .footer-body span {
   }
 
   .tarif-decor {
-    max-width: 100% !important;
+    right: -36px;
   }
 
   .tarif-header::after {
@@ -808,13 +846,15 @@ footer .footer-body span {
 
   header {
     height: 60px;
+    min-height: 60px;
     background: #FFFFFF;
     -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
   }
 
   .nav {
-    padding: 13px 0;
+    background: #FFFFFF;
+    padding: 15px;
   }
 
   .logo {
@@ -1026,11 +1066,17 @@ footer .footer-body span {
     font-size: 14px;
     margin-right: 9px;
     margin-bottom: 15px;
+    padding: 19px 17px;
   }
 
   .modal-content .enter-form .vk-btn img {
     margin-right: 7px;
     width: 26px;
+  }
+
+  .modal-content .enter-form .reg-modal {
+    margin-bottom: 15px;
+    padding: 9px 17px;
   }
 
   #success .main-btn {

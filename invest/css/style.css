@@ -985,7 +985,7 @@ footer .footer-body span {
   }
 
   .tarif-header h2 {
-    max-width: 230px;
+    padding-right: 130px;
   }
 
   .tarif-header span {

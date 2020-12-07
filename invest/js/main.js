@@ -10,7 +10,6 @@ $(document).ready(function () {
 	$(window).on('load resize', function () {
         if ($(this).width() < 769) {
           if ($('.tarif ul li').length > 4) {
-            // $('.tarif ul li:gt(2)').addClass('extra');
             $('.tarif ul li:gt(3)').hide();
           }
         } else {

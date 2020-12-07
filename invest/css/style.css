@@ -957,7 +957,7 @@ footer .footer-body span {
   }
 
   footer .footer-bg {
-    bottom: -100%;
+    bottom: 100%;
   }
 
   footer .footer-body {

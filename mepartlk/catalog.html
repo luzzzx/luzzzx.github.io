@@ -1,0 +1,1302 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="./css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./css/font-awesome.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+          integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel=stylesheet href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"/>
+    <link rel=stylesheet href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"/>
+    <link rel="stylesheet" type="text/css" href="./slick/slick.css"/>
+    <link href="./bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+    <link rel=stylesheet href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"/>
+    <link rel="stylesheet" href="./css/fontello.css"/>
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="./css/museo.css"/>
+    <link rel="stylesheet" href="./css/custom-input.css"/>
+    <link rel="stylesheet" href="./css/style.css?v=115"/>
+    <link rel="stylesheet" href="./css/styles.css?v=115">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="./css/styles_catalog.css?v=114">
+    <link rel="stylesheet" href="./css/styles_filter_update.css?v=1">
+    <link rel="stylesheet" href="css/styles_modal_confirm.css?v=1">
+
+</head>
+<body>
+<div class="position-absolute bg-rgba fon_input">
+</div>
+<header>
+    <div class="container-fluid top-row d-flex align-items-center">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col">
+                    <ul class="top-list list-unstyled d-flex align-items-center justify-content-xl-start justify-content-md-between">
+                        <li class="hide-mobile"><a href="#">О компании</a></li>
+                        <li class="hide-mobile"><a href="#">Контакты</a></li>
+                        <li class="hide-mobile"><a href="#">Оптовикам</a></li>
+                        <li class="hide-mobile"><a href="#">Поставщикам</a></li>
+                        <li class="hide-mobile"><a href="#">Доставка и оплата</a></li>
+                        <li class="hide-mobile"><a href="#">Акции и скидки</a></li>
+
+                        <li class="hidden left"><a href="#">Вход</a></li>
+                        <li class="hidden"><a href="#">Регистрация</a></li>
+
+                        <li class="left"><a href="#">На балансе 0,00 рублей</a></li>
+                        <li class=""><a href="#">Кабинет</a></li>
+                        <li class=""><a href="#">Выйти</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container bot-row">
+        <div class="row">
+            <div class="col-xl-3 col-md-6 order-md-0 col-6 order-0 header-tablet-col-6 header-tablet-order-0">
+                <div class="logo">
+                    <img src="./img/logo.png" alt="">
+                </div>
+            </div>
+            <div class="col-xl-6 order-xl-1 col-md-12 order-md-2 col-12 order-2 header-tablet-col-12 header-tablet-order-2 d-flex align-items-center justify-content-center">
+                <div class="search-wrapper">
+                    <form class="search-form position-relative">
+                        <input type="search" class="search" placeholder="Введите артикул, наименование или VIN-номер">
+                        <button class="search-btn position-absolute"><img src="./img/search.png" alt=""></button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6 order-md-1 col-6 order-1 header-tablet-col-6 header-tablet-order-1">
+                <div class="right-menu">
+                    <div class="top d-flex align-items-center justify-content-between">
+                        <a href="#" class="phone d-flex align-items-center justify-content-start">
+                            <img src="./img/phone.png" alt="">7 (800) 301-30-88
+                        </a>
+                    </div>
+                    <div class="bot d-flex align-items-start justify-content-between">
+                        <a href="#" class="d-flex flex-column align-items-center justify-content-center"><img
+                                src="./img/garage.png" alt="">Гараж</a>
+                        <a href="#" class="d-flex flex-column align-items-center justify-content-center"><img
+                                src="./img/favourites.png" alt="">Избранное</a>
+                        <a href="#" class="d-flex flex-column align-items-center justify-content-center"><img
+                                src="./img/shopping-cart.png" alt="">Корзина</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="wrapper position-relative museo museo--font catalog-page">
+    <div class="container tablet--fix">
+        <div class="row cart-row breadcrumbs-row">
+            <div class="col">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/">Главная</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Каталог</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <div class="row flex-nowrap main-filter-wrapper">
+            <div class="col-md-12 col-lg-3 mt-0 mt-lg-4">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-orange-border flex-lg-column align-items-start p-0">
+                        <div class="d-flex d-lg-none py-3 px-md-4 navbar-brand text-uppercase font-18 font-weight-bolder text-white border-md-bottom border-secondary mr-0 w-md-100 ml-3 ml-sm-0 lich_kb">Профиль</div>
+                  <button class="navbar-toggler mt-3" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="icon-down-open-big"></i>
+                  </button>
+                      <div class="collapse navbar-collapse w-100" id="navbarNavDropdown">
+                        <ul class="navbar-nav flex-column font-18 w-100 pesonal_menu">
+                         <li class="nav-item profil-mwnu border-bottom">
+                            <a class="nav-link profile-menu px-4" href="#">Личный кабинет</a>
+                          </li>
+                          <li class="nav-item profil-mwnu  border-bottom">
+                            <a class="nav-link profile-menu px-4" href="#">Мои заказы</a>
+                          </li>
+                          <li class="nav-item profil-mwnu  border-bottom">
+                            <a class="nav-link profile-menu px-4" href="#">Корзина</a>
+                          </li>
+                          <li class="nav-item  profil-mwnu border-bottom">
+                            <a class="nav-link profile-menu px-4" href="#">Избранное</a>
+                          </li>
+                          <li class="nav-item  profil-mwnu border-bottom">
+                            <a class="nav-link profile-menu px-4" href="#">Баланс и счета</a>
+                          </li>
+                          <li class="nav-item  profil-mwnu border-bottom">
+                            <a class="nav-link profile-menu px-4" href="#">Гараж</a>
+                          </li>
+                          <li class="nav-item  profil-mwnu border-bottom">
+                            <a class="nav-link profile-menu px-4" href="#">Проценка</a>
+                          </li>
+                          <li class="nav-item  profil-mwnu border-bottom">
+                            <a class="nav-link profile-menu px-4" href="#">Запрос по VIN</a>
+                          </li>
+                          <li class="nav-item  profil-mwnu border-bottom active">
+                            <a class="nav-link profile-menu px-4" href="#">Профиль</a>
+                          </li>
+                             <li class="nav-item  profil-mwnu border-bottom">
+                            <a class="nav-link profile-menu px-4" href="#">Ваш текущий статус</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </nav>
+            </div>
+
+            <div class="col-12 col-lg-9 d-md-block tablet-block" data-content>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="row no-gutters d-lg-none mobile-sort">
+                            <div class="col-auto col-sm-5 flex-grow-1">
+                                <div class="search_sort_mobile padding--hack">
+                                    <button class="but_sort_mobile d-flex justify-content-between align-items-center">
+                                        <span>По <span class="mobile-sort-name">релевантности</span></span>
+                                        <i class="icon-up-open-big"></i>
+                                    </button>
+                                    <div class="search_sort_mobile_menu">
+                                        <ul class="search-sort__list">
+                                            <li>
+                                                <span>Сортировка:</span>
+                                            </li>
+                                            <li class="col-brend active">
+                                                <a href="#" data-sort-name="релевантности">По релевантности</a>
+                                            </li>
+                                            <li class="col-art">
+                                                <a href="#" data-sort-name="стоимости">По стоимости</a>
+                                            </li>
+                                            <li class="col-availability">
+                                                <a href="#" data-sort-name="кол-ву отзывов">По кол-ву отзывов</a>
+                                            </li>
+                                            <li class="col-price">
+                                                <a href="#" data-sort-name="рейтингу">По рейтингу</a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <div class="search_sort_mobile order_sort d-flex justify-content-center">
+                                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                    <path fill="#737f8f" d="M492,236H68.442l70.164-69.824c7.829-7.792,7.859-20.455,0.067-28.284c-7.792-7.83-20.456-7.859-28.285-0.068
+                                        l-104.504,104c-0.007,0.006-0.012,0.013-0.018,0.019c-7.809,7.792-7.834,20.496-0.002,28.314c0.007,0.006,0.012,0.013,0.018,0.019
+                                        l104.504,104c7.828,7.79,20.492,7.763,28.285-0.068c7.792-7.829,7.762-20.492-0.067-28.284L68.442,276H492
+                                        c11.046,0,20-8.954,20-20C512,244.954,503.046,236,492,236z"></path>
+                                </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="filter-row d-flex align-items-center justify-content-start">
+                                    <input type="search" class="form-control ds-input" id="search-input" placeholder="Поиск" aria-label="Search for...">
+                                    <div class="filter-view">
+                                        <button class="view bricks-view active" type="button" data-switch="bricks">
+                                            <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                    width="21px" height="21px">
+                                                <path fill-rule="evenodd" fill="rgb(170, 170, 170)"
+                                                      d="M19.728,20.999 L11.843,20.999 C11.407,20.999 11.054,20.646 11.054,20.211 L11.054,12.326 C11.054,11.890 11.407,11.537 11.843,11.537 L19.728,11.537 C20.163,11.537 20.516,11.890 20.516,12.326 L20.516,20.211 C20.516,20.646 20.163,20.999 19.728,20.999 ZM18.939,13.114 L12.631,13.114 L12.631,19.422 L18.939,19.422 L18.939,13.114 ZM19.728,9.960 L11.843,9.960 C11.407,9.960 11.054,9.607 11.054,9.172 L11.054,1.286 C11.054,0.851 11.407,0.498 11.843,0.498 L19.728,0.498 C20.163,0.498 20.516,0.851 20.516,1.286 L20.516,9.172 C20.516,9.607 20.163,9.960 19.728,9.960 ZM18.939,2.075 L12.631,2.075 L12.631,8.383 L18.939,8.383 L18.939,2.075 ZM8.689,20.999 L0.803,20.999 C0.368,20.999 0.015,20.646 0.015,20.211 L0.015,12.326 C0.015,11.890 0.368,11.537 0.803,11.537 L8.689,11.537 C9.124,11.537 9.477,11.890 9.477,12.326 L9.477,20.211 C9.477,20.646 9.124,20.999 8.689,20.999 ZM7.900,13.114 L1.592,13.114 L1.592,19.422 L7.900,19.422 L7.900,13.114 ZM8.689,9.960 L0.803,9.960 C0.368,9.960 0.015,9.607 0.015,9.172 L0.015,1.286 C0.015,0.851 0.368,0.498 0.803,0.498 L8.689,0.498 C9.124,0.498 9.477,0.851 9.477,1.286 L9.477,9.172 C9.477,9.607 9.124,9.960 8.689,9.960 ZM7.900,2.075 L1.592,2.075 L1.592,8.383 L7.900,8.383 L7.900,2.075 Z"/>
+                                            </svg>
+                                        </button>
+                                        <button class="view list-view" type="button" data-switch="list">
+                                            <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                    width="21px" height="21px">
+                                                <path fill-rule="evenodd" fill="rgb(170, 170, 170)"
+                                                      d="M20.100,11.358 L7.435,11.358 C6.984,11.358 6.618,10.992 6.618,10.541 C6.618,10.089 6.984,9.723 7.435,9.723 L20.100,9.723 C20.551,9.723 20.917,10.089 20.917,10.541 C20.917,10.992 20.551,11.358 20.100,11.358 ZM20.100,3.309 L7.435,3.309 C6.984,3.309 6.618,2.943 6.618,2.492 C6.618,2.041 6.984,1.675 7.435,1.675 L20.100,1.675 C20.551,1.675 20.917,2.041 20.917,2.492 C20.917,2.943 20.551,3.309 20.100,3.309 ZM4.003,19.406 C3.552,19.406 3.186,19.040 3.186,18.589 C3.186,18.161 2.838,17.813 2.410,17.813 C1.982,17.813 1.634,18.161 1.634,18.589 C1.634,19.017 1.982,19.365 2.410,19.365 C2.861,19.365 3.227,19.731 3.227,20.182 C3.227,20.633 2.861,20.999 2.410,20.999 C1.081,20.999 -0.000,19.918 -0.000,18.589 C-0.000,17.260 1.081,16.178 2.410,16.178 C3.739,16.178 4.821,17.260 4.821,18.589 C4.821,19.040 4.455,19.406 4.003,19.406 ZM4.003,11.358 C3.552,11.358 3.186,10.992 3.186,10.541 C3.186,10.112 2.838,9.764 2.410,9.764 C1.982,9.764 1.634,10.112 1.634,10.541 C1.634,10.968 1.982,11.317 2.410,11.317 C2.861,11.317 3.227,11.682 3.227,12.134 C3.227,12.585 2.861,12.951 2.410,12.951 C1.081,12.951 -0.000,11.870 -0.000,10.541 C-0.000,9.211 1.081,8.130 2.410,8.130 C3.739,8.130 4.821,9.211 4.821,10.541 C4.821,10.992 4.455,11.358 4.003,11.358 ZM4.003,3.309 C3.552,3.309 3.186,2.943 3.186,2.492 C3.186,2.064 2.838,1.716 2.410,1.716 C1.982,1.716 1.634,2.064 1.634,2.492 C1.634,2.920 1.982,3.268 2.410,3.268 C2.861,3.268 3.227,3.634 3.227,4.085 C3.227,4.536 2.861,4.902 2.410,4.902 C1.081,4.902 -0.000,3.821 -0.000,2.492 C-0.000,1.163 1.081,0.082 2.410,0.082 C3.739,0.082 4.821,1.163 4.821,2.492 C4.821,2.943 4.455,3.309 4.003,3.309 ZM7.435,17.772 L20.100,17.772 C20.551,17.772 20.917,18.137 20.917,18.589 C20.917,19.040 20.551,19.406 20.100,19.406 L7.435,19.406 C6.984,19.406 6.618,19.040 6.618,18.589 C6.618,18.137 6.984,17.772 7.435,17.772 Z"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="search_fon">
+                            <div id="table_body" class="col-12 filter-table items-table list-table active">
+                                <div class="row d-none d-lg-block hide-tablet">
+                                    <div class="col-12">
+                                        <div class="search_fon_head">
+                                            <div class="row no-gutters justify-content-between">
+                                                <div class="col-brend lk border-right">
+                                                    <div class="search_fon_head_text filter-arrow border-0">
+                                                        <span>БРЕНД И ОПИСАНИЕ</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-art lk border-right">
+                                                    <div class="search_fon_head_text border-0">
+                                                        <span>АРТИКУЛ</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-info border-right">
+                                                    <div class="search_fon_head_text no-filter border-0">
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-cart border-right">
+                                                    <div class="search_fon_head_text no-filter border-0"></div>
+                                                </div>
+                                                <div class="col-more">
+                                                    <div class="search_fon_head_text no-filter border-0"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row d-flex table_row_search" data-parent>
+                                    <div class="col-brend lk">
+                                        <div class="search_table_body_text d-block toggle-brand">
+                                            <p class="d-block d-lg-none color--wg">Артикул: gbd1373</p>
+                                            <span class="with--border" data-action="toggle">Braum</span>
+                                        </div>
+                                        <div class="search_table_body_text toggle-desc">
+                                            <p class="d-block d-lg-none color--wg">Описание:</p>
+                                            <span>Рукоятки переключения</span>
+                                            <div class="storage lk">
+                                                <span>Склад</span> NME-000
+                                                <div class="rating">
+                                                    <div class="filled" style="width: 50%"></div>
+                                                </div>
+                                            </div>
+                                            <div class="info-btn-wrapper">
+                                                <button class="info-btn d-block d-sm-none"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-art lk d-none d-lg-block">
+                                        <div class="search_table_body_text">
+                                            <span>asdgbd1373</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-info">
+                                        <div class="info-btn-wrapper">
+                                            <button class="info-btn d-none d-sm-block"></button>
+                                            <div class="popup-info">
+                                                <button class="close-btn"><img src="./img/close.png" alt="">
+                                                </button>
+                                                <div class="img">
+                                                    <img src="./img/popup-img.png" alt="">
+                                                </div>
+                                                <div class="info">
+                                                    <div class="info-group">
+                                                        <div class="key"><span>Марка и модель автомобиля</span>
+                                                        </div>
+                                                        <div class="value">Audi 5000 Turbo, Chevrolet Corvette,
+                                                            Dodge Charger 2.2
+                                                        </div>
+                                                    </div>
+                                                    <div class="info-group">
+                                                        <div class="key"><span>Удельная площадь охвата <br>тормозов, кв. см/т</span>
+                                                        </div>
+                                                        <div class="value">1135,2</div>
+                                                    </div>
+                                                    <div class="info-group">
+                                                        <div class="key"><span>Перфорация</span></div>
+                                                        <div class="value">Да</div>
+                                                    </div>
+                                                    <div class="info-group">
+                                                        <div class="key"><span>Фиксированный суппорт</span>
+                                                        </div>
+                                                        <div class="value">Да</div>
+                                                    </div>
+                                                    <div class="info-group">
+                                                        <div class="key"><span>Диаметр</span></div>
+                                                        <div class="value">304х22mm</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-cart mt-2 mt-lg-0">
+                                        <a href="#"><img src="img/cart_red.png"></a>
+                                    </div>
+                                    <div class="col-more">
+                                        <a href="#">
+                                            <span class="text">Поиск</span>
+                                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                                 y="0px"
+                                                 width="451.846px" height="451.847px" viewBox="0 0 451.846 451.847"
+                                                 style="enable-background:new 0 0 451.846 451.847;"
+                                                 xml:space="preserve">
+                                                <path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+                                                    L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+                                                    c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="row d-flex table_row_search" data-parent>
+                                    <div class="col-brend lk">
+                                        <div class="search_table_body_text d-block toggle-brand">
+                                            <p class="d-block d-lg-none color--wg">Артикул: gbd1373</p>
+                                            <span class="with--border" data-action="toggle">Braum</span>
+                                        </div>
+                                        <div class="search_table_body_text toggle-desc">
+                                            <p class="d-block d-lg-none color--wg">Описание:</p>
+                                            <span>Рукоятки переключения</span>
+                                            <div class="storage lk">
+                                                <span>Склад</span> NME-000
+                                                <div class="rating">
+                                                    <div class="filled" style="width: 50%"></div>
+                                                </div>
+                                            </div>
+                                            <div class="info-btn-wrapper">
+                                                <button class="info-btn d-block d-sm-none"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-art lk d-none d-lg-block">
+                                        <div class="search_table_body_text">
+                                            <span>asdgbd1373</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-info">
+                                        <div class="info-btn-wrapper">
+                                            <button class="info-btn d-none d-sm-block"></button>
+                                            <div class="popup-info">
+                                                <button class="close-btn"><img src="./img/close.png" alt="">
+                                                </button>
+                                                <div class="img">
+                                                    <img src="./img/popup-img.png" alt="">
+                                                </div>
+                                                <div class="info">
+                                                    <div class="info-group">
+                                                        <div class="key"><span>Марка и модель автомобиля</span>
+                                                        </div>
+                                                        <div class="value">Audi 5000 Turbo, Chevrolet Corvette,
+                                                            Dodge Charger 2.2
+                                                        </div>
+                                                    </div>
+                                                    <div class="info-group">
+                                                        <div class="key"><span>Удельная площадь охвата <br>тормозов, кв. см/т</span>
+                                                        </div>
+                                                        <div class="value">1135,2</div>
+                                                    </div>
+                                                    <div class="info-group">
+                                                        <div class="key"><span>Перфорация</span></div>
+                                                        <div class="value">Да</div>
+                                                    </div>
+                                                    <div class="info-group">
+                                                        <div class="key"><span>Фиксированный суппорт</span>
+                                                        </div>
+                                                        <div class="value">Да</div>
+                                                    </div>
+                                                    <div class="info-group">
+                                                        <div class="key"><span>Диаметр</span></div>
+                                                        <div class="value">304х22mm</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-cart mt-2 mt-lg-0">
+                                        <a href="#"><img src="img/cart_red.png"></a>
+                                    </div>
+                                    <div class="col-more">
+                                        <a href="#">
+                                            <span class="text">Поиск</span>
+                                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                                 y="0px"
+                                                 width="451.846px" height="451.847px" viewBox="0 0 451.846 451.847"
+                                                 style="enable-background:new 0 0 451.846 451.847;"
+                                                 xml:space="preserve">
+                                                <path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+                                                    L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+                                                    c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="row d-flex table_row_search" data-parent>
+                                    <div class="col-brend lk">
+                                        <div class="search_table_body_text d-block toggle-brand">
+                                            <p class="d-block d-lg-none color--wg">Артикул: gbd1373</p>
+                                            <span class="with--border" data-action="toggle">Braum</span>
+                                        </div>
+                                        <div class="search_table_body_text toggle-desc">
+                                            <p class="d-block d-lg-none color--wg">Описание:</p>
+                                            <span>Рукоятки переключения</span>
+                                            <div class="storage lk">
+                                                <span>Склад</span> NME-000
+                                                <div class="rating">
+                                                    <div class="filled" style="width: 50%"></div>
+                                                </div>
+                                            </div>
+                                            <div class="info-btn-wrapper">
+                                                <button class="info-btn d-block d-sm-none"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-art lk d-none d-lg-block">
+                                        <div class="search_table_body_text">
+                                            <span>asdgbd1373</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-info">
+                                        <div class="info-btn-wrapper">
+                                            <button class="info-btn d-none d-sm-block"></button>
+                                            <div class="popup-info">
+                                                <button class="close-btn"><img src="./img/close.png" alt="">
+                                                </button>
+                                                <div class="img">
+                                                    <img src="./img/popup-img.png" alt="">
+                                                </div>
+                                                <div class="info">
+                                                    <div class="info-group">
+                                                        <div class="key"><span>Марка и модель автомобиля</span>
+                                                        </div>
+                                                        <div class="value">Audi 5000 Turbo, Chevrolet Corvette,
+                                                            Dodge Charger 2.2
+                                                        </div>
+                                                    </div>
+                                                    <div class="info-group">
+                                                        <div class="key"><span>Удельная площадь охвата <br>тормозов, кв. см/т</span>
+                                                        </div>
+                                                        <div class="value">1135,2</div>
+                                                    </div>
+                                                    <div class="info-group">
+                                                        <div class="key"><span>Перфорация</span></div>
+                                                        <div class="value">Да</div>
+                                                    </div>
+                                                    <div class="info-group">
+                                                        <div class="key"><span>Фиксированный суппорт</span>
+                                                        </div>
+                                                        <div class="value">Да</div>
+                                                    </div>
+                                                    <div class="info-group">
+                                                        <div class="key"><span>Диаметр</span></div>
+                                                        <div class="value">304х22mm</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-cart mt-2 mt-lg-0">
+                                        <a href="#"><img src="img/cart_red.png"></a>
+                                    </div>
+                                    <div class="col-more">
+                                        <a href="#">
+                                            <span class="text">Поиск</span>
+                                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                                 y="0px"
+                                                 width="451.846px" height="451.847px" viewBox="0 0 451.846 451.847"
+                                                 style="enable-background:new 0 0 451.846 451.847;"
+                                                 xml:space="preserve">
+                                                <path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+                                                    L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+                                                    c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="row d-flex table_row_search" data-parent>
+                                    <div class="col-brend lk">
+                                        <div class="search_table_body_text d-block toggle-brand">
+                                            <p class="d-block d-lg-none color--wg">Артикул: gbd1373</p>
+                                            <span class="with--border" data-action="toggle">Braum</span>
+                                        </div>
+                                        <div class="search_table_body_text toggle-desc">
+                                            <p class="d-block d-lg-none color--wg">Описание:</p>
+                                            <span>Рукоятки переключения</span>
+                                            <div class="storage lk">
+                                                <span>Склад</span> NME-000
+                                                <div class="rating">
+                                                    <div class="filled" style="width: 50%"></div>
+                                                </div>
+                                            </div>
+                                            <div class="info-btn-wrapper">
+                                                <button class="info-btn d-block d-sm-none"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-art lk d-none d-lg-block">
+                                        <div class="search_table_body_text">
+                                            <span>asdgbd1373</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-info">
+                                        <div class="info-btn-wrapper">
+                                            <button class="info-btn d-none d-sm-block"></button>
+                                            <div class="popup-info">
+                                                <button class="close-btn"><img src="./img/close.png" alt="">
+                                                </button>
+                                                <div class="img">
+                                                    <img src="./img/popup-img.png" alt="">
+                                                </div>
+                                                <div class="info">
+                                                    <div class="info-group">
+                                                        <div class="key"><span>Марка и модель автомобиля</span>
+                                                        </div>
+                                                        <div class="value">Audi 5000 Turbo, Chevrolet Corvette,
+                                                            Dodge Charger 2.2
+                                                        </div>
+                                                    </div>
+                                                    <div class="info-group">
+                                                        <div class="key"><span>Удельная площадь охвата <br>тормозов, кв. см/т</span>
+                                                        </div>
+                                                        <div class="value">1135,2</div>
+                                                    </div>
+                                                    <div class="info-group">
+                                                        <div class="key"><span>Перфорация</span></div>
+                                                        <div class="value">Да</div>
+                                                    </div>
+                                                    <div class="info-group">
+                                                        <div class="key"><span>Фиксированный суппорт</span>
+                                                        </div>
+                                                        <div class="value">Да</div>
+                                                    </div>
+                                                    <div class="info-group">
+                                                        <div class="key"><span>Диаметр</span></div>
+                                                        <div class="value">304х22mm</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-cart mt-2 mt-lg-0">
+                                        <a href="#"><img src="img/cart_red.png"></a>
+                                    </div>
+                                    <div class="col-more">
+                                        <a href="#">
+                                            <span class="text">Поиск</span>
+                                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                                 y="0px"
+                                                 width="451.846px" height="451.847px" viewBox="0 0 451.846 451.847"
+                                                 style="enable-background:new 0 0 451.846 451.847;"
+                                                 xml:space="preserve">
+                                                <path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+                                                    L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+                                                    c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="row d-flex table_row_search" data-parent>
+                                    <div class="col-brend lk">
+                                        <div class="search_table_body_text d-block toggle-brand">
+                                            <p class="d-block d-lg-none color--wg">Артикул: gbd1373</p>
+                                            <span class="with--border" data-action="toggle">Braum</span>
+                                        </div>
+                                        <div class="search_table_body_text toggle-desc">
+                                            <p class="d-block d-lg-none color--wg">Описание:</p>
+                                            <span>Рукоятки переключения</span>
+                                            <div class="storage lk">
+                                                <span>Склад</span> NME-000
+                                                <div class="rating">
+                                                    <div class="filled" style="width: 50%"></div>
+                                                </div>
+                                            </div>
+                                            <div class="info-btn-wrapper">
+                                                <button class="info-btn d-block d-sm-none"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-art lk d-none d-lg-block">
+                                        <div class="search_table_body_text">
+                                            <span>asdgbd1373</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-info">
+                                        <div class="info-btn-wrapper">
+                                            <button class="info-btn d-none d-sm-block"></button>
+                                            <div class="popup-info">
+                                                <button class="close-btn"><img src="./img/close.png" alt="">
+                                                </button>
+                                                <div class="img">
+                                                    <img src="./img/popup-img.png" alt="">
+                                                </div>
+                                                <div class="info">
+                                                    <div class="info-group">
+                                                        <div class="key"><span>Марка и модель автомобиля</span>
+                                                        </div>
+                                                        <div class="value">Audi 5000 Turbo, Chevrolet Corvette,
+                                                            Dodge Charger 2.2
+                                                        </div>
+                                                    </div>
+                                                    <div class="info-group">
+                                                        <div class="key"><span>Удельная площадь охвата <br>тормозов, кв. см/т</span>
+                                                        </div>
+                                                        <div class="value">1135,2</div>
+                                                    </div>
+                                                    <div class="info-group">
+                                                        <div class="key"><span>Перфорация</span></div>
+                                                        <div class="value">Да</div>
+                                                    </div>
+                                                    <div class="info-group">
+                                                        <div class="key"><span>Фиксированный суппорт</span>
+                                                        </div>
+                                                        <div class="value">Да</div>
+                                                    </div>
+                                                    <div class="info-group">
+                                                        <div class="key"><span>Диаметр</span></div>
+                                                        <div class="value">304х22mm</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-cart mt-2 mt-lg-0">
+                                        <a href="#"><img src="img/cart_red.png"></a>
+                                    </div>
+                                    <div class="col-more">
+                                        <a href="#">
+                                            <span class="text">Поиск</span>
+                                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                                 y="0px"
+                                                 width="451.846px" height="451.847px" viewBox="0 0 451.846 451.847"
+                                                 style="enable-background:new 0 0 451.846 451.847;"
+                                                 xml:space="preserve">
+                                                <path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+                                                    L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+                                                    c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="row d-flex table_row_search" data-parent>
+                                    <div class="col-brend lk">
+                                        <div class="search_table_body_text d-block toggle-brand">
+                                            <p class="d-block d-lg-none color--wg">Артикул: gbd1373</p>
+                                            <span class="with--border" data-action="toggle">Braum</span>
+                                        </div>
+                                        <div class="search_table_body_text toggle-desc">
+                                            <p class="d-block d-lg-none color--wg">Описание:</p>
+                                            <span>Рукоятки переключения</span>
+                                            <div class="storage lk">
+                                                <span>Склад</span> NME-000
+                                                <div class="rating">
+                                                    <div class="filled" style="width: 50%"></div>
+                                                </div>
+                                            </div>
+                                            <div class="info-btn-wrapper">
+                                                <button class="info-btn d-block d-sm-none"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-art lk d-none d-lg-block">
+                                        <div class="search_table_body_text">
+                                            <span>asdgbd1373</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-info">
+                                        <div class="info-btn-wrapper">
+                                            <button class="info-btn d-none d-sm-block"></button>
+                                            <div class="popup-info">
+                                                <button class="close-btn"><img src="./img/close.png" alt="">
+                                                </button>
+                                                <div class="img">
+                                                    <img src="./img/popup-img.png" alt="">
+                                                </div>
+                                                <div class="info">
+                                                    <div class="info-group">
+                                                        <div class="key"><span>Марка и модель автомобиля</span>
+                                                        </div>
+                                                        <div class="value">Audi 5000 Turbo, Chevrolet Corvette,
+                                                            Dodge Charger 2.2
+                                                        </div>
+                                                    </div>
+                                                    <div class="info-group">
+                                                        <div class="key"><span>Удельная площадь охвата <br>тормозов, кв. см/т</span>
+                                                        </div>
+                                                        <div class="value">1135,2</div>
+                                                    </div>
+                                                    <div class="info-group">
+                                                        <div class="key"><span>Перфорация</span></div>
+                                                        <div class="value">Да</div>
+                                                    </div>
+                                                    <div class="info-group">
+                                                        <div class="key"><span>Фиксированный суппорт</span>
+                                                        </div>
+                                                        <div class="value">Да</div>
+                                                    </div>
+                                                    <div class="info-group">
+                                                        <div class="key"><span>Диаметр</span></div>
+                                                        <div class="value">304х22mm</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-cart mt-2 mt-lg-0">
+                                        <a href="#"><img src="img/cart_red.png"></a>
+                                    </div>
+                                    <div class="col-more">
+                                        <a href="#">
+                                            <span class="text">Поиск</span>
+                                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                                 y="0px"
+                                                 width="451.846px" height="451.847px" viewBox="0 0 451.846 451.847"
+                                                 style="enable-background:new 0 0 451.846 451.847;"
+                                                 xml:space="preserve">
+                                                <path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+                                                    L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+                                                    c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="row d-flex table_row_search" data-parent>
+                                    <div class="col-brend lk">
+                                        <div class="search_table_body_text d-block toggle-brand">
+                                            <p class="d-block d-lg-none color--wg">Артикул: gbd1373</p>
+                                            <span class="with--border" data-action="toggle">Braum</span>
+                                        </div>
+                                        <div class="search_table_body_text toggle-desc">
+                                            <p class="d-block d-lg-none color--wg">Описание:</p>
+                                            <span>Рукоятки переключения</span>
+                                            <div class="storage lk">
+                                                <span>Склад</span> NME-000
+                                                <div class="rating">
+                                                    <div class="filled" style="width: 50%"></div>
+                                                </div>
+                                            </div>
+                                            <div class="info-btn-wrapper">
+                                                <button class="info-btn d-block d-sm-none"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-art lk d-none d-lg-block">
+                                        <div class="search_table_body_text">
+                                            <span>asdgbd1373</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-info">
+                                        <div class="info-btn-wrapper">
+                                            <button class="info-btn d-none d-sm-block"></button>
+                                            <div class="popup-info">
+                                                <button class="close-btn"><img src="./img/close.png" alt="">
+                                                </button>
+                                                <div class="img">
+                                                    <img src="./img/popup-img.png" alt="">
+                                                </div>
+                                                <div class="info">
+                                                    <div class="info-group">
+                                                        <div class="key"><span>Марка и модель автомобиля</span>
+                                                        </div>
+                                                        <div class="value">Audi 5000 Turbo, Chevrolet Corvette,
+                                                            Dodge Charger 2.2
+                                                        </div>
+                                                    </div>
+                                                    <div class="info-group">
+                                                        <div class="key"><span>Удельная площадь охвата <br>тормозов, кв. см/т</span>
+                                                        </div>
+                                                        <div class="value">1135,2</div>
+                                                    </div>
+                                                    <div class="info-group">
+                                                        <div class="key"><span>Перфорация</span></div>
+                                                        <div class="value">Да</div>
+                                                    </div>
+                                                    <div class="info-group">
+                                                        <div class="key"><span>Фиксированный суппорт</span>
+                                                        </div>
+                                                        <div class="value">Да</div>
+                                                    </div>
+                                                    <div class="info-group">
+                                                        <div class="key"><span>Диаметр</span></div>
+                                                        <div class="value">304х22mm</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-cart mt-2 mt-lg-0">
+                                        <a href="#"><img src="img/cart_red.png"></a>
+                                    </div>
+                                    <div class="col-more">
+                                        <a href="#">
+                                            <span class="text">Поиск</span>
+                                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                                 y="0px"
+                                                 width="451.846px" height="451.847px" viewBox="0 0 451.846 451.847"
+                                                 style="enable-background:new 0 0 451.846 451.847;"
+                                                 xml:space="preserve">
+                                                <path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+                                                    L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+                                                    c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="row d-flex table_row_search" data-parent>
+                                    <div class="col-brend lk">
+                                        <div class="search_table_body_text d-block toggle-brand">
+                                            <p class="d-block d-lg-none color--wg">Артикул: gbd1373</p>
+                                            <span class="with--border" data-action="toggle">Braum</span>
+                                        </div>
+                                        <div class="search_table_body_text toggle-desc">
+                                            <p class="d-block d-lg-none color--wg">Описание:</p>
+                                            <span>Рукоятки переключения</span>
+                                            <div class="storage lk">
+                                                <span>Склад</span> NME-000
+                                                <div class="rating">
+                                                    <div class="filled" style="width: 50%"></div>
+                                                </div>
+                                            </div>
+                                            <div class="info-btn-wrapper">
+                                                <button class="info-btn d-block d-sm-none"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-art lk d-none d-lg-block">
+                                        <div class="search_table_body_text">
+                                            <span>asdgbd1373</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-info">
+                                        <div class="info-btn-wrapper">
+                                            <button class="info-btn d-none d-sm-block"></button>
+                                            <div class="popup-info">
+                                                <button class="close-btn"><img src="./img/close.png" alt="">
+                                                </button>
+                                                <div class="img">
+                                                    <img src="./img/popup-img.png" alt="">
+                                                </div>
+                                                <div class="info">
+                                                    <div class="info-group">
+                                                        <div class="key"><span>Марка и модель автомобиля</span>
+                                                        </div>
+                                                        <div class="value">Audi 5000 Turbo, Chevrolet Corvette,
+                                                            Dodge Charger 2.2
+                                                        </div>
+                                                    </div>
+                                                    <div class="info-group">
+                                                        <div class="key"><span>Удельная площадь охвата <br>тормозов, кв. см/т</span>
+                                                        </div>
+                                                        <div class="value">1135,2</div>
+                                                    </div>
+                                                    <div class="info-group">
+                                                        <div class="key"><span>Перфорация</span></div>
+                                                        <div class="value">Да</div>
+                                                    </div>
+                                                    <div class="info-group">
+                                                        <div class="key"><span>Фиксированный суппорт</span>
+                                                        </div>
+                                                        <div class="value">Да</div>
+                                                    </div>
+                                                    <div class="info-group">
+                                                        <div class="key"><span>Диаметр</span></div>
+                                                        <div class="value">304х22mm</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-cart mt-2 mt-lg-0">
+                                        <a href="#"><img src="img/cart_red.png"></a>
+                                    </div>
+                                    <div class="col-more">
+                                        <a href="#">
+                                            <span class="text">Поиск</span>
+                                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                                 y="0px"
+                                                 width="451.846px" height="451.847px" viewBox="0 0 451.846 451.847"
+                                                 style="enable-background:new 0 0 451.846 451.847;"
+                                                 xml:space="preserve">
+                                                <path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+                                                    L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+                                                    c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 bricks items-table bricks-table">
+                                <div class="items">
+                                    <div class="item">
+                                        <div class="img"><img src="./img/item-1.png" alt=""></div>
+                                        <div class="info">
+                                            <div class="title">Braum</div>
+                                            <div class="sub-title">Рукоятки переключения</div>
+                                            <div class="art">Артикул: gbd1373</div>
+                                            <div class="rating">
+                                                <div class="stars">
+                                                    <img src="./img/star-filled.png" alt="">
+                                                    <img src="./img/star-filled.png" alt="">
+                                                    <img src="./img/star-filled.png" alt="">
+                                                    <img src="./img/star-filled.png" alt="">
+                                                    <img src="./img/star.png" alt="">
+                                                </div>
+                                                <div class="text">35 оценок</div>
+                                            </div>
+                                            <div class="price-row">
+                                                <div class="price">
+                                                    2 599 <span class="cur-sign">₽</span>
+                                                </div>
+                                                <button class="like active" type="button">
+                                                    <img src="./img/table-heart.svg" data-img="./img/table-heart-active.png" alt="">
+                                                </button>
+                                                <a href="#" class="add-to-cart">
+                                                    <img src="./img/cart_red.png" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="img"><img src="./img/item-1.png" alt=""></div>
+                                        <div class="info">
+                                            <div class="title">Braum</div>
+                                            <div class="sub-title">Рукоятки переключения</div>
+                                            <div class="art">Артикул: gbd1373</div>
+                                            <div class="rating">
+                                                <div class="stars">
+                                                    <img src="./img/star-filled.png" alt="">
+                                                    <img src="./img/star-filled.png" alt="">
+                                                    <img src="./img/star-filled.png" alt="">
+                                                    <img src="./img/star-filled.png" alt="">
+                                                    <img src="./img/star.png" alt="">
+                                                </div>
+                                                <div class="text">35 оценок</div>
+                                            </div>
+                                            <div class="price-row">
+                                                <div class="price">
+                                                    2 599 <span class="cur-sign">₽</span>
+                                                </div>
+                                                <button class="like active" type="button">
+                                                    <img src="./img/table-heart.svg" data-img="./img/table-heart-active.png" alt="">
+                                                </button>
+                                                <a href="#" class="add-to-cart">
+                                                    <img src="./img/cart_red.png" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="img"><img src="./img/item-1.png" alt=""></div>
+                                        <div class="info">
+                                            <div class="title">Braum</div>
+                                            <div class="sub-title">Рукоятки переключения</div>
+                                            <div class="art">Артикул: gbd1373</div>
+                                            <div class="rating">
+                                                <div class="stars">
+                                                    <img src="./img/star-filled.png" alt="">
+                                                    <img src="./img/star-filled.png" alt="">
+                                                    <img src="./img/star-filled.png" alt="">
+                                                    <img src="./img/star-filled.png" alt="">
+                                                    <img src="./img/star.png" alt="">
+                                                </div>
+                                                <div class="text">35 оценок</div>
+                                            </div>
+                                            <div class="price-row">
+                                                <div class="price">
+                                                    2 599 <span class="cur-sign">₽</span>
+                                                </div>
+                                                <button class="like active" type="button">
+                                                    <img src="./img/table-heart.svg" data-img="./img/table-heart-active.png" alt="">
+                                                </button>
+                                                <a href="#" class="add-to-cart">
+                                                    <img src="./img/cart_red.png" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="img"><img src="./img/item-1.png" alt=""></div>
+                                        <div class="info">
+                                            <div class="title">Braum</div>
+                                            <div class="sub-title">Рукоятки переключения</div>
+                                            <div class="art">Артикул: gbd1373</div>
+                                            <div class="rating">
+                                                <div class="stars">
+                                                    <img src="./img/star-filled.png" alt="">
+                                                    <img src="./img/star-filled.png" alt="">
+                                                    <img src="./img/star-filled.png" alt="">
+                                                    <img src="./img/star-filled.png" alt="">
+                                                    <img src="./img/star.png" alt="">
+                                                </div>
+                                                <div class="text">35 оценок</div>
+                                            </div>
+                                            <div class="price-row">
+                                                <div class="price">
+                                                    2 599 <span class="cur-sign">₽</span>
+                                                </div>
+                                                <button class="like active" type="button">
+                                                    <img src="./img/table-heart.svg" data-img="./img/table-heart-active.png" alt="">
+                                                </button>
+                                                <a href="#" class="add-to-cart">
+                                                    <img src="./img/cart_red.png" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="img"><img src="./img/item-1.png" alt=""></div>
+                                        <div class="info">
+                                            <div class="title">Braum</div>
+                                            <div class="sub-title">Рукоятки переключения</div>
+                                            <div class="art">Артикул: gbd1373</div>
+                                            <div class="rating">
+                                                <div class="stars">
+                                                    <img src="./img/star-filled.png" alt="">
+                                                    <img src="./img/star-filled.png" alt="">
+                                                    <img src="./img/star-filled.png" alt="">
+                                                    <img src="./img/star-filled.png" alt="">
+                                                    <img src="./img/star.png" alt="">
+                                                </div>
+                                                <div class="text">35 оценок</div>
+                                            </div>
+                                            <div class="price-row">
+                                                <div class="price">
+                                                    2 599 <span class="cur-sign">₽</span>
+                                                </div>
+                                                <button class="like active" type="button">
+                                                    <img src="./img/table-heart.svg" data-img="./img/table-heart-active.png" alt="">
+                                                </button>
+                                                <a href="#" class="add-to-cart">
+                                                    <img src="./img/cart_red.png" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="img"><img src="./img/item-1.png" alt=""></div>
+                                        <div class="info">
+                                            <div class="title">Braum</div>
+                                            <div class="sub-title">Рукоятки переключения</div>
+                                            <div class="art">Артикул: gbd1373</div>
+                                            <div class="rating">
+                                                <div class="stars">
+                                                    <img src="./img/star-filled.png" alt="">
+                                                    <img src="./img/star-filled.png" alt="">
+                                                    <img src="./img/star-filled.png" alt="">
+                                                    <img src="./img/star-filled.png" alt="">
+                                                    <img src="./img/star.png" alt="">
+                                                </div>
+                                                <div class="text">35 оценок</div>
+                                            </div>
+                                            <div class="price-row">
+                                                <div class="price">
+                                                    2 599 <span class="cur-sign">₽</span>
+                                                </div>
+                                                <button class="like active" type="button">
+                                                    <img src="./img/table-heart.svg" data-img="./img/table-heart-active.png" alt="">
+                                                </button>
+                                                <a href="#" class="add-to-cart">
+                                                    <img src="./img/cart_red.png" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="img"><img src="./img/item-1.png" alt=""></div>
+                                        <div class="info">
+                                            <div class="title">Braum</div>
+                                            <div class="sub-title">Рукоятки переключения</div>
+                                            <div class="art">Артикул: gbd1373</div>
+                                            <div class="rating">
+                                                <div class="stars">
+                                                    <img src="./img/star-filled.png" alt="">
+                                                    <img src="./img/star-filled.png" alt="">
+                                                    <img src="./img/star-filled.png" alt="">
+                                                    <img src="./img/star-filled.png" alt="">
+                                                    <img src="./img/star.png" alt="">
+                                                </div>
+                                                <div class="text">35 оценок</div>
+                                            </div>
+                                            <div class="price-row">
+                                                <div class="price">
+                                                    2 599 <span class="cur-sign">₽</span>
+                                                </div>
+                                                <button class="like active" type="button">
+                                                    <img src="./img/table-heart.svg" data-img="./img/table-heart-active.png" alt="">
+                                                </button>
+                                                <a href="#" class="add-to-cart">
+                                                    <img src="./img/cart_red.png" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="img"><img src="./img/item-1.png" alt=""></div>
+                                        <div class="info">
+                                            <div class="title">Braum</div>
+                                            <div class="sub-title">Рукоятки переключения</div>
+                                            <div class="art">Артикул: gbd1373</div>
+                                            <div class="rating">
+                                                <div class="stars">
+                                                    <img src="./img/star-filled.png" alt="">
+                                                    <img src="./img/star-filled.png" alt="">
+                                                    <img src="./img/star-filled.png" alt="">
+                                                    <img src="./img/star-filled.png" alt="">
+                                                    <img src="./img/star.png" alt="">
+                                                </div>
+                                                <div class="text">35 оценок</div>
+                                            </div>
+                                            <div class="price-row">
+                                                <div class="price">
+                                                    2 599 <span class="cur-sign">₽</span>
+                                                </div>
+                                                <button class="like active" type="button">
+                                                    <img src="./img/table-heart.svg" data-img="./img/table-heart-active.png" alt="">
+                                                </button>
+                                                <a href="#" class="add-to-cart">
+                                                    <img src="./img/cart_red.png" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="img"><img src="./img/item-1.png" alt=""></div>
+                                        <div class="info">
+                                            <div class="title">Braum</div>
+                                            <div class="sub-title">Рукоятки переключения</div>
+                                            <div class="art">Артикул: gbd1373</div>
+                                            <div class="rating">
+                                                <div class="stars">
+                                                    <img src="./img/star-filled.png" alt="">
+                                                    <img src="./img/star-filled.png" alt="">
+                                                    <img src="./img/star-filled.png" alt="">
+                                                    <img src="./img/star-filled.png" alt="">
+                                                    <img src="./img/star.png" alt="">
+                                                </div>
+                                                <div class="text">35 оценок</div>
+                                            </div>
+                                            <div class="price-row">
+                                                <div class="price">
+                                                    2 599 <span class="cur-sign">₽</span>
+                                                </div>
+                                                <button class="like active" type="button">
+                                                    <img src="./img/table-heart.svg" data-img="./img/table-heart-active.png" alt="">
+                                                </button>
+                                                <a href="#" class="add-to-cart">
+                                                    <img src="./img/cart_red.png" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row more-btn-row">
+                                <div class="col-12">
+                                    <button class="more-btn" type="button">Показать еще 20</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div onclick="mobile_filtre(this)"
+             class="filter_mobile justify-content-center align-items-center d-flex d-lg-none">
+            <img src="img/filter.svg">
+        </div>
+        <div class="filter_mobile_overlay">
+            <img src="img/signs.png">
+        </div> -->
+    </div>
+</div>
+<footer>
+    <div class="bg-dark container-fluid pt-4 pb-5">
+        <div class="container p-0">
+            <div class="row justify-content-center justify-content-sm-between d-flex align-items-center">
+                <div class="col-12 col-sm-6 col-lg-3 order-1 mb-3 mb-lg-0 text-center text-lg-left px-0">
+                    <img src="img/logo2.png" alt="">
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3 footer_link order-3  order-lg-2  mb-3 mb-lg-0 text-center text-lg-left px-0">
+                    <ul class="nav flex-column mx-auto">
+                        <li class="nav-item pb-2">
+                            <a class="text-light font-16" href="/">Vin запрос</a>
+                        </li>
+                        <li class="nav-item pb-2">
+                            <a class="text-light font-16" href="/">Каталог</a>
+                        </li>
+                        <li class="nav-item pb-2 ">
+                            <a class="text-light font-16" href="/">TecDoc</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3 order-4  order-lg-3  mb-3 mb-lg-0 text-center text-lg-left px-0">
+                    <ul class="nav flex-column">
+                        <li class="nav-item pb-2">
+                            <a class="text-light font-16" href="/">Корпоративным клиентам</a>
+                        </li>
+                        <li class="nav-item pb-2">
+                            <a class="text-light font-16" href="/">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3 text-center order-2 order-lg-4  mb-3 mb-lg-0 text-center text-lg-left px-0">
+                    <div class="mb-2">
+                        <img class="mr-2" src="img/phone.png" alt="">
+                        <span><a class="museo font-weight-bold text-light font-22" href="tel:+7 (800) 301-30-88">+7 (800) 301-30-88</a></span>
+                    </div>
+                    <div class="social_sites justify-content-center d-flex align-items-center">
+                        <a href="/"
+                           class="nav-link rounded-circle bg-light justify-content-center d-flex align-items-center text-dark mx-2"><i
+                                class="fab fa-vk font-18"></i></a>
+                        <a href="/"
+                           class="nav-link rounded-circle bg-light justify-content-center d-flex align-items-center text-dark mx-2"><i
+                                class="fab fa-instagram font-18"></i></a>
+                        <a href="/"
+                           class="nav-link rounded-circle bg-light justify-content-center d-flex align-items-center text-dark mx-2"><i
+                                class="fab fa-telegram-plane font-18"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg_blacking container-fluid py-2">
+        <div class="container p-0 text-center">
+            <span class="font-12 text-light">mepart.ru © 2018 Все права защищены</span>
+        </div>
+    </div>
+</footer>
+
+<div class="modal confirm_modal confirm">
+    <div class="wrapper">
+        <button class="close" type="button"><img src="./img/close-confirm-modal.png" alt=""></button>
+        <div class="title"><span class="red">Подтвердите</span> действие на mepart.ru</div>
+        <div class="sub-title">Укажите VIN номер автомобиля (не обязательно)</div>
+
+        <input type="text" class="input">
+
+        <div class="buttons">
+            <button class="ok" type="submit">Ок</button>
+            <button class="cancel" type="button">Отмена</button>
+        </div>
+    </div>
+</div>
+<div class="modal confirm_modal send">
+    <div class="wrapper">
+        <button class="close" type="button"><img src="./img/close-confirm-modal.png" alt=""></button>
+        <div class="title"><span class="red">Подтвердите</span> действие на mepart.ru</div>
+        <div class="sub-title">Письмо успешно отправлено, скоро с вами свяжется наш менеджер для ответа на ваш вопрос!</div>
+
+        <div class="buttons">
+            <button class="ok" type="submit">Ок</button>
+        </div>
+    </div>
+</div>
+
+<script src="./js/JQuery3.3.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script src="./js/owl.carousel.js"></script>
+<script src="./Inputmask-5.x/dist/jquery.inputmask.js"></script>
+<script src="./Inputmask-5.x/dist/bindings/inputmask.binding.js"></script>
+<script src="./bootstrap-select/dist/js/bootstrap-select.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="./slick/slick.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script src="./js/bootstrap-input-spinner.js"></script>
+<script src="./js/index.js?v=115"></script>
+<script src="./js/main.js?v=115"></script>
+<script src="./js/catalog.js?v=111"></script>
+<script src="./js/modal_confirm.js"></script>
+</body>
+</html>

@@ -3965,6 +3965,15 @@ and (-webkit-min-device-pixel-ratio: 2) {
         padding: 58px 15px 15px;
         overflow: auto;
     }
+    .catalog-page .bricks .items .item .info .price-row .info-btn-wrapper .popup-info {
+        width: 100% !important;
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+        padding: 58px 15px 15px;
+        overflow: auto;
+    }
     .info-btn-wrapper .popup-info:after {
         display: none;
     }
@@ -4095,3 +4104,20 @@ and (-webkit-min-device-pixel-ratio: 2) {
 .border-right{
     border-right: 1px solid #72849b !important;
 }
+
+.catalog-page .bricks .items .item .info .price-row .info-btn-wrapper {
+    margin-left: 20px;
+}
+.catalog-page .bricks .items .item .info .price-row .info-btn-wrapper .popup-info {
+    width: 50%;
+    position: fixed;
+    left: 50%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    padding: 58px 15px 15px;
+    overflow: auto;
+    transform: translateX(-50%);
+}
+

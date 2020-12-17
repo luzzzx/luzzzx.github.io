@@ -27,6 +27,11 @@ $(function () {
 		e.stopPropagation();
 		$(this).parents('.table_row_search').find('.popup-info').stop().fadeIn();
 	});
+	
+	$('.info-btn').on('click', function (e) {
+		e.stopPropagation();
+		$(this).next('.popup-info').stop().fadeIn();
+	});
 
 	$('.catalog-page .filter-select .select').on('click', function () {
 		$(this).parent().find('.select-menu').css('display', 'flex');

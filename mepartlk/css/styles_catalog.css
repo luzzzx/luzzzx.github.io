@@ -4112,12 +4112,26 @@ and (-webkit-min-device-pixel-ratio: 2) {
     width: 50%;
     position: fixed;
     left: 50%;
-    top: 0;
+    top: 30%;
     right: 0;
     bottom: 0;
-    height: 100%;
+    height: 60%;
     padding: 58px 15px 15px;
     overflow: auto;
     transform: translateX(-50%);
 }
 
+@media screen and (max-width: 575px){
+    .catalog-page .bricks .items .item .info .price-row .info-btn-wrapper .popup-info {
+        width: 100%;
+        position: fixed;
+        left: 50%;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        padding: 58px 15px 15px;
+        overflow: auto;
+        transform: translateX(-50%);
+    }
+}

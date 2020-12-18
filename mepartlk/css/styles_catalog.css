@@ -3376,6 +3376,27 @@ and (-webkit-min-device-pixel-ratio: 2) {
     filter        : "progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=7, Color='#00000024')";
     z-index: 999;
 }
+
+.info-btn-wrapper .popup-info.lk {
+    max-width: 493px;
+    height: 100%;
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    left: 0;
+    margin: 50px auto;
+    bottom: 25px;
+    background-color: #ffffff;
+    padding: 30px;
+    box-shadow: 0 7px 18px 0 rgba(0, 0, 0, 0.14);
+    -webkit-filter: drop-shadow(0 7px 18px rgba(0, 0, 0, 0.14));
+    filter        : drop-shadow(0 7px 18px rgba(0, 0, 0, 0.14));
+    -ms-filter    : "progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=7, Color='#00000024')";
+    filter        : "progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=7, Color='#00000024')";
+    z-index: 999;
+}
+
 .info-btn-wrapper .popup-info:after {
     content: '';
     position: absolute;
@@ -3386,6 +3407,9 @@ and (-webkit-min-device-pixel-ratio: 2) {
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
     border-top: 6px solid #ffffff;
+}
+.info-btn-wrapper .popup-info.lk:after {
+    display: none !important;
 }
 .info-btn-wrapper {
     position: relative;
@@ -3408,7 +3432,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
     border: 1px solid rgb(236, 236, 236);
     border-radius: 3px;
     background-color: rgb(255, 255, 255);
-    width: 433px;
+    max-width: 433px;
     height: 329px;
     display: flex;
     align-items: center;
@@ -3965,6 +3989,15 @@ and (-webkit-min-device-pixel-ratio: 2) {
         padding: 58px 15px 15px;
         overflow: auto;
     }
+    .info-btn-wrapper .popup-info.lk {
+        width: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+        padding: 58px 15px 15px;
+        overflow: auto;
+    }
     .catalog-page .bricks .items .item .info .price-row .info-btn-wrapper .popup-info {
         width: 100% !important;
         position: fixed;
@@ -4009,6 +4042,9 @@ and (-webkit-min-device-pixel-ratio: 2) {
         right: 0;
         top: 50%;
         transform: translateY(-50%);
+    }
+    .col-brend.lk .info-btn-wrapper{
+        right: 20px;
     }
     .catalog-page .col-term {
         margin-right: auto;
@@ -4108,30 +4144,42 @@ and (-webkit-min-device-pixel-ratio: 2) {
 .catalog-page .bricks .items .item .info .price-row .info-btn-wrapper {
     margin-left: 20px;
 }
-.catalog-page .bricks .items .item .info .price-row .info-btn-wrapper .popup-info {
-    width: 50%;
+.catalog-page .bricks .items .item .info .price-row .info-btn-wrapper .popup-info.lk {
+    max-width: 493px;
+    display: none;
     position: fixed;
-    left: 50%;
-    top: 30%;
     right: 0;
-    bottom: 0;
-    height: 60%;
-    padding: 58px 15px 15px;
-    overflow: auto;
-    transform: translateX(-50%);
+    top: 0;
+    left: 0;
+    margin: 50px auto;
+    bottom: 25px;
+    background-color: #ffffff;
+    box-shadow: 0 7px 18px 0 rgba(0, 0, 0, 0.14);
+    -webkit-filter: drop-shadow(0 7px 18px rgba(0, 0, 0, 0.14));
+    filter        : drop-shadow(0 7px 18px rgba(0, 0, 0, 0.14));
+    -ms-filter    : "progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=7, Color='#00000024')";
+    filter        : "progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=7, Color='#00000024')";
+    z-index: 999;
+    height: 100%;
 }
 
 @media screen and (max-width: 575px){
-    .catalog-page .bricks .items .item .info .price-row .info-btn-wrapper .popup-info {
-        width: 100%;
+    .catalog-page .bricks .items .item .info .price-row .info-btn-wrapper .popup-info.lk {
+        margin: 0 !important;
+    }
+    .info-btn-wrapper .popup-info.lk {
+        margin: 0;
+        max-width: 100%;
+        display: none;
         position: fixed;
-        left: 50%;
         top: 0;
         right: 0;
         bottom: 0;
         height: 100%;
+        min-height: 100%;
+        transform: unset;
+        background-color: #ffffff;
         padding: 58px 15px 15px;
-        overflow: auto;
-        transform: translateX(-50%);
     }
+    
 }

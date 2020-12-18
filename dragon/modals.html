@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,500&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css" integrity="sha512-yye/u0ehQsrVrfSd6biT17t39Rg9kNc+vENcCXZuMz2a+LWFGvXUnYuWUW6pbfYj1jcBb/C39UZw2ciQvwDDvg==" crossorigin="anonymous" />
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <title>Dragon Group</title>
+  </head>
+  <body>
+    <header>
+        <section class="header-top">
+            <div class="container">
+                <div class="header-top__social">
+                    <a href="#"><span class="iconify" data-icon="ei:sc-telegram" data-inline="false"></span></a>
+                    <a href="#"><span class="iconify" data-icon="carbon:logo-twitter" data-inline="false"></span></a>
+                    <a href="#"><span class="iconify" data-icon="ant-design:facebook-outlined" data-inline="false"></span></a>
+                    <a href="#"><span class="iconify" data-icon="entypo-social:instagram" data-inline="false"></span></a>
+                    <a href="#"><span class="iconify" data-icon="ant-design:youtube-outlined" data-inline="false"></span></a>
+                    <a class="lang" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="iconify" data-icon="twemoji:flag-for-flag-russia" data-inline="false"></span>
+                        <span class="iconify chevron" data-icon="bx:bx-chevron-down" data-inline="false"></span>
+                    </a>
+                    <div class="dropdown-menu lang-drp" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="#"><span class="iconify" data-icon="twemoji:flag-for-flag-russia" data-inline="false"></span></a>
+                        <a class="dropdown-item" href="#"><span class="iconify" data-icon="twemoji:flag-for-flag-russia" data-inline="false"></span></a>
+                        <a class="dropdown-item" href="#"><span class="iconify" data-icon="twemoji:flag-for-flag-russia" data-inline="false"></span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="main-nav">
+        <div class="container">
+                <nav class="navbar navbar-expand-custom ">
+                    <a class="navbar-brand" href="#">
+                        <img src="./img/logo.svg" alt="logo">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                       <span class="iconify" data-icon="radix-icons:hamburger-menu" data-inline="false"></span>
+                    </button>      
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav m-auto">
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Нанокейсы</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">О нас</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Новости</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Партнеру</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Продукция</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">FAQ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Контакты</a>
+                        </li>
+                      </ul>
+                      <button class="enter">Вход/Регистрация</button>
+                      <button class="lk-btn">Личный кабинет</button>
+                      <button class="exit-btn">выйти</button>
+                    </div>
+                </nav>
+        </div>
+        </section>
+    </header>
+    <main>
+        <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#regModal">
+    register
+    </button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#enterModal">
+    вход
+    </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="regModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+          <h2>Регистрация</h2>
+          <form class="reg-modal__form">
+              <label>
+                  <p>имя</p>
+                  <input type="text">
+              </label>
+              <label>
+                  <p>фамилия</p>
+                  <input type="text">
+              </label>
+              <label>
+                  <p>номер телефона</p>
+                  <input type="tel" id="phone" class="">
+              </label>
+              <label>
+                  <p>электронная почта</p>
+                  <input type="text">
+              </label>
+              <label>
+                  <p>введите пароль</p>
+                  <input type="password">
+              </label>
+              <label>
+                  <p>подтвердите пароль</p>
+                  <input type="password">
+              </label>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck1" checked>
+                <label class="custom-control-label politics" for="customCheck1"><span>политика конфиденциальности</span></label>
+              </div>
+              <button>Зарегистрироваться</button>
+          </form>
+      </div>
+    </div>
+  </div>
+  <!-- Enter -->
+  <div class="modal fade" id="enterModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+          <h2>Регистрация</h2>
+          <form class="reg-modal__form">
+              <label>
+                  <p>электронная почта</p>
+                  <input type="text">
+              </label>
+              <label>
+                  <p>введите пароль</p>
+                  <input type="password">
+              </label>
+              <a href="#">Забыли пароль?</a>
+
+              <div class="modal__enter">
+                  <a href="#">Регистрация</a>
+                  <button>Войти</button>
+              </div>
+          </form>
+      </div>
+    </div>
+  </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="row justify-content-lg-between align-items-lg-center">
+                <div class="col-lg-4 justify-content-lg-start">
+                    <div class="footer-intro">
+                        <a class="footer-logo" href="#">
+                            <img src="./img/logo.svg" alt="logo">
+                        </a>
+                        <p>
+                            Мы создаем уникальный продукт и предлагаем вам <br>
+                            стать инвестором нашего инновационного проекта
+                        </p>
+                        <span class="copyright">
+                            Авторское право © NanoCase 2020. Все права защищены.
+                        </span>
+                    </div>
+                </div>
+                <div class="col-lg-3 justify-content-lg-center">
+                    <a href="#" class="main-btn">Юридические документы</a>
+                </div>
+                <div class="col-lg-4 justify-content-lg-end">
+                    <div class="footer-politics">
+                        <a href="#">Политика конфиденциальности</a>
+                        <a href="#">Правила и условия использования</a>
+                        <div class="footer-payment">
+                            <h2>СПОСОБЫ ОПЛАТЫ</h2>
+                            <span>VISA</span>
+                            <span>MASTER CARD</span>
+                            <span>COIN</span>
+                        </div>
+                    </div>
+                </div>
+                <span class="col-12 copyright-mobile">
+                    Авторское право © NanoCase 2020. Все права защищены.
+                </span>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/lib-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput-jquery.min.js" integrity="sha512-o18g2g24eLZUGtPEpYcOdK9JAxAqIBHtXPYgLvzInJZPKAMEA8nuTfdj5UmI1VTb0pJMkZoSz+NqaQZVG3prmw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.min.js" integrity="sha512-ufUV+vuYIp8gMzUa1sHW3K1BKQjNtUEM9y4icCXB4gPObPQXVyn4bpmVNDbmuWBgcJ3nlNoCBG/ZPn5GIAPuvA==" crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

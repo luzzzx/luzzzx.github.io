@@ -223,6 +223,14 @@
           box-sizing: border-box;
   border-radius: 35px;
   padding: 20px 40px;
+  -webkit-transition: ease-in-out .3s;
+  -o-transition: ease-in-out .3s;
+  transition: ease-in-out .3s;
+}
+
+.enter:hover {
+  background: #F5CE00;
+  color: #FFFFFF;
 }
 
 .enter.hide {
@@ -264,6 +272,10 @@
   display: none;
 }
 
+.exit-btn:hover {
+  color: #F5CE00;
+}
+
 .exit-btn.active {
   display: block;
 }
@@ -277,7 +289,7 @@
 }
 
 .intro-how {
-  padding: 20px 0 100px 0;
+  padding: 20px 0 50px 0;
 }
 
 .intro-how .row {
@@ -317,7 +329,7 @@
 
 .nanocase {
   background: #F8F8F8;
-  padding: 58px 0;
+  padding: 30px 0;
 }
 
 .nanocase .row {
@@ -404,7 +416,7 @@
 }
 
 .work {
-  padding: 100px 0 150px 0;
+  padding: 50px 0 80px 0;
 }
 
 .work h2 {
@@ -1007,7 +1019,7 @@
   background: #FFFFFF;
   font-style: normal;
   font-weight: normal;
-  font-size: 34px;
+  font-size: 22px;
   line-height: 41px;
   text-align: center;
   letter-spacing: 0.03em;
@@ -1023,7 +1035,7 @@
   text-align: center;
   font-style: normal;
   font-weight: normal;
-  font-size: 34px;
+  font-size: 22px;
   line-height: 41px;
   text-align: center;
   letter-spacing: 0.03em;
@@ -1044,8 +1056,8 @@
   border-radius: 35px;
   font-style: normal;
   font-weight: normal;
-  font-size: 34px;
-  line-height: 41px;
+  font-size: 22px;
+  line-height: 34px;
   text-align: center;
   letter-spacing: 0.03em;
   color: #FFFFFF;
@@ -1060,8 +1072,8 @@
 .main-section__body h2 {
   font-style: normal;
   font-weight: normal;
-  font-size: 40px;
-  line-height: 49px;
+  font-size: 34px;
+  line-height: 30px;
   color: #000000;
   display: block;
   margin-bottom: 60px;
@@ -1094,8 +1106,8 @@
 .main-section__hero .intro-msg span {
   font-style: normal;
   font-weight: bold;
-  font-size: 34px;
-  line-height: 42px;
+  font-size: 24px;
+  line-height: 34px;
   letter-spacing: 0.03em;
   color: #000000;
   color: #F5CE00;
@@ -1106,8 +1118,8 @@
 .main-section__hero .intro-msg p {
   font-style: normal;
   font-weight: bold;
-  font-size: 34px;
-  line-height: 42px;
+  font-size: 24px;
+  line-height: 34px;
   letter-spacing: 0.03em;
   color: #000000;
 }
@@ -1189,7 +1201,7 @@
 .profile-block ul li span {
   font-style: normal;
   font-weight: normal;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 29px;
   color: #000000;
   -webkit-box-flex: 0;
@@ -1197,17 +1209,62 @@
           flex: 0 0 30%;
 }
 
-.profile-block ul li p {
-  font-family: 'Gilroy-RegularItalic';
-  font-style: italic;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 29px;
-  color: #000000;
+.profile-block ul li label {
   border-bottom: 3px solid #F5CE00;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 60%;
           flex: 0 0 60%;
+}
+
+.profile-block ul li label input {
+  border: none;
+  background: none;
+  width: 100%;
+}
+
+.profile-block ul li label input::-webkit-input-placeholder {
+  font-family: 'Gilroy-RegularItalic';
+  font-style: italic;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 29px;
+  color: #000000;
+}
+
+.profile-block ul li label input::-moz-placeholder {
+  font-family: 'Gilroy-RegularItalic';
+  font-style: italic;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 29px;
+  color: #000000;
+}
+
+.profile-block ul li label input:-ms-input-placeholder {
+  font-family: 'Gilroy-RegularItalic';
+  font-style: italic;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 29px;
+  color: #000000;
+}
+
+.profile-block ul li label input::-ms-input-placeholder {
+  font-family: 'Gilroy-RegularItalic';
+  font-style: italic;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 29px;
+  color: #000000;
+}
+
+.profile-block ul li label input::placeholder {
+  font-family: 'Gilroy-RegularItalic';
+  font-style: italic;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 29px;
+  color: #000000;
 }
 
 .profile-block .prof-btn {
@@ -1252,8 +1309,8 @@
 .main-section__form form label p {
   font-style: normal;
   font-weight: normal;
-  font-size: 30px;
-  line-height: 36px;
+  font-size: 20px;
+  line-height: 29px;
   color: #000000;
   margin-bottom: 16px;
 }
@@ -1262,7 +1319,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 20px;
-  height: 90px;
+  height: 60px;
   padding: 10px;
   border: 3px solid #F5CE00;
 }
@@ -1289,6 +1346,13 @@
   color: #000000;
   border: none;
   margin-left: auto;
+  -webkit-transition: ease-in-out .3s;
+  -o-transition: ease-in-out .3s;
+  transition: ease-in-out .3s;
+}
+
+.main-section__form form .form-btn:hover {
+  background: #e2d48e;
 }
 
 .balance {
@@ -1426,7 +1490,7 @@
 }
 
 .about-main {
-  margin-bottom: 100px;
+  margin-bottom: 20px;
 }
 
 .about-main h2 {
@@ -1448,6 +1512,7 @@
   letter-spacing: 0.01em;
   color: #121212;
   margin-bottom: 30px;
+  text-align: justify;
 }
 
 .about-main b {
@@ -1663,6 +1728,10 @@
   border: none;
 }
 
+.contacts-tech__block {
+  margin-bottom: 30px;
+}
+
 .contacts-tech__block h2 {
   font-family: 'Gilroy-bold';
   font-style: normal;
@@ -1685,7 +1754,17 @@
 }
 
 .contacts-tech__footer {
-  padding: 70px 0 100px 0;
+  padding: 50px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 .contacts-tech__footer h3 {
@@ -1728,6 +1807,14 @@
   color: #121212;
   padding: 23px;
   border: none;
+  -webkit-transition: ease-in-out .3s;
+  -o-transition: ease-in-out .3s;
+  transition: ease-in-out .3s;
+}
+
+.contacts-tech__footer button:hover {
+  background: #e2d48e;
+  color: #121212;
 }
 
 .contacts-tech__footer button:focus {
@@ -1896,8 +1983,8 @@
   font-family: 'Gilroy-bold';
   font-style: normal;
   font-weight: 800;
-  font-size: 40px;
-  line-height: 50px;
+  font-size: 32px;
+  line-height: 40px;
   text-align: center;
   color: #000000;
   margin-bottom: 50px;
@@ -1908,8 +1995,8 @@
   font-family: 'Gilroy-bold';
   font-style: normal;
   font-weight: 800;
-  font-size: 30px;
-  line-height: 37px;
+  font-size: 22px;
+  line-height: 32px;
   display: block;
   margin-bottom: 50px;
   color: #000000;
@@ -1947,7 +2034,7 @@
   background: #C4C4C4;
   padding: 10px;
   position: relative;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 .reg-modal__form label p {
@@ -1967,41 +2054,41 @@
   border-radius: 0;
   border-bottom: 3px solid #F5CE00;
   background: transparent;
-  margin-bottom: 19px;
+  margin-bottom: 5px;
   width: 100%;
   font-style: italic;
   font-weight: normal;
-  font-size: 30px;
+  font-size: 18px;
 }
 
 .reg-modal__form label input::-webkit-input-placeholder {
   font-style: italic;
   font-weight: normal;
-  font-size: 30px;
+  font-size: 18px;
 }
 
 .reg-modal__form label input::-moz-placeholder {
   font-style: italic;
   font-weight: normal;
-  font-size: 30px;
+  font-size: 18px;
 }
 
 .reg-modal__form label input:-ms-input-placeholder {
   font-style: italic;
   font-weight: normal;
-  font-size: 30px;
+  font-size: 18px;
 }
 
 .reg-modal__form label input::-ms-input-placeholder {
   font-style: italic;
   font-weight: normal;
-  font-size: 30px;
+  font-size: 18px;
 }
 
 .reg-modal__form label input::placeholder {
   font-style: italic;
   font-weight: normal;
-  font-size: 30px;
+  font-size: 18px;
 }
 
 .reg-modal__form label input:focus {
@@ -2023,10 +2110,19 @@
   font-style: normal;
   font-weight: bold;
   text-align: center;
-  font-size: 26px;
+  font-size: 18px;
   line-height: 32px;
   text-align: center;
   color: #000000;
+  margin: 0 auto;
+  -webkit-transition: ease-in-out .3s;
+  -o-transition: ease-in-out .3s;
+  transition: ease-in-out .3s;
+}
+
+.reg-modal__form button:hover {
+  background: #F5CE00;
+  color: #FFFFFF;
 }
 
 .reg-modal__form .custom-control {
@@ -2054,7 +2150,7 @@
 .reg-modal__form .politics span {
   font-style: normal;
   font-weight: normal;
-  font-size: 22px;
+  font-size: 18px;
   line-height: 26px;
   color: #000000;
   margin-left: 25px;
@@ -2065,8 +2161,8 @@
 }
 
 .custom-control-label::before {
-  width: 40px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
   border-radius: 50% !important;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -2117,7 +2213,7 @@ main {
 }
 
 footer {
-  padding: 60px 0 30px 0;
+  padding: 8px 0;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
@@ -2208,6 +2304,7 @@ footer {
 .main-btn:hover {
   text-decoration: none;
   background: #e2d48e;
+  color: #121212;
 }
 
 .profit {
@@ -2313,6 +2410,40 @@ footer {
   color: #FFFFFF;
 }
 
+@-webkit-keyframes shake-horizontal {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  50% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+
+  100% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+}
+
+@keyframes shake-horizontal {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  50% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+
+  100% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+}
+
 .about {
   padding: 83px 0 40px 0;
 }
@@ -2327,10 +2458,21 @@ footer {
   text-align: center;
   color: #121212;
   border-radius: 65px;
+  -webkit-transition: ease-in-out .3s;
+  -o-transition: ease-in-out .3s;
+  transition: ease-in-out .3s;
+}
+
+.about .main-btn:hover {
+  -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .about .main-btn .iconify {
   margin-left: 20px;
+  -webkit-animation: shake-horizontal 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite both;
+  animation: shake-horizontal 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite both;
 }
 
 .about-preview {
@@ -2376,15 +2518,6 @@ footer {
   margin-bottom: 30px;
 }
 
-.about-descrip h2::before {
-  content: url("https://api.iconify.design/bi:arrow-right.svg?height=16");
-  vertical-align: -0.125em;
-  position: absolute;
-  top: 0;
-  left: -6px;
-  color: #12121207;
-}
-
 .about-descrip h2 span {
   color: #F5CE00;
 }
@@ -2395,20 +2528,18 @@ footer {
   font-size: 18px;
   line-height: 21px;
   color: #ACACAC;
-  border-left: 1.5px solid #DEDEDE;
   margin-bottom: 0;
   padding-bottom: 40px;
   padding-left: 30px;
 }
 
 .app {
-  min-height: 356px;
   background: url("../img/footer-img.jpg") center no-repeat;
   background-size: cover;
 }
 
 .app-download {
-  padding: 94px 0;
+  padding: 30px 0;
 }
 
 .app-download h2 {
@@ -2652,6 +2783,34 @@ footer .copyright-mobile {
   }
 }
 
+@media (max-width: 1338px) {
+  .info-table {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .info-table span {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .side-menu nav ul li button {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .side-menu nav ul li a {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .side-menu nav .code-btn {
+    font-size: 18px;
+    line-height: 30px;
+    padding: 15px;
+  }
+}
+
 @media (max-width: 1270px) {
   .footer-card {
     -webkit-box-orient: vertical;
@@ -2665,22 +2824,6 @@ footer .copyright-mobile {
 }
 
 @media (max-width: 1262px) {
-  .side-menu nav ul li button {
-    font-size: 20px;
-    line-height: 30px;
-  }
-
-  .side-menu nav ul li a {
-    font-size: 20px;
-    line-height: 30px;
-  }
-
-  .side-menu nav .code-btn {
-    font-size: 20px;
-    line-height: 30px;
-    padding: 15px;
-  }
-
   .main-section__body h2 {
     font-size: 28px;
   }
@@ -2878,41 +3021,31 @@ footer .copyright-mobile {
   }
 
   .reg-modal__form label input {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .reg-modal__form label input::-webkit-input-placeholder {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 28px;
   }
 
   .reg-modal__form label input::-moz-placeholder {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 28px;
   }
 
   .reg-modal__form label input:-ms-input-placeholder {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 28px;
   }
 
   .reg-modal__form label input::-ms-input-placeholder {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 28px;
   }
 
   .reg-modal__form label input::placeholder {
-    font-size: 20px;
-    line-height: 28px;
-  }
-
-  .reg-modal__form button {
-    font-size: 20px;
-    line-height: 28px;
-  }
-
-  .reg-modal__form .politics span {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 28px;
   }
 
@@ -2960,7 +3093,7 @@ footer .copyright-mobile {
     margin-bottom: 20px;
   }
 
-  .profile-block ul li p {
+  .profile-block ul li label {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;

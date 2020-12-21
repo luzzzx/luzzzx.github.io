@@ -78,7 +78,7 @@
     <main>
         <div class="container">
             <div class="row admin-row">
-                <aside class="col-lg-4">
+                <aside class="col-lg-3">
                     <div class="side-menu">
                         <div class="info-table">
                             <span>Russia</span>
@@ -103,7 +103,7 @@
                         </nav>
                     </div>
                 </aside>
-                <section class="main-section col-lg-8">
+                <section class="main-section col-lg-9">
                     <div class="main-section__profile">
                         <div class="profile-header">
                             <h1>МОЙ ПРОФИЛЬ</h1>
@@ -113,25 +113,29 @@
                             <ul>
                                 <li>
                                    <span>Имя</span>
-                                   <p>Olga</p> 
+                                   <label>
+                                       <input type="name" placeholder="Olga" disabled>
+                                   </label>
                                 </li>
                                 <li>
                                     <span>Фамилия</span>
-                                    <p>Beskrovnykh</p> 
+                                    <label>
+                                        <input type="name" placeholder="Beskrovnykh" disabled>
+                                    </label>
                                 </li>
                                 <li>
                                     <span>Телефон</span>
-                                    <p>
-                                        + 371 200 22 816
-                                    </p>
+                                    <label>
+                                        <input type="name" placeholder="+ 371 200 22 816" disabled>
+                                    </label>
                                 </li>
                                 <li>
                                     <span>
                                         e-mail
                                     </span>
-                                    <p>
-                                        olga@gmail.com
-                                    </p>
+                                    <label>
+                                        <input type="email" placeholder="olga@gmail.com" disabled>
+                                    </label>
                                 </li>
                             </ul>
                             <button class="prof-btn">Изменить</button>
@@ -140,17 +144,21 @@
                             <ul>
                                 <li>
                                    <span>Текущий пароль</span>
-                                   <p>*******</p> 
+                                   <label>
+                                         <input type="password" placeholder="*******" disabled>
+                                    </label>
                                 </li>
                                 <li>
                                     <span>Новый пароль</span>
-                                    <p>*******</p> 
+                                    <label>
+                                        <input type="password" placeholder="*******" disabled>
+                                    </label>
                                 </li>
                                 <li>
                                     <span>Подтверждение пароля</span>
-                                    <p>
-                                        *******
-                                    </p>
+                                    <label>
+                                        <input type="password" placeholder="*******" disabled>
+                                    </label>
                                 </li>
                             </ul>
                             <button class="prof-btn">Изменить</button>
@@ -163,7 +171,7 @@
     <footer>
         <div class="container">
             <div class="row justify-content-lg-between align-items-lg-center">
-                <div class="col-lg-4 justify-content-lg-start">
+                <div class="col-lg-4">
                     <div class="footer-intro">
                         <a class="footer-logo" href="#">
                             <img src="./img/logo.svg" alt="logo">
@@ -177,10 +185,10 @@
                         </span>
                     </div>
                 </div>
-                <div class="col-lg-3 justify-content-lg-center">
+                <div class="col-lg-4 text-center">
                     <a href="#" class="main-btn">Юридические документы</a>
                 </div>
-                <div class="col-lg-4 justify-content-lg-end">
+                <div class="col-lg-4">
                     <div class="footer-politics">
                         <a href="#">Политика конфиденциальности</a>
                         <a href="#">Правила и условия использования</a>
@@ -197,7 +205,7 @@
                 </span>
             </div>
         </div>
-    </footer>
+    </footer> 
     <script src="./js/lib-min.js"></script>
     <script src="./js/main.js"></script>
   </body>

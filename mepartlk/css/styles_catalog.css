@@ -3245,25 +3245,37 @@ and (-webkit-min-device-pixel-ratio: 2) {
 }
 .catalog-page .bricks .items {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: flex-start;
     flex-wrap: wrap;
     margin: 0 -12.5px;
+    align-items: stretch;
+
 }
 .catalog-page .bricks .items .item {
     width: calc((100% - 75px) / 3);
     margin: 0 12.5px 25px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(236, 236, 236);
 }
 .catalog-page .bricks .items .item .img {
     width: 100%;
+    flex: 0 0 145px;
+    display: flex;
 }
 .catalog-page .bricks .items .item .img img {
     width: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 .catalog-page .bricks .items .item .info {
-    border: 1px solid rgb(236, 236, 236);
+    /* border: 1px solid rgb(236, 236, 236); */
     border-top: none;
     padding: 17px 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 .catalog-page .bricks .items .item .info .title {
     font-size: 17px;
@@ -3271,6 +3283,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
     font-weight: 300;
     color: rgb(224, 59, 20);
     line-height: 1.2;
+    flex: 0 0 auto;
 }
 .catalog-page .bricks .items .item .info .sub-title {
     font-size: 12px;
@@ -3278,6 +3291,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
     color: rgb(0, 0, 0);
     line-height: 1.5;
     margin-top: 3px;
+    flex: 1 0 auto;
 }
 
 .catalog-page .bricks .items .item .info .art {
@@ -3286,6 +3300,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
     color: rgb(0, 0, 0);
     line-height: 1.5;
     margin-top: 3px;
+    flex: 0 0 auto;
 }
 .catalog-page .bricks .items .item .info .rating {
     display: flex;
@@ -3313,6 +3328,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex: 0 0 auto;
 }
 .catalog-page .bricks .items .item .info .price-row .price {
     margin-right: auto;
@@ -3379,7 +3395,9 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
 .info-btn-wrapper .popup-info.lk {
     max-width: 493px;
-    height: 100%;
+    /* height: 100%; */
+    max-height: 600px;
+    overflow: auto;
     display: none;
     position: fixed;
     right: 0;
@@ -4160,7 +4178,8 @@ and (-webkit-min-device-pixel-ratio: 2) {
     -ms-filter    : "progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=7, Color='#00000024')";
     filter        : "progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=7, Color='#00000024')";
     z-index: 999;
-    height: 100%;
+    overflow: auto;
+    max-height: 600px;
 }
 
 @media screen and (max-width: 575px){

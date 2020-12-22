@@ -3263,6 +3263,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
     width: 100%;
     flex: 0 0 145px;
     display: flex;
+    height: 145px;
 }
 .catalog-page .bricks .items .item .img img {
     width: 100%;

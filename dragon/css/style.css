@@ -974,7 +974,7 @@
 }
 
 .admin-row {
-  padding: 58px 0 0 0;
+  padding: 58px 0 10px 0;
 }
 
 .info-table {
@@ -1176,7 +1176,7 @@
 .profile-header h1 {
   font-style: normal;
   font-weight: normal;
-  font-size: 40px;
+  font-size: 22px;
   line-height: 49px;
   color: #000000;
   margin-bottom: 0;
@@ -1207,6 +1207,9 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .profile-block ul li:last-child {
@@ -1229,12 +1232,22 @@
   -webkit-box-flex: 1;
       -ms-flex: 1 0 60%;
           flex: 1 0 60%;
+  margin-bottom: 0 !important;
 }
 
 .profile-block ul li label input {
-  border: none;
+  border: none !important;
   background: none;
   width: 100%;
+  border-radius: 0 !important;
+  height: unset !important;
+  padding: 0 5px;
+  font-family: 'Gilroy-RegularItalic';
+  font-style: italic;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 29px;
+  color: #000000;
 }
 
 .profile-block ul li label input::-webkit-input-placeholder {
@@ -1292,7 +1305,7 @@
 .main-section__form h2 {
   font-style: normal;
   font-weight: normal;
-  font-size: 40px;
+  font-size: 22px;
   line-height: 49px;
   color: #000000;
 }
@@ -1369,6 +1382,22 @@
 .balance label input {
   width: 400px;
   height: 90px;
+}
+
+.balance ul li {
+  -webkit-box-pack: unset;
+      -ms-flex-pack: unset;
+          justify-content: unset;
+}
+
+.balance ul li label {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 70%;
+          flex: 0 0 70%;
+}
+
+.balance button {
+  margin-right: 110px;
 }
 
 .balance .profile-block {
@@ -2041,7 +2070,7 @@
   font-size: 14px;
   line-height: 17px;
   text-align: right;
-  color: #000000;
+  color: #817e7e;
   position: absolute;
   top: 7px;
   right: 17px;
@@ -2158,28 +2187,13 @@
   width: 100%;
 }
 
-.custom-control-label::before {
-  width: 20px;
-  height: 20px;
-  border-radius: 50% !important;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
+.politics {
+  padding: 0 !important;
 }
 
 .custom-control-input:checked ~ .custom-control-label::before {
-  color: #fff;
-  border-color: #C4C4C4;
   background-color: #C4C4C4;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-
-.custom-control-label::after {
-  display: none;
+  border: none;
 }
 
 .iti {
@@ -2220,6 +2234,10 @@ footer {
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
   background: #F8F8F8;
+}
+
+button:focus {
+  outline: none;
 }
 
 .hero {
@@ -2828,6 +2846,12 @@ footer .copyright-mobile {
   }
 }
 
+@media (max-width: 1388px) {
+  .balance button {
+    margin-right: 0;
+  }
+}
+
 @media (max-width: 1338px) {
   .info-table {
     -ms-flex-wrap: wrap;
@@ -3096,11 +3120,6 @@ footer .copyright-mobile {
   .reg-modal__form label input::placeholder {
     font-size: 18px;
     line-height: 28px;
-  }
-
-  .custom-control-label::before {
-    width: 20px;
-    height: 20px;
   }
 }
 

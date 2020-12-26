@@ -28,6 +28,7 @@
     line-height: 30px;
     font-weight: 300;
     color: #000000;
+    margin-bottom: 10px;
 }
 .search-header-sort {
     margin-left: auto;
@@ -333,5 +334,48 @@
     margin-left: 50px;
     @media (max-width: 740px){
         margin-left: 10px;
+    }
+}
+
+.sort {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-left: auto;
+    // .sort__title
+
+    &__title {
+        font-size: 15px;
+        color: #000000;
+        font-family: 'Museo Sans Cyrl 300';
+        font-weight: 300;
+        margin-right: 20px;
+        margin-bottom: 10px;
+    }
+
+    // .sort__item
+
+    &__item {
+        padding-bottom: 2px;
+        font-size: 15px;
+        color: #7e7e7e;
+        font-family: 'Museo Sans Cyrl 300';
+        font-weight: 300;
+        border-bottom: 1px solid transparent;
+        -webkit-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+        -o-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+        transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+        margin-right: 20px;
+        margin-bottom: 10px;
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+
+    // .sort__item-active
+
+    &__item-active {
+        color: #c52c24;
+        border-color: #c52c24;
     }
 }

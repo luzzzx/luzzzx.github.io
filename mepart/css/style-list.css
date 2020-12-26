@@ -37,6 +37,7 @@
   line-height: 30px;
   font-weight: 300;
   color: #000000;
+  margin-bottom: 10px;
 }
 
 .search-header-sort {
@@ -500,5 +501,48 @@
   .next {
     margin-left: 10px;
   }
+}
+
+.sort {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: auto;
+}
+
+.sort__title {
+  font-size: 15px;
+  color: #000000;
+  font-family: 'Museo Sans Cyrl 300';
+  font-weight: 300;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.sort__item {
+  padding-bottom: 2px;
+  font-size: 15px;
+  color: #7e7e7e;
+  font-family: 'Museo Sans Cyrl 300';
+  font-weight: 300;
+  border-bottom: 1px solid transparent;
+  -webkit-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.sort__item:last-child {
+  margin-right: 0;
+}
+
+.sort__item-active {
+  color: #c52c24;
+  border-color: #c52c24;
 }
 /*# sourceMappingURL=style-list.css.map */

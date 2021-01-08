@@ -353,7 +353,6 @@
   font-size: 18px;
   line-height: 21px;
   color: #20e201;
-  margin-left: 9px;
 }
 
 .ticket-comment-link {
@@ -1445,10 +1444,6 @@ article img {
 
   .ticket-comment-text {
     font-size: 12px;
-  }
-
-  .comment-reply a {
-    margin-left: 0;
   }
 
   .btn-main {

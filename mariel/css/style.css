@@ -325,6 +325,96 @@
   margin-left: 9px;
 }
 
+.ticket-comment-link {
+  margin-right: 5px;
+}
+
+.ticket-comment-star {
+  margin-right: 5px;
+}
+
+.ticket-comment-down {
+  margin-right: 5px;
+}
+
+.ticket-comment-up {
+  margin-right: 5px;
+}
+
+#comment-form-placeholder p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 20px;
+  color: #171717;
+  margin-bottom: 8px;
+}
+
+#comment-form-placeholder p span {
+  color: #20E201;
+}
+
+.comments-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.comments-form p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 20px;
+  color: #171717;
+  margin-bottom: 30px;
+}
+
+.comments-form p span {
+  color: #20E201;
+}
+
+.comments-form label {
+  margin-bottom: 8px !important;
+}
+
+.comments-form label p {
+  font-family: 'Gilroy-semibold';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #171717;
+}
+
+.comments-form label span {
+  color: #20E201;
+}
+
+.comments-form textarea {
+  width: 100%;
+  max-width: 677px;
+  height: 233px;
+  border: 1px solid #DDDDDD;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  resize: none;
+  padding: 10px;
+}
+
+.comments-form input {
+  width: 100%;
+  max-width: 677px;
+  border: 1px solid #DDDDDD;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 66px;
+  padding: 10px;
+}
+
 .container {
   max-width: 1710px;
 }

@@ -210,6 +210,17 @@
   margin-left: 10px;
 }
 
+.ticket-comment-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.ticket-comment-body-wrapper {
+  width: 100%;
+}
+
 .ticket-comment-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -222,6 +233,10 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
 }
 
 .ticket-avatar {
@@ -278,13 +293,23 @@
   margin-top: 10px;
 }
 
-.vote {
-  width: 20px;
-  height: 20px;
-  display: block;
+.likes-comment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
 }
 
-.vote.plus {
+.likes-comment .like {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.likes-comment .like a {
   font-family: 'Gilroy-semibold';
   font-style: normal;
   font-weight: 600;
@@ -292,17 +317,24 @@
   line-height: 19px;
   color: #20e201;
   margin-right: 20px;
-  background: url("../img/like.svg") center no-repeat;
 }
 
-.vote.minus {
+.likes-comment .dislike {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.likes-comment .dislike a {
   font-family: 'Gilroy-semibold';
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
   line-height: 19px;
   color: #e95131;
-  background: url("../img/dislike.svg") center no-repeat;
 }
 
 .ticket-comment-text {
@@ -312,7 +344,6 @@
   line-height: 20px;
   color: #171717;
   margin-bottom: 20px;
-  margin-left: 9px;
 }
 
 .comment-reply a {
@@ -326,7 +357,7 @@
 }
 
 .ticket-comment-link {
-  margin-right: 5px;
+  margin: 0 5px;
 }
 
 .ticket-comment-star {
@@ -334,11 +365,11 @@
 }
 
 .ticket-comment-down {
-  margin-right: 5px;
+  margin: 0 5px;
 }
 
 .ticket-comment-up {
-  margin-right: 5px;
+  margin: 0 5px;
 }
 
 #comment-form-placeholder p {
@@ -1376,6 +1407,14 @@ article img {
     padding: 0;
   }
 
+  .ticket-comment-body {
+    margin-bottom: 5px;
+  }
+
+  .ticket-comment-header {
+    margin-bottom: 5px;
+  }
+
   .ticket-avatar {
     width: 25px;
     height: 25px;
@@ -1400,8 +1439,11 @@ article img {
     margin-left: 0;
   }
 
+  .likes-comment {
+    margin-left: 0;
+  }
+
   .ticket-comment-text {
-    margin-left: 0px;
     font-size: 12px;
   }
 

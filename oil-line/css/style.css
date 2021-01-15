@@ -1448,6 +1448,46 @@
   margin-left: auto;
 }
 
+.catalog-page-product .pagination-nav {
+  padding: 20px 0;
+  margin-left: auto;
+}
+
+.pagination .page-link {
+  position: relative;
+  display: block;
+  padding: 0 .75rem;
+  margin-left: -1px;
+  line-height: 1.25;
+  color: #007bff;
+  background-color: transparent;
+  border: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.09em;
+  color: #C4C4C4;
+}
+
+.pagination .page-link.active {
+  color: #000000;
+}
+
+.pagination .page-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  background: #E7B160;
+  border-radius: 50%;
+}
+
 footer {
   background: #1B1B1B;
   padding: 55px 0;
@@ -1939,6 +1979,10 @@ h1 {
   border: 1px solid #C4C4C4;
 }
 
+.breadcrumb-nav {
+  width: 100%;
+}
+
 .breadcrumb {
   padding: 20px 0;
   background: none;
@@ -1977,6 +2021,17 @@ h1 {
 
 .page-title {
   border-bottom: 1px solid #C4C4C4;
+}
+
+.page-title .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 @media (max-width: 992px) {
@@ -2133,6 +2188,11 @@ h1 {
 
   .contacts-body {
     padding: 20px;
+  }
+
+  .pagination-nav {
+    margin: 20px 0;
+    width: 100%;
   }
 
   .footer-top h2 {

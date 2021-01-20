@@ -62,17 +62,6 @@ $(document).ready(function () {
   });
 
 
-  // catalog slider
-//   $(".catalog-range-slider").ionRangeSlider({
-//     skin: "round",
-//     type: "double",
-//     grid: false,             // show/hide grid
-//     drag_interval: true,
-//     force_edges: true,     // force UI in the box
-//     hide_min_max: true,    // show/hide MIN and MAX labels
-//     hide_from_to: true,    // show/hide FROM and TO labels
-//     block: false            // block instance from changing
-// });
 
   // catalog slider capacity
 function capacitySlider(){
@@ -214,4 +203,27 @@ $inputTo.on("input", function () {
 }
 
 priceSlider();
+
+// slider cart
+
+$('.product-slider__main').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  fade: true,
+  asNavFor: '.product-slider__thumb'
+});
+$('.product-slider__thumb').slick({
+  slidesToShow: 6,
+  slidesToScroll: 1,
+  asNavFor: '.product-slider__main',
+  arrows: true,
+  dots: false,
+  centerMode: false,
+  infinite: false, 
+  prevArrow: $('.product-slider__thumb-prev'),
+  nextArrow: $('.product-slider__thumb-next'),
+  focusOnSelect: true
+});
+
 });

@@ -23,8 +23,8 @@
 
 
 $('.dropdown-menu li').on('click', function() {
-    var getValue = $(this).text();
-    $('.dropdown-select').text(getValue);
+  var getValue = $(this).text();
+  $('.dropdown-select').text(getValue);
 });
 
 $('.slider-main').slick({
@@ -53,4 +53,8 @@ $('.slider-main').slick({
       }
     }
   ]
+});
+
+$('.mobile-menu').on('click', function() {
+  $(this).next('nav').slideToggle();
 });

@@ -106,6 +106,13 @@
   height: 66px;
   border-radius: 8px;
   margin-right: 18px;
+  -webkit-transition: ease-in-out .3s;
+  -o-transition: ease-in-out .3s;
+  transition: ease-in-out .3s;
+}
+
+.header-bottom nav ul li:hover {
+  opacity: .7;
 }
 
 .header-bottom nav ul li:last-child {

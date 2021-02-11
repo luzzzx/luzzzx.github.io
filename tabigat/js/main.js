@@ -35,12 +35,12 @@ $('.slider-main').slick({
   nextArrow: $('.product-slider__thumb-next'),
   responsive: [
     {
-      breakpoint: 768,
+      breakpoint: 791,
       settings: {
         arrows: false,
         centerMode: true,
-        centerPadding: '32px',
-        slidesToShow: 3
+        centerPadding: '0',
+        slidesToShow: 1
       }
     },
     {
@@ -48,7 +48,7 @@ $('.slider-main').slick({
       settings: {
         arrows: false,
         centerMode: true,
-        centerPadding: '15px',
+        centerPadding: '0',
         slidesToShow: 1
       }
     }

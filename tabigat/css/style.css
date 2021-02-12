@@ -1445,6 +1445,7 @@ main {
         -ms-flex-align: center;
             align-items: center;
     padding: 0;
+    margin-bottom: 10px;
   }
 
   .main-body__card .card-icon {
@@ -1465,6 +1466,10 @@ main {
   .main-body__card span {
     font-size: 0;
     display: none;
+  }
+
+  .news-btn img {
+    max-width: 150px;
   }
 }
 

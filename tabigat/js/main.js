@@ -1,27 +1,3 @@
-// Array.from(document.querySelectorAll('.scroll_container'))
-//   .forEach(
-//     el => new SimpleBar(el, {
-//       autoHide: false,
-//     })
-//   );
-
-// document.querySelectorAll('.scroll_container').forEach(el => {
-//     new SimpleBar(el, {
-//               autoHide: false,
-//             })
-// });
-
-// var ContentScroll = document.querySelector('.scroll-content');
-// var MainScroll = document.querySelector('.scroll-main');
-// new SimpleBar(ContentScroll, {
-//     autoHide: false,
-// });
-
-// new SimpleBar(MainScroll, {
-//     autoHide: false,
-// });
-
-
 $('.dropdown-menu li').on('click', function() {
   var getValue = $(this).text();
   $('.dropdown-select').text(getValue);
@@ -58,3 +34,23 @@ $('.slider-main').slick({
 $('.mobile-menu').on('click', function() {
   $(this).next('nav').slideToggle();
 });
+
+// progress bar
+new CircleProgress('.bar-circle', {
+	max: 100,
+	value: 80,
+  textFormat: 'none',
+});
+
+
+// counts progress
+var number = document.querySelector('.numberof'),
+		numberTop = number.getBoundingClientRect().top,
+    start = +number.innerHTML, end = +number.dataset.max;
+
+var interval = setInterval(function() {
+      number.innerHTML = ++start;
+      if(start == end) {
+          clearInterval(interval);
+      }
+  }, 5);

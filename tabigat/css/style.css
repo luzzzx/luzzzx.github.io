@@ -550,8 +550,8 @@
   padding: 40px;
   max-height: 736px;
   margin-bottom: 20px;
-  -webkit-animation: slide-in-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: slide-in-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  -webkit-animation: slide-in-left 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-left 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 .main-content .scroll-content {
@@ -601,12 +601,15 @@
   width: 100%;
 }
 
+.aside-content {
+  -webkit-animation: slide-in-right 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-right 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
 .aside-content .aside-card {
   padding: 13px 20px;
   border-radius: 10px;
   margin-bottom: 15px;
-  -webkit-animation: slide-in-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: slide-in-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 .aside-content .aside-card h2 {
@@ -1371,6 +1374,7 @@ main {
   height: 100%;
   overflow-y: scroll;
   max-height: 600px;
+  overflow-x: hidden;
 }
 
 .breadcrumb {
@@ -1460,8 +1464,8 @@ main {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 100%;
-  -webkit-animation: slide-in-fwd-center 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.1s both;
-  animation: slide-in-fwd-center 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.1s both;
+  -webkit-animation: slide-in-fwd-center 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.1s both;
+  animation: slide-in-fwd-center 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.1s both;
 }
 
 .news-card:hover .news-card__img img {

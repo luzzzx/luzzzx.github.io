@@ -35,6 +35,17 @@ $('.mobile-menu').on('click', function() {
   $(this).next('nav').slideToggle();
 });
 
+$(window).on("resize", function() {
+  if($(this).width() > 1377) {
+    $('.scroll-main').css('height', ($(this).height() - 222));
+  } else{
+    $('.scroll-main').css('height', '');
+  }
+}).trigger("resize");
+
+
+
+
 // progress bar
 new CircleProgress('.bar-circle', {
 	max: 100,
@@ -54,3 +65,4 @@ var interval = setInterval(function() {
           clearInterval(interval);
       }
   }, 5);
+

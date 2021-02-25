@@ -1738,6 +1738,12 @@ main {
   }
 }
 
+@media (min-width: 1024px) and (min-height: 862px) {
+  .main-body__card {
+    height: 222px;
+  }
+}
+
 @media (max-width: 1495px) {
   .partner-body__card {
     -ms-flex-wrap: wrap;

@@ -31,18 +31,18 @@ $('.slider-main').slick({
   ]
 });
 
-// $('.mobile-menu').on('click', function(e) {
-//   e.preventDefault();
-//   $(this).next('nav').slideToggle();
-// });
+$('.mobile-menu').on('click', function(e) {
+  e.preventDefault();
+  $(this).next('nav').slideToggle();
+});
 
-// $(window).on("resize", function() {
-//   if($(this).width() > 1377) {
-//     $('.scroll-main').css('height', ($(this).height() - 222));
-//   } else{
-//     $('.scroll-main').css('height', '');
-//   }
-// }).trigger("resize");
+$(window).on("resize", function() {
+  if($(this).width() > 1377) {
+    $('.scroll-main').css('height', ($(this).height() - 222));
+  } else{
+    $('.scroll-main').css('height', '');
+  }
+}).trigger("resize");
 
 
 

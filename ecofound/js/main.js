@@ -11,7 +11,7 @@ $('.slider-main').slick({
   nextArrow: $('.product-slider__thumb-next'),
   responsive: [
     {
-      breakpoint: 791,
+      breakpoint: 1290,
       settings: {
         arrows: false,
         centerMode: true,
@@ -31,18 +31,45 @@ $('.slider-main').slick({
   ]
 });
 
-// $('.mobile-menu').on('click', function(e) {
-//   e.preventDefault();
-//   $(this).next('nav').slideToggle();
-// });
+$(function() {
+  
+  //FILTER BY TAG
+  $('.filter').on( 'click', function(e) {
+      e.preventDefault();
+    
+      //Get filter data from active link
+      var filterValue = $(this).attr('data-filter');
+    
+      //Show filtered list by matching data-filter with class of item
+      if(filterValue == "all") {
+        $(".cards-content .e-card").fadeIn('slow');
+      } else {
+        $(".cards-content .e-card").not("." + filterValue).hide().parent().removeClass('active');
+        $("." + filterValue).fadeIn('slow').parent().addClass('active');
+      }
+  });
+  
 
-// $(window).on("resize", function() {
-//   if($(this).width() > 1377) {
-//     $('.scroll-main').css('height', ($(this).height() - 222));
-//   } else{
-//     $('.scroll-main').css('height', '');
-//   }
-// }).trigger("resize");
+});
+
+
+$(function() {
+  
+  'use strict';
+
+  $('.input-file').each(function() {
+    var $input = $(this),
+        $label = $input.next('.js-labelFile'),
+        labelVal = $label.html();
+    
+   $input.on('change', function(element) {
+      var fileName = '';
+      if (element.target.value) fileName = element.target.value.split('\\').pop();
+      fileName ? $label.addClass('has-file').find('.js-fileName').html(fileName) : $label.removeClass('has-file').html(labelVal);
+   });
+  });
+
+});
 
 $( ".round-btn" ).mousemove(function( event ) {
   var msg;
@@ -73,3 +100,6 @@ var interval = setInterval(function() {
       }
   }, 5);
 
+
+
+  

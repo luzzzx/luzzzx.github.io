@@ -52,6 +52,22 @@ $(function() {
 
 });
 
+// scroll el
+
+
+$(window).scroll(function() {
+  var height = $(window).scrollTop(),
+      headerHeight = ( $('header').offset().top + 100);
+
+       /*Если сделали скролл на 100px задаём новый класс для header*/
+  if(height > headerHeight){
+  $('.header-bottom').addClass('header-fixed');
+  } else{
+       /*Если меньше 100px удаляем класс для header*/
+  $('.header-bottom').removeClass('header-fixed');
+  }
+  
+  });
 
 $(function() {
   
@@ -81,24 +97,25 @@ $( ".round-btn" ).mousemove(function( event ) {
 
 
 // progress bar
-new CircleProgress('.bar-circle', {
-	max: 100,
-	value: 80,
-  textFormat: 'none',
-});
+// var procValue = $('.bar-circle').attr('data-val');
+// new CircleProgress('.bar-circle', {
+// 	max: 100,
+// 	value: procValue,
+//   textFormat: 'none',
+// });
 
 
 // counts progress
-var number = document.querySelector('.numberof'),
-		numberTop = number.getBoundingClientRect().top,
-    start = +number.innerHTML, end = +number.dataset.max;
+// var number = document.querySelector('.numberof'),
+// 		numberTop = number.getBoundingClientRect().top,
+//     start = +number.innerHTML, end = +number.dataset.max;
 
-var interval = setInterval(function() {
-      number.innerHTML = ++start;
-      if(start == end) {
-          clearInterval(interval);
-      }
-  }, 5);
+// var interval = setInterval(function() {
+//       number.innerHTML = ++start;
+//       if(start == end) {
+//           clearInterval(interval);
+//       }
+//   }, 5);
 
 
 

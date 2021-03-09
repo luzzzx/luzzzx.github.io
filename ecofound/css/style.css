@@ -91,6 +91,28 @@
   width: 100%;
 }
 
+.header-bottom {
+  -webkit-transition: ease-in-out .3s;
+  -o-transition: ease-in-out .3s;
+  transition: ease-in-out .3s;
+}
+
+.header-bottom.header-fixed {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+}
+
 .header-bottom nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1613,6 +1635,8 @@
   display: flex;
   overflow: hidden;
   overflow-x: auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .tags-row::-webkit-scrollbar {
@@ -1856,6 +1880,12 @@ main {
   padding: 20px 47px;
 }
 
+.main-btn:hover {
+  text-decoration: none;
+  background: #18972b;
+  color: #fff;
+}
+
 .title {
   font-family: 'Oswald';
   font-style: normal;
@@ -1964,6 +1994,7 @@ main {
   position: relative;
   overflow: hidden;
   min-height: 216px;
+  height: 100%;
 }
 
 .news-card__img img {
@@ -2136,9 +2167,14 @@ main {
 
 /* input file style */
 
-.modal-content {
-  background: url("../img/modal-bg.jpg") no-repeat center center;
-  background-size: cover;
+.modal-content label {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #131313;
 }
 
 .modal-header {
@@ -2171,12 +2207,10 @@ main {
 }
 
 .input-file + .js-labelFile .icon:before {
-  content: url("https://api.iconify.design/bi:file-earmark-arrow-down.svg?height=16");
   vertical-align: -0.125em;
 }
 
 .input-file + .js-labelFile.has-file .icon:before {
-  content: url("https://api.iconify.design/bi:file-check.svg?height=16");
   vertical-align: -0.125em;
 }
 
@@ -2498,6 +2532,11 @@ main {
 }
 
 @media (max-width: 760px) {
+  .tags-row {
+    -ms-flex-wrap: unset;
+        flex-wrap: unset;
+  }
+
   .error-main .error-body {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;

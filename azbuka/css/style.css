@@ -967,10 +967,10 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: calc((100% / 6) - 15px);
-  height: calc((100% / 2));
+  width: calc((100% / 6) - 17px);
+  height: calc((100% / 2) - 5px);
   background: #ECF6F4;
-  border-radius: 5px;
+  border-radius: 4px;
   font-size: 25px;
   color: #202020;
   position: absolute;
@@ -985,12 +985,12 @@
 
 .instagramm-gallery .instagramm-gallery__slider-prev {
   left: 0px;
-  top: -5px;
+  top: 0px;
 }
 
 .instagramm-gallery .instagramm-gallery__slider-next {
   right: 0px;
-  bottom: 0px;
+  bottom: 5px;
 }
 
 .about-shop {
@@ -3830,6 +3830,7 @@
 
 html {
   overflow-x: hidden;
+  position: relative;
 }
 
 body {
@@ -3842,6 +3843,8 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
 }
 
 body.lock {

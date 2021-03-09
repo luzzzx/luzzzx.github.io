@@ -226,14 +226,12 @@ $('.brands-body-slider').slick({
 
 
 // burger menu
-
 $('.burger-menu').on("click", function () {
   $('.burger-menu').toggleClass('active');
   $('.main-nav').toggleClass('active');
-  // $('body').append('<div class="modal-backdrop fade show"></div>');
 });
 
-// console.log($('.instagramm-gallery__item')[0].clientWidth);
+// 
 
 
 // certificat 
@@ -970,6 +968,32 @@ $(".filter-block__title.toggle").click(function(e){
 });
 
 
+
+// collect select
+$(".btn-select").click(function(e){
+  e.preventDefault();
+  $(this).toggleClass('active');
+});
+
+
+// collect composition slider
+$('.composition-slider').slick({
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  infinite: true,
+  focusOnSelect: true,
+  prevArrow: $('.composition-slider__prev'),
+  nextArrow: $('.composition-slider__next'),
+  responsive: [
+    {
+      breakpoint: 1025,
+      settings: {
+        slidesToShow: 2,
+      }
+    }
+  ]
+});
+
 // показать больше
 
 const txt = document.querySelector(".page-text__body-wrapper");
@@ -1023,4 +1047,3 @@ $(".filter-block__title .back").click(function(e){
   $(this).closest(".filter-block__wrapper").removeClass('active');
   $('.filter-body').removeClass('lock');
 });
-

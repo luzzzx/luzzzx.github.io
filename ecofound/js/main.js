@@ -69,6 +69,23 @@ $(window).scroll(function() {
   
   });
 
+$(document).ready(function() {
+    function checkWidth() {
+      var windowWidth = $('body').innerWidth(),
+          elem = $(".header-bottom"); // лучше сохранять объект в переменную, многократно чтобы не насиловать 
+                                      // страницу для поиска нужного элемента
+      if(windowWidth < 768){
+        elem.removeClass('header-fixed');
+      }
+    }
+  
+    checkWidth(); // проверит при загрузке страницы
+  
+    $(window).resize(function(){
+      checkWidth(); // проверит при изменении размера окна клиента
+    });
+});
+
 $(function() {
   
   'use strict';

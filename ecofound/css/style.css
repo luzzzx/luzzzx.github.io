@@ -111,6 +111,13 @@
   width: 100%;
   top: 0;
   z-index: 99;
+  background: #fff;
+}
+
+.header-bottom.header-fixed nav ul {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .header-bottom nav ul {

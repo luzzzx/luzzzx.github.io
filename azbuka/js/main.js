@@ -171,6 +171,29 @@ $('.instagramm-gallery__slider').slick({
 });
 
 
+$('.instagramm-widget__slider ').slick({
+  arrows: true,
+  dots: false,
+  slidesPerRow: 3,
+  fade: true,
+  rows: 2,
+  speed: 900,
+  infinite: true,
+  slidesToShow: 1,
+  prevArrow: $('.instagramm-gallery__slider-prev'),
+  nextArrow: $('.instagramm-gallery__slider-next'),
+  responsive: [
+    {
+      breakpoint: 992,
+      settings: {
+        rows: 3,
+        slidesToShow: 1,
+        slidesPerRow: 3,
+      }
+    }
+  ]
+
+});
 // slider about
 
 $('.about-shop__slider-main').slick({
@@ -994,6 +1017,16 @@ $('.composition-slider').slick({
   ]
 });
 
+// basket quanity
+
+$('.btn-plus, .btn-minus').on('click', function(e) {
+  const isNegative = $(e.target).closest('.btn-minus').is('.btn-minus');
+  const input = $(e.target).closest('.input-group').find('input');
+  if (input.is('input')) {
+    input[0][isNegative ? 'stepDown' : 'stepUp']()
+  }
+})
+
 // показать больше
 
 const txt = document.querySelector(".page-text__body-wrapper");
@@ -1047,3 +1080,4 @@ $(".filter-block__title .back").click(function(e){
   $(this).closest(".filter-block__wrapper").removeClass('active');
   $('.filter-body').removeClass('lock');
 });
+

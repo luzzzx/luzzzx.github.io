@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="./css/style.min.css">
+    <title>Азбука дома</title>
+  </head>
+  <body>
+    <header>
+      <section class="header-top">
+        <div class="container">
+          <div class="header-top-nav">
+            <a href="#" class="logo"><img src="./img/logo.png" alt="logo"></a>
+            <a href="#" class="catlog-btn">
+              <span><img src="./img/icons/catalog-btn.svg" alt="icon"></span>
+              Каталог
+            </a>
+            <form class="header-search">
+              <input type="text" placeholder="Я хочу найти">
+              <button>
+                <span class="iconify" data-icon="fluent:search-20-regular" data-inline="false"></span>
+              </button>
+            </form>
+            <div class="header-schedule">
+              <a href="tel:88001003381">8 (800) 100 33 81</a>
+              <span>Пн-Пт: с 9-00 до 19-00</span>
+            </div>
+            <div class="header-links">
+              <a href="#" class="lk-btn">
+                <span class="lk-icon">
+                  <img src="./img/icons/lk.svg" alt="icon">
+                </span>
+              </a>
+              <a href="#" class="like-btn">
+                <span class="iconify" data-icon="et:heart" data-inline="false"></span>
+              </a>
+              <a href="#" class="basket-btn">
+                <span class="iconify" data-icon="heroicons-outline:shopping-cart" data-inline="false"></span>
+                <span class="label">
+                  8
+                </span>
+              </a>
+              <div class="basket-info">
+                <span>152 900 ₽</span>
+                <a href="#">Мои покупки</a>
+              </div>
+            </div>
+            <a href="#" class="burger-menu">
+              <img src="./img/icons/burger.svg" alt="burger-menu">
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="main-nav">
+        <div class="container">
+          <nav class="nav-body">
+            <ul>
+              <li><a href="#">Магазины и контакты</a></li>
+              <li><a href="#">Сборка и доставка</a></li>
+              <li><a href="#">Акции и скидки</a></li>
+              <li><a href="#">О компании</a></li>
+              <li><a href="#">Сотрудничество</a></li>
+            </ul>
+            <a href="#" class="nav-bonus">
+              <img src="./img/icons/bonus.svg" alt="icon">
+              Накоплено бонусов
+              <span>2500</span>
+            </a>
+            <div class="city-header">
+              <img src="./img/icons/pin.svg" alt="icon">
+              <span>Ваш город</span>
+              <a href="#">Бишкек</a>
+            </div>
+          </nav>
+        </div>
+      </section>
+    </header>
+    <main>
+      <section class="page-header">
+        <div class="container">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Главная</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Диваны и кресла</li>
+            </ol>
+          </nav>
+          <div class="page-title">
+            <h1>Modals</h1>
+          </div>
+        </div>
+      </section>
+      <div class="container">
+          <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+               модалка корзины
+        </button>
+  
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog basket" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h2 class="modal-title">Добавить товар в корзину</h2>
+                <div class="basket-body">
+                  <div class="basket-row">
+                      <div class="basket-row__photo">
+                          <img src="./img/order-form1.jpg" alt="img">
+                      </div>
+                      <div class="basket-row__name">
+                          <h2>Диван-кровать Верона</h2>
+                          <div class="articul">
+                              <span>Артикул:</span>
+                              <p>80328819</p>
+                          </div>
+                      </div>
+                      <div class="basket-row__price">
+                          <div class="basket-row__price__top">
+                              <p>37 999 ₽</p>
+                              <span>45 999 ₽</span>
+                          </div>
+                          <div class="basket-row__price__bottom">
+                              <div class="benefit">
+                                  Выгода <span>5 000 ₽</span>
+                              </div>
+                              <span class="proc-sale">-17%</span>
+                          </div>
+                      </div>
+                      <div class="basket-row__qnty">
+                          <div class="input-group inline-group">
+                              <div class="input-group-prepend">
+                                <button class="btn-minus">
+                                    -
+                                </button>
+                              </div>
+                              <input class="form-control quantity" min="0" name="quantity" value="1" type="number">
+                              <div class="input-group-append">
+                                <button class="btn-plus">
+                                    +
+                                </button>
+                              </div>
+                          </div>
+                          <span class="delete-pos">
+                              <span class="iconify" data-icon="iwwa:trash" data-inline="false"></span>
+                          </span>
+                      </div>
+                  </div>
+                  <div class="basket-row">
+                      <div class="basket-row__photo">
+                          <img src="./img/order-form1.jpg" alt="img">
+                      </div>
+                      <div class="basket-row__name">
+                          <h2>Диван-кровать Верона</h2>
+                          <div class="articul">
+                              <span>Артикул:</span>
+                              <p>80328819</p>
+                          </div>
+                      </div>
+                      <div class="basket-row__price">
+                          <div class="basket-row__price__top">
+                              <p>37 999 ₽</p>
+                              <span>45 999 ₽</span>
+                          </div>
+                          <div class="basket-row__price__bottom">
+                              <div class="benefit">
+                                  Выгода <span>5 000 ₽</span>
+                              </div>
+                              <span class="proc-sale">-17%</span>
+                          </div>
+                      </div>
+                      <div class="basket-row__qnty">
+                          <div class="input-group inline-group">
+                              <div class="input-group-prepend">
+                                <button class="btn-minus">
+                                    -
+                                </button>
+                              </div>
+                              <input class="form-control quantity" min="0" name="quantity" value="1" type="number">
+                              <div class="input-group-append">
+                                <button class="btn-plus">
+                                    +
+                                </button>
+                              </div>
+                          </div>
+                          <span class="delete-pos">
+                              <span class="iconify" data-icon="iwwa:trash" data-inline="false"></span>
+                          </span>
+                      </div>
+                  </div>
+                  <div class="basket-footer">
+                      <a href="#" class="btn-click">Продолжить покупки</a>
+                      <a href="#" class="btn-main">Оформить заказ</a>
+                  </div>
+                </div>
+            </div>
+            </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+        <div class="container">
+          <div class="footer-row">
+            <a href="#" class="footer-logo">
+              <img src="./img/logo.png" alt="logo">
+            </a>
+            <nav>
+              <h2>Продукция</h2>
+              <ul>
+                <li><a href="#">Диваны и кресла</a></li>
+                <li><a href="#">Кровати и матрасы</a></li>
+                <li><a href="#">Гостинные</a></li>
+                <li><a href="#">Спальни</a></li>
+                <li><a href="#">Столы и стулья</a></li>
+                <li><a href="#">Комнаты</a></li>
+                <li><a href="#">Коллекции мебели</a></li>
+                <li><a href="#">Мебель под заказ</a></li>
+              </ul>
+            </nav>
+            <nav>
+              <h2>Компания</h2>
+              <ul>
+                <li><a href="#">Сборка и доставка</a></li>
+                <li><a href="#">Магазины и контакты</a></li>
+                <li><a href="#">О компании</a></li>
+                <li><a href="#">Акции и скидки</a></li>
+              </ul>
+            </nav>
+            <div class="footer-schedule">
+              <a href="tel:88001003381">8 (800) 100 33 81</a>
+              <span>Пн-Пт: с 9-00 до 19-00</span>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <span>© 2009 - 2020  Интернет магазин Азбука Дома. Все права защищены.</span>
+          </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js" integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <script src="./js/slick.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+  </html>

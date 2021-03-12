@@ -2319,6 +2319,10 @@
   margin-bottom: 20px;
 }
 
+.gallery-cart.mobile {
+  display: none;
+}
+
 .gallery-cart h2 {
   font-family: 'Raleway';
   font-style: normal;
@@ -2418,6 +2422,10 @@
   margin-bottom: 15px;
 }
 
+.cart-banner.mobile {
+  display: none;
+}
+
 .cart-banner a {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2436,6 +2444,10 @@
           box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.04);
   border-radius: 5px;
   padding: 20px;
+}
+
+.cart-promo.mobile {
+  display: none;
 }
 
 .cart-promo .product-row {
@@ -6146,11 +6158,11 @@ input[type=number] {
   .instagramm-gallery .instagramm-gallery__slider-prev,
   .instagramm-gallery .instagramm-gallery__slider-next {
     width: calc((100% / 3) - 11px);
-    height: calc((100% / 2) - 28px);
+    height: calc((100% / 2) - 36px);
   }
 
   .instagramm-gallery .instagramm-gallery__slider-next {
-    bottom: 30px;
+    bottom: 36px;
   }
 
   .news-card.full .news-card__text {
@@ -6599,6 +6611,12 @@ input[type=number] {
     color: #202020;
   }
 
+  #content .card-header .collapsed .iconify {
+    -webkit-transform: rotate(180deg) !important;
+        -ms-transform: rotate(180deg) !important;
+            transform: rotate(180deg) !important;
+  }
+
   .post-container {
     margin-bottom: 20px;
   }
@@ -6959,7 +6977,11 @@ input[type=number] {
   .instagramm-gallery .instagramm-gallery__slider-prev,
   .instagramm-gallery .instagramm-gallery__slider-next {
     width: calc((100% / 3) - 11px);
-    height: calc((100% / 3) - 28px);
+    height: calc((100% / 3) - 36px);
+  }
+
+  .instagramm-gallery .instagramm-gallery__slider-next {
+    bottom: 36px;
   }
 
   .about-shop__text h2 {
@@ -7139,12 +7161,36 @@ input[type=number] {
     margin-bottom: 10px;
   }
 
+  .gallery-cart.mobile {
+    display: block;
+  }
+
+  .gallery-cart {
+    display: none;
+  }
+
   .gallery-cart__slider {
     margin: 0 -7px;
   }
 
   .gallery-cart__slider-item {
     padding: 0 7px;
+  }
+
+  .cart-banner.mobile {
+    display: block;
+  }
+
+  .cart-banner {
+    display: none;
+  }
+
+  .cart-promo.mobile {
+    display: block;
+  }
+
+  .cart-promo {
+    display: none;
   }
 
   .cart-promo .prod-main-slider__item {
@@ -7212,6 +7258,10 @@ input[type=number] {
 
   .cart-description__trade-price {
     margin-bottom: 20px;
+  }
+
+  .cart-description__document {
+    padding: 10px 0;
   }
 
   .btn-click {

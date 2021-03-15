@@ -8440,11 +8440,16 @@ template {
   max-width: 1170px;
 }
 
+html,
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+
 body {
   font-family: 'Gilroy';
   font-weight: normal;
   font-stretch: normal;
-  overflow-x: hidden;
 }
 
 .secondary-btn {
@@ -13420,10 +13425,11 @@ body {
     border: none;
     position: relative;
     z-index: 55;
+    background: transparent;
   }
 
   .top-header .burger-menu span {
-    width: 100%;
+    width: 30px;
     height: 5px;
     background-color: #c42326;
     border-radius: 10px;
@@ -13620,6 +13626,10 @@ body {
         -ms-flex-order: -1;
             order: -1;
     margin-bottom: 5px;
+  }
+
+  .footer-menu__title {
+    cursor: pointer;
   }
 
   .footer-menu__title i {

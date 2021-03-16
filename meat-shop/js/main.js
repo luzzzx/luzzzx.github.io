@@ -33,6 +33,8 @@ $('.comments-slider__body').slick({
 $(".burger-menu").click(function(e){
   $(this).next('nav').toggleClass('active');
   $(this).toggleClass('active');
+  $('html').toggleClass('lock');
+  $('body').toggleClass('lock');
 });
 
 $(".drp-btn").click(function(e){
@@ -46,3 +48,35 @@ if ($(window).width() < 767) {
     $(this).toggleClass('active');
   });
 }
+
+(function($){
+  $('.product-slider__body-main').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    fade: true,
+    infinite: false,
+    arrows: false,
+    asNavFor: '.product-slider__thumb'
+  });
+  
+  $('.product-slider__thumb').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    infinite: true,
+    arrows: false,
+    asNavFor: '.product-slider__body-main',
+    focusOnSelect: true,
+  });
+
+})(jQuery);
+
+
+(function($){
+  $('.btn-plus, .btn-minus').on('click', function(e) {
+    const isNegative = $(e.target).closest('.btn-minus').is('.btn-minus');
+    const input = $(e.target).closest('.input-group-price').find('input');
+    if (input.is('input')) {
+      input[0][isNegative ? 'stepDown' : 'stepUp']()
+    }
+  })
+})(jQuery);

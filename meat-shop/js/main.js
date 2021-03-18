@@ -80,3 +80,34 @@ if ($(window).width() < 767) {
     }
   })
 })(jQuery);
+
+
+(function($){
+  $(window).on('load resize', function() {
+    if ($(window).width() < 640) {
+      $('.info-intro-slider__row').slick({
+        infinite: true,
+        speed: 100,
+        slidesToShow: 1,
+        arrows: false,
+      });
+    } else {
+      $('.info-intro-slider__row').slick("unslick");
+    }
+  });
+
+})(jQuery);
+
+
+(function($){
+  $(".category-nav__btn").click(function(e){
+    e.preventDefault();
+    $(this).next('ul').slideToggle({
+      start: function () {
+        $(this).css({
+          display: "flex"
+        })
+      }
+    });
+  });
+})(jQuery);

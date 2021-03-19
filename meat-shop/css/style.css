@@ -8033,11 +8033,13 @@ template {
   cursor: pointer;
 }
 
-.hero-slider__next {
+.hero-slider__next,
+.hero-slider .info-intro-slider__next {
   right: 15%;
 }
 
-.hero-slider__prev {
+.hero-slider__prev,
+.hero-slider .info-intro-slider__prev {
   left: 15%;
 }
 
@@ -8196,6 +8198,44 @@ template {
   color: #000000;
 }
 
+.info-intro-slider {
+  position: relative;
+}
+
+.info-intro-slider__prev,
+.info-intro-slider__next {
+  display: none;
+  width: 51px;
+  height: 51px;
+  color: #731f1b;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.info-intro-slider__prev {
+  left: -15px;
+}
+
+.info-intro-slider__next {
+  right: -15px;
+}
+
 .comments-slider {
   position: relative;
   margin-bottom: 88px;
@@ -8346,12 +8386,6 @@ template {
   background-color: #ffffff;
   padding: 18px;
   margin-bottom: 22px;
-}
-
-.product-caption-options .custom-control-input:checked ~ .custom-control-label::before {
-  color: #fff;
-  border-color: #c42225;
-  background-color: #c42225;
 }
 
 .product-caption-final-price {
@@ -8945,14 +8979,19 @@ template {
   margin: 0 -15px;
 }
 
+.info-intro-slider__row .slick-track {
+  height: 100%;
+  padding: 10px 0;
+}
+
 .info-intro-slider__item {
   border-radius: 4px;
   -webkit-box-shadow: 0 0 29.8px 2.2px rgba(69, 69, 69, 0.14);
           box-shadow: 0 0 29.8px 2.2px rgba(69, 69, 69, 0.14);
   background-color: #ffffff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -8971,6 +9010,8 @@ template {
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .info-intro blockquote {
@@ -9346,6 +9387,28 @@ footer {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+  color: #fff;
+  border-color: #c42225;
+  background-color: #c42225;
+}
+
+.custom-checkbox label {
+  font-family: 'Gilroy-light';
+  font-size: 16px;
+  line-height: 24px !important;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000000;
+}
+
+.custom-checkbox span {
+  color: #c42225;
 }
 
 .secondary-btn {
@@ -9871,6 +9934,159 @@ footer {
 .btn-contact:hover:before {
   opacity: 1;
   width: 100%;
+}
+
+#regModal .modal-content {
+  position: relative;
+  padding: 45px 27px;
+}
+
+#regModal .modal-content h2 {
+  font-size: 40px;
+  text-align: center;
+  color: #333333;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+#regModal .modal-content form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#regModal .modal-content form input {
+  font-size: 16px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000000;
+  border-radius: 5px;
+  border: solid 1px #dbdbdb;
+  background-color: #ffffff;
+  padding: 12px 18px;
+  margin-bottom: 10px;
+}
+
+#regModal .modal-content form input::-webkit-input-placeholder {
+  font-family: 'Gilroy-light';
+  font-size: 16px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000000;
+}
+
+#regModal .modal-content form input::-moz-placeholder {
+  font-family: 'Gilroy-light';
+  font-size: 16px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000000;
+}
+
+#regModal .modal-content form input:-ms-input-placeholder {
+  font-family: 'Gilroy-light';
+  font-size: 16px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000000;
+}
+
+#regModal .modal-content form input::-ms-input-placeholder {
+  font-family: 'Gilroy-light';
+  font-size: 16px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000000;
+}
+
+#regModal .modal-content form input::placeholder {
+  font-family: 'Gilroy-light';
+  font-size: 16px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000000;
+}
+
+#regModal .modal-content form .custom-checkbox {
+  margin-bottom: 20px;
+}
+
+#regModal .modal-content form .btn-block {
+  max-width: 239px;
+  height: 50px;
+  margin: 0 auto 30px auto;
+}
+
+#regModal .modal-content form p {
+  font-family: 'Gilroy-semibold';
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  color: #000000;
+}
+
+#regModal .modal-content form .btn-social {
+  max-width: 300px;
+  width: 100%;
+  padding: 10px;
+  height: 45px;
+  font-family: 'Gilroy-semibold';
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 5px;
+  margin: 0 auto 5px auto;
+}
+
+#regModal .modal-content form .btn-social i {
+  padding: 10px;
+}
+
+#regModal .modal-content form .btn-social.fb {
+  background: #425e99;
+}
+
+#regModal .modal-content form .btn-social.google {
+  background: #ea5e5e;
+}
+
+#regModal .close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 
 @media (min-width: 576px) {
@@ -14359,11 +14575,13 @@ footer {
 }
 
 @media (max-width: 1480px) {
-  .hero-slider__next {
+  .hero-slider__next,
+  .hero-slider .info-intro-slider__next {
     right: 5%;
   }
 
-  .hero-slider__prev {
+  .hero-slider__prev,
+  .hero-slider .info-intro-slider__prev {
     left: 5%;
   }
 }
@@ -14421,11 +14639,13 @@ footer {
 }
 
 @media (max-width: 1025px) {
-  .hero-slider__next {
+  .hero-slider__next,
+  .hero-slider .info-intro-slider__next {
     display: none;
   }
 
-  .hero-slider__prev {
+  .hero-slider__prev,
+  .hero-slider .info-intro-slider__prev {
     display: none;
   }
 }
@@ -14885,6 +15105,13 @@ footer {
 }
 
 @media (max-width: 760px) {
+  .info-intro-slider__prev,
+  .info-intro-slider__next {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
   .product-caption-final-price {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -14957,6 +15184,10 @@ footer {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+
+  #regModal .modal-content h2 {
+    font-size: 24px;
   }
 }
 

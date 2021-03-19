@@ -89,7 +89,9 @@ if ($(window).width() < 767) {
         infinite: true,
         speed: 100,
         slidesToShow: 1,
-        arrows: false,
+        arrows: true,
+        prevArrow: $('.info-intro-slider__prev'),
+        nextArrow: $('.info-intro-slider__next')
       });
     } else {
       $('.info-intro-slider__row').slick("unslick");

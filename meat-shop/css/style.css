@@ -8141,7 +8141,7 @@ template {
 
 .category-nav ul li a .text-nav p {
   font-family: 'Gilroy-semibold';
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 600;
   color: #333333;
   margin-bottom: 0;
@@ -8363,6 +8363,7 @@ template {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 0 8px;
+  cursor: pointer;
 }
 
 .product-slider__thumb .product-slider__thumb-item:focus {
@@ -10087,6 +10088,14 @@ footer {
   position: absolute;
   top: 20px;
   right: 20px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0;
+  /* <-- Apparently some margin are still there even though it's hidden */
 }
 
 @media (min-width: 576px) {

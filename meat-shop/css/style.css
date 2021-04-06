@@ -7758,6 +7758,7 @@ template {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-right: 0;
 }
 
 .top-header .register-links .icon {
@@ -7834,7 +7835,7 @@ template {
 }
 
 .basket-main span {
-  padding: 2px 4px;
+  padding: 2px;
   background-color: #c42326;
   border-radius: 50%;
   position: absolute;
@@ -7844,6 +7845,8 @@ template {
   color: #ffffff;
   top: 0;
   right: -10px;
+  min-width: 20px;
+  text-align: center;
 }
 
 /* Slider */
@@ -8111,6 +8114,9 @@ template {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .category-nav ul li a:hover .text-nav span {
@@ -8126,6 +8132,9 @@ template {
   display: -ms-flexbox;
   display: flex;
   margin-right: 5px;
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
 }
 
 .category-nav ul li a .icon img {
@@ -8141,6 +8150,7 @@ template {
 
 .category-nav ul li a .text-nav p {
   font-family: 'Gilroy-semibold';
+  text-transform: uppercase;
   font-size: 15px;
   font-weight: 600;
   color: #333333;
@@ -8453,6 +8463,9 @@ template {
   position: relative;
   width: 83px;
   height: 44px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 83px;
+          flex: 0 0 83px;
 }
 
 .input-group-price button {
@@ -8555,6 +8568,13 @@ template {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  height: 100%;
+}
+
+.product-card__name {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 40%;
+          flex: 0 0 40%;
 }
 
 .product-card__name h2 {
@@ -8563,6 +8583,12 @@ template {
   font-weight: 600;
   color: #c42326;
   margin-bottom: 0;
+}
+
+.product-card .basket-btn {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 178px;
+          flex: 0 0 178px;
 }
 
 .product-card .input-group-price {
@@ -10096,6 +10122,12 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
   /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+/* Firefox */
+
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 @media (min-width: 576px) {
@@ -14608,6 +14640,33 @@ input::-webkit-inner-spin-button {
         flex-wrap: wrap;
   }
 
+  .input-group-price {
+    -webkit-box-flex: unset;
+        -ms-flex: unset;
+            flex: unset;
+  }
+
+  .product-card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+  }
+
+  .product-card .basket-btn {
+    -webkit-box-flex: unset;
+        -ms-flex: unset;
+            flex: unset;
+  }
+
+  .product-card .input-group-price {
+    margin: 15px 0 15px 0;
+  }
+
   .contact-form .form-footer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -15160,22 +15219,17 @@ input::-webkit-inner-spin-button {
   }
 
   .product-card {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    text-align: center;
+    height: unset;
+  }
+
+  .product-card__name {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
   }
 
   .product-card__name h2 {
     margin-bottom: 15px;
-  }
-
-  .product-card .input-group-price {
-    margin: 15px 0 15px 0;
   }
 
   .lc-main__body .lc-main__form .input input {

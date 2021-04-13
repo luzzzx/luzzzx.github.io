@@ -8,8 +8,9 @@ $(document).ready(function () {
         dotsEach: true,
         responsive:{
             0:{
-                items:1.4,
-                dotsEach: false
+                items:1,
+                dotsEach: false,
+                singleItem: true
             },
             600:{
                 items:2
@@ -24,7 +25,7 @@ $(document).ready(function () {
         e.preventDefault();
         $(this).parent().find("[data-text=toggle]").toggleClass('active'); 
         $(this).toggleClass('active');
-      });
+    });
 
     $('.burger-menu').click(function(e) {
         e.preventDefault();
@@ -67,6 +68,11 @@ $(document).ready(function () {
         $(".thx-msg").show().delay(2000).fadeOut();
     });
 
+    $('#request-app').submit(function (e) { 
+        e.preventDefault();
+        $(".thx-msg").show().delay(2000).fadeOut();
+    });
+
 
     // tabs label
 
@@ -77,4 +83,70 @@ $(document).ready(function () {
             $(this).parent().removeClass("active");
         }
     });
+
+    // trouble shooting windows
+
+    $('.trouble-shoot').click(function(e) {
+        e.preventDefault();
+        let troubleVar = $(this).attr('data-windows');
+        $(this).parent().hide();
+        $('.price-tab-problem').find(`.problem-window[data-windows=${troubleVar}]`).addClass("active");
+    });
+
+    $('.btn-back').click(function(e) {
+        e.preventDefault();
+        $(this).parent().removeClass("active");
+        $('.problem-body__row').show();
+    });
+
+    $('.second-lvl').click(function(e) {
+        e.preventDefault();
+        let troubleVar = $(this).parent().attr('data-windows');
+        $(this).parent().removeClass("active");
+        $(this).parents().find(`.problem-window[data-windows=${troubleVar}]`).addClass('active');
+    });
+
+    $('.custom-switch input:checkbox').change(function(){
+        if($(this).is(":checked")) {
+            $(this).parent().next('.btn-add-trouble').show();
+        } else {
+            $(this).parent().next('.btn-add-trouble').hide();
+        }
+    });
+
+    $('.btn-next').click(function(e) {
+        e.preventDefault();
+        $(this).parents('.problem-window').removeClass('active');
+        $(this).parents('.problem-window').next(".problem-window-final").addClass("active");
+    });
+
+    $('.filter-btn').click(function(e) {
+        e.preventDefault();
+       $('.filter-nav').toggleClass('active');
+       $('<div class="modal-backdrop fade show filter"></div>').appendTo(document.body);
+    
+    });
+    
+    // фильтр 
+    
+    $('#btn-apply').click(function(e) {
+        e.preventDefault();
+        let inputId,
+            blogTag;
+        $("input:radio[name=filter-check]:checked").each(function () {
+            inputId = $(this).attr("id");
+        });
+
+        $(".blog-item").each(function () {
+            blogTag = $(this).attr("data-tag");
+            if(blogTag === inputId){
+                $(this).show();
+            } else{
+                $(this).hide();
+            }
+        });
+        $(this).parent().removeClass('active');
+        $('.modal-backdrop').remove();
+    });
+
 });

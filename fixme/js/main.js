@@ -1,6 +1,9 @@
 $(document).ready(function () {
+    function setDots(){
+        $(".cards-slider-body .owl-dots").removeClass('disabled');
+    }
     $('.cards-slider-body').owlCarousel({
-        loop:false,
+        loop:true,
         margin:16,
         dots: true,
         items:4,
@@ -18,7 +21,9 @@ $(document).ready(function () {
             1000:{
                 items:4
             }
-        }
+        },
+        onInitialized:setDots,
+        onChanged:setDots
     })
 
     $('.btn-more').click(function(e) {

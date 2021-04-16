@@ -5,6 +5,7 @@ $(document).ready(function () {
         $('.main-menu').toggleClass('active');
         $('body').toggleClass('locked');
         $('html').toggleClass('locked');
+        $('header').toggleClass('active');
     });
 
 });

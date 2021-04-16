@@ -377,13 +377,21 @@ header .header-login a span img {
           transform: translateX(-50%);
 }
 
-.about-main {
-  margin-bottom: 30px;
+.about-container {
+  position: relative;
+}
+
+.about-container .about-decor {
+  position: absolute;
+  top: -102px;
+  right: 30%;
+  z-index: 5;
 }
 
 .about-main {
   padding: 70px 0 0 0;
   margin-bottom: 80px;
+  position: relative;
 }
 
 .about-main .about-intro {
@@ -644,7 +652,7 @@ body {
 }
 
 @media (max-width: 1024px) {
-  header::before {
+  header.active::before {
     content: '';
     height: 70px;
     background: #FFFFFF;
@@ -876,6 +884,11 @@ body {
 }
 
 @media (max-width: 992px) {
+  .about-container .about-decor {
+    top: -162px;
+    right: 3%;
+  }
+
   .about-main .about-descrip {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1199,5 +1212,15 @@ body {
   footer nav ul li {
     margin-right: 0;
     margin-bottom: 23px;
+  }
+}
+
+@media (max-width: 760px) {
+  .about-container .about-decor {
+    top: -39px;
+    right: 50%;
+    -webkit-transform: rotate(180deg) translateX(-50%);
+        -ms-transform: rotate(180deg) translateX(-50%);
+            transform: rotate(180deg) translateX(-50%);
   }
 }

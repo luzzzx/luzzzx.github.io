@@ -1514,6 +1514,10 @@ header {
             transform: rotate(180deg) translateX(-50%);
   }
 
+  .text-decor {
+    height: 338px;
+  }
+
   .text-main__body h1 {
     font-size: 22px;
     line-height: 28px;

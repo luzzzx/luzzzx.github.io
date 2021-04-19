@@ -13,6 +13,7 @@ $(document).ready(function () {
             0:{
                 items:1,
                 dotsEach: false,
+                stagePadding: 50,  
                 singleItem: true
             },
             600:{
@@ -129,9 +130,14 @@ $(document).ready(function () {
         e.preventDefault();
        $('.filter-nav').toggleClass('active');
        $('<div class="modal-backdrop fade show filter"></div>').appendTo(document.body);
-    
+
+       $('.filter').click(function(e) {
+        e.preventDefault();
+            $('.filter-nav').removeClass('active');
+            $('.filter').remove();
+        });
     });
-    
+
     // фильтр 
     
     $('#btn-apply').click(function(e) {

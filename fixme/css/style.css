@@ -2871,6 +2871,8 @@ footer {
           align-items: center;
   border-bottom: 1px solid #E6E6E6;
   padding: 0px 27px 22px 27px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 #order-sale .sale-field p,
@@ -2882,6 +2884,10 @@ footer {
   line-height: 21px;
   color: #FFFFFF;
   margin-bottom: 0;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  text-align: left;
 }
 
 #order-sale .sale-field p span,
@@ -2910,6 +2916,7 @@ footer {
   font-size: 16px;
   line-height: 102.4%;
   color: #FFFFFF;
+  margin: 10px auto 10px auto;
 }
 
 #order-sale .field-total,
@@ -7100,7 +7107,7 @@ a:hover {
   }
 
   .video-btn {
-    margin: 0 auto;
+    margin: 20px auto 0 auto;
   }
 }
 
@@ -7454,7 +7461,7 @@ a:hover {
   #order-sale .sale-field p span,
   #request-app .sale-field p span,
   #comments .sale-field p span {
-    font-size: 14px;
+    font-size: 18px;
   }
 
   #order-sale .sale-field a,
@@ -7757,6 +7764,10 @@ a:hover {
     font-size: 28px;
   }
 
+  .adress-main {
+    padding: 60px 0 0 0;
+  }
+
   .adress-pane {
     padding: 0 0 30px 0;
   }
@@ -8030,7 +8041,8 @@ a:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding: 25px;
+    margin-bottom: 30px;
+    padding: 20px;
   }
 
   .blog-main .blog-item__img {
@@ -8056,6 +8068,10 @@ a:hover {
 
   .blog-main .blog-item__text a {
     font-size: 14px;
+  }
+
+  .btn-more-news {
+    margin: 0 auto 25px auto;
   }
 
   .filter-nav ul {
@@ -8115,6 +8131,14 @@ a:hover {
   .cards-slider-card:hover {
     -webkit-box-shadow: unset;
             box-shadow: unset;
+  }
+
+  .services {
+    padding: 70px 0;
+  }
+
+  .services-row {
+    padding: 30px 0 70px 0;
   }
 
   .services-card {

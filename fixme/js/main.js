@@ -156,6 +156,7 @@ $(document).ready(function () {
                 $(this).hide();
             }
         });
+
         $(this).parent().removeClass('active');
         $('.modal-backdrop').remove();
     });

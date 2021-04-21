@@ -2870,7 +2870,7 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   border-bottom: 1px solid #E6E6E6;
-  padding: 0px 27px 22px 27px;
+  padding: 18px 27px 22px 27px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -2884,9 +2884,6 @@ footer {
   line-height: 21px;
   color: #FFFFFF;
   margin-bottom: 0;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 100%;
-          flex: 0 0 100%;
   text-align: left;
 }
 
@@ -2916,7 +2913,7 @@ footer {
   font-size: 16px;
   line-height: 102.4%;
   color: #FFFFFF;
-  margin: 10px auto 10px auto;
+  margin-bottom: 0;
 }
 
 #order-sale .field-total,

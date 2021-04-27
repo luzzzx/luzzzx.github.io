@@ -1829,7 +1829,10 @@ footer {
 }
 
 .comments .main-title {
-  margin-bottom: 60px;
+  max-width: 543px;
+  width: 100%;
+  margin: 0 auto 60px auto;
+  display: block;
 }
 
 .comments-body {
@@ -7378,7 +7381,7 @@ a:hover {
   }
 
   .comments .main-title {
-    font-size: 24px;
+    font-size: 28px;
   }
 
   .map .map-points__card span {

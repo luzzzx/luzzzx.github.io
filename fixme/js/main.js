@@ -31,25 +31,41 @@ $(document).ready(function () {
         e.preventDefault();
         $(this).parent().find("[data-text=toggle]").toggleClass('active'); 
         $(this).toggleClass('active');
+        if  ($('.btn-more').hasClass('active')) {
+            $(this).find('span').text('Скрыть')
+        } else {
+            $(this).find('span').text('Читать подробнее ')
+        };
     });
 
     $('.burger-menu').click(function(e) {
         e.preventDefault();
         $(this).toggleClass('active');
         $('.mobile-nav').slideToggle();
+        $('body').toggleClass('locked');
+        $('html').toggleClass('locked');
     });  
 
     $('.choose-device').click(function(e) {
         e.preventDefault();
         $('.select').toggleClass('active');
-        $('body').toggleClass('locked');
-        $('html').toggleClass('locked');
+        $('body').addClass('locked');
+        $('html').addClass('locked');
     });
+
     $('.btn-close').click(function(e) {
         e.preventDefault();
-        $('.select').toggleClass('active');
-        $('body').toggleClass('locked');
-        $('html').toggleClass('locked');
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            $('.select').toggleClass('active');
+          } else {
+            $('.select').toggleClass('active');
+            $('body').removeClass('locked');
+            $('html').removeClass('locked');
+            // код для обычных устройств
+        }
+        // $('.select').toggleClass('active');
+        // $('body').removeClass('locked');
+        // $('html').removeClass('locked');
     });
     
 
@@ -161,4 +177,15 @@ $(document).ready(function () {
         $('.modal-backdrop').remove();
     });
 
+    // adress scroll
+
+    $('.adress-link').click(function() {
+        $('html, body').animate({
+          scrollTop: $('.adress-main').offset().top
+        }, 1500);
+    });
+
+
+    // mask  
+    $('input[type="tel"]').inputmask({"mask":"+7(999) 999-99-99"});
 });

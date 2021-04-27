@@ -3,7 +3,7 @@
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
     <!-- Bootstrap CSS -->
@@ -85,49 +85,81 @@
             <div class="select-body__row">
               <div href="#" class="select-body__row-item" data-target="#iphone">
                 <div class="row-item__img">
-                  <img src="./img/select/i1.png" alt="">
+                  <picture>
+                    <source media="(max-width: 799px)" srcset="./img/select/i1-mobile.png">
+                    <source media="(min-width: 800px)" srcset="./img/select/i1.png">
+                    <img src="./img/select/i1.png">
+                  </picture>
                 </div>
                 <p>iPhone</p>
               </div>
               <div href="#" class="select-body__row-item">
                 <div class="row-item__img">
-                  <img src="./img/select/i2.png" alt="">
+                  <picture>
+                    <source media="(max-width: 799px)" srcset="./img/select/i2-mobile.png">
+                    <source media="(min-width: 800px)" srcset="./img/select/i2.png">
+                    <img src="./img/select/i2.png">
+                  </picture>
                 </div>
                 <p>iPad</p>
               </div>
               <div href="#" class="select-body__row-item">
                 <div class="row-item__img">
-                  <img src="./img/select/i3.png" alt="">
+                  <picture>
+                    <source media="(max-width: 799px)" srcset="./img/select/i3-mobile.png">
+                    <source media="(min-width: 800px)" srcset="./img/select/i3.png">
+                    <img src="./img/select/i3.png">
+                  </picture>
                 </div>
                 <p>MacBook</p>
               </div>
               <div href="#" class="select-body__row-item">
                 <div class="row-item__img">
-                  <img src="./img/select/i4.png" alt="">
+                  <picture>
+                    <source media="(max-width: 799px)" srcset="./img/select/i4-mobile.png">
+                    <source media="(min-width: 800px)" srcset="./img/select/i4.png">
+                    <img src="./img/select/i4.png">
+                  </picture>
                 </div>
                 <p>iMac</p>
               </div>
               <div href="#" class="select-body__row-item">
                 <div class="row-item__img">
-                  <img src="./img/select/i5.png" alt="">
+                  <picture>
+                    <source media="(max-width: 799px)" srcset="./img/select/i5-mobile.png">
+                    <source media="(min-width: 800px)" srcset="./img/select/i5.png">
+                    <img src="./img/select/i5.png">
+                  </picture>
                 </div>
                 <p>Mac Mini</p>
               </div>
               <div href="#" class="select-body__row-item">
                 <div class="row-item__img">
-                  <img src="./img/select/i6.png" alt="">
+                  <picture>
+                    <source media="(max-width: 799px)" srcset="./img/select/i6-mobile.png">
+                    <source media="(min-width: 800px)" srcset="./img/select/i6.png">
+                    <img src="./img/select/i6.png">
+                  </picture>
                 </div>
                 <p>Apple Watch</p>
               </div>
               <div href="#" class="select-body__row-item">
                 <div class="row-item__img">
-                  <img src="./img/select/i7.png" alt="">
+                  <picture>
+                    <source media="(max-width: 799px)" srcset="./img/select/i7-mobile.png">
+                    <source media="(min-width: 800px)" srcset="./img/select/i7.png">
+                    <img src="./img/select/i7.png">
+                  </picture>
                 </div>
                 <p>AirPods</p>
               </div>
               <div href="#" class="select-body__row-item">
                 <div class="row-item__img">
-                  <img src="./img/select/i8.png" alt="">
+                  <picture>
+                    <source media="(max-width: 799px)" srcset="./img/select/i8-mobile.png">
+                    <source media="(min-width: 800px)" srcset="./img/select/i8.png">
+                    <img src="./img/select/i8.png">
+                  </picture>
                 </div>
                 <p>iPod</p>
               </div>
@@ -374,7 +406,7 @@
           <h2 class="main-title">Выберите модель, чтобы узнать стоимость ремонта</h2>
           <div class="select-model-search">
               <form>
-                  <input type="text" placeholder="Введите название устройства">
+                  <input type="text" placeholder="Введите модель iPhone">
               </form>
               <a href="#" class="faq-link">Как узнать модель?</a>
           </div>
@@ -446,7 +478,7 @@
       </div>
       <section class="form-application">
           <div class="form-application__body">
-              <h2>Не нашли свое устройствов списке?</h2>
+              <h2>Не нашли свою модель в списке?</h2>
               <p>Напишите свой номер телефона, мы вам перезвоним</p>
               <form id='order-cons'>
                   <input type="tel" placeholder="Введите ваш номер*" required>
@@ -466,7 +498,7 @@
                 Что еще часто <span>ломается</span> ремонтируют в iPhone?
               </h2>
               <div class="row">
-                  <div class="col-lg-4">
+                  <div class="col-lg-4 col-md-6">
                       <div class="breakdowns-card">
                           <div class="breakdowns-card__img">
                               <img src="./img/break1.png" alt="">
@@ -479,7 +511,7 @@
                           </div>
                       </div>
                   </div>
-                  <div class="col-lg-4">
+                  <div class="col-lg-4 col-md-6">
                       <div class="breakdowns-card">
                           <div class="breakdowns-card__img">
                               <img src="./img/break2.png" alt="">
@@ -492,7 +524,7 @@
                           </div>
                       </div>
                   </div>
-                  <div class="col-lg-4">
+                  <div class="col-lg-4 col-md-6">
                       <div class="breakdowns-card">
                           <div class="breakdowns-card__img">
                               <img src="./img/break3.png" alt="">
@@ -505,7 +537,7 @@
                           </div>
                       </div>
                   </div>
-                  <div class="col-lg-4">
+                  <div class="col-lg-4 col-md-6">
                       <div class="breakdowns-card">
                           <div class="breakdowns-card__img">
                               <img src="./img/break4.png" alt="">
@@ -518,7 +550,7 @@
                           </div>
                       </div>
                   </div>
-                  <div class="col-lg-4">
+                  <div class="col-lg-4 col-md-6">
                       <div class="breakdowns-card">
                           <div class="breakdowns-card__img">
                               <img src="./img/break5.png" alt="">
@@ -531,7 +563,7 @@
                           </div>
                       </div>
                   </div>
-                  <div class="col-lg-4">
+                  <div class="col-lg-4 col-md-6">
                       <div class="breakdowns-card">
                           <div class="breakdowns-card__img">
                               <img src="./img/break6.png" alt="">
@@ -698,7 +730,7 @@
               При создании Сервисного центра Fix-Me мы ставили себе цель подарить нашим клиентам качественный сервис европейского уровня, ориентированный прежде всего на высокое качество работы и при этом минимальные затраты Вашего времени. И на данный момент все это нам удается ;)
             </p>
           </div>
-          <a href="#" class="btn-more">Читать подробнее <i class="icon-chevron"></i></a>
+          <a href="#" class="btn-more"><span>Читать подробнее</span> <i class="icon-chevron"></i></a>
         </div>
       </section>
       <section class="map">
@@ -836,6 +868,9 @@
     </main>
     <footer>
       <div class="container-sm footer-top">
+        <div class="copyright-mobile">
+          <span>© Fix-me, 2007-2020 г. Все права защищены. При любом копировании материалов - активная ссылка на сайт обязательна!</span>
+        </div>
         <div class="row">
           <div class="col-lg-5 col-md-6 footer-nav">
             <h3>Полезная информация</h3>
@@ -880,7 +915,7 @@
         </p>
       </div>
       <div class="footer-bottom container-sm">
-        <span>© Fix-me, 2007-2020 г. Все права защищены. При любом копировании материалов - активная ссылка на сайт обязательна!</span>
+        <span class="copyright">© Fix-me, 2007-2020 г. Все права защищены. При любом копировании материалов - активная ссылка на сайт обязательна!</span>
         <ul>
           <li><a href="#">Политика конфиденциальности</a></li>
           <li><a href="#">Пользовательское соглашение</a></li>
@@ -901,6 +936,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js" integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ==" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.5/jquery.inputmask.min.js" integrity="sha512-sR3EKGp4SG8zs7B0MEUxDeq8rw9wsuGVYNfbbO/GLCJ59LBE4baEfQBVsP2Y/h2n8M19YV1mujFANO1yA3ko7Q==" crossorigin="anonymous"></script>
     <script src="./js/owl.carousel.min.js"></script>
     <script src="./js/main.js"></script>
   </body>

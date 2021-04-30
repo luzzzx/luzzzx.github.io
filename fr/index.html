@@ -1,0 +1,663 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <title>Forest River</title>
+  </head>
+  <body>
+    <svg style="display: none;">
+      <symbol id="table-big" viewBox="0 0 99 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M73 0.75H4C2.34315 0.75 1 2.09315 1 3.75V6.75C1 8.40685 2.34315 9.75 4 9.75H95.5C97.1569 9.75 98.5 8.40685 98.5 6.75V3.75C98.5 2.09315 97.1569 0.75 95.5 0.75H79" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M5.5 18.25V13.25C5.5 11.5931 6.84315 10.25 8.5 10.25H89.5C91.1569 10.25 92.5 11.5931 92.5 13.25V18.25C92.5 19.9069 91.1569 21.25 89.5 21.25H8.5C6.84315 21.25 5.5 19.9069 5.5 18.25Z" stroke="currentColor"/>
+        <path d="M14.5 21.75V39.75" stroke="currentColor" stroke-linecap="round"/>
+        <path d="M23.5 21.75L20.2205 63.9144C20.0961 65.5148 18.7611 66.75 17.1559 66.75V66.75C15.4265 66.75 14.0375 65.324 14.083 63.5952L14.5 47.75" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M76 21.25L78.3492 63.0658C78.4338 64.572 79.6799 65.75 81.1884 65.75V65.75C82.7464 65.75 84.0142 64.4964 84.0319 62.9386L84.5 21.75" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="table-min" viewBox="0 0 101 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M44 15.75H49M57.5 15.75H62M71 15.75H78.5L96.5 48.25H4.5L22.5 15.75H35" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M96.5 48.75V58.75H4.5V48.75" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M9.5 58.75V85.75H90V58.75" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="mirror" fill="none" viewBox="0 0 101 101" xmlns="http://www.w3.org/2000/svg">
+        <path d="M80 50.75c0 20.261-13.3 36.5-29.5 36.5S21 71.011 21 50.75c0-20.262 13.3-36.5 29.5-36.5S80 30.488 80 50.75z" stroke="currentColor"/>
+        <path d="M88.306 60.025a.39.39 0 00.479-.316c1.678-10.416.383-21.214-3.68-30.635-4.118-9.547-10.83-17.103-19.013-21.404-8.184-4.302-17.344-5.09-25.952-2.231C31.532 8.297 24 14.628 18.8 23.374c-5.2 8.746-7.754 19.378-7.232 30.119.52 10.741 4.084 20.942 10.095 28.898 6.01 7.957 14.104 13.186 22.93 14.816 8.707 1.609 17.605-.383 25.248-5.643a.442.442 0 00.146-.557.45.45 0 00-.659-.173c-7.462 5.09-16.132 7.012-24.617 5.444-8.649-1.597-16.581-6.722-22.472-14.52-5.89-7.797-9.382-17.793-9.893-28.32-.51-10.527 1.991-20.946 7.088-29.517 5.096-8.57 12.479-14.775 20.914-17.576C48.783 3.544 57.76 4.315 65.78 8.53c8.02 4.216 14.597 11.62 18.633 20.976 3.988 9.248 5.255 19.849 3.598 30.07a.395.395 0 00.295.448z" fill="currentColor"/>
+        <path d="M34.5 49.75l21-21M33 39.25l12-12m30.5 58.5l3.5-3.5m4.5-7.5l2-4.5" stroke="currentColor" stroke-linecap="round"/>
+      </symbol>
+      <symbol id="chair" fill="none" viewBox="0 0 101 101" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0)" stroke="currentColor" stroke-linecap="round">
+          <path d="M78.5 42.25L76 25.75m-1-6l-.084-1.47c-.514-8.997-7.96-16.03-16.972-16.03h-16.04c-8.188 0-15.055 6.182-15.912 14.325L25.5 21.25l-3.5 22"/>
+          <path d="M28 59.75l-6.069 37.813a2.32 2.32 0 002.29 2.687v0a2.32 2.32 0 002.24-1.718L31.5 79.75l3.646-11.5m2.854-9l-2.854 9m0 0l2.817-1.94a6 6 0 013.404-1.06h18.148a7 7 0 012.843.603L65.5 67.25m0 0l-2-8m2 8l2 5.5m5.5-13.5l6.141 37.792a2.156 2.156 0 01-1.86 2.485v0a2.156 2.156 0 01-2.323-1.487L69 79.25m-36.5-38.5l-4.357.156a10 10 0 00-9.643 9.993v.35a8 8 0 008 8H74a8 8 0 008-8v-2.76a7 7 0 00-6.198-6.954L69 40.75c-5.5-.833-19.3-2.1-30.5-.5" stroke-linejoin="round"/></g><defs>
+          <clipPath id="clip0"><path fill="currentColor" transform="translate(.5 .75)" d="M0 0h100v100H0z"/></clipPath></defs>
+      </symbol>
+    </svg>
+    <header>
+      <div class="container">
+        <nav>
+          <div class="burger-btn">
+            <span></span>
+          </div>
+          <div class="top-header">
+            <div class="geo">
+              <span class="iconify" data-icon="bi:geo-alt-fill" data-inline="false"></span>
+              Москва
+            </div>
+            <div class="phone">
+              <span class="iconify" data-icon="bx:bxs-phone-call" data-inline="false"></span>
+              <a href="#">+7 (495) 021-15-82</a>
+            </div>
+          </div>
+          <a href="#" class="logo">
+            <img src="./img/logo.svg" alt="logo">
+          </a>
+          <ul>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Блог</a></li>
+            <li><a href="#">Контакты </a></li>
+          </ul>
+          <a href="#" class="basket">
+            <span class="iconify" data-icon="ph:shopping-cart" data-inline="false"></span>
+            <span>0</span>
+          </a>
+        </nav>
+      </div>
+    </header>
+    <section class="main-menu">
+      <div class="container">
+        <div class="main-menu__header">
+          <a href="tel:+74950211582" class="phone-menu"><span class="iconify" data-icon="bx:bxs-phone-call" data-inline="false"></span>+7 (495) 021-15-82</a>
+          <span class="logo">
+            <img src="./img/logo.svg" alt="logo">
+          </span>
+          <a href="#" class="main-menu__close">
+            <img src="./img/icons/close-menu.svg" alt="close-menu">
+          </a>
+        </div>
+        <div class="main-menu__body">
+          <div class="main-menu__col">
+            <nav class="main-nav">
+              <ul>
+                <li><a href="#">Каталог</a></li>
+                <li class="active"><a href="#">Оплата</a></li>
+                <li><a href="#">Гарантия</a></li>
+                <li><a href="#">Доставка</a></li>
+                <li><a href="#">Рассчитать стоимость мебели</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="main-menu__col">
+            <nav class="sub-menu">
+              <ul>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Блог</a></li>
+                <li><a href="#">Контакты </a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </section>
+    <main>
+      <section class="hero-main">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+                <div class="hero-body">
+                  <h1>Ваша мебель <br>
+                    высшего качества</h1>
+                    <a href="#" class="l-btn">РАСЧИТАТЬ СТОИМОСТЬ<span class="iconify" data-icon="bi:arrow-right-short" data-inline="false"></span></a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="decor-hero">
+                <img src="./img/hero-index.png" alt="hero-decor">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="slider-main">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="slider-main-intro">
+                <div class="main-title">
+                  <span>Производство</span>
+                  <h2>Полный цикл</h2>
+                </div>
+                <p>
+                  Повседневная практика показывает, что сложившаяся структура организации в значительной степени обуславливает создание форм развития. 
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="slider-main-wrapper">
+                <div class="slider-main__body">
+                  <img src="./img/slider-main/sl1.jpg" alt="slider image">
+                  <img src="./img/slider-main/sl1.jpg" alt="slider image">
+                  <img src="./img/slider-main/sl1.jpg" alt="slider image">
+                </div>
+                <div class="slider-num">
+
+                </div>
+                <div class="prev-b slider-main-prev"><span class="iconify" data-icon="cil:arrow-left" data-inline="false"></span></div>
+                <div class="next-b slider-main-next"><span class="iconify" data-icon="cil:arrow-right" data-inline="false"></span></div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 slider-text-block">
+              <div class="slider-description">
+                  <p>
+                    <span>Forest River</span> - мебельная мануфактура.
+                    Мы проектируем и производим авторскую мебель из ценных пород древесины в стиле: <br>
+                    <b>Loft, Live Edge и Industrial.</b>
+                  </p>
+              </div>
+              <div class="slider-description__footer">
+                <div class="slider-description__img">
+                  <img src="./img/slider-main/img-thumb1.jpg" alt="thumb-img">
+                </div>
+                <div class="slider-description__img">
+                  <img src="./img/slider-main/img-thumb2.jpg" alt="thumb-img">
+                </div>
+                <div class="slider-description__img">
+                  <img src="./img/slider-main/img-thumb3.jpg" alt="thumb-img">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="category">
+        <div class="container">
+          <div class="category-title main-title">
+            <span>Товары</span>
+            <h2>Категории</h2>
+          </div>
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <a class="nav-link active" id="tableTab" data-toggle="tab" href="#table-tab" role="tab" aria-controls="home" aria-selected="true">
+                <h3>столы</h3>
+                <svg class="table-big">
+                  <use xlink:href="#table-big"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link" id="table1Tab" data-toggle="tab" href="#table1-tab" role="tab" aria-controls="table1-tab" aria-selected="false">
+                <h3>столешницы</h3>
+                <svg class="table-min">
+                  <use xlink:href="#table-min"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link" id="mirrorTab" data-toggle="tab" href="#mirror-tab" role="tab" aria-controls="mirror-tab" aria-selected="false">
+                <h3>зеркала</h3>
+                <svg class="mirror">
+                  <use xlink:href="#mirror"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link" id="chairTab" data-toggle="tab" href="#chair-tab" role="tab" aria-controls="chair-tab" aria-selected="false">
+                <h3>стулья</h3>
+                <svg class="chair">
+                  <use xlink:href="#chair"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+          <div class="row product-row">
+            <div class="col-lg-4">
+              <div class="tab-description">
+                <div class="main-title">
+                  <span>Товары</span>
+                  <h2>Популярное</h2>
+                </div>
+                <p>
+                  Мы создаем шедевры из <br>
+                  натурального дерева по <br>
+                  индивидуальным проектам, при этом <br> 
+                  учитываем все пожелания клиента. 
+                </p>
+                <a href="#" class="l-btn">СМОТРЕТЬ КАТАЛОГ<span class="iconify" data-icon="bi:arrow-right-short" data-inline="false"></span></a>
+              </div>
+            </div>
+            <div class="col-lg-8">
+              <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="table-tab" role="tabpanel" aria-labelledby="table-tab">
+                  <div class="slider-tab-wrapper">
+                    <div class="slider-tab-body tab1">
+                      <div class="slider-tab__item">
+                        <div class="slider-tab__img">
+                          <img src="./img/cat1.png" alt="category">
+                        </div>
+                        <div class="slider-tab__footer">
+                          <h4>Стол Геракл</h4>
+                          <p>66 000 ₽</p>
+                        </div>
+                      </div>
+                      <div class="slider-tab__item">
+                        <div class="slider-tab__img">
+                          <img src="./img/cat2.png" alt="category">
+                        </div>
+                        <div class="slider-tab__footer">
+                          <h4>Стол Геракл</h4>
+                          <p>66 000 ₽</p>
+                        </div>
+                      </div>
+                      <div class="slider-tab__item">
+                        <div class="slider-tab__img">
+                          <img src="./img/cat1.png" alt="category">
+                        </div>
+                        <div class="slider-tab__footer">
+                          <h4>Стол Геракл</h4>
+                          <p>66 000 ₽</p>
+                        </div>
+                      </div>
+                      <div class="slider-tab__item">
+                        <div class="slider-tab__img">
+                          <img src="./img/cat1.png" alt="category">
+                        </div>
+                        <div class="slider-tab__footer">
+                          <h4>Стол Геракл</h4>
+                          <p>66 000 ₽</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slider-num-tab1">
+                    </div>
+                    <div class="prev-b slider-tab1-prev"><span class="iconify" data-icon="cil:arrow-left" data-inline="false"></span></div>
+                    <div class="next-b slider-tab1-next"><span class="iconify" data-icon="cil:arrow-right" data-inline="false"></span></div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="table1-tab" role="tabpanel" aria-labelledby="table1-tab">
+                  <div class="slider-tab-wrapper">
+                    <div class="slider-tab-body tab2">
+                      <div class="slider-tab__item">
+                        <div class="slider-tab__img">
+                          <img src="./img/cat1.png" alt="category">
+                        </div>
+                        <div class="slider-tab__footer">
+                          <h4>Стол Геракл</h4>
+                          <p>66 000 ₽</p>
+                        </div>
+                      </div>
+                      <div class="slider-tab__item">
+                        <div class="slider-tab__img">
+                          <img src="./img/cat2.png" alt="category">
+                        </div>
+                        <div class="slider-tab__footer">
+                          <h4>Стол Геракл</h4>
+                          <p>66 000 ₽</p>
+                        </div>
+                      </div>
+                      <div class="slider-tab__item">
+                        <div class="slider-tab__img">
+                          <img src="./img/cat1.png" alt="category">
+                        </div>
+                        <div class="slider-tab__footer">
+                          <h4>Стол Геракл</h4>
+                          <p>66 000 ₽</p>
+                        </div>
+                      </div>
+                      <div class="slider-tab__item">
+                        <div class="slider-tab__img">
+                          <img src="./img/cat1.png" alt="category">
+                        </div>
+                        <div class="slider-tab__footer">
+                          <h4>Стол Геракл</h4>
+                          <p>66 000 ₽</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slider-num-tab2">
+                    </div>
+                    <div class="prev-b slider-tab2-prev"><span class="iconify" data-icon="cil:arrow-left" data-inline="false"></span></div>
+                    <div class="next-b slider-tab2-next"><span class="iconify" data-icon="cil:arrow-right" data-inline="false"></span></div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="mirror-tab" role="tabpanel" aria-labelledby="mirror-tab">
+                  <div class="slider-tab-wrapper">
+                    <div class="slider-tab-body tab3">
+                      <div class="slider-tab__item">
+                        <div class="slider-tab__img">
+                          <img src="./img/cat1.png" alt="category">
+                        </div>
+                        <div class="slider-tab__footer">
+                          <h4>Стол Геракл</h4>
+                          <p>66 000 ₽</p>
+                        </div>
+                      </div>
+                      <div class="slider-tab__item">
+                        <div class="slider-tab__img">
+                          <img src="./img/cat2.png" alt="category">
+                        </div>
+                        <div class="slider-tab__footer">
+                          <h4>Стол Геракл</h4>
+                          <p>66 000 ₽</p>
+                        </div>
+                      </div>
+                      <div class="slider-tab__item">
+                        <div class="slider-tab__img">
+                          <img src="./img/cat1.png" alt="category">
+                        </div>
+                        <div class="slider-tab__footer">
+                          <h4>Стол Геракл</h4>
+                          <p>66 000 ₽</p>
+                        </div>
+                      </div>
+                      <div class="slider-tab__item">
+                        <div class="slider-tab__img">
+                          <img src="./img/cat1.png" alt="category">
+                        </div>
+                        <div class="slider-tab__footer">
+                          <h4>Стол Геракл</h4>
+                          <p>66 000 ₽</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slider-num-tab3">
+                    </div>
+                    <div class="prev-b slider-tab3-prev"><span class="iconify" data-icon="cil:arrow-left" data-inline="false"></span></div>
+                    <div class="next-b slider-tab3-next"><span class="iconify" data-icon="cil:arrow-right" data-inline="false"></span></div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="chair-tab" role="tabpanel" aria-labelledby="chair-tab">
+                  <div class="slider-tab-wrapper">
+                    <div class="slider-tab-body tab4">
+                      <div class="slider-tab__item">
+                        <div class="slider-tab__img">
+                          <img src="./img/cat1.png" alt="category">
+                        </div>
+                        <div class="slider-tab__footer">
+                          <h4>Стол Геракл</h4>
+                          <p>66 000 ₽</p>
+                        </div>
+                      </div>
+                      <div class="slider-tab__item">
+                        <div class="slider-tab__img">
+                          <img src="./img/cat2.png" alt="category">
+                        </div>
+                        <div class="slider-tab__footer">
+                          <h4>Стол Геракл</h4>
+                          <p>66 000 ₽</p>
+                        </div>
+                      </div>
+                      <div class="slider-tab__item">
+                        <div class="slider-tab__img">
+                          <img src="./img/cat1.png" alt="category">
+                        </div>
+                        <div class="slider-tab__footer">
+                          <h4>Стол Геракл</h4>
+                          <p>66 000 ₽</p>
+                        </div>
+                      </div>
+                      <div class="slider-tab__item">
+                        <div class="slider-tab__img">
+                          <img src="./img/cat1.png" alt="category">
+                        </div>
+                        <div class="slider-tab__footer">
+                          <h4>Стол Геракл</h4>
+                          <p>66 000 ₽</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slider-num-tab4">
+                    </div>
+                    <div class="prev-b slider-tab4-prev"><span class="iconify" data-icon="cil:arrow-left" data-inline="false"></span></div>
+                    <div class="next-b slider-tab4-next"><span class="iconify" data-icon="cil:arrow-right" data-inline="false"></span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="calculate">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="calculate-body">
+                <div class="main-title">
+                  <span>Услуги</span>
+                  <h2>Расчитать стоимость</h2>
+                </div>
+                <p>Заполните форму и наш менеджер свяжется  с  вами</p>
+                <form>
+                  <input type="name" placeholder="ВАШЕ ИМЯ">
+                  <input type="tel" placeholder="ВАШ НОМЕР ТЕЛЕФОНА">
+                  <button class="l-btn">
+                    отправить
+                    <span class="iconify" data-icon="bi:arrow-right-short" data-inline="false"></span>
+                  </button>
+                </form>
+                <div class="label-side">
+                  forest river
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="calculate-decor">
+                <img src="./img/group-calc.png" alt="calculate section image">
+                <div class="label-side right">
+                  forest river
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="advantages">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="advantages-card">
+                <div class="advantages-card__img">
+                  <img src="./img/ad1.png" alt="advantages icon">
+                </div>
+                <h2>
+                  оплата
+                </h2>
+                <ol>
+                  <li>
+                    Заключаем договор
+                  </li>
+                  <li>
+                    Оплата банковской картой, наличными или безналичный перевод.
+                  </li>
+                </ol>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="advantages-card">
+                <div class="advantages-card__img">
+                  <img src="./img/ad2.png" alt="advantages icon">
+                </div>
+                <h2>
+                  гарантия
+                </h2>
+                <ol>
+                  <li>
+                    По Москве - бесплатно.
+                  </li>
+                  <li>
+                    По РФ - транспортной компанией и рассчитывается индивидуально.
+                  </li>
+                </ol>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="advantages-card">
+                <div class="advantages-card__img">
+                  <img src="./img/ad3.png" alt="advantages icon">
+                </div>
+                <h2>
+                  доставка
+                </h2>
+                <ol>
+                  <li>
+                    Гарантия на изделия - 1 год.
+                  </li>
+                  <li>
+                    После истечения срока мы всегда на связи, и не оставим Вас с проблемой если она случится.
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="blog">
+        <div class="container">
+          <div class="row">
+            <div class="blog-info">
+              <div class="main-title">
+                <span>Статьи</span>
+                <h2>Блог</h2>
+              </div>
+              <p>
+                Ведение бизнеса и развитие в разных направлениях позволило нам, как производству, сформировать аутентичное мировоззрение, создать и наследовать собственную философию. 
+                Ведение бизнеса и развитие в разных направлениях позволило нам, как производству, 
+              </p>
+              <a href="#" class="l-btn">СМОТРЕТЬ все статьи<span class="iconify" data-icon="bi:arrow-right-short" data-inline="false"></span></a>
+            </div>
+            <div class="blog-cards">
+              <div class="blog-cards-card">
+                <div class="blog-cards-card__img">
+                  <img src="./img/blog1.png" alt="blog content image">
+                </div>
+                <a href="#">Как покрасить мебель из дерева</a>
+                <span>05.03.2021</span>
+              </div>
+              <div class="blog-cards-card">
+                <div class="blog-cards-card__img">
+                  <img src="./img/blog2.png" alt="blog content image">
+                </div>
+                <a href="#">Как покрасить мебель из дерева</a>
+                <span>05.03.2021</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="map">
+        <div class="container">
+          <div class="main-title">
+            <span>Коммуникация</span>
+            <h2>Как нас найти?</h2>
+          </div>
+          <div class="row">
+            <div class="map-body">
+              <img src="./img/map.png" alt="">
+            </div>
+            <div class="map-adress">
+                <div class="map-adress-block">
+                  <h2>НАШ ОФИС</h2>
+                  <span>Москва, ул. Вавила 15</span>
+                  <p>c 8:00 до 18:00</p>
+                </div>
+                <div class="map-adress-block">
+                  <h2>СВЯЗЬ С НАМИ</h2>
+                  <span>+7 (495) 021-15-82</span>
+                  <p>admin@admib.com</p>
+                </div>
+                <div class="map-adress-block">
+                  <h2>НАШЕ ПРОИЗВОДСТВО</h2>
+                  <span>Москва, ул. Вавила 15</span>
+                  <p>c 8:00 до 18:00</p>
+                  <ul>
+                    <li>Ген.директор: Семнов Семен Семнович</li>
+                    <li>ИНН: 776586138</li>
+                    <li>КПП: 7956087001</li>
+                    <li>ОГРН: 116706958740</li>
+                    <li>р/с: 407465782342000967</li>
+                    <li>Банк: АО «АЛЬФА-БАНК»</li>
+                  </ul>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-top">
+        <div class="container">
+          <div class="footer-top__row">
+            <span><span class="iconify" data-icon="bi:geo-alt-fill" data-inline="false"></span>Москва, ул. Вавила 15</span>
+            <a href="tel:+74950211582"><span class="iconify" data-icon="bx:bxs-phone-call" data-inline="false"></span>+7 (495) 021-15-82</a>
+            <a href="mailto:admin@admib.com"><span class="iconify" data-icon="fluent:mail-28-filled" data-inline="false"></span>admin@admib.com</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3">
+              <div class="logo-footer">
+                <img src="./img/logo-footer.svg" alt="logo footer">
+                <span>© 2021 FOREST RIVER</span>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="menu-block">
+                <nav>
+                  <h2>КАТАЛОГ</h2>
+                  <ul>
+                    <li><a href="#">Столы</a></li>
+                    <li><a href="#">Столешницы</a></li>
+                    <li><a href="#">Зеркала</a></li>
+                    <li><a href="#">Стулья</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="menu-block">
+                <nav>
+                  <h2>КАК ПРИОБРЕСТИ</h2>
+                  <ul>
+                    <li><a href="#">Оформление заказа</a></li>
+                    <li><a href="#">Оплата</a></li>
+                    <li><a href="#">Доставка</a></li>
+                    <li><a href="#">Возврат</a></li>
+                    <li><a href="#">Гарантия</a></li>
+                    <li><a href="#">Акции и скидки</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="menu-block">
+                <nav>
+                  <h2>ИНФОРМАЦИЯ</h2>
+                  <ul>
+                    <li><a href="#">О компании</a></li>
+                    <li><a href="#">Наше производство</a></li>
+                    <li><a href="#">Частые вопросы</a></li>
+                    <li><a href="#">Блог</a></li>
+                    <li><a href="#">Контакты</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js" integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <script src="./js/slick.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

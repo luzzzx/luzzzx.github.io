@@ -1595,7 +1595,8 @@ input:focus {
   color: #4E4E4E;
 }
 
-.main-menu__col .sub-menu ul li a:hover {
+.main-menu__col .sub-menu ul li a:hover,
+.main-menu__col .sub-menu ul li a.active {
   font-style: normal;
   font-weight: 500;
   font-size: 22px;
@@ -4713,12 +4714,22 @@ footer {
 
   .main-menu::before {
     content: '';
-    background: #F5F2F2;
-    width: 40%;
+    background: #F5F2F2 url("../img/icons/forest-menu.svg") right no-repeat;
+    background-size: contain;
+    width: 29%;
     height: 100%;
     position: absolute;
     top: 0;
     right: 0;
+  }
+
+  .main-menu__close {
+    width: 22px;
+    height: 22px;
+  }
+
+  .main-menu__close img {
+    width: 100%;
   }
 
   .main-menu__header .phone-menu {

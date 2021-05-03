@@ -1560,6 +1560,9 @@ input:focus {
   -webkit-transition: ease-in-out .3s;
   -o-transition: ease-in-out .3s;
   transition: ease-in-out .3s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .main-menu__col .sub-menu {
@@ -4775,12 +4778,17 @@ footer {
     font-size: 18px;
     padding-left: 41px;
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 60%;
-            flex: 0 0 60%;
+        -ms-flex: 0 0 228px;
+            flex: 0 0 228px;
+    max-width: 228px;
   }
 
   .main-menu__col .main-nav ul li a {
     font-size: 18px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 208px;
+            flex: 0 0 208px;
+    max-width: 208px;
   }
 
   .main-menu__col .sub-menu {

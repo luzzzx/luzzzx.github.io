@@ -31,6 +31,9 @@ $(document).ready(function () {
         e.preventDefault();
         $(this).parent().find("[data-text=toggle]").toggleClass('active'); 
         $(this).toggleClass('active');
+        $('html,body').animate({
+                scrollTop:  $(this).parent().find("[data-text=toggle]").offset().top},
+                'slow');
         if  ($('.btn-more').hasClass('active')) {
             $(this).find('span').text('Скрыть')
         } else {

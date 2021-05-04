@@ -1299,6 +1299,10 @@ footer {
   min-height: 100%;
 }
 
+.select-body__row-item.active {
+  border: 1px solid #19A15F;
+}
+
 .select-body__row-item:hover {
   border: 1px solid #19A15F;
 }
@@ -5485,6 +5489,13 @@ select:focus {
           flex: 0 0 376px;
   height: 246px;
   margin-right: 28px;
+  position: relative;
+}
+
+.blog-main .blog-item__img .save-icon {
+  position: absolute;
+  top: -7px;
+  left: -7px;
 }
 
 .blog-main .blog-item__img img {
@@ -6398,8 +6409,14 @@ a:hover {
 }
 
 .our-props__body .our-props__footer a {
+  font-size: 14px;
   color: #19A15F;
   text-decoration: underline;
+}
+
+.our-props__body .our-props__footer a img {
+  width: 10px;
+  height: 10px;
 }
 
 .our-props-card {
@@ -6754,7 +6771,6 @@ a:hover {
   font-size: 18px;
   line-height: 160%;
   color: #19A15F;
-  text-decoration: underline;
 }
 
 .text blockquote {
@@ -6954,6 +6970,7 @@ a:hover {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    padding: 15px;
   }
 
   header .top-nav .logo-header {
@@ -7218,6 +7235,30 @@ a:hover {
         -ms-flex: 0 0 102px;
             flex: 0 0 102px;
   }
+
+  .comments-map-row .map-block {
+    max-width: 212px;
+  }
+
+  .comments-map-row .map-block .comments-map-row__img {
+    margin-right: 12px;
+  }
+
+  .comments-map-row .map-block .comments-map-row__curr p {
+    font-size: 30px;
+  }
+
+  .comments-map-row .map-block .comments-map-row__curr span {
+    font-size: 20px;
+    top: -6px;
+  }
+
+  .comments-map-row .map-block .comments-map-row__descrip p {
+    font-size: 14px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 63px;
+            flex: 0 0 63px;
+  }
 }
 
 @media (max-width: 760px) {
@@ -7313,6 +7354,10 @@ a:hover {
 
   .devices-choose {
     padding: 60px 0;
+  }
+
+  .form-application {
+    padding: 40px 0 30px 0;
   }
 
   .form-application h2 {
@@ -7535,6 +7580,10 @@ a:hover {
     font-size: 14px;
   }
 
+  #request-app {
+    padding: 0px 35px;
+  }
+
   #order-sale select,
   #request-app select,
   #comments select {
@@ -7544,7 +7593,8 @@ a:hover {
   #order-sale input,
   #request-app input,
   #comments input {
-    padding: 5px 35px;
+    padding: 5px 21px;
+    font-size: 14px;
   }
 
   #order-sale .sale-field,
@@ -7641,6 +7691,21 @@ a:hover {
 
   .change-hero .steps {
     white-space: nowrap;
+  }
+
+  .change-step__one .row-item__img {
+    width: 76px;
+    height: 103px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 103px;
+            flex: 0 0 103px;
+  }
+
+  .change-step__one .row-item__img img {
+    -o-object-fit: contain;
+       object-fit: contain;
+    height: 100%;
+    width: 100%;
   }
 
   .step-title {
@@ -8112,6 +8177,10 @@ a:hover {
     font-size: 14px;
   }
 
+  .curr-sale {
+    margin-bottom: 40px;
+  }
+
   .curr-sale h2 {
     font-size: 18px;
   }
@@ -8120,6 +8189,10 @@ a:hover {
     width: 24px;
     height: 24px;
     font-size: 18px;
+  }
+
+  .curr-sale__row::-webkit-scrollbar {
+    display: none;
   }
 
   .sale-section .sale-body {
@@ -8341,6 +8414,7 @@ a:hover {
 
   .comments-pane h2 {
     font-size: 28px;
+    margin-bottom: 5px;
   }
 
   .container {
@@ -8351,13 +8425,18 @@ a:hover {
     padding: 0 25px;
   }
 
-  .btn-more {
-    width: 100%;
+  .btn-more:hover {
+    background: #19A15F;
+    color: #FFFFFF;
   }
 
   .main-title {
     font-size: 28px;
     position: relative;
+  }
+
+  .main-title.hello-title {
+    white-space: nowrap;
   }
 
   .main-title .hand-icon {
@@ -8396,7 +8475,7 @@ a:hover {
   }
 
   .services {
-    padding: 70px 0;
+    padding: 70px 0 30px 0;
   }
 
   .services-row {
@@ -8447,6 +8526,7 @@ a:hover {
 
   .our-props__body .our-props__footer span {
     margin-right: 0;
+    font-size: 14px;
   }
 
   .our-props-card {
@@ -8558,6 +8638,11 @@ a:hover {
 
   .text h1 {
     font-size: 28px;
+    margin-bottom: 18px;
+  }
+
+  .text img {
+    margin-bottom: 19px;
   }
 
   .text h2 {
@@ -8566,6 +8651,11 @@ a:hover {
 
   .text p {
     font-size: 14px;
+    margin-bottom: 25px;
+  }
+
+  .text ul {
+    padding-left: 20px;
   }
 
   .text ul li h3 {
@@ -8580,13 +8670,17 @@ a:hover {
     padding: 30px;
   }
 
+  .text-header {
+    margin-bottom: 26px;
+  }
+
   .text-header p {
     font-size: 14px;
     margin-right: 20px;
   }
 
   .text-header a {
-    font-size: 14px;
+    font-size: 0;
   }
 
   .text .tags {

@@ -416,7 +416,16 @@
                             <span>Стоимость / Гарантия</span>
                         </div>
                         <div class="price-tab-body">
-                            <h2>Выберите услуги</h2>
+                            <div class="price-tab-header">
+                              <h2>Выберите услуги</h2>
+                            </div>
+                            <div class="price-tab-header__mobile">
+                              <h2>Выберите услуги</h2>
+                              <div class="price-tab-header__row">
+                                <span>Вид работ</span>
+                                <span>Стоимость</span>
+                              </div>
+                            </div>
                             <div class="custom-control custom-checkbox">
                                 <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
                                 <label class="custom-control-label" for="customCheck">
@@ -430,7 +439,8 @@
                                     <div class="label-footer">
                                         <span>от 30 минут</span>
                                         <div class="label-price">
-                                            <span>Бесплатно</span>
+                                            <!-- <span class="price-caption"><span class="old-price">8 500 ₽</span> / Гарантия</span> -->
+                                            <span>4 500 ₽ / 90 дней</span>
                                             <i class="icon-basket"></i>
                                         </div>
                                     </div>
@@ -868,7 +878,6 @@
       <section class="form-application">
           <div class="form-application__body">
               <h2>Оформить заявку на ремонт и получить персональную скидку</h2>
-              <p>Напишите свой номер телефона, мы вам перезвоним</p>
               <form id='order-sale'>
                   <input type="tel" placeholder="Введите ваш номер*" required>
                   <input type="name" placeholder="Введите ваше имя*" required>

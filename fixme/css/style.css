@@ -2462,8 +2462,8 @@ footer {
 
 .devices-select-model__mobile .select-model__block-body .select-model__img {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 57px;
-          flex: 0 0 57px;
+      -ms-flex: 0 0 44px;
+          flex: 0 0 44px;
   margin-right: 20px;
 }
 
@@ -2589,6 +2589,10 @@ footer {
   color: #C9C9C9;
 }
 
+.price-tabs .price-tab-header__mobile {
+  display: none;
+}
+
 .price-tabs .price-tab-body {
   background: #FFFFFF;
   border-radius: 15px;
@@ -2596,7 +2600,7 @@ footer {
   margin-bottom: 30px;
 }
 
-.price-tabs .price-tab-body h2 {
+.price-tabs .price-tab-body .price-tab-header h2 {
   font-style: normal;
   font-weight: bold;
   font-size: 28px;
@@ -2618,12 +2622,54 @@ footer {
   padding-left: 28px;
 }
 
+.price-tabs .price-tab-body .custom-checkbox label .label-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .price-tabs .price-tab-body .custom-checkbox label .label-title h3 {
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
   line-height: 133.5%;
   color: #000000;
+  margin-bottom: 0;
+  margin-right: 9px;
+}
+
+.price-tabs .price-tab-body .custom-checkbox label .label-title .fire {
+  margin: 0 9px 3px 9px;
+}
+
+.price-tabs .price-tab-body .custom-checkbox label .label-title .tool {
+  margin-right: 9px;
+  margin-bottom: 3px;
+}
+
+.price-tabs .price-tab-body .custom-checkbox label .label-title .sale-label {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 27px;
+  color: #FFFFFF;
+  background: #19A15F;
+  border-radius: 20px;
+  padding: 4px 13px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 35px;
+  margin-bottom: 3px;
 }
 
 .price-tabs .price-tab-body .custom-checkbox label p {
@@ -2645,6 +2691,27 @@ footer {
 
 .price-tabs .price-tab-body .custom-checkbox label .label-footer .label-price {
   margin-left: auto;
+  position: relative;
+}
+
+.price-tabs .price-tab-body .custom-checkbox label .label-footer .label-price .price-caption {
+  position: absolute;
+  top: -13px;
+  left: 9px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 133.5%;
+  color: #BEBEBE;
+}
+
+.price-tabs .price-tab-body .custom-checkbox label .label-footer .label-price .price-caption .old-price {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 133.5%;
+  color: #BEBEBE;
+  text-decoration: line-through;
 }
 
 .price-tabs .price-tab-body .custom-checkbox label .label-footer span {
@@ -2887,6 +2954,12 @@ footer {
   font-size: 18px;
   line-height: 21px;
   color: #BEBEBE;
+}
+
+#order-sale input,
+#request-app input,
+#comments input {
+  font-family: 'Roboto';
 }
 
 #order-sale button[type=submit],
@@ -5398,6 +5471,8 @@ select:focus {
   line-height: 116.4%;
   text-align: center;
   color: #FFFFFF;
+  max-width: 527px;
+  margin: 0 auto;
   margin-bottom: 26px;
 }
 
@@ -5458,7 +5533,7 @@ select:focus {
 }
 
 .blog-main .blog-item {
-  padding: 44px;
+  padding: 0 44px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5469,6 +5544,9 @@ select:focus {
 .blog-main .blog-item.active {
   background: #272727;
   border-radius: 10px;
+  margin-right: -25px;
+  margin-left: -25px;
+  padding: 44px;
 }
 
 .blog-main .blog-item.active .blog-item__text span {
@@ -7259,6 +7337,10 @@ a:hover {
         -ms-flex: 0 0 63px;
             flex: 0 0 63px;
   }
+
+  .hero-section .hero-section-body h3 {
+    margin-bottom: 23px;
+  }
 }
 
 @media (max-width: 760px) {
@@ -7347,7 +7429,7 @@ a:hover {
     font-size: 18px;
   }
 
-  .fix-hero__body a {
+  .fix-hero__body a .white-btn {
     background: #FFFFFF;
     color: #272727;
   }
@@ -7358,6 +7440,10 @@ a:hover {
 
   .form-application {
     padding: 40px 0 30px 0;
+  }
+
+  .form-application__body {
+    padding: 0 35px;
   }
 
   .form-application h2 {
@@ -7459,8 +7545,17 @@ a:hover {
     font-size: 14px;
   }
 
+  .map .map-main {
+    height: 187px;
+    margin-left: -25px;
+    margin-right: -25px;
+  }
+
   .map .map-info {
     padding: 20px;
+    border: none;
+    margin-left: -25px;
+    margin-right: -25px;
   }
 
   .map .map-info__img img {
@@ -7510,6 +7605,10 @@ a:hover {
     display: block;
   }
 
+  .devices-select-model__mobile .select-model-search {
+    margin-bottom: 10px;
+  }
+
   .price-tabs-nav .nav-link {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -7526,14 +7625,82 @@ a:hover {
 
   .price-tabs .price-tabs__descrip {
     padding: 40px 0 0 0;
+    display: none;
   }
 
-  .price-tabs .price-tab-body h2 {
+  .price-tabs .price-tab-header__mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .price-tabs .price-tab-header__mobile h2 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 150%;
+    color: #000000;
+    margin-bottom: 7px;
+  }
+
+  .price-tabs .price-tab-header__mobile .price-tab-header__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 16px;
+  }
+
+  .price-tabs .price-tab-header__mobile .price-tab-header__row span {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 150%;
+    color: #C9C9C9;
+  }
+
+  .price-tabs .price-tab-body .price-tab-header {
+    display: none;
+  }
+
+  .price-tabs .price-tab-body .price-tab-header h2 {
     padding: 0;
+  }
+
+  .price-tabs .price-tab-body .custom-checkbox {
+    margin-right: -25px;
+    margin-left: -25px;
+    padding: 21px 35px;
+  }
+
+  .price-tabs .price-tab-body .custom-checkbox label .label-title {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
   }
 
   .price-tabs .price-tab-body .custom-checkbox label .label-title h3 {
     font-size: 18px;
+    margin-bottom: 3px;
+  }
+
+  .price-tabs .price-tab-body .custom-checkbox label .label-title .sale-label {
+    font-size: 14px;
+    line-height: 21px;
   }
 
   .price-tabs .price-tab-body .custom-checkbox label p {
@@ -7554,6 +7721,11 @@ a:hover {
 
   .price-tabs .price-tab-body .custom-checkbox label .label-footer span {
     font-size: 14px;
+  }
+
+  .price-tabs .price-tab-body .custom-control-label::before {
+    width: 21px;
+    height: 21px;
   }
 
   .price-tabs .collapse-card .btn-less {
@@ -7594,13 +7766,14 @@ a:hover {
   #request-app input,
   #comments input {
     padding: 5px 21px;
-    font-size: 14px;
+    font-size: 16px;
+    line-height: 19px;
   }
 
   #order-sale .sale-field,
   #request-app .sale-field,
   #comments .sale-field {
-    padding: 18px 0;
+    padding: 0 0 20px 0;
   }
 
   #order-sale .sale-field p,
@@ -7613,6 +7786,7 @@ a:hover {
   #request-app .sale-field p span,
   #comments .sale-field p span {
     font-size: 18px;
+    font-weight: bold;
   }
 
   #order-sale .sale-field a,
@@ -7639,6 +7813,63 @@ a:hover {
     font-size: 18px;
   }
 
+  #comments textarea {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000;
+    padding: 20px;
+    height: 57px;
+    margin-bottom: 30px;
+  }
+
+  #comments textarea::-webkit-input-placeholder {
+    color: #999999;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  #comments textarea::-moz-placeholder {
+    color: #999999;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  #comments textarea:-ms-input-placeholder {
+    color: #999999;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  #comments textarea::-ms-input-placeholder {
+    color: #999999;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  #comments textarea::placeholder {
+    color: #999999;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
   .problem-body__row {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -7656,6 +7887,18 @@ a:hover {
     margin: 2px;
   }
 
+  .problem-body__row .select-body__row-item .row-item__img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .problem-body__row .select-body__row-item .row-item__img img {
+    width: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+    height: 100%;
+  }
+
   .problem-window .btn-next {
     margin-left: 0;
     margin-bottom: 20px;
@@ -7669,8 +7912,18 @@ a:hover {
     width: 100%;
   }
 
+  .change-hero {
+    min-height: 381px;
+  }
+
+  .change-hero__body {
+    padding: 57px 0 12px 0;
+  }
+
   .change-hero__body h1 {
     font-size: 28px;
+    line-height: 116.4%;
+    margin-bottom: 37px;
   }
 
   .change-hero__label {
@@ -7679,6 +7932,7 @@ a:hover {
     -webkit-box-pack: unset;
         -ms-flex-pack: unset;
             justify-content: unset;
+    height: 68px;
   }
 
   .change-hero__label p {
@@ -7716,6 +7970,10 @@ a:hover {
     margin: 0;
   }
 
+  .faq .faq-main-card {
+    margin-bottom: 34px;
+  }
+
   .faq .faq-main-card span {
     width: 30px;
     height: 30px;
@@ -7727,10 +7985,12 @@ a:hover {
 
   .faq .faq-main-card__text h4 {
     font-size: 14px;
+    line-height: 114.4%;
   }
 
   .faq .faq-main-card__text p {
     font-size: 14px;
+    line-height: 114.4%;
   }
 
   .faq .faq-main__text-block {
@@ -7740,20 +8000,24 @@ a:hover {
   .faq .faq-main__text h1 {
     font-size: 28px;
     font-weight: normal;
+    margin-bottom: 17px;
   }
 
   .faq .faq-main__text p {
     font-size: 16px;
+    line-height: 102.4%;
   }
 
   .faq .faq-main__text h2 {
     font-size: 24px;
     font-weight: normal;
+    margin-bottom: 17px;
   }
 
   .faq .faq-main__text h3 {
     font-size: 20px;
     font-weight: normal;
+    margin-bottom: 17px;
   }
 
   .fullcard-wrapper {
@@ -7989,12 +8253,51 @@ a:hover {
 
   .adress-hero__body,
   .comments-hero__body {
-    padding: 45px 0;
+    padding: 40px 0 30px 0;
   }
 
   .adress-hero__body h1,
   .comments-hero__body h1 {
     font-size: 28px;
+    margin-bottom: 14px;
+    line-height: 116.4%;
+  }
+
+  .adress-hero__body .nav .nav-item,
+  .comments-hero__body .nav .nav-item {
+    margin: 8px 10px;
+  }
+
+  .adress-hero__body .nav .nav-link,
+  .comments-hero__body .nav .nav-link {
+    width: 194px;
+    padding: 10px 10px 10px 33px;
+  }
+
+  .adress-hero__body .nav .nav-link .number,
+  .comments-hero__body .nav .nav-link .number {
+    width: 15px;
+    height: 15px;
+    font-size: 12px;
+    line-height: 102.4%;
+    min-width: 15px;
+  }
+
+  .adress-hero__body .nav .nav-link h4,
+  .comments-hero__body .nav .nav-link h4 {
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 102.4%;
+  }
+
+  .adress-hero__body .nav .nav-link span,
+  .comments-hero__body .nav .nav-link span {
+    font-size: 12px;
+  }
+
+  .adress-hero__body .nav .nav-link .icon-chevron,
+  .comments-hero__body .nav .nav-link .icon-chevron {
+    font-size: 9px;
   }
 
   .adress-main {
@@ -8133,6 +8436,38 @@ a:hover {
     display: none;
   }
 
+  .promo-hero {
+    min-height: 319px;
+  }
+
+  .promo-hero__body {
+    padding: 57px 0 0 0;
+  }
+
+  .promo-hero__body h1 {
+    font-size: 28px;
+    line-height: 116.4%;
+    margin-bottom: 33px;
+  }
+
+  .promo-hero__body h1 span {
+    font-size: 28px;
+    line-height: 116.4%;
+  }
+
+  .promo-hero__row {
+    max-width: 222px;
+  }
+
+  .promo-hero__row a {
+    margin-right: 14px;
+  }
+
+  .promo-hero__row a img {
+    width: 40px;
+    height: 40px;
+  }
+
   .curr-promo .curr-promo-row {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -8144,6 +8479,7 @@ a:hover {
 
   .curr-promo h2 {
     font-size: 18px;
+    margin-bottom: 20px;
   }
 
   .curr-promo h2 span {
@@ -8153,7 +8489,8 @@ a:hover {
   }
 
   .curr-promo__card {
-    padding: 10px;
+    padding: 14px;
+    margin-bottom: 16px;
   }
 
   .curr-promo__card .curr-promo__img {
@@ -8332,6 +8669,14 @@ a:hover {
     font-size: 14px;
   }
 
+  .blog-hero {
+    min-height: 381px;
+  }
+
+  .blog-hero__body {
+    padding: 57px 0 12px 0;
+  }
+
   .blog-hero__body h1 {
     font-size: 28px;
   }
@@ -8374,10 +8719,12 @@ a:hover {
 
   .blog-main .blog-item__text h2 {
     font-size: 18px;
+    line-height: 116.4%;
   }
 
   .blog-main .blog-item__text p {
     font-size: 14px;
+    line-height: 116.4%;
   }
 
   .blog-main .blog-item__text a {
@@ -8386,6 +8733,15 @@ a:hover {
 
   .btn-more-news {
     margin: 0 auto 25px auto;
+  }
+
+  .filter-btn {
+    font-size: 14px;
+  }
+
+  .filter-btn img {
+    width: 25px;
+    height: 25px;
   }
 
   .filter-nav.active {
@@ -8484,6 +8840,9 @@ a:hover {
 
   .services-card {
     text-align: center;
+    max-width: 278px;
+    width: 100%;
+    margin: 0 auto;
   }
 
   .about {
@@ -8551,6 +8910,10 @@ a:hover {
             flex: 0 0 65%;
   }
 
+  .our-props-card__title span {
+    padding: 2px 10px;
+  }
+
   .our-props-card__full-img img {
     width: 100%;
   }
@@ -8558,7 +8921,6 @@ a:hover {
   .our-props-card__img {
     width: 74px;
     height: 95px;
-    margin-left: auto;
   }
 
   .our-props-card__img img {
@@ -8566,6 +8928,17 @@ a:hover {
     width: 100%;
     -o-object-fit: contain;
        object-fit: contain;
+  }
+
+  .our-props-card__text ul {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .our-props-card__text ul li a {
+    font-size: 14px;
+    line-height: 150%;
   }
 
   .our-props-card__text ul li {

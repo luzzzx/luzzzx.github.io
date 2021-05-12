@@ -33,8 +33,6 @@
             <div class="container">
                 <div class="hero-block__img">
                     <picture>
-                        <!-- <source media="(max-width: 799px)" srcset="./img/select/i2-mobile.png">
-                        <source media="(min-width: 800px)" srcset="./img/select/i2.png"> -->
                         <img src="./img/hero-image.jpg" width="632" height="360">
                     </picture>
                 </div>
@@ -74,13 +72,19 @@
                             </div>
                         </div>
                         <div class="trends-block__img">
-                            <img src="./img/half1.png" width="170" height="220" alt="decor image">
+                            <picture>
+                                <source media="(max-width: 767px)" width="100" height="130" srcset="./img/half1.png">
+                                <img src="./img/half1.png" width="170" height="220" alt="decor image">
+                            </picture>
                         </div>
                     </div>
                     <span class="plus">+</span>
                     <div class="trends-block right">
                         <div class="trends-block__img">
-                            <img src="./img/half2.png" width="170" height="220" alt="decor image">
+                            <picture>
+                                <source media="(max-width: 767px)" width="100" height="130" srcset="./img/half2.png">
+                                <img src="./img/half2.png" width="170" height="220" alt="decor image">
+                            </picture>
                         </div>
                         <div class="trends-block__body">
                             <h2>Live Trading Chat Room</h2>
@@ -90,14 +94,14 @@
                                 <li>Ask your questions and get detailed answers</li>
                                 <li>OOne month access</li>
                             </ul>
-                        </div>
-                        <div class="trends-block__mobile">
-                            <h2>How it works?</h2>
-                            <ul>
-                                <li>You can watch professionals in the chat room and get access to their insights and input every day between 9:30am and 4pm every trading day</li>
-                                <li>No latency, you can watch the traders as they click on the “Buy” and “Sell” buttons</li>
-                                <li>Become a part of a community of day traders who support, discuss, and encourage one another.</li>
-                            </ul>
+                            <div class="trends-block__mobile">
+                                <h2>How it works?</h2>
+                                <ul>
+                                    <li>You can watch professionals in the chat room and get access to their insights and input every day between 9:30am and 4pm every trading day</li>
+                                    <li>No latency, you can watch the traders as they click on the “Buy” and “Sell” buttons</li>
+                                    <li>Become a part of a community of day traders who support, discuss, and encourage one another.</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -108,31 +112,80 @@
             </div>
         </section>
         <section class="get-now">
-            <div class="container">
+            <div id="form-section" class="container">
                 <h2>GET YOUR Tradenet <br> Simulator Now!</h2>
-                <form action="" id="main-form">
+                <form id="main-form">
                     <h3>
                         Make sure your details are entered accurately <br>
                         Tradenet will reject any incorrectly filled applications
                     </h3>
                     <div class="form-inputs">
-                        <input type="name" id="name" placeholder="Name">
-                        <select name="country" id="country">
-                            <option value="">Country</option>
-                            <option value="">Country</option>
-                            <option value="">Country</option>
-                            <option value="">Country</option>
+                        <input  type="name" id="name" name="name" placeholder="Name" required>
+                        <select name="country" id="address-country" required>
                         </select>
-                        <input type="email" id="email" placeholder="Email">
-                        <input type="tel" id="phone">
+                        <input type="email" name="email" id="email" placeholder="Email" required>
+                        <input type="tel" name="tel" id="phone" required>
                     </div>
                     <label class="checkbox" for="check">
-                        <input type="checkbox" id="check">
+                        <input class="short" type="checkbox" name="checkbox" value="true" id="check" required>
                         <span class="mark"></span>
                         I consent to receive promotional materials from time to time. I, hereby declare that I have read, understood and accepted the Company‘s <span>Terms Conditions | Privacy policy and cookie policy</span>
                     </label>
                     <button type="submit" class="main-btn">GET NOW</button>
                 </form>
+            </div>
+            <div id="afterform-section" class="container">
+                 <div class="card-section">
+                    <h2>That’s it!</h2>
+                    <h3>Thank you for choosing us! Check our resources <br> and dive in the world of day trading now!</h3>
+                    <div class="cards-row">
+                        <div class="cards-row__item">
+                            <div class="item-img">
+                                <picture>
+                                    <source media="(max-width: 767px)" srcset="./img/sl1-mob.png">
+                                    <img src="./img/sl1.png" alt="card bg">
+                                </picture>
+                            </div>
+                            <div class="item-text">
+                                <h4>Free Сourse</h4>
+                                <p>
+                                    Take our free course 
+                                    and start your day trading journey today!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="cards-row__item">
+                            <div class="item-img">
+                                <picture>
+                                    <source media="(max-width: 767px)" srcset="./img/sl3-mob.png">
+                                    <img src="./img/sl2.png" alt="card bg">
+                                </picture>
+                            </div>
+                            <div class="item-text">
+                                <h4>Trading challenge</h4>
+                                <p>
+                                    Take the 5-day challenge
+                                    and win amazing prizes
+                                </p>
+                            </div>
+                        </div>
+                        <div class="cards-row__item">
+                            <div class="item-img">
+                                <picture>
+                                    <source media="(max-width: 767px)" srcset="./img/sl2-mob.png">
+                                    <img src="./img/sl3.png" alt="card bg">
+                                </picture>
+                            </div>
+                            <div class="item-text">
+                                <h4>Tradenet 
+                                    Stock Talks </h4>
+                                <p>
+                                    Join our Facebook community of successful traders and learn from the best
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <section class="info-text">
@@ -213,7 +266,7 @@
                 </p>
             </div>
             <div class="footer-bottom">
-                <a href="#">
+                <a class="logo" href="#">
                     <img src="./img/logo.svg" width="94" height="34" alt="logo">
                 </a>
                 <div class="footer-bottom__terms">
@@ -226,6 +279,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js" integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ==" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/js/utils.js" integrity="sha512-bUcJxlqkiGA3cmoYPuZaLRsyc5ChG9APG4ajom2AXKSlBtOmx4kLV3c8uv/6uSz43FMjI4Q2QI21+D223rT76w==" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/js/intlTelInput.js" integrity="sha512-lib7WdJvAnfLLBi5AHdN+wUkcWwpu1fmYzyEHQijZq7WedcwBiwdVNbcML2rAtKvwtOIU7thMGB+O9Kpb9g2Cw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.serializeJSON/3.2.1/jquery.serializejson.min.js" integrity="sha512-SdWDXwOhhVS/wWMRlwz3wZu3O5e4lm2/vKK3oD0E5slvGFg/swCYyZmts7+6si8WeJYIUsTrT3KZWWCknSopjg==" crossorigin="anonymous"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>

@@ -48,3 +48,7 @@ $("#main-form").on( "submit", function( event ) {
     var formData = $("#main-form").serializeJSON();
     console.log(formData);
 });
+
+$(document).ready(function () {
+  AOS.init();
+});

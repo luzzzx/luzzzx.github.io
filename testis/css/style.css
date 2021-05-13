@@ -2268,6 +2268,13 @@ footer {
 
 .footer-social ul li a {
   font-size: 0;
+  -webkit-transition: linear .3s;
+  -o-transition: linear .3s;
+  transition: linear .3s;
+}
+
+.footer-social ul li a:hover {
+  opacity: .7;
 }
 
 .footer-nav h2 {

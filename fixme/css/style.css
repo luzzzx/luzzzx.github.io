@@ -2604,6 +2604,16 @@ footer {
   margin-bottom: 30px;
 }
 
+.price-tabs .price-tab-body.sub {
+  margin: 10px 0 0 0;
+  padding: 30px 14px;
+}
+
+.price-tabs .price-tab-body.sub .custom-checkbox {
+  padding: 5px 14px 5px 31px;
+  margin: 0 -14px 10px -14px;
+}
+
 .price-tabs .price-tab-body .price-tab-header h2 {
   font-style: normal;
   font-weight: bold;
@@ -4674,6 +4684,7 @@ select:focus {
   font-size: 18px;
   line-height: 116.4%;
   color: #C9C9C9;
+  display: block;
 }
 
 .adress-item a {
@@ -7150,6 +7161,107 @@ a:hover {
   margin-bottom: 64px;
 }
 
+#phoneDesc .modal-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border: none;
+  position: relative;
+}
+
+#phoneDesc .modal-header .close {
+  margin-left: 0;
+}
+
+#phoneDesc .modal-header .logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 102px;
+  height: 36px;
+}
+
+#phoneDesc .modal-header .logo img {
+  width: 100%;
+}
+
+#phoneDesc .modal-header .phone {
+  font-size: 25px;
+}
+
+#phoneDesc .modal-body {
+  padding: 16px 35px;
+}
+
+#phoneDesc .modal-body h2 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 116.4%;
+  text-align: center;
+  color: #000000;
+}
+
+#phoneDesc .block-text {
+  padding: 23px 0;
+  border-bottom: 1px solid #E2E2E2;
+}
+
+#phoneDesc .block-text p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 138%;
+  color: #363636;
+  margin-bottom: 0;
+}
+
+#phoneDesc .list-model {
+  padding: 24px 0;
+}
+
+#phoneDesc .list-model ul {
+  list-style: none;
+  padding: 0;
+}
+
+#phoneDesc .list-model ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#phoneDesc .list-model ul li p {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 133.5%;
+  color: #000000;
+}
+
+#phoneDesc .list-model ul li span {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 133.5%;
+  color: #000000;
+}
+
 @media (min-width: 576px) {
   .modal-promo {
     max-width: 934px;
@@ -7623,6 +7735,11 @@ a:hover {
     font-size: 28px;
   }
 
+  .comments-body__text p {
+    font-size: 14px;
+    line-height: 138%;
+  }
+
   .map .map-points__card span {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 29px;
@@ -7744,6 +7861,7 @@ a:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    padding: 0 35px;
   }
 
   .price-tabs .price-tab-header__mobile h2 {
@@ -7780,6 +7898,14 @@ a:hover {
     color: #C9C9C9;
   }
 
+  .price-tabs .price-tab-body {
+    margin-right: -25px;
+    margin-left: -25px;
+    padding: 0;
+    margin-top: 27px;
+    padding: 18px 0 0 0;
+  }
+
   .price-tabs .price-tab-body .price-tab-header {
     display: none;
   }
@@ -7789,9 +7915,7 @@ a:hover {
   }
 
   .price-tabs .price-tab-body .custom-checkbox {
-    margin-right: -25px;
-    margin-left: -25px;
-    padding: 21px 35px;
+    padding: 21px 35px 21px 52px;
   }
 
   .price-tabs .price-tab-body .custom-checkbox label .label-title {
@@ -8502,6 +8626,7 @@ a:hover {
 
   .adress-item span {
     font-size: 10px;
+    line-height: 12px;
   }
 
   .adress-item a {
@@ -9011,6 +9136,10 @@ a:hover {
     display: block;
   }
 
+  .hero-section .hero-section-body .tags a {
+    margin-bottom: 12px;
+  }
+
   .hero-section .hero-section-body form input {
     background: url("../img/icons/search.svg") 3%/6% no-repeat #FCFCFC;
   }
@@ -9162,6 +9291,11 @@ a:hover {
 
   .our-props-card__text ul li:last-child {
     margin-right: 0;
+  }
+
+  .our-props-card__text p {
+    font-size: 14px;
+    line-height: 150%;
   }
 
   .our-props-card__text .our-props__footer ul li {

@@ -1186,6 +1186,10 @@ footer {
   font-size: 18px;
 }
 
+.footer-bottom .social-group a i {
+  margin-right: 0;
+}
+
 .footer-bottom .social-group a:last-child {
   margin-right: 0;
 }
@@ -2856,7 +2860,8 @@ footer {
 
 #order-sale select,
 #request-app select,
-#comments select {
+#comments select,
+#mark select {
   background: #FFFFFF;
   -webkit-box-shadow: 0px 10px 30px rgba(112, 112, 112, 0.16);
           box-shadow: 0px 10px 30px rgba(112, 112, 112, 0.16);
@@ -2872,7 +2877,8 @@ footer {
 
 #order-sale select option,
 #request-app select option,
-#comments select option {
+#comments select option,
+#mark select option {
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -2882,7 +2888,8 @@ footer {
 
 #order-sale select option span,
 #request-app select option span,
-#comments select option span {
+#comments select option span,
+#mark select option span {
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -2892,7 +2899,8 @@ footer {
 
 #order-sale textarea,
 #request-app textarea,
-#comments textarea {
+#comments textarea,
+#mark textarea {
   width: 100%;
   height: 149px;
   background: #FFFFFF;
@@ -2909,7 +2917,7 @@ footer {
   margin-bottom: 0px;
 }
 
-#order-sale textarea::-webkit-input-placeholder, #request-app textarea::-webkit-input-placeholder, #comments textarea::-webkit-input-placeholder {
+#order-sale textarea::-webkit-input-placeholder, #request-app textarea::-webkit-input-placeholder, #comments textarea::-webkit-input-placeholder, #mark textarea::-webkit-input-placeholder {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: normal;
@@ -2918,7 +2926,7 @@ footer {
   color: #BEBEBE;
 }
 
-#order-sale textarea::-moz-placeholder, #request-app textarea::-moz-placeholder, #comments textarea::-moz-placeholder {
+#order-sale textarea::-moz-placeholder, #request-app textarea::-moz-placeholder, #comments textarea::-moz-placeholder, #mark textarea::-moz-placeholder {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: normal;
@@ -2927,7 +2935,7 @@ footer {
   color: #BEBEBE;
 }
 
-#order-sale textarea:-ms-input-placeholder, #request-app textarea:-ms-input-placeholder, #comments textarea:-ms-input-placeholder {
+#order-sale textarea:-ms-input-placeholder, #request-app textarea:-ms-input-placeholder, #comments textarea:-ms-input-placeholder, #mark textarea:-ms-input-placeholder {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: normal;
@@ -2936,7 +2944,7 @@ footer {
   color: #BEBEBE;
 }
 
-#order-sale textarea::-ms-input-placeholder, #request-app textarea::-ms-input-placeholder, #comments textarea::-ms-input-placeholder {
+#order-sale textarea::-ms-input-placeholder, #request-app textarea::-ms-input-placeholder, #comments textarea::-ms-input-placeholder, #mark textarea::-ms-input-placeholder {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: normal;
@@ -2947,7 +2955,8 @@ footer {
 
 #order-sale textarea::placeholder,
 #request-app textarea::placeholder,
-#comments textarea::placeholder {
+#comments textarea::placeholder,
+#mark textarea::placeholder {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: normal;
@@ -2958,19 +2967,22 @@ footer {
 
 #order-sale input,
 #request-app input,
-#comments input {
+#comments input,
+#mark input {
   font-family: 'Roboto';
 }
 
 #order-sale button[type=submit],
 #request-app button[type=submit],
-#comments button[type=submit] {
+#comments button[type=submit],
+#mark button[type=submit] {
   margin-bottom: 20px;
 }
 
 #order-sale .sale-field,
 #request-app .sale-field,
-#comments .sale-field {
+#comments .sale-field,
+#mark .sale-field {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2988,7 +3000,8 @@ footer {
 
 #order-sale .sale-field p,
 #request-app .sale-field p,
-#comments .sale-field p {
+#comments .sale-field p,
+#mark .sale-field p {
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -3000,13 +3013,15 @@ footer {
 
 #order-sale .sale-field p span,
 #request-app .sale-field p span,
-#comments .sale-field p span {
+#comments .sale-field p span,
+#mark .sale-field p span {
   font-size: 24px;
 }
 
 #order-sale .sale-field a,
 #request-app .sale-field a,
-#comments .sale-field a {
+#comments .sale-field a,
+#mark .sale-field a {
   width: 156px;
   height: 42px;
   background: #19A15F;
@@ -3029,7 +3044,8 @@ footer {
 
 #order-sale .field-total,
 #request-app .field-total,
-#comments .field-total {
+#comments .field-total,
+#mark .field-total {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3044,7 +3060,8 @@ footer {
 
 #order-sale .field-total span,
 #request-app .field-total span,
-#comments .field-total span {
+#comments .field-total span,
+#mark .field-total span {
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -3054,7 +3071,8 @@ footer {
 
 #order-sale .field-total p,
 #request-app .field-total p,
-#comments .field-total p {
+#comments .field-total p,
+#mark .field-total p {
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
@@ -3065,7 +3083,8 @@ footer {
 
 #order-sale .footer span,
 #request-app .footer span,
-#comments .footer span {
+#comments .footer span,
+#mark .footer span {
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -3075,7 +3094,8 @@ footer {
 
 #order-sale .custom-checkbox .custom-control-label::before,
 #request-app .custom-checkbox .custom-control-label::before,
-#comments .custom-checkbox .custom-control-label::before {
+#comments .custom-checkbox .custom-control-label::before,
+#mark .custom-checkbox .custom-control-label::before {
   width: 15px;
   height: 15px;
   border-radius: 5px;
@@ -3085,7 +3105,8 @@ footer {
 
 #order-sale .custom-checkbox .custom-control-label::after,
 #request-app .custom-checkbox .custom-control-label::after,
-#comments .custom-checkbox .custom-control-label::after {
+#comments .custom-checkbox .custom-control-label::after,
+#mark .custom-checkbox .custom-control-label::after {
   top: 2px;
   left: -1.4rem;
   width: 15px;
@@ -3094,7 +3115,8 @@ footer {
 
 #order-sale .custom-checkbox label,
 #request-app .custom-checkbox label,
-#comments .custom-checkbox label {
+#comments .custom-checkbox label,
+#mark .custom-checkbox label {
   font-style: normal;
   font-weight: normal;
   font-size: 13px;
@@ -3104,14 +3126,16 @@ footer {
 
 #order-sale .custom-checkbox .custom-control-input:checked ~ .custom-control-label::after,
 #request-app .custom-checkbox .custom-control-input:checked ~ .custom-control-label::after,
-#comments .custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
+#comments .custom-checkbox .custom-control-input:checked ~ .custom-control-label::after,
+#mark .custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
   background-image: url("../img/icons/check.svg");
   background-size: contain;
 }
 
 #order-sale .custom-control-input:checked ~ .custom-control-label::before,
 #request-app .custom-control-input:checked ~ .custom-control-label::before,
-#comments .custom-control-input:checked ~ .custom-control-label::before {
+#comments .custom-control-input:checked ~ .custom-control-label::before,
+#mark .custom-control-input:checked ~ .custom-control-label::before {
   border-color: #FCFCFC;
   background-color: #FCFCFC;
 }
@@ -3674,6 +3698,15 @@ select:focus {
 
 .change-step__block {
   display: none;
+  padding: 80px 0 0 0;
+  position: relative;
+}
+
+.change-step__block .close {
+  position: absolute;
+  top: 18px;
+  right: 20%;
+  font-size: 50px;
 }
 
 .change-step__block h2 {
@@ -3891,6 +3924,32 @@ select:focus {
   color: #FFFFFF;
   background: #19A15F;
   border: 1px solid #19A15F;
+}
+
+.select-ratio input[type="radio"]:checked + label {
+  color: #FFFFFF;
+  background: #19A15F;
+  border: 1px solid #19A15F;
+}
+
+.select-ratio input[type="radio"]:checked + .black {
+  background: #000000;
+  border: 1px solid #000000;
+}
+
+.select-ratio input[type="radio"]:checked + .gray {
+  background: #777777;
+  border: 1px solid #777777;
+}
+
+.select-ratio input[type="radio"]:checked + .gold {
+  background: #FFD700;
+  border: 1px solid #FFD700;
+}
+
+.select-ratio input[type="radio"]:checked + .rose {
+  background: #b76e79;
+  border: 1px solid #b76e79;
 }
 
 .select-btns {
@@ -4243,6 +4302,15 @@ select:focus {
 
 .final-step__block {
   display: none;
+  padding: 40px 0 0 0;
+  position: relative;
+}
+
+.final-step__block .close {
+  position: absolute;
+  top: 18px;
+  right: 20%;
+  font-size: 50px;
 }
 
 .final-step__block h2 {
@@ -4743,6 +4811,10 @@ select:focus {
   border-radius: 10px;
 }
 
+.map-watch {
+  position: relative;
+}
+
 .map-watch h2 {
   font-style: normal;
   font-weight: normal;
@@ -4758,6 +4830,12 @@ select:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.map-watch .map-main {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 66%;
+          flex: 0 0 66%;
 }
 
 .map-watch .map-main__text-mobile {
@@ -6376,7 +6454,7 @@ a:hover {
 }
 
 .services {
-  padding: 125px 0 70px 0;
+  padding: 125px 0 40px 0;
 }
 
 .services-row {
@@ -6489,22 +6567,22 @@ a:hover {
   display: -ms-flexbox;
   display: flex;
   font-size: 20px;
+  line-height: 116.4%;
   color: #272727;
 }
 
 .our-props__body .our-props__footer span {
   margin-right: 5px;
+  font-size: 20px;
+  line-height: 116.4%;
+  color: #272727;
 }
 
 .our-props__body .our-props__footer a {
-  font-size: 14px;
+  font-size: 20px;
+  line-height: 116.4%;
   color: #19A15F;
   text-decoration: underline;
-}
-
-.our-props__body .our-props__footer a img {
-  width: 10px;
-  height: 10px;
 }
 
 .our-props-card {
@@ -6714,7 +6792,7 @@ a:hover {
           flex: 0 0 40px;
   font-size: 30px;
   color: #FFFFFF;
-  margin-right: 13px;
+  margin-right: 5px;
 }
 
 .row__item-text {
@@ -7035,6 +7113,43 @@ a:hover {
   color: #19A15F;
 }
 
+#mark .mark-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 72px;
+}
+
+#mark .mark-row .star {
+  width: 112px;
+  height: 107px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  background: url("../img/icons/star-n.svg") center no-repeat;
+  background-size: contain;
+  margin-right: 41px;
+  cursor: pointer;
+}
+
+#mark .mark-row .star:hover {
+  background: url("../img/icons/star-fill.svg") center no-repeat;
+  background-size: contain;
+}
+
+#mark .mark-row .star.active {
+  background: url("../img/icons/star-fill.svg") center no-repeat;
+  background-size: contain;
+}
+
+#mark .mark-row .star:last-child {
+  margin-right: 0;
+}
+
+#mark textarea {
+  margin-bottom: 64px;
+}
+
 @media (min-width: 576px) {
   .modal-promo {
     max-width: 934px;
@@ -7276,23 +7391,6 @@ a:hover {
 @media (max-width: 920px) {
   .faq {
     padding: 20px 0;
-  }
-
-  .map-watch__body {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-
-  .map-watch .map-main {
-    width: 100%;
-    height: 130px;
-  }
-
-  .map-watch .map-main img {
-    height: 100%;
-    width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
   }
 
   .map-watch .map-main__text {
@@ -7768,13 +7866,15 @@ a:hover {
 
   #order-sale select,
   #request-app select,
-  #comments select {
+  #comments select,
+  #mark select {
     height: 57px;
   }
 
   #order-sale input,
   #request-app input,
-  #comments input {
+  #comments input,
+  #mark input {
     padding: 5px 21px;
     font-size: 16px;
     line-height: 19px;
@@ -7782,44 +7882,51 @@ a:hover {
 
   #order-sale .sale-field,
   #request-app .sale-field,
-  #comments .sale-field {
+  #comments .sale-field,
+  #mark .sale-field {
     padding: 0 0 20px 0;
   }
 
   #order-sale .sale-field p,
   #request-app .sale-field p,
-  #comments .sale-field p {
+  #comments .sale-field p,
+  #mark .sale-field p {
     font-size: 14px;
   }
 
   #order-sale .sale-field p span,
   #request-app .sale-field p span,
-  #comments .sale-field p span {
+  #comments .sale-field p span,
+  #mark .sale-field p span {
     font-size: 18px;
     font-weight: bold;
   }
 
   #order-sale .sale-field a,
   #request-app .sale-field a,
-  #comments .sale-field a {
+  #comments .sale-field a,
+  #mark .sale-field a {
     width: 124px;
   }
 
   #order-sale .field-total,
   #request-app .field-total,
-  #comments .field-total {
+  #comments .field-total,
+  #mark .field-total {
     padding: 27px 0;
   }
 
   #order-sale .field-total span,
   #request-app .field-total span,
-  #comments .field-total span {
+  #comments .field-total span,
+  #mark .field-total span {
     font-size: 14px;
   }
 
   #order-sale .field-total p,
   #request-app .field-total p,
-  #comments .field-total p {
+  #comments .field-total p,
+  #mark .field-total p {
     font-size: 18px;
   }
 
@@ -8076,6 +8183,12 @@ a:hover {
     padding: 20px 10px 0 10px;
   }
 
+  .change-step__block .close {
+    font-size: 38px;
+    top: 18px;
+    right: 5%;
+  }
+
   .change-step__block h2 {
     font-size: 28px;
   }
@@ -8256,12 +8369,22 @@ a:hover {
     font-size: 12px;
   }
 
+  .final-step__block {
+    padding: 0;
+  }
+
+  .final-step__block .close {
+    font-size: 38px;
+    top: 18px;
+    right: 5%;
+  }
+
   .final-step__block h2 {
     font-size: 28px;
   }
 
   .final-step__block-wrapper {
-    padding: 70px 15px;
+    padding: 0px 15px;
   }
 
   .final-step__block .icon-next img {
@@ -8415,6 +8538,32 @@ a:hover {
     font-weight: bold;
   }
 
+  .map-watch__body {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .map-watch .map-main {
+    width: 100%;
+    height: 130px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+  }
+
+  .map-watch .map-main img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+
+  .map-watch .map-main {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
   .map-watch .map-main__text-mobile {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -8427,6 +8576,7 @@ a:hover {
     display: flex;
     padding: 27px 34px;
     width: 100%;
+    margin-top: 85px;
   }
 
   .map-watch .map-main__text-mobile .map-info__img {
@@ -8940,6 +9090,15 @@ a:hover {
     font-size: 14px;
   }
 
+  .our-props__body .our-props__footer a {
+    font-size: 14px;
+  }
+
+  .our-props__body .our-props__footer a img {
+    width: 10px;
+    height: 10px;
+  }
+
   .our-props-card {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -9147,6 +9306,26 @@ a:hover {
 
   .more-news__card-desc {
     padding-bottom: 20px;
+  }
+
+  #mark .mark-row {
+    margin-bottom: 40px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  #mark .mark-row .star {
+    width: 40px;
+    height: 40px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 40px;
+            flex: 0 0 40px;
+    margin-right: 15px;
+  }
+
+  #mark textarea {
+    margin-bottom: 40px;
   }
 }
 

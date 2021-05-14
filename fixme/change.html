@@ -543,23 +543,26 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="change-step__block">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
             <div class="change-step-data">
                 <h4>Укажите цвет телефона</h4>
                 <div class="select-ratio">
                     <input type="radio" name="color-phone" id="color1" checked="">
-                    <label id="up-price" for="color1">
+                    <label id="up-price" for="color1" class="black" >
                         Black
                     </label>
                     <input type="radio" name="color-phone" id="color3">
-                    <label id="down-price" for="color3">
+                    <label id="down-price" for="color3" class="gray">
                         Gray
                     </label>
                     <input type="radio" name="color-phone" id="color4">
-                    <label id="down-price" for="color4">
+                    <label id="down-price" for="color4" class="gold">
                         Gold
                     </label>
                     <input type="radio" name="color-phone" id="color5">
-                    <label id="down-price" for="color5">
+                    <label id="down-price" for="color5" class="rose">
                         Rose Gold
                     </label>
                 </div>
@@ -586,7 +589,7 @@
                 </div>
             </div>
             <div class="change-step-data">
-                <h2 class="step-title">➁ Опишите техническое состояние</h2>
+                <h2>➁ Опишите техническое состояние</h2>
                 <div class="select-btns">
                     <input type="radio" name="trouble-phone" id="trouble1" checked="">
                     <label id="up-price" for="trouble1">
@@ -614,7 +617,7 @@
             </div>
             <div class="change-step-footer">
                 <a href="#" class="change-back" data-dismiss="modal" aria-label="Close">Назад </a>
-                <a href="#" class="change-next" data-toggle="modal" data-target="#stepTwo"> Далее </a>
+                <a href="#" class="change-next" data-dismiss="modal" data-toggle="modal" data-target="#stepTwo"> Далее </a>
             </div>
           </div>
         </div>
@@ -625,6 +628,9 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="change-step__block">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
             <div class="change-step-data">
                 <h4>Оцените внешнее состояние</h4>
                 <div class="select-ratio">
@@ -705,8 +711,8 @@
                 </div>
             </div>
             <div class="change-step-footer">
-                <a href="#" class="change-back" data-dismiss="modal" aria-label="Close" data-toggle="modal" data-target="#stepTwo">Назад</a>
-                <a href="#" class="change-next" data-toggle="modal" data-target="#stepThree">Далее</a>
+                <a href="#" class="change-back" data-dismiss="modal" aria-label="Close" data-toggle="modal" data-target="#stepOne">Назад</a>
+                <a href="#" class="change-next" data-dismiss="modal" data-toggle="modal" data-target="#stepThree">Далее</a>
             </div>
           </div>
         </div>
@@ -717,6 +723,9 @@
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="change-step__block">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
                 <h2>Мы заплатим за ваш iPhone 8 128 GB Gold</h2>
                 <div class="fullcard-wrapper">
                   <div class="change-step__fullcard">
@@ -752,12 +761,12 @@
                   </div>
                 </div>
                 <div class="change-step-footer">
-                    <a href="#" class="change-back" data-toggle="modal" data-target="#stepFour">Хочу продать</a>
+                    <a href="#" class="change-back" data-dismiss="modal" data-toggle="modal" data-target="#stepFour">Хочу продать</a>
                     <span>или</span>
-                    <a href="#" class="change-next" data-toggle="modal" data-target="#stepFour">Хочу поменять</a>
+                    <a href="#" class="change-next" data-dismiss="modal" data-toggle="modal" data-target="#stepFour">Хочу поменять</a>
                 </div>
                 <div class="change-step-bottom">
-                  <a href="#" class="btn-refresh"><img src="./img/icons/refresh.svg" alt=""> Рассчитать заново</a>
+                  <a href="#" class="btn-refresh" data-dismiss="modal" data-toggle="modal" data-target="#stepOne"><img src="./img/icons/refresh.svg" alt=""> Рассчитать заново</a>
                 </div>
             </div>
             </div>
@@ -768,6 +777,9 @@
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="change-step__block">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
                 <h2>Выберите модель нового iPhone</h2>
                 <div class="change-step-new-phone">
                     <input type="radio" name="phone-mod" id="new-phone1">
@@ -828,20 +840,20 @@
                 <div class="change-step-data">
                     <h4>Укажите цвет телефона</h4>
                     <div class="select-ratio">
-                        <input type="radio" name="color-phone" id="color1" checked="">
-                        <label id="up-price" for="color1">
+                        <input type="radio" name="color-phone" id="color-a" checked="">
+                        <label id="up-price" for="color-a" class="black">
                             Black
                         </label>
-                        <input type="radio" name="color-phone" id="color3">
-                        <label id="down-price" for="color3">
+                        <input type="radio" name="color-phone" id="color-b">
+                        <label id="down-price" for="color-b" class="gray">
                             Gray
                         </label>
-                        <input type="radio" name="color-phone" id="color4">
-                        <label id="down-price" for="color4">
+                        <input type="radio" name="color-phone" id="color-c">
+                        <label id="down-price" for="color-c" class="gold">
                             Gold
                         </label>
-                        <input type="radio" name="color-phone" id="color5">
-                        <label id="down-price" for="color5">
+                        <input type="radio" name="color-phone" id="color-d">
+                        <label id="down-price" for="color-d" class="rose">
                             Rose Gold
                         </label>
                     </div>
@@ -849,20 +861,20 @@
                 <div class="change-step-data">
                     <h4>Укажите объем памяти</h4>
                     <div class="select-ratio">
-                        <input type="radio" name="ram-phone" id="ram1" checked="">
-                        <label id="up-price" for="ram1">
+                        <input type="radio" name="ram-phone" id="ram-a" checked="">
+                        <label id="up-price" for="ram-a">
                             64 ГБ
                         </label>
-                        <input type="radio" name="ram-phone" id="ram2">
-                        <label id="down-price" for="ram2">
+                        <input type="radio" name="ram-phone" id="ram-b">
+                        <label id="down-price" for="ram-b">
                             128 ГБ
                         </label>
-                        <input type="radio" name="ram-phone" id="ram3">
-                        <label id="down-price" for="ram3">
+                        <input type="radio" name="ram-phone" id="ram-c">
+                        <label id="down-price" for="ram-c">
                             256 ГБ
                         </label>
-                        <input type="radio" name="ram-phone" id="ram4">
-                        <label id="down-price" for="ram4">
+                        <input type="radio" name="ram-phone" id="ram-d">
+                        <label id="down-price" for="ram-d">
                             512 ГБ
                         </label>
                     </div>
@@ -881,6 +893,9 @@
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="final-step__block">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
                 <div class="final-step__block-wrapper">
                   <h2>Обменяем старый iPhone на новый</h2>
                   <div class="final-step__card">
@@ -954,7 +969,7 @@
                       <span>Оставить заявку и </span> <a href="#" class="btn-final-price">Рассчитать доплату</a>
                     </div>
                     <a href="#" class="btn-refresh"><img src="./img/icons/refresh.svg" alt=""> Изменить параметры нового iPhone</a>
-                    <a href="#" class="btn-refresh"><img src="./img/icons/left-ar.svg" alt=""> Вернуться к предложению о продаже</a>
+                    <a href="#" class="btn-refresh" data-dismiss="modal" data-toggle="modal" data-target="#stepThree"><img src="./img/icons/left-ar.svg" alt=""> Вернуться к предложению о продаже</a>
                   </div>
                 </div>
               </div>
